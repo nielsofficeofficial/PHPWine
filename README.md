@@ -1,5 +1,5 @@
 # PHPWine - (Vanilla Flavour) 
-PHPWine v1.0 
+PHPWine v1.0 (Vanilla Flavour) design for corePHP and WordPress Cloud system application development. 
 
 - Authentication
 - Login Form
@@ -12,7 +12,6 @@ PHPWine v1.0
 - PHPOptimizer 
 - Advance Form Builder
 
-PHPWine v1.0 (Vanilla Flavour) design for corePHP and WordPress Cloud system application development. 
 
 
 
