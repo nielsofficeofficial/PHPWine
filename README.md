@@ -1,5 +1,5 @@
-# PHPWine
-PHPWine v1.0 (Vanilla Flavour) 
+# PHPWine - (Vanilla Flavour) 
+PHPWine v1.0 
 
 - Authentication
 - Login Form
