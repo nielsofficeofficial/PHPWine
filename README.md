@@ -1,5 +1,5 @@
 # PHPWine
-PHPWine v1.0 former (Vanilla Flavour) 
+PHPWine v1.0 (Vanilla Flavour) 
 
 - Authentication
 - Login Form
