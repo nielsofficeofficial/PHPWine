@@ -45,8 +45,8 @@
   * @since v1.0
   *
   **/ 
-define('DB_SERVER', 'mysql1008.mochahost.com');
-define('DB_USERNAME', 'andaliph_gpsixb6');
-define('DB_PASSWORD', '+@zO!Nb(FQeA');
-define('DB_NAME', 'andaliph_gpsixb6');
+define('DB_SERVER', '');
+define('DB_USERNAME', '');
+define('DB_PASSWORD', '');
+define('DB_NAME', '');
  
