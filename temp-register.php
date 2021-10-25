@@ -114,7 +114,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $auth_un_bind  = AUTH::BIND($mySQLi, 
     [   
     
-        'QUERY_STATEMENT'    => AUTH::RETURNSQL('users',["id"],["username"])
+        'QUERY_STATEMENT'    => AUTH::RETURNSQL('users_log',["id"],["username"])
        ,'INPUT_HASCONTAINS'  => $username  
        ,'INPUT_DATAEXIST'    => "This {$username} was already used."
   
@@ -126,7 +126,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $auth_ue_bind  = AUTH::BIND($mySQLi, 
     [   
     
-        'QUERY_STATEMENT'    => AUTH::RETURNSQL('users',["id"],["email"])
+        'QUERY_STATEMENT'    => AUTH::RETURNSQL('users_log',["id"],["email"])
        ,'INPUT_HASCONTAINS'  => $email  
        ,'INPUT_DATAEXIST'    => "This {$email} was already used."
   
@@ -139,7 +139,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $auth_um_bind  = AUTH::BIND($mySQLi, 
     [   
     
-        'QUERY_STATEMENT'    => AUTH::RETURNSQL('users',["id"],["mobile"])
+        'QUERY_STATEMENT'    => AUTH::RETURNSQL('users_log',["id"],["mobile"])
        ,'INPUT_HASCONTAINS'  => $mobile  
        ,'INPUT_DATAEXIST'    => "This {$mobile} was already used."
   
@@ -195,7 +195,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
              * @param _Prepare insert statement clean up sql
             **/            
 
-            if($stmt = $mySQLi->prepare( AUTH::BINDSQL( 'users', ['username', 'email', 'mobile', 'password'] , ['?', '?', '?' , '?']) ) ) : 
+            if($stmt = $mySQLi->prepare( AUTH::BINDSQL( 'users_log', ['username', 'email', 'mobile', 'password'] , ['?', '?', '?' , '?']) ) ) : 
 
                 /**
                 * @param _Bind variables statement as parameters

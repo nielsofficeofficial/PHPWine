@@ -1,9 +1,9 @@
 <?php 
 
- namespace PHPWine\VanillaFlavour\system\optimizer;
+ namespace PHPWine\VanillaFlavour\optimizer;
 
- USE \PHPWine\VanillaFlavour\system\merge\Html;
- USE \PHPWine\VanillaFlavour\system\optimizer\Html AS Optimizer;
+ USE \PHPWine\VanillaFlavour\merge\Html;
+ USE \PHPWine\VanillaFlavour\optimizer\Html AS Optimizer;
 
 /**
  * @copyright (c) 2020-2021 PHPFILEnhancer v0 Cooked by nielsoffice

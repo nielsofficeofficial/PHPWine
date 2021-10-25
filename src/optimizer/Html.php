@@ -1,6 +1,6 @@
 <?php 
 
-  namespace PHPWine\VanillaFlavour\system\optimizer;
+  namespace PHPWine\VanillaFlavour\optimizer;
   
 /**
  * @copyright (c) 2020-2021 PHPHtml-Optimizer v1.3 Cooked by nielsoffice
@@ -679,7 +679,7 @@ class Html {
   * @since 11.05.2020
   * defined Assigned Image Extenstion as ._RTF
   **/ 
- CONST __PHPHO_PROP__ = __DIR__ . '/../../../prop.php'; 
+ CONST __PHPHO_PROP__ = __DIR__ . '/../../prop.php'; 
 
 /**
   * @var @property Array of data 

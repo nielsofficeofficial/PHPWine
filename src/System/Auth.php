@@ -3,6 +3,7 @@
 
  use \PHPWine\VanillaFlavour\RequestSession;
  use \PHPWine\VanillaFlavour\System\Request;
+ use \PHPWine\VanillaFlavour\System\System;
 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.0 Cooked by nielsoffice 
@@ -71,7 +72,7 @@ class Auth Extends System
     * @since v1.0
     *
     **/
-    public static array $DATAFORM   = [];
+    public static $DATAFORM   = [];
 
     /**
     *

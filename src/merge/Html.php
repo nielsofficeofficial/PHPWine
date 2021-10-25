@@ -1,6 +1,6 @@
 <?php 
 
- namespace PHPWine\VanillaFlavour\system\merge;
+ namespace PHPWine\VanillaFlavour\merge;
 
  USE \PHPWine\VanillaFlavour\optimizer\Enhancers AS PHPFileCare;
 

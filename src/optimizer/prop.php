@@ -1,8 +1,8 @@
 <?php 
 
-USE \PHPWine\VanillaFlavour\system\merge\Html;
-USE \PHPWine\VanillaFlavour\system\optimizer\Html AS Optimzer;
-USE \PHPWine\VanillaFlavour\system\optimizer\Enhancer AS PHPFileHandler;
+USE \PHPWine\VanillaFlavour\merge\Html;
+USE \PHPWine\VanillaFlavour\optimizer\Html AS Optimzer;
+USE \PHPWine\VanillaFlavour\optimizer\Enhancer AS PHPFileHandler;
 
 /**
  * @copyright (c) 2020-2021 PHPFILEnhancer v0 Cooked by nielsoffice

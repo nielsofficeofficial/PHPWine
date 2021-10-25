@@ -1,6 +1,6 @@
 <?php 
 
- namespace PHPWine\VanillaFlavour\system\optimizer;
+ namespace PHPWine\VanillaFlavour\optimizer;
 
 /**
  * @copyright (c) 2020-2021 OptimizerForm v1.0 Cooked by nielsoffice

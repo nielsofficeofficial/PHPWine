@@ -40,8 +40,7 @@
 
   $phpWine = new class {
         
-
-       /**
+      /**
         *
         * Defined NEW Instance Database
         * @since 10.25.21
@@ -56,7 +55,7 @@
                $this->dataBase = $dataBase 
               ,$this->username = $username
               ,$this->password = $password
-              ,$this->host     =  $host 
+              ,$this->host     = $host 
             
           ); if($mySQLi === false) : die( ERROR_ESTABLISH_CONNECTION . $mySQLi->connect_error); endif;
         
@@ -72,7 +71,7 @@
             * @since v1.0
             * 
             **/ 
-            require __DIR__ . $properties;
+            require dirname(__FILE__) . DIRECTORY_SEPARATOR . $properties .'.'.'php';
 
           /**
             *
@@ -81,7 +80,7 @@
             * @since v1.0
             * 
             **/ 
-            require __DIR__ . $dbRequest;
+            require dirname(__FILE__) . DIRECTORY_SEPARATOR . $dbRequest .'.'.'php';
 
           /**
             *
@@ -90,6 +89,7 @@
             * @since v1.0
             * 
             **/ 
+            
             spl_autoload_register(function($class) 
             {
             
@@ -107,16 +107,12 @@
                 (file_exists($dataRequest)) ? require $dataRequest : false;
             
             });
-    
+
         }
     };
     
     // Get Loader PHPWine
-    $phpWine->php_wine('/prop.php','/db.php');
+    $phpWine->php_wine('prop','db');
     // Define new instance connection
     $mySQLi = $phpWine->wine_dbRequest(DB_SERVER , DB_USERNAME, DB_PASSWORD, DB_NAME);
-
-
-
-
-
+   

@@ -13,7 +13,30 @@ PHPWine v1.0 (Vanilla Flavour) design for corePHP and WordPress Cloud system app
 - Advance Form Builder
 
 
+<h3>Library Installation:</h3>
 
+```PHP
+
+require __DIR__ . '/library/PHPWine/PHPWine.php';
+
+use \PHPWine\VanillaFlavour\merge\Html;
+use \PHPWine\VanillaFlavour\optimizer\Html as optimizer;
+use \PHPWine\VanillaFlavour\optimizer\Enhancers as optimizerCare; 
+
+$html        = new optimizer();
+$fileEnhance = new optimizerCare();
+
+```
+<h3>Method file Installation:</h3>
+
+```PHP
+
+// Use on every pages
+use \PHPAuthentication\SessionRequest\System\Auth;
+use \PHPAuthentication\SessionRequest\System\Request;
+use \PHPAuthentication\SessionRequest\System\Validation;
+
+```
 
 <h2>Thanks To:</h2>
 <h5>

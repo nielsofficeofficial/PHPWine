@@ -1,8 +1,8 @@
 <?php 
 
-USE \PHPWine\VanillaFlavour\system\merge\Html;
-USE \PHPWine\VanillaFlavour\system\optimizer\Html AS MergeBox; 
-USE \PHPWine\VanillaFlavour\system\optimizer\Enhancers AS PHPFileHandler;
+USE \PHPWine\VanillaFlavour\merge\Html;
+USE \PHPWine\VanillaFlavour\optimizer\Html AS MergeBox; 
+USE \PHPWine\VanillaFlavour\optimizer\Enhancers AS PHPFileHandler;
 
 /**
  * @copyright (c) 2020-2021 PHPHtml-Merge v1.3 Cooked by nielsoffice  
