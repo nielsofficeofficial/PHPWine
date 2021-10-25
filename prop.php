@@ -82,3 +82,48 @@
  define('PASSWORD','password');
  define('_PHP_','.php');
  
+ 
+
+
+ define('__CONFIG__'   , 'directories.php' ); // get config file
+ define('__PROP__'     , 'prop.php' ); // get prop  
+ define('SOM_PATH_DIR' ,  __DIR__ . DIRECTORY_SEPARATOR); // Set DIR PATH Default
+ define('__EnHancer__' ,  '/../Enhancer.php'); // get function associated by FUNCTION ASSOCIATED
+ define('FUNC_ASSOC'   ,  'FUNC_ASSOC'); // get function associated by FUNCTION ASSOCIATED
+ define('METHOD_ASSOC' ,  'METHOD_ASSOC'); // get function associated by METHOD ASSOCIATED
+ define('CLASS_ASSOC'  ,  'CLASS_ASSOC'); // get function associated by CLASS ASSOCIATED
+ define('__PHP__'      ,  '__PHP__'); // get function assined EXTENSION .PHP 
+ define('__HTML__'     ,  '__HTML__'); // get function assined EXTENSION .HTML
+ define('__CSS__'      ,  '__CSS__'); // get function assined EXTENSION .CSS
+ define('__JS__'       ,  '__JS__'); // get function assined EXTENSION .JS 
+ define('__JPG__'      ,  '__JPG__'); // get function assined EXTENSION IMG .JPG 
+ define('__JPEG__'     ,  '__JPEG__'); // get function assined EXTENSION IMG .JPEG    
+ define('__PNG__'      ,  '__PNG__'); // get function assined EXTENSION IMG .PNG
+ define('__GIF__'      ,  '__GIF__'); // get function assined EXTENSION IMG .GIF
+ define('__BMP__'      ,  '__BMP__'); // get function assined EXTENSION IMG .BMP
+ define('__TEX__'      ,  '__TEX__'); // get function assined EXTENSION IMG .TEX 
+ define('__XLS__'      ,  '__XLS__'); // get function assined EXTENSION IMG .LXS
+ define('__XLSX__'     ,  '__XLSX__');  // get function assined EXTENSION IMG .LXSX
+ define('__DOC__'      ,  '__DOC__'); // get function assined EXTENSION IMG .DOC
+ define('__DOCX__'     ,  '__DOCX__');  // get function assined EXTENSION IMG .DOCX  
+ define('__PPT__'      ,  '__PPT__'); // get function assined EXTENSION IMG .PPT 
+ define('__PPTX__'     ,  '__PPTX__'); // get function assined EXTENSION IMG .PPTX  
+ define('__ODT__'      ,  '__ODT__');  // get function assined EXTENSION IMG .ODT
+ define('__TXT__'      ,  '__TXT__');  // get function assined EXTENSION IMG .TXT 
+ define('__RTF__'      ,  '__RTF__'); // get function assined EXTENSION IMG .RTF
+
+ define('__GET_FROM_DIR_ROOT__'           ,   __DIR__ ); // get root file
+ define('__GET_STATIC_CLASS_HTML__'       ,   '/src/system/merge/Html.php'); // get root file static HTML  
+ define('__GET_INSTANTIATE_CLASS_HTML__'  ,   '/src/system/optimizer/Html.php'); // get root file instantiate Html   
+ define('__CHECK_MAIN_MERGE_ON_PAGE__'    ,   '/../merge/Html.php'); // get root file CHECK_MAIN_MERGE_ON_PAGE
+ define('__CHECK_MAIN_MERGE_ON_CLASS__'   ,   '/../optimizer/Html.php');  // get root file CHECK_MAIN_MERGE_ON_CLASS
+ define('__GET_VALIDATE_FILE_PAGE_EXIST__',   '/src/system/merge/Html.php'); // get validate file exist
+ define('__HTMLOPTIMIZER__'               ,   'Html.php'); // get file
+ define('__GET_MERGE_FILES__'             ,   SOM_PATH_DIR . 'src/merge/prop.php'); // get merge   
+ define('__DIRECTORY_OPTIMIZER_CLASS__'   ,   SOM_PATH_DIR . 'src/'); // get directory
+ define('__DIRECTORY_OPTIMIZER_PAGE__'    ,   SOM_PATH_DIR . 'src/system/merge/html.php'); // get directory 
+ define('__GET_LOAD_MERGE__'              ,   SOM_PATH_DIR . 'src/system/merge/Merge.php' ); // get root file GET_LOAD_MERGE
+ define('__GET_LOAD_MERGEBOX__'           ,   SOM_PATH_DIR . 'src/system/merge/MergeBox.php' ); // get root file GET_LOAD_MERGEBOX
+ define('__GET_LOAD_MERGEELEMENT__'       ,   SOM_PATH_DIR . 'src/system/merge/MergeElements.php' ); // get root file GET_LOAD_MERGEELEMENT
+ define('__GET_PROPERTY_ITSELF__'         ,   SOM_PATH_DIR . '../../'.__PROP__.'' ); // get root file GET_PROPERTY_ITSELF
+ define('__FILECONFIG__'                  ,   SOM_PATH_DIR . '../../'.__CONFIG__.'' ); // get config file cient
