@@ -5,7 +5,7 @@
  *
  * MIT License
  *
- * PHP Authentication (effortless) v1.0 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.0 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -81,10 +81,6 @@
  define('USERNAME','username');
  define('PASSWORD','password');
  define('_PHP_','.php');
- 
- 
-
-
  define('__CONFIG__'   , 'directories.php' ); // get config file
  define('__PROP__'     , 'prop.php' ); // get prop  
  define('SOM_PATH_DIR' ,  __DIR__ . DIRECTORY_SEPARATOR); // Set DIR PATH Default
@@ -111,7 +107,6 @@
  define('__ODT__'      ,  '__ODT__');  // get function assined EXTENSION IMG .ODT
  define('__TXT__'      ,  '__TXT__');  // get function assined EXTENSION IMG .TXT 
  define('__RTF__'      ,  '__RTF__'); // get function assined EXTENSION IMG .RTF
-
  define('__GET_FROM_DIR_ROOT__'           ,   __DIR__ ); // get root file
  define('__GET_STATIC_CLASS_HTML__'       ,   '/src/system/merge/Html.php'); // get root file static HTML  
  define('__GET_INSTANTIATE_CLASS_HTML__'  ,   '/src/system/optimizer/Html.php'); // get root file instantiate Html   
