@@ -38,51 +38,50 @@
  *
  */
  
- define('DIRECTORY_FILE_REQUEST_','PHPWine\\VanillaFlavour\\');
- define('BASE_DIR_SYSTEM_FILE', __DIR__ . '/src/');
- define('LESS_THAN','LESS_THAN');
- define('MINLENGTH','MINLENGTH');
- define('MAXLENGTH','MAXLENGTH');
- define('INPUTFIELD_EMPTY','INPUTFIELD_EMPTY');
- define('EQUALTO','EQUALTO');
- define('VALIDPASSWORD','VALIDPASSWORD');
- define('CONTAIN_UPPERCASE','CONTAIN_UPPERCASE');
- define('CONTAIN_LOWERCASE','CONTAIN_LOWERCASE');
- define('CONTAIN_NUMBER','CONTAIN_NUMBER');
- define('CONTAIN_SPECIALCHAR','CONTAIN_SPECIALCHAR');
- define('EQUAL_STRICT','EQUAL_STRICT');  
- define('GREATER_THAN','GREATER_THAN');  
- define('VALID_EMAIL','VALID_EMAIL');  
- define('STRINGTYPE','STRINGTYPE');  
- define('NUMERICTYPE','NUMERICTYPE'); 
- define('INTEGERTYPE','INTEGERTYPE');  
- define('FLOATTYPE','FLOATTYPE');  
- define('CONFIRMPASSWORD','CONFIRMPASSWORD');  
- define('QUERY_STATEMENT','QUERY_STATEMENT');
- define('USERNAME_HASCONTAINS','USERNAME_HASCONTAINS');
- define('USERNAME_ERROR','USERNAME_ERROR');
- define('PASSWORD_HASCONTAINS','PASSWORD_HASCONTAINS');
- define('PASSWORD_ERROR','PASSWORD_ERROR');
- define('NOTEXIST_CREDENTIAL','NOTEXIST_CREDENTIAL');
- define('NOTASSOCIATED_CREDENTIAL','NOTASSOCIATED_CREDENTIAL');
- define('USER_REDIRECT','USER_REDIRECT'); 
- define('INPUT_HASCONTAINS','INPUT_HASCONTAINS'); 
- define('INPUT_ERROR','INPUT_ERROR'); 
- define('INPUT_DATAEXIST','INPUT_DATAEXIST'); 
- define('SESSION_ENCRYPTDATA_REQUEST','SESSION_ENCRYPTDATA_REQUEST'); 
- define('SESSION_ENCRYPTCONFIRM_REQUEST','SESSION_ENCRYPTCONFIRM_REQUEST'); 
- define('SESSION_PORTAL_REQUEST','SESSION_PORTAL_REQUEST'); 
- define('SESSION_REGISTERDATA_REQUEST','SESSION_REGISTERDATA_REQUEST');
- define('ERROR_DEVELOPER_CONCERN',"Contact your system developer for more info. Please try again later."); 
- define('BIND_ERROR_DEVELOPER_CONCERN',"UNDEFINE OR MISSING CONSTANT PARAMETER @BIND METHOD");
- define('TIMES_STAMP_COOKIES_IN_TIME','TIMES_STAMP_COOKIES_IN_TIME');  
- define('ERROR_ESTABLISH_CONNECTION','ERROR: Could not connect.');   
- define('REMEMBER','remember');
- define('USERNAME','username');
- define('PASSWORD','password');
- define('_PHP_','.php');
-
- define('__CONFIG__'   , 'directories.php' ); // get config file
+  define('DIRECTORY_FILE_REQUEST_','PHPWine\\VanillaFlavour\\');
+  define('BASE_DIR_SYSTEM_FILE', __DIR__ . '/src/');
+  define('LESS_THAN','LESS_THAN');
+  define('MINLENGTH','MINLENGTH');
+  define('MAXLENGTH','MAXLENGTH');
+  define('INPUTFIELD_EMPTY','INPUTFIELD_EMPTY');
+  define('EQUALTO','EQUALTO');
+  define('VALIDPASSWORD','VALIDPASSWORD');
+  define('CONTAIN_UPPERCASE','CONTAIN_UPPERCASE');
+  define('CONTAIN_LOWERCASE','CONTAIN_LOWERCASE');
+  define('CONTAIN_NUMBER','CONTAIN_NUMBER');
+  define('CONTAIN_SPECIALCHAR','CONTAIN_SPECIALCHAR');
+  define('EQUAL_STRICT','EQUAL_STRICT');  
+  define('GREATER_THAN','GREATER_THAN');  
+  define('VALID_EMAIL','VALID_EMAIL');  
+  define('STRINGTYPE','STRINGTYPE');  
+  define('NUMERICTYPE','NUMERICTYPE'); 
+  define('INTEGERTYPE','INTEGERTYPE');  
+  define('FLOATTYPE','FLOATTYPE');  
+  define('CONFIRMPASSWORD','CONFIRMPASSWORD');  
+  define('QUERY_STATEMENT','QUERY_STATEMENT');
+  define('USERNAME_HASCONTAINS','USERNAME_HASCONTAINS');
+  define('USERNAME_ERROR','USERNAME_ERROR');
+  define('PASSWORD_HASCONTAINS','PASSWORD_HASCONTAINS');
+  define('PASSWORD_ERROR','PASSWORD_ERROR');
+  define('NOTEXIST_CREDENTIAL','NOTEXIST_CREDENTIAL');
+  define('NOTASSOCIATED_CREDENTIAL','NOTASSOCIATED_CREDENTIAL');
+  define('USER_REDIRECT','USER_REDIRECT'); 
+  define('INPUT_HASCONTAINS','INPUT_HASCONTAINS'); 
+  define('INPUT_ERROR','INPUT_ERROR'); 
+  define('INPUT_DATAEXIST','INPUT_DATAEXIST'); 
+  define('SESSION_ENCRYPTDATA_REQUEST','SESSION_ENCRYPTDATA_REQUEST'); 
+  define('SESSION_ENCRYPTCONFIRM_REQUEST','SESSION_ENCRYPTCONFIRM_REQUEST'); 
+  define('SESSION_PORTAL_REQUEST','SESSION_PORTAL_REQUEST'); 
+  define('SESSION_REGISTERDATA_REQUEST','SESSION_REGISTERDATA_REQUEST');
+  define('ERROR_DEVELOPER_CONCERN',"Contact your system developer for more info. Please try again later."); 
+  define('BIND_ERROR_DEVELOPER_CONCERN',"UNDEFINE OR MISSING CONSTANT PARAMETER @BIND METHOD");
+  define('TIMES_STAMP_COOKIES_IN_TIME','TIMES_STAMP_COOKIES_IN_TIME');  
+  define('ERROR_ESTABLISH_CONNECTION','ERROR: Could not connect.');   
+  define('REMEMBER','remember');
+  define('USERNAME','username');
+  define('PASSWORD','password');
+  define('_PHP_','.php');
+  define('__CONFIG__'   , 'directories.php' ); // get config file
   define('__PROP__'     , 'prop.php' ); // get prop  
   define('SOM_PATH_DIR' ,  __DIR__ . DIRECTORY_SEPARATOR); // Set DIR PATH Default
   define('__EnHancer__' ,  '/../Enhancer.php'); // get function associated by FUNCTION ASSOCIATED
@@ -108,19 +107,18 @@
   define('__ODT__'      ,  '__ODT__');  // get function assined EXTENSION IMG .ODT
   define('__TXT__'      ,  '__TXT__');  // get function assined EXTENSION IMG .TXT 
   define('__RTF__'      ,  '__RTF__'); // get function assined EXTENSION IMG .RTF
-
- define('__GET_FROM_DIR_ROOT__'           ,   __DIR__ ); // get root file
- define('__GET_STATIC_CLASS_HTML__'       ,   '/src/merge/Html.php'); // get root file static HTML  
- define('__GET_INSTANTIATE_CLASS_HTML__'  ,   '/src/optimizer/Html.php'); // get root file instantiate Html   
- define('__CHECK_MAIN_MERGE_ON_PAGE__'    ,   '/../merge/Html.php'); // get root file CHECK_MAIN_MERGE_ON_PAGE
- define('__CHECK_MAIN_MERGE_ON_CLASS__'   ,   '/../optimizer/Html.php');  // get root file CHECK_MAIN_MERGE_ON_CLASS
- define('__GET_VALIDATE_FILE_PAGE_EXIST__',   '/src/merge/Html.php'); // get validate file exist
- define('__HTMLOPTIMIZER__'               ,   'Html.php'); // get file
- define('__GET_MERGE_FILES__'             ,   SOM_PATH_DIR . 'src/merge/prop.php'); // get merge   
- define('__DIRECTORY_OPTIMIZER_CLASS__'   ,   SOM_PATH_DIR . 'src/'); // get directory
- define('__DIRECTORY_OPTIMIZER_PAGE__'    ,   SOM_PATH_DIR . 'src/merge/html.php'); // get directory 
- define('__GET_LOAD_MERGE__'              ,   SOM_PATH_DIR . 'src/merge/Merge.php' ); // get root file GET_LOAD_MERGE
- define('__GET_LOAD_MERGEBOX__'           ,   SOM_PATH_DIR . 'src/merge/MergeBox.php' ); // get root file GET_LOAD_MERGEBOX
- define('__GET_LOAD_MERGEELEMENT__'       ,   SOM_PATH_DIR . 'src/merge/MergeElements.php' ); // get root file GET_LOAD_MERGEELEMENT
- define('__GET_PROPERTY_ITSELF__'         ,   SOM_PATH_DIR . '../../'.__PROP__.'' ); // get root file GET_PROPERTY_ITSELF
- define('__FILECONFIG__'                  ,   SOM_PATH_DIR . '../../'.__CONFIG__.'' ); // get config file cient
+  define('__GET_FROM_DIR_ROOT__'           ,   __DIR__ ); // get root file
+  define('__GET_STATIC_CLASS_HTML__'       ,   '/src/merge/Html.php'); // get root file static HTML  
+  define('__GET_INSTANTIATE_CLASS_HTML__'  ,   '/src/optimizer/Html.php'); // get root file instantiate Html   
+  define('__CHECK_MAIN_MERGE_ON_PAGE__'    ,   '/../merge/Html.php'); // get root file CHECK_MAIN_MERGE_ON_PAGE
+  define('__CHECK_MAIN_MERGE_ON_CLASS__'   ,   '/../optimizer/Html.php');  // get root file CHECK_MAIN_MERGE_ON_CLASS
+  define('__GET_VALIDATE_FILE_PAGE_EXIST__',   '/src/merge/Html.php'); // get validate file exist
+  define('__HTMLOPTIMIZER__'               ,   'Html.php'); // get file
+  define('__GET_MERGE_FILES__'             ,   SOM_PATH_DIR . 'src/merge/prop.php'); // get merge   
+  define('__DIRECTORY_OPTIMIZER_CLASS__'   ,   SOM_PATH_DIR . 'src/'); // get directory
+  define('__DIRECTORY_OPTIMIZER_PAGE__'    ,   SOM_PATH_DIR . 'src/merge/html.php'); // get directory 
+  define('__GET_LOAD_MERGE__'              ,   SOM_PATH_DIR . 'src/merge/Merge.php' ); // get root file GET_LOAD_MERGE
+  define('__GET_LOAD_MERGEBOX__'           ,   SOM_PATH_DIR . 'src/merge/MergeBox.php' ); // get root file GET_LOAD_MERGEBOX
+  define('__GET_LOAD_MERGEELEMENT__'       ,   SOM_PATH_DIR . 'src/merge/MergeElements.php' ); // get root file GET_LOAD_MERGEELEMENT
+  define('__GET_PROPERTY_ITSELF__'         ,   SOM_PATH_DIR . '../../'.__PROP__.'' ); // get root file GET_PROPERTY_ITSELF
+  define('__FILECONFIG__'                  ,   SOM_PATH_DIR . '../../'.__CONFIG__.'' ); // get config file cient
