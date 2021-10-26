@@ -61,26 +61,17 @@
         
         }
 
-        public function php_wine(string $properties, string $dbRequest) 
+        public function php_wine(string $requestDependencies) 
         {
 
           /**
             *
-            * Defined Class Loader SPL Begin
+            * Defined Class Dependencies
             * @since 10.25.21
             * @since v1.0
             * 
             **/ 
-            require dirname(__FILE__) . DIRECTORY_SEPARATOR . $properties .'.'.'php';
-
-          /**
-            *
-            * Defined Class Loader SPL Begin
-            * @since 10.25.21
-            * @since v1.0
-            * 
-            **/ 
-            require dirname(__FILE__) . DIRECTORY_SEPARATOR . $dbRequest .'.'.'php';
+            require dirname(__FILE__) . DIRECTORY_SEPARATOR . $requestDependencies .'.'.'php';
 
           /**
             *
@@ -111,8 +102,10 @@
         }
     };
     
-    // Get Loader PHPWine
-    $phpWine->php_wine('prop','db');
+    // Get Loader Prop
+    $phpWine->php_wine('prop');
+    // Get Loader db
+    $phpWine->php_wine('db');
     // Define new instance connection
     $mySQLi = $phpWine->wine_dbRequest(DB_SERVER , DB_USERNAME, DB_PASSWORD, DB_NAME);
    
