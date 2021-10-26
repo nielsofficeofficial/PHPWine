@@ -2,8 +2,8 @@
 
  namespace PHPWine\VanillaFlavour\optimizer;
 
- USE \PHPWine\VanillaFlavour\merge\Html;
- USE \PHPWine\VanillaFlavour\optimizer\Html AS Optimizer;
+ USE \PHPWine\VanillaFlavour\Merge\Html;
+ USE \PHPWine\VanillaFlavour\Optimizer\Html AS Optimizer;
 
 /**
  * @copyright (c) 2020-2021 PHPFILEnhancer v0 Cooked by nielsoffice

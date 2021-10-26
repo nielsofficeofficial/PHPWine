@@ -19,9 +19,9 @@ PHPWine v1.0 (Vanilla Flavour) design for corePHP and WordPress Cloud system app
 
 require __DIR__ . '/library/PHPWine/PHPWine.php';
 
-use \PHPWine\VanillaFlavour\merge\Html;
-use \PHPWine\VanillaFlavour\optimizer\Html as optimizer;
-use \PHPWine\VanillaFlavour\optimizer\Enhancers as optimizerCare; 
+use \PHPWine\VanillaFlavour\Merge\Html;
+use \PHPWine\VanillaFlavour\Optimizer\Html as optimizer;
+use \PHPWine\VanillaFlavour\Optimizer\Enhancers as optimizerCare; 
 
 $html        = new optimizer();
 $fileEnhance = new optimizerCare();

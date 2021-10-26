@@ -2,7 +2,7 @@
 
  namespace PHPWine\VanillaFlavour\merge;
 
- USE \PHPWine\VanillaFlavour\optimizer\Enhancers AS PHPFileCare;
+ USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileCare;
 
 /**
  * @copyright (c) 2020-2021 PHPHtml-Optimizer v1.3 Cooked by nielsoffice 
