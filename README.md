@@ -32,6 +32,7 @@ $Enhancee = new OptimizerCare();
 ```PHP
 
 // Use on every pages
+use \PHPWine\VanillaFlavour\Merge\Html;
 use \PHPAuthentication\SessionRequest\System\Auth;
 use \PHPAuthentication\SessionRequest\System\Request;
 use \PHPAuthentication\SessionRequest\System\Validation;
