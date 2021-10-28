@@ -17,7 +17,7 @@ PHPWine v1.0 (Vanilla Flavour) design for corePHP and WordPress Cloud system app
 
 ```PHP
 
-require __DIR__ . '/library/PHPWine/PHPWine.php';
+require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
 
 use \PHPWine\VanillaFlavour\Merge\Html;
 use \PHPWine\VanillaFlavour\Optimizer\Html as Optimizer;
