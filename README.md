@@ -38,6 +38,13 @@ use \PHPAuthentication\SessionRequest\System\Request;
 use \PHPAuthentication\SessionRequest\System\Validation;
 
 ```
+|AUTHENTICATION | 
+|:---            |
+| `AUTH::HASCONTAINS();`  |  
+| `AUTH::ERROR();`  |
+| `AUTH::BIND();`  |  
+| `AUTH::CATCH();`  |  
+| `AUTH:: VALIDATION();`  |  
 
 <h2>Thanks To:</h2>
 <h5>
