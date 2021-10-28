@@ -38,25 +38,6 @@ use \PHPAuthentication\SessionRequest\System\Request;
 use \PHPAuthentication\SessionRequest\System\Validation;
 
 ```
-|PARAMETER | 
-|:---            |
-| `SESSION_PORTAL_REQUEST`  |  
-| `SESSION_REGISTERDATA_REQUEST` |
-| `SESSION_DATACREATE_REQUEST` |
-| `SESSION_DATAREAD_REQUEST` |
-| `SESSION_DATAUPDATE_REQUEST` |  
-| `SESSION_DATADELETE_REQUEST` |  
-
-
-|AUTHENTICATION | 
-|:---            |
-| `AUTH::HASCONTAINS();`  
-| `AUTH::ERROR();`  | 
-| `AUTH::BIND();`  |  
-| `AUTH::CATCH();`  |  
-| `VALIDATION::FORM();`  | 
-
-
 
 <h2>Thanks To:</h2>
 <h5>
