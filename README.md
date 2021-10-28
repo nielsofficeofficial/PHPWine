@@ -48,36 +48,15 @@ use \PHPAuthentication\SessionRequest\System\Validation;
 | `SESSION_DATADELETE_REQUEST` |  
 
 
-|AUTHENTICATION | PARAMETERS 
-|:---            |:---            |
-| `AUTH::HASCONTAINS();`  | `none` |
-| `AUTH::ERROR();`  | `none` |
-| `AUTH::BIND();`  |  `  'QUERY_STATEMENT'         => AUTH::RETURNSQL(string $db,[string $colNames])
- ,'USERNAME_HASCONTAINS'    => string $username 
- ,'USERNAME_ERROR'          => string $err_username 
- ,'PASSWORD_HASCONTAINS'    => string $password
- ,'PASSWORD_ERROR'          => string $err_password
- ,'NOTEXIST_CREDENTIAL'     => string $err_msg
- ,'NOTASSOCIATED_CREDENTIAL'=> string $err_msg
- ,'USER_REDIRECT'           => string $pageName` |
-| `AUTH::CATCH();`  | ` LESS_THAN 
-MINLENGTH
-MAXLENGTH
-EQUALTO
-EQUAL_STRICT
-GREATER_THAN
-VALID_EMAIL
-STRINGTYPE
-NUMERICTYPE
-INTEGERTYPE
-FLOATTYPE
-CONFIRMPASSWORD
-CONTAIN_UPPERCASE
-CONTAIN_LOWERCASE
-CONTAIN_NUMBER
-CONTAIN_SPECIALCHAR
-VALIDPASSWORD `  
-| `VALIDATION::FORM();`  |  ` the same to CATCH ` |
+|AUTHENTICATION | 
+|:---            |
+| `AUTH::HASCONTAINS();`  
+| `AUTH::ERROR();`  | 
+| `AUTH::BIND();`  |  
+| `AUTH::CATCH();`  |  
+| `VALIDATION::FORM();`  | 
+
+
 
 <h2>Thanks To:</h2>
 <h5>
