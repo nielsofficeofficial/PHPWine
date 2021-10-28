@@ -24,7 +24,7 @@ use \PHPWine\VanillaFlavour\Optimizer\Html as Optimizer;
 use \PHPWine\VanillaFlavour\Optimizer\Enhancers as OptimizerCare; 
 
 $Html     = new Optimizer();
-$Enhancee = new OptimizerCare();
+$Enhancer = new OptimizerCare();
 
 ```
 <h3>Method file Installation:</h3>
