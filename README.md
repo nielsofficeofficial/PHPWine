@@ -44,7 +44,7 @@ use \PHPAuthentication\SessionRequest\System\Validation;
 | `AUTH::ERROR();`  |
 | `AUTH::BIND();`  |  
 | `AUTH::CATCH();`  |  
-| `AUTH:: VALIDATION();`  |  
+| `AUTH::VALIDATION();`  |  
 
 <h2>Thanks To:</h2>
 <h5>
