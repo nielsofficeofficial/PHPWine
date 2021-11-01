@@ -5,11 +5,11 @@ PHPWine v1.0 (Vanilla Flavour) design for corePHP and WordPress Cloud system app
 - Authentication
 - Login Form
 - Registration
-- <i>Reset Password</i>
-- <i>Register Email confirmation</i>
-- <i>Recovery Email confirmation</i>
+- Reset Password
+- Register Email confirmation
+- Recovery Email confirmation
 - Handling Form Validation
-- <i>Same page CRUD</i>
+- Same page CRUD
 - PHPOptimizer v1.0 (stable)
 - Advance Form Builder <i>(Optimizier v1.0 (stable))</i>
 
