@@ -32,10 +32,11 @@ $Enhancer = new OptimizerCare();
 ```PHP
 
 // Use on every pages
+use \PHPWine\VanillaFlavour\Optimizer\Form;
 use \PHPWine\VanillaFlavour\Merge\Html;
-use \PHPAuthentication\SessionRequest\System\Auth;
-use \PHPAuthentication\SessionRequest\System\Request;
-use \PHPAuthentication\SessionRequest\System\Validation;
+use \PHPWine\VanillaFlavour\System\Auth;
+use \PHPWine\VanillaFlavour\System\Request;
+use \PHPWine\VanillaFlavour\System\Validation;
 
 ```
 
