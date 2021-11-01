@@ -9,8 +9,8 @@ PHPWine v1.0 (Vanilla Flavour) design for corePHP and WordPress Cloud system app
 - <i>Recovery Email confirmation</i>
 - Handling Form Validation
 - <i>Same page CRUD</i>
-- PHPOptimizer 1.0 (stable)
-- Advance Form Builder <i>(Optimizier 1.0 (stable))</i>
+- PHPOptimizer v1.0 (stable)
+- Advance Form Builder <i>(Optimizier v1.0 (stable))</i>
 
 
 <h3>Library Installation:</h3>
