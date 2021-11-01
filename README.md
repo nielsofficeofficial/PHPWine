@@ -1,5 +1,6 @@
 # PHPWine - (Vanilla Flavour) 
-PHPWine v1.0 (Vanilla Flavour) design for corePHP and WordPress Cloud system application development. 
+PHPWine v1.0 (Vanilla Flavour) design for corePHP and WordPress Cloud system application development. <br />
+<i>Vanilla Flavour: Vanilla flavour means you can use methods outside the class precisely as native PHP functions.</i>
 
 - Authentication
 - Login Form
@@ -8,9 +9,9 @@ PHPWine v1.0 (Vanilla Flavour) design for corePHP and WordPress Cloud system app
 - Register Email confirmation
 - Recovery Email confirmation
 - Handling Form Validation
-- Same page CRUD
-- PHPOptimizer 
-- Advance Form Builder
+- CRUD
+- PHPOptimizer v1.0 (stable)
+- Advance Form Builder <i>(Optimizier v1.0 (stable))</i>
 
 
 <h3>Library Installation:</h3>
@@ -32,10 +33,11 @@ $Enhancer = new OptimizerCare();
 ```PHP
 
 // Use on every pages
+use \PHPWine\VanillaFlavour\Optimizer\Form;
 use \PHPWine\VanillaFlavour\Merge\Html;
-use \PHPAuthentication\SessionRequest\System\Auth;
-use \PHPAuthentication\SessionRequest\System\Request;
-use \PHPAuthentication\SessionRequest\System\Validation;
+use \PHPWine\VanillaFlavour\System\Auth;
+use \PHPWine\VanillaFlavour\System\Request;
+use \PHPWine\VanillaFlavour\System\Validation;
 
 ```
 
