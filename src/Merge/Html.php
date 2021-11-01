@@ -6707,6 +6707,25 @@ static protected function _setinLINEHTMLattr($attr = [], $id=NULL, $class=NULL, 
 
 /**
   *
+  * @method protected function aut file form type
+  * @static @protected Method Defined  auto form type  
+  * RETURN NODE HTML _ noHTML TAG
+  *
+  **/
+static protected function formType( $attr, $type, $typeValue )
+{
+ if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [[ $type ],[ $typeValue ]];
+ else                                                      :  
+   
+   $attr   = $attr; 
+   array_push($attr[0],"{ $type }");
+   array_push($attr[1],"{ $typeValue }");
+ 
+ endif;
+}
+
+/**
+  *
   * @method private function noHTML
   * @static @private Method Defined  isJStrue_assoc  
   * RETURN NODE HTML _ noHTML TAG

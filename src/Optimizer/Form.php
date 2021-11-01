@@ -100,16 +100,8 @@
     
   )
   {
-      
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['text']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"text");
     
-    endif;
-
+   HTML::formType( $attr, 'type', 'text' );       
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -131,15 +123,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['button']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"button");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'button' );   
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -161,15 +145,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['checkbox']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"checkbox");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'checkbox' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -191,15 +167,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['color']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"color");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'color' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -221,15 +189,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['date']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"date");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'date' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -251,15 +211,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['datetime-local']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"datetime-local");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'datetime' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -281,15 +233,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['email']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"email");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'email' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -311,15 +255,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['file']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"file");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'file' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -341,15 +277,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['hidden']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"hidden");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'hidden' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -371,15 +299,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['img']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"img");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'img' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -401,15 +321,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['month']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"month");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'month' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -431,15 +343,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['number']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"number");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'number' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -461,15 +365,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['password']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"password");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'password' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -491,15 +387,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['radio']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"radio");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'radio' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -521,15 +409,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['range']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"range");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'range' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -551,15 +431,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['reset']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"reset");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'reset' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -581,15 +453,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['search']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"search");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'search' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -611,15 +475,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['submit']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"submit");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'submit' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -641,15 +497,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['tel']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"tel");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'tel' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -671,15 +519,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['time']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"time");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'time' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -701,15 +541,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['url']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"url");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'url' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -731,15 +563,7 @@
   )
   {
       
-   if(!isset( $attr ) || is_null( $attr ) || empty( $attr ) ) :  $attr   = [['type'],['week']];
-    else                                                      :  
-      
-      $attr   = $attr; 
-      array_push($attr[0],"type");
-      array_push($attr[1],"week");
-    
-    endif;
-
+   HTML::formType( $attr, 'type', 'week' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
