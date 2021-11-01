@@ -1,5 +1,5 @@
 <?php 
-
+ 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.0 Cooked by nielsoffice 
  *
@@ -72,6 +72,10 @@
             * 
             **/ 
             require dirname(__FILE__) . DIRECTORY_SEPARATOR . $requestDependencies .'.'.'php';
+        }
+
+        public function phpWineLoader() 
+        {        
 
           /**
             *
@@ -106,6 +110,7 @@
     $phpWine->php_wine('prop');
     // Get Loader db
     $phpWine->php_wine('db');
+    $phpWine->phpWineLoader();
     // Define new instance connection
-    $mySQLi = $phpWine->wine_dbRequest(DB_SERVER , DB_USERNAME, DB_PASSWORD, DB_NAME);
+    $mySQLi = $phpWine->phpWineLoader(DB_SERVER , DB_USERNAME, DB_PASSWORD, DB_NAME);
    

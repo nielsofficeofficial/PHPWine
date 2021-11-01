@@ -71,10 +71,8 @@ function bring_to(
  $Enhancer = new PHPFileHandler();
  
  return method_exists($Enhancer, 'bring_to') ? 
-    
-    $Enhancer->bring_to($config, $fileName, $extension, $Optional) : 
-    
-       PERFORM(erorrMessage());
+        $Enhancer->bring_to($config, $fileName, $extension, $Optional) : 
+        PERFORM(erorrMessage());
 } 
 
 /**
@@ -107,11 +105,9 @@ function view_to(
    **/  
   $Enhancer = new PHPFileHandler();
 
-  return method_exists($Enhancer, 'view_to') ? 
-
-     $Enhancer->view_to($config, $fileName) : 
-
-        PERFORM(erorrMessage());
+  return method_exists($Enhancer, 'view_to') ?  
+         $Enhancer->view_to($config, $fileName) : 
+         PERFORM(erorrMessage());
  
 } 
 
@@ -145,10 +141,8 @@ function send_to(
  $Enhancer = new PHPFileHandler();
 
  return method_exists($Enhancer, 'send_to') ? 
-
-    $Enhancer->send_to($uri) : 
-
-       PERFORM(erorrMessage());
+        $Enhancer->send_to($uri) : 
+        PERFORM(erorrMessage());
  
 } 
 
@@ -184,10 +178,8 @@ function SET_DIR_PATH(
  $Enhancer = new PHPFileHandler();
  
  return method_exists($Enhancer, 'SET_DIR_PATH') ? 
-
-    $Enhancer->SET_DIR_PATH($uri, $serverHost) : 
-
-      PERFORM(erorrMessage());
+        $Enhancer->SET_DIR_PATH($uri, $serverHost) : 
+        PERFORM(erorrMessage());
 
 }
 
@@ -223,14 +215,11 @@ function  GETFROM(
   
  $getValues = array_values($array_realpath_dir);
  $REAL_PATH = strtolower($getValues[0]);
-
  $Enhancer  = new PHPFileHandler();
 
  return method_exists($Enhancer, 'GETFROM') ? 
-
-    $Enhancer->GETFROM($REAL_PATH, $array_realpath_dir[1]) : 
-
-      PERFORM(erorrMessage());
+        $Enhancer->GETFROM($REAL_PATH, $array_realpath_dir[1]) : 
+        PERFORM(erorrMessage());
 
 }
 
@@ -265,10 +254,8 @@ function isbelongs(
  $Enhancer = new PHPFileHandler();
 
  return method_exists($Enhancer, 'belongs_to') ? 
-
-    $Enhancer->belongs_to($page, $_GETKEYFOLDERPATH_) : 
-
-       PERFORM(erorrMessage());
+        $Enhancer->belongs_to($page, $_GETKEYFOLDERPATH_) : 
+        PERFORM(erorrMessage());
 
 }
 
@@ -297,10 +284,8 @@ function getKeyPath() {
  $Enhancer = new PHPFileHandler();
 
  return method_exists($Enhancer, 'GetKeyFolderPath') ? 
-
-    $Enhancer->GetKeyFolderPath() : 
-
-      PERFORM(erorrMessage());
+        $Enhancer->GetKeyFolderPath() : 
+        PERFORM(erorrMessage());
 
 }
 

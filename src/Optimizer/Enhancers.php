@@ -679,7 +679,7 @@ private function cpe_FileHander_hdr($PARAM__, $quickStart__) {
   * @since 08.11.2020
   *
   **/
-private function cps_ixb6_FileHandler_bring_to($config=null, $fileName=nul, $extension=null, $optional=null) {
+private function cps_ixb6_FileHandler_bring_to($config=null, $fileName=null, $extension=null, $optional=null) {
 
    $designateDiR    = trim($config  . $fileName);
    $getDesignateDiR = $designateDiR . SetFileExT($extension); 

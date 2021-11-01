@@ -514,160 +514,6 @@ class Html {
  private $path;
 
 /**
-  * @var @property CONST | FUNC_ASSOC  
-  * defined Assigned associsated dstring within the function/Class/Method
-  * minify optimized html attribute 
-  **/
- CONST FUNC_ASSOC       = 'FUNC_ASSOC';
-
-/**
-  * @var @property CONST | CLASS_ASSOC  
-  * defined Assigned associsated dstring within the function/Class/Method
-  * minify optimized html attribute 
-  **/
- CONST CLASS_ASSOC      = 'CLASS_ASSOC';
- 
-/**
-  * @var @property CONST | METHOD_ASSOC  
-  * defined Assigned associsated dstring within the function/Class/Method
-  * minify optimized html attribute 
-  **/
- CONST METHOD_ASSOC      = 'METHOD_ASSOC';
-
-/**
-  * @var @property @static CONST | __SetPHP__  
-  * @since 16.10.2020
-  * defined Assigned Asset Extenstion File as .PHP
-  **/
- CONST __PHP__       = '__PHP__';
- 
-/**
-  * @var @property @static CONST | __SetHTML__  
-  * @since 16.10.2020
-  * defined Assigned Asset Extenstion File as .HTML
-  **/ 
- CONST __HTML__      = '__HTML__';
-
-/**
-  * @var @property @static CONST | __SetCSS__  
-  * @since 16.10.2020
-  * defined Assigned Asset Extenstion File as .CSS
-  **/ 
- CONST __CSS__       = '__CSS__'; 
-
-/**
-  * @var @property @static CONST | __SetJS__  
-  * @since 16.10.2020
-  * defined Assigned Asset Extenstion File as .JS
-  **/ 
- CONST __JS__        = '__JS__'; 
-
-/**
-  * @var @property @static CONST | __SetJPG__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .JPG
-  **/ 
- CONST __JPG__       = '__JPG__';
-
-/**
-  * @var @property @static CONST | __SetJPEG__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .JPEG
-  **/ 
- CONST __JPEG__      = '__JPEG__';   
-
-/**
-  * @var @property @static CONST | __SetPNG__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .JPEG
-  **/  
- CONST __PNG__       = '__PNG_';
-
-/**
-  * @var @property @static CONST | __SetGIF__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .GIF
-  **/  
- CONST __GIF__       = '__GIF__'; 
-
-/**
-  * @var @property @static CONST | __SetBMP__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .BMP
-  **/  
- CONST __BMP__       = '__BMP__';
-
-/**
-  * @var @property @static CONST | __SetTEX__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .TEX
-  **/  
- CONST __TEX__       = '__TEX__';
-
-/**
-  * @var @property @static CONST | __SetXLS__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .XLS
-  **/  
- CONST __XLS__       = '__XLS__'; 
-
-/**
-  * @var @property @static CONST | __SetXLSX__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .XLSX_
-  **/ 
- CONST __XLSX__      = '__XLSX__';  
-
-/**
-  * @var @property @static CONST | __SetDOC__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .DOC
-  **/ 
- CONST __DOC__       = '__DOC__';
-
-/**
-  * @var @property @static CONST | __SetDOCX__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .DOCX
-  **/ 
- CONST __DOCX__      = '__DOCX__';    
-
-/**
-  * @var @property @static CONST | __SetPPT__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .PPT
-  **/ 
- CONST __PPT__       = '__PPT__';
-
-/**
-  * @var @property @static CONST | __SetPPTX__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .PPTX
-  **/ 
- CONST __PPTX__      = '__PPTX__';
-
-/**
-  * @var @property @static CONST | __SetODT__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .ODT
-  **/ 
- CONST __ODT__       = '__ODT__'; 
-
-/**
-  * @var @property @static CONST | __SetTXT__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as ._TXT
-  **/ 
- CONST __TXT__       = '__TXT__';  
-
-/**
-  * @var @property @static CONST | __SetRTF__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as ._RTF
-  **/ 
- CONST __RTF__       = '__RTF__'; 
-
-/**
   * @var @property @static CONST | OPTIMIZER PROP  
   * @since 11.05.2020
   * defined Assigned Image Extenstion as ._RTF
@@ -713,7 +559,6 @@ class Html {
 
 
 ]; 
-
 
 /**
   * @var @property Array of data 
@@ -906,7 +751,7 @@ class Html {
   * @var 
   * @property @STRUCTURE_VARIABLE  (NO x HTML TAG)
   * defined arrays of data html 
-  S**/
+  **/
  protected $htm_st = [
 
    'head'
@@ -935,6 +780,335 @@ class Html {
   * defined arrays of data html 
   **/
  protected $hextend = [];
+
+ /**
+  *
+  * @method private function 
+  * @package @private Method Defined setPath dependency
+  *
+  **/
+private function cpx_ixb6_proprty_get_path($path) {
+
+  return $this->$path = $path;
+
+}
+
+/**
+ *
+ * @method protected function noHTML
+ * @ @protected Method Defined HTML FOUNDATION _getBREAK
+ *
+ **/
+protected function _getBREAK()      { 
+
+  # SET_RETURN_protected_PROPERTY_GET_VALUE_ARRAY_ZERO
+  /**
+    *
+    * @var $hBreak
+    * @var protected property array() 
+    * @method ""
+    *
+    **/   
+   return $this->hBreak[0];    }
+
+/**
+ *
+ * @method protected function noHTML
+ * @ @protected Method Defined HTML FOUNDATION _doBREAK 
+ *
+ **/
+protected function _doBREAK()       { 
+
+  # SET_RETURN_protected_PROPERTY_GET_VALUE_ARRAY_ONE
+  /**
+    *
+    * @var $hBreak
+    * @var protected property array() 
+    * @method ""
+    *
+    **/  
+   return $this->hBreak[1];    }
+
+/**
+ *
+ * @method protected function noHTML
+ * @ @protected Method Defined HTML FOUNDATION _makeLine 
+ *
+ **/
+protected function _makeLine()      { 
+
+  # SET_RETURN_protected_PROPERTY_GET_VALUE_ARRAY_TWO
+  /**
+    *
+    * @var $hBreak
+    * @var protected property array() 
+    * @method ""
+    *
+    **/    
+   return $this->hBreak[2];    }
+
+/**
+ *
+ * @method protected function noHTML
+ * @ @protected Method Defined HTML FOUNDATION _getSQUOTE 
+ *
+ **/
+protected function _getSQUOTE()     { 
+
+  /**
+    *
+    * @var protected property \
+    * @method _setSQ()
+    *
+    **/  
+   return $this->_setSQ();      }
+protected function _setSQ()         { 
+  /**
+    *
+    * @var protected property $sq
+    *
+    **/  
+   return $this->sq = '\'';    }
+
+/**
+ *
+ * @method protected function noHTML
+ * @ @protected Method Defined HTML FOUNDATION _getDQUOTE 
+ *
+ **/
+protected function _getDQUOTE()     { 
+
+  /**
+    *
+    * @var protected property \ 
+    * @method _setDQ()
+    *
+    **/  
+   return $this->_setDQ();      }
+protected function _setDQ()         { 
+  
+  /**
+    *
+    * @var protected property $dq 
+    *
+    **/
+   return $this->dq = "\"";    }
+
+/**
+ *
+ * @method protected function noHTML
+ * @ @protected Method Defined HTML FOUNDATION _getxTAG 
+ *
+ **/
+protected function _getxTAG()   { 
+
+  /**
+    *
+    * @var protected property >
+    * @method _setENDGATE()
+    *
+    **/  
+   return $this->_setENDGATE();     }
+protected function _setENDGATE()    { 
+
+  /**
+    *
+    * @var protected property $lt
+    *
+    **/  
+   return $this->lt = ">";         }
+
+/**
+ *
+ * @method protected function noHTML
+ * @ @protected Method Defined HTML FOUNDATION _get_TAG 
+ *
+ **/
+protected function _get_TAG()    { 
+
+  /**
+    *
+    * @var protected property >
+    * @method _setGATE
+    *
+    **/
+   return $this->_setGATE();        }
+protected function _setGATE()       { 
+  
+  /**
+    *
+    * @var protected property $gt
+    *
+    **/
+   return $this->gt = "<";         }
+
+/**
+ *
+ * @method protected function noHTML
+ * @ @protected Method Defined HTML FOUNDATION _getES 
+ *
+ **/
+protected function _getES()         { 
+
+  /**
+    *
+    * @var protected property =  
+    * @method  _setES
+    *
+    **/  
+   return $this->_setES();          }
+protected function _setES()         { 
+
+  /**
+    *
+    * @var protected property $es
+    *
+    **/
+   return $this->es = "=";         }
+
+/**
+ *
+ * @method protected function noHTML
+ * @ @protected Method Defined HTML FOUNDATION _getENDS
+ *
+ **/
+protected function _getENDS()       { 
+
+  /**
+    *
+    * @var protected property / 
+    * @method  _setES
+    *
+    **/  
+   return $this->_setENDS();        }
+protected function _setENDS()       { 
+
+  /**
+    *
+    * @var protected property $ends
+    *
+    **/
+   return $this->ends = "/";       }
+
+/**
+ *
+ * @method protected function noHTML
+ * @ @protected Method Defined HTML FOUNDATION _tagSYMBOL
+ *
+ **/
+protected function _tagSYMBOL()     { 
+
+  /**
+    *
+    * @var protected property !
+    * @method  _set_exSYMBOL()
+    *
+    **/
+   return $this->_set_exSYMBOL();   }
+protected function _set_exSYMBOL()  { 
+
+  /**
+    *
+    * @var protected property $exSymbol
+    *
+    **/  
+   return $this->exSymbol = "!";   }
+
+/**
+ *
+ * @method protected function noHTML
+ * @ @protected Method Defined HTML FOUNDATION _getCOMEND
+ *
+ **/
+protected function _getCOMEND()     {
+
+  /**
+    *
+    * @var protected property -->
+    * @method  _setCOMEND
+    *
+    **/ 
+   return $this->_setCOMEND();      } 
+protected function _setCOMEND()     {
+
+  /**
+    *
+    * @var protected property $comEND
+    *
+    **/  
+   return $this->comEND = "-->";   }
+
+/**
+ *
+ * @method protected function noHTML
+ * @ @protected Method Defined HTML FOUNDATION _getTRING
+ *
+ **/
+protected function _getTRING($str)  { 
+
+  /**
+    *
+    * @method  _setSTRING
+    *
+    **/  
+   return $this->_setSTRING($str);  } 
+protected function _setSTRING($str) {
+
+  /**
+    *
+    * @var protected property $str
+    *
+    **/
+   return $this->str = $str;   }
+
+/**
+ *
+ * @method protected function noHTML
+ * @ @protected Method Defined HTML FOUNDATION _tagSPACER
+ *
+ **/
+protected function _tagSPACER()     { 
+
+  /**
+    *
+    * @method  _set_tagSPACER
+    *
+    **/    
+   return $this->_set_tagSPACER();  }
+protected function _set_tagSPACER() {
+
+  /**
+    *
+    * @var protected property $sHTML
+    *
+    **/
+   return $this->sHTML = " ";
+}
+
+/**
+ *
+ * @method protected function noHTML
+ * @ @protected Method Defined HTML FOUNDATION _getCOMBEGIN
+ *
+ **/
+protected function _getCOMBEGIN() { 
+
+  /**
+    *
+    * @method  _set_tagSPACER
+    *
+    **/  
+    return $this->_setCOMBEGIN();  }
+protected function _setCOMBEGIN() { 
+
+  /**
+    *
+    * @var protected property $sHTML
+    *
+    **/
+    return $this->comBEGIN = $this->_get_TAG().$this->_tagSYMBOL()."--";
+}
+
 
 /**
   * @method _construct 
@@ -7493,7 +7667,7 @@ protected function cpe_custom_elements($Element__, $value__, $elemAttr__, $elemI
   **/
 private function cpe_FileHandler_html_type($attr, $id, $class) {
 
-    $Enhancer = NEW \PHPHtml\CodeOptimizer\optimizer\Enhancers();
+    $Enhancer = NEW \PHPWine\VanillaFlavour\optimizer\Enhancers();
     
     return $Enhancer->ATTR('_xhtml_modify','doctype').$this->get__HTML('STRUCTURE', 3, $attr, $id, $class);  
 }
@@ -7662,7 +7836,7 @@ protected function cpe_xib6_FileHandler_mulipath_array($MultiPagefile__, $CheckC
   
   } else {
 
-      $this->PERFORM('Extention is not yet registered or undefine!').$this->BREAK();
+      $this->PERFORM('Extention is not yet registered or undefine!') . "<br />";
       $this->PERFORM('For Developer support visit github submit issue: '.$this->ELEMENT('a','Submit Github Support',$this->IssueSubmitAttr()));  
       $this->PERFORM('Read Documentation: '.$this->ELEMENT('a','Submit Github Support',$this->DocxSubmitAttr()));     
       exit();
@@ -7802,334 +7976,6 @@ private function cpe_Filehandler_Val($tagVHtml__, $ValElem__,$ValEAttr__) {
    
    return($cpe_get_customELement);
 
-}
-
-/**
-  *
-  * @method private function 
-  * @package @private Method Defined setPath dependency
-  *
-  **/
-private function cpx_ixb6_proprty_get_path($path) {
-
-   return $this->$path = $path;
-
-}
-
-/**
-  *
-  * @method protected function noHTML
-  * @ @protected Method Defined HTML FOUNDATION _getBREAK
-  *
-  **/
- protected function _getBREAK()      { 
-
-   # SET_RETURN_protected_PROPERTY_GET_VALUE_ARRAY_ZERO
-   /**
-     *
-     * @var $hBreak
-     * @var protected property array() 
-     * @method ""
-     *
-     **/   
-    return $this->hBreak[0];    }
-
-/**
-  *
-  * @method protected function noHTML
-  * @ @protected Method Defined HTML FOUNDATION _doBREAK 
-  *
-  **/
- protected function _doBREAK()       { 
-
-   # SET_RETURN_protected_PROPERTY_GET_VALUE_ARRAY_ONE
-   /**
-     *
-     * @var $hBreak
-     * @var protected property array() 
-     * @method ""
-     *
-     **/  
-    return $this->hBreak[1];    }
-
-/**
-  *
-  * @method protected function noHTML
-  * @ @protected Method Defined HTML FOUNDATION _makeLine 
-  *
-  **/
- protected function _makeLine()      { 
-
-   # SET_RETURN_protected_PROPERTY_GET_VALUE_ARRAY_TWO
-   /**
-     *
-     * @var $hBreak
-     * @var protected property array() 
-     * @method ""
-     *
-     **/    
-    return $this->hBreak[2];    }
-
-/**
-  *
-  * @method protected function noHTML
-  * @ @protected Method Defined HTML FOUNDATION _getSQUOTE 
-  *
-  **/
- protected function _getSQUOTE()     { 
-
-   /**
-     *
-     * @var protected property \
-     * @method _setSQ()
-     *
-     **/  
-    return $this->_setSQ();      }
- protected function _setSQ()         { 
-   /**
-     *
-     * @var protected property $sq
-     *
-     **/  
-    return $this->sq = '\'';    }
-
-/**
-  *
-  * @method protected function noHTML
-  * @ @protected Method Defined HTML FOUNDATION _getDQUOTE 
-  *
-  **/
- protected function _getDQUOTE()     { 
-
-   /**
-     *
-     * @var protected property \ 
-     * @method _setDQ()
-     *
-     **/  
-    return $this->_setDQ();      }
- protected function _setDQ()         { 
-   
-   /**
-     *
-     * @var protected property $dq 
-     *
-     **/
-    return $this->dq = "\"";    }
-
-/**
-  *
-  * @method protected function noHTML
-  * @ @protected Method Defined HTML FOUNDATION _getxTAG 
-  *
-  **/
- protected function _getxTAG()   { 
-
-   /**
-     *
-     * @var protected property >
-     * @method _setENDGATE()
-     *
-     **/  
-    return $this->_setENDGATE();     }
- protected function _setENDGATE()    { 
-
-   /**
-     *
-     * @var protected property $lt
-     *
-     **/  
-    return $this->lt = ">";         }
-
-/**
-  *
-  * @method protected function noHTML
-  * @ @protected Method Defined HTML FOUNDATION _get_TAG 
-  *
-  **/
- protected function _get_TAG()    { 
-
-   /**
-     *
-     * @var protected property >
-     * @method _setGATE
-     *
-     **/
-    return $this->_setGATE();        }
- protected function _setGATE()       { 
-   
-   /**
-     *
-     * @var protected property $gt
-     *
-     **/
-    return $this->gt = "<";         }
-
-/**
-  *
-  * @method protected function noHTML
-  * @ @protected Method Defined HTML FOUNDATION _getES 
-  *
-  **/
- protected function _getES()         { 
-
-   /**
-     *
-     * @var protected property =  
-     * @method  _setES
-     *
-     **/  
-    return $this->_setES();          }
- protected function _setES()         { 
-
-   /**
-     *
-     * @var protected property $es
-     *
-     **/
-    return $this->es = "=";         }
-
-/**
-  *
-  * @method protected function noHTML
-  * @ @protected Method Defined HTML FOUNDATION _getENDS
-  *
-  **/
- protected function _getENDS()       { 
-
-   /**
-     *
-     * @var protected property / 
-     * @method  _setES
-     *
-     **/  
-    return $this->_setENDS();        }
- protected function _setENDS()       { 
-
-   /**
-     *
-     * @var protected property $ends
-     *
-     **/
-    return $this->ends = "/";       }
-
-/**
-  *
-  * @method protected function noHTML
-  * @ @protected Method Defined HTML FOUNDATION _tagSYMBOL
-  *
-  **/
- protected function _tagSYMBOL()     { 
-
-   /**
-     *
-     * @var protected property !
-     * @method  _set_exSYMBOL()
-     *
-     **/
-    return $this->_set_exSYMBOL();   }
- protected function _set_exSYMBOL()  { 
-
-   /**
-     *
-     * @var protected property $exSymbol
-     *
-     **/  
-    return $this->exSymbol = "!";   }
-
-/**
-  *
-  * @method protected function noHTML
-  * @ @protected Method Defined HTML FOUNDATION _getCOMEND
-  *
-  **/
- protected function _getCOMEND()     {
-
-   /**
-     *
-     * @var protected property -->
-     * @method  _setCOMEND
-     *
-     **/ 
-    return $this->_setCOMEND();      } 
- protected function _setCOMEND()     {
-
-   /**
-     *
-     * @var protected property $comEND
-     *
-     **/  
-    return $this->comEND = "-->";   }
-
-/**
-  *
-  * @method protected function noHTML
-  * @ @protected Method Defined HTML FOUNDATION _getTRING
-  *
-  **/
- protected function _getTRING($str)  { 
-
-   /**
-     *
-     * @method  _setSTRING
-     *
-     **/  
-    return $this->_setSTRING($str);  } 
- protected function _setSTRING($str) {
-
-   /**
-     *
-     * @var protected property $str
-     *
-     **/
-    return $this->str = $str;   }
-
-/**
-  *
-  * @method protected function noHTML
-  * @ @protected Method Defined HTML FOUNDATION _tagSPACER
-  *
-  **/
- protected function _tagSPACER()     { 
-
-   /**
-     *
-     * @method  _set_tagSPACER
-     *
-     **/    
-    return $this->_set_tagSPACER();  }
- protected function _set_tagSPACER() {
-
-   /**
-     *
-     * @var protected property $sHTML
-     *
-     **/
-    return $this->sHTML = " ";
-}
-
-/**
-  *
-  * @method protected function noHTML
-  * @ @protected Method Defined HTML FOUNDATION _getCOMBEGIN
-  *
-  **/
- protected function _getCOMBEGIN() { 
-
-   /**
-     *
-     * @method  _set_tagSPACER
-     *
-     **/  
-     return $this->_setCOMBEGIN();  }
- protected function _setCOMBEGIN() { 
-
-   /**
-     *
-     * @var protected property $sHTML
-     *
-     **/
-     return $this->comBEGIN = $this->_get_TAG().$this->_tagSYMBOL()."--";
 }
 
 /**

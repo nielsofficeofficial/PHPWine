@@ -1141,11 +1141,11 @@ static protected $hextend = [];
 
 
     $inline     =  "INLINE"
-   ,$elem 
-   ,$attr       =  []
-   ,$id         =  null
-   ,$class      =  null
-   ,$assoc      =  null
+   ,$elem       =  NULL
+   ,$attr       =  NULL
+   ,$id         =  NULL
+   ,$class      =  NULL
+   ,$assoc      =  NULL
 
  )
  { 
@@ -6901,7 +6901,7 @@ static protected function apps_att($attr = []) {
   * RETURN NODE HTML _ noHTML TAG
   *
   **/
-static private function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $assoc) {
+static protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $assoc) {
 
     if ($assoc == NULL || $assoc == FALSE || $assoc == 'DEFUALT') {
 

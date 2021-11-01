@@ -37,9 +37,11 @@
  * @version   v1.0
  *
  */
+
  
   define('DIRECTORY_FILE_REQUEST_','PHPWine\\VanillaFlavour\\');
   define('BASE_DIR_SYSTEM_FILE', __DIR__ . '/src/');
+
   define('LESS_THAN','LESS_THAN');
   define('MINLENGTH','MINLENGTH');
   define('MAXLENGTH','MAXLENGTH');

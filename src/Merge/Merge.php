@@ -44,9 +44,9 @@ USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileHandler;
   **/
 function _xH1( 
 
-   $value           =  null 
+   $element_id      =  null 
+  ,$value           =  null 
   ,$attr            =  null 
-  ,$element_id      =  null 
   ,$element_class   =  null 
   ,$label           =  null 
   ,$assoc           =  null 
@@ -82,12 +82,12 @@ function _xH1(
   **/
 function _xH2( 
 
-   $value          =  null 
-  ,$attr           =  null 
-  ,$element_id     =  null 
-  ,$element_class  =  null 
-  ,$label          =  null 
-  ,$assoc          =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -119,12 +119,12 @@ function _xH2(
   **/
 function _xH3( 
 
-   $value          = null 
-  ,$attr           = null 
-  ,$element_id     = null 
-  ,$element_class  = null 
-  ,$label          = null 
-  ,$assoc          = null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -156,12 +156,12 @@ function _xH3(
   **/
 function _xH4( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -193,12 +193,12 @@ function _xH4(
   **/
 function _xH5( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -230,12 +230,12 @@ function _xH5(
   **/
 function _xH6( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -267,12 +267,12 @@ function _xH6(
   **/
 function _xDIV( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -304,12 +304,12 @@ function _xDIV(
   **/
 function _xP( 
 
-       $value         =  null
-      ,$attr          =  null
-      ,$element_id    =  null
-      ,$element_class =  null
-      ,$label         =  null
-      ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -341,12 +341,12 @@ function _xP(
   **/
 function _xBUTTON( 
 
-       $value         =  null
-      ,$attr          =  null
-      ,$element_id    =  null
-      ,$element_class =  null
-      ,$label         =  null
-      ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -378,12 +378,12 @@ function _xBUTTON(
   **/
 function _xA( 
 
-      $value          =  null
-     ,$attr           =  null
-     ,$element_id     =  null
-     ,$element_class  =  null
-     ,$label          =  null
-     ,$assoc          =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -415,12 +415,12 @@ function _xA(
   **/
 function _xIFRAME( 
 
-      $value          =  null
-     ,$attr           =  null
-     ,$element_id     =  null
-     ,$element_class  =  null
-     ,$label          =  null
-     ,$assoc          =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -452,12 +452,12 @@ function _xIFRAME(
   **/
 function _xMAIN( 
 
-       $value         =  null
-      ,$attr          =  null
-      ,$element_id    =  null
-      ,$element_class =  null
-      ,$label         =  null
-      ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
  ) 
 { 
@@ -489,12 +489,12 @@ function _xMAIN(
   **/
 function _xNAV( 
 
-       $value         =  null
-      ,$attr          =  null
-      ,$element_id    =  null
-      ,$element_class =  null
-      ,$label         =  null
-      ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
  ) 
 { 
@@ -526,12 +526,12 @@ function _xNAV(
   **/
 function _xSELECT( 
 
-      $value          =  null
-     ,$attr           =  null
-     ,$element_id     =  null
-     ,$element_class  =  null
-     ,$label          =  null
-     ,$assoc          =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -563,12 +563,12 @@ function _xSELECT(
   **/
 function _xFORM( 
 
-      $value          =  null
-     ,$attr           =  null
-     ,$element_id     =  null
-     ,$element_class  =  null
-     ,$label          =  null
-     ,$assoc          =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -600,12 +600,12 @@ function _xFORM(
   **/
 function _xPICTURE( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -637,12 +637,12 @@ function _xPICTURE(
   **/
 function _xSECTION( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -674,12 +674,12 @@ function _xSECTION(
   **/
 function _xTEXTAREA( 
 
-     $value          =  null
-    ,$attr           =  null
-    ,$element_id     =  null
-    ,$element_class  =  null
-    ,$label          =  null
-    ,$assoc          =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -711,12 +711,12 @@ function _xTEXTAREA(
   **/
 function _xFOOTER( 
 
-     $value          =  null
-    ,$attr           =  null
-    ,$element_id     =  null
-    ,$element_class  =  null
-    ,$label          =  null
-    ,$assoc          =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -816,12 +816,12 @@ function _xSTYLE(
   **/
 function _xAUDIO( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -853,12 +853,12 @@ function _xAUDIO(
   **/
 function _xVIDEO( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -890,12 +890,12 @@ function _xVIDEO(
   **/
 function _xADDRESS( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -927,12 +927,12 @@ function _xADDRESS(
   **/
 function _xCOLGROUP( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -964,12 +964,12 @@ function _xCOLGROUP(
   **/
 function _xBDI( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -1001,12 +1001,12 @@ function _xBDI(
   **/
 function _xBDO( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -1038,12 +1038,12 @@ function _xBDO(
   **/
 function _xBLOCKQUOTE( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -1075,12 +1075,12 @@ function _xBLOCKQUOTE(
   **/
 function _xCAPTION( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1112,12 +1112,12 @@ function _xCAPTION(
   **/
 function _xLABEL( 
 
-       $value         =  null
-      ,$attr          =  null
-      ,$element_id    =  null
-      ,$element_class =  null
-      ,$label         =  null
-      ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1149,12 +1149,12 @@ function _xLABEL(
   **/
 function _xDATALIST( 
 
-       $value         =  null
-      ,$attr          =  null
-      ,$element_id    =  null
-      ,$element_class =  null
-      ,$label         =  null
-      ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1186,12 +1186,12 @@ function _xDATALIST(
   **/
 function _xDETAILS( 
 
-       $value         =  null
-      ,$attr          =  null
-      ,$element_id    =  null
-      ,$element_class =  null
-      ,$label         =  null
-      ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1223,12 +1223,12 @@ function _xDETAILS(
   **/
 function _xSUMMARY( 
 
-       $value         =  null
-      ,$attr          =  null
-      ,$element_id    =  null
-      ,$element_class =  null
-      ,$label         =  null
-      ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1260,12 +1260,12 @@ function _xSUMMARY(
   **/
 function _xDIALOG( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1296,13 +1296,13 @@ function _xDIALOG(
   *
   **/
 function _xOPTION( 
-
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null
+  
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1334,12 +1334,12 @@ function _xOPTION(
   **/
 function _xFIGURE( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1371,12 +1371,12 @@ function _xFIGURE(
   **/
 function _xFIGCAPTION( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -1408,12 +1408,12 @@ function _xFIGCAPTION(
   **/
 function _xMETER( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1445,12 +1445,12 @@ function _xMETER(
   **/
 function _xOBJECT( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1482,12 +1482,12 @@ function _xOBJECT(
   **/
 function _xOPTGROUP( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -1519,12 +1519,12 @@ function _xOPTGROUP(
   **/
 function _xOUTPUT( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1556,12 +1556,12 @@ function _xOUTPUT(
   **/
 function _xPROGRESS( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1593,12 +1593,12 @@ function _xPROGRESS(
   **/
 function _xSVG( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -1630,12 +1630,12 @@ function _xSVG(
   **/
 function _xTEMPLATE( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1667,12 +1667,12 @@ function _xTEMPLATE(
   **/
 function _xUL( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1704,12 +1704,12 @@ function _xUL(
   **/
 function _xOL( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -1741,12 +1741,12 @@ function _xOL(
   **/
 function _xLI( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1778,12 +1778,12 @@ function _xLI(
   **/
 function _xTABLE( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1815,12 +1815,12 @@ function _xTABLE(
   **/
 function _xTR( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1852,12 +1852,12 @@ function _xTR(
   **/
 function _xTD( 
 
-    $value         =  null
-   ,$attr          =  null
-   ,$element_id    =  null
-   ,$element_class =  null
-   ,$label         =  null
-   ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -1889,12 +1889,12 @@ function _xTD(
   **/
 function _xTH( 
 
-    $value         =  null
-   ,$attr          =  null
-   ,$element_id    =  null
-   ,$element_class =  null
-   ,$label         =  null
-   ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -1926,12 +1926,12 @@ function _xTH(
   **/
 function _xLEGEND( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -1963,12 +1963,12 @@ function _xLEGEND(
   **/
 function _xFIELDSET( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -2000,12 +2000,12 @@ function _xFIELDSET(
   **/
 function _xTBODY( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -2037,12 +2037,12 @@ function _xTBODY(
   **/
 function _xTFOOTER( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -2060,7 +2060,7 @@ function _xTFOOTER(
    *
    **/
   $Html = NEW Merge(); 
-  return method_exists($Html,'TFOOTER') ? $Html->TFOOTER($value, $attr, $element_id, $element_class, $label, $assoc) : PERFORM(erorrMessage());  
+  return method_exists($Html,'TFOOT') ? $Html->TFOOT($value, $attr, $element_id, $element_class, $label, $assoc) : PERFORM(erorrMessage());  
 
 }
 
@@ -2074,12 +2074,12 @@ function _xTFOOTER(
   **/
 function _xTHEAD( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -2111,12 +2111,12 @@ function _xTHEAD(
   **/
 function _xSPAN( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -2148,12 +2148,12 @@ function _xSPAN(
   **/
 function _xEM( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -2185,12 +2185,12 @@ function _xEM(
   **/
 function _xB( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 {
@@ -2222,12 +2222,12 @@ function _xB(
   **/
 function _xI( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -2259,12 +2259,12 @@ function _xI(
   **/
 function _xSMALL( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -2296,12 +2296,12 @@ function _xSMALL(
   **/
 function _xMARQUEE( 
 
-       $value         =  null
-      ,$attr          =  null
-      ,$element_id    =  null
-      ,$element_class =  null
-      ,$label         =  null
-      ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -2333,12 +2333,12 @@ function _xMARQUEE(
   **/
 function _xCENTER( 
 
-       $value         =  null
-      ,$attr          =  null
-      ,$element_id    =  null
-      ,$element_class =  null
-      ,$label         =  null
-      ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -2370,12 +2370,12 @@ function _xCENTER(
   **/
 function _xCODE( 
 
-       $value         =  null
-      ,$attr          =  null
-      ,$element_id    =  null
-      ,$element_class =  null
-      ,$label         =  null
-      ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -2407,12 +2407,12 @@ function _xCODE(
   **/
 function _xABBR( 
 
-       $value         =  null
-      ,$attr          =  null
-      ,$element_id    =  null
-      ,$element_class =  null
-      ,$label         =  null
-      ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null
 
 ) 
 { 
@@ -2444,12 +2444,12 @@ function _xABBR(
   **/
 function _xMAP( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -2481,12 +2481,12 @@ function _xMAP(
   **/
 function _xCANVAS( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -2512,55 +2512,18 @@ function _xCANVAS(
   *
   * @since 20.19.2020
   * @category PHPHtml-Merge
-  * @ Method Defined HTML SITE noHTML  
-  * Inline Heading tag SITE
-  *
-  **/
-function _xSITE( 
-
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
-
-) 
-{ 
-  /**
-   *
-   *
-   *
-   *
-   *
-   * @package : Merge Heading tag SITE
-   * @package : Static Procedural
-   * @method  : Html::SITE($value, $attr=null, $element_id, $element_class, $label, $assoc);
-   *
-   *
-   *
-   **/
-  $Html = NEW Merge();
-  return method_exists($Html,'SITE') ? $Html->SITE($value, $attr, $element_id, $element_class, $label, $assoc) : PERFORM(erorrMessage());  
-
-}
-
-/**
-  *
-  * @since 20.19.2020
-  * @category PHPHtml-Merge
   * @ Method Defined HTML DATA noHTML  
   * Inline Heading tag DATA
   *
   **/
 function _xDATA( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -2592,12 +2555,12 @@ function _xDATA(
   **/
 function _xDL( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -2629,12 +2592,12 @@ function _xDL(
   **/
 function _xDT( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null  
 
 ) 
 { 
@@ -2666,12 +2629,12 @@ function _xDT(
   **/
 function _xDD( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -2703,12 +2666,12 @@ function _xDD(
   **/
 function _xDFN( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null  
 
 ) 
 { 
@@ -2740,12 +2703,12 @@ function _xDFN(
   **/
 function _xINS( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null  
 
 ) 
 { 
@@ -2777,12 +2740,12 @@ function _xINS(
   **/
 function _xDEL( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null  
 
 ) 
 { 
@@ -2814,12 +2777,12 @@ function _xDEL(
   **/
 function _xKBD( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null  
 
 ) 
 { 
@@ -2851,12 +2814,12 @@ function _xKBD(
   **/
 function _xMARK( 
 
-      $value         =  null
-     ,$attr          =  null
-     ,$element_id    =  null
-     ,$element_class =  null
-     ,$label         =  null
-     ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -2888,12 +2851,12 @@ function _xMARK(
   **/
 function _xPRE( 
 
-     $value          =  null
-    ,$attr           =  null
-    ,$element_id     =  null
-    ,$element_class  =  null
-    ,$label          =  null
-    ,$assoc          =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -2925,12 +2888,12 @@ function _xPRE(
   **/
 function _xRT( 
 
-     $value          =  null
-    ,$attr           =  null
-    ,$element_id     =  null
-    ,$element_class  =  null
-    ,$label          =  null
-    ,$assoc          =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -2962,12 +2925,12 @@ function _xRT(
   **/
 function _xS( 
 
-     $value           =  null
-    ,$attr            =  null
-    ,$element_id      =  null
-    ,$element_class   =  null
-    ,$label           =  null
-    ,$assoc           =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null  
 
 ) 
 { 
@@ -2999,12 +2962,12 @@ function _xS(
   **/
 function _xSAMP( 
 
-     $value           =  null
-    ,$attr            =  null
-    ,$element_id      =  null
-    ,$element_class   =  null
-    ,$label           =  null
-    ,$assoc           =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -3036,12 +2999,12 @@ function _xSAMP(
   **/
 function _xSTRONG( 
 
-     $value          =  null
-    ,$attr           =  null
-    ,$element_id     =  null
-    ,$element_class  =  null
-    ,$label          =  null
-    ,$assoc          =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -3073,12 +3036,12 @@ function _xSTRONG(
   **/
 function _xSUB( 
 
-     $value          =  null
-    ,$attr           =  null
-    ,$element_id     =  null
-    ,$element_class  =  null
-    ,$label          =  null
-    ,$assoc          =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null  
 
 ) 
 { 
@@ -3110,12 +3073,12 @@ function _xSUB(
   **/
 function _xSUP( 
 
-     $value          =  null
-    ,$attr           =  null
-    ,$element_id     =  null
-    ,$element_class  =  null
-    ,$label          =  null
-    ,$assoc          =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -3147,12 +3110,12 @@ function _xSUP(
   **/
 function _xWBR( 
 
-     $value          =  null
-    ,$attr           =  null
-    ,$element_id     =  null
-    ,$element_class  =  null
-    ,$label          =  null
-    ,$assoc          =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -3184,12 +3147,12 @@ function _xWBR(
   **/
 function _xQ( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null   
 
 ) 
 { 
@@ -3221,12 +3184,12 @@ function _xQ(
   **/
 function _xHEAD( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -3258,12 +3221,12 @@ function _xHEAD(
   **/
 function _xTITLE( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
@@ -3295,12 +3258,12 @@ function _xTITLE(
   **/
 function _xBODY( 
 
-     $value         =  null
-    ,$attr          =  null
-    ,$element_id    =  null
-    ,$element_class =  null
-    ,$label         =  null
-    ,$assoc         =  null 
+   $element_id      =  null 
+  ,$value           =  null 
+  ,$attr            =  null 
+  ,$element_class   =  null 
+  ,$label           =  null 
+  ,$assoc           =  null 
 
 ) 
 { 
