@@ -1,13 +1,14 @@
 <?php 
 
-require __DIR__ . '/library/PHPWine/PHPWine.php';
+require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
 
-use \PHPWine\VanillaFlavour\merge\Html;
-use \PHPWine\VanillaFlavour\optimizer\Html as optimizer;
-use \PHPWine\VanillaFlavour\optimizer\Enhancers as optimizerCare; 
+use \PHPWine\VanillaFlavour\Merge\Html;
+use \PHPWine\VanillaFlavour\Optimizer\Html as optimizer;
+use \PHPWine\VanillaFlavour\Optimizer\Enhancers as optimizerCare; 
 
 $html        = new optimizer();
 $fileEnhance = new optimizerCare();
+
 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.0 Cooked by nielsoffice 

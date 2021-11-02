@@ -45,10 +45,7 @@
   * @since v1.0
   *
   **/ 
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
+define('DB_SERVER', '');
+define('DB_USERNAME', '');
 define('DB_PASSWORD', '');
-define('DB_NAME', 'auth');
- 
-
-?>
+define('DB_NAME', '');

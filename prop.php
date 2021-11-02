@@ -747,7 +747,7 @@
   * @since v1.0
   *
   **/
-  define('__DIRECTORY_OPTIMIZER_PAGE__'    ,   SOM_PATH_DIR . 'src/merge/html.php'); 
+  define('__DIRECTORY_OPTIMIZER_PAGE__'    ,   SOM_PATH_DIR . 'src/Merge/html.php'); 
 
  /**
   *
@@ -756,7 +756,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_LOAD_MERGE__'              ,   SOM_PATH_DIR . 'src/merge/Merge.php' );
+  define('__GET_LOAD_MERGE__'              ,   SOM_PATH_DIR . 'src/Merge/Merge.php' );
 
  /**
   *
@@ -765,7 +765,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_LOAD_MERGEBOX__'           ,   SOM_PATH_DIR . 'src/merge/MergeBox.php' );
+  define('__GET_LOAD_MERGEBOX__'           ,   SOM_PATH_DIR . 'src/Merge/MergeBox.php' );
 
  /**
   *
@@ -774,7 +774,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_LOAD_MERGEELEMENT__'       ,   SOM_PATH_DIR . 'src/merge/MergeElements.php' ); 
+  define('__GET_LOAD_MERGEELEMENT__'       ,   SOM_PATH_DIR . 'src/Merge/MergeElements.php' ); 
 
  /**
   *
