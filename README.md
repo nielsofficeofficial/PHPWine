@@ -5,6 +5,8 @@
 PHPWine v1.0 (Vanilla Flavour) design for corePHP and WordPress Cloud system application development. <br />
 <i>Vanilla Flavour: Vanilla flavour means you can use methods outside the class precisely as native PHP functions.</i>
 
+PHP code encrypted, PHP Library, Code designer and Optimizer, Html-minifier Advance Form builder, Form Validation and more... 
+
 - Authentication
 - Login Form
 - Registration
