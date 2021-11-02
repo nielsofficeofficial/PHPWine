@@ -1,3 +1,4 @@
+<img src="https://img.shields.io/badge/license-MIT-blue">
 # PHPWine - (Vanilla Flavour) 
 PHPWine v1.0 (Vanilla Flavour) design for corePHP and WordPress Cloud system application development. <br />
 <i>Vanilla Flavour: Vanilla flavour means you can use methods outside the class precisely as native PHP functions.</i>
