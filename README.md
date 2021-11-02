@@ -45,7 +45,7 @@ use \PHPWine\VanillaFlavour\System\Validation;
 
  // Create database table for user run with SQL environment for demo file
  
- CREATE TABLE IF NOT EXISTS `users` (
+ CREATE TABLE IF NOT EXISTS `users_log` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(50) NOT NULL,
   `email` varchar(255) NOT NULL,
