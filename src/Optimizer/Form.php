@@ -1,6 +1,6 @@
 <?php 
 
- namespace PHPWine\VanillaFlavour\optimizer;
+namespace PHPWine\VanillaFlavour\optimizer;
 
  USE \PHPWine\VanillaFlavour\Merge\Html;
 
@@ -101,8 +101,8 @@
   )
   {
     
-   HTML::formType( $attr, 'type', 'text' );       
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'text' );       
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -123,8 +123,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'button' );   
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'submit' );   
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -145,8 +145,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'checkbox' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'checkbox' );  
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -167,8 +167,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'color' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'color' );  
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -189,8 +189,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'date' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+    $attr = HTML::formType( $attr, 'type', 'date' );  
+    return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -211,8 +211,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'datetime' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'datetime' );  
+   return   Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -233,8 +233,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'email' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'email' );  
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -255,8 +255,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'file' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'file' );  
+   return   Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -277,8 +277,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'hidden' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'hidden' );  
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -299,8 +299,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'img' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'img' );  
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -321,8 +321,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'month' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'month' );  
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -343,8 +343,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'number' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'number' );  
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -365,8 +365,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'password' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'password' );  
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -387,7 +387,7 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'radio' );  
+   $attr = HTML::formType( $attr, 'type', 'radio' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
@@ -409,8 +409,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'range' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'range' );  
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -431,8 +431,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'reset' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'reset' );  
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -453,8 +453,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'search' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'search' );  
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -475,8 +475,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'submit' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'submit' );  
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -497,8 +497,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'tel' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'tel' );  
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -519,8 +519,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'time' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'time' );  
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -541,8 +541,8 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'url' );  
-   return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
+   $attr = HTML::formType( $attr, 'type', 'url' );  
+   return  Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }
 
@@ -563,7 +563,7 @@
   )
   {
       
-   HTML::formType( $attr, 'type', 'week' );  
+    $attr = HTML::formType( $attr, 'type', 'week' );  
    return Parent::HtmlELements_Optimizer("INLINE",'input',  $attr , $id, $class, $assoc);
    
   }

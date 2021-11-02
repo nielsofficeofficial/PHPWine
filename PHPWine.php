@@ -40,27 +40,6 @@
 
   $phpWine = new class {
         
-      /**
-        *
-        * Defined NEW Instance Database
-        * @since 10.25.21
-        * @since v1.0
-        * 
-        **/ 
-        public function wine_dbRequest($dataBase ,  $username , $password , $host )
-        {
-
-          return  $mySQLi = new mysqli( 
-            
-               $this->dataBase = $dataBase 
-              ,$this->username = $username
-              ,$this->password = $password
-              ,$this->host     = $host 
-            
-          ); if($mySQLi === false) : die( ERROR_ESTABLISH_CONNECTION . $mySQLi->connect_error); endif;
-        
-        }
-
         public function php_wine(string $requestDependencies) 
         {
 
@@ -112,5 +91,5 @@
     $phpWine->php_wine('db');
     $phpWine->phpWineLoader();
     // Define new instance connection
-    $mySQLi = $phpWine->phpWineLoader(DB_SERVER , DB_USERNAME, DB_PASSWORD, DB_NAME);
+    $mySQLi = new mysqli( DB_SERVER , DB_USERNAME, DB_PASSWORD, DB_NAME);
    
