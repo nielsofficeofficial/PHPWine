@@ -1,7 +1,9 @@
 <img src="https://img.shields.io/badge/license-MIT-blue"> <img src="https://www.code-inspector.com/project/29588/score/svg"> <img src="https://www.code-inspector.com/project/29588/status/svg">  ![](https://tokei.rs/b1/github/nielsofficeofficial/PHPWine) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/nielsofficeofficial/PHPWine/graphs/commit-activity) ![Maintainer](https://img.shields.io/badge/maintainer-NielsOffice-green) 
+[![GitHub Release](https://img.shields.io/github/release/nielsofficeofficial/PHPWine.svg?style=flat)](https://github.com/nielsofficeofficial/PHPWine/releases) 
+[![Issues](https://img.shields.io/github/issues-raw/nielsofficeofficial/PHPWine.svg?maxAge=25000)](https://github.com/nielsofficeofficial/PHPWine/issues) 
+[![Active](http://img.shields.io/badge/Status-Active-green.svg)](https://github.com/nielsofficeofficial/PHPWine/releases) 
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/nielsofficeofficial/PHPWine/issues/new) 
 <!-- [![Github All Releases](https://img.shields.io/github/downloads/nielsofficeofficial/PHPWine/total.svg)](https://github.com/nielsofficeofficial/PHPWine/releases) -->
-[![CircleCI](https://circleci.com/gh/nielsofficeofficial/PHPWine.svg?style=svg)](https://github.com/nielsofficeofficial/PHPWine)
 # PHPWine - (Vanilla Flavour) 
 Support PHP v7.4.9 and v8++ 
 
@@ -79,3 +81,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 __For suggestion and donation/sponsors you can send via GCash : +639650332900__ <br /> __Also you can send via Paypal account: syncdevprojects@gmail.com__ 
 <br /><br /> Thanks and good luck! 
+
+
+[![GitHub stars](https://img.shields.io/github/stars/nielsofficeofficial/PHPWine.svg?style=social&label=Star)](https://github.com/nielsofficeofficial/PHPWine/)
+[![GitHub watchers](https://img.shields.io/github/watchers/nielsofficeofficial/PHPWine.svg?style=social&label=Watch)](https://github.com/nielsofficeofficial/PHPWine/)
+[![GitHub forks](https://img.shields.io/github/forks/nielsofficeofficial/PHPWine.svg?style=social&label=Fork)](https://github.com/nielsofficeofficial/PHPWine/)
+[![GitHub followers](https://img.shields.io/github/followers/nielsofficeofficial.svg?style=social&label=Follow)](https://github.com/nielsofficeofficial)
