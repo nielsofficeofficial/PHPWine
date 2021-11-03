@@ -85,6 +85,14 @@ use \PHPWine\VanillaFlavour\System\Validation;
 ) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
 
  ```
+<h3>Initial Documentation:</h3>
+<h3>Prepare Initialize User Request/Data</h3>
+
+```PHP
+$un           = AUTH::$DATAFORM = [string $inputName, string $err_msg];
+$username     = AUTH::HASCONTAINS($un);  
+$username_err = AUTH::ERROR($username, $un); 
+```
 
 <h2>Thanks To:</h2>
 <h5>
