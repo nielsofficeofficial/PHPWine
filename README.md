@@ -3,7 +3,6 @@
 [![Issues](https://img.shields.io/github/issues-raw/nielsofficeofficial/PHPWine.svg?maxAge=25000)](https://github.com/nielsofficeofficial/PHPWine/issues) 
 [![Active](http://img.shields.io/badge/Status-Active-green.svg)](https://nielsofficeofficial.github.io/PHPWine/) 
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/nielsofficeofficial/PHPWine/issues/new) 
-[![Github All Releases](https://img.shields.io/github/downloads/nielsofficeofficial/PHPWine/total.svg)](https://github.com/nielsofficeofficial/PHPWine/releases)
 # PHPWine - (Vanilla Flavour) 
 Support PHP v7.4.9 and v8++ 
 
