@@ -1,5 +1,5 @@
 {
-    "name": "phpwine/vanillaflavour",
+    "name": "php/phpwinevanillaflavour",
     "type": "library",
     "description": "PHP code encrypted, PHP Library, Code designer and Optimizer, Html-minifier Advance Form builder, Form Validation and more...",
     "keywords": ["PHPWine","phphtml-optimizer","Authentication","Handling Form Validation","PHPOptimizer","Advance Form Builder"],
