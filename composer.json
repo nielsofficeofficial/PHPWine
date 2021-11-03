@@ -2,20 +2,23 @@
     "name": "phpwine/vanillaflavour",
     "type": "library",
     "description": "PHP code encrypted, PHP Library, Code designer and Optimizer, Html-minifier Advance Form builder, Form Validation and more...",
-    "keywords": ["PHPWine","phphtml-optimizer","Authentication","Handling Form Validation","PHPOptimizer v1.0 (stable)","Advance Form Builder (Optimizier v1.0 (stable))"],
+    "keywords": ["PHPWine","phphtml-optimizer","Authentication","Handling Form Validation","PHPOptimizer","Advance Form Builder"],
     "homepage": "https://github.com/nielsofficeofficial/PHPWine",
     "license": "MIT",
     "authors": [
         {
             "name": "nielsoffice",
-            "email": "nieldigitalsolution@gmail.com",
+            "email": "nielsoffice.wordpress.php@gmail.com",
             "homepage": "https://www.facebook.com/pg/nielsofficeofficial",
             "role": "Freelancer - Web Designer/PHPDeveloper"
         } 
     ],
+    "require": {
+        "php": ">=7.4.9"
+    },
     "autoload": {
         "psr-4": {
-            "PHPWine\\VanillaFlavour\\": ""
+            "PHPWine\\VanillaFlavour\\": "src"
         }
     }
 }
