@@ -199,7 +199,6 @@ $validation = VALIDATION::FORM( $userpassword_err, $validType = [
 ]);
 
 // Design errors static PHP in one time return result !
-*Feautre_support_since_v1.4
 $eCatch_ =  _xUL( 'id-eCatch_err',
    
    _xSTYLE( '
