@@ -67,25 +67,6 @@ use \PHPWine\VanillaFlavour\System\Request;
 use \PHPWine\VanillaFlavour\System\Validation;
 
 ```
-<h3>SQL demo for Authentication and Handling form Validation :</h3>
-
-```PHP
-
- // Create database table for user run with SQL environment for demo file
- 
- CREATE TABLE IF NOT EXISTS `users_log` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `mobile` varchar(65) DEFAULT NULL,
-  `password` varchar(255) NOT NULL,
-  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
-
- ```
-
 <h2>Thanks To:</h2>
 <h5>
 Github : To allow me to upload my PHP Library PHPAuth-Effortless to repository<br /> 
