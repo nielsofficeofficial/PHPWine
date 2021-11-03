@@ -29,7 +29,7 @@ PHP code encrypted, PHP Library, Code designer and Optimizer, Html-minifier Adva
 // Clone repository from githug | GitBus | CMD | CLi
 $ git clone https://github.com/nielsofficeofficial/PHPWine
 
-// Download Repository via Composer 
+// Download Repository via Composer | Packagist
 composer require phpwinevanillaflavour/phpwine
 
 ```
