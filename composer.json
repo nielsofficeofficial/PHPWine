@@ -1,0 +1,17 @@
+{
+    "name": "PHPWine/VanillaFlavour",
+    "type": "library",
+    "description": "PHP code encrypted, PHP Library, Code designer and Optimizer, Html-minifier Advance Form builder, Form Validation and more...",
+    "keywords": ["PHPWine","phphtml-optimizer"],
+    "homepage": "https://github.com/nielsofficeofficial/PHPWine",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "nielsoffice",
+            "email": "nieldigitalsolution@gmail.com",
+            "homepage": "https://www.facebook.com/pg/nielsofficeofficial",
+            "role": "Freelancer - Web Designer/PHPDeveloper"
+        } 
+    ]
+    
+}
