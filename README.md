@@ -22,7 +22,17 @@ PHP code encrypted, PHP Library, Code designer and Optimizer, Html-minifier Adva
 - PHPOptimizer v1.0 (stable)
 - Advance Form Builder <i>(Optimizier v1.0 (stable))</i>
 
+<h3>Downloading Library/Repository:</h3>
 
+```PHP
+
+// Clone repository from githug | GitBus | CMD | CLi
+$ git clone https://github.com/nielsofficeofficial/PHPWine
+
+// Download Repository via Composer 
+composer require phpwinevanillaflavour/phpwine
+
+```
 <h3>Library Installation:</h3>
 
 ```PHP
