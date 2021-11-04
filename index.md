@@ -189,8 +189,9 @@ $validation = VALIDATION::FORM( $userpassword_err, $validType = [
 
 
 ```PHP
-
+ 
  // Display all Error in one time
+ // Replace NULL first argument $username_err to run one at the time
  $catch_un      = VALIDATION::FORM( $username_err, $validType = [
        
  MINLENGTH      => [ 'username', 7, 'MINLENGTH' ], // 'MIN of 7 characters!'
