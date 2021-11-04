@@ -185,7 +185,7 @@ $validation = VALIDATION::FORM( $userpassword_err, $validType = [
 ]);
 
 ```
-<h3>Display all Error in one time & Design errors static PHP in one time return result ! </h3>
+<h3>Display all Error in one time & Design errors static PHP in one time return result (tooltips) !  </h3>
 
 
 ```PHP
