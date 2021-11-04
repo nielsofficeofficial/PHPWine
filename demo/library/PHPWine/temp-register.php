@@ -233,7 +233,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
    
  }
 
- _xH3('id-heading-h3',"PHPWine Vanilla Flavour v1.0 (stable)!");
+  _xH3('id-heading-h3',"PHPWine Vanilla Flavour v1.0 (stable)!");
   _xH6( 'id-heading-h6', "Please fill this form to create an account.");
 
  /**
@@ -253,7 +253,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
  ,null
  ,'eCatch_error'
- ,'CATCH HANLDER'
+ ,'end-of-id-eCatch_err'
  ,FUNC_ASSOC
 
  );

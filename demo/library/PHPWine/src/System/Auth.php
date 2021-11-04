@@ -6,11 +6,11 @@
  use \PHPWine\VanillaFlavour\System\System;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.0 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.0 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -39,7 +39,8 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.0
+ * @version   v1.1
+ *
  *
  * @method AUTH::SESSION();
  * @method AUTH::USERAUTH();
