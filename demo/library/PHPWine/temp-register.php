@@ -278,7 +278,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   **/ 
  _xdiv( 'id-username_from_group',
    
-    FORM::LABEL('label-id-un','Username',NULL,NULL,NULL, FUNC_ASSOC ) .__BR(FUNC_ASSOC)
+    FORM::LABEL('label-id-un','Username',NULL,NULL, FUNC_ASSOC ) .__BR(FUNC_ASSOC)
    .FORM::TEXT('id-username','class-username',[['name', 'value'],['username', DOIF(is_null($catch_un),  $username, FUNC_ASSOC)]], FUNC_ASSOC ) 
 
   ,setElemAttr(['class'],['username_from_group'])
@@ -293,7 +293,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   **/ 
  _xdiv('id-email_from_group',
  
-    FORM::LABEL('label-id-e','Email', NULL,NULL,NULL,FUNC_ASSOC) .__BR(FUNC_ASSOC)
+    FORM::LABEL('label-id-e','Email', NULL,NULL,FUNC_ASSOC) .__BR(FUNC_ASSOC)
    .FORM::TEXT('id-email','class-email',[['name', 'value'],['email', DOIF(is_null($catch_um), $mobile, FUNC_ASSOC)]], FUNC_ASSOC ) 
 
   ,setElemAttr(['class'],['email_from_group'])
@@ -308,7 +308,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   **/ 
  _xdiv('id-mobile_from_group',
 
-   FORM::LABEL('label-id-m','Mobile', NULL,NULL,NULL,FUNC_ASSOC) .__BR(FUNC_ASSOC)
+   FORM::LABEL('label-id-m','Mobile', NULL,NULL,FUNC_ASSOC) .__BR(FUNC_ASSOC)
   .FORM::TEXT('id-mobile','class-mobile',[['name', 'value'],['mobile', DOIF(is_null($catch_ue), $email, FUNC_ASSOC)]], FUNC_ASSOC ) 
 
   ,setElemAttr(['class'],['mobile_from_group'])
@@ -323,7 +323,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   **/ 
  _xdiv('id-password_from_group',
 
-   FORM::LABEL('label-id-p','Password', NULL,NULL,NULL,FUNC_ASSOC) .__BR(FUNC_ASSOC)
+   FORM::LABEL('label-id-p','Password', NULL,NULL,FUNC_ASSOC) .__BR(FUNC_ASSOC)
   .FORM::PASSWORD('id-mobile','class-mobile',[['name'],['password']], FUNC_ASSOC ) 
 
   ,setElemAttr(['class'],['username_from_group'])
@@ -338,7 +338,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   **/ 
  _xdiv('id-cp_from_group',
 
-   FORM::LABEL('label-id-confirm_password','Confirm Password', NULL,NULL,NULL,FUNC_ASSOC) .__BR(FUNC_ASSOC)
+   FORM::LABEL('label-id-confirm_password','Confirm Password', NULL,NULL,FUNC_ASSOC) .__BR(FUNC_ASSOC)
   .FORM::PASSWORD('id-conPassword','class-conPassword',[['name'],['confirm_password']], FUNC_ASSOC ) 
 
   ,setElemAttr(['class'],['username_from_group'])
