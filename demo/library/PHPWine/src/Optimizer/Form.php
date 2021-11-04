@@ -953,7 +953,6 @@ namespace PHPWine\VanillaFlavour\optimizer;
  ,$value           =  null 
  ,$attr            =  null 
  ,$element_class   =  null 
- ,$label           =  null 
  ,$assoc           =  null
 
 ) 
@@ -971,7 +970,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
   *
   *
   **/
- return Parent::LABEL($element_id, $value, $attr, $element_class, $label, $assoc);  
+ return Parent::LABEL($element_id, $value, $attr, $element_class, null, $assoc);  
 
 }
   /**
