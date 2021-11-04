@@ -773,6 +773,7 @@ $RURI['REGISTERED'] = [
 ];
 
 ```
+<a href="https://github.com/nielsofficeofficial/PHPWine/blob/gh-pages/index.md">Clear Version Docx Click here >></a>
 
 <h2>Thanks To:</h2>
 <h5>
