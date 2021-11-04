@@ -329,7 +329,7 @@ function setExtension($src,$path,$argu) {
     ];
 }
 
-Html::ELEM('Profile', 'link', setExtension('src','/../profile', __PHP__) );
+Html::ELEM('id','class', 'link', setExtension('src','/../profile', __PHP__),'Profile' );
 
 ```
 
@@ -354,7 +354,7 @@ function SetImgExtension($src,$path, $argu=null) {
 
 $name = 'fileName';
 
-__HTML('Avatar','img',SetImgExtension('src','/../'.$name.'', __PNG__ ));
+__HTML('id','Avatar','img',SetImgExtension('src','/../'.$name.'', __PNG__ ));
 
 ```
 
@@ -400,7 +400,7 @@ USE \PHPHtml\CodeOptimizer\merge\Html;
 
 // BONUS: 
 
-_div('','parentTagElement'); 
+_div('id','parentTagElement'); 
 
   Html::PERFORM( $getCons = [
          'do_print' => function ($trim, $trims) {
@@ -459,7 +459,7 @@ Html::PERFORM(
 // RETURN CALL_BACK
 _xdiv('id-container', Html::MERGE( 
 
-   _xHTML('div', make_merge('CHECK_IF_TRUE_THEN', $cb_merge = function () use ($TrimThis)  { 
+   _xHTML('id','div', make_merge('CHECK_IF_TRUE_THEN', $cb_merge = function () use ($TrimThis)  { 
    
          $merge   = $TrimThis . $check = $varVal = isset($TrimThis_) ? $TrimThis_ : '' ; 
          return $getReturn = $varSet = TRUE ?  $merge : 'Nope'; 
@@ -491,7 +491,7 @@ Class ProgramName extends MyProjectName {
   
   public function __construct() {
    
-   $this->H1('Hello World'); 
+   $this->H1('id','Hello World'); 
 
    }
 
@@ -515,7 +515,7 @@ Class ProgramName extends MyProjectName {
 
  }
  
-PERFORM ( html::H1("Hello World",my_htmattr(),'MyID','MyClass','Dev-MyLabel', FUNC_ASSOC) );
+PERFORM ( html::H1('MyID',"Hello World",my_htmattr(),,'MyClass','End-of-MyID', FUNC_ASSOC) );
 
 ```
 
@@ -523,10 +523,10 @@ PERFORM ( html::H1("Hello World",my_htmattr(),'MyID','MyClass','Dev-MyLabel', FU
 
 ```PHP
 // Associated or simply means return function
-Html::ELEMENT($id=null, $element=null, $value=null, $attr=null, $class=null, $label=null)
+Html::ELEMENT($elem =  null , $value = null ,$attr =  null , $id = null , $class = null ,$label = null)
 
 // Optional Associated or simply print or return if set as associated function
-Html::ELEM($id=null, $elem=null, $attr=null, $label=null, $class=null, $assoc=null)
+Html::ELEM($id=null, $class=null, $elem=null, $attr=null, $label=null, $assoc=null)
 
 // Optional Associated or simply print or return if set as associated function
 Html::H1($id=null, $value=null, $attr=null,  $class=null, $label=null, $assoc=null)
@@ -652,7 +652,7 @@ Html::xH1($label=null)
 _xHTML($id=null, $elem=null, $value=null, $attr=null, $class=null, $label=null);
 
 // Merge version Optional Associated or simply print or return if set as associated function
-__HTML($label=null, $elem=null,  $attr=null, $id=null, $class=null, $assoc=null);
+__HTML($id=null, $class=null, $elem=null, $attr=null, $label=null, $assoc=null);
 
 // Merge version Optional Associated or simply print or return if set as associated function
 _xH1( $id=null, $value=null,  $attr=null, $class=null, $label=null, $assoc=null ); 
