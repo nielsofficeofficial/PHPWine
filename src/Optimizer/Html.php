@@ -230,20 +230,20 @@
  * noHTML dynamic  structure 
  * non/WITH CLASS|METHOD|FUNCTION ASSOCIATED noHTML Form no x tag
  * 
- * @method $noHtml->_ELEMENT('my_input','INPUT');
- * @method $noHtml->_ELEMENT('my_track','track');
- * @method $noHtml->_ELEMENT('my_circle','circle');
- * @method $noHtml->_ELEMENT('my_param','param');
- * @method $noHtml->_ELEMENT('my_meta','meta');
- * @method $noHtml->_ELEMENT('my_link','link');
- * @method $noHtml->_ELEMENT('my_img','img');
- * @method $noHtml->_ELEMENT('my_embed','embed');
- * @method $noHtml->_ELEMENT('my_option','option');
- * @method $noHtml->_ELEMENT('my_col','col');
- * @method $noHtml->_ELEMENT('my_base','base');
- * @method $noHtml->_ELEMENT('my_aside','aside');
- * @method $noHtml->_ELEMENT('my_area','area');
- * @method $noHtml->_ELEMENT('my_DOCTYPE','DOCTYPE');
+ * @method $noHtml->ELEM('my_input','INPUT');
+ * @method $noHtml->ELEM('my_track','track');
+ * @method $noHtml->ELEM('my_circle','circle');
+ * @method $noHtml->ELEM('my_param','param');
+ * @method $noHtml->ELEM('my_meta','meta');
+ * @method $noHtml->ELEM('my_link','link');
+ * @method $noHtml->ELEM('my_img','img');
+ * @method $noHtml->ELEM('my_embed','embed');
+ * @method $noHtml->ELEM('my_option','option');
+ * @method $noHtml->ELEM('my_col','col');
+ * @method $noHtml->ELEM('my_base','base');
+ * @method $noHtml->ELEM('my_aside','aside');
+ * @method $noHtml->ELEM('my_area','area');
+ * @method $noHtml->ELEM('my_DOCTYPE','DOCTYPE');
  *  
  * noHTML  structure non CLASS|METHOD|FUNCTION ASSOCIATED
  * noHTML  structure w/ closing tag
@@ -1188,7 +1188,7 @@ protected function _setCOMBEGIN() {
 
     $elem
    ,$label  = null
-   ,$attr     = []
+   ,$attr   = []
    ,$id     = null
    ,$class  = null
 
@@ -1208,11 +1208,11 @@ protected function _setCOMBEGIN() {
   **/
    public function ELEMS(
 
-     $inline = "INLINE"
-    ,$elem
-    ,$attr     = null
-    ,$id     = null
+     $id     = null
     ,$class  = null
+    ,$elem   = null
+    ,$attr   = null
+    ,$inline = null
     ,$assoc  = null
 
   )
@@ -1231,13 +1231,12 @@ protected function _setCOMBEGIN() {
   **/
   public function ELEMENT(  
 
-     $elem
-    ,$value = null
-    ,$attr    = []
-
-    ,$id    = null
-    ,$class = null
-    ,$label = null
+     $elem      =  null
+    ,$value     =  null
+    ,$attr      =  null
+    ,$id        =  null
+    ,$class     =  null
+    ,$label     =  null
 
  ) 
  {
@@ -4322,12 +4321,12 @@ protected function _setCOMBEGIN() {
   **/
   public function H1(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   ) 
   {
@@ -4345,12 +4344,12 @@ protected function _setCOMBEGIN() {
   **/
   public function H2(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   ) 
   {
@@ -4368,12 +4367,12 @@ protected function _setCOMBEGIN() {
   **/
   public function H3(
 
-      $value    =  null
-     ,$attr     =  []
-     ,$id       =  null
-     ,$class    =  null
-     ,$label    =  null
-     ,$assoc    =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4391,12 +4390,12 @@ protected function _setCOMBEGIN() {
   **/
   public function H4(
 
-      $value    =  null
-     ,$attr     =  []
-     ,$id       =  null
-     ,$class    =  null
-     ,$label    =  null
-     ,$assoc    =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4414,12 +4413,12 @@ protected function _setCOMBEGIN() {
   **/
   public function H5(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -4437,12 +4436,12 @@ protected function _setCOMBEGIN() {
   **/
   public function H6(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -4460,12 +4459,12 @@ protected function _setCOMBEGIN() {
   **/
   public function DIV(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -4483,12 +4482,12 @@ protected function _setCOMBEGIN() {
   **/
   public function P(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -4506,12 +4505,12 @@ protected function _setCOMBEGIN() {
   **/
   public function BUTTON(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4529,12 +4528,12 @@ protected function _setCOMBEGIN() {
   **/
   public function A(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4552,12 +4551,12 @@ protected function _setCOMBEGIN() {
   **/
   public function IFRAME(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4575,12 +4574,12 @@ protected function _setCOMBEGIN() {
   **/
   public function MAIN(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4598,12 +4597,12 @@ protected function _setCOMBEGIN() {
   **/
   public function NAV(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4621,12 +4620,12 @@ protected function _setCOMBEGIN() {
   **/
   public function SELECT(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4644,12 +4643,12 @@ protected function _setCOMBEGIN() {
   **/
   public function FORM(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4667,12 +4666,12 @@ protected function _setCOMBEGIN() {
   **/
   public function PICTURE(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4690,12 +4689,12 @@ protected function _setCOMBEGIN() {
   **/
   public function SECTION(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4713,12 +4712,12 @@ protected function _setCOMBEGIN() {
   **/
   public function TEXTAREA(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4736,12 +4735,12 @@ protected function _setCOMBEGIN() {
   **/
   public function FOOTER(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -4801,12 +4800,12 @@ protected function _setCOMBEGIN() {
   **/
   public function AUDIO(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -4824,12 +4823,12 @@ protected function _setCOMBEGIN() {
   **/
   public function VIDEO(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4847,12 +4846,12 @@ protected function _setCOMBEGIN() {
   **/
   public function ADDRESS(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4870,12 +4869,12 @@ protected function _setCOMBEGIN() {
   **/
   public function COLGROUP(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4893,12 +4892,12 @@ protected function _setCOMBEGIN() {
   **/
   public function BDI(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4916,12 +4915,12 @@ protected function _setCOMBEGIN() {
   **/
   public function BDO(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4939,12 +4938,12 @@ protected function _setCOMBEGIN() {
   **/
   public function BLOCKQUOTE(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4962,12 +4961,12 @@ protected function _setCOMBEGIN() {
   **/
   public function CAPTION(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -4985,12 +4984,12 @@ protected function _setCOMBEGIN() {
   **/
   public function LABEL(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5008,12 +5007,12 @@ protected function _setCOMBEGIN() {
   **/
   public function DATALIST(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5031,12 +5030,12 @@ protected function _setCOMBEGIN() {
   **/
   public function DETAILS(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5053,13 +5052,13 @@ protected function _setCOMBEGIN() {
   *
   **/
   public function SUMMARY(
-
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+  
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5076,12 +5075,12 @@ protected function _setCOMBEGIN() {
   **/
   public function DIALOG(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5099,12 +5098,12 @@ protected function _setCOMBEGIN() {
   **/
   public function OPTION(
 
-         $value     =  null
-        ,$attr      =  []
-        ,$id        =  null
-        ,$class     =  null
-        ,$label     =  null
-        ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5122,12 +5121,12 @@ protected function _setCOMBEGIN() {
   **/
   public function FIGURE(
 
-         $value     =  null
-        ,$attr      =  []
-        ,$id        =  null
-        ,$class     =  null
-        ,$label     =  null
-        ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5145,12 +5144,12 @@ protected function _setCOMBEGIN() {
   **/
   public function FIGCAPTION(
 
-         $value     =  null
-        ,$attr      =  []
-        ,$id        =  null
-        ,$class     =  null
-        ,$label     =  null
-        ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5168,12 +5167,12 @@ protected function _setCOMBEGIN() {
   **/
   public function METER(
 
-         $value     =  null
-        ,$attr      =  []
-        ,$id        =  null
-        ,$class     =  null
-        ,$label     =  null
-        ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5191,12 +5190,12 @@ protected function _setCOMBEGIN() {
   **/
   public function OBJECT(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5214,12 +5213,12 @@ protected function _setCOMBEGIN() {
   **/
   public function OPTGROUP(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5237,12 +5236,12 @@ protected function _setCOMBEGIN() {
   **/
   public function OUTPUT(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5260,12 +5259,12 @@ protected function _setCOMBEGIN() {
   **/
   public function PROGRESS(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5283,12 +5282,12 @@ protected function _setCOMBEGIN() {
   **/
   public function SVG(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5306,12 +5305,12 @@ protected function _setCOMBEGIN() {
   **/
   public function TEMPLATE(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5329,12 +5328,12 @@ protected function _setCOMBEGIN() {
   **/
   public function TIME(
 
-        $value      =  null
-       ,$attr       =  []
-       ,$id         =  null
-       ,$class      =  null
-       ,$label      =  null
-       ,$assoc      =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5352,12 +5351,12 @@ protected function _setCOMBEGIN() {
   **/
   public function VAR(
 
-        $value      =  null
-       ,$attr       =  []
-       ,$id         =  null
-       ,$class      =  null
-       ,$label      =  null
-       ,$assoc      =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5375,12 +5374,12 @@ protected function _setCOMBEGIN() {
   **/
   public function UL(
 
-        $value      =  null
-       ,$attr       =  []
-       ,$id         =  null
-       ,$class      =  null
-       ,$label      =  null
-       ,$assoc      =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5398,12 +5397,12 @@ protected function _setCOMBEGIN() {
   **/
   public function OL(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5421,12 +5420,12 @@ protected function _setCOMBEGIN() {
   **/
   public function LI(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5444,12 +5443,12 @@ protected function _setCOMBEGIN() {
   **/
   public function TABLE(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5467,12 +5466,12 @@ protected function _setCOMBEGIN() {
   **/
   public function TR(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5490,12 +5489,12 @@ protected function _setCOMBEGIN() {
   **/
   public function TD(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5513,12 +5512,12 @@ protected function _setCOMBEGIN() {
   **/
   public function TH(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5536,12 +5535,12 @@ protected function _setCOMBEGIN() {
   **/
   public function LEGEND(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -5559,12 +5558,12 @@ protected function _setCOMBEGIN() {
   **/
   public function FIELDSET(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -5582,12 +5581,12 @@ protected function _setCOMBEGIN() {
   **/
   public function TBODY(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -5605,12 +5604,12 @@ protected function _setCOMBEGIN() {
   **/
   public function TFOOT(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -5628,12 +5627,12 @@ protected function _setCOMBEGIN() {
   **/
   public function THEAD(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -5651,12 +5650,12 @@ protected function _setCOMBEGIN() {
   **/
   public function SPAN(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -5674,12 +5673,12 @@ protected function _setCOMBEGIN() {
   **/
   public function EM(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        = null
-      ,$class     = null
-      ,$label     = null
-      ,$assoc     = null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5697,12 +5696,12 @@ protected function _setCOMBEGIN() {
   **/
   public function B(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        = null
-      ,$class     = null
-      ,$label     = null
-      ,$assoc     = null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5720,12 +5719,12 @@ protected function _setCOMBEGIN() {
   **/
   public function I(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        = null
-      ,$class     = null
-      ,$label     = null
-      ,$assoc     = null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5743,12 +5742,12 @@ protected function _setCOMBEGIN() {
   **/
   public function SMALL(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -5766,12 +5765,12 @@ protected function _setCOMBEGIN() {
   **/
   public function STRIKE(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -5789,12 +5788,12 @@ protected function _setCOMBEGIN() {
   **/
   public function MARQUEE(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -5812,12 +5811,12 @@ protected function _setCOMBEGIN() {
   **/
   public function CENTER(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5835,12 +5834,12 @@ protected function _setCOMBEGIN() {
   **/
   public function CODE(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5858,12 +5857,12 @@ protected function _setCOMBEGIN() {
   **/
   public function ABBR(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5881,12 +5880,12 @@ protected function _setCOMBEGIN() {
   **/
   public function MAP(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5904,12 +5903,12 @@ protected function _setCOMBEGIN() {
   **/
   public function CANVAS(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5927,12 +5926,12 @@ protected function _setCOMBEGIN() {
   **/
   public function CITE(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5950,12 +5949,12 @@ protected function _setCOMBEGIN() {
   **/
   public function DATA(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5973,12 +5972,12 @@ protected function _setCOMBEGIN() {
   **/
   public function DL(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -5996,12 +5995,12 @@ protected function _setCOMBEGIN() {
   **/
   public function DT(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -6019,12 +6018,12 @@ protected function _setCOMBEGIN() {
   **/
   public function DD(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -6042,12 +6041,12 @@ protected function _setCOMBEGIN() {
   **/
   public function DFN(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -6065,12 +6064,12 @@ protected function _setCOMBEGIN() {
   **/
   public function INS(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -6088,12 +6087,12 @@ protected function _setCOMBEGIN() {
   **/
   public function DEL(
 
-      $value    =  null
-     ,$attr     =  []
-     ,$id       =  null
-     ,$class    =  null
-     ,$label    =  null
-     ,$assoc    =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -6111,12 +6110,12 @@ protected function _setCOMBEGIN() {
   **/
   public function KBD(
 
-      $value    =  null
-     ,$attr     =  []
-     ,$id       =  null
-     ,$class    =  null
-     ,$label    =  null
-     ,$assoc    =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -6134,12 +6133,12 @@ protected function _setCOMBEGIN() {
   **/
   public function MARK(
 
-      $value    =  null
-     ,$attr     =  []
-     ,$id       =  null
-     ,$class    =  null
-     ,$label    =  null
-     ,$assoc    =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -6157,12 +6156,12 @@ protected function _setCOMBEGIN() {
   **/
   public function PRE(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -6180,12 +6179,12 @@ protected function _setCOMBEGIN() {
   **/
   public function RT(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -6203,12 +6202,12 @@ protected function _setCOMBEGIN() {
   **/
   public function RP(
 
-        $value     =  null
-       ,$attr      =  []
-       ,$id        =  null
-       ,$class     =  null
-       ,$label     =  null
-       ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -6226,12 +6225,12 @@ protected function _setCOMBEGIN() {
   **/
   public function RUBY(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -6249,12 +6248,12 @@ protected function _setCOMBEGIN() {
   **/
   public function S(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -6272,12 +6271,12 @@ protected function _setCOMBEGIN() {
   **/
   public function SAMP(
 
-      $value     =  null
-     ,$attr      =  []
-     ,$id        =  null
-     ,$class     =  null
-     ,$label     =  null
-     ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -6295,12 +6294,12 @@ protected function _setCOMBEGIN() {
   **/
   public function STRONG(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -6318,12 +6317,12 @@ protected function _setCOMBEGIN() {
   **/
   public function SUB(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -6341,12 +6340,12 @@ protected function _setCOMBEGIN() {
   **/
   public function SUP(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
  )
  {
@@ -6364,12 +6363,12 @@ protected function _setCOMBEGIN() {
   **/
   public function WBR(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -6386,13 +6385,13 @@ protected function _setCOMBEGIN() {
   *
   **/
   public function Q(
-
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+   
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {
@@ -6410,12 +6409,12 @@ protected function _setCOMBEGIN() {
   **/
   public function HEAD(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$id        =  null
-      ,$class     =  null
-      ,$label     =  null
-      ,$assoc     =  null
+     $id       =  null
+    ,$value    =  null
+    ,$attr     =  null
+    ,$class    =  null
+    ,$label    =  null
+    ,$assoc    =  null
 
   )
   {

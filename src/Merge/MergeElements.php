@@ -54,7 +54,7 @@ function __HTML(
 
 
       $element_id    =  null
-     ,$label         =  "INLINE"
+     ,$label         =  null
      ,$elem          =  null
      ,$attr          =  null
      ,$element_class =  null
