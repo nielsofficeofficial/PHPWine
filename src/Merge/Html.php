@@ -233,20 +233,20 @@
  * noHTML dynamic static structure 
  * non/WITH CLASS|METHOD|FUNCTION ASSOCIATED noHTML Form no x tag
  * 
- * @method html::_ELEMENT('my_input','INPUT');
- * @method html::_ELEMENT('my_track','track');
- * @method html::_ELEMENT('my_circle','circle');
- * @method html::_ELEMENT('my_param','param');
- * @method html::_ELEMENT('my_meta','meta');
- * @method html::_ELEMENT('my_link','link');
- * @method html::_ELEMENT('my_img','img');
- * @method html::_ELEMENT('my_embed','embed');
- * @method html::_ELEMENT('my_option','option');
- * @method html::_ELEMENT('my_col','col');
- * @method html::_ELEMENT('my_base','base');
- * @method html::_ELEMENT('my_aside','aside');
- * @method html::_ELEMENT('my_area','area');
- * @method html::_ELEMENT('my_DOCTYPE','DOCTYPE');
+ * @method html::ELEM('my_input','INPUT');
+ * @method html::ELEM('my_track','track');
+ * @method html::ELEM('my_circle','circle');
+ * @method html::ELEM('my_param','param');
+ * @method html::ELEM('my_meta','meta');
+ * @method html::ELEM('my_link','link');
+ * @method html::ELEM('my_img','img');
+ * @method html::ELEM('my_embed','embed');
+ * @method html::ELEM('my_option','option');
+ * @method html::ELEM('my_col','col');
+ * @method html::ELEM('my_base','base');
+ * @method html::ELEM('my_aside','aside');
+ * @method html::ELEM('my_area','area');
+ * @method html::ELEM('my_DOCTYPE','DOCTYPE');
  *  
  * noHTML static structure non CLASS|METHOD|FUNCTION ASSOCIATED
  * noHTML static structure w/ closing tag
