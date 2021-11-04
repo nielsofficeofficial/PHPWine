@@ -158,7 +158,7 @@ echo (!empty($sets_eCatch)) ? $sets_eCatch : '';
   **/ 
   _xdiv( 'id-login',
 
-     FORM::LABEL('label-id-un','Username/Email/Mobile',NULL,NULL,NULL, FUNC_ASSOC ) .__BR(FUNC_ASSOC)
+     FORM::LABEL('label-id-un','Username/Email/Mobile',NULL,NULL, FUNC_ASSOC ) .__BR(FUNC_ASSOC)
     .FORM::TEXT('id-username','class-username',[['name', 'value'],['username',  (isset($_COOKIE['username'])) ? $_COOKIE['username'] :  $username ]], FUNC_ASSOC ) 
     
    ,setElemAttr(['class'],['username_from_group'])
@@ -173,7 +173,7 @@ echo (!empty($sets_eCatch)) ? $sets_eCatch : '';
   **/ 
  _xdiv( 'login-password',
   
-    FORM::LABEL('label-id-un','Password',NULL,NULL,NULL, FUNC_ASSOC ) .__BR(FUNC_ASSOC)
+    FORM::LABEL('label-id-un','Password',NULL,NULL,FUNC_ASSOC ) .__BR(FUNC_ASSOC)
    .FORM::PASSWORD('id-username','class-username',[['name', 'value'],['password', (isset($_COOKIE['password'])) ? $_COOKIE['password'] :  $password ]], FUNC_ASSOC ) 
 
   ,setElemAttr(['class'],['username_from_group'])
@@ -190,7 +190,7 @@ echo (!empty($sets_eCatch)) ? $sets_eCatch : '';
 
 
      FORM::CHECKBOX('checkbox','class-checkbox',[['name', ''],['remember', (isset($_COOKIE["username"])) ? 'checked' : false ] ], FUNC_ASSOC ) 
-    .FORM::LABEL('label-id-un','Remember me',NULL,NULL,NULL, FUNC_ASSOC ) 
+    .FORM::LABEL('label-id-un','Remember me',NULL,NULL,FUNC_ASSOC ) 
     
    ,setElemAttr(['class'],['rememberme_from_group'])
   );
