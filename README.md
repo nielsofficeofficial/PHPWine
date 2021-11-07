@@ -7,6 +7,7 @@
 ![Maintainer](https://img.shields.io/badge/maintainer-NielsOffice-green) 
 ![GitHub contributors](https://img.shields.io/github/contributors/nielsofficeofficial/PHPWine?color=blue)
 [![GitHub Release](https://img.shields.io/github/release/nielsofficeofficial/PHPWine.svg?style=flat)](https://github.com/nielsofficeofficial/PHPWine/releases) 
+![Packagist Version (custom server)](https://img.shields.io/packagist/v/phpwinevanillaflavour/phpwine?color=orange)
 ![GitHub last commit](https://img.shields.io/github/last-commit/nielsofficeofficial/PHPWine)
 [![Issues](https://img.shields.io/github/issues-raw/nielsofficeofficial/PHPWine.svg?maxAge=25000)](https://github.com/nielsofficeofficial/PHPWine/issues) 
 [![Active](http://img.shields.io/badge/Status-Active-green.svg)](https://nielsofficeofficial.github.io/PHPWine/) 
@@ -14,7 +15,7 @@
 # PHPWine - (Vanilla Flavour) 
 Support PHP v7.4.9 and v8++ 
 
-PHPWine v1.0 (Vanilla Flavour) design for corePHP and WordPress Cloud system application development. <br />
+PHPWine v1.1 (Vanilla Flavour) design for corePHP and WordPress Cloud system application development. <br />
 <i>Vanilla Flavour: Vanilla flavour means you can use methods outside the class precisely as native PHP functions.</i>
 
 PHP code encrypted, PHP Library, Code designer and Optimizer, Html-minifier Advance Form builder, Form Validation and more... 
