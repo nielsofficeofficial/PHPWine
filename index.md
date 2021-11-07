@@ -530,10 +530,11 @@ Html::ELEMENT($elem =  null , $value = null ,$attr =  null , $id = null , $class
 Html::ELEM($id=null, $class=null, $elem=null, $attr=null, $label=null, $assoc=null)
 
 // Optional Associated or simply print or return if set as associated function
-Html::H1($id=null, $value=null, $attr=null,  $class=null, $label=null, $assoc=null)
+Html::H1($value=null, $attr=null, $id=null, $class=null, $label=null, $assoc=null)
+Html::DIV($id=null, $value=null, $attr=null,  $class=null, $label=null, $assoc=null)
 
 // None or never be Associated or simply print function
-Html::_H1($id=null, $attr=null, $class=null)
+Html::_H1( $attr=null, $id=null, $class=null)
 
 ... content goes here ...
 
@@ -653,10 +654,11 @@ Html::xH1($label=null)
 _xHTML($id=null, $elem=null, $value=null, $attr=null, $class=null, $label=null);
 
 // Merge version Optional Associated or simply print or return if set as associated function
-__HTML($id=null, $class=null, $elem=null, $attr=null, $label=null, $assoc=null);
+__HTML($id=null, $label=null, $elem=null, $attr=null, $class=null, $assoc=null);
 
 // Merge version Optional Associated or simply print or return if set as associated function
-_xH1( $id=null, $value=null,  $attr=null, $class=null, $label=null, $assoc=null ); 
+_xH1(  $value=null,  $attr=null,  $id=null,  $class=null, $label=null, $assoc=null ); 
+_xDIV( $id=null, $value=null,  $attr=null, $class=null, $label=null, $assoc=null ); 
 
 // Merge version None or never be Associated or simply print function
 _H1($id=null, $attr=null, $class=null) 
@@ -666,7 +668,7 @@ _H1($id=null, $attr=null, $class=null)
 xH1($label = NULL)
 
 //Merge version Associated or simply return function
-_MERGE($elem=null,  $attr=null, $id=null, $class=null);
+_MERGE( $id=null, $elem=null,  $attr=null, $class=null);
 
 ... content goes here ...
 
@@ -704,8 +706,8 @@ xSTYLE($label = NULL);
 <h3>PHPHtml-Optimizer w/Enhancer </h3>
 
 
-|Function        | Method         |  Description   |  Parameters                   |  
-|:---            |:---            |:---            |:---                           |
+|Function        | Method         |  Description   |  Parameters |  
+|:---            |:---            |:---            |:---      |
 | `send_to()`    | `send_to()`    | redirect to    |url       |
 | `view_to()`    | `view_to()`    | template file  |DIR/KEY/filename |
 | `bring_to()`    | `bring_to()`  | get file       |DIR/KEY/filename/Extension/INCLUDES/INCLUDES_ONCE/REQUIRE |
