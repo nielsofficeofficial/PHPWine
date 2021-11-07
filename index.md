@@ -492,7 +492,7 @@ Class ProgramName extends MyProjectName {
   
   public function __construct() {
    
-   $this->H1('id','Hello World'); 
+   $this->H1('Hello World'); 
 
    }
 
