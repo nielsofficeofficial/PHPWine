@@ -13,22 +13,16 @@ _HEAD();
 
 ATTR('META', [
  "meta-charset" => [ 'charset'    => "utf-8"],
- "meta-compat"  => [ 'http-equiv' => "x-ua-compatible", 'content' => "" ]
-]); 
-
-ATTR('TITLE', 'Quick Start'); 
-
-ATTR('META', [
+ "meta-compat"  => [ 'http-equiv' => "x-ua-compatible", 'content' => "" ],
  "meta-des"    => [ 'name' => "description", 'content' => ""],
  "meta-vport"  => [ 'name' => "viewport",    'content' => "width=device-width, initial-scale=1" ]
 ]); 
 
-ATTR('LINK', [ 
- "manifest"   => [ 'rel' => "manifest", 'src' => "site.webmanifest"],
- "icon"       => [ 'rel' => "apple-touch-icon", 'src' => "icon.png"]
-]); 
+ATTR('TITLE', 'Quick Start'); 
 
 ATTR('LINK', [ 
+ "manifest"   => [ 'rel' => "manifest", 'src' => "site.webmanifest"],
+ "icon"       => [ 'rel' => "apple-touch-icon", 'src' => "icon.png"],
  "mains-style" => [ 'rel' => "stylesheet", 'href' => "css/style.css"]
 ]); 
 

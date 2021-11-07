@@ -5,11 +5,11 @@ USE \PHPWine\VanillaFlavour\optimizer\Html AS MergeElements;
 USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileHandler; 
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.2 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.2 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -38,7 +38,7 @@ USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileHandler;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1
+ * @version   v1.1.2
  *
  */
 
@@ -77,7 +77,18 @@ function __HTML(
    *
    **/ 
   $Html = NEW MergeElements();
-  return method_exists($Html,'ELEMS') ? $Html->ELEMS($label, $elem, $attr, $element_id, $element_class, $assoc) : PERFORM(erorrMessage());
+  return method_exists($Html,'ELEMS') ? 
+  
+    $Html->ELEMS(
+      
+       $label, 
+       $elem, 
+       $attr, 
+       $element_id, 
+       $element_class, 
+       $assoc
+       
+  ) : PERFORM(erorrMessage());
 
 }
 
@@ -91,12 +102,12 @@ function __HTML(
   **/
 function _xHTML(
 
-      $element_id    =  null
-     ,$elem          =  null
-     ,$value         =  null
-     ,$attr          =  null
-     ,$element_class =  null
-     ,$label         =  null
+      string       $element_id    =  null
+     ,string       $elem          =  null
+     ,mixed        $value         =  null
+     ,array|string $attr          =  null
+     ,string       $element_class =  null
+     ,string       $label         =  null
 
 )
 {
@@ -115,7 +126,18 @@ function _xHTML(
    *
    **/ 
   $Html = NEW MergeElements();
-  return method_exists($Html,'ELEMENT') ? $Html->ELEMENT($elem, $value, $attr, $element_id, $element_class, $label) : PERFORM(erorrMessage()); 
+  return method_exists($Html,'ELEMENT') ? 
+  
+   $Html->ELEMENT(
+     
+    $elem, 
+    $value, 
+    $attr, 
+    $element_id, 
+    $element_class, 
+    $label
+  
+  ) : PERFORM(erorrMessage()); 
 
 }
 
@@ -129,10 +151,10 @@ function _xHTML(
   **/
 function _MERGE(
 
-      $element_id     =  null
-     ,$elem           =  null
-     ,$attr           =  null
-     ,$element_class  =  null
+      string       $element_id     =  null
+     ,mixed        $elem           =  null
+     ,array|string $attr           =  null
+     ,string       $element_class  =  null
 
 )
 {
@@ -151,7 +173,17 @@ function _MERGE(
    *
    **/ 
   $Html = NEW MergeElements();
-  return method_exists($Html,'__magicMERGE') ? $Html->__magicMERGE($elem, 'MERGE', $attr, $element_id, $element_class) : PERFORM(erorrMessage());
+  return method_exists($Html,'__magicMERGE') ? 
+  
+   $Html->__magicMERGE(
+     
+     $elem, 
+     'MERGE', 
+     $attr, 
+     $element_id, 
+     $element_class
+     
+  ) : PERFORM(erorrMessage());
 
 }
 
@@ -165,13 +197,20 @@ function _MERGE(
   **/
 function xMERGE( 
 
-  $elem        =  null
+ mixed $elem        =  null
 
 )
 {
 
  $Html = NEW MergeElements(); 
- return method_exists($Html,'__magicMERGE') ? $Html->__magicMERGE($elem, 'MERGE_END') : PERFORM(erorrMessage());
+ return method_exists($Html,'__magicMERGE') ? 
+ 
+  $Html->__magicMERGE(
+    
+    $elem, 
+    'MERGE_END'
+ 
+ ) : PERFORM(erorrMessage());
 	
 }
 

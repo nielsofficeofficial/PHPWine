@@ -6,11 +6,11 @@
  use \PHPWine\VanillaFlavour\System\System;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.2 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.2 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -39,7 +39,7 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1
+ * @version   v1.1.2
  *
  *
  * @method AUTH::SESSION();
@@ -151,7 +151,7 @@ class Auth Extends System
     * @since v1.0
     *
    **/ 
-    public static function ERROR($POST_DATA, $hasContains)
+    public static function ERROR(string $POST_DATA, array $hasContains)
     {
     
       $data = SYSTEM::POSTDATA($hasContains); // if has current value contains
@@ -169,7 +169,7 @@ class Auth Extends System
     * @since v1.0
     *
    **/ 
-    public static function CATCH($AUTH_SESSION_DATA, $USER_ERROR, array $VALIDTYPE = null )
+    public static function CATCH(string $AUTH_SESSION_DATA = null, string $USER_ERROR = null, array $VALIDTYPE = null )
     {
       
        return SYSTEM::RETURN_RESTRICTED_DATA($AUTH_SESSION_DATA, $USER_ERROR, $VALIDTYPE);
@@ -183,7 +183,7 @@ class Auth Extends System
  * @since v1.0
  *
 **/
-public static function BINDSQL(string $returnDatadbName, array $returnDataName , array $returnDataVal ) 
+public static function BINDSQL(string $returnDatadbName, array $returnDataName , array $returnDataVal )  
 {
  /**
  *
@@ -330,9 +330,9 @@ $getCurrent     = current($returnDataName );
 
     $requestKeysReturnData = array_keys($returnData);
 
-    $portalKeys_QS  = SYSTEM::BIND_VALIDATE_PORTAL_KEYS( $requestKeysReturnData[0], 'QUERY_STATEMENT'      ,"<table border='1' width='100%'><tr><td> Invalid PARAMETER : <span class='par_error'> " . $requestKeysReturnData[0] . " </span> <br /><hr /> <i>Expect:</i> <b>'QUERY_STATEMENT'           </b><br /> </td></tr></table>' ");
-    $portalKeys_IH  = SYSTEM::BIND_VALIDATE_PORTAL_KEYS( $requestKeysReturnData[1], 'INPUT_HASCONTAINS'    ,"<table border='1' width='100%'><tr><td> Invalid PARAMETER : <span class='par_error'> " . $requestKeysReturnData[1] . " </span> <br /><hr /> <i>Expect:</i> <b>'INPUT_HASCONTAINS'         </b><br /> </td></tr></table>' ");
-    $portalKeys_ID  = SYSTEM::BIND_VALIDATE_PORTAL_KEYS( $requestKeysReturnData[2], 'INPUT_DATAEXIST'      ,"<table border='1' width='100%'><tr><td> Invalid PARAMETER : <span class='par_error'> " . $requestKeysReturnData[2] . " </span> <br /><hr /> <i>Expect:</i> <b>'INPUT_DATAEXIST'           </b><br /> </td></tr></table>' ");
+    $portalKeys_QS  = SYSTEM::BIND_VALIDATE_PORTAL_KEYS( $requestKeysReturnData[0], 'QUERY_STATEMENT'      ,"<table border='1' width='100%'><tr><td> Invalid PARAMETER : <span class='par_error'> " . $requestKeysReturnData[0] . " </span> <br /><hr /> <i>Expect:</i> <b>'QUERY_STATEMENT' => AUTH::RETURNSQL(' string database',['id'],['input_name'])  </b><br /> <hr /> <i>Expect:</i> <b>'QUERY_STATEMENT'  </b><br /> </td></tr></table>' ");
+    $portalKeys_IH  = SYSTEM::BIND_VALIDATE_PORTAL_KEYS( $requestKeysReturnData[1], 'INPUT_HASCONTAINS'    ,"<table border='1' width='100%'><tr><td> Invalid PARAMETER : <span class='par_error'> " . $requestKeysReturnData[1] . " </span> <br /><hr /> <i>Expect:</i> <b>'INPUT_HASCONTAINS' => AUTH::HASCONTAINS();  </b><br /> <hr /> <i>Expect:</i> <b>'INPUT_HASCONTAINS' </b><br /> </td></tr></table>' ");
+    $portalKeys_ID  = SYSTEM::BIND_VALIDATE_PORTAL_KEYS( $requestKeysReturnData[2], 'INPUT_DATAEXIST'      ,"<table border='1' width='100%'><tr><td> Invalid PARAMETER : <span class='par_error'> " . $requestKeysReturnData[2] . " </span> <br /><hr /> <i>Expect:</i> <b>'INPUT_DATAEXIST' => 'error_message'   </b><br /><hr /> <i>Expect:</i> <b>'INPUT_DATAEXIST' </b><br /> </td></tr></table>' ");
     
     if(  ( isset( $portalKeys_QS ) || isset(  $portalKeys_IH ) || isset( $portalKeys_ID ) ) == true )  : 
 
@@ -1088,7 +1088,7 @@ $getCurrent     = current($returnDataName );
     * @since v1.0
     *
    **/ 
-  public static function BINDEXECUTE(string $pageRequestTo, $errors_msg = '')
+  public static function BINDEXECUTE(string $pageRequestTo, mixed $errors_msg = '')
   {
    
   global $stmt;

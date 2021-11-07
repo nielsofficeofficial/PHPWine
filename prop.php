@@ -1,11 +1,11 @@
 <?php 
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.2 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.2 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -34,27 +34,8 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1
- *
+ * @version   v1.1.2
  */
-
-/**
-  *
-  * Defined SPLR4 Prefix and suffix
-  * @since 11.02.2021
-  * @since v1.0
-  *
-  **/ 
-  define('DIRECTORY_FILE_REQUEST_','PHPWine\\VanillaFlavour\\');
-
-/**
-  *
-  * Defined SPLR4 Prefix and suffix
-  * @since 11.02.2021
-  * @since v1.0
-  *
-  **/ 
-  define('BASE_DIR_SYSTEM_FILE', __DIR__ . '/src/');
 
 /**
   *
@@ -427,6 +408,24 @@
 
 /**
   *
+  * Defined SPLR4 Prefix and suffix
+  * @since 11.02.2021
+  * @since v1.0
+  *
+  **/ 
+  define('DIRECTORY_FILE_REQUEST_','PHPWine\\VanillaFlavour\\');
+
+/**
+  *
+  * Defined SPLR4 Prefix and suffix
+  * @since 11.02.2021
+  * @since v1.0
+  *
+  **/ 
+  define('BASE_DIR_SYSTEM_FILE', __DIR__ . '/src/');
+
+/**
+  *
   * DefinedOptimizer config file directory
   * @since 11.02.2021
   * @since v1.0
@@ -675,7 +674,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_STATIC_CLASS_HTML__'       ,   '/src/merge/Html.php'); 
+  define('__GET_STATIC_CLASS_HTML__'       ,   '/src/Merge/Html.php'); 
 
  /**
   *
@@ -684,7 +683,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_INSTANTIATE_CLASS_HTML__'  ,   '/src/optimizer/Html.php'); 
+  define('__GET_INSTANTIATE_CLASS_HTML__'  ,   '/src/Optimizer/Html.php'); 
   
  /**
   *
@@ -693,7 +692,7 @@
   * @since v1.0
   *
   **/
-  define('__CHECK_MAIN_MERGE_ON_PAGE__'    ,   '/../merge/Html.php'); 
+  define('__CHECK_MAIN_MERGE_ON_PAGE__'    ,   '/../Merge/Html.php'); 
 
  /**
   *
@@ -702,7 +701,7 @@
   * @since v1.0
   *
   **/
-  define('__CHECK_MAIN_MERGE_ON_CLASS__'   ,   '/../optimizer/Html.php');
+  define('__CHECK_MAIN_MERGE_ON_CLASS__'   ,   '/../Optimizer/Html.php');
   
  /**
   *
@@ -711,7 +710,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_VALIDATE_FILE_PAGE_EXIST__',   '/src/merge/Html.php');
+  define('__GET_VALIDATE_FILE_PAGE_EXIST__',   '/src/Merge/Html.php');
 
  /**
   *
@@ -729,7 +728,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_MERGE_FILES__'             ,   SOM_PATH_DIR . 'src/merge/prop.php');
+  define('__GET_MERGE_FILES__'             ,   SOM_PATH_DIR . 'src/Merge/prop.php');
   
  /**
   *

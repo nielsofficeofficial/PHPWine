@@ -5,11 +5,11 @@ namespace PHPWine\VanillaFlavour\optimizer;
  USE \PHPWine\VanillaFlavour\Merge\Html;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.2 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.2 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -38,7 +38,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1
+ * @version   v1.1.2
  * 
  * @Method
  * FORM::TEXT();
@@ -93,23 +93,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function TEXT(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-    
-   $attr = HTML::formType( $attr, 'type', 'text' );       
-   return  Parent::HtmlELements_Optimizer(
+      
+    return  Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class, 
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'text' ) , 
+     $id, 
+     $class, 
+     $assoc
   
   );
    
@@ -124,23 +123,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function BUTTONS(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
       
-   $attr = HTML::formType( $attr, 'type', 'submit' );   
    return  Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class, 
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'submit' ) , 
+     $id, 
+     $class, 
+     $assoc
   
    );
    
@@ -155,20 +153,19 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function CHECKBOX(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'checkbox' );  
+ 
    return  Parent::HtmlELements_Optimizer(
      
-     "INLINE",
-     'input',  
-     $attr , 
+    "INLINE",
+    'input',  
+     $attr = HTML::FORMTYPE(  $attr, 'type', 'checkbox' ) , 
      $id, 
      $class, 
      $assoc
@@ -186,23 +183,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function COLOR(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
       
-   $attr = HTML::formType( $attr, 'type', 'color' );  
    return  Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class, 
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'color' ) , 
+     $id, 
+     $class, 
+     $assoc
   
   );
    
@@ -217,23 +213,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function DATE(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-    $attr = HTML::formType( $attr, 'type', 'date' );  
+        
     return  Parent::HtmlELements_Optimizer(
       
       "INLINE",
       'input',  
-      $attr , 
-      $id, 
-      $class, 
-      $assoc
+       $attr = HTML::FORMTYPE( $attr, 'type', 'date' ) , 
+       $id, 
+       $class, 
+       $assoc
     
     );
    
@@ -248,23 +243,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function DATETIME(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'datetime' );  
+ 
    return   Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class, 
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'datetime' ) , 
+     $id, 
+     $class, 
+     $assoc
   
   );
    
@@ -279,20 +273,19 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function EMAIL(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'email' );  
+  
    return  Parent::HtmlELements_Optimizer(
      
-     "INLINE",
-     'input',  
-     $attr , 
+    "INLINE",
+    'input',  
+     $attr = HTML::FORMTYPE( $attr, 'type', 'email' ) , 
      $id, 
      $class, 
      $assoc
@@ -310,23 +303,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function FILE(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'file' );  
+ 
    return   Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class, 
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'file' ) , 
+     $id, 
+     $class, 
+     $assoc
   
   );
    
@@ -341,23 +333,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function HIDDEN(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'hidden' );  
+
    return  Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class, 
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'hidden' ) , 
+     $id, 
+     $class, 
+     $assoc
   
    );
    
@@ -372,23 +363,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function IMAGE(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'img' );  
+
    return  Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class, 
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'img' ) , 
+     $id, 
+     $class, 
+     $assoc
   
    );
    
@@ -403,23 +393,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function MONTH(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'month' );  
+ 
    return  Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class,
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'month' ) , 
+     $id, 
+     $class, 
+     $assoc
   
    );
    
@@ -434,23 +423,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function NUMBER(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'number' );  
+
    return  Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class, 
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'number' ) , 
+     $id, 
+     $class, 
+     $assoc
   
    );
    
@@ -465,23 +453,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function PASSWORD(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'password' );  
+  
    return  Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class, 
-    $assoc
+     $attr = HTML::FORMTYPE(  $attr, 'type', 'password'  ) , 
+     $id, 
+     $class, 
+     $assoc
   
    );
    
@@ -496,23 +483,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function RADIO(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'radio' );  
+ 
    return Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class,
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'radio' ) , 
+     $id, 
+     $class, 
+     $assoc
   
    );
    
@@ -527,23 +513,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function RANGE(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'range' );  
+ 
    return  Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class, 
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'range' ) , 
+     $id, 
+     $class, 
+     $assoc
   
    );
    
@@ -557,24 +542,23 @@ namespace PHPWine\VanillaFlavour\optimizer;
     *
     **/
   static public function RESET(
-
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+ 
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'reset' );  
+  
    return  Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class, 
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'reset' ) , 
+     $id, 
+     $class, 
+     $assoc
   
    );
    
@@ -589,20 +573,19 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function SEARCH(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'search' );  
+  
    return  Parent::HtmlELements_Optimizer(
      
-     "INLINE",
-     'input',  
-     $attr , 
+    "INLINE",
+    'input',  
+     $attr = HTML::FORMTYPE( $attr, 'type', 'search' ) , 
      $id, 
      $class, 
      $assoc
@@ -620,23 +603,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function SUBMIT(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'submit' );  
+  
    return  Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class, 
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'submit'  ) , 
+     $id, 
+     $class, 
+     $assoc
   
    );
    
@@ -651,23 +633,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function TEL(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'tel' );  
+  
    return  Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class, 
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'tel' ) , 
+     $id, 
+     $class, 
+     $assoc
   
    );
    
@@ -682,23 +663,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function TIMES(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'time' );  
+
    return  Parent::HtmlELements_Optimizer( 
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class,
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'time'  ) , 
+     $id, 
+     $class, 
+     $assoc
   
    );
    
@@ -713,23 +693,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function URL(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-   $attr = HTML::formType( $attr, 'type', 'url' );  
+
    return  Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class, 
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'url' ) , 
+     $id, 
+     $class, 
+     $assoc
    
    );
    
@@ -744,23 +723,22 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function WEEK(
 
-     string $id     = null
-    ,string $class  = null
-    ,array  $attr   = null
-    ,mixed  $assoc  = null
+     string        $id     = null
+    ,string        $class  = null
+    ,array|string  $attr   = null
+    ,mixed         $assoc  = null
     
   )
   {
-      
-    $attr = HTML::formType( $attr, 'type', 'week' );  
+  
    return Parent::HtmlELements_Optimizer(
      
     "INLINE",
     'input',  
-    $attr , 
-    $id, 
-    $class, 
-    $assoc
+     $attr = HTML::FORMTYPE( $attr, 'type', 'week') , 
+     $id, 
+     $class, 
+     $assoc
   
    );
    
@@ -775,12 +753,12 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function TEXTAREA( 
 
-    $element_id      =  null 
-   ,$value           =  null 
-   ,$attr            =  null 
-   ,$element_class   =  null 
-   ,$label           =  null 
-   ,$assoc           =  null 
+    string       $element_id      =  null 
+   ,mixed        $value           =  null 
+   ,array|string $attr            =  null 
+   ,string       $element_class   =  null 
+   ,string       $label           =  null 
+   ,mixed        $assoc           =  null 
  
  ) 
  { 
@@ -797,7 +775,16 @@ namespace PHPWine\VanillaFlavour\optimizer;
     *
     *
     **/
-    return Parent::TEXTAREA($element_id, $value, $attr, $element_class, $label, $assoc); 
+    return Parent::TEXTAREA(
+      
+      $element_id, 
+      $value, 
+      $attr, 
+      $element_class, 
+      $label, 
+      $assoc
+    
+   ); 
  
  }
 
@@ -810,12 +797,12 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
     static public function SELECT( 
 
-   $element_id      =  null 
-  ,$value           =  null 
-  ,$attr            =  null 
-  ,$element_class   =  null 
-  ,$label           =  null 
-  ,$assoc           =  null
+       string       $element_id      =  null 
+      ,mixed        $value           =  null 
+      ,array|string $attr            =  null 
+      ,string       $element_class   =  null 
+      ,string       $label           =  null 
+      ,mixed        $assoc           =  null 
 
  ) 
  { 
@@ -832,7 +819,16 @@ namespace PHPWine\VanillaFlavour\optimizer;
   *
   *
   **/
-  return Parent::SELECT($element_id, $value, $attr, $element_class, $label, $assoc); 
+  return Parent::SELECT(
+    
+    $element_id, 
+    $value, 
+    $attr, 
+    $element_class, 
+    $label, 
+    $assoc
+  
+   ); 
 
  }
 
@@ -845,12 +841,12 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function OPTION( 
   
-    $element_id      =  null 
-   ,$value           =  null 
-   ,$attr            =  null 
-   ,$element_class   =  null 
-   ,$label           =  null 
-   ,$assoc           =  null
+    string       $element_id      =  null 
+   ,mixed        $value           =  null 
+   ,array|string $attr            =  null 
+   ,string       $element_class   =  null 
+   ,string       $label           =  null 
+   ,mixed        $assoc           =  null 
 
  ) 
  { 
@@ -867,7 +863,16 @@ namespace PHPWine\VanillaFlavour\optimizer;
   *
   *
   **/
-  return Parent::OPTION($element_id, $value, $attr, $element_class, $label, $assoc);  
+  return Parent::OPTION(
+    
+     $element_id, 
+     $value, 
+     $attr, 
+     $element_class, 
+     $label, 
+     $assoc
+    
+   );  
 
  }
 
@@ -880,12 +885,12 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
  static public function OPTGROUP( 
 
-  $element_id      =  null 
- ,$value           =  null 
- ,$attr            =  null 
- ,$element_class   =  null 
- ,$label           =  null 
- ,$assoc           =  null 
+   string       $element_id      =  null 
+  ,mixed        $value           =  null 
+  ,array|string $attr            =  null 
+  ,string       $element_class   =  null 
+  ,string       $label           =  null 
+  ,mixed        $assoc           =  null 
 
 ) 
 { 
@@ -902,7 +907,16 @@ namespace PHPWine\VanillaFlavour\optimizer;
   *
   *
   **/
- return PArent::OPTGROUP($element_id, $value, $attr, $element_class, $label, $assoc);  
+ return PArent::OPTGROUP(
+   
+   $element_id, 
+   $value, 
+   $attr, 
+   $element_class, 
+   $label, 
+   $assoc
+  
+  );  
 
 }
 
@@ -915,12 +929,12 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function FIELDSET( 
 
-  $element_id      =  null 
- ,$value           =  null 
- ,$attr            =  null 
- ,$element_class   =  null 
- ,$label           =  null 
- ,$assoc           =  null 
+    string       $element_id      =  null 
+   ,mixed        $value           =  null 
+   ,array|string $attr            =  null 
+   ,string       $element_class   =  null 
+   ,string       $label           =  null 
+   ,mixed        $assoc           =  null 
 
 ) 
 { 
@@ -937,7 +951,16 @@ namespace PHPWine\VanillaFlavour\optimizer;
   *
   *
   **/
- return Parent::FIELDSET($element_id, $value, $attr, $element_class, $label, $assoc);
+ return Parent::FIELDSET(
+   
+   $element_id, 
+   $value, 
+   $attr, 
+   $element_class, 
+   $label, 
+   $assoc
+  
+  );
 
 }
   /**
@@ -949,12 +972,12 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
  static public function LABEL( 
 
-  $element_id      =  null 
- ,$value           =  null 
- ,$attr            =  null 
- ,$element_class   =  null 
- ,$label           =  null 
- ,$assoc           =  null
+   string       $element_id      =  null 
+  ,mixed        $value           =  null 
+  ,array|string $attr            =  null 
+  ,string       $element_class   =  null 
+  ,string       $label           =  null 
+  ,mixed        $assoc           =  null 
 
 ) 
 { 
@@ -971,7 +994,16 @@ namespace PHPWine\VanillaFlavour\optimizer;
   *
   *
   **/
- return Parent::LABEL($element_id, $value, $attr, $element_class, $label, $assoc);  
+ return Parent::LABEL(
+   
+   $element_id, 
+   $value, 
+   $attr, 
+   $element_class, 
+   $label, 
+   $assoc
+  
+  );  
 
 }
   /**
@@ -983,12 +1015,12 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
  static public function OUTPUT( 
 
-   $element_id      =  null 
-  ,$value           =  null 
-  ,$attr            =  null 
-  ,$element_class   =  null 
-  ,$label           =  null 
-  ,$assoc           =  null
+   string       $element_id      =  null 
+  ,mixed        $value           =  null 
+  ,array|string $attr            =  null 
+  ,string       $element_class   =  null 
+  ,string       $label           =  null 
+  ,mixed        $assoc           =  null 
 
  ) 
  { 
@@ -1007,7 +1039,16 @@ namespace PHPWine\VanillaFlavour\optimizer;
    *
    *
    **/
-  return Parent::OUTPUT($element_id, $value, $attr, $element_class, $label, $assoc);
+  return Parent::OUTPUT(
+    
+    $element_id, 
+    $value, 
+    $attr, 
+    $element_class, 
+    $label, 
+    $assoc
+  
+   );
 
  }
   

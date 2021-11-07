@@ -2,11 +2,11 @@
 <?php 
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.2 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.2 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -35,7 +35,7 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1
+ * @version   v1.1.2
  *
  */
  
@@ -67,7 +67,7 @@
   * @since v1.3
   * 
  **/
- public static function FLOATTYPE(    $data  , $eCatch_errors) { if(!is_float($data))    : return $eCatch_errors; endif;  }
+ public static function FLOATTYPE(    $data  , string $eCatch_errors = null ) { if(!is_float($data))    : return $eCatch_errors; endif;  }
 
  /**
   *
@@ -76,7 +76,7 @@
   * @since v1.3
   * 
  **/
- public static function NUMERICTYPE(  $data  , $eCatch_errors) { if(!is_numeric($data))  : return $eCatch_errors; endif;  }
+ public static function NUMERICTYPE( $data  , string $eCatch_errors = null ) { if(!is_numeric($data))  : return $eCatch_errors; endif;  }
 
  /**
   *
@@ -85,7 +85,7 @@
   * @since v1.4
   * 
  **/
- public static function FORM( $errorHanlder, $dataValidation ) { return self::VALIDATION(  $errorHanlder, $dataValidation );  }
+ public static function FORM( string $errorHanlder = null , array $dataValidation = null ) { return self::VALIDATION(  $errorHanlder, $dataValidation );  }
   
  /**
   *
@@ -94,6 +94,6 @@
   * @since v1.4
   * 
  **/
- private static function VALIDATION(  $errorHanlder, $dataValidation ) { return SYSTEM::RETURN_RESTRICTED_DATA( $errorHanlder, NULL,  $dataValidation ); }
+ private static function VALIDATION( string $errorHanlder = null , array $dataValidation = null ) { return SYSTEM::RETURN_RESTRICTED_DATA( $errorHanlder, NULL,  $dataValidation ); }
  
 }

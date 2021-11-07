@@ -3,11 +3,11 @@
   namespace PHPWine\VanillaFlavour\optimizer;
   
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.2 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.2 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -36,8 +36,9 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1
- *
+ * @version   v1.1.2
+ * 
+ * 
  * noHTML dynamic  structure 
  * non/WITH CLASS|METHOD|FUNCTION ASSOCIATED  
  *
@@ -1186,16 +1187,26 @@ protected function _setCOMBEGIN() {
   **/
  public function __magicMERGE(
 
-    $elem
-   ,$label  = null
-   ,$attr   = []
-   ,$id     = null
-   ,$class  = null
+    string       $elem   = null
+   ,string       $label  = null
+   ,array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
  )
  {
  
- return $this->_setReturnELEMENT($this->_setELEMENTS($elem), $value=null, $attr, $id, $class, $label); 
+ return $this->_setReturnELEMENT(
+   
+    $this->_setELEMENTS($elem), 
+
+    null, 
+    $attr, 
+    $id, 
+    $class, 
+    $label
+  
+  ); 
 
  } 
 
@@ -1208,17 +1219,26 @@ protected function _setCOMBEGIN() {
   **/
    public function ELEMS(
 
-     $id     = null
-    ,$class  = null
-    ,$elem   = null
-    ,$attr   = null
-    ,$inline = null
-    ,$assoc  = null
+     string       $id     = null
+    ,string       $class  = null
+    ,string       $elem   = null
+    ,array|string $attr   = null
+    ,string       $inline = null
+    ,mixed        $assoc  = null
 
   )
   { 
     
-   return $this->HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $assoc);
+   return $this->HtmlELements_Optimizer(
+     
+     $inline, 
+     $elem, 
+     $attr, 
+     $id, 
+     $class, 
+     $assoc
+   
+   );
   
   }
 
@@ -1231,17 +1251,27 @@ protected function _setCOMBEGIN() {
   **/
   public function ELEMENT(  
 
-     $elem      =  null
-    ,$value     =  null
-    ,$attr      =  null
-    ,$id        =  null
-    ,$class     =  null
-    ,$label     =  null
+     string       $elem      =  null
+    ,mixed        $value     =  null
+    ,array|string $attr      =  null
+    ,string       $id        =  null
+    ,string       $class     =  null
+    ,string       $label     =  null
 
  ) 
  {
  
- return  $this->_setReturnELEMENT($this->_setELEMENTS($elem), $value, $attr, $id, $class, $label); 
+ return  $this->_setReturnELEMENT(
+   
+  $this->_setELEMENTS($elem), 
+  
+  $value, 
+  $attr, 
+  $id, 
+  $class, 
+  $label
+ 
+ ); 
 
  } 
 
@@ -1254,26 +1284,47 @@ protected function _setCOMBEGIN() {
   **/
   public function _H1(
 
-    $attr     =  []
-   ,$id     = null
-   ,$class  = null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
  ) 
  { 
 
-  $this->PERFORM( $this->get__HTML('PRIMARY', 0, $attr, $id, $class) ); 
+  $this->PERFORM( 
+    
+    $this->get__HTML(
+      
+      'PRIMARY', 
+      0, 
+      $attr, 
+      $id, 
+      $class
+    )
+  
+   ); 
 
  }
 
   // CLOSING_METHOD_noHTML_HEADING_TAG 
   public function xH1(
 
-    $label = NULL
+    string $label = NULL
 
  ) 
  { 
  
-   $this->PERFORM( $this->get_xHTML('PRIMARY', 0, $label) ); 
+   $this->PERFORM(
+     
+     $this->get_xHTML(
+       
+     'PRIMARY', 
+      0, 
+      $label
+      
+    )
+  
+  ); 
  
  }
 
@@ -1286,26 +1337,47 @@ protected function _setCOMBEGIN() {
   **/
   public function _H2(
 
-   $attr    =  []
-  ,$id    =  null
-  ,$class =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-    $this->PERFORM( $this->get__HTML('PRIMARY', 1, $attr, $id, $class) ); 
+    $this->PERFORM( 
+      
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,1
+        ,$attr
+        ,$id
+        ,$class
+        
+      ) 
+    
+    ); 
 
   }
   
   // CLOSING_METHOD_noHTML_HEADING_TAG 
   public function xH2(
 
-    $label = NULL
+    string $label = NULL
 
   ) 
   { 
 
-    $this->PERFORM( $this->get_xHTML('PRIMARY', 1, $label) ); 
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,1
+        ,$label
+      )
+   
+    ); 
 
   }
 
@@ -1318,26 +1390,47 @@ protected function _setCOMBEGIN() {
   **/
   public function _H3(
 
-   $attr    =  []
-  ,$id    =  null
-  ,$class =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
   
   ) 
   { 
 
-    $this->PERFORM( $this->get__HTML('PRIMARY', 2, $attr, $id, $class) ); 
+    $this->PERFORM( 
+      
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,2
+        ,$attr
+        ,$id
+        ,$class
+     
+     ) 
+   
+   ); 
 
   }
   
   // CLOSING_METHOD_noHTML_HEADING_TAG 
   public function xH3(
 
-    $label = NULL
+  string $label = NULL
 
   ) 
   { 
 
-    $this->PERFORM( $this->get_xHTML('PRIMARY', 2, $label) ); 
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,2
+        ,$label
+     ) 
+  
+   ); 
 
   }
 
@@ -1350,26 +1443,47 @@ protected function _setCOMBEGIN() {
   **/
   public function _H4(
 
-    $attr     =  []
-   ,$id     =  null
-   ,$class  =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
  ) 
  { 
 
-   $this->PERFORM( $this->get__HTML('PRIMARY', 3, $attr, $id, $class) );  
+   $this->PERFORM( 
+     
+    $this->get__HTML(
+      
+        'PRIMARY'
+        ,3
+        ,$attr
+        ,$id
+        ,$class
+        
+     )
+   
+   );  
 
  }
 
  // CLOSING_METHOD_noHTML_HEADING_TAG 
   public function xH4(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-    $this->PERFORM( $this->get_xHTML('PRIMARY', 3, $label) ); 
+    $this->PERFORM(
+      
+       $this->get_xHTML(
+         
+        'PRIMARY'
+        ,3
+        ,$label
+     )
+  
+   ); 
 
   }
 
@@ -1382,26 +1496,48 @@ protected function _setCOMBEGIN() {
   **/
   public function _H5(
 
-    $attr    =  []
-   ,$id    =  null
-   ,$class =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
  )
  { 
 
-   $this->PERFORM( $this->get__HTML('PRIMARY', 4, $attr, $id, $class) );  
+   $this->PERFORM( 
+     
+    $this->get__HTML(
+      
+      'PRIMARY'
+      ,4
+      ,$attr
+      ,$id
+      ,$class
+   
+    ) 
+  
+   );  
 
  }
   
   // CLOSING_METHOD_noHTML_HEADING_TAG 
   public function xH5(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-    $this->PERFORM( $this->get_xHTML('PRIMARY', 4, $label) ); 
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,4
+        ,$label
+        
+     ) 
+   
+   ); 
 
   }
 
@@ -1414,25 +1550,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _H6(
 
-    $attr    =   []
-   ,$id    =   null
-   ,$class =   null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   ) 
   { 
 
-     $this->PERFORM( $this->get__HTML('PRIMARY', 5, $attr, $id, $class) ); 
+     $this->PERFORM(
+       
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,5
+        ,$attr
+        ,$id
+        ,$class
+     )
+    );
+
   }
 
   // CLOSING_METHOD_noHTML_HEADING_TAG 
   public function xH6(
 
-    $label = NULL
+    string $label = NULL
 
   )
   {  
 
-     $this->PERFORM( $this->get_xHTML('PRIMARY', 5, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,5
+        ,$label
+     )
+   
+   ); 
 
   }
 
@@ -1445,26 +1601,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _DIV(
 
-    $attr     =   []
-   ,$id     =   null
-   ,$class  =   null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   ) 
   { 
 
-    $this->PERFORM( $this->get__HTML('PRIMARY', 6, $attr, $id, $class) ); 
+    $this->PERFORM( 
+      
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,6
+        ,$attr
+        ,$id
+        ,$class
+    ) 
+   
+  ); 
 
   }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xDIV(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('PRIMARY', 6, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,6
+        ,$label
+        
+     ) 
+   ); 
 
   }
 
@@ -1477,26 +1653,47 @@ protected function _setCOMBEGIN() {
   **/
   public function _P(
 
-    $attr    =   []
-   ,$id    =   null
-   ,$class =   null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
    )
    { 
 
-     $this->PERFORM( $this->get__HTML('PRIMARY', 7, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,7
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+     
+    );  
    
    }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xP(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('PRIMARY', 7, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,7
+        ,$label
+      )
+     
+    ); 
 
   }
 
@@ -1509,26 +1706,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _BUTTON(
 
-   $attr     =   []
-  ,$id     =   null
-  ,$class  =   null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('PRIMARY', 8, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,8
+        ,$attr
+        ,$id
+        ,$class
+   
+       )
+    );  
 
   }
   
   // CLOSING_METHOD_noHTML_TAG 
   public function xBUTTON(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-    $this->PERFORM( $this->get_xHTML('PRIMARY', 8, $label) ); 
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,8
+        ,$label
+        
+      ) 
+   ); 
 
   }
 
@@ -1541,26 +1758,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _A(
 
-    $attr    =    []
-   ,$id    =    null
-   ,$class =    null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('PRIMARY', 9, $attr, $id, $class) ); 
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,9
+        ,$attr
+        ,$id
+        ,$class
+    )
+ 
+   ); 
 
   }
 
  // CLOSING_METHOD_noHTML_TAG 
   public function xA(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-    $this->PERFORM( $this->get_xHTML('PRIMARY', 9, $label) ); 
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,9
+        ,$label
+        
+      ) 
+    ); 
 
   }
 
@@ -1573,27 +1810,47 @@ protected function _setCOMBEGIN() {
   **/
   public function _IFRAME(
 
-    $attr   =   []
-   ,$id     =   null
-   ,$class  =   null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('PRIMARY', 10, $attr, $id, $class) ); 
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,10
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    ); 
 
   }
   
   // CLOSING_METHOD_noHTML_TAG 
   public function xIFRAME(
 
-    $label = NULL
+    string $label = NULL
 
   ) 
   { 
 
-     $this->PERFORM( $this->get_xHTML('PRIMARY', 10, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,10
+        ,$label
+        
+      )
+   ); 
 
   }
 
@@ -1606,26 +1863,47 @@ protected function _setCOMBEGIN() {
   **/
   public function _MAIN(
 
-    $attr    =   []
-   ,$id      =   null
-   ,$class   =   null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('PRIMARY', 11, $attr, $id, $class) ); 
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,11
+        ,$attr
+        ,$id
+        ,$class
+        
+     )
+    
+  ); 
 
   }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xMAIN(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-    $this->PERFORM( $this->get_xHTML('PRIMARY', 11, $label) ); 
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,11
+        ,$label
+        
+      ) 
+    ); 
 
   }
 
@@ -1638,25 +1916,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _NAV(
 
-    $attr     =   []
-   ,$id       =   null
-   ,$class    =   null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   ) 
   { 
 
-     $this->PERFORM( $this->get__HTML('PRIMARY', 12, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,12
+        ,$attr
+        ,$id
+        ,$class
+        
+      ) 
+     );  
   }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xNAV(
 
-    $label = NULL
+    string $label = NULL
 
   ) 
   { 
 
-     $this->PERFORM( $this->get_xHTML('PRIMARY', 12, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,12
+        ,$label
+      
+        ) 
+      ); 
 
   }
 
@@ -1669,26 +1967,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _SELECT(
 
-     $attr   =   []
-    ,$id     =   null
-    ,$class  =   null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   ) 
   { 
 
-     $this->PERFORM( $this->get__HTML('PRIMARY', 13, $attr, $id, $class) );   
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,13
+        ,$attr
+        ,$id
+        ,$class
+        
+      ) 
+    );   
 
   }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xSELECT(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('PRIMARY', 13, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,13
+        ,$label
+      
+       )
+     ); 
 
   }
 
@@ -1701,26 +2019,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _FORM(
 
-     $attr    =    []
-    ,$id      =    null
-    ,$class   =    null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('PRIMARY', 14, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,14
+        ,$attr
+        ,$id
+        ,$class
+      
+      )
+    );  
 
   }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xFORM(
 
-     $label  =   NULL
+    string $label  =   NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('PRIMARY', 14, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,14
+        ,$label
+        
+       )
+    ); 
 
   }
 
@@ -1733,26 +2071,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _PICTURE(
 
-    $attr    =   []
-   ,$id      =   null
-   ,$class   =   null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
    )
    { 
 
-     $this->PERFORM( $this->get__HTML('PRIMARY', 15, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,15
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    );  
 
    }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xPICTURE(
 
-     $label = NULL
+    string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('PRIMARY', 15, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,15
+        ,$label
+      
+     ) 
+   ); 
 
   }
 
@@ -1765,26 +2123,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _SECTION(
 
-    $attr    =   []
-   ,$id      =   null
-   ,$class   =   null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
  )
  { 
 
-   $this->PERFORM( $this->get__HTML('PRIMARY', 16, $attr, $id, $class) );   
+   $this->PERFORM( 
+     
+    $this->get__HTML(
+      
+      'PRIMARY'
+      ,16
+      ,$attr
+      ,$id
+      ,$class
+    
+    )
+   );   
 
  }
  
  // CLOSING_METHOD_noHTML_TAG 
   public function xSECTION(
 
-    $label = NULL
+   string $label = NULL
 
  )
  { 
 
-   $this->PERFORM( $this->get_xHTML('PRIMARY', 16, $label) ); 
+   $this->PERFORM(
+     
+    $this->get_xHTML(
+      
+      'PRIMARY'
+      ,16
+      ,$label
+      
+     ) 
+   ); 
 
  }
 
@@ -1797,19 +2175,47 @@ protected function _setCOMBEGIN() {
   **/
   public function _TEXTAREA(
 
-    $attr    =  []
-   ,$id      =  null
-   ,$class   =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
  )
  { 
 
-     $this->PERFORM( $this->get__HTML('PRIMARY', 17, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,17
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    );  
 
  }
   
   // CLOSING_METHOD_noHTML_TAG 
-  public function xTEXTAREA($label = NULL) { $this->PERFORM( $this->get_xHTML('PRIMARY', 17, $label) ); }
+  public function xTEXTAREA( 
+    
+    string $label = NULL
+    
+    ) { 
+    
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,17
+        ,$label
+         
+   ) 
+ );
+
+}
 
 /**
   *
@@ -1820,26 +2226,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _FOOTER(
 
-    $attr    = []
-   ,$id      = null
-   ,$class   = null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('PRIMARY', 18, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,18
+        ,$attr
+        ,$id
+        ,$class
+        
+     )
+    );  
 
   }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xFOOTER(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('PRIMARY', 18, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,18
+        ,$label
+        
+      ) 
+    ); 
 
   }
 
@@ -1852,26 +2278,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _SCRIPT(
 
-    $attr    = []
-   ,$id      = null
-   ,$class   = null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('PRIMARY', 19, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,19
+        ,$attr
+        ,$id
+        ,$class
+    )
+   );  
 
   }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xSCRIPT(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('PRIMARY', 19, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,19
+        ,$label
+        
+      )
+    ); 
 
   }
 
@@ -1884,26 +2329,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _STYLE(
 
-    $attr    = []
-   ,$id      = null
-   ,$class   = null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('PRIMARY', 20, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'PRIMARY'
+        ,20
+        ,$attr
+        ,$id
+        ,$class
+        
+      ) 
+    );  
 
   }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xSTYLE(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('PRIMARY', 20, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'PRIMARY'
+        ,20
+        ,$label
+        
+      ) 
+    ); 
 
   }
 
@@ -1916,26 +2381,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _AUDIO(
 
-     $attr    =  []
-    ,$id      =  null
-    ,$class   =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
  )
  { 
 
-   $this->PERFORM( $this->get__HTML('SECONDARY', 0, $attr, $id, $class) );  
+   $this->PERFORM( 
+     
+    $this->get__HTML(
+      
+      'SECONDARY'
+      ,0
+      ,$attr
+      ,$id
+      ,$class
+      
+     ) 
+   );  
  
  }
   
   // CLOSING_METHOD_noHTML_TAG 
   public function xAUDIO(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('SECONDARY', 0, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'SECONDARY'
+        ,0
+        ,$label
+        
+        )
+     ); 
 
 }
 
@@ -1948,26 +2433,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _VIDEO(
 
-   $attr    =  []
-  ,$id      =  null
-  ,$class   =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
  )
  { 
 
-   $this->PERFORM( $this->get__HTML('SECONDARY', 1, $attr, $id, $class) ); 
+   $this->PERFORM( 
+     
+    $this->get__HTML(
+      
+      'SECONDARY'
+      ,1
+      ,$attr
+      ,$id
+      ,$class
+  
+     )
+   ); 
 
  }
 
  // CLOSING_METHOD_noHTML_TAG 
   public function xVIDEO(
 
-     $label = NULL
+   string $label = NULL
 
  )
  { 
 
-  $this->PERFORM( $this->get_xHTML('SECONDARY', 1, $label) ); 
+  $this->PERFORM( 
+    
+    $this->get_xHTML(
+      
+      'SECONDARY'
+      ,1
+      ,$label
+      
+      ) 
+    ); 
 
  }
 
@@ -1980,26 +2485,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _ADDRESS(
 
-    $attr     =  []
-   ,$id       =  null
-   ,$class    =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('SECONDARY', 2, $attr, $id, $class) ); 
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'SECONDARY'
+        ,2
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    ); 
 
   }
   
   // CLOSING_METHOD_noHTML_TAG 
   public function xADDRESS(
 
-    $label = NULL
+   string $label = NULL
   
   )
   { 
 
-    $this->PERFORM( $this->get_xHTML('SECONDARY', 2, $label) ); 
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'SECONDARY'
+        ,2
+        ,$label
+  
+        )
+     ); 
 
   }
 
@@ -2012,25 +2537,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _COLGROUP(
 
-    $attr   =  []
-   ,$id     =  null
-   ,$class  =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('SECONDARY', 3, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'SECONDARY'
+        ,3
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    );
+
   }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xCOLGROUP(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('SECONDARY', 3, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'SECONDARY'
+        ,3
+        ,$label
+        
+      )
+     ); 
 
   }
 
@@ -2043,25 +2589,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _BDI(
 
-      $attr    =  []
-     ,$id      =  null
-     ,$class   =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
    )
    { 
 
-     $this->PERFORM( $this->get__HTML('SECONDARY', 4, $attr, $id, $class) ); 
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'SECONDARY'
+        ,4
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    ); 
 
   }
   // CLOSING_METHOD_noHTML_TAG 
   public function xBDI(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('SECONDARY', 4, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'SECONDARY'
+        ,4
+        ,$label
+     
+     )
+   ); 
 
   }
 
@@ -2074,26 +2640,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _BDO(
 
-      $attr    =  []
-     ,$id      =  null
-     ,$class   =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
    )
    { 
 
-     $this->PERFORM( $this->get__HTML('SECONDARY', 5, $attr, $id, $class) ); 
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'SECONDARY'
+        ,5
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+     ); 
 
    }
   
   // CLOSING_METHOD_noHTML_TAG 
   public function xBDO(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('SECONDARY', 5, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'SECONDARY'
+        ,5
+        ,$label
+        
+      )
+   ); 
 
   }
 
@@ -2106,25 +2692,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _BLOCKQUOTE(
 
-      $attr    =  []
-     ,$id      =  null
-     ,$class   =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
    )
    { 
 
-     $this->PERFORM( $this->get__HTML('SECONDARY', 6, $attr, $id, $class) ); 
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'SECONDARY'
+        ,6
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    ); 
 
    }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xBLOCKQUOTE(
 
-    $label = NULL
+   string  $label = NULL
 
   )
   { 
-      $this->PERFORM( $this->get_xHTML('SECONDARY', 6, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'SECONDARY'
+          ,6
+          ,$label
+          
+      )
+    ); 
 
   }
 
@@ -2137,25 +2743,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _CAPTION(
 
-     $attr    =  []
-    ,$id      =  null
-    ,$class   =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('SECONDARY', 7, $attr, $id, $class) ); 
+      $this->PERFORM(
+        
+        $this->get__HTML(
+          
+          'SECONDARY'
+          ,7
+          ,$attr
+          ,$id
+          ,$class
+
+      )
+     ); 
+
   }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xCAPTION(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('SECONDARY', 7, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'SECONDARY'
+          ,7
+          ,$label
+          
+      ) 
+    ); 
 
  }
 
@@ -2168,26 +2795,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _LABEL(
 
-     $attr    =  []
-    ,$id      =  null
-    ,$class   =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
  
-      $this->PERFORM( $this->get__HTML('SECONDARY', 8, $attr, $id, $class) ); 
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'SECONDARY'
+          ,8
+          ,$attr
+          ,$id
+          ,$class
+          
+       )
+     ); 
 
   }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xLABEL(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('SECONDARY', 8, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'SECONDARY'
+          ,8
+          ,$label
+          
+      ) 
+     ); 
 
   }
 
@@ -2200,24 +2847,44 @@ protected function _setCOMBEGIN() {
   **/
   public function _DATALIST(
 
-     $attr    =  []
-    ,$id      =  null
-    ,$class   =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
-      $this->PERFORM( $this->get__HTML('SECONDARY', 9, $attr, $id, $class) );  
+      $this->PERFORM(
+        
+        $this->get__HTML(
+          
+          'SECONDARY'
+          ,9
+          ,$attr
+          ,$id
+          ,$class
+          
+      ) 
+    );  
 
   }
   
   // CLOSING_METHOD_noHTML_TAG 
   public function xDATALIST(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
-      $this->PERFORM( $this->get_xHTML('SECONDARY', 9, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'SECONDARY'
+          ,9
+          ,$label
+          
+      ) 
+     ); 
 
   }
 
@@ -2230,26 +2897,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _DETAILS(
 
-     $attr   =  []
-    ,$id     =  null
-    ,$class  =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('SECONDARY', 10, $attr, $id, $class) ); 
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'SECONDARY'
+        ,10
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+   ); 
 
   }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xDETAILS(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('SECONDARY', 10, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'SECONDARY'
+        ,10
+        ,$label
+        
+      ) 
+    ); 
  
  }
 
@@ -2262,26 +2949,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _SUMMARY(
 
-    $attr   =  []
-   ,$id     =  null
-   ,$class  =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
  )
  { 
   
-    $this->PERFORM( $this->get__HTML('SECONDARY', 11, $attr, $id, $class) ); 
+    $this->PERFORM( 
+      
+      $this->get__HTML(
+        
+        'SECONDARY'
+        ,11
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    ); 
   
  }
 
   // CLOSING_METHOD_noHTML_TAG 
   public function xSUMMARY(
 
-    $label = NULL
+    string $label = NULL
   
   )
   { 
   
-     $this->PERFORM( $this->get_xHTML('SECONDARY', 11, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'SECONDARY'
+        ,11
+        ,$label
+        
+      )
+   ); 
   
   }
 
@@ -2294,25 +3001,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _DIALOG(
 
-    $attr   =  []
-   ,$id     =  null
-   ,$class  =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('SECONDARY', 12, $attr, $id, $class) );  
+     $this->PERFORM( 
+     
+     $this->get__HTML(
+       
+      'SECONDARY'
+      ,12
+      ,$attr
+      ,$id
+      ,$class
+      
+      )
+   );  
 
   }
   
   // CLOSING_METHOD_noHTML_TAG 
   public function xDIALOG(
 
-    $label = NULL
+   string $label = NULL
+
   )
   { 
   
-      $this->PERFORM( $this->get_xHTML('SECONDARY', 12, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'SECONDARY'
+          ,12
+          ,$label
+          
+        )
+     ); 
 
   }
 
@@ -2325,25 +3053,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _OPTION(
 
-    $attr    =  []
-   ,$id      =  null
-   ,$class   =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
  )
  { 
 
-    $this->PERFORM( $this->get__HTML('SECONDARY', 12, $attr, $id, $class) );  
+    $this->PERFORM( 
+      
+      $this->get__HTML(
+        
+        'SECONDARY'
+        ,12
+        ,$attr
+        ,$id
+        ,$class
+        
+     ) 
+   );  
 
  }
 
  // CLOSING_METHOD_noHTML_TAG 
   public function xOPTION(
 
-    $label = NULL
+    string $label = NULL
+
   )
   { 
   
-      $this->PERFORM( $this->get_xHTML('SECONDARY', 12, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'SECONDARY'
+          ,12
+          ,$label
+          
+      )
+   ); 
 
   }
 
@@ -2356,26 +3105,47 @@ protected function _setCOMBEGIN() {
   **/
   public function _FIGURE(  
 
-     $attr   =  []
-    ,$id     =  null
-    ,$class  =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
+
 
    )
    { 
 
-     $this->PERFORM( $this->get__HTML('SUPPORT', 0, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'SUPPORT'
+        ,0
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+   );  
 
   }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xFIGURE(
 
-     $label = NULL  
+    string $label = NULL  
 
    )
    { 
 
-      $this->PERFORM( $this->get_xHTML('SUPPORT', 0, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'SUPPORT'
+          ,0
+          ,$label
+          
+       ) 
+    ); 
 
    }
 
@@ -2388,26 +3158,47 @@ protected function _setCOMBEGIN() {
   **/
   public function _FIGCAPTION(  
 
-     $attr   =  []
-    ,$id     =  null
-    ,$class  =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
+
 
    )
    { 
 
-     $this->PERFORM( $this->get__HTML('SUPPORT', 1, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'SUPPORT'
+        ,1
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+   );  
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xFIGCAPTION(
 
-     $label = NULL  
+    string $label = NULL  
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('SUPPORT', 1, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'SUPPORT'
+          ,1
+          ,$label
+       
+     )
+   ); 
 
   }
 
@@ -2420,26 +3211,47 @@ protected function _setCOMBEGIN() {
   **/
   public function _METER( 
 
-     $attr   =  []
-    ,$id     =  null
-    ,$class  =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
+
 
    )
    { 
 
-      $this->PERFORM( $this->get__HTML('SUPPORT', 2, $attr, $id, $class) );  
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'SUPPORT'
+          ,2
+          ,$attr
+          ,$id
+          ,$class
+          
+      ) 
+     );  
 
    }
  
   // CLOSING_METHOD_noHTML_TAG
   public function xMETER(
 
-     $label = NULL
+    string $label = NULL
 
    )
    { 
 
-     $this->PERFORM( $this->get_xHTML('SUPPORT', 2, $label) ); 
+     $this->PERFORM(
+       
+      $this->get_xHTML(
+        
+        'SUPPORT'
+        ,2
+        ,$label
+        
+      )
+   ); 
 
    }
 
@@ -2452,26 +3264,47 @@ protected function _setCOMBEGIN() {
   **/
   public function _OBJECT( 
 
-     $attr   =  []
-    ,$id     =  null
-    ,$class  =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
+
 
    )
    { 
 
-      $this->PERFORM( $this->get__HTML('SUPPORT', 3, $attr, $id, $class) );  
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'SUPPORT'
+          ,3
+          ,$attr
+          ,$id
+          ,$class
+          
+      )
+     );  
 
    }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xOBJECT(
 
-     $label = NULL
+     string $label = NULL
 
    )
    { 
 
-     $this->PERFORM( $this->get_xHTML('SUPPORT', 3, $label)); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'SUPPORT'
+        ,3
+        ,$label
+      
+      )
+    ); 
 
    }
 
@@ -2484,26 +3317,47 @@ protected function _setCOMBEGIN() {
   **/
   public function _OPTGROUP( 
 
-     $attr  =  []
-    ,$id    =  null
-    ,$class =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
+
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('SUPPORT', 4, $attr, $id, $class));  
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'SUPPORT'
+          ,4
+          ,$attr
+          ,$id
+          ,$class
+        
+      )
+    );  
 
  }
  
  // CLOSING_METHOD_noHTML_TAG
   public function xOPTGROUP(
 
-    $label = NULL
+   string $label = NULL
 
   ) 
   { 
 
-      $this->PERFORM( $this->get_xHTML('SUPPORT', 4, $label)); 
+      $this->PERFORM(
+        
+        $this->get_xHTML(
+          
+          'SUPPORT'
+          ,4
+          ,$label
+        
+      )
+    ); 
 
   }
 
@@ -2516,26 +3370,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _OUTPUT( 
 
-     $attr  =  []
-    ,$id    =  null
-    ,$class =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
+
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('SUPPORT', 5, $attr, $id, $class));  
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'SUPPORT'
+          ,5
+          ,$attr
+          ,$id
+          ,$class
+        
+       )
+     );  
 
   }
   
   //CLOSING_METHOD_noHTML_TAG
   public function xOUTPUT(
 
-    $label = NULL
+    string $label = NULL
 
   ) 
   { 
 
-      $this->PERFORM( $this->get_xHTML('SUPPORT', 5, $label)); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'SUPPORT'
+          ,5
+          ,$label
+     )
+   ); 
 
   }
 
@@ -2548,26 +3422,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _PROGRESS(
 
-      $attr   =  []
-     ,$id     =  null
-     ,$class  =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
    )
   { 
 
-      $this->PERFORM( $this->get__HTML('SUPPORT', 6, $attr, $id, $class));  
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'SUPPORT'
+          ,6
+          ,$attr
+          ,$id
+          ,$class
+     
+        )
+      );  
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xPROGRESS(
 
-    $label = NULL 
+    string $label = NULL 
 
   )
   { 
 
-    $this->PERFORM( $this->get_xHTML('SUPPORT', 6, $label)); 
+    $this->PERFORM(
+      
+      $this->get_xHTML(
+        
+        'SUPPORT'
+        ,6
+        ,$label
+      
+     )
+   ); 
 
   }
 
@@ -2580,26 +3474,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _SVG(
 
-      $attr   =  []
-     ,$id     =  null
-     ,$class  =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
    )
   { 
 
-      $this->PERFORM( $this->get__HTML('SUPPORT', 7, $attr, $id, $class));  
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'SUPPORT'
+          ,7
+          ,$attr
+          ,$id
+          ,$class
+        
+       )
+    );  
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xSVG(
 
-    $label = NULL 
+   string $label = NULL 
 
   )
   { 
 
-    $this->PERFORM( $this->get_xHTML('SUPPORT', 7, $label)); 
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'SUPPORT'
+        ,7
+        ,$label
+      
+      )
+    ); 
 
   }
 
@@ -2612,26 +3526,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _TEMPLATE(
 
-      $attr    =  []
-     ,$id      =  null
-     ,$class   =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('SUPPORT', 8, $attr, $id, $class)); 
+      $this->PERFORM(
+        
+        $this->get__HTML(
+          
+          'SUPPORT'
+          ,8
+          ,$attr
+          ,$id
+          ,$class
+        
+      )
+     ); 
 
   }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xTEMPLATE(
 
-     $label = NULL
+     string $label = NULL
 
   )
   {   
 
-      $this->PERFORM( $this->get_xHTML('SUPPORT', 8, $label)); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'SUPPORT'
+          ,8
+          ,$label
+        
+      )
+    ); 
 
   }
 
@@ -2644,14 +3578,24 @@ protected function _setCOMBEGIN() {
   **/
   public function _TIME(
 
-      $attr    =  []
-     ,$id      =  null
-     ,$class   =  null
-
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('SUPPORT', 9, $attr, $id, $class) );
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'SUPPORT'
+          ,9
+          ,$attr
+          ,$id
+          ,$class
+          
+        )
+     );
 
   }
 
@@ -2659,12 +3603,21 @@ protected function _setCOMBEGIN() {
   // CLOSING_METHOD_noHTML_TAG
   public function xTIME(
 
-     $label = NULL
+    string $label = NULL
 
   )
   {   
 
-      $this->PERFORM( $this->get_xHTML('SUPPORT', 9, $label) );
+      $this->PERFORM(
+        
+        $this->get_xHTML(
+          
+          'SUPPORT'
+          ,9
+          ,$label
+          
+        )
+     );
 
   }
 
@@ -2677,26 +3630,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _VAR(
 
-      $attr    =  []
-     ,$id      =  null
-     ,$class   =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
    )
    { 
 
-     $this->PERFORM( $this->get__HTML('SUPPORT', 10, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'SUPPORT'
+        ,10
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+   );  
 
   }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xVAR(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('SUPPORT', 10, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'SUPPORT'
+        ,10
+        ,$label
+      
+      )
+    ); 
 
   }
 
@@ -2709,26 +3682,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _UL(
 
-      $attr    =  []
-     ,$id      =  null
-     ,$class   =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('LIST', 0, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'LIST'
+        ,0
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+     );  
 
   }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xUL(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('LIST', 0, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'LIST'
+        ,0
+        ,$label
+        
+      )
+    ); 
 
   }
 
@@ -2741,26 +3734,47 @@ protected function _setCOMBEGIN() {
   **/
   public function _OL(
 
-      $attr    =  []
-     ,$id      =  null
-     ,$class   =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
    )
    { 
 
-     $this->PERFORM( $this->get__HTML('LIST', 1, $attr, $id, $class) );   
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'LIST'
+        ,1
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    );   
 
    }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xOL(
 
-     $label = NULL  
+    string $label = NULL  
 
   )
   { 
 
-    $this->PERFORM( $this->get_xHTML('LIST', 1, $label) ); 
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'LIST'
+        ,1
+        ,$label
+        
+        ) 
+      
+       ); 
 
   }
 
@@ -2773,26 +3787,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _LI(
 
-      $attr    =  []
-     ,$id      =  null
-     ,$class   =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
    )
    { 
 
-     $this->PERFORM( $this->get__HTML('LIST', 2, $attr, $id, $class) );   
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'LIST'
+        ,2
+        ,$attr
+        ,$id
+        ,$class
+        
+      ) 
+    );   
 
    }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xLI(
 
-     $label = NULL  
+    string $label = NULL  
 
    )
    { 
 
-     $this->PERFORM( $this->get_xHTML('LIST', 2, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'LIST'
+        ,2
+        ,$label
+        
+      )
+    ); 
 
    }
 
@@ -2805,26 +3839,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _TABLE(
 
-    $attr    =  []
-   ,$id      =  null
-   ,$class   =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('LIST', 3, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'LIST'
+        ,3
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    );  
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xTABLE(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('LIST', 3, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'LIST'
+          ,3
+          ,$label
+          
+      )
+   ); 
 
  }
 
@@ -2837,26 +3891,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _TR(
 
-    $attr    =  []
-   ,$id      =  null
-   ,$class   =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('LIST', 4, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'LIST'
+        ,4
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+   );  
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xTR(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('LIST', 4, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'LIST'
+        ,4
+        ,$label
+        
+      )
+    ); 
 
   }
 
@@ -2869,25 +3943,44 @@ protected function _setCOMBEGIN() {
   **/
   public function _TD(
 
-     $attr    =  []
-    ,$id      =  null
-    ,$class   =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
    )
    { 
-      $this->PERFORM( $this->get__HTML('LIST', 5, $attr, $id, $class) );  
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'LIST'
+          ,5
+          ,$attr
+          ,$id
+          ,$class
+      )
+     );  
 
  }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xTD(
 
-    $label = NULL
+    string $label = NULL
 
  )
  { 
 
-    $this->PERFORM( $this->get_xHTML('LIST', 5, $label) ); 
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'LIST'
+        ,5
+        ,$label
+   
+      )
+    ); 
 
  }
 
@@ -2900,25 +3993,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _TH(
 
-     $attr    =  []
-    ,$id      =  null
-    ,$class   =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
-      $this->PERFORM( $this->get__HTML('LIST', 6, $attr, $id, $class) );  
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'LIST'
+          ,6
+          ,$attr
+          ,$id
+          ,$class
+          
+      )
+    );  
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xTH(
 
-    $label = NULL
+    string $label = NULL
 
  )
  { 
 
-    $this->PERFORM( $this->get_xHTML('LIST', 6, $label) ); 
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'LIST'
+        ,6
+        ,$label
+        
+      )
+    ); 
 
  }
 
@@ -2931,27 +4044,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _LEGEND(
 
-
-    $attr     =  []
-   ,$id       =  null
-   ,$class    =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('LIST', 7, $attr, $id, $class) );   
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'LIST'
+          ,7
+          ,$attr
+          ,$id
+          ,$class
+
+      )
+   );   
 
   }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xLEGEND(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('LIST', 7, $label) );
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'LIST'
+          ,7
+          ,$label
+          
+      ) 
+    );
 
  }
 
@@ -2964,27 +4096,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _FIELDSET(
 
-
-    $attr     =  []
-   ,$id       =  null
-   ,$class    =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('LIST', 8, $attr, $id, $class) );   
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'LIST'
+          ,8
+          ,$attr
+          ,$id
+          ,$class
+          
+       )
+    );   
 
   }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xFIELDSET(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('LIST', 8, $label) );
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'LIST'
+          ,8
+          ,$label
+          
+      ) 
+    );
 
   }
 
@@ -2997,14 +4148,25 @@ protected function _setCOMBEGIN() {
   **/
   public function _TBODY(
 
-       $attr     =  []
-      ,$id       =  null
-      ,$class    = null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
  )
  { 
 
-     $this->PERFORM( $this->get__HTML('LIST', 9, $attr, $id, $class) );    
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'LIST'
+        ,9
+        ,$attr
+        ,$id
+        ,$class
+  
+     ) 
+  );    
 
  }
   
@@ -3012,12 +4174,21 @@ protected function _setCOMBEGIN() {
   public function xTBODY(
 
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('LIST', 9, $label) );
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'LIST'
+          ,9
+          ,$label
+          
+      ) 
+  );
 
   }
 
@@ -3030,14 +4201,25 @@ protected function _setCOMBEGIN() {
   **/
   public function _TFOOT(
 
-       $attr     =  []
-      ,$id       =  null
-      ,$class    = null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('LIST', 10, $attr, $id, $class) );   
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'LIST'
+        ,10
+        ,$attr
+        ,$id
+        ,$class
+        
+     )
+   );   
 
   }
   
@@ -3045,12 +4227,21 @@ protected function _setCOMBEGIN() {
   public function xTFOOT(
 
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('LIST', 10, $label) );  
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'LIST'
+          ,10
+          ,$label
+          
+      )
+    );  
 
   }
 
@@ -3063,26 +4254,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _THEAD(
 
-      $attr     =  []
-     ,$id       =  null
-     ,$class    =  null
+    array|string $attr   = null
+   ,string       $id     = null
+   ,string       $class  = null
 
    )
    { 
 
-      $this->PERFORM( $this->get__HTML('LIST', 11, $attr, $id, $class) );  
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'LIST'
+          ,11
+          ,$attr
+          ,$id
+          ,$class
+      
+       )
+    );  
 
   }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xTHEAD(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('LIST', 11, $label) );  
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'LIST'
+          ,11
+          ,$label
+          
+      )
+    );  
 
   }
 
@@ -3095,26 +4306,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _SPAN(
 
-      $attr     =  []
-     ,$id       =  null
-     ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
    )
    { 
 
-      $this->PERFORM( $this->get__HTML('FORMAT', 0, $attr, $id, $class) ); 
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'FORMAT'
+          ,0
+          ,$attr
+          ,$id
+          ,$class
+        
+       )
+     ); 
 
    }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xSPAN(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMAT', 0, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'FORMAT'
+          ,0
+          ,$label
+        
+        )
+     ); 
 
   }
 
@@ -3127,26 +4358,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _EM(
 
-       $attr     =  []
-      ,$id       =  null
-      ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
  )
  { 
 
-     $this->PERFORM( $this->get__HTML('FORMAT', 1, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'FORMAT'
+        ,1
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    );  
 
  }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xEM(
 
-    $label = NULL  
+    string $label = NULL  
 
    )
    { 
 
-     $this->PERFORM( $this->get_xHTML('FORMAT', 1, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'FORMAT'
+        ,1
+        ,$label
+        
+      )
+    ); 
 
    }
 
@@ -3159,26 +4410,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _B(
 
-       $attr     =  []
-      ,$id       =  null
-      ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
  )
  { 
 
-     $this->PERFORM( $this->get__HTML('FORMAT', 2, $attr, $id, $class) );  
+     $this->PERFORM(
+       
+      $this->get__HTML(
+        
+        'FORMAT'
+        ,2
+        ,$attr
+        ,$id
+        ,$class
+     )
+    );  
 
  }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xB(
 
-    $label = NULL  
+    string $label = NULL  
 
  )
  { 
 
-     $this->PERFORM( $this->get_xHTML('FORMAT', 2, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'FORMAT'
+        ,2
+        ,$label
+     
+      )
+   ); 
 
  }
 
@@ -3191,26 +4461,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _I(
 
-      $attr    =  []
-     ,$id      =  null
-     ,$class   =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
    )
    {   
 
-       $this->PERFORM( $this->get__HTML('FORMAT', 3, $attr, $id, $class) );   
+       $this->PERFORM(
+         
+        $this->get__HTML(
+          
+          'FORMAT'
+          ,3
+          ,$attr
+          ,$id
+          ,$class
+      )
+    );   
 
    }
 
 // CLOSING_METHOD_noHTML_TAG
   public function xI(
 
-    $label = NULL 
+   string $label = NULL 
 
  )
  { 
 
-     $this->PERFORM( $this->get_xHTML('FORMAT', 3, $label) );  
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'FORMAT'
+        ,3
+        ,$label
+        
+      )
+    );  
  
  }
 
@@ -3223,25 +4512,44 @@ protected function _setCOMBEGIN() {
   **/
   public function _SMALL(
 
-      $attr    =  []
-     ,$id      =  null
-     ,$class   =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   {   
 
-      $this->PERFORM( $this->get__HTML('FORMAT', 4, $attr, $id, $class) );   
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'FORMAT'
+          ,4
+          ,$attr
+          ,$id
+          ,$class
+      )
+    );   
 
   }
 
 // CLOSING_METHOD_noHTML_TAG
   public function xSMALL(
 
-    $label = NULL 
+   string $label = NULL 
 
   )
   { 
- $this->PERFORM( $this->get_xHTML('FORMAT', 4, $label) ); 
+ $this->PERFORM( 
+   
+  $this->get_xHTML(
+    
+    'FORMAT'
+    ,4
+    ,$label
+    
+   )  
+  ); 
 
   }
 
@@ -3255,26 +4563,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _STRIKE(
 
-      $attr     =  []
-     ,$id       =  null
-     ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('FORMAT', 5, $attr, $id, $class) );   
+     $this->PERFORM(
+       
+      $this->get__HTML(
+        
+        'FORMAT'
+        ,5
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    );   
 
   }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xSTRIKE(
 
-     $label = NULL
+    string $label = NULL
 
   )
   { 
 
-     $this->PERFORM( $this->get_xHTML('FORMAT', 5, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'FORMAT'
+        ,5
+        ,$label
+        
+      )
+    ); 
 
   }
 
@@ -3287,26 +4615,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _MARQUEE(
 
-      $attr     =  []
-     ,$id       =  null
-     ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('FORMAT', 6, $attr, $id, $class) );   
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'FORMAT'
+        ,6
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    );   
 
   }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xMARQUEE(
 
-     $label = NULL
+    string $label = NULL
 
    )
    { 
 
-     $this->PERFORM( $this->get_xHTML('FORMAT', 6, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'FORMAT'
+        ,6
+        ,$label
+   
+      )
+    ); 
 
    }
 
@@ -3319,25 +4667,44 @@ protected function _setCOMBEGIN() {
   **/
   public function _CENTER(
 
-       $attr     =  []
-      ,$id       =  null
-      ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   {   
 
-       $this->PERFORM( $this->get__HTML('FORMAT', 7, $attr, $id, $class) ); 
+       $this->PERFORM( 
+         
+        $this->get__HTML(
+          
+          'FORMAT'
+          ,7
+          ,$attr
+          ,$id
+          ,$class
+       )
+     ); 
  
   }
   // CLOSING_METHOD_noHTML_TAG
   public function xCENTER(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMAT', 7, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'FORMAT'
+          ,7
+          ,$label
+          
+        )
+      ); 
 
  }
 
@@ -3350,25 +4717,43 @@ protected function _setCOMBEGIN() {
   **/
   public function _CODE(
 
-       $attr     =  []
-      ,$id       =  null
-      ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   {   
 
-       $this->PERFORM( $this->get__HTML('FORMAT', 8, $attr, $id, $class) ); 
+       $this->PERFORM( 
+         
+        $this->get__HTML(
+          
+          'FORMAT'
+          ,8
+          ,$attr
+          ,$id
+          ,$class
+       )
+     ); 
  
   }
   // CLOSING_METHOD_noHTML_TAG
   public function xCODE(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMAT', 8, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'FORMAT'
+          ,8
+          ,$label
+      )
+    ); 
 
   }
 
@@ -3381,26 +4766,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _ABBR(
 
-       $attr     =  []
-      ,$id       =  null
-      ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('FORMAT', 9, $attr, $id, $class) );   
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'FORMAT'
+          ,9
+          ,$attr
+          ,$id
+          ,$class
+          
+        )
+     );   
 
   }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xABBR(
 
-      $label = NULL
+    string  $label = NULL
 
   )
   { 
 
-    $this->PERFORM( $this->get_xHTML('FORMAT', 9, $label) ); 
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'FORMAT'
+        ,9
+        ,$label
+        
+        ) 
+      ); 
 
   }
 
@@ -3413,25 +4818,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _MAP(
 
-       $attr     =  []
-      ,$id       =  null
-      ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('FORMAT', 10, $attr, $id, $class) );  
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'FORMAT'
+          ,10
+          ,$attr
+          ,$id
+          ,$class
+    
+        )
+     );  
 
      }
   // CLOSING_METHOD_noHTML_TAG
   public function xMAP(
 
-      $label = NULL
+    string $label = NULL
 
   )
   { 
 
-    $this->PERFORM( $this->get_xHTML('FORMAT', 10, $label) );
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'FORMAT'
+        ,10
+        ,$label
+        
+      )
+   );
 
   }
 
@@ -3444,26 +4869,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _CANVAS(
 
-     $attr     =  []
-    ,$id       =  null
-    ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('FORMAT', 11, $attr, $id, $class) );  
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'FORMAT'
+          ,11
+          ,$attr
+          ,$id
+          ,$class
+          
+      )
+   );  
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xCANVAS(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMAT', 11, $label) );
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'FORMAT'
+          ,11
+          ,$label
+          
+      )
+   );
 
   }
 
@@ -3476,26 +4921,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _CITE(
 
-     $attr     =  []
-    ,$id       =  null
-    ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('FORMAT', 12, $attr, $id, $class) );  
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'FORMAT'
+          ,12
+          ,$attr
+          ,$id
+          ,$class
+          
+      ) 
+    );  
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xCITE(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMAT', 12, $label) );
+      $this->PERFORM(
+        
+        $this->get_xHTML(
+          
+          'FORMAT'
+          ,12
+          ,$label
+          
+        )
+     );
 
   }
 
@@ -3508,26 +4973,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _DATA(
 
-       $attr     =  []
-      ,$id       =  null
-      ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null  
 
   )
   { 
 
-    $this->PERFORM( $this->get__HTML('FORMAT', 13, $attr, $id, $class) ); 
+    $this->PERFORM(
+      
+      $this->get__HTML(
+        
+        'FORMAT'
+        ,13
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    ); 
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xDATA(
 
-    $label = NULL
+   string $label = NULL
 
   )
   { 
 
-    $this->PERFORM( $this->get_xHTML('FORMAT', 13, $label) ); 
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'FORMAT'
+        ,13
+        ,$label
+      )
+     ); 
 
   }
 
@@ -3540,26 +5024,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _DL(
 
-       $attr     =  []
-      ,$id       =  null
-      ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-    $this->PERFORM( $this->get__HTML('FORMAT', 14, $attr, $id, $class) ); 
+    $this->PERFORM( 
+      
+      $this->get__HTML(
+        
+        'FORMAT'
+        ,14
+        ,$attr
+        ,$id
+        ,$class
+        
+     )
+    ); 
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xDL(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-    $this->PERFORM( $this->get_xHTML('FORMAT', 14, $label) ); 
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'FORMAT'
+        ,14
+        ,$label
+        
+     ) 
+  ); 
 
   }
 
@@ -3572,25 +5076,44 @@ protected function _setCOMBEGIN() {
   **/
   public function _DT(  
 
-      $attr     =  []
-     ,$id       =  null
-     ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
    )
    { 
 
-     $this->PERFORM( $this->get__HTML('FORMAT', 15, $attr, $id, $class) );  
+     $this->PERFORM(
+       
+      $this->get__HTML(
+        
+        'FORMAT'
+        ,15
+        ,$attr
+        ,$id
+        ,$class
+     ) 
+    );  
 
    }
   // CLOSING_METHOD_noHTML_TAG
   public function xDT(
 
-      $label = NULL
+    string  $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMAT', 15, $label) );
+      $this->PERFORM(
+        
+        $this->get_xHTML(
+          
+          'FORMAT'
+          ,15
+          ,$label
+          
+        )
+     );
 
   }
 
@@ -3603,25 +5126,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _DD(  
 
-      $attr     =  []
-     ,$id       =  null
-     ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
    )
    { 
 
-     $this->PERFORM( $this->get__HTML('FORMAT', 16, $attr, $id, $class) );  
+     $this->PERFORM(
+       
+      $this->get__HTML(
+        
+        'FORMAT'
+        ,16
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    );  
 
-    }
+   }
   // CLOSING_METHOD_noHTML_TAG
   public function xDD(
 
-      $label = NULL
+     string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMAT', 16, $label) );
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'FORMAT'
+          ,16
+          ,$label
+          
+      ) 
+    );
 
   }
 
@@ -3634,26 +5177,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _DFN(
 
-       $attr     =  []
-      ,$id       =  null
-      ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('FORMAT', 17, $attr, $id, $class) );   
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'FORMAT'
+          ,17
+          ,$attr
+          ,$id
+          ,$class
+          
+      ) 
+    );   
 
   }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xDFN(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMAT', 17, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'FORMAT'
+          ,17
+          ,$label
+          
+        )
+     ); 
   
   }
 
@@ -3666,26 +5229,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _INS(
 
-       $attr     =  []
-      ,$id       =  null
-      ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
+
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('FORMAT', 18, $attr, $id, $class) );   
+      $this->PERFORM(
+        
+        $this->get__HTML(
+          
+          'FORMAT'
+          ,18
+          ,$attr
+          ,$id
+          ,$class
+      )
+    );   
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xINS(
 
-    $label = NULL
+    string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMAT', 18, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'FORMAT'
+          ,18
+          ,$label
+          
+      )
+    ); 
   
   }
 
@@ -3698,26 +5281,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _DEL(
 
-       $attr      =  []
-      ,$id        =  null
-      ,$class     =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
  )
  { 
 
-    $this->PERFORM( $this->get__HTML('FORMATC', 0, $attr, $id, $class) );  
+    $this->PERFORM( 
+      
+      $this->get__HTML(
+        
+        'FORMATC'
+        ,0
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+   );  
 
  }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xDEL(
 
-      $label = NULL
+    string  $label = NULL
 
   )
   { 
 
-       $this->PERFORM( $this->get_xHTML('FORMATC', 0, $label) );  
+       $this->PERFORM( 
+         
+        $this->get_xHTML(
+          
+          'FORMATC'
+          ,0
+          ,$label
+      )
+    );  
 
   }
 
@@ -3730,26 +5332,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _KBD(
 
-       $attr      =  []
-      ,$id        =  null
-      ,$class     =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
  )
  { 
 
-    $this->PERFORM( $this->get__HTML('FORMATC', 1, $attr, $id, $class) );  
+    $this->PERFORM( 
+      
+      $this->get__HTML(
+        
+        'FORMATC'
+        ,1
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+   );  
 
  }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xKBD(
 
-      $label = NULL
+    string  $label = NULL
 
   )
   { 
 
-       $this->PERFORM( $this->get_xHTML('FORMATC', 1, $label) );  
+       $this->PERFORM(
+         
+        $this->get_xHTML(
+          
+          'FORMATC'
+          ,1
+          ,$label
+      ) 
+    );  
 
   }
 
@@ -3762,26 +5383,44 @@ protected function _setCOMBEGIN() {
   **/
   public function _MARK(
 
-       $attr     =  []
-      ,$id       =  null
-      ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('FORMATC', 2, $attr, $id, $class) );   
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'FORMATC'
+          ,2
+          ,$attr
+          ,$id
+          ,$class
+      )
+   );   
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xMARK(
 
-      $label = NULL
+    string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMATC', 2, $label) );  
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'FORMATC'
+          ,2
+          ,$label
+      )
+   );  
 
  }
 
@@ -3794,26 +5433,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _PRE(
 
-       $attr     =  []
-      ,$id       =  null
-      ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('FORMATC', 3, $attr, $id, $class ) );  
+      $this->PERFORM(
+        
+        $this->get__HTML(
+          
+          'FORMATC'
+          ,3
+          ,$attr
+          ,$id
+          ,$class
+          
+      )
+   );  
 
   }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xPRE(
 
-      $label = NULL
+    string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMATC', 3, $label) );  
+      $this->PERFORM(
+        
+        $this->get_xHTML(
+          
+          'FORMATC'
+          ,3
+          ,$label
+          
+      ) 
+    );  
 
   }
 
@@ -3826,26 +5485,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _RT(
 
-      $attr    = []
-     ,$id      = null
-     ,$class   = null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('FORMATC', 4, $attr, $id, $class) );  
+      $this->PERFORM(
+        
+        $this->get__HTML(
+          
+          'FORMATC'
+          ,4
+          ,$attr
+          ,$id
+          ,$class
+          
+        )
+     );  
 
  }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xRT(
 
-      $label = NULL
+    string  $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMATC', 4, $label) ); 
+      $this->PERFORM(
+        
+        $this->get_xHTML(
+          
+          'FORMATC'
+          ,4
+          ,$label
+          
+        )
+     ); 
   
   }
 
@@ -3858,26 +5537,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _RP(
 
-      $attr    = []
-     ,$id      = null
-     ,$class   = null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('FORMATC', 5, $attr, $id, $class) );  
+      $this->PERFORM(
+        
+        $this->get__HTML(
+          
+          'FORMATC'
+          ,5
+          ,$attr
+          ,$id
+          ,$class
+    
+      ) 
+    );  
 
  }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xRP(
 
-      $label = NULL
+    string  $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMATC', 5, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'FORMATC'
+          ,5
+          ,$label
+          
+      )
+   ); 
 
  }
 
@@ -3890,25 +5589,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _RUBY(
 
-        $attr     =  []
-       ,$id       =  null
-       ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
     )
     { 
 
-        $this->PERFORM( $this->get__HTML('FORMATC', 6, $attr, $id, $class) );   
+        $this->PERFORM( 
+          
+          $this->get__HTML(
+            
+            'FORMATC'
+            ,6
+            ,$attr
+            ,$id
+            ,$class
+        )
+      );
+
    }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xRUBY(
 
-      $label = NULL
+    string $label = NULL
 
    )
    { 
 
-      $this->PERFORM( $this->get_xHTML('FORMATC', 6, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'FORMATC'
+          ,6
+          ,$label
+        
+        ) 
+      ); 
 
   }
 
@@ -3921,25 +5640,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _S(
 
-        $attr     =  []
-       ,$id       =  null
-       ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
     )
     { 
 
-        $this->PERFORM( $this->get__HTML('FORMATC', 7, $attr, $id, $class) );   
+        $this->PERFORM( 
+          
+          $this->get__HTML(
+            
+            'FORMATC'
+            ,7
+            ,$attr
+            ,$id
+            ,$class
+        )
+     );   
+
    }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xS(
 
-      $label = NULL
+     string $label = NULL
 
    )
    { 
 
-      $this->PERFORM( $this->get_xHTML('FORMATC', 7, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'FORMATC'
+          ,7
+          ,$label
+          
+      )
+    ); 
 
    }
 
@@ -3951,27 +5690,47 @@ protected function _setCOMBEGIN() {
   *
   **/
   public function _SAMP(
-
-       $attr     =  []
-      ,$id       =  null
-      ,$class    =  null
+   
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('FORMATC', 8, $attr, $id, $class) );   
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'FORMATC'
+          ,8
+          ,$attr
+          ,$id
+          ,$class
+          
+      ) 
+    );   
 
  }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xSAMP(
 
-     $label = NULL
+    string $label = NULL
 
   )
   { 
 
-    $this->PERFORM( $this->get_xHTML('FORMATC', 8, $label) );  
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'FORMATC'
+        ,8
+        ,$label
+  
+     ) 
+   );  
 
   }
 
@@ -3984,26 +5743,44 @@ protected function _setCOMBEGIN() {
   **/
   public function _STRONG(
 
-       $attr     =  []
-      ,$id       =  null
-      ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('FORMATC', 9, $attr, $id, $class) );   
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'FORMATC'
+          ,9
+          ,$attr
+          ,$id
+          ,$class
+      )
+    );   
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xSTRONG(
 
-     $label = NULL
+    string $label = NULL
 
   )
   { 
 
-    $this->PERFORM( $this->get_xHTML('FORMATC', 9, $label) );  
+    $this->PERFORM( 
+      
+      $this->get_xHTML(
+        
+        'FORMATC'
+        ,9
+        ,$label
+     )
+    );  
 
   }
 
@@ -4016,26 +5793,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _SUB(
 
-      $attr     =  []
-     ,$id       =  null
-     ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('FORMATC', 10, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'FORMATC'
+        ,10
+        ,$attr
+        ,$id
+        ,$class
+        
+       )
+     );  
  
   }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xSUB(
 
-      $label = NULL
+    string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMATC', 10, $label )); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'FORMATC'
+          ,10
+          ,$label
+     
+       )
+    ); 
 
  }
 
@@ -4048,26 +5845,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _SUP(
 
-      $attr     =  []
-     ,$id       =  null
-     ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('FORMATC', 11, $attr, $id, $class) );  
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'FORMATC'
+        ,11
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+   );  
  
   }
   
   // CLOSING_METHOD_noHTML_TAG
   public function xSUP(
 
-      $label = NULL
+     string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMATC', 11, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'FORMATC'
+          ,11
+          ,$label
+          
+        )
+     ); 
 
   }
 
@@ -4080,27 +5897,46 @@ protected function _setCOMBEGIN() {
   **/
   public function _WBR(
 
-
-       $attr      =  []
-      ,$id        =  null
-      ,$class     =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   ) 
   { 
 
-      $this->PERFORM( $this->get__HTML('FORMATC', 12, $attr, $id, $class) );   
+      $this->PERFORM(
+        
+        $this->get__HTML(
+          
+          'FORMATC'
+          ,12
+          ,$attr
+          ,$id
+          ,$class
+          
+      )
+    );   
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xWBR(
 
-      $label = NULL
+    string  $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMATC', 12, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'FORMATC'
+          ,12
+          ,$label
+          
+      )
+    ); 
 
   }
 
@@ -4113,27 +5949,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _Q(
 
-
-       $attr      =  []
-      ,$id        =  null
-      ,$class     =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   ) 
   { 
 
-      $this->PERFORM( $this->get__HTML('FORMATC', 13, $attr, $id, $class) );   
+      $this->PERFORM(
+        
+        $this->get__HTML(
+          
+          'FORMATC'
+          ,13
+          ,$attr
+          ,$id
+          ,$class
+      )
+    );   
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xQ(
 
-      $label = NULL
+    string $label = NULL
 
   )
   { 
 
-      $this->PERFORM( $this->get_xHTML('FORMATC', 13, $label) ); 
+      $this->PERFORM( 
+        
+        $this->get_xHTML(
+          
+          'FORMATC'
+          ,13
+          ,$label
+          
+        )
+       ); 
 
   }
 
@@ -4146,26 +6000,44 @@ protected function _setCOMBEGIN() {
   **/
   public function _HEAD(
 
-      $attr     =  []
-     ,$id       =  null
-     ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM($this->get__HTML('STRUCTURE', 0, $attr, $id, $class) );   
+      $this->PERFORM(
+        
+        $this->get__HTML(
+          
+          'STRUCTURE'
+          ,0
+          ,$attr
+          ,$id
+          ,$class
+      )
+    );   
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xHEAD(
 
-      $label = NULL  
+    string $label = NULL  
 
    )
    { 
 
-     $this->PERFORM( $this->get_xHTML('STRUCTURE', 0, $label) );
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'STRUCTURE'
+        ,0
+        ,$label
+     )
+   );
 
  }
 
@@ -4178,26 +6050,45 @@ protected function _setCOMBEGIN() {
   **/
   public function _TITLE(
 
-      $attr     =  []
-     ,$id       =  null
-     ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-      $this->PERFORM( $this->get__HTML('STRUCTURE', 1, $attr, $id, $class) );  
+      $this->PERFORM( 
+        
+        $this->get__HTML(
+          
+          'STRUCTURE'
+          ,1
+          ,$attr
+          ,$id
+          ,$class
+      )
+    );  
 
   }
 
   // CLOSING_METHOD_noHTML_TAG
   public function xTITLE(
 
-      $label = NULL  
+    string $label = NULL  
 
    )
    { 
 
-     $this->PERFORM( $this->get_xHTML('STRUCTURE', 1, $label) );
+     $this->PERFORM(
+       
+      $this->get_xHTML(
+        
+        'STRUCTURE'
+        ,1
+        ,$label
+        
+      ) 
+    );
 
   }
 
@@ -4210,14 +6101,25 @@ protected function _setCOMBEGIN() {
   **/
   public function _BODY(
 
-      $attr     =  []
-     ,$id       =  null
-     ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM( $this->get__HTML('STRUCTURE', 2, $attr, $id, $class) ); 
+     $this->PERFORM( 
+       
+      $this->get__HTML(
+        
+        'STRUCTURE'
+        ,2
+        ,$attr
+        ,$id
+        ,$class
+        
+      )
+    ); 
 
   }
 
@@ -4225,12 +6127,21 @@ protected function _setCOMBEGIN() {
   public function xBODY(
 
 
-      $label = NULL
+    string  $label = NULL
 
  )
  { 
 
-     $this->PERFORM( $this->get_xHTML('STRUCTURE', 2, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'STRUCTURE'
+        ,2
+        ,$label
+    
+       ) 
+    ); 
 
  }
 
@@ -4243,14 +6154,24 @@ protected function _setCOMBEGIN() {
   **/
   public function _noHTML(
 
-      $attr     =  []
-     ,$id       =  null
-     ,$class    =  null
+     array|string $attr   = null
+    ,string       $id     = null
+    ,string       $class  = null
 
   )
   { 
 
-     $this->PERFORM($this->cpe_FileHandler_html_type($attr, $id, $class)); 
+     $this->PERFORM(
+       
+      $this->cpe_FileHandler_html_type(
+        
+        $attr, 
+        $id, 
+        $class
+      
+      )
+    
+    ); 
 
   }
 
@@ -4258,12 +6179,21 @@ protected function _setCOMBEGIN() {
   public function xnoHTML(
 
 
-      $label = NULL
+     string $label = NULL
 
  )
  { 
 
-     $this->PERFORM( $this->get_xHTML('STRUCTURE', 3, $label) ); 
+     $this->PERFORM( 
+       
+      $this->get_xHTML(
+        
+        'STRUCTURE'
+        ,3
+        ,$label
+      
+      )
+    ); 
 
  }
 
@@ -4321,17 +6251,28 @@ protected function _setCOMBEGIN() {
   **/
   public function H1(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $id      =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   ) 
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 0, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'PRIMARY', 
+      0, 
+      $value, 
+      $attr, 
+      $id, 
+      $class, 
+      $label, 
+      $assoc
+    
+     );
 
   }
 
@@ -4344,17 +6285,28 @@ protected function _setCOMBEGIN() {
   **/
   public function H2(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $id      =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   ) 
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 1, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'PRIMARY'
+    ,1
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+    );
 
  }
 
@@ -4367,17 +6319,28 @@ protected function _setCOMBEGIN() {
   **/
   public function H3(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $id      =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 2, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'PRIMARY'
+      ,2
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
 
   }
 
@@ -4390,17 +6353,28 @@ protected function _setCOMBEGIN() {
   **/
   public function H4(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $id      =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 3, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'PRIMARY'
+      ,3
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
 
   }
 
@@ -4413,17 +6387,28 @@ protected function _setCOMBEGIN() {
   **/
   public function H5(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $id      =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 4, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'PRIMARY'
+    ,4
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+   );
 
  }
 
@@ -4436,17 +6421,28 @@ protected function _setCOMBEGIN() {
   **/
   public function H6(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $id      =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 5, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'PRIMARY'
+    ,5
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+   );
 
  }
 
@@ -4459,17 +6455,24 @@ protected function _setCOMBEGIN() {
   **/
   public function DIV(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 6, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'PRIMARY'
+    ,6
+    ,$value
+    ,$attr
+    ,$id
+    , $class, $label, $assoc);
 
   }
 
@@ -4482,19 +6485,30 @@ protected function _setCOMBEGIN() {
   **/
   public function P(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 7, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'PRIMARY'
+    ,7
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+   );
 
-  }
+ }
 
 /**
   *
@@ -4505,17 +6519,28 @@ protected function _setCOMBEGIN() {
   **/
   public function BUTTON(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 8, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'PRIMARY'
+      ,8
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
 
   }
 
@@ -4528,17 +6553,28 @@ protected function _setCOMBEGIN() {
   **/
   public function A(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 9, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'PRIMARY'
+      ,9
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
 
   }
 
@@ -4551,17 +6587,28 @@ protected function _setCOMBEGIN() {
   **/
   public function IFRAME(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 10, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'PRIMARY'
+      ,10
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
 
   }
 
@@ -4574,17 +6621,28 @@ protected function _setCOMBEGIN() {
   **/
   public function MAIN(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 11, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'PRIMARY'
+      ,11
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
   
   }  
 
@@ -4597,17 +6655,28 @@ protected function _setCOMBEGIN() {
   **/
   public function NAV(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 12, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'PRIMARY'
+      ,12
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
    
   }
 
@@ -4620,17 +6689,28 @@ protected function _setCOMBEGIN() {
   **/
   public function SELECT(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 13, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'PRIMARY'
+      ,13
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
    
   }
 
@@ -4643,17 +6723,28 @@ protected function _setCOMBEGIN() {
   **/
   public function FORM(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 14, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'PRIMARY'
+    ,14
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+   
+   );
 
   }
 
@@ -4666,17 +6757,28 @@ protected function _setCOMBEGIN() {
   **/
   public function PICTURE(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 15, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'PRIMARY'
+    ,15
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+    );
 
   }
 
@@ -4689,17 +6791,28 @@ protected function _setCOMBEGIN() {
   **/
   public function SECTION(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 16, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'PRIMARY'
+      ,16
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
   
   }
 
@@ -4712,17 +6825,28 @@ protected function _setCOMBEGIN() {
   **/
   public function TEXTAREA(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 17, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'PRIMARY'
+      ,17
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
   
   }
 
@@ -4735,17 +6859,28 @@ protected function _setCOMBEGIN() {
   **/
   public function FOOTER(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 18, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'PRIMARY'
+    ,18
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+   
+   );
 
  }
 
@@ -4758,15 +6893,26 @@ protected function _setCOMBEGIN() {
   **/
   public function SCRIPT(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$label     =  null
-      ,$assoc     =  null
+       mixed          $value     =  null
+      ,array|string   $attr      =  null
+      ,string         $label     =  null
+      ,mixed          $assoc     =  null
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 19, $value, $attr, NULL, NULL, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'PRIMARY'
+    ,19
+    ,$value
+    ,$attr
+    ,NULL
+    ,NULL
+    ,$label
+    ,$assoc
+  
+   );
 
  }
 
@@ -4779,15 +6925,26 @@ protected function _setCOMBEGIN() {
   **/
   public function STYLE(
 
-       $value     =  null
-      ,$attr      =  []
-      ,$label     =  null
-      ,$assoc     =  null
+       mixed        $value     =  null
+      ,array|string $attr      =  null
+      ,string       $label     =  null
+      ,mixed        $assoc     =  null
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('PRIMARY', 20, $value, $attr, NULL, NULL, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'PRIMARY'
+    ,20
+    ,$value
+    ,$attr
+    ,NULL
+    ,NULL
+    ,$label
+    ,$assoc
+  
+   );
 
  }
 
@@ -4800,17 +6957,28 @@ protected function _setCOMBEGIN() {
   **/
   public function AUDIO(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('SECONDARY', 0, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'SECONDARY'
+    ,0
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+    );
 
  }
 
@@ -4823,17 +6991,28 @@ protected function _setCOMBEGIN() {
   **/
   public function VIDEO(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('SECONDARY', 1, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'SECONDARY'
+      ,1
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
   
   }
 
@@ -4846,17 +7025,28 @@ protected function _setCOMBEGIN() {
   **/
   public function ADDRESS(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('SECONDARY', 2, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'SECONDARY'
+      ,2
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -4869,17 +7059,28 @@ protected function _setCOMBEGIN() {
   **/
   public function COLGROUP(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('SECONDARY', 3, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'SECONDARY'
+    ,3
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+   );
 
   }
 
@@ -4892,17 +7093,28 @@ protected function _setCOMBEGIN() {
   **/
   public function BDI(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('SECONDARY', 4, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'SECONDARY'
+    ,4
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+   );
 
   }
 
@@ -4915,17 +7127,28 @@ protected function _setCOMBEGIN() {
   **/
   public function BDO(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('SECONDARY', 5, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'SECONDARY'
+      ,5
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
 
   }
 
@@ -4938,17 +7161,28 @@ protected function _setCOMBEGIN() {
   **/
   public function BLOCKQUOTE(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('SECONDARY', 6, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'SECONDARY'
+      ,6
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
 
   }
 
@@ -4961,17 +7195,28 @@ protected function _setCOMBEGIN() {
   **/
   public function CAPTION(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('SECONDARY', 7, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'SECONDARY'
+      ,7
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
   
   }
 
@@ -4984,17 +7229,28 @@ protected function _setCOMBEGIN() {
   **/
   public function LABEL(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('SECONDARY', 8, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'SECONDARY'
+      ,8
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -5007,17 +7263,28 @@ protected function _setCOMBEGIN() {
   **/
   public function DATALIST(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('SECONDARY', 9, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'SECONDARY'
+      ,9
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -5030,17 +7297,28 @@ protected function _setCOMBEGIN() {
   **/
   public function DETAILS(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('SECONDARY', 10, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'SECONDARY'
+      ,10
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -5053,17 +7331,28 @@ protected function _setCOMBEGIN() {
   **/
   public function SUMMARY(
   
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('SECONDARY', 11, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'SECONDARY'
+      ,11
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   }
 
 /**
@@ -5075,17 +7364,28 @@ protected function _setCOMBEGIN() {
   **/
   public function DIALOG(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('SECONDARY', 12, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'SECONDARY'
+      ,12
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -5097,18 +7397,29 @@ protected function _setCOMBEGIN() {
   *
   **/
   public function OPTION(
-
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+    
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('SECONDARY', 13, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'SECONDARY'
+      ,13
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -5121,17 +7432,28 @@ protected function _setCOMBEGIN() {
   **/
   public function FIGURE(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('SUPPORT', 0, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'SUPPORT'
+      ,0
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -5144,17 +7466,28 @@ protected function _setCOMBEGIN() {
   **/
   public function FIGCAPTION(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('SUPPORT', 1, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'SUPPORT'
+    ,1
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+   );
   
   }
 
@@ -5167,17 +7500,28 @@ protected function _setCOMBEGIN() {
   **/
   public function METER(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('SUPPORT', 2, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+     'SUPPORT'
+     ,2
+     ,$value
+     ,$attr
+     ,$id
+     ,$class
+     ,$label
+     ,$assoc
+    
+    );
   
   }
 
@@ -5190,17 +7534,28 @@ protected function _setCOMBEGIN() {
   **/
   public function OBJECT(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('SUPPORT', 3, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'SUPPORT'
+      ,3
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -5213,17 +7568,28 @@ protected function _setCOMBEGIN() {
   **/
   public function OPTGROUP(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('SUPPORT', 4, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'SUPPORT'
+      ,4
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -5235,18 +7601,29 @@ protected function _setCOMBEGIN() {
   *
   **/
   public function OUTPUT(
-
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+    
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('SUPPORT', 5, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'SUPPORT'
+      ,5
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -5259,17 +7636,28 @@ protected function _setCOMBEGIN() {
   **/
   public function PROGRESS(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('SUPPORT', 6, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'SUPPORT'
+      ,6
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
   
   }
 
@@ -5282,17 +7670,28 @@ protected function _setCOMBEGIN() {
   **/
   public function SVG(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('SUPPORT', 7, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE('
+     
+     SUPPORT'
+     ,7
+     ,$value
+     ,$attr
+     ,$id
+     ,$class
+     ,$label
+     ,$assoc
+    
+     );
   
   }
 
@@ -5305,17 +7704,28 @@ protected function _setCOMBEGIN() {
   **/
   public function TEMPLATE(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('SUPPORT', 8, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'SUPPORT'
+      ,8
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -5328,17 +7738,28 @@ protected function _setCOMBEGIN() {
   **/
   public function TIME(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('SUPPORT', 9, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'SUPPORT'
+      ,9
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
 
   }
 
@@ -5351,17 +7772,28 @@ protected function _setCOMBEGIN() {
   **/
   public function VAR(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('SUPPORT', 10, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'SUPPORT'
+      ,10
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+     
+    );
 
   }
 
@@ -5374,17 +7806,28 @@ protected function _setCOMBEGIN() {
   **/
   public function UL(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null  
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('LIST', 0, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'LIST'
+      ,0
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
 
   }
 
@@ -5397,17 +7840,28 @@ protected function _setCOMBEGIN() {
   **/
   public function OL(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('LIST', 1, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'LIST'
+    ,1
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+   );
 
   }
 
@@ -5420,17 +7874,28 @@ protected function _setCOMBEGIN() {
   **/
   public function LI(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('LIST', 2, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'LIST'
+    ,2
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+   );
 
   }
 
@@ -5443,17 +7908,28 @@ protected function _setCOMBEGIN() {
   **/
   public function TABLE(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('LIST', 3, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+       
+     'LIST'
+     ,3
+     ,$value
+     ,$attr
+     ,$id
+     ,$class
+     ,$label
+     ,$assoc
+    
+    );
 
   }
 
@@ -5466,17 +7942,28 @@ protected function _setCOMBEGIN() {
   **/
   public function TR(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('LIST', 4, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'LIST'
+      ,4
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
   
   }
 
@@ -5489,17 +7976,28 @@ protected function _setCOMBEGIN() {
   **/
   public function TD(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('LIST', 5, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'LIST'
+      ,5
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
   
   }
 
@@ -5512,17 +8010,28 @@ protected function _setCOMBEGIN() {
   **/
   public function TH(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('LIST', 6, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'LIST'
+      ,6
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
   
   }
 
@@ -5535,17 +8044,28 @@ protected function _setCOMBEGIN() {
   **/
   public function LEGEND(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('LIST', 7, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'LIST'
+      ,7
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
  
  }
 
@@ -5558,17 +8078,28 @@ protected function _setCOMBEGIN() {
   **/
   public function FIELDSET(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('LIST', 8, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'LIST'
+      ,8
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
  
  }
 
@@ -5581,17 +8112,28 @@ protected function _setCOMBEGIN() {
   **/
   public function TBODY(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('LIST', 9, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'LIST'
+      ,9
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
  
  }
 
@@ -5603,18 +8145,29 @@ protected function _setCOMBEGIN() {
   *
   **/
   public function TFOOT(
-
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+   
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('LIST', 10, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'LIST'
+      ,10
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
 
  }
 
@@ -5627,17 +8180,28 @@ protected function _setCOMBEGIN() {
   **/
   public function THEAD(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('LIST', 11, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'LIST'
+      ,11
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
 
  }
 
@@ -5650,17 +8214,28 @@ protected function _setCOMBEGIN() {
   **/
   public function SPAN(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 0, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMAT'
+      ,0
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
 
  }
 
@@ -5673,17 +8248,28 @@ protected function _setCOMBEGIN() {
   **/
   public function EM(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 1, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMAT'
+      ,1
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
   
   }
 
@@ -5696,17 +8282,28 @@ protected function _setCOMBEGIN() {
   **/
   public function B(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 2, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMAT'
+      ,2
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
   
   }
 
@@ -5719,17 +8316,28 @@ protected function _setCOMBEGIN() {
   **/
   public function I(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 2, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMAT'
+      ,2
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -5742,17 +8350,28 @@ protected function _setCOMBEGIN() {
   **/
   public function SMALL(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 3, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMAT'
+      ,3
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
 
  }
 
@@ -5765,17 +8384,28 @@ protected function _setCOMBEGIN() {
   **/
   public function STRIKE(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 4, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+       'FORMAT'
+       ,4
+       ,$value
+       ,$attr
+       ,$id
+       ,$class
+       ,$label
+       ,$assoc
+      
+    );
 
  }
 
@@ -5788,17 +8418,28 @@ protected function _setCOMBEGIN() {
   **/
   public function MARQUEE(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 5, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMAT'
+      ,5
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
 
  }
 
@@ -5811,17 +8452,28 @@ protected function _setCOMBEGIN() {
   **/
   public function CENTER(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 6, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMAT'
+      ,6
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -5834,17 +8486,28 @@ protected function _setCOMBEGIN() {
   **/
   public function CODE(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 7, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMAT'
+      ,7
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
   
   }
 
@@ -5857,17 +8520,28 @@ protected function _setCOMBEGIN() {
   **/
   public function ABBR(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 8, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMAT'
+      ,8
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+   );
   
   }
 
@@ -5880,17 +8554,28 @@ protected function _setCOMBEGIN() {
   **/
   public function MAP(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 9, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMAT'
+      ,9
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -5903,17 +8588,28 @@ protected function _setCOMBEGIN() {
   **/
   public function CANVAS(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 10, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMAT'
+      ,10
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
   
   }
 
@@ -5926,17 +8622,28 @@ protected function _setCOMBEGIN() {
   **/
   public function CITE(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 11, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMAT'
+      ,11
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
   
   }
 
@@ -5949,17 +8656,28 @@ protected function _setCOMBEGIN() {
   **/
   public function DATA(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 12, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMAT'
+      ,12
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -5972,17 +8690,28 @@ protected function _setCOMBEGIN() {
   **/
   public function DL(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 13, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'FORMAT'
+      ,13
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -5995,17 +8724,28 @@ protected function _setCOMBEGIN() {
   **/
   public function DT(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 14, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMAT'
+      ,14
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -6018,17 +8758,28 @@ protected function _setCOMBEGIN() {
   **/
   public function DD(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 15, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'FORMAT'
+    ,15
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+    );
 
  }
 
@@ -6041,17 +8792,28 @@ protected function _setCOMBEGIN() {
   **/
   public function DFN(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 16, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'FORMAT'
+    ,16
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+   );
 
  }
 
@@ -6064,17 +8826,28 @@ protected function _setCOMBEGIN() {
   **/
   public function INS(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('FORMAT', 17, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'FORMAT'
+    ,17
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+   );
 
  }
 
@@ -6087,17 +8860,28 @@ protected function _setCOMBEGIN() {
   **/
   public function DEL(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMATC', 0, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMATC'
+      ,0
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
 
   }
 
@@ -6110,17 +8894,28 @@ protected function _setCOMBEGIN() {
   **/
   public function KBD(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMATC', 1, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMATC'
+      ,1
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
 
   }
 
@@ -6133,17 +8928,28 @@ protected function _setCOMBEGIN() {
   **/
   public function MARK(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMATC', 2, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMATC'
+      ,2
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
 
   }
 
@@ -6156,17 +8962,28 @@ protected function _setCOMBEGIN() {
   **/
   public function PRE(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMATC', 3, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMATC'
+      ,3
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -6179,17 +8996,28 @@ protected function _setCOMBEGIN() {
   **/
   public function RT(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMATC', 4, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMATC'
+      ,4
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -6202,17 +9030,28 @@ protected function _setCOMBEGIN() {
   **/
   public function RP(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('FORMATC', 5, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'FORMATC'
+      ,5
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -6225,17 +9064,28 @@ protected function _setCOMBEGIN() {
   **/
   public function RUBY(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('FORMATC', 6, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'FORMATC'
+      ,6
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -6248,17 +9098,28 @@ protected function _setCOMBEGIN() {
   **/
   public function S(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('FORMATC', 7, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'FORMATC'
+      ,7
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
   
   }
 
@@ -6271,17 +9132,28 @@ protected function _setCOMBEGIN() {
   **/
   public function SAMP(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('FORMATC', 8, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'FORMATC'
+      ,8
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+      
+    );
   
   }
 
@@ -6294,17 +9166,28 @@ protected function _setCOMBEGIN() {
   **/
   public function STRONG(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('FORMATC', 9, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'FORMATC'
+    ,9
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+   );
 
  }
 
@@ -6317,17 +9200,28 @@ protected function _setCOMBEGIN() {
   **/
   public function SUB(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('FORMATC', 10, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'FORMATC'
+    ,10
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+   
+   );
 
  }
 
@@ -6340,17 +9234,28 @@ protected function _setCOMBEGIN() {
   **/
   public function SUP(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE('FORMATC', 11, $value, $attr, $id, $class, $label, $assoc);
+   return $this->_istrue_assoc_ELEMENTINLINE(
+     
+    'FORMATC'
+    ,11
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+   );
 
  }
 
@@ -6363,17 +9268,28 @@ protected function _setCOMBEGIN() {
   **/
   public function WBR(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('FORMATC', 12, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'FORMATC'
+      ,12
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
 
   }
 
@@ -6386,17 +9302,28 @@ protected function _setCOMBEGIN() {
   **/
   public function Q(
    
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('FORMATC', 13, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'FORMATC'
+      ,13
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
 
   }
 
@@ -6409,17 +9336,28 @@ protected function _setCOMBEGIN() {
   **/
   public function HEAD(
 
-     $id       =  null
-    ,$value    =  null
-    ,$attr     =  null
-    ,$class    =  null
-    ,$label    =  null
-    ,$assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null  
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE('STRUCTURE', 0, $value, $attr, $id, $class, $label, $assoc);
+     return $this->_istrue_assoc_ELEMENTINLINE(
+       
+      'STRUCTURE'
+      ,0
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
 
   }
 
@@ -6432,17 +9370,28 @@ protected function _setCOMBEGIN() {
   **/
   public function TITLE(
 
-       $value      =  null
-      ,$attr       =  []
-      ,$id         =  null
-      ,$class      =  null
-      ,$label      =  null
-      ,$assoc      =  null
+     mixed         $value      =  null
+    ,array |string $attr       =  null
+    ,string        $id         =  null
+    ,string        $class      =  null
+    ,string        $label      =  null
+    ,string        $assoc      =  null
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('STRUCTURE', 1, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'STRUCTURE'
+      ,1
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+    );
  
  }
 
@@ -6455,17 +9404,28 @@ protected function _setCOMBEGIN() {
   **/
   public function BODY(
 
-       $value      =  null
-      ,$attr       =  []
-      ,$id         =  null
-      ,$class      =  null
-      ,$label      =  null
-      ,$assoc      =  null
+     mixed         $value      =  null
+    ,array |string $attr       =  null
+    ,string        $id         =  null
+    ,string        $class      =  null
+    ,string        $label      =  null
+    ,string        $assoc      =  null
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('STRUCTURE',2, $value, $attr, $id, $class, $label, $assoc);
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+      'STRUCTURE'
+      ,2
+      ,$value
+      ,$attr
+      ,$id
+      ,$class
+      ,$label
+      ,$assoc
+    
+     );
  
  }
 
@@ -6478,17 +9438,28 @@ protected function _setCOMBEGIN() {
   **/
   public function noHTML(
 
-       $value      =  null
-      ,$attr       =  []
-      ,$id         =  null
-      ,$class      =  null
-      ,$label      =  null
-      ,$assoc      =  null
+       mixed         $value      =  null
+      ,array |string $attr       =  null
+      ,string        $id         =  null
+      ,string        $class      =  null
+      ,string        $label      =  null
+      ,string        $assoc      =  null
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE('STRUCTURE', 3, $value, $attr, $id, $class, $label, $assoc); 
+    return $this->_istrue_assoc_ELEMENTINLINE(
+      
+    'STRUCTURE'
+    ,3
+    ,$value
+    ,$attr
+    ,$id
+    ,$class
+    ,$label
+    ,$assoc
+  
+   ); 
     
 
 } // END OF LINE HTML NO x REQUIRED
@@ -6513,11 +9484,90 @@ protected function _setCOMBEGIN() {
   *
   **/
  private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label, $assoc) {
-  
+
+  /*
+   * PHPWine @since version 1.1.2 
+   * @since 11.06.2021  
+  */
+  $attr = ( is_array($attr) ) ? $attr : $attr;
+
+    # CHECK_IF_THE_ELEMENT_REPLACE_TO_BE_ASSOCIATED
+    # SET_TO_NULL_VALUE_BY_THE_DEFAULT
+    if( 
+      
+      /*
+       * PHPWine @since version 1.1.2 
+       * @since 11.06.2021  
+      */
+       # CHECK_ATTRIBUTES_IF_NOT_ARRAY_THEN_RETURN_APPRPRIATE
+       # IF_THE_ATTRTIBUTE_SET_AS_FUNCTION_ASSOCIATED_THEN_RETURN_APPROPRIATE
+       # DEFINED_ATTRIBUTE_AS_NULL
+
+      !is_array($attr) &&  ( $attr  === FUNC_ASSOC || $attr  === CLASS_ASSOC || $attr  === METHOD_ASSOC ) 
+      
+      ) :  
+
+        # RETURN_ELEMENT_WHERE_ATTRIBITE_IS_SET_AS_NULL
+        return $this->_elemenHTMLINLINE($elem_val, $elem_key, $value, NULL, $id, $class, $label);   
+
+      /*
+       * PHPWine @since version 1.1.2 
+       * @since 11.06.2021  
+      */
+       # CHECK_ID_IF_NOT_ANY_STRING_THEN_RETURN_APPRPRIATE
+       # IF_THE_ID_SET_AS_FUNCTION_ASSOCIATED_THEN_RETURN_APPROPRIATE
+       # DEFINED_ID_AS_NULL
+
+      elseif(
+        
+        $id === FUNC_ASSOC || $id    === CLASS_ASSOC || $id    === METHOD_ASSOC 
+        
+        ) : 
+    
+        # RETURN_ELEMENT_WHERE_ID_IS_SET_AS_NULL
+        return $this->_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, NULL, $class, $label);
+
+      /*
+       * PHPWine @since version 1.1.2 
+       * @since 11.06.2021  
+      */
+       # CHECK_CLASS_IF_NOT_ANY_STRING_THEN_RETURN_APPRPRIATE
+       # IF_THE_CLASS_SET_AS_FUNCTION_ASSOCIATED_THEN_RETURN_APPROPRIATE
+       # DEFINED_CLASS_AS_NULL
+       elseif( 
+         
+        $class === FUNC_ASSOC || $class === CLASS_ASSOC || $class === METHOD_ASSOC 
+        
+        ) : 
+
+        # RETURN_ELEMENT_WHERE_CLASS_IS_SET_AS_NULL
+        return $this->_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, NULL, $label);   
+
+      /*
+       * PHPWine @since version 1.1.2 
+       * @since 11.06.2021  
+      */
+       # CHECK_LABEL_IF_NOT_ANY_STRING_THEN_RETURN_APPRPRIATE
+       # IF_THE_LABEL_SET_AS_FUNCTION_ASSOCIATED_THEN_RETURN_APPROPRIATE
+       # DEFINED_LABEL_AS_NULL
+
+       elseif( 
+         
+          $label === FUNC_ASSOC || $label === CLASS_ASSOC || $label === METHOD_ASSOC 
+          
+       ) : 
+    
+        # RETURN_ELEMENT_WHERE_LABEL_IS_SET_AS_NULL
+        return $this->_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, $class, NULL);   
+
   # INLINE_OR_ANY_LABEL_REQUIRED
   # CHECK_IF_THE_PARAM_REQUIRED_IS_NOT_NULL
   # IF_IT_IS_NULL_RETURN_FLASE  
-  if ($assoc == FALSE || $assoc == NULL || $assoc == 'DEFAULT') {
+  elseif ( 
+    
+       !is_array( $attr ) && ( $attr  !== FUNC_ASSOC || $attr  !== CLASS_ASSOC || $attr  !== METHOD_ASSOC  ) 
+  
+       )   :
       
        # RETURN_INLINE_ELEMENT_NO_HTML_CLOSING_TAG 
      /**
@@ -6526,12 +9576,31 @@ protected function _setCOMBEGIN() {
        * @method function return_elementINLINE()
        *
        **/
-      $this->PERFORM( $this->return_elementINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label) );
-  } 
+      $this->PERFORM( $this->return_elementINLINE($elem_val, $elem_key, $value, NULL, $id, $class, $label) );
+      
+   elseif ( 
+     
+     $assoc == FALSE || $assoc == NULL || $assoc == 'DEFAULT' 
+     
+     ) :
+      
+    # RETURN_INLINE_ELEMENT_NO_HTML_CLOSING_TAG 
+  /**
+    *
+    * @var $elem_val, $elem_key, $value, $attr, $id, $class, $label
+    * @method function return_elementINLINE()
+    *
+    **/
+   $this->PERFORM( $this->return_elementINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label) );
 
   # INLINE_OR_ANY_LABEL_REQUIRED 
   # ELSEIF_ASSOCU_===_FUNC_ASSOC_||_CLASS_ASSOC_||_METHOD_ASSOC
-  elseif( $assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC ) {
+  elseif( 
+    
+     $assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC 
+     
+   )  :
+ 
        
      /**
        * THEN_IF_IT_IS TRUE_RETURN!
@@ -6540,7 +9609,9 @@ protected function _setCOMBEGIN() {
        *
        **/
      return $this->_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label);  
-  }
+  
+   endif;
+
 } 
 
 /**
@@ -6895,7 +9966,7 @@ protected function _setCOMBEGIN() {
       * @method function _set_tagSPACER_setENDS_getxTAG_getBREAK
       *
       **/     
-    elseif ($assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC) {
+      elseif( $assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC ) {
     
       # ELSE_CHECK_IF_THE_ASSOC_IS_TRUE_OR_FUNC_ASSOC_OR_CLASS_ASSOC_METHOD_ASSOC
       # SET_AS_DYNAMIC_ASSOCIATED_WITH_METHOD_CLASS_FUNC_ASSOC      
@@ -6938,8 +10009,7 @@ protected function _setCOMBEGIN() {
     * @method function new_isJStrue
     *
     **/   
-   elseif ($assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC) 
-   {  
+    elseif(  $assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC ) {
      return $this->new_isJStrue($attr, $id, $class);    
    }
 
@@ -7177,11 +10247,11 @@ protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $a
       
         # RETURN_INLINE_ELEMENT_NO_HTML_CLOSING_TAG 
         $this->PERFORM( $this->_setReturnINLINELEMENT($this->_setINLINELEMENTS($elem),$attr, $id, $class, NULL) ); 
+
    } else {
 
       # CHECK_IF_INLINE_IS_ASSOC_WITH_FUNC_ASSOC_OR_CLASS_ASSOC_OR_METHOD_ASSOC
-      if ($assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC) 
-      {
+      if( $assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC ) {
 
           # INLINE_OR_ANY_LABEL_REQUIRED
           # CHECK_IF_THE_PARAM_REQUIRED_IS_NOT_NULL
@@ -7198,7 +10268,6 @@ protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $a
           $ERROR_MSG .= " Recomendation: ".$this->ELEMENT('a','Read Documentation Click Here',$this->DocxSubmitAttr());      
       
           return ($ERROR_MSG);  
-
 
           }
       

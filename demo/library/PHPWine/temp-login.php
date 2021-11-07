@@ -5,11 +5,11 @@ use \PHPWine\VanillaFlavour\System\Request;
 use \PHPWine\VanillaFlavour\Optimizer\Form;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.0 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.2 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.0 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.2 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -38,10 +38,28 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.0
+ * @version   v1.1.2
  *
  */
+
+
+ #############################################################################################################
+ # THIS IS FOR DEMO DATABASE CONNECTION !!! BUILD YOUR OWN DATABSE CONENCTION BASE ON YOUR CURRENT FRAMEWORK !
+ #############################################################################################################
+   
+    define('DB_SERVER', 'localhost');
+    define('DB_USERNAME', 'root');
+    define('DB_PASSWORD', '');
+    define('DB_NAME', 'auth');
+
+     // Define new instance connection
+     $mySQLi = new mysqli( DB_SERVER , DB_USERNAME, DB_PASSWORD, DB_NAME);
   
+#############################################################################################################
+ # THIS IS FOR DEMO DATABASE CONNECTION !!! BUILD YOUR OWN DATABSE CONENCTION BASE ON YOUR CURRENT FRAMEWORK !
+#############################################################################################################
+
+
 /**
  *
  * Defined If the session is true or active then redirect to certain page!
@@ -112,11 +130,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") :
 
     ], REQUEST::SESSION_PORTAL_REQUEST ); 
 
-  endif;
-
-  _xH3('id-heading-h3',"PHPWine Vanilla Flavour v1.0 (stable)!");
-  _xH6('id-heading-h6',"Welcome to Login page");
-  
+  endif;  
 
  /**
   *
@@ -133,7 +147,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") :
  
  ,null
  ,'eCatch_error'
- ,'eCatch_err_messages'
+ ,'end-of-id-eCatch_err'
  ,FUNC_ASSOC
  
 );
@@ -156,10 +170,10 @@ echo (!empty($sets_eCatch)) ? $sets_eCatch : '';
   * @since v1.0
   * 
   **/ 
-  _xdiv( 'id-login',
+  _xDIV( 'id-login',
 
-     FORM::LABEL('label-id-un','Username/Email/Mobile',NULL,NULL,NULL, FUNC_ASSOC ) .__BR(FUNC_ASSOC)
-    .FORM::TEXT('id-username','class-username',[['name', 'value'],['username',  (isset($_COOKIE['username'])) ? $_COOKIE['username'] :  $username ]], FUNC_ASSOC ) 
+     FORM::LABEL('label-id-un'  , 'Username/Email/Mobile' , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
+    .FORM::TEXT('id-username'   , 'class-username'        , [['name', 'value'] , ['username',  (isset($_COOKIE['username'])) ? $_COOKIE['username'] :  $username ]], FUNC_ASSOC ) 
     
    ,setElemAttr(['class'],['username_from_group'])
   );
@@ -171,10 +185,10 @@ echo (!empty($sets_eCatch)) ? $sets_eCatch : '';
   * @since v1.0
   *
   **/ 
- _xdiv( 'login-password',
+ _xDIV( 'login-password',
   
-    FORM::LABEL('label-id-un','Password',NULL,NULL,NULL, FUNC_ASSOC ) .__BR(FUNC_ASSOC)
-   .FORM::PASSWORD('id-username','class-username',[['name', 'value'],['password', (isset($_COOKIE['password'])) ? $_COOKIE['password'] :  $password ]], FUNC_ASSOC ) 
+    FORM::LABEL('label-id-un'    , 'Password'        , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
+   .FORM::PASSWORD('id-username' , 'class-username'  , [['name', 'value'] , ['password', (isset($_COOKIE['password'])) ? $_COOKIE['password'] :  $password ]], FUNC_ASSOC ) 
 
   ,setElemAttr(['class'],['username_from_group'])
  );
@@ -186,11 +200,10 @@ echo (!empty($sets_eCatch)) ? $sets_eCatch : '';
   * @since v1.0
   *
   **/ 
-  _xdiv('checkbox-remeberme',
+  _xDIV('checkbox-remeberme',
 
-
-     FORM::CHECKBOX('checkbox','class-checkbox',[['name', ''],['remember', (isset($_COOKIE["username"])) ? 'checked' : false ] ], FUNC_ASSOC ) 
-    .FORM::LABEL('label-id-un','Remember me',NULL,NULL,NULL, FUNC_ASSOC ) 
+     FORM::CHECKBOX('checkbox' , 'class-checkbox' , [['name', ''] , ['remember', (isset($_COOKIE["username"])) ? 'checked' : false ] ], FUNC_ASSOC ) 
+    .FORM::LABEL('label-id-un' , 'Remember me'    , FUNC_ASSOC ) 
     
    ,setElemAttr(['class'],['rememberme_from_group'])
   );
@@ -203,10 +216,7 @@ echo (!empty($sets_eCatch)) ? $sets_eCatch : '';
   * @since v1.0
   *
   **/ 
- _xdiv('id-submit', FORM::BUTTONS('id-conPassword','class-submit',[['value'],['Submit']], FUNC_ASSOC ) 
-
-  ,setElemAttr(['class'],['submit_from_group'])
- );
+  _xDIV('id-submit', FORM::BUTTONS( 'id-conPassword','class-submit', [['value'],['Submit']], FUNC_ASSOC ) ,setElemAttr(['class'],['submit_from_group']));
   
  /**
   *
@@ -215,7 +225,7 @@ echo (!empty($sets_eCatch)) ? $sets_eCatch : '';
   * @since v1.0
   *
   **/ 
- _xP('singup-id',"Don't have an account?".ELEM('a','Sign up now',setElemAttr(['href'],['register.php'])));
+  _xDIV( 'singup-id', ELEM('p','Don\'t have an account?'.ELEM('a','Sign up now',[['href'],['register.php']]) ));
 
 
  xFORM(" END Of the form ");
