@@ -15,20 +15,22 @@
 # PHPWine - (Vanilla Flavour) 
 Support PHP v8 and future++ 
 
-PHPWine v1.1.3 (Vanilla Flavour) design for corePHP and WordPress Cloud system application development. <br />
+PHPWine (Vanilla Flavour) design for corePHP and WordPress Cloud system application development. <br />
 <i>Vanilla Flavour: Vanilla flavour means you can use methods outside the class precisely as native PHP functions.</i>
 
 PHP code encrypted, PHP Library, Code designer and Optimizer, Html-minifier Advance Form builder, Form Validation and more... 
 
+- PHPHtml-Optimizer / Code Designer
+- Advance Form Builder <i>(Optimizier v1.0 )</i>
+- Handling Form Validation
 - Authentication
 - Login Form
 - Registration
 - Reset Password
 - Register Email confirmation
 - Recovery Email confirmation
-- Handling Form Validation
-- PHPOptimizer v1.0 (stable)
-- Advance Form Builder <i>(Optimizier v1.0 (stable))</i>
+
+
 
 <h3>Downloading Library/Repository:</h3>
  
@@ -70,7 +72,7 @@ use \PHPWine\VanillaFlavour\System\Validation;
 ```
 <h2>Thanks To:</h2>
 <h5>
-Github : To allow me to upload my PHP Library PHPAuth-Effortless to repository<br /> 
+Github : To allow me to upload my PHP Library PHPWine Vanilla Flavour to repository<br /> 
 php.net : To oppurtunity Develop web application using corePHP - PHPFrameworks<br />
 </h5>
 
