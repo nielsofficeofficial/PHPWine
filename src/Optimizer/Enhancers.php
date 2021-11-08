@@ -166,8 +166,8 @@ public function bring_to(
   */
 public function belongs_to(
 
-    array|string $thisPage     = null
-   ,array|string $page_array   = null
+    $thisPage     = null
+   ,$page_array   = null
 
  )
  {
@@ -604,8 +604,8 @@ private function cpe_xib6_FileHandler_belongs_to($page, $page_file)  {
      } elseif ( empty($page_file) || $page_file == NULL ) { 
 
         return $checkCurrentPage__[1];   
-    
-    } else {
+        
+     }  else {
 
       // CHECK_IF_THE_PATH_IS_IN_ARRAY_THE_IF_TRUE_RETURN_ARRAYS_IF_FALSE_RETURN_SINGLE_PAGE 
       // REMOVE_PHP_EXTENSION_VALIDATE_FROM_PAGE_PARAM
@@ -615,7 +615,7 @@ private function cpe_xib6_FileHandler_belongs_to($page, $page_file)  {
         // CHECK_IF_THE_PAGE_IS_IN_ARRAY_THE_IF_TRUE_RETURN_ARRAYS_IF_FALSE_RETURN_SINGLE_PAGE 
         str_replace( __PHPFILE__ , __EMPTY__ , parent::cpe_xib6_FileHandler_mulipath_array($getMultiPagesFile__, $checkCurrentPage__, $page_file)));
 
-        return isset($getData__) ? $getData__ : '';
+      return isset($getData__) ? $getData__ : '';
 
      }
       
@@ -776,7 +776,7 @@ private function cpe_xib6_FileHandler_count() {
      // EMTPY ARRAY 
      $Merge    = "";
      // BEGIN MERGE
-     $Merge   .=  _MERGE('GetKeyFolderPath','PRE') .  $PathValue_i . '  => '; 
+     $Merge   .=  _MERGE('GetFolderKeyPath','PRE') .  $PathValue_i . '  => '; 
       
      // THEN CHECK i IF EQUAL ZERO MEANS WEB ROOT 
      if( $PathValue_i === 0 ) {

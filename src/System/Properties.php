@@ -1,6 +1,5 @@
 <?php namespace PHPWine\VanillaFlavour\system; ?>
 <?php  
-
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.3 Cooked by nielsoffice 
  *

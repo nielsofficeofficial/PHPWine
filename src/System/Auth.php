@@ -42,7 +42,6 @@
  * @version   v1.1.3
  *
  *
- *
  * @method AUTH::SESSION();
  * @method AUTH::USERAUTH();
  * @method AUTH::LOGOUT();

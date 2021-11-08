@@ -6039,12 +6039,12 @@ static protected $hextend = [];
   **/
   static public function H1(
 
-     mixed  $value    =  null
-    ,array  $attr     =  null
-    ,string $id       =  null
-    ,string $class    =  null
-    ,string $label    =  null
-    ,mixed  $assoc    =  null
+     mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $id      =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
@@ -6073,12 +6073,12 @@ static protected $hextend = [];
   **/
   static public function H2(
 
-     mixed  $value    =  null
-    ,array  $attr     =  null
-    ,string $id       =  null
-    ,string $class    =  null
-    ,string $label    =  null
-    ,mixed  $assoc    =  null
+     mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $id      =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
@@ -6107,12 +6107,12 @@ static protected $hextend = [];
   **/
   static public function H3(
 
-     mixed  $value    =  null
-    ,array  $attr     =  null
-    ,string $id       =  null
-    ,string $class    =  null
-    ,string $label    =  null
-    ,mixed  $assoc    =  null
+     mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $id      =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
@@ -6141,12 +6141,12 @@ static protected $hextend = [];
   **/
   static public function H4(
   
-     mixed  $value    =  null
-    ,array  $attr     =  null
-    ,string $id       =  null
-    ,string $class    =  null
-    ,string $label    =  null
-    ,mixed  $assoc    =  null
+     mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $id      =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
   )
   {
@@ -6175,12 +6175,12 @@ static protected $hextend = [];
   **/
   static public function H5(
 
-     mixed  $value    =  null
-    ,array  $attr     =  null
-    ,string $id       =  null
-    ,string $class    =  null
-    ,string $label    =  null
-    ,mixed  $assoc    =  null
+     mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $id      =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
@@ -6209,12 +6209,12 @@ static protected $hextend = [];
   **/
   static public function H6(
 
-     string $id       =  null
-    ,mixed  $value    =  null
-    ,array  $attr     =  null
-    ,string $class    =  null
-    ,string $label    =  null
-    ,mixed  $assoc    =  null
+     mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $id      =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null 
 
  )
  {
@@ -6243,12 +6243,12 @@ static protected $hextend = [];
   **/
   static public function DIV(
 
-     string $id       =  null
-    ,mixed  $value    =  null
-    ,array  $attr     =  null
-    ,string $class    =  null
-    ,string $label    =  null
-    ,mixed  $assoc    =  null
+     string        $id      =  null 
+    ,mixed         $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,mixed         $assoc   =  null  
 
  )
  {
@@ -9183,12 +9183,13 @@ static private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value
    * PHPWine @since version 1.1.2 
    * @since 11.06.2021  
   */
-    $attr = ( is_array($attr) ) ? $attr : $attr;
+   $attr = ( is_array($attr) ) ? $attr : $attr;
     
+
     # CHECK_IF_THE_ELEMENT_REPLACE_TO_BE_ASSOCIATED
     # SET_TO_NULL_VALUE_BY_THE_DEFAULT
     if( 
-       
+      
       /*
        * PHPWine @since version 1.1.2 
        * @since 11.06.2021  
@@ -9197,12 +9198,12 @@ static private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value
        # IF_THE_ATTRTIBUTE_SET_AS_FUNCTION_ASSOCIATED_THEN_RETURN_APPROPRIATE
        # DEFINED_ATTRIBUTE_AS_NULL
 
-       !is_array($attr) && ( $attr  === FUNC_ASSOC || $attr  === CLASS_ASSOC || $attr  === METHOD_ASSOC ) 
-       
-      ) : 
-        
+      !is_array($attr) &&  ( $attr  === FUNC_ASSOC || $attr  === CLASS_ASSOC || $attr  === METHOD_ASSOC ) 
+      
+      ) :  
+
         # RETURN_ELEMENT_WHERE_ATTRIBITE_IS_SET_AS_NULL
-        return self::_elemenHTMLINLINE($elem_val, $elem_key, $value, NULL, $id, $class, $label); 
+        return self::_elemenHTMLINLINE($elem_val, $elem_key, $value, NULL, $id, $class, $label);   
 
       /*
        * PHPWine @since version 1.1.2 
@@ -9212,15 +9213,15 @@ static private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value
        # IF_THE_ID_SET_AS_FUNCTION_ASSOCIATED_THEN_RETURN_APPROPRIATE
        # DEFINED_ID_AS_NULL
 
-    elseif( 
-      
-       $id === FUNC_ASSOC || $id === CLASS_ASSOC || $id === METHOD_ASSOC 
-       
-       ) :
-      
-        # RETURN_ELEMENT_WHERE_ID_IS_SET_AS_NULL
-       return self::_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, NULL, $class, $label);
+      elseif(
+        
+        $id === FUNC_ASSOC || $id    === CLASS_ASSOC || $id    === METHOD_ASSOC 
+        
+        ) : 
     
+        # RETURN_ELEMENT_WHERE_ID_IS_SET_AS_NULL
+        return self::_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, NULL, $class, $label);
+
       /*
        * PHPWine @since version 1.1.2 
        * @since 11.06.2021  
@@ -9228,15 +9229,14 @@ static private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value
        # CHECK_CLASS_IF_NOT_ANY_STRING_THEN_RETURN_APPRPRIATE
        # IF_THE_CLASS_SET_AS_FUNCTION_ASSOCIATED_THEN_RETURN_APPROPRIATE
        # DEFINED_CLASS_AS_NULL
-
-    elseif( 
-      
+       elseif( 
+         
         $class === FUNC_ASSOC || $class === CLASS_ASSOC || $class === METHOD_ASSOC 
         
-        ) :
-      
+        ) : 
+
         # RETURN_ELEMENT_WHERE_CLASS_IS_SET_AS_NULL
-       return self::_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, NULL, $label);    
+        return self::_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, NULL, $label);   
 
       /*
        * PHPWine @since version 1.1.2 
@@ -9245,24 +9245,24 @@ static private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value
        # CHECK_LABEL_IF_NOT_ANY_STRING_THEN_RETURN_APPRPRIATE
        # IF_THE_LABEL_SET_AS_FUNCTION_ASSOCIATED_THEN_RETURN_APPROPRIATE
        # DEFINED_LABEL_AS_NULL
-    elseif( 
-      
-        $label === FUNC_ASSOC || $label === CLASS_ASSOC || $label === METHOD_ASSOC 
-    
-        ) :
+
+       elseif( 
+         
+          $label === FUNC_ASSOC || $label === CLASS_ASSOC || $label === METHOD_ASSOC 
+          
+       ) : 
     
         # RETURN_ELEMENT_WHERE_LABEL_IS_SET_AS_NULL
-       return self::_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, $class, NULL);    
-    
+        return self::_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, $class, NULL);   
+
   # INLINE_OR_ANY_LABEL_REQUIRED
   # CHECK_IF_THE_PARAM_REQUIRED_IS_NOT_NULL
   # IF_IT_IS_NULL_RETURN_FLASE  
   elseif ( 
     
-          ($assoc == FALSE || $assoc == NULL || $assoc == 'DEFAULT')                                              || 
-          (!is_array( $attr ) && ( $attr  !== FUNC_ASSOC || $attr  !== CLASS_ASSOC || $attr  !== METHOD_ASSOC )) 
+       !is_array( $attr ) && ( $attr  !== FUNC_ASSOC || $attr  !== CLASS_ASSOC || $attr  !== METHOD_ASSOC  ) 
   
-        ) :
+       )   :
       
        # RETURN_INLINE_ELEMENT_NO_HTML_CLOSING_TAG 
      /**
@@ -9271,16 +9271,31 @@ static private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value
        * @method function return_elementINLINE()
        *
        **/
-       self::PERFORM( self::return_elementINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label) );
-
+      self::PERFORM( self::return_elementINLINE($elem_val, $elem_key, $value, NULL, $id, $class, $label) );
+      
+   elseif ( 
+     
+     $assoc == FALSE || $assoc == NULL || $assoc == 'DEFAULT' 
+     
+     ) :
+      
+    # RETURN_INLINE_ELEMENT_NO_HTML_CLOSING_TAG 
+  /**
+    *
+    * @var $elem_val, $elem_key, $value, $attr, $id, $class, $label
+    * @method function return_elementINLINE()
+    *
+    **/
+    self::PERFORM( self::return_elementINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label) );
 
   # INLINE_OR_ANY_LABEL_REQUIRED 
   # ELSEIF_ASSOCU_===_FUNC_ASSOC_||_CLASS_ASSOC_||_METHOD_ASSOC
   elseif( 
     
-       $assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC
-       
-       ) :
+     $assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC 
+     
+   )  :
+ 
        
      /**
        * THEN_IF_IT_IS TRUE_RETURN!
@@ -9289,8 +9304,8 @@ static private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value
        *
        **/
      return self::_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label);  
-
-  endif;
+  
+   endif;
   
 } 
 

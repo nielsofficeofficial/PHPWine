@@ -1,6 +1,6 @@
 <?php namespace PHPWine\VanillaFlavour\system; ?>
-<?php  
-
+<?php
+  
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.3 Cooked by nielsoffice 
  *
@@ -36,6 +36,7 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
  * @version   v1.1.3
+ *
  */
 
 Class Request {
