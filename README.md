@@ -70,7 +70,7 @@ use \PHPWine\VanillaFlavour\System\Validation;
 ```
 <h2>Thanks To:</h2>
 <h5>
-Github : To allow me to upload my PHP Library PHPAuth-Effortless to repository<br /> 
+Github : To allow me to upload my PHP Library PHPWine Vanilla Flavour to repository<br /> 
 php.net : To oppurtunity Develop web application using corePHP - PHPFrameworks<br />
 </h5>
 
