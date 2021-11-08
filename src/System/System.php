@@ -5,11 +5,11 @@
  use \PHPWine\VanillaFlavour\System\Request;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.3 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.3 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -38,7 +38,7 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.3
+ * @version   v1.1.4
  *
  */
  
@@ -214,7 +214,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
   * @since v1.0
   * 
  **/
- protected static function RETURN_RESTRICTED_DATA($USER_ERROR, $AUTH_SESSION_DATA, $VALIDTYPE)
+ protected static function RETURN_RESTRICTED_DATA($bind_error, $input_error, $valid_type)
  {
 
   /**
@@ -226,10 +226,10 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
   **/
   
 
-   if( !empty( $USER_ERROR))             :  return $USER_ERROR;
-   elseif( empty( $USER_ERROR ) )        : 
+   if( !empty( $bind_error))             :  return $bind_error;
+   elseif( empty( $bind_error ) )        : 
 
-      if( !empty($AUTH_SESSION_DATA) )   : return $AUTH_SESSION_DATA;
+      if( !empty($input_error) )   : return $input_error;
       else                               : 
         
          if ( new \PHPWine\VanillaFlavour\System\Request() !== false)   :  $RequestErrorHandler = NEW \PHPWine\VanillaFlavour\System\Validation();
@@ -243,21 +243,21 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
           * @since v1.2
           * 
           **/
-          if(isset($VALIDTYPE[LESS_THAN])) :
+          if(isset($valid_type[LESS_THAN])) :
 
            error_reporting(0);
                
              $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
            
-             $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[LESS_THAN][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_LESS_THAN']));
-             $REH_SP2 = $RequestErrorHandler::INTEGERTYPE( $VALIDTYPE[LESS_THAN][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_LESS_THAN']));
-             $REH_SP3 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[LESS_THAN][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_LESS_THAN']));
+             $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[LESS_THAN][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_LESS_THAN']));
+             $REH_SP2 = $RequestErrorHandler::INTEGERTYPE( $valid_type[LESS_THAN][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_LESS_THAN']));
+             $REH_SP3 = $RequestErrorHandler::STRINGTYPE(  $valid_type[LESS_THAN][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_LESS_THAN']));
            
 
              if(  ( isset( $REH_SP1 )) == true )
              {
               
-               print( $RequestErrorHandler::report_dump($VALIDTYPE, LESS_THAN));
+               print( $RequestErrorHandler::report_dump($valid_type, LESS_THAN));
                print( $REH_SP1 );
                print( "<br />" );
               
@@ -265,7 +265,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
              if( ( isset(  $REH_SP2 ) ) == true )
              {
               
-               print( $RequestErrorHandler::report_dump($VALIDTYPE, LESS_THAN));
+               print( $RequestErrorHandler::report_dump($valid_type, LESS_THAN));
                print( $REH_SP2 );
               
             }
@@ -273,7 +273,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
              if(  ( isset(  $REH_SP3  ) ) == true )
              {
 
-              print( $RequestErrorHandler::report_dump($VALIDTYPE, LESS_THAN));
+              print( $RequestErrorHandler::report_dump($valid_type, LESS_THAN));
               print( $REH_SP3 );
               print( "<br />" );
 
@@ -281,9 +281,9 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
 
             if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ||  isset(  $REH_SP3  ) ) :  die; endif;
            
-            $VALIDLESSTHAN_ID             =  $VALIDTYPE[LESS_THAN][0];
-            $VALIDLESSTHAN_ARG            =  $VALIDTYPE[LESS_THAN][1];
-            $VALIDERROR_VALIDLESSTHAN_MSG =  $VALIDTYPE[LESS_THAN][2];
+            $VALIDLESSTHAN_ID             =  $valid_type[LESS_THAN][0];
+            $VALIDLESSTHAN_ARG            =  $valid_type[LESS_THAN][1];
+            $VALIDERROR_VALIDLESSTHAN_MSG =  $valid_type[LESS_THAN][2];
             $VALIDLESSTHAN                =  $_POST[$VALIDLESSTHAN_ID];
 
             if( strlen($VALIDLESSTHAN) < $VALIDLESSTHAN_ARG ) : return $VALIDERROR_VALIDLESSTHAN_MSG;   endif;
@@ -297,20 +297,20 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
           * @since v1.2
           * 
         **/
-         if (isset($VALIDTYPE[GREATER_THAN])) :
+         if (isset($valid_type[GREATER_THAN])) :
 
           error_reporting(0);
 
           $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
           
-          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[GREATER_THAN][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_GREATER_THAN']));
-          $REH_SP2 = $RequestErrorHandler::INTEGERTYPE( $VALIDTYPE[GREATER_THAN][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_GREATER_THAN']));
-          $REH_SP3 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[GREATER_THAN][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_GREATER_THAN']));
+          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[GREATER_THAN][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_GREATER_THAN']));
+          $REH_SP2 = $RequestErrorHandler::INTEGERTYPE( $valid_type[GREATER_THAN][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_GREATER_THAN']));
+          $REH_SP3 = $RequestErrorHandler::STRINGTYPE(  $valid_type[GREATER_THAN][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_GREATER_THAN']));
 
           if(  ( isset( $REH_SP1 )) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, GREATER_THAN));
+             print( $RequestErrorHandler::report_dump($valid_type, GREATER_THAN));
              print( $REH_SP1 );
              print( "<br />" );
              
@@ -318,7 +318,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( ( isset(  $REH_SP2 ) ) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, GREATER_THAN));
+             print( $RequestErrorHandler::report_dump($valid_type, GREATER_THAN));
              print( $REH_SP2 );
              
            }
@@ -326,7 +326,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if(  ( isset(  $REH_SP3  ) ) == true )
            {
 
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, GREATER_THAN));
+             print( $RequestErrorHandler::report_dump($valid_type, GREATER_THAN));
              print( $REH_SP3 );
              print( "<br />" );
 
@@ -335,9 +335,9 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ||  isset(  $REH_SP3  ) ) :  die; 
           endif;
 
-          $VALIDGREATER_THAN_ID        =  $VALIDTYPE[GREATER_THAN][0];
-          $VALIDGREATER_THAN_ID_ARG    =  $VALIDTYPE[GREATER_THAN][1];
-          $VALIDERROR_GREATER_THAN_MGS =  $VALIDTYPE[GREATER_THAN][2];
+          $VALIDGREATER_THAN_ID        =  $valid_type[GREATER_THAN][0];
+          $VALIDGREATER_THAN_ID_ARG    =  $valid_type[GREATER_THAN][1];
+          $VALIDERROR_GREATER_THAN_MGS =  $valid_type[GREATER_THAN][2];
           $VALIDGREATER_THAN           =  $_POST[$VALIDGREATER_THAN_ID];
  
           if(strlen( $VALIDGREATER_THAN  ) > $VALIDGREATER_THAN_ID_ARG)  : return $VALIDERROR_GREATER_THAN_MGS; endif;
@@ -351,20 +351,20 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            * @since v1.0
            * 
            **/
-          if( isset($VALIDTYPE[MINLENGTH])) :
+          if( isset($valid_type[MINLENGTH])) :
 
             error_reporting(0);
 
             $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
             
-            $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[MINLENGTH][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_MINLENGTH']));
-            $REH_SP2 = $RequestErrorHandler::INTEGERTYPE( $VALIDTYPE[MINLENGTH][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_MINLENGTH']));
-            $REH_SP3 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[MINLENGTH][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_MINLENGTH']));
+            $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[MINLENGTH][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_MINLENGTH']));
+            $REH_SP2 = $RequestErrorHandler::INTEGERTYPE( $valid_type[MINLENGTH][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_MINLENGTH']));
+            $REH_SP3 = $RequestErrorHandler::STRINGTYPE(  $valid_type[MINLENGTH][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_MINLENGTH']));
 
              if(  ( isset( $REH_SP1 )) == true )
              {
                
-               print( $RequestErrorHandler::report_dump($VALIDTYPE, MINLENGTH));
+               print( $RequestErrorHandler::report_dump($valid_type, MINLENGTH));
                print( $REH_SP1 );
                print( "<br />" );
                
@@ -372,7 +372,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
              if( ( isset(  $REH_SP2 ) ) == true )
              {
                
-               print( $RequestErrorHandler::report_dump($VALIDTYPE, MINLENGTH));
+               print( $RequestErrorHandler::report_dump($valid_type, MINLENGTH));
                print( $REH_SP2 );
                
              }
@@ -380,7 +380,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
              if(  ( isset(  $REH_SP3  ) ) == true )
              {
   
-               print( $RequestErrorHandler::report_dump($VALIDTYPE, MINLENGTH));
+               print( $RequestErrorHandler::report_dump($valid_type, MINLENGTH));
                print( $REH_SP3 );
                print( "<br />" );
   
@@ -389,9 +389,9 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
              if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ||  isset(  $REH_SP3  ) ) :  die; 
             endif;
             
-            $VALIDMINLENGTH_ID      =  $VALIDTYPE[MINLENGTH][0];
-            $VALIDMINLENGTH_ARG     =  $VALIDTYPE[MINLENGTH][1];
-            $VALIDERROR_MINLENGTH   =  $VALIDTYPE[MINLENGTH][2];
+            $VALIDMINLENGTH_ID      =  $valid_type[MINLENGTH][0];
+            $VALIDMINLENGTH_ARG     =  $valid_type[MINLENGTH][1];
+            $VALIDERROR_MINLENGTH   =  $valid_type[MINLENGTH][2];
             $VALIDMINLENGTH         =  $_POST[$VALIDMINLENGTH_ID];
   
             if(strlen($VALIDMINLENGTH) <= $VALIDMINLENGTH_ARG) : return $VALIDERROR_MINLENGTH; endif;
@@ -405,21 +405,21 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
           * @since v1.0
           * 
           **/
-          if ( isset($VALIDTYPE[MAXLENGTH])) :
+          if ( isset($valid_type[MAXLENGTH])) :
 
             error_reporting(0); 
 
             $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
             
-            $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[MAXLENGTH][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_MAXLENGTH']));
-            $REH_SP2 = $RequestErrorHandler::INTEGERTYPE( $VALIDTYPE[MAXLENGTH][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_MAXLENGTH']));
-            $REH_SP3 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[MAXLENGTH][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_MAXLENGTH']));
+            $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[MAXLENGTH][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_MAXLENGTH']));
+            $REH_SP2 = $RequestErrorHandler::INTEGERTYPE( $valid_type[MAXLENGTH][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_MAXLENGTH']));
+            $REH_SP3 = $RequestErrorHandler::STRINGTYPE(  $valid_type[MAXLENGTH][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_MAXLENGTH']));
 
   
              if(  ( isset( $REH_SP1 )) == true )
              {
                
-               print( $RequestErrorHandler::report_dump($VALIDTYPE, MAXLENGTH));
+               print( $RequestErrorHandler::report_dump($valid_type, MAXLENGTH));
                print( $REH_SP1 );
                print( "<br />" );
                
@@ -427,7 +427,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
              if( ( isset(  $REH_SP2 ) ) == true )
              {
                
-               print( $RequestErrorHandler::report_dump($VALIDTYPE, MAXLENGTH));
+               print( $RequestErrorHandler::report_dump($valid_type, MAXLENGTH));
                print( $REH_SP2 );
                
              }
@@ -435,7 +435,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
              if(  ( isset(  $REH_SP3  ) ) == true )
              {
   
-               print( $RequestErrorHandler::report_dump($VALIDTYPE, MAXLENGTH));
+               print( $RequestErrorHandler::report_dump($valid_type, MAXLENGTH));
                print( $REH_SP3 );
                print( "<br />" );
   
@@ -444,9 +444,9 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
              if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ||  isset(  $REH_SP3  ) ) :  die; 
             endif;
            
-            $VALIDMAXLENGTH_ID      =  $VALIDTYPE[MAXLENGTH][0];
-            $VALIDMAXLENGTH_ARG     =  $VALIDTYPE[MAXLENGTH][1];
-            $VALIDERROR_MAXLENGTH   =  $VALIDTYPE[MAXLENGTH][2];
+            $VALIDMAXLENGTH_ID      =  $valid_type[MAXLENGTH][0];
+            $VALIDMAXLENGTH_ARG     =  $valid_type[MAXLENGTH][1];
+            $VALIDERROR_MAXLENGTH   =  $valid_type[MAXLENGTH][2];
             $VALIDMAXLENGTH         =  $_POST[$VALIDMAXLENGTH_ID];
 
            if(strlen($VALIDMAXLENGTH) >= $VALIDMAXLENGTH_ARG)  : return $VALIDERROR_MAXLENGTH; endif;
@@ -460,20 +460,20 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
           * @since v1.2
           * 
           **/
-         if (isset($VALIDTYPE[EQUALTO])) :
+         if (isset($valid_type[EQUALTO])) :
 
           error_reporting(0);
 
           $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
           
-          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[EQUALTO][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_EQUALTO']));
-          $REH_SP2 = $RequestErrorHandler::INTEGERTYPE( $VALIDTYPE[EQUALTO][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_EQUALTO']));
-          $REH_SP3 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[EQUALTO][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_EQUALTO']));
+          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[EQUALTO][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_EQUALTO']));
+          $REH_SP2 = $RequestErrorHandler::INTEGERTYPE( $valid_type[EQUALTO][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_EQUALTO']));
+          $REH_SP3 = $RequestErrorHandler::STRINGTYPE(  $valid_type[EQUALTO][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_EQUALTO']));
 
            if(  ( isset( $REH_SP1 )) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, EQUALTO));
+             print( $RequestErrorHandler::report_dump($valid_type, EQUALTO));
              print( $REH_SP1 );
              print( "<br />" );
              
@@ -481,7 +481,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( ( isset(  $REH_SP2 ) ) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, EQUALTO));
+             print( $RequestErrorHandler::report_dump($valid_type, EQUALTO));
              print( $REH_SP2 );
              
            }
@@ -489,7 +489,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if(  ( isset(  $REH_SP3  ) ) == true )
            {
 
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, EQUALTO));
+             print( $RequestErrorHandler::report_dump($valid_type, EQUALTO));
              print( $REH_SP3 );
              print( "<br />" );
 
@@ -498,9 +498,9 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ||  isset(  $REH_SP3  ) ) :  die; 
           endif;
           
-            $EQUALTO_ID          =  $VALIDTYPE[EQUALTO][0];
-            $EQUALTO_ARG         =  $VALIDTYPE[EQUALTO][1];
-            $VALIDERROR_EQUALTO  =  $VALIDTYPE[EQUALTO][2];
+            $EQUALTO_ID          =  $valid_type[EQUALTO][0];
+            $EQUALTO_ARG         =  $valid_type[EQUALTO][1];
+            $VALIDERROR_EQUALTO  =  $valid_type[EQUALTO][2];
             $EQUALTO             =  $_POST[$EQUALTO_ID];
 
           if(strlen($EQUALTO) == $EQUALTO_ARG)  : return  $VALIDERROR_EQUALTO; endif;
@@ -514,20 +514,20 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
          * @since v1.2
          * 
          **/
-        if (isset($VALIDTYPE[EQUAL_STRICT])) :
+        if (isset($valid_type[EQUAL_STRICT])) :
 
           error_reporting(0);
 
           $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
           
-          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[EQUAL_STRICT][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_EQUAL_STRICT']));
-          $REH_SP2 = $RequestErrorHandler::INTEGERTYPE( $VALIDTYPE[EQUAL_STRICT][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_EQUAL_STRICT']));
-          $REH_SP3 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[EQUAL_STRICT][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_EQUAL_STRICT']));
+          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[EQUAL_STRICT][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_EQUAL_STRICT']));
+          $REH_SP2 = $RequestErrorHandler::INTEGERTYPE( $valid_type[EQUAL_STRICT][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_EQUAL_STRICT']));
+          $REH_SP3 = $RequestErrorHandler::STRINGTYPE(  $valid_type[EQUAL_STRICT][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_EQUAL_STRICT']));
 
            if(  ( isset( $REH_SP1 )) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, EQUAL_STRICT));
+             print( $RequestErrorHandler::report_dump($valid_type, EQUAL_STRICT));
              print( $REH_SP1 );
              print( "<br />" );
              
@@ -535,7 +535,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( ( isset(  $REH_SP2 ) ) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, EQUAL_STRICT));
+             print( $RequestErrorHandler::report_dump($valid_type, EQUAL_STRICT));
              print( $REH_SP2 );
              
            }
@@ -543,7 +543,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if(  ( isset(  $REH_SP3  ) ) == true )
            {
 
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, EQUAL_STRICT));
+             print( $RequestErrorHandler::report_dump($valid_type, EQUAL_STRICT));
              print( $REH_SP3 );
              print( "<br />" );
 
@@ -552,9 +552,9 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ||  isset(  $REH_SP3  ) ) :  die; 
           endif;
 
-          $EQUAL_STRICT_ID         =  $VALIDTYPE[EQUAL_STRICT][0];
-          $EQUAL_STRICT_ARG        =  $VALIDTYPE[EQUAL_STRICT][1];
-          $VALIDERROR_EQUAL_STRICT =  $VALIDTYPE[EQUAL_STRICT][2];
+          $EQUAL_STRICT_ID         =  $valid_type[EQUAL_STRICT][0];
+          $EQUAL_STRICT_ARG        =  $valid_type[EQUAL_STRICT][1];
+          $VALIDERROR_EQUAL_STRICT =  $valid_type[EQUAL_STRICT][2];
           $EQUAL_STRICT            =  $_POST[$EQUAL_STRICT_ID];
 
           if(strlen($EQUAL_STRICT) === $EQUAL_STRICT_ARG )  : return $VALIDERROR_EQUAL_STRICT; endif;
@@ -568,19 +568,19 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
          * @since v1.2
          * 
         **/
-        if( isset($VALIDTYPE[VALID_EMAIL]) ) :
+        if( isset($valid_type[VALID_EMAIL]) ) :
 
           error_reporting(0);
 
           $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
           
-          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[VALID_EMAIL][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_VALID_EMAIL']));
-          $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[VALID_EMAIL][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_VALID_EMAIL']));
+          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[VALID_EMAIL][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_VALID_EMAIL']));
+          $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $valid_type[VALID_EMAIL][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_VALID_EMAIL']));
 
            if(  ( isset( $REH_SP1 )) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, VALID_EMAIL));
+             print( $RequestErrorHandler::report_dump($valid_type, VALID_EMAIL));
              print( $REH_SP1 );
              print( "<br />" );
              
@@ -588,7 +588,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( ( isset(  $REH_SP2 ) ) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, VALID_EMAIL));
+             print( $RequestErrorHandler::report_dump($valid_type, VALID_EMAIL));
              print( $REH_SP2 );
              
            }
@@ -596,8 +596,8 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ) :  die; 
           endif;
     
-          $VALID_EMAIL_ID         =  $VALIDTYPE[VALID_EMAIL][0];
-          $VALIDERROR_VALID_EMAIL =  $VALIDTYPE[VALID_EMAIL][1];
+          $VALID_EMAIL_ID         =  $valid_type[VALID_EMAIL][0];
+          $VALIDERROR_VALID_EMAIL =  $valid_type[VALID_EMAIL][1];
           $VALID_EMAIL            =  $_POST[$VALID_EMAIL_ID];
     
           if(!filter_var($VALID_EMAIL , FILTER_VALIDATE_EMAIL)) : return  $VALIDERROR_VALID_EMAIL; endif;
@@ -611,19 +611,19 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
          * @since v1.0
          * 
         **/
-        if ( isset($VALIDTYPE[STRINGTYPE])) :
+        if ( isset($valid_type[STRINGTYPE])) :
 
           error_reporting(0);
 
           $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
           
-          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[STRINGTYPE][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_STRINGTYPE']));
-          $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[STRINGTYPE][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_STRINGTYPE']));
+          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[STRINGTYPE][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_STRINGTYPE']));
+          $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $valid_type[STRINGTYPE][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_STRINGTYPE']));
 
           if(  ( isset( $REH_SP1 )) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, STRINGTYPE));
+             print( $RequestErrorHandler::report_dump($valid_type, STRINGTYPE));
              print( $REH_SP1 );
              print( "<br />" );
              
@@ -631,7 +631,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( ( isset(  $REH_SP2 ) ) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, STRINGTYPE));
+             print( $RequestErrorHandler::report_dump($valid_type, STRINGTYPE));
              print( $REH_SP2 );
              
            }
@@ -639,8 +639,8 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ) :  die; 
           endif;
 
-          $VALIDSTRING_ID       =  $VALIDTYPE[STRINGTYPE][0];
-          $VALIDERROR_STRING    =  $VALIDTYPE[STRINGTYPE][1];
+          $VALIDSTRING_ID       =  $valid_type[STRINGTYPE][0];
+          $VALIDERROR_STRING    =  $valid_type[STRINGTYPE][1];
           $VALIDSTRING          =  $_POST[$VALIDSTRING_ID];
 
         if(!preg_match("/^[a-zA-Z-' ]*$/", $VALIDSTRING)) : return $VALIDERROR_STRING; endif;
@@ -654,19 +654,19 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
         * @since v1.0
         * 
        **/
-       if ( isset($VALIDTYPE[NUMERICTYPE]) ) :
+       if ( isset($valid_type[NUMERICTYPE]) ) :
 
         error_reporting(0);
 
         $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
         
-        $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[NUMERICTYPE][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_NUMERICTYPE']));
-        $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[NUMERICTYPE][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_NUMERICTYPE']));
+        $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[NUMERICTYPE][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_NUMERICTYPE']));
+        $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $valid_type[NUMERICTYPE][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_NUMERICTYPE']));
 
          if(  ( isset( $REH_SP1 )) == true )
          {
            
-           print( $RequestErrorHandler::report_dump($VALIDTYPE, NUMERICTYPE));
+           print( $RequestErrorHandler::report_dump($valid_type, NUMERICTYPE));
            print( $REH_SP1 );
            print( "<br />" );
            
@@ -674,7 +674,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
          if( ( isset(  $REH_SP2 ) ) == true )
          {
            
-           print( $RequestErrorHandler::report_dump($VALIDTYPE, NUMERICTYPE));
+           print( $RequestErrorHandler::report_dump($valid_type, NUMERICTYPE));
            print( $REH_SP2 );
            
          }
@@ -682,8 +682,8 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
          if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ) :  die; 
         endif;
 
-         $VALIDNUMERIC_ID      =  $VALIDTYPE[NUMERICTYPE][0];
-         $VALIDERROR_NUMERIC   =  $VALIDTYPE[NUMERICTYPE][1];
+         $VALIDNUMERIC_ID      =  $valid_type[NUMERICTYPE][0];
+         $VALIDERROR_NUMERIC   =  $valid_type[NUMERICTYPE][1];
          $VALIDNUMERIC         =  $_POST[$VALIDNUMERIC_ID];
 
         if (!is_numeric($VALIDNUMERIC)) : return $VALIDERROR_NUMERIC; 
@@ -698,19 +698,19 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
         * @since v1.0
         * 
        **/
-      if ( isset($VALIDTYPE[INTEGERTYPE]) ) :
+      if ( isset($valid_type[INTEGERTYPE]) ) :
 
         error_reporting(0);
 
         $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
         
-        $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[INTEGERTYPE][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_INTEGERTYPE'])  );
-        $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[INTEGERTYPE][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_INTEGERTYPE']) );
+        $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[INTEGERTYPE][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_INTEGERTYPE'])  );
+        $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $valid_type[INTEGERTYPE][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_INTEGERTYPE']) );
 
          if(  ( isset( $REH_SP1 )) == true )
          {
            
-           print( $RequestErrorHandler::report_dump($VALIDTYPE, INTEGERTYPE));
+           print( $RequestErrorHandler::report_dump($valid_type, INTEGERTYPE));
            print( $REH_SP1 );
            print( "<br />" );
            
@@ -718,7 +718,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
          if( ( isset(  $REH_SP2 ) ) == true )
          {
            
-           print( $RequestErrorHandler::report_dump($VALIDTYPE, INTEGERTYPE));
+           print( $RequestErrorHandler::report_dump($valid_type, INTEGERTYPE));
            print( $REH_SP2 );
            
          }
@@ -726,8 +726,8 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
         if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ) :  die; 
         endif;
        
-         $VALIDINTIGERTYPE_ID      =  $VALIDTYPE[INTEGERTYPE][0];
-         $VALIDERROR_INTIGERTYPE   =  $VALIDTYPE[INTEGERTYPE][1];
+         $VALIDINTIGERTYPE_ID      =  $valid_type[INTEGERTYPE][0];
+         $VALIDERROR_INTIGERTYPE   =  $valid_type[INTEGERTYPE][1];
          $VALIDINTIGERTYPE         =  $_POST[$VALIDINTIGERTYPE_ID];
 
         if(!is_integer( $VALIDINTIGERTYPE)) : return $VALIDERROR_INTIGERTYPE; 
@@ -742,19 +742,19 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
         * @since v1.0
         * 
         **/
-       if (isset($VALIDTYPE[FLOATTYPE])) :
+       if (isset($valid_type[FLOATTYPE])) :
 
         error_reporting(0);
 
         $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
         
-        $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[FLOATTYPE][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_FLOATTYPE'])  );
-        $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[FLOATTYPE][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_FLOATTYPE']) );
+        $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[FLOATTYPE][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_FLOATTYPE'])  );
+        $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $valid_type[FLOATTYPE][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_FLOATTYPE']) );
 
          if(  ( isset( $REH_SP1 )) == true )
          {
            
-           print( $RequestErrorHandler::report_dump($VALIDTYPE, FLOATTYPE));
+           print( $RequestErrorHandler::report_dump($valid_type, FLOATTYPE));
            print( $REH_SP1 );
            print( "<br />" );
            
@@ -762,7 +762,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
          if( ( isset(  $REH_SP2 ) ) == true )
          {
            
-           print( $RequestErrorHandler::report_dump($VALIDTYPE, FLOATTYPE));
+           print( $RequestErrorHandler::report_dump($valid_type, FLOATTYPE));
            print( $REH_SP2 );
            
          }
@@ -770,8 +770,8 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
          if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ) :  die; 
         endif;
 
-         $VALIDFLOAT_ID         =  $VALIDTYPE[FLOATTYPE][0];
-         $VALIDERROR_FLOAT      =  $VALIDTYPE[FLOATTYPE][1];
+         $VALIDFLOAT_ID         =  $valid_type[FLOATTYPE][0];
+         $VALIDERROR_FLOAT      =  $valid_type[FLOATTYPE][1];
          $VALIDFLOAT            =  $_POST[$VALIDFLOAT_ID];
 
          if(!is_float($VALIDFLOAT)) : return $VALIDERROR_FLOAT; 
@@ -786,19 +786,19 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
         * @since v1.4
         * 
         **/
-        if (isset($VALIDTYPE[CONTAIN_UPPERCASE])) :
+        if (isset($valid_type[CONTAIN_UPPERCASE])) :
 
           error_reporting(0);
   
           $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
           
-          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[CONTAIN_UPPERCASE][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_CONTAIN_UPPERCASE'])  );
-          $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[CONTAIN_UPPERCASE][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_CONTAIN_UPPERCASE']) );
+          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[CONTAIN_UPPERCASE][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_CONTAIN_UPPERCASE'])  );
+          $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $valid_type[CONTAIN_UPPERCASE][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_CONTAIN_UPPERCASE']) );
   
            if(  ( isset( $REH_SP1 )) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, CONTAIN_UPPERCASE));
+             print( $RequestErrorHandler::report_dump($valid_type, CONTAIN_UPPERCASE));
              print( $REH_SP1 );
              print( "<br />" );
              
@@ -806,7 +806,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( ( isset(  $REH_SP2 ) ) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, CONTAIN_UPPERCASE));
+             print( $RequestErrorHandler::report_dump($valid_type, CONTAIN_UPPERCASE));
              print( $REH_SP2 );
              
            }
@@ -814,8 +814,8 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ) :  die; 
           endif;
   
-           $VALIDCONTAIN_UPPERCASE_ID         =  $VALIDTYPE[CONTAIN_UPPERCASE][0];
-           $VALIDERROR_CONTAIN_UPPERCASE      =  $VALIDTYPE[CONTAIN_UPPERCASE][1];
+           $VALIDCONTAIN_UPPERCASE_ID         =  $valid_type[CONTAIN_UPPERCASE][0];
+           $VALIDERROR_CONTAIN_UPPERCASE      =  $valid_type[CONTAIN_UPPERCASE][1];
            $VALIDCONTAIN_UPPERCASE            =  $_POST[$VALIDCONTAIN_UPPERCASE_ID];
   
            if(!preg_match('@[A-Z]@', $VALIDCONTAIN_UPPERCASE)) : return $VALIDERROR_CONTAIN_UPPERCASE; 
@@ -830,19 +830,19 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
         * @since v1.4
         * 
         **/
-        if (isset($VALIDTYPE[CONTAIN_LOWERCASE])) :
+        if (isset($valid_type[CONTAIN_LOWERCASE])) :
 
           error_reporting(0);
   
           $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
           
-          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[CONTAIN_LOWERCASE][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_CONTAIN_LOWERCASE'])  );
-          $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[CONTAIN_LOWERCASE][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_CONTAIN_LOWERCASE']) );
+          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[CONTAIN_LOWERCASE][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_CONTAIN_LOWERCASE'])  );
+          $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $valid_type[CONTAIN_LOWERCASE][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_CONTAIN_LOWERCASE']) );
   
            if(  ( isset( $REH_SP1 )) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, CONTAIN_LOWERCASE ));
+             print( $RequestErrorHandler::report_dump($valid_type, CONTAIN_LOWERCASE ));
              print( $REH_SP1 );
              print( "<br />" );
              
@@ -850,7 +850,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( ( isset(  $REH_SP2 ) ) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, CONTAIN_LOWERCASE ));
+             print( $RequestErrorHandler::report_dump($valid_type, CONTAIN_LOWERCASE ));
              print( $REH_SP2 );
              
            }
@@ -858,8 +858,8 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ) :  die; 
           endif;
   
-           $VALIDCONTAIN_LOWERCASE_ID         =  $VALIDTYPE[CONTAIN_LOWERCASE][0];
-           $VALIDERROR_CONTAIN_LOWERCASE      =  $VALIDTYPE[CONTAIN_LOWERCASE][1];
+           $VALIDCONTAIN_LOWERCASE_ID         =  $valid_type[CONTAIN_LOWERCASE][0];
+           $VALIDERROR_CONTAIN_LOWERCASE      =  $valid_type[CONTAIN_LOWERCASE][1];
            $VALIDCONTAIN_LOWERCASE            =  $_POST[$VALIDCONTAIN_LOWERCASE_ID ];
   
            if(!preg_match('@[a-z]@',  $VALIDCONTAIN_LOWERCASE)) : return  $VALIDERROR_CONTAIN_LOWERCASE ; 
@@ -874,19 +874,19 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
         * @since v1.4
         * 
         **/
-        if (isset($VALIDTYPE[CONTAIN_NUMBER])) :
+        if (isset($valid_type[CONTAIN_NUMBER])) :
 
           error_reporting(0);
   
           $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
           
-          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[CONTAIN_NUMBER][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_CONTAIN_NUMBER'])  );
-          $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[CONTAIN_NUMBER][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_CONTAIN_NUMBER']) );
+          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[CONTAIN_NUMBER][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_CONTAIN_NUMBER'])  );
+          $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $valid_type[CONTAIN_NUMBER][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_CONTAIN_NUMBER']) );
   
            if(  ( isset( $REH_SP1 )) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, CONTAIN_NUMBER ));
+             print( $RequestErrorHandler::report_dump($valid_type, CONTAIN_NUMBER ));
              print( $REH_SP1 );
              print( "<br />" );
              
@@ -894,7 +894,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( ( isset(  $REH_SP2 ) ) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, CONTAIN_NUMBER ));
+             print( $RequestErrorHandler::report_dump($valid_type, CONTAIN_NUMBER ));
              print( $REH_SP2 );
              
            }
@@ -902,8 +902,8 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ) :  die; 
           endif;
   
-           $VALIDCONTAIN_NUMBER_ID         =  $VALIDTYPE[CONTAIN_NUMBER][0];
-           $VALIDERROR_CONTAIN_NUMBER      =  $VALIDTYPE[CONTAIN_NUMBER][1];
+           $VALIDCONTAIN_NUMBER_ID         =  $valid_type[CONTAIN_NUMBER][0];
+           $VALIDERROR_CONTAIN_NUMBER      =  $valid_type[CONTAIN_NUMBER][1];
            $VALIDCONTAIN_NUMBER            =  $_POST[ $VALIDCONTAIN_NUMBER_ID ];
   
            if(!preg_match('@[0-9]@', $VALIDCONTAIN_NUMBER )) : return   $VALIDERROR_CONTAIN_NUMBER ; 
@@ -918,19 +918,19 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
         * @since v1.4
         * 
         **/
-        if (isset($VALIDTYPE[CONTAIN_SPECIALCHAR])) :
+        if (isset($valid_type[CONTAIN_SPECIALCHAR])) :
 
           error_reporting(0);
   
           $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
           
-          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[CONTAIN_SPECIALCHAR][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_CONTAIN_SPECIALCHAR'])  );
-          $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[CONTAIN_SPECIALCHAR][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_CONTAIN_SPECIALCHAR']) );
+          $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[CONTAIN_SPECIALCHAR][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_CONTAIN_SPECIALCHAR'])  );
+          $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $valid_type[CONTAIN_SPECIALCHAR][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_CONTAIN_SPECIALCHAR']) );
   
            if(  ( isset( $REH_SP1 )) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, CONTAIN_SPECIALCHAR ));
+             print( $RequestErrorHandler::report_dump($valid_type, CONTAIN_SPECIALCHAR ));
              print( $REH_SP1 );
              print( "<br />" );
              
@@ -938,7 +938,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( ( isset(  $REH_SP2 ) ) == true )
            {
              
-             print( $RequestErrorHandler::report_dump($VALIDTYPE, CONTAIN_SPECIALCHAR ));
+             print( $RequestErrorHandler::report_dump($valid_type, CONTAIN_SPECIALCHAR ));
              print( $REH_SP2 );
              
            }
@@ -946,8 +946,8 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
            if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ) :  die; 
           endif;
   
-           $VALIDCONTAIN_SPECIALCHAR_ID         =  $VALIDTYPE[CONTAIN_SPECIALCHAR][0];
-           $VALIDERROR_CONTAIN_SPECIALCHAR      =  $VALIDTYPE[CONTAIN_SPECIALCHAR][1];
+           $VALIDCONTAIN_SPECIALCHAR_ID         =  $valid_type[CONTAIN_SPECIALCHAR][0];
+           $VALIDERROR_CONTAIN_SPECIALCHAR      =  $valid_type[CONTAIN_SPECIALCHAR][1];
            $VALIDCONTAIN_SPECIALCHAR            =  $_POST[ $VALIDCONTAIN_SPECIALCHAR_ID  ];
   
            if( !preg_match('@[^\w]@', $VALIDCONTAIN_SPECIALCHAR )) : return   $VALIDERROR_CONTAIN_SPECIALCHAR; 
@@ -962,19 +962,19 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
        * @since v1.4
        * 
       **/
-      if ( isset($VALIDTYPE[VALIDPASSWORD]) ) :
+      if ( isset($valid_type[VALIDPASSWORD]) ) :
 
         error_reporting(0);
 
         $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
         
-        $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[VALIDPASSWORD][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_VALIDPASSWORD'])  );
-        $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[VALIDPASSWORD][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_VALIDPASSWORD']) );
+        $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[VALIDPASSWORD][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_VALIDPASSWORD'])  );
+        $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $valid_type[VALIDPASSWORD][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_VALIDPASSWORD']) );
 
          if(  ( isset( $REH_SP1 )) == true )
          {
            
-           print( $RequestErrorHandler::report_dump($VALIDTYPE, VALIDPASSWORD));
+           print( $RequestErrorHandler::report_dump($valid_type, VALIDPASSWORD));
            print( $REH_SP1 );
            print( "<br />" );
            
@@ -982,7 +982,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
          if( ( isset(  $REH_SP2 ) ) == true )
          {
            
-           print( $RequestErrorHandler::report_dump($VALIDTYPE, VALIDPASSWORD));
+           print( $RequestErrorHandler::report_dump($valid_type, VALIDPASSWORD));
            print( $REH_SP2 );
            
          }
@@ -990,8 +990,8 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
          if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ) :  die; 
         endif;
 
-        $VALIDATE_VALIDPASSORD_REQUEST_DEFAULT   =  $VALIDTYPE[VALIDPASSWORD][0];
-        $VALIDATE_VALIDPASSORD_REQUEST_ERROR     =  $VALIDTYPE[VALIDPASSWORD][1];
+        $VALIDATE_VALIDPASSORD_REQUEST_DEFAULT   =  $valid_type[VALIDPASSWORD][0];
+        $VALIDATE_VALIDPASSORD_REQUEST_ERROR     =  $valid_type[VALIDPASSWORD][1];
         $VALIDATE_VALIDPASSWORD                  =  $_POST[$VALIDATE_VALIDPASSORD_REQUEST_DEFAULT];
     
         if( !preg_match("#.*^(?=.{8,20})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$#", $VALIDATE_VALIDPASSWORD )) : return $VALIDATE_VALIDPASSORD_REQUEST_ERROR; 
@@ -1007,19 +1007,19 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
        * @since v1.4
        * 
       **/
-      if ( isset($VALIDTYPE[INPUTFIELD_EMPTY]) ) :
+      if ( isset($valid_type[INPUTFIELD_EMPTY]) ) :
 
         error_reporting(0);
 
         $CATCH_ERROR_PARAM_HANDLER = $RequestErrorHandler::CATCH_ERROR_PARAM_HANDLER();
         
-        $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[INPUTFIELD_EMPTY][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_INPUTFIELD_EMPTY'])  );
-        $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $VALIDTYPE[INPUTFIELD_EMPTY][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_INPUTFIELD_EMPTY']) );
+        $REH_SP1 = $RequestErrorHandler::STRINGTYPE(  $valid_type[INPUTFIELD_EMPTY][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_INPUTFIELD_EMPTY'])  );
+        $REH_SP2 = $RequestErrorHandler::STRINGTYPE(  $valid_type[INPUTFIELD_EMPTY][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_INPUTFIELD_EMPTY']) );
 
          if(  ( isset( $REH_SP1 )) == true )
          {
            
-           print( $RequestErrorHandler::report_dump($VALIDTYPE, INPUTFIELD_EMPTY ));
+           print( $RequestErrorHandler::report_dump($valid_type, INPUTFIELD_EMPTY ));
            print( $REH_SP1 );
            print( "<br />" );
            
@@ -1027,7 +1027,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
          if( ( isset(  $REH_SP2 ) ) == true )
          {
            
-           print( $RequestErrorHandler::report_dump($VALIDTYPE, INPUTFIELD_EMPTY ));
+           print( $RequestErrorHandler::report_dump($valid_type, INPUTFIELD_EMPTY ));
            print( $REH_SP2 );
            
          }
@@ -1035,8 +1035,8 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
          if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ) :  die; 
         endif;
 
-        $VALIDATE_NULL_OR_EMPTY_ID        =  $VALIDTYPE[INPUTFIELD_EMPTY][0];
-        $VALIDATE_NULL_OR_EMPTY_ERROR     =  $VALIDTYPE[INPUTFIELD_EMPTY][1];
+        $VALIDATE_NULL_OR_EMPTY_ID        =  $valid_type[INPUTFIELD_EMPTY][0];
+        $VALIDATE_NULL_OR_EMPTY_ERROR     =  $valid_type[INPUTFIELD_EMPTY][1];
         $VALIDATE_NULL_OR_EMPTY           =  $_POST[ $VALIDATE_NULL_OR_EMPTY_ID ];
     
         if(  !isset( $VALIDATE_NULL_OR_EMPTY ) || empty( $VALIDATE_NULL_OR_EMPTY ) || is_null( $VALIDATE_NULL_OR_EMPTY ) ) : return $VALIDATE_NULL_OR_EMPTY_ERROR; 
@@ -1051,21 +1051,21 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
        * @since v1.0
        * 
       **/
-      if ( isset($VALIDTYPE[CONFIRMPASSWORD]) ) :
+      if ( isset($valid_type[CONFIRMPASSWORD]) ) :
 
         error_reporting(0);
                
         $CATCH_ERROR_PARAM_HANDLER = REQUEST::CATCH_ERROR_PARAM_HANDLER();
       
-        $REH_SP1 = VALIDATION::STRINGTYPE(  $VALIDTYPE[CONFIRMPASSWORD][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_CONFIRMPASSWORD']));
-        $REH_SP2 = VALIDATION::STRINGTYPE(  $VALIDTYPE[CONFIRMPASSWORD][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_CONFIRMPASSWORD']));
-        $REH_SP3 = VALIDATION::STRINGTYPE(  $VALIDTYPE[CONFIRMPASSWORD][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_CONFIRMPASSWORD']));
+        $REH_SP1 = VALIDATION::STRINGTYPE(  $valid_type[CONFIRMPASSWORD][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_CONFIRMPASSWORD']));
+        $REH_SP2 = VALIDATION::STRINGTYPE(  $valid_type[CONFIRMPASSWORD][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_CONFIRMPASSWORD']));
+        $REH_SP3 = VALIDATION::STRINGTYPE(  $valid_type[CONFIRMPASSWORD][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_CONFIRMPASSWORD']));
       
 
         if(  ( isset( $REH_SP1 )) == true )
         {
          
-          print( $RequestErrorHandler::report_dump($VALIDTYPE, CONFIRMPASSWORD ));
+          print( $RequestErrorHandler::report_dump($valid_type, CONFIRMPASSWORD ));
           print( $REH_SP1 );
           print( "<br />" );
          
@@ -1073,14 +1073,14 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
         if( ( isset(  $REH_SP2 ) ) == true )
         {
          
-          print( $RequestErrorHandler::report_dump($VALIDTYPE, CONFIRMPASSWORD ));
+          print( $RequestErrorHandler::report_dump($valid_type, CONFIRMPASSWORD ));
           print( $REH_SP2 );
          
         }
         if(  ( isset(  $REH_SP3  ) ) == true )
         {
 
-         print( $RequestErrorHandler::report_dump($VALIDTYPE, CONFIRMPASSWORD ));
+         print( $RequestErrorHandler::report_dump($valid_type, CONFIRMPASSWORD ));
          print( $REH_SP3 );
          print( "<br />" );
 
@@ -1089,9 +1089,9 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
        if( isset( $REH_SP1 ) ||  isset(  $REH_SP2  ) ||  isset(  $REH_SP3  ) ) :  die; 
       endif;
 
-        $VALIDATE_CONFIRMPASSORD_REQUEST_DEFAULT   =  $VALIDTYPE[CONFIRMPASSWORD][0];
-        $VALIDATE_CONFIRMPASSORD_REQUEST_CONFIRM   =  $VALIDTYPE[CONFIRMPASSWORD][1];
-        $VALIDATE_CONFIRMPASSORD_REQUEST_ERROR     =  $VALIDTYPE[CONFIRMPASSWORD][2];
+        $VALIDATE_CONFIRMPASSORD_REQUEST_DEFAULT   =  $valid_type[CONFIRMPASSWORD][0];
+        $VALIDATE_CONFIRMPASSORD_REQUEST_CONFIRM   =  $valid_type[CONFIRMPASSWORD][1];
+        $VALIDATE_CONFIRMPASSORD_REQUEST_ERROR     =  $valid_type[CONFIRMPASSWORD][2];
         
     
         if( $VALIDATE_CONFIRMPASSORD_REQUEST_DEFAULT !== $VALIDATE_CONFIRMPASSORD_REQUEST_CONFIRM ) : return $VALIDATE_CONFIRMPASSORD_REQUEST_ERROR; 
@@ -1106,10 +1106,10 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
       * @since v1.0
       * 
       **/
-     if( isset($VALIDTYPE[USER_REDIRECT])) :
+     if( isset($valid_type[USER_REDIRECT])) :
 
-       $USER_REDIRECT         =  $VALIDTYPE[USER_REDIRECT][0];
-       $USER_SESSIONTRUE      =  $VALIDTYPE[USER_REDIRECT][1];
+       $USER_REDIRECT         =  $valid_type[USER_REDIRECT][0];
+       $USER_SESSIONTRUE      =  $valid_type[USER_REDIRECT][1];
 
       if(isset($USER_SESSIONTRUE) == true) : AUTH::USERAUTH($USER_REDIRECT, $USER_SESSIONTRUE);  else : AUTH::USERAUTH($USER_REDIRECT); 
       endif;

@@ -6,11 +6,11 @@
  use \PHPWine\VanillaFlavour\System\System;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.3 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.3 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -39,7 +39,7 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.3
+ * @version   v1.1.4
  *
  *
  * @method AUTH::SESSION();
@@ -131,10 +131,10 @@ class Auth Extends System
     * @since v1.0
     *
     **/ 
-    public static function HASCONTAINS(array $POST_DATA)
+    public static function HASCONTAINS(array $input )
     {
          
-        $data    = SYSTEM::POSTDATA($POST_DATA);
+        $data    = SYSTEM::POSTDATA( $input );
         $request = SYSTEM::SANITIZEREQUEST($_POST[$data[0]]);
 
          if( !isset($request) || empty($request) || is_null($request) ) : return SYSTEM::SANITIZEREQUEST($data[1]); 
@@ -151,12 +151,12 @@ class Auth Extends System
     * @since v1.0
     *
    **/ 
-    public static function ERROR(string $POST_DATA, array $hasContains)
+    public static function ERROR(string  $input, array $require )
     {
     
-      $data = SYSTEM::POSTDATA($hasContains); // if has current value contains
-      if( $POST_DATA !== $data[1] ) : return ''; 
-      else                          : return $POST_DATA; 
+      $data = SYSTEM::POSTDATA( $require ); // if has current value contains
+      if( $input !== $data[1] ) : return ''; 
+      else                      : return  $input; 
 
       endif;
   
@@ -169,10 +169,10 @@ class Auth Extends System
     * @since v1.0
     *
    **/ 
-    public static function CATCH(string $AUTH_SESSION_DATA = null, string $USER_ERROR = null, array $VALIDTYPE = null )
+    public static function CATCH(string $input_error = null, string $bind_error = null, array $valid_type = null )
     {
       
-       return SYSTEM::RETURN_RESTRICTED_DATA($AUTH_SESSION_DATA, $USER_ERROR, $VALIDTYPE);
+       return SYSTEM::RETURN_RESTRICTED_DATA($input_error, $bind_error, $valid_type);
       
     }
   
@@ -183,7 +183,7 @@ class Auth Extends System
  * @since v1.0
  *
 **/
-public static function BINDSQL(string $returnDatadbName, array $returnDataName , array $returnDataVal )  
+public static function BINDSQL(string $connection, array $datas , array $values )  
 {
  /**
  *
@@ -192,7 +192,7 @@ public static function BINDSQL(string $returnDatadbName, array $returnDataName ,
  * @since v1.0
  *
 **/ 
-$getCurrent     = current($returnDataName );
+$getCurrent     = current($datas );
 
 /**
  *
@@ -201,7 +201,7 @@ $getCurrent     = current($returnDataName );
  * @since v1.0
  *
 **/
- $removeCurrent = array_shift( $returnDataName  );
+ $removeCurrent = array_shift( $datas  );
 
 /**
  *
@@ -212,7 +212,7 @@ $getCurrent     = current($returnDataName );
 **/
  $_xeQueryRequestClientData = [];
 
- foreach ( $returnDataName  as $value) : $_xeQueryRequestClientData[] = ", ".$value; endforeach;
+ foreach ( $datas  as $value) : $_xeQueryRequestClientData[] = ", ".$value; endforeach;
  
  /**
   * @param _DEFINED DEFINED MERGE DATA ARRAY
@@ -230,7 +230,7 @@ $getCurrent     = current($returnDataName );
  * @since v1.0
  *
 **/ 
- $getCurrentVal       = current($returnDataVal );
+ $getCurrentVal       = current($values );
 
 /**
  *
@@ -239,7 +239,7 @@ $getCurrent     = current($returnDataName );
  * @since v1.0
  *
 **/
- $removeCurrentValue  = array_shift( $returnDataVal );
+ $removeCurrentValue  = array_shift( $values );
 
 /**
  *
@@ -250,7 +250,7 @@ $getCurrent     = current($returnDataName );
 **/
  $_xeQueryRequestCurrentVal = [];
  
- foreach ( $returnDataVal as $value) :  $_xeQueryRequestCurrentVal[] = ", ".$value; endforeach;
+ foreach ( $values as $value) :  $_xeQueryRequestCurrentVal[] = ", ".$value; endforeach;
 
  /**
   * @param _DEFINED DEFINED MERGE DATA ARRAY
@@ -276,7 +276,7 @@ $getCurrent     = current($returnDataName );
   /**
    * @param _table statement
    **/
-  $returnSQL .= " {$returnDatadbName} "; 
+  $returnSQL .= " {$connection} "; 
   /**
    * @param _db_col_data statement
    **/
@@ -305,10 +305,10 @@ $getCurrent     = current($returnDataName );
     * @since v1.0
     *
    **/ 
-    public static function BIND( $mySQLi, array $returnData = [] , string $dataOptionRequest = null , bool $debugging = false)
+    public static function BIND( $connection, array $bind_user_data = [] , string $request = null , bool $debugging = false)
     {
   
-    switch ($dataOptionRequest) 
+    switch ($request) 
     {
 
     /**
@@ -318,7 +318,7 @@ $getCurrent     = current($returnDataName );
      * @since v1.0
      *
      **/
-    case ($dataOptionRequest == 'SESSION_REGISTERDATA_REQUEST' || $dataOptionRequest == 'DO_USER_ADD_NEW_REGISTER') ? $dataOptionRequest : false;
+    case ($request == 'SESSION_REGISTERDATA_REQUEST' || $request == 'DO_USER_ADD_NEW_REGISTER') ? $request : false;
 
     /**
      *
@@ -328,7 +328,7 @@ $getCurrent     = current($returnDataName );
      *
     **/
 
-    $requestKeysReturnData = array_keys($returnData);
+    $requestKeysReturnData = array_keys($bind_user_data);
 
     $portalKeys_QS  = SYSTEM::BIND_VALIDATE_PORTAL_KEYS( $requestKeysReturnData[0], 'QUERY_STATEMENT'      ,"<table border='1' width='100%'><tr><td> Invalid PARAMETER : <span class='par_error'> " . $requestKeysReturnData[0] . " </span> <br /><hr /> <i>Expect:</i> <b>'QUERY_STATEMENT' => AUTH::RETURNSQL(' string database',['id'],['input_name'])  </b><br /> <hr /> <i>Expect:</i> <b>'QUERY_STATEMENT'  </b><br /> </td></tr></table>' ");
     $portalKeys_IH  = SYSTEM::BIND_VALIDATE_PORTAL_KEYS( $requestKeysReturnData[1], 'INPUT_HASCONTAINS'    ,"<table border='1' width='100%'><tr><td> Invalid PARAMETER : <span class='par_error'> " . $requestKeysReturnData[1] . " </span> <br /><hr /> <i>Expect:</i> <b>'INPUT_HASCONTAINS' => AUTH::HASCONTAINS();  </b><br /> <hr /> <i>Expect:</i> <b>'INPUT_HASCONTAINS' </b><br /> </td></tr></table>' ");
@@ -344,24 +344,24 @@ $getCurrent     = current($returnDataName );
     if(  ( isset( $portalKeys_QS )  ) == true )
     {
 
-      REQUEST::CURRENT_VALUE_REQUEST( $returnData );
-      REQUEST::BIND_PORTAL_PARAMS( $returnData );
+      REQUEST::CURRENT_VALUE_REQUEST( $bind_user_data );
+      REQUEST::BIND_PORTAL_PARAMS( $bind_user_data );
       print ( $portalKeys_QS );
 
     }
     if(  ( isset(  $portalKeys_IH ) ) == true )
     {
      
-      REQUEST::CURRENT_VALUE_REQUEST( $returnData );
-      REQUEST::BIND_PORTAL_PARAMS( $returnData );
+      REQUEST::CURRENT_VALUE_REQUEST( $bind_user_data );
+      REQUEST::BIND_PORTAL_PARAMS( $bind_user_data );
       print ( $portalKeys_IH );
 
     }
     if(  ( isset( $portalKeys_ID ) ) == true )
     {
 
-      REQUEST::CURRENT_VALUE_REQUEST( $returnData );
-      REQUEST::BIND_PORTAL_PARAMS( $returnData );
+      REQUEST::CURRENT_VALUE_REQUEST( $bind_user_data );
+      REQUEST::BIND_PORTAL_PARAMS( $bind_user_data );
       print ( $portalKeys_ID );
 
     }
@@ -370,9 +370,9 @@ $getCurrent     = current($returnDataName );
     endif;
    
      // FETCH VALIDATE FIELD EMPTY
-     $INPUT_HASCONTAINS               = (isset($returnData['INPUT_HASCONTAINS'])) ? $returnData['INPUT_HASCONTAINS'] : false;
+     $INPUT_HASCONTAINS               = (isset($bind_user_data['INPUT_HASCONTAINS'])) ? $bind_user_data['INPUT_HASCONTAINS'] : false;
      // FETCH VALIDATE IF EXIST OR ALREADY REGISTERED
-     $INPUT_HASERROR                  = $returnData['INPUT_DATAEXIST'];
+     $INPUT_HASERROR                  = $bind_user_data['INPUT_DATAEXIST'];
 
      /**
       *  _DEFINED table 
@@ -402,21 +402,21 @@ $getCurrent     = current($returnDataName );
       * @since 04.12.21
       * @version 1.0
      **/
-     foreach ($returnData['QUERY_STATEMENT'][0]    as $value) : $_xeQueryTable[]         = $value;  endforeach;
+     foreach ($bind_user_data['QUERY_STATEMENT'][0]    as $value) : $_xeQueryTable[]         = $value;  endforeach;
      /**
       *  _DEFINED user id
       *  BIND SESSION_REGISTERDATA_REQUEST
       * @since 04.12.21
       * @version 1.0
      **/
-     foreach ($returnData['QUERY_STATEMENT'][1][0] as $value) : $_xeInputFormRequest[]   = $value;  endforeach;
+     foreach ($bind_user_data['QUERY_STATEMENT'][1][0] as $value) : $_xeInputFormRequest[]   = $value;  endforeach;
      /**
       *  _DEFINED col name
       *  BIND SESSION_REGISTERDATA_REQUEST
       * @since 04.12.21
       * @version 1.0
      **/
-     foreach ($returnData['QUERY_STATEMENT'][2][0] as $value) : $_xeDbTableColRequest[]  = $value;  endforeach;
+     foreach ($bind_user_data['QUERY_STATEMENT'][2][0] as $value) : $_xeDbTableColRequest[]  = $value;  endforeach;
 
     /**
      * @param _DEFINED ARRAY TO STRING DATA
@@ -467,7 +467,7 @@ $getCurrent     = current($returnDataName );
      * @since v1.0
      *
      **/
-    if($stmt = $mySQLi->prepare($returnSQL) ) :
+    if($stmt = $connection->prepare($returnSQL) ) :
 
     /**
      * @param _select Bind variables to the prepared statement as parameters
@@ -520,7 +520,7 @@ $getCurrent     = current($returnDataName );
      * @since v1.0
      *
      **/
-    case ($dataOptionRequest == 'SESSION_ENCRYPTDATA_REQUEST' || $dataOptionRequest == 'DO_USER_ENCRYPTDATA_REGISTER') ? $dataOptionRequest : false;  
+    case ($request == 'SESSION_ENCRYPTDATA_REQUEST' || $request == 'DO_USER_ENCRYPTDATA_REGISTER') ? $request : false;  
 
    /**
      *
@@ -530,7 +530,7 @@ $getCurrent     = current($returnDataName );
      *
     **/
 
-    $requestKeysReturnData = array_keys($returnData);
+    $requestKeysReturnData = array_keys($bind_user_data);
 
     $portalKeys_RHC  = SYSTEM::BIND_VALIDATE_PORTAL_KEYS( $requestKeysReturnData[0], 'REGPASS_HASCONTAINS'  ,"<table border='1' width='100%'><tr><td> Invalid PARAMETER : <span class='par_error'>" . $requestKeysReturnData[0] . " </span> <br /><hr /> <i>Expect:</i> <b>'REGPASS_HASCONTAINS'  </b><br /> </td></tr></table>' ");
     $portalKeys_RH   = SYSTEM::BIND_VALIDATE_PORTAL_KEYS( $requestKeysReturnData[1], 'REGPASS_HASERROR'     ,"<table border='1' width='100%'><tr><td> Invalid PARAMETER : <span class='par_error'>" . $requestKeysReturnData[1] . " </span> <br /><hr /> <i>Expect:</i> <b>'REGPASS_HASERROR'     </b><br /> </td></tr></table>' ");
@@ -544,16 +544,16 @@ $getCurrent     = current($returnDataName );
     if(  ( isset( $portalKeys_RHC )  ) == true )
     {
 
-      REQUEST::CURRENT_VALUE_REQUEST( $returnData );
-      REQUEST::BIND_PORTAL_PARAMS( $returnData );
+      REQUEST::CURRENT_VALUE_REQUEST( $bind_user_data );
+      REQUEST::BIND_PORTAL_PARAMS( $bind_user_data );
       print ( $portalKeys_RHC );
 
     }
     if(  (  isset( $portalKeys_RH ) ) == true )
     {
 
-      REQUEST::CURRENT_VALUE_REQUEST( $returnData );
-      REQUEST::BIND_PORTAL_PARAMS( $returnData );
+      REQUEST::CURRENT_VALUE_REQUEST( $bind_user_data );
+      REQUEST::BIND_PORTAL_PARAMS( $bind_user_data );
       print ( $portalKeys_RH );
 
     }
@@ -561,8 +561,8 @@ $getCurrent     = current($returnDataName );
     if(  ( isset( $portalKeys_RHC  ) || isset( $portalKeys_RH ) ) == true )  : die;
     endif;
 
-      $SESSION_STATEMENT_REGPASS_HASERROR   = (isset($returnData['REGPASS_HASERROR'])) ? $returnData['REGPASS_HASERROR'] : false; 
-      $SESSION_ENCRYPTDATA_REQUEST          = SYSTEM::BIND_SESSION_ENCRYPTDATA_REQUEST( $returnData ); 
+      $SESSION_STATEMENT_REGPASS_HASERROR   = (isset($bind_user_data['REGPASS_HASERROR'])) ? $bind_user_data['REGPASS_HASERROR'] : false; 
+      $SESSION_ENCRYPTDATA_REQUEST          = SYSTEM::BIND_SESSION_ENCRYPTDATA_REQUEST( $bind_user_data ); 
 
       if($SESSION_STATEMENT_REGPASS_HASERROR  == $SESSION_ENCRYPTDATA_REQUEST) : return $SESSION_ENCRYPTDATA_REQUEST;
        else                                                                    : $SESSION_ENCRYPTDATA_REQUEST = $SESSION_ENCRYPTDATA_REQUEST;
@@ -578,7 +578,7 @@ $getCurrent     = current($returnDataName );
      * @since v1.0
      *
      **/
-     case ($dataOptionRequest == 'SESSION_ENCRYPTCONFIRM_REQUEST' || $dataOptionRequest == 'DO_USER_ENCRYPTCONFIRM_REGISTER') ? $dataOptionRequest : false;
+     case ($request == 'SESSION_ENCRYPTCONFIRM_REQUEST' || $request == 'DO_USER_ENCRYPTCONFIRM_REGISTER') ? $request : false;
 
    /**
      *
@@ -588,7 +588,7 @@ $getCurrent     = current($returnDataName );
      *
     **/
 
-    $requestKeysReturnData = array_keys($returnData);
+    $requestKeysReturnData = array_keys($bind_user_data);
 
     $portalKeys_CHC  = SYSTEM::BIND_VALIDATE_PORTAL_KEYS( $requestKeysReturnData[0], 'CONFIRMPASS_HASCONTAINS'  ,"<table border='1' width='100%'><tr><td> Invalid PARAMETER :<span class='par_error'> " . $requestKeysReturnData[0] . " </span> <br /><hr /> <i>Expect:</i> <b>'CONFIRMPASS_HASCONTAINS'  </b><br /> </td></tr></table>' ");
     $portalKeys_CH   = SYSTEM::BIND_VALIDATE_PORTAL_KEYS( $requestKeysReturnData[1], 'CONFIRMPASS_HASERROR'     ,"<table border='1' width='100%'><tr><td> Invalid PARAMETER :<span class='par_error'> " . $requestKeysReturnData[1] . " </span> <br /><hr /> <i>Expect:</i> <b>'CONFIRMPASS_HASERROR'     </b><br /> </td></tr></table>' ");
@@ -602,16 +602,16 @@ $getCurrent     = current($returnDataName );
     if(  ( isset( $portalKeys_CHC )  ) == true )
     {
 
-      REQUEST::CURRENT_VALUE_REQUEST( $returnData );
-      REQUEST::BIND_PORTAL_PARAMS( $returnData );
+      REQUEST::CURRENT_VALUE_REQUEST( $bind_user_data );
+      REQUEST::BIND_PORTAL_PARAMS( $bind_user_data );
       print ( $portalKeys_CHC );
 
     }
     if(  (  isset(  $portalKeys_CH  ) ) == true )
     {
 
-      REQUEST::CURRENT_VALUE_REQUEST( $returnData );
-      REQUEST::BIND_PORTAL_PARAMS( $returnData );
+      REQUEST::CURRENT_VALUE_REQUEST( $bind_user_data );
+      REQUEST::BIND_PORTAL_PARAMS( $bind_user_data );
       print (  $portalKeys_CH  );
 
     }
@@ -619,8 +619,8 @@ $getCurrent     = current($returnDataName );
     if(  ( isset( $portalKeys_CHC ) || isset($portalKeys_CH  ) ) == true )  : die;
     endif;
 
-      $SESSION_STATEMENT_ENCRYPTCONFIRM       = (isset($returnData['CONFIRMPASS_HASCONTAINS'])) ? $returnData['CONFIRMPASS_HASCONTAINS'] : false; 
-      $SESSION_ENCRYPTCONFIRM_REQUEST         = SYSTEM::BIND_SESSION_ENCRYPTCONFIRM_REQUEST( $returnData );
+      $SESSION_STATEMENT_ENCRYPTCONFIRM       = (isset($bind_user_data['CONFIRMPASS_HASCONTAINS'])) ? $bind_user_data['CONFIRMPASS_HASCONTAINS'] : false; 
+      $SESSION_ENCRYPTCONFIRM_REQUEST         = SYSTEM::BIND_SESSION_ENCRYPTCONFIRM_REQUEST( $bind_user_data );
  
       if($SESSION_STATEMENT_ENCRYPTCONFIRM  == $SESSION_ENCRYPTCONFIRM_REQUEST) : return $SESSION_ENCRYPTCONFIRM_REQUEST;
        else                                                                     : $SESSION_ENCRYPTCONFIRM_REQUEST = $SESSION_ENCRYPTCONFIRM_REQUEST;
@@ -636,7 +636,7 @@ $getCurrent     = current($returnDataName );
      * @since v1.0
      *
      **/
-    case ($dataOptionRequest == 'SESSION_PORTAL_REQUEST' || $dataOptionRequest == 'DO_USER_BEGIN_SESSION') ? $dataOptionRequest : false;
+    case ($request == 'SESSION_PORTAL_REQUEST' || $request == 'DO_USER_BEGIN_SESSION') ? $request : false;
         
     #
     # BEGIN OF PORTAL REQUEST
@@ -649,7 +649,7 @@ $getCurrent     = current($returnDataName );
      *
     **/
 
-    $requestKeysReturnData = array_keys($returnData);
+    $requestKeysReturnData = array_keys($bind_user_data);
 
     $portalKeys_QS  = SYSTEM::BIND_VALIDATE_PORTAL_KEYS( $requestKeysReturnData[0], 'QUERY_STATEMENT'           ,"<table border='1' width='100%'><tr><td> Invalid PARAMETER : <span class='par_error'>" . $requestKeysReturnData[0] . " </span> <br /><hr /> <i>Expect:</i> <b>'QUERY_STATEMENT'           </b><br /> </td></tr></table>' ");
     $portalKeys_UH  = SYSTEM::BIND_VALIDATE_PORTAL_KEYS( $requestKeysReturnData[1], 'USERNAME_HASCONTAINS'      ,"<table border='1' width='100%'><tr><td> Invalid PARAMETER : <span class='par_error'>" . $requestKeysReturnData[1] . " </span> <br /><hr /> <i>Expect:</i> <b>'USERNAME_HASCONTAINS'      </b><br /> </td></tr></table>' ");
@@ -670,64 +670,64 @@ $getCurrent     = current($returnDataName );
     if(  ( isset( $portalKeys_QS )  ) == true )
     {
 
-      REQUEST::CURRENT_VALUE_REQUEST( $returnData );
-      REQUEST::BIND_PORTAL_PARAMS( $returnData );
+      REQUEST::CURRENT_VALUE_REQUEST( $bind_user_data );
+      REQUEST::BIND_PORTAL_PARAMS( $bind_user_data );
       print ($portalKeys_QS );
 
     }
     if(  ( isset( $portalKeys_UH )  ) == true )
     {
 
-      REQUEST::CURRENT_VALUE_REQUEST( $returnData );
-      REQUEST::BIND_PORTAL_PARAMS( $returnData );
+      REQUEST::CURRENT_VALUE_REQUEST( $bind_user_data );
+      REQUEST::BIND_PORTAL_PARAMS( $bind_user_data );
       print ( $portalKeys_UH );
 
     }
     if(  ( isset($portalKeys_UE )  ) == true )
     {
 
-      REQUEST::CURRENT_VALUE_REQUEST( $returnData );
-      REQUEST::BIND_PORTAL_PARAMS( $returnData );
+      REQUEST::CURRENT_VALUE_REQUEST( $bind_user_data );
+      REQUEST::BIND_PORTAL_PARAMS( $bind_user_data );
       print ( $portalKeys_UE );
 
     }
     if(  ( isset( $portalKeys_PH )  ) == true )
     {
 
-      REQUEST::CURRENT_VALUE_REQUEST( $returnData );
-      REQUEST::BIND_PORTAL_PARAMS( $returnData );
+      REQUEST::CURRENT_VALUE_REQUEST( $bind_user_data );
+      REQUEST::BIND_PORTAL_PARAMS( $bind_user_data );
       print (  $portalKeys_PH );
 
     }
     if(  ( isset( $portalKeys_PE )  ) == true )
     {
 
-      REQUEST::CURRENT_VALUE_REQUEST( $returnData );
-      REQUEST::BIND_PORTAL_PARAMS( $returnData );
+      REQUEST::CURRENT_VALUE_REQUEST( $bind_user_data );
+      REQUEST::BIND_PORTAL_PARAMS( $bind_user_data );
       print (  $portalKeys_PE );
 
     }
     if(  ( isset( $portalKeys_NC )  ) == true )
     {
 
-      REQUEST::CURRENT_VALUE_REQUEST( $returnData );
-      REQUEST::BIND_PORTAL_PARAMS( $returnData );
+      REQUEST::CURRENT_VALUE_REQUEST( $bind_user_data );
+      REQUEST::BIND_PORTAL_PARAMS( $bind_user_data );
       print (  $portalKeys_NC );
 
     }
     if(  ( isset(  $portalKeys_NAC  )  ) == true )
     {
 
-      REQUEST::CURRENT_VALUE_REQUEST( $returnData );
-      REQUEST::BIND_PORTAL_PARAMS( $returnData );
+      REQUEST::CURRENT_VALUE_REQUEST( $bind_user_data );
+      REQUEST::BIND_PORTAL_PARAMS( $bind_user_data );
       print (  $portalKeys_NAC  );
 
     }
     if(  ( isset(  $portalKeys_UR  )  ) == true )
     {
 
-      REQUEST::CURRENT_VALUE_REQUEST( $returnData );
-      REQUEST::BIND_PORTAL_PARAMS( $returnData );
+      REQUEST::CURRENT_VALUE_REQUEST( $bind_user_data );
+      REQUEST::BIND_PORTAL_PARAMS( $bind_user_data );
       print (   $portalKeys_UR  );
 
     }
@@ -743,28 +743,28 @@ $getCurrent     = current($returnDataName );
      *
     **/ 
     // ASSIGNED QUERY FOR BINDING METHOD
-    $QUERY_STATEMENT_PORTAL   =     (!is_null($returnData['QUERY_STATEMENT'][1][0])) ? $returnData['QUERY_STATEMENT'][1][0] : false; 
+    $QUERY_STATEMENT_PORTAL   =     (!is_null($bind_user_data['QUERY_STATEMENT'][1][0])) ? $bind_user_data['QUERY_STATEMENT'][1][0] : false; 
 
     // ASSIGNED CONTSTANT USERFORM HAVE VALUE METHOD
-    $USERNAME_HASCONTAINS     =     isset($returnData['USERNAME_HASCONTAINS']) ? $returnData['USERNAME_HASCONTAINS'] : '';
+    $USERNAME_HASCONTAINS     =     isset($bind_user_data['USERNAME_HASCONTAINS']) ? $bind_user_data['USERNAME_HASCONTAINS'] : '';
 
     // ASSIGNED CONTSTANT USERFORM ERROR FOR EMPTY FORM VALUE METHOD
-    $USERNAME_ERROR           =     $returnData['USERNAME_ERROR'];
+    $USERNAME_ERROR           =     $bind_user_data['USERNAME_ERROR'];
 
     // ASSIGNED CONTSTANT PASSWORD HAVE VALUE METHOD
-    $PASSWORD_HASCONTAINS     =     $returnData['PASSWORD_HASCONTAINS'];
+    $PASSWORD_HASCONTAINS     =     $bind_user_data['PASSWORD_HASCONTAINS'];
 
     // ASSIGNED CONTSTANT PASSWORD ERROR FOR EMPTY FORM VALUE METHOD
-    $PASSWORD_ERROR           =     $returnData['PASSWORD_ERROR'];
+    $PASSWORD_ERROR           =     $bind_user_data['PASSWORD_ERROR'];
 
     // ASSIGNED CONTSTANT USERNAME OR PASSWORD IS NOT SYSTEM ASSOCIATED FORM VALUE METHOD
-    $NOTEXIST_CREDENTIAL      =     $returnData['NOTEXIST_CREDENTIAL'];
+    $NOTEXIST_CREDENTIAL      =     $bind_user_data['NOTEXIST_CREDENTIAL'];
 
     // ASSIGNED CONTSTANT USERNAME OR PASSWORD IS NOT EXIST SYSTEM ASSOCIATED FORM VALUE METHOD
-    $NOTASSOCIATED_CREDENTIAL =     $returnData['NOTASSOCIATED_CREDENTIAL'];
+    $NOTASSOCIATED_CREDENTIAL =     $bind_user_data['NOTASSOCIATED_CREDENTIAL'];
 
     // ASSIGNED REDIRECT TO A CERTAIN PAGE FORM VALUE METHOD
-    $USER_REDIRECT            =     $returnData['USER_REDIRECT'];   
+    $USER_REDIRECT            =     $bind_user_data['USER_REDIRECT'];   
 
     /**
      *
@@ -775,7 +775,7 @@ $getCurrent     = current($returnDataName );
     **/
     $_xeQueryTable = [];
 
-    foreach ($returnData['QUERY_STATEMENT'][0] as $value) : $_xeQueryTable[] = $value;  endforeach;
+    foreach ($bind_user_data['QUERY_STATEMENT'][0] as $value) : $_xeQueryTable[] = $value;  endforeach;
     
     // DEFINED ARRAY TO STRING DATA
     $_xeQueryTable = implode("", $_xeQueryTable);
@@ -796,7 +796,7 @@ $getCurrent     = current($returnDataName );
      * @since v1.0
      *
     **/
-     $removeCurrent = array_shift( $returnData['QUERY_STATEMENT'][1][0] );
+     $removeCurrent = array_shift( $bind_user_data['QUERY_STATEMENT'][1][0] );
   
    /**
      *
@@ -807,7 +807,7 @@ $getCurrent     = current($returnDataName );
     **/
      $_xeQueryRequest = [];
 
-     foreach ($returnData['QUERY_STATEMENT'][1][0] as $value) : $_xeQueryRequest[] = ", ".$value; endforeach;
+     foreach ($bind_user_data['QUERY_STATEMENT'][1][0] as $value) : $_xeQueryRequest[] = ", ".$value; endforeach;
      
      // DEFINED MERGE DATA ARRAY
      $_xeQueryRequestData = implode("", $_xeQueryRequest);
@@ -883,7 +883,7 @@ $getCurrent     = current($returnDataName );
         * @since v1.0
         *
        **/
-        if($stmt = $mySQLi->prepare($returnSQL)) : 
+        if($stmt = $connection->prepare($returnSQL)) : 
      
           /**
            *
@@ -996,7 +996,7 @@ $getCurrent     = current($returnDataName );
    * @since v1.0
    *
   **/
-   $mySQLi->close();
+   $connection->close();
 
     #
     # END OF PORTAL REQUEST
@@ -1025,12 +1025,12 @@ $getCurrent     = current($returnDataName );
     * @since v1.0
     *
    **/ 
-    public static function RETURNSQL(string $tb_name, array $queryStatements, array $col_name = null)
+    public static function RETURNSQL(string $table, array $col_id, array $col_name = null)
     {
-       return $returnSQL = [
+       return  [
 
-        [$tb_name]
-       ,[$queryStatements]
+        [$table]
+       ,[$col_id]
        ,[$col_name]
 
       ];
@@ -1088,19 +1088,18 @@ $getCurrent     = current($returnDataName );
     * @since v1.0
     *
    **/ 
-  public static function BINDEXECUTE(string $pageRequestTo, mixed $errors_msg = '')
+  public static function BINDEXECUTE(string $redirect, mixed $report = '')
   {
    
   global $stmt;
 
-   if($stmt->execute()) : SYSTEM::REDIRECTTO($pageRequestTo);
+   if($stmt->execute()) : SYSTEM::REDIRECTTO($redirect);
     else : 
 
-      if(empty($errors_msg)) {
-        $errors_msg = ERROR_DEVELOPER_CONCERN;
-        return $errors_msg;
+      if(empty($report)) {
+        return ERROR_DEVELOPER_CONCERN;
       } else {
-        return  $errors_msg;
+        return $report;
       }
 
    endif;

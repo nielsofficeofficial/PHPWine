@@ -7,11 +7,11 @@ use \PHPWine\VanillaFlavour\System\Validation;
 use \PHPWine\VanillaFlavour\Optimizer\Form;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.2 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.2 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -40,7 +40,7 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.2
+ * @version   v1.1.4
  *
  */
 
@@ -55,7 +55,7 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
  define('DB_NAME', 'auth');
 
   // Define new instance connection
-  $mySQLi = new mysqli( DB_SERVER , DB_USERNAME, DB_PASSWORD, DB_NAME);
+  $connection = new mysqli( DB_SERVER , DB_USERNAME, DB_PASSWORD, DB_NAME);
 
  #############################################################################################################
  # THIS IS FOR DEMO DATABASE CONNECTION !!! BUILD YOUR OWN DATABSE CONENCTION BASE ON YOUR CURRENT FRAMEWORK !
@@ -93,12 +93,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
      *
      **/
     $un               =   AUTH::$DATAFORM = ["username","Please enter a username."];
-    $username         =   AUTH::HASCONTAINS($un);  
-    $username_err     =   AUTH::ERROR($username, $un);    
+    $username         =   AUTH::HASCONTAINS( input: $un);  
+    $username_err     =   AUTH::ERROR( input: $username, require : $un);    
 
     $ue               =   AUTH::$DATAFORM = ["email","Please enter a email."];
-    $email            =   AUTH::HASCONTAINS($ue);  
-    $email_err        =   AUTH::ERROR($email, $ue);    
+    $email            =   AUTH::HASCONTAINS( input: $ue);  
+    $email_err        =   AUTH::ERROR( input: $email, require: $ue);    
+
+   /**
+    * @param _Bind process request mobile from users
+    * Bring at the very bottom as mobile accept as null value, check your database table 
+    **/ 
+    $um               =   AUTH::$DATAFORM = ["mobile","Please enter a Phone."];
+    $mobile           =   AUTH::HASCONTAINS( input: $um);  
+    $mobile_err       =   AUTH::ERROR( input: $mobile, require: $um);    
 
    /**    
      *
@@ -108,20 +116,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
      *
      **/
     $up               =   AUTH::$DATAFORM = ["password","Please enter a password..."];
-    $userpassword     =   AUTH::HASCONTAINS($up);  
-    $userpassword_err =   AUTH::ERROR($userpassword , $up);  
+    $userpassword     =   AUTH::HASCONTAINS( input : $up);  
+    $userpassword_err =   AUTH::ERROR( input: $userpassword , require : $up);  
 
     $upc              =   AUTH::$DATAFORM = ["confirm_password","Please confirm password..."];
-    $conpassword      =   AUTH::HASCONTAINS($upc);  
-    $conpassword_err  =   AUTH::ERROR( $conpassword, $upc);  
+    $conpassword      =   AUTH::HASCONTAINS( input : $upc);  
+    $conpassword_err  =   AUTH::ERROR( input : $conpassword,  require : $upc);  
 
-   /**
-    * @param _Bind process request mobile from users
-    * Bring at the very bottom as mobile accept as null value, check your database table 
-    **/ 
-    $um               =   AUTH::$DATAFORM = ["mobile","Please enter a Phone."];
-    $mobile           =   AUTH::HASCONTAINS($um);  
-    $mobile_err       =   AUTH::ERROR($mobile, $um);    
+
 
    /**
     *  VALIDATE BIND BEGIN 
@@ -131,19 +133,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     * @param _Bind process request unsername from users
     **/ 
 
-    $auth_un_bind  = AUTH::BIND($mySQLi, 
-    [   
+    $auth_un_bind  = AUTH::BIND( connection : $connection, 
+
+    bind_user_data : [   
     
         'QUERY_STATEMENT'    => AUTH::RETURNSQL('users_log',["id"],["username"])
        ,'INPUT_HASCONTAINS'  => $username  
        ,'INPUT_DATAEXIST'    => "This {$username} was already used."
   
-    ], REQUEST::SESSION_REGISTERDATA_REQUEST ); 
+    ], request : REQUEST::SESSION_REGISTERDATA_REQUEST ); 
 
   /**
     * @param _Bind process request email from users
     **/ 
-    $auth_ue_bind  = AUTH::BIND($mySQLi, 
+    $auth_ue_bind  = AUTH::BIND($connection, 
     [   
     
         'QUERY_STATEMENT'    => AUTH::RETURNSQL('users_log',["id"],["email"])
@@ -156,19 +159,33 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     * @param _Bind process request mobile from users
     * Bring at the very bottom as mobile accept as null value, check your database table 
     **/ 
-    $auth_um_bind  = AUTH::BIND($mySQLi, 
+    $auth_um_bind  = AUTH::BIND($connection, 
     [   
     
-        'QUERY_STATEMENT'    => AUTH::RETURNSQL('users_log',["id"],["mobile"])
+        'QUERY_STATEMENT'    => AUTH::RETURNSQL( table : 'users_log', col_id : ["id"], col_name : ["mobile"])
        ,'INPUT_HASCONTAINS'  => $mobile  
        ,'INPUT_DATAEXIST'    => "This {$mobile} was already used."
   
     ], REQUEST::SESSION_REGISTERDATA_REQUEST); 
 
    /**
+    * @param _Validate information request email from users
+    * Bring at the very bottom as mobile accept as null value, check your database table 
+    **/ 
+    $catch_um = AUTH::CATCH(input_error :  $mobile_err , bind_error : $auth_um_bind, valid_type :  $valid_type = [
+       
+      NUMERICTYPE   => ['mobile' ,'Phone must be numeric ex. 123'],
+      MAXLENGTH     => ['mobile' , 11 ,'Mobile number must be maximum 11 Digit!'],
+      MINLENGTH     => ['mobile' , 4  ,'Mobile number must greater than 4 Digit!']
+  
+   ]);
+    
+
+
+   /**
     * @param _Validate information request unsername from users
     **/ 
-    $catch_un       = AUTH::CATCH( $username_err, $auth_un_bind, $validType = [
+    $catch_un       = AUTH::CATCH( $username_err, $auth_un_bind, $valid_type = [
        
      MINLENGTH      => [ 'username', 7, 'MIN of 7 characters!' ]
       
@@ -177,7 +194,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
    /**
     * @param _Validate information request email from users
     **/ 
-    $catch_ue = AUTH::CATCH($email_err, $auth_ue_bind, $validType = [
+    $catch_ue = AUTH::CATCH($email_err, $auth_ue_bind, $valid_type = [
        
       VALID_EMAIL   => ['email','must be valid email']
  
@@ -186,7 +203,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
    /**
     * @param _Validate information request passwords from users
     **/ 
-    $catch_up = VALIDATION::FORM( $userpassword_err, $validType = [
+    $catch_up = VALIDATION::FORM( input_error: $userpassword_err, valid_type: $valid_type = [
       
       MINLENGTH        => ['password', 8,'Password must have atleast 8 characters.'],
       VALIDPASSWORD    => ['password',   'Requere password has at least 8 characters + one number + one upper case letter + one lower case letter and one special character.' ],
@@ -194,18 +211,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     
     ]);
 
-   /**
-    * @param _Validate information request email from users
-    * Bring at the very bottom as mobile accept as null value, check your database table 
-    **/ 
-    $catch_um = AUTH::CATCH( $mobile_err ,$auth_um_bind, $validType = [
-       
-      NUMERICTYPE   => ['mobile' ,'Phone must be numeric ex. 123'],
-      MAXLENGTH     => ['mobile' , 11 ,'Mobile number must be maximum 11 Digit!'],
-      MINLENGTH     => ['mobile' , 4  ,'Mobile number must greater than 4 Digit!']
-  
-   ]);
-    
+
         /**
          * @param _process_Check input errors empty
         **/    
@@ -215,7 +221,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
              * @param _Prepare insert statement clean up sql
             **/            
 
-            if($stmt = $mySQLi->prepare( AUTH::BINDSQL( 'users_log', ['username', 'email', 'mobile', 'password'] , ['?', '?', '?' , '?']) ) ) : 
+            if($stmt = $connection->prepare( AUTH::BINDSQL( 'users_log', ['username', 'email', 'mobile', 'password'] , ['?', '?', '?' , '?']) ) ) : 
 
                 /**
                 * @param _Bind variables statement as parameters
@@ -233,7 +239,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                 /**
                 * @param _execute the prepared statement /  redirect
                 **/ 
-                AUTH::BINDEXECUTE('login', ERROR_DEVELOPER_CONCERN);        
+                AUTH::BINDEXECUTE( redirect : 'login', report : ERROR_DEVELOPER_CONCERN);        
    
                /**
                 * @param _Close statement
@@ -247,7 +253,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
         /**
          * @param _Close connection
         **/
-        $mySQLi->close();
+        $connection->close();
    
  }
 
@@ -283,7 +289,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   * @since v1.0
   *
   **/ 
-  _FORM(setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 'POST']));
+  _FORM( attr : setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 'POST']));
   
  /**
   *
@@ -310,7 +316,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
  _xdiv('id-email_from_group',
  
     FORM::LABEL('label-id-e'  , 'Email'       , FUNC_ASSOC) .__BR(FUNC_ASSOC)
-   .FORM::TEXT('id-email'     , 'class-email' , [['name', 'value'] , ['email', DOIF(is_null($catch_um), $mobile, FUNC_ASSOC)]], FUNC_ASSOC ) 
+   .FORM::TEXT('id-email'     , 'class-email' , [['name', 'value'] , ['email',  DOIF(is_null($catch_ue), $email, FUNC_ASSOC)  ]], FUNC_ASSOC ) 
 
   ,setElemAttr(['class'],['email_from_group'])
  );
@@ -325,7 +331,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
  _xdiv('id-mobile_from_group',
 
    FORM::LABEL('label-id-m'  , 'Mobile'       , FUNC_ASSOC) .__BR(FUNC_ASSOC)
-  .FORM::TEXT('id-mobile'    , 'class-mobile' , [['name', 'value'],['mobile', DOIF(is_null($catch_ue), $email, FUNC_ASSOC)]], FUNC_ASSOC ) 
+  .FORM::TEXT('id-mobile'    , 'class-mobile' , [['name', 'value'],['mobile', DOIF(is_null($catch_um), $mobile, FUNC_ASSOC) ]], FUNC_ASSOC ) 
 
   ,setElemAttr(['class'],['mobile_from_group'])
  );

@@ -5,11 +5,11 @@ use \PHPWine\VanillaFlavour\System\Request;
 use \PHPWine\VanillaFlavour\Optimizer\Form;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.2 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.2 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -38,7 +38,7 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.2
+ * @version   v1.1.4
  *
  */
 
@@ -53,7 +53,7 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
     define('DB_NAME', 'auth');
 
      // Define new instance connection
-     $mySQLi = new mysqli( DB_SERVER , DB_USERNAME, DB_PASSWORD, DB_NAME);
+     $connection = new mysqli( DB_SERVER , DB_USERNAME, DB_PASSWORD, DB_NAME);
   
 #############################################################################################################
  # THIS IS FOR DEMO DATABASE CONNECTION !!! BUILD YOUR OWN DATABSE CONENCTION BASE ON YOUR CURRENT FRAMEWORK !
@@ -116,7 +116,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") :
     * @since v1.0
     *
     **/ 
-    $auth_err    = AUTH::BIND($mySQLi, 
+    $auth_err    = AUTH::BIND($connection, 
     [   
        
         'QUERY_STATEMENT'         => AUTH::RETURNSQL('users_log',['username','email','mobile','password','id','created_at'])

@@ -6,11 +6,11 @@
  USE \PHPWine\VanillaFlavour\Optimizer\Html AS Optimizer;
  
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.3 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.3 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -39,7 +39,7 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.3
+ * @version   v1.1.4
  *
  *
  * @method belongs_to(); 
@@ -166,8 +166,8 @@ public function bring_to(
   */
 public function belongs_to(
 
-    $thisPage     = null
-   ,$page_array   = null
+    array|string $thisPage     = null
+   ,array|string $page_array   = null
 
  )
  {
@@ -210,7 +210,7 @@ public function GetKeyFolderPath() {
   **/
   public function BREAK(
 
-      $assoc      =  null
+    mixed $assoc      =  null
 
   )
   { 
@@ -232,7 +232,7 @@ public function GetKeyFolderPath() {
   **/
    public function LINE(
 
-      $assoc     =  null
+     mixed $assoc     =  null
 
   )
   { 
@@ -308,7 +308,7 @@ public function SPACE() {
   * Build Beautiful and Maintainable
   *
   **/  
-  public function SetFileExtension(
+  public function setFileExtension(
 
       $argu     = null
 
@@ -334,17 +334,17 @@ public function SPACE() {
  * Html::_ELEMENT('http-equiv','meta', SetElemAttr(['http-equiv','content'],['X-UA-Compatible','IE=edge']));
  *
  **/ 
- public function SetElemAttr(
+ public function setElemAttr(
 
-      $array_set_1
-     ,$array_set_2
+      array $attr_type
+     ,array $array_set_2
 
   ) 
   { 
    
      return function_exists(__SetElemAttr__) ? 
 
-        parent::set_Element_Attr($array_set_1,$array_set_2) : 
+        parent::set_Element_Attr($attr_type,$array_set_2) : 
 
            $this->EnhanceeCoreErrorMsg();     
  
@@ -361,10 +361,10 @@ public function SPACE() {
   **/
   public function __magicELSE(
 
-      $condition     =  null
-     ,$if_result     =  null
-     ,$else_result   =  null
-     ,$assoc         =  null
+      bool  $condition     =  null
+     ,mixed $if_result     =  null
+     ,mixed $else_result   =  null
+     ,mixed $assoc         =  null
 
    )
    { 
@@ -411,8 +411,8 @@ public function SPACE() {
   **/
    public function PERFORM(
 
-      $str     =  null
-     ,$assoc   =  null
+      mixed $str     =  null
+     ,mixed $assoc   =  null
 
   )
   { 
@@ -433,8 +433,8 @@ public function SPACE() {
   **/
    public function STRING(
 
-      $str     =  null
-     ,$assoc   =  null
+      string $str     =  null
+     ,mixed $assoc   =  null
 
   )
   { 
@@ -459,15 +459,15 @@ public function SPACE() {
   */
 public function ATTR(
 
-    $PARAM__
-   ,$quickStart__
+    string $tag 
+   ,array $attr
 
  )
  {
 
   return function_exists(__ATTR__) ? 
 
-    $this->cpe_FileHander_hdr($PARAM__, $quickStart__) : 
+    $this->cpe_FileHander_hdr($tag, $attr) : 
 
       $this->PERFORM($this->Enhance_ErrorMsg_att()); 
 
@@ -485,18 +485,18 @@ public function ATTR(
   */
 public function ELEM(
 
-    $Element__     =  null
-   ,$value__       =  null
-   ,$elemAttr__    =  null
-   ,$elemId__      =  null
-   ,$elemClass__   =  null
+    $elem    =  null
+   ,$value   =  null
+   ,$attr    =  null
+   ,$id      =  null
+   ,$class   =  null
 
  )
  {
    
  return function_exists(__ELEM__) ? 
 
-    $this->cpe_FileHandler_custom_elem($Element__, $value__, $elemAttr__, $elemId__, $elemClass__) : 
+    $this->cpe_FileHandler_custom_elem($elem, $value, $attr, $id, $class) : 
 
       $this->PERFORM($this->Enhance_ErrorMsg_att()); 
  }
@@ -531,7 +531,7 @@ public function ELEM(
   */
 public function GETFROM(
 
-    $rPwhitch_to_swicth
+     $rPwhitch_to_swicth
     ,$gP_whitch_to_fetch
 
 
@@ -632,28 +632,28 @@ private function cpe_xib6_FileHandler_belongs_to($page, $page_file)  {
   * @since 27.10.2020
   *
   **/
-private function cpe_FileHander_hdr($PARAM__, $quickStart__) {
+private function cpe_FileHander_hdr($tag, $attr) {
   
   # CHECK_IF_THE_QUICKSTART_vAR_IS_IN_ARRAY_AND_IF_IT_IS_TRUE
   # DO_ARRAY_RETURN_ESLE_SINGLE_VALUE
-  is_array($quickStart__) ? $quickStart__ = $quickStart__ : $quickStart_ = $quickStart__;
+  is_array($attr) ? $attr = $attr : $quickStart_ = $attr;
   
   # CHECK THE PARAMTERS IF EQUAL TOO GIVEN REQUIRED PARAMETER 
-  switch ($PARAM__) {
+  switch ($tag) {
 
      case __META__:
        
-       parent::cpe_FileJandler_meta($quickStart__, $PARAM__);
+       parent::cpe_FileJandler_meta($attr, $tag);
        break;
 
      case __LINK__:
        
-       parent::cpe_FileJandler_link($quickStart__, $PARAM__);
+       parent::cpe_FileJandler_link($attr, $tag);
        break;     
 
      case __SCRIPT__:
        
-       parent::cpe_FileJandler_script($quickStart__, $PARAM__);
+       parent::cpe_FileJandler_script($attr, $tag);
        break;   
 
      case __TITLE__:
@@ -663,17 +663,17 @@ private function cpe_FileHander_hdr($PARAM__, $quickStart__) {
 
      case __CUSTOM_END__:
        
-       parent::cpe_FileJandler_cutom_elem_inline($quickStart__, $PARAM__);
+       parent::cpe_FileJandler_cutom_elem_inline($attr, $tag);
        break;  
 
      case __BEGIN_CUSTOM_END__:
        
-       parent::cpe_FileJandler_cutom_elem_closing_tag($quickStart__, $PARAM__);
+       parent::cpe_FileJandler_cutom_elem_closing_tag($attr, $tag);
        break;  
 
      case '_xhtml_modify':
        
-       parent::cpe_FileJandler_doctype(strtolower($quickStart__));
+       parent::cpe_FileJandler_doctype(strtolower($attr));
        break; 
 
      default:
@@ -732,10 +732,10 @@ private function cps_ixb6_FileHandler_bring_to($config=null, $fileName=null, $ex
   * @since 08.11.2020
   *
   **/
-private function cpe_FileHandler_custom_elem($Element__, $value__, $elemAttr__, $elemId__, $elemClass__) {
+private function cpe_FileHandler_custom_elem($elem, $value, $attr, $id, $class) {
   
   # RETURN ELEMENT CUSTOM HTML 
-  return parent::cpe_custom_elements($Element__, $value__, $elemAttr__, $elemId__, $elemClass__);
+  return parent::cpe_custom_elements($elem, $value, $attr, $id, $class);
   
 }
 

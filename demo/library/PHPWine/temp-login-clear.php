@@ -13,8 +13,8 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
     define('DB_PASSWORD', '');
     define('DB_NAME', 'auth');
 
-    // Define new instance connection
-    $mySQLi = new mysqli( DB_SERVER , DB_USERNAME, DB_PASSWORD, DB_NAME);
+     // Define new instance connection
+     $connection = new mysqli( DB_SERVER , DB_USERNAME, DB_PASSWORD, DB_NAME);
   
 #############################################################################################################
  # THIS IS FOR DEMO DATABASE CONNECTION !!! BUILD YOUR OWN DATABSE CONENCTION BASE ON YOUR CURRENT FRAMEWORK !
@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") :
     $password     = AUTH::HASCONTAINS($pw);  
     $err_password = AUTH::ERROR($password, $pw);
 
-    $auth_err    = AUTH::BIND($mySQLi, 
+    $auth_err    = AUTH::BIND($connection, 
     [   
        
         'QUERY_STATEMENT'         => AUTH::RETURNSQL('users_log',['username','email','mobile','password','id','created_at'])
@@ -48,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") :
 
     ], REQUEST::SESSION_PORTAL_REQUEST ); 
 
-  endif;
+  endif;  
 
   $sets_eCatch = _xUL( 'id-eCatch_err' ,
    
@@ -56,41 +56,41 @@ if($_SERVER["REQUEST_METHOD"] == "POST") :
   .DOIF( !empty($err_password)   ,ELEM('li' ,$err_password ,setElemAttr(['class'],['err_password_msg'])) ,FUNC_ASSOC)
   .DOIF( !empty($auth_err)       ,ELEM('li' ,$auth_err     ,setElemAttr(['class'],['err_password_msg'])) ,FUNC_ASSOC)
  
-  ,null
-  ,'eCatch_error'
-  ,'end-of-id-eCatch_err'
-  ,FUNC_ASSOC
+ ,null
+ ,'eCatch_error'
+ ,'end-of-id-eCatch_err'
+ ,FUNC_ASSOC
  
-  );
+);
 
-   echo (!empty($sets_eCatch)) ? $sets_eCatch : ''; 
+echo (!empty($sets_eCatch)) ? $sets_eCatch : ''; 
 
   _FORM(setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 'POST']));
-
+ 
   _xDIV( 'id-login',
-    FORM::LABEL('label-id-un' ,'Username/Email/Mobile' ,FUNC_ASSOC ) .__BR(FUNC_ASSOC)
-   .FORM::TEXT('id-username'  ,'class-username'        ,[['name', 'value'] ,['username',  (isset($_COOKIE['username'])) ? $_COOKIE['username'] :  $username ]], FUNC_ASSOC ) 
+     FORM::LABEL('label-id-un'  , 'Username/Email/Mobile' , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
+    .FORM::TEXT('id-username'   , 'class-username'        , [['name', 'value'] , ['username',  (isset($_COOKIE['username'])) ? $_COOKIE['username'] :  $username ]], FUNC_ASSOC ) 
     
    ,setElemAttr(['class'],['username_from_group'])
   );
 
-  _xDIV( 'login-password',
-    FORM::LABEL('label-id-un'    ,'Password'        ,FUNC_ASSOC ) .__BR(FUNC_ASSOC)
-   .FORM::PASSWORD('id-username' ,'class-username'  ,[['name', 'value'] ,['password', (isset($_COOKIE['password'])) ? $_COOKIE['password'] :  $password ]], FUNC_ASSOC ) 
+ _xDIV( 'login-password',
+    FORM::LABEL('label-id-un'    , 'Password'        , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
+   .FORM::PASSWORD('id-username' , 'class-username'  , [['name', 'value'] , ['password', (isset($_COOKIE['password'])) ? $_COOKIE['password'] :  $password ]], FUNC_ASSOC ) 
 
-   ,setElemAttr(['class'],['username_from_group'])
+  ,setElemAttr(['class'],['username_from_group'])
+ );
+
+  _xDIV('checkbox-remeberme',
+     FORM::CHECKBOX('checkbox' , 'class-checkbox' , [['name', ''] , ['remember', (isset($_COOKIE["username"])) ? 'checked' : false ] ], FUNC_ASSOC ) 
+    .FORM::LABEL('label-id-un' , 'Remember me'    , FUNC_ASSOC ) 
+    
+   ,setElemAttr(['class'],['rememberme_from_group'])
   );
 
-   _xDIV('checkbox-remeberme',
-    FORM::CHECKBOX('checkbox' ,'class-checkbox' ,[['name', ''] ,['remember', (isset($_COOKIE["username"])) ? 'checked' : false ] ], FUNC_ASSOC ) 
-   .FORM::LABEL('label-id-un' ,'Remember me'    ,FUNC_ASSOC ) 
-    
-    ,setElemAttr(['class'],['rememberme_from_group'])
-   );
-
-   _xDIV( 'id-submit' ,FORM::BUTTONS( 'id-conPassword' ,'class-submit' ,[['value'],['Submit']], FUNC_ASSOC ) ,setElemAttr(['class'],['submit_from_group']));
-   _xDIV( 'singup-id' ,ELEM('p','Don\'t have an account?'.ELEM('a','Sign up now',[['href'],['register.php']]) ));
+  _xDIV('id-submit', FORM::BUTTONS( 'id-conPassword','class-submit', [['value'],['Submit']], FUNC_ASSOC ) ,setElemAttr(['class'],['submit_from_group']));
+  
+  _xDIV( 'singup-id', ELEM('p','Don\'t have an account?'.ELEM('a','Sign up now',[['href'],['register.php']]) ));
 
 
  xFORM(" END Of the form ");
- 

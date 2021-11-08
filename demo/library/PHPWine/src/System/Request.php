@@ -2,11 +2,11 @@
 <?php
   
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.3 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.3 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -35,7 +35,7 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.3
+ * @version   v1.1.4
  *
  */
 
@@ -849,7 +849,7 @@ Class Request {
   * @since v1.3
   * 
  **/
-public static function report_dump($VALIDTYPE, $FIRS_ARGUMENT)
+public static function report_dump($valid_type, $FIRS_ARGUMENT)
  {
 
    print ("<style> span.par_error {  color: #cc4242; }  span.par_right{ color: #64D215;}
@@ -863,7 +863,7 @@ public static function report_dump($VALIDTYPE, $FIRS_ARGUMENT)
    print("<h3> Current VALUES </h3>");
    print "<table border='1' width='100%' ></table><tr><td>";
    print "<pre style='padding: 2% 2%;'>";
-   print_r($VALIDTYPE);
+   print_r($valid_type);
    print "</pre>";
    print "<br />";
    print "</td></tr></table>";
@@ -871,12 +871,12 @@ public static function report_dump($VALIDTYPE, $FIRS_ARGUMENT)
    print("<h3> Current DATA TYPE & VALUES </h3>");
    print "<table border='1' width='100%' padding ='2% 5%'><tr><td>";
    print "<pre style='padding: 2% 2%;'>";
-   var_dump($VALIDTYPE[ $FIRS_ARGUMENT ]);
+   var_dump($valid_type[ $FIRS_ARGUMENT ]);
    print "</pre>";
    print "</td></tr></table>";
    print "<br />";
 
-   foreach($VALIDTYPE[ $FIRS_ARGUMENT ] as $val ) :  
+   foreach($valid_type[ $FIRS_ARGUMENT ] as $val ) :  
      
      if(is_integer($val))          :  print "Data Type int|numeric : {$val} <br /> ";
         elseif(is_string($val))    :  print "Data Type String : {$val} <br /> ";
@@ -894,20 +894,20 @@ public static function report_dump($VALIDTYPE, $FIRS_ARGUMENT)
     * @since v1.2
     *
    **/ 
-  public static function CURRENT_VALUE_REQUEST($returnData)
+  public static function CURRENT_VALUE_REQUEST($bind_user_data)
   {
 
     print("<h3> Current VALUES </h3>");
     print "<table border='1' width='100%'></table>";
     print "<pre style='padding: 2% 2%;'>";
-    print_r( $returnData );
+    print_r( $bind_user_data );
     print "</pre>";
   
 
     print("<h3> Current DATA TYPE & VALUES </h3>");
     print "<table border='1' width='100%' padding ='2% 5%'><tr><td>";
     print "<pre style='padding: 2% 2%;'>";
-    var_dump( $returnData );
+    var_dump( $bind_user_data );
     print "</pre>";
     print "</td></tr></table>";
 
@@ -920,7 +920,7 @@ public static function report_dump($VALIDTYPE, $FIRS_ARGUMENT)
     * @since v1.2
     *
    **/ 
-  public static function BIND_PORTAL_PARAMS($returnData)
+  public static function BIND_PORTAL_PARAMS($bind_user_data)
   {
    
     print ("<style> span.par_error {  color: #cc4242; }
@@ -933,7 +933,7 @@ public static function report_dump($VALIDTYPE, $FIRS_ARGUMENT)
 
    Print "<h3>Current parameters: </h3>";
    
-   foreach($returnData as $val => $params) : print  $val . "<br />"; endforeach;
+   foreach($bind_user_data as $val => $params) : print  $val . "<br />"; endforeach;
  
   }
  

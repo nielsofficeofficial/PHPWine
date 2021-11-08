@@ -5,11 +5,11 @@ USE \PHPWine\VanillaFlavour\optimizer\Html AS Optimzer;
 USE \PHPWine\VanillaFlavour\optimizer\Enhancers AS PHPFileHandler;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.3 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.3 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -38,7 +38,7 @@ USE \PHPWine\VanillaFlavour\optimizer\Enhancers AS PHPFileHandler;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.3
+ * @version   v1.1.4
  *
  *
  * @method belongs_to(); 
@@ -449,8 +449,8 @@ function SetFileExT(
   **/
 function SetElemAttr(
 
-    array $array_set_1
-   ,array $array_set_2
+    array $attr_type
+   ,array $attr_value
 
  )
  {
@@ -472,7 +472,7 @@ function SetElemAttr(
 
  return method_exists($Enhancer, 'SetElemAttr') ? 
 
-    $Enhancer->SetElemAttr($array_set_1, $array_set_2) : 
+    $Enhancer->SetElemAttr($attr_type, $attr_value) : 
 
        PERFORM(erorrMessage());
 
@@ -487,8 +487,8 @@ function SetElemAttr(
   **/
 function ATTR(
 
-   $PARAM__
-  ,$quickStart__
+   $tag
+  ,$attr
 
  )
  {
@@ -510,7 +510,7 @@ function ATTR(
  
  return method_exists($Enhancer, 'ATTR') ? 
 
-    $Enhancer->ATTR($PARAM__, $quickStart__) : 
+    $Enhancer->ATTR($tag, $attr) : 
 
        PERFORM(erorrMessage());
 
@@ -525,11 +525,11 @@ function ATTR(
   **/
 function ELEM(
 
-    string        $Element__    =  null
-   ,mixed         $value__      =  null
-   ,array|string  $elemAttr__   =  null
-   ,string        $elemId__     =  null
-   ,string        $elemClass__  =  null
+    string        $elem    =  null
+   ,mixed         $value      =  null
+   ,array|string  $attr   =  null
+   ,string        $id     =  null
+   ,string        $class  =  null
 
  )
  {
@@ -551,7 +551,7 @@ function ELEM(
 
  return method_exists($Enhancer, 'ELEM') ? 
 
-    $Enhancer->ELEM($Element__, $value__, $elemAttr__, $elemId__, $elemClass__) : 
+    $Enhancer->ELEM($elem, $value, $attr, $id, $class) : 
 
       PERFORM(erorrMessage());
 

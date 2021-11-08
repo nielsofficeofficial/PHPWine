@@ -5,11 +5,11 @@ namespace PHPWine\VanillaFlavour\optimizer;
  USE \PHPWine\VanillaFlavour\Merge\Html;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.3 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.3 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -38,7 +38,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.3
+ * @version   v1.1.4
  * 
  * @Method
  * FORM::TEXT();
@@ -753,10 +753,10 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function TEXTAREA( 
 
-    string       $element_id      =  null 
+    string       $id      =  null 
    ,mixed        $value           =  null 
    ,array|string $attr            =  null 
-   ,string       $element_class   =  null 
+   ,string       $class   =  null 
    ,string       $label           =  null 
    ,mixed        $assoc           =  null 
  
@@ -770,17 +770,17 @@ namespace PHPWine\VanillaFlavour\optimizer;
     *
     * @package : Merge Heading tag TEXTAREA
     * @package : Static Procedural
-    * @method  : Html::TEXTAREA($value, $attr=null, $element_id, $element_class, $label, $assoc);
+    * @method  : Html::TEXTAREA($value, $attr=null, $id, $class, $label, $assoc);
     *
     *
     *
     **/
     return Parent::TEXTAREA(
       
-      $element_id, 
+      $id, 
       $value, 
       $attr, 
-      $element_class, 
+      $class, 
       $label, 
       $assoc
     
@@ -797,10 +797,10 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
     static public function SELECT( 
 
-       string       $element_id      =  null 
+       string       $id      =  null 
       ,mixed        $value           =  null 
       ,array|string $attr            =  null 
-      ,string       $element_class   =  null 
+      ,string       $class   =  null 
       ,string       $label           =  null 
       ,mixed        $assoc           =  null 
 
@@ -814,17 +814,17 @@ namespace PHPWine\VanillaFlavour\optimizer;
   *
   * @package : Merge Heading tag SELECT
   * @package : Static Procedural
-  * @method  : Html::SELECT($value, $attr=null, $element_id, $element_class, $label, $assoc);
+  * @method  : Html::SELECT($value, $attr=null, $id, $class, $label, $assoc);
   *
   *
   *
   **/
   return Parent::SELECT(
     
-    $element_id, 
+    $id, 
     $value, 
     $attr, 
-    $element_class, 
+    $class, 
     $label, 
     $assoc
   
@@ -841,10 +841,10 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function OPTION( 
   
-    string       $element_id      =  null 
+    string       $id      =  null 
    ,mixed        $value           =  null 
    ,array|string $attr            =  null 
-   ,string       $element_class   =  null 
+   ,string       $class   =  null 
    ,string       $label           =  null 
    ,mixed        $assoc           =  null 
 
@@ -858,17 +858,17 @@ namespace PHPWine\VanillaFlavour\optimizer;
   *
   * @package : Merge Heading tag OPTION
   * @package : Static Procedural
-  * @method  : Html::OPTION($value, $attr=null, $element_id, $element_class, $label, $assoc);
+  * @method  : Html::OPTION($value, $attr=null, $id, $class, $label, $assoc);
   *
   *
   *
   **/
   return Parent::OPTION(
     
-     $element_id, 
+     $id, 
      $value, 
      $attr, 
-     $element_class, 
+     $class, 
      $label, 
      $assoc
     
@@ -885,10 +885,10 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
  static public function OPTGROUP( 
 
-   string       $element_id      =  null 
+   string       $id      =  null 
   ,mixed        $value           =  null 
   ,array|string $attr            =  null 
-  ,string       $element_class   =  null 
+  ,string       $class   =  null 
   ,string       $label           =  null 
   ,mixed        $assoc           =  null 
 
@@ -902,17 +902,17 @@ namespace PHPWine\VanillaFlavour\optimizer;
   *
   * @package : Merge Heading tag OPTGROUP
   * @package : Static Procedural
-  * @method  : Html::OPTGROUP($value, $attr=null, $element_id, $element_class, $label, $assoc);
+  * @method  : Html::OPTGROUP($value, $attr=null, $id, $class, $label, $assoc);
   *
   *
   *
   **/
  return PArent::OPTGROUP(
    
-   $element_id, 
+   $id, 
    $value, 
    $attr, 
-   $element_class, 
+   $class, 
    $label, 
    $assoc
   
@@ -929,10 +929,10 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
   static public function FIELDSET( 
 
-    string       $element_id      =  null 
+    string       $id      =  null 
    ,mixed        $value           =  null 
    ,array|string $attr            =  null 
-   ,string       $element_class   =  null 
+   ,string       $class   =  null 
    ,string       $label           =  null 
    ,mixed        $assoc           =  null 
 
@@ -946,17 +946,17 @@ namespace PHPWine\VanillaFlavour\optimizer;
   *
   * @package : Merge Heading tag FIELDSET
   * @package : Static Procedural
-  * @method  : Html::FIELDSET($value, $attr=null, $element_id, $element_class, $label, $assoc);
+  * @method  : Html::FIELDSET($value, $attr=null, $id, $class, $label, $assoc);
   *
   *
   *
   **/
  return Parent::FIELDSET(
    
-   $element_id, 
+   $id, 
    $value, 
    $attr, 
-   $element_class, 
+   $class, 
    $label, 
    $assoc
   
@@ -972,10 +972,10 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
  static public function LABEL( 
 
-   string       $element_id      =  null 
+   string       $id      =  null 
   ,mixed        $value           =  null 
   ,array|string $attr            =  null 
-  ,string       $element_class   =  null 
+  ,string       $class   =  null 
   ,string       $label           =  null 
   ,mixed        $assoc           =  null 
 
@@ -989,17 +989,17 @@ namespace PHPWine\VanillaFlavour\optimizer;
   *
   * @package : Merge Heading tag LABEL
   * @package : Static Procedural
-  * @method  : Html::LABEL($value, $attr=null, $element_id, $element_class, $label, $assoc);
+  * @method  : Html::LABEL($value, $attr=null, $id, $class, $label, $assoc);
   *
   *
   *
   **/
  return Parent::LABEL(
    
-   $element_id, 
+   $id, 
    $value, 
    $attr, 
-   $element_class, 
+   $class, 
    $label, 
    $assoc
   
@@ -1015,10 +1015,10 @@ namespace PHPWine\VanillaFlavour\optimizer;
     **/
  static public function OUTPUT( 
 
-   string       $element_id      =  null 
+   string       $id      =  null 
   ,mixed        $value           =  null 
   ,array|string $attr            =  null 
-  ,string       $element_class   =  null 
+  ,string       $class   =  null 
   ,string       $label           =  null 
   ,mixed        $assoc           =  null 
 
@@ -1034,17 +1034,17 @@ namespace PHPWine\VanillaFlavour\optimizer;
    * </form>
    * @package : Merge Heading tag OUTPUT
    * @package : Static Procedural
-   * @method  : Html::OUTPUT($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::OUTPUT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
    **/
   return Parent::OUTPUT(
     
-    $element_id, 
+    $id, 
     $value, 
     $attr, 
-    $element_class, 
+    $class, 
     $label, 
     $assoc
   

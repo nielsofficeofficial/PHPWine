@@ -3,11 +3,11 @@
   namespace PHPWine\VanillaFlavour\optimizer;
   
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.3 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.3 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -36,7 +36,7 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.3
+ * @version   v1.1.4
  * 
  * 
  * noHTML dynamic  structure 
@@ -10637,7 +10637,7 @@ protected function cpe_FileJandler_script($scriptQS__, $scripPara__) {
   * RETURN inline elem
   *
   **/
-protected function cpe_FileJandler_cutom_elem_inline($elem_inlineQS__, $PARAM__) { 
+protected function cpe_FileJandler_cutom_elem_inline($elem_inlineQS__, $tag) { 
 
   # IF THE PARAMETERS IS CUTOM END THEN CUSTOM HTML WILL RETURN
    $cpe_FileHander_keys = array_keys($elem_inlineQS__);
@@ -10671,11 +10671,11 @@ protected function cpe_FileJandler_cutom_elem_inline($elem_inlineQS__, $PARAM__)
   * RETURN inline elem
   *
   **/
-protected function cpe_FileJandler_doctype($PARAM__) { 
+protected function cpe_FileJandler_doctype($tag) { 
 
   # IF THE PARAMETERS IS CUTOM END THEN CUSTOM HTML WILL RETURN
   # BEGIN PERFORM HTML
-  $this->PERFORM($this->_setGATE().'!'.strtolower($PARAM__).' html'); 
+  $this->PERFORM($this->_setGATE().'!'.strtolower($tag).' html'); 
 
   # END PERFORM    
   $this->PERFORM(">\n");
@@ -10689,20 +10689,20 @@ protected function cpe_FileJandler_doctype($PARAM__) {
   * RETURN inline closing tag
   *
   **/
-protected function cpe_FileJandler_cutom_elem_closing_tag($QuickStart__, $PARAM__) { 
+protected function cpe_FileJandler_cutom_elem_closing_tag($attr, $tag) { 
 
    # IF THE PARAMETERS IS CUTOM END THEN CUSTOM HTML WILL RETURN
-   $cpe_FileHander_keys = array_keys($QuickStart__);
+   $cpe_FileHander_keys = array_keys($attr);
    
    # BEGIN FROM ZERO THEN RETURN COUNT QUICKSTART ++    
-   for($QuickStart_ = 0; $QuickStart_ < count($QuickStart__); $QuickStart_++) 
+   for($QuickStart_ = 0; $QuickStart_ < count($attr); $QuickStart_++) 
    {
 
      # BEGIN PERFORM HTML
      $this->PERFORM($this->_setGATE().strtolower($cpe_FileHander_keys[$QuickStart_])." "); 
 
      # LOOP WITHIN MULTI ASSOC ARRAY INTO FORMS OF VALUE INTO HTML
-     foreach( $QuickStart__[$cpe_FileHander_keys[$QuickStart_]] as $ATTR_NAME => $ATTR_VALUE)  {
+     foreach( $attr[$cpe_FileHander_keys[$QuickStart_]] as $ATTR_NAME => $ATTR_VALUE)  {
 
       #RETURN ALL VALUE IF IT IS TRUE
       $this->PERFORM($ATTR_NAME."=\"".$ATTR_VALUE."\"".__SPACE()); 
@@ -10722,16 +10722,16 @@ protected function cpe_FileJandler_cutom_elem_closing_tag($QuickStart__, $PARAM_
   * @package @private Method Defined cpe_custom_elements() // use custom HTML
   *
   **/
-protected function cpe_custom_elements($Element__, $value__, $elemAttr__, $elemId__, $elemClass__) {
+protected function cpe_custom_elements($elem, $value, $attr, $id, $class) {
   
    # GET STRING_ELEMENT_THEN_RETURN
-   $Element__     = strtolower($Element__);
+   $elem     = strtolower($elem);
 
    # GET STRING_ELEMENT_ATTR_RETURN
-   $ElementAttr__ = $this->new_setHTMLattr($elemAttr__, $elemId__, $elemClass__);
+   $ElementAttr__ = $this->new_setHTMLattr($attr, $id, $class);
    
    # THEN RETURN ALL TRUE? RETURN FUNCTION CUSTOM MODIFIED HTML
-   return $this->cpe_Filehandler_Val($value__, $Element__,$ElementAttr__);
+   return $this->cpe_Filehandler_Val($value, $elem,$ElementAttr__);
 
 }
 

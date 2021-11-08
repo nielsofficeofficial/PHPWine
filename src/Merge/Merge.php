@@ -5,11 +5,11 @@ USE \PHPWine\VanillaFlavour\Optimizer\Html AS Merge;
 USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileHandler;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.3 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.3 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -38,7 +38,7 @@ USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileHandler;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.3
+ * @version   v1.1.4
  *
  */
 
@@ -54,8 +54,8 @@ function _xH1(
 
    mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_id      =  null 
-  ,string        $element_class   =  null 
+  ,string        $id      =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -70,7 +70,7 @@ function _xH1(
    *
    * @package : Merge Heading tag H1
    * @package : Static Procedural
-   * @method  : Html::H1($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::H1($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -82,8 +82,8 @@ function _xH1(
 
      $value          
     ,$attr
-    ,$element_id              
-    ,$element_class    
+    ,$id              
+    ,$class    
     ,$label            
     ,$assoc           
 
@@ -103,8 +103,8 @@ function _xH2(
 
    mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_id      =  null 
-  ,string        $element_class   =  null 
+  ,string        $id      =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -118,7 +118,7 @@ function _xH2(
    *
    * @package : Merge Heading tag H2
    * @package : Static Procedural
-   * @method  : Html::H2($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::H2($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -130,8 +130,8 @@ function _xH2(
      
      $value          
     ,$attr
-    ,$element_id              
-    ,$element_class    
+    ,$id              
+    ,$class    
     ,$label            
     ,$assoc   
 
@@ -151,8 +151,8 @@ function _xH3(
 
    mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_id      =  null 
-  ,string        $element_class   =  null 
+  ,string        $id      =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null   
 
@@ -166,7 +166,7 @@ function _xH3(
    *
    * @package : Merge Heading tag H3
    * @package : Static Procedural
-   * @method  : Html::H3($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::H3($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -178,8 +178,8 @@ function _xH3(
 
      $value          
     ,$attr
-    ,$element_id              
-    ,$element_class    
+    ,$id              
+    ,$class    
     ,$label            
     ,$assoc  
 
@@ -199,8 +199,8 @@ function _xH4(
 
    mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_id      =  null 
-  ,string        $element_class   =  null 
+  ,string        $id      =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null   
 
@@ -214,7 +214,7 @@ function _xH4(
    *
    * @package : Merge Heading tag H3
    * @package : Static Procedural
-   * @method  : Html::H3($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::H3($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -226,8 +226,8 @@ function _xH4(
   
      $value          
     ,$attr
-    ,$element_id              
-    ,$element_class    
+    ,$id              
+    ,$class    
     ,$label            
     ,$assoc   
 
@@ -247,8 +247,8 @@ function _xH5(
 
    mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_id      =  null 
-  ,string        $element_class   =  null 
+  ,string        $id      =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null      
 
@@ -262,7 +262,7 @@ function _xH5(
    *
    * @package : Merge Heading tag H5
    * @package : Static Procedural
-   * @method  : Html::H5($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::H5($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -274,8 +274,8 @@ function _xH5(
 
      $value          
     ,$attr
-    ,$element_id              
-    ,$element_class    
+    ,$id              
+    ,$class    
     ,$label            
     ,$assoc   
 
@@ -295,8 +295,8 @@ function _xH6(
 
    mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_id      =  null 
-  ,string        $element_class   =  null 
+  ,string        $id      =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null     
 
@@ -310,7 +310,7 @@ function _xH6(
    *
    * @package : Merge Heading tag H6
    * @package : Static Procedural
-   * @method  : Html::H6($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::H6($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -322,8 +322,8 @@ function _xH6(
 
      $value          
     ,$attr
-    ,$element_id              
-    ,$element_class    
+    ,$id              
+    ,$class    
     ,$label            
     ,$assoc   
 
@@ -341,10 +341,10 @@ function _xH6(
   **/
 function _xDIV( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -358,7 +358,7 @@ function _xDIV(
    *
    * @package : Merge Heading tag H6
    * @package : Static Procedural
-   * @method  : Html::DIV($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::DIV($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -368,10 +368,10 @@ function _xDIV(
    
     $Html->DIV( 
 
-     $element_id 
+     $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -389,10 +389,10 @@ function _xDIV(
   **/
 function _xP( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -406,7 +406,7 @@ function _xP(
    *
    * @package : Merge Heading tag PARAGRAPH
    * @package : Static Procedural
-   * @method  : Html::P($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::P($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -416,10 +416,10 @@ function _xP(
    
     $Html->P( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -437,10 +437,10 @@ function _xP(
   **/
 function _xBUTTON( 
  
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -454,7 +454,7 @@ function _xBUTTON(
    *
    * @package : Merge Heading tag BUTTON
    * @package : Static Procedural
-   * @method  : Html::BUTTON($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::BUTTON($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -464,10 +464,10 @@ function _xBUTTON(
    
     $Html->BUTTON(
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -485,10 +485,10 @@ function _xBUTTON(
   **/
 function _xA( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -502,7 +502,7 @@ function _xA(
    *
    * @package : Merge Heading tag A LINK
    * @package : Static Procedural
-   * @method  : Html::A($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::A($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -512,10 +512,10 @@ function _xA(
    
     $Html->A( 
 
-     $element_id 
+     $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
    
@@ -533,10 +533,10 @@ function _xA(
   **/
 function _xIFRAME( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null    
 
@@ -550,7 +550,7 @@ function _xIFRAME(
    *
    * @package : Merge Heading tag A IFRAME
    * @package : Static Procedural
-   * @method  : Html::IFRAME($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::IFRAME($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -560,10 +560,10 @@ function _xIFRAME(
    
     $Html->IFRAME( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -581,10 +581,10 @@ function _xIFRAME(
   **/
 function _xMAIN( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null   
 
@@ -598,7 +598,7 @@ function _xMAIN(
    *
    * @package : Merge Heading tag MAIN
    * @package : Static Procedural
-   * @method  : Html::MAIN($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::MAIN($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -608,10 +608,10 @@ function _xMAIN(
   
    $Html->MAIN( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -629,10 +629,10 @@ function _xMAIN(
   **/
 function _xNAV( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -646,7 +646,7 @@ function _xNAV(
    *
    * @package : Merge Heading tag NAV
    * @package : Static Procedural
-   * @method  : Html::NAV($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::NAV($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -656,10 +656,10 @@ function _xNAV(
    
     $Html->NAV( 
 
-     $element_id 
+     $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -677,10 +677,10 @@ function _xNAV(
   **/
 function _xSELECT( 
 
-   string $element_id      =  null 
+   string $id      =  null 
   ,mixed  $value           =  null 
   ,array  $attr            =  null 
-  ,string $element_class   =  null 
+  ,string $class   =  null 
   ,string $label           =  null 
   ,mixed  $assoc           =  null  
 
@@ -694,7 +694,7 @@ function _xSELECT(
    *
    * @package : Merge Heading tag SELECT
    * @package : Static Procedural
-   * @method  : Html::SELECT($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::SELECT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -704,10 +704,10 @@ function _xSELECT(
    
     $Html->SELECT( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -725,10 +725,10 @@ function _xSELECT(
   **/
 function _xFORM( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -742,7 +742,7 @@ function _xFORM(
    *
    * @package : Merge Heading tag FORM
    * @package : Static Procedural
-   * @method  : Html::FORM($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::FORM($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -752,10 +752,10 @@ function _xFORM(
    
     $Html->FORM( 
     
-     $element_id 
+     $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -773,10 +773,10 @@ function _xFORM(
   **/
 function _xPICTURE( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -790,7 +790,7 @@ function _xPICTURE(
    *
    * @package : Merge Heading tag PICTURE
    * @package : Static Procedural
-   * @method  : Html::PICTURE($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::PICTURE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -800,10 +800,10 @@ function _xPICTURE(
   
    $Html->PICTURE( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -821,10 +821,10 @@ function _xPICTURE(
   **/
 function _xSECTION( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -838,7 +838,7 @@ function _xSECTION(
    *
    * @package : Merge Heading tag SECTION
    * @package : Static Procedural
-   * @method  : Html::SECTION($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::SECTION($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -848,10 +848,10 @@ function _xSECTION(
    
     $Html->SECTION( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -869,10 +869,10 @@ function _xSECTION(
   **/
 function _xTEXTAREA( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null   
 
@@ -886,7 +886,7 @@ function _xTEXTAREA(
    *
    * @package : Merge Heading tag TEXTAREA
    * @package : Static Procedural
-   * @method  : Html::TEXTAREA($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::TEXTAREA($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -896,10 +896,10 @@ function _xTEXTAREA(
   
    $Html->TEXTAREA( 
     
-     $element_id 
+     $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -917,10 +917,10 @@ function _xTEXTAREA(
   **/
 function _xFOOTER( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -934,7 +934,7 @@ function _xFOOTER(
    *
    * @package : Merge Heading tag TEXTAREA
    * @package : Static Procedural
-   * @method  : Html::TEXTAREA($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::TEXTAREA($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -944,10 +944,10 @@ function _xFOOTER(
   
    $Html->FOOTER( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -979,7 +979,7 @@ function _xSCRIPT(
    *
    * @package : Merge Heading tag SCRIPT
    * @package : Static Procedural
-   * @method  : Html::SCRIPT($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::SCRIPT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1024,7 +1024,7 @@ function _xSTYLE(
    *
    * @package : Merge Heading tag TEXTAREA
    * @package : Static Procedural
-   * @method  : Html::TEXTAREA($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::TEXTAREA($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1055,10 +1055,10 @@ function _xSTYLE(
   **/
 function _xAUDIO( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -1072,7 +1072,7 @@ function _xAUDIO(
    *
    * @package : Merge Heading tag AUDIO
    * @package : Static Procedural
-   * @method  : Html::AUDIO($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::AUDIO($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1082,10 +1082,10 @@ function _xAUDIO(
   
    $Html->AUDIO( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -1103,10 +1103,10 @@ function _xAUDIO(
   **/
 function _xVIDEO( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -1120,7 +1120,7 @@ function _xVIDEO(
    *
    * @package : Merge Heading tag VIDEO
    * @package : Static Procedural
-   * @method  : Html::VIDEO($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::VIDEO($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1130,10 +1130,10 @@ function _xVIDEO(
   
    $Html->VIDEO( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -1151,10 +1151,10 @@ function _xVIDEO(
   **/
 function _xADDRESS( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null   
 
@@ -1168,7 +1168,7 @@ function _xADDRESS(
    *
    * @package : Merge Heading tag ADDRESS
    * @package : Static Procedural
-   * @method  : Html::ADDRESS($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::ADDRESS($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1178,10 +1178,10 @@ function _xADDRESS(
   
    $Html->ADDRESS( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -1199,10 +1199,10 @@ function _xADDRESS(
   **/
 function _xCOLGROUP( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null   
 
@@ -1216,7 +1216,7 @@ function _xCOLGROUP(
    *
    * @package : Merge Heading tag COLGROUP
    * @package : Static Procedural
-   * @method  : Html::COLGROUP($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::COLGROUP($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1226,10 +1226,10 @@ function _xCOLGROUP(
   
    $Html->COLGROUP( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -1247,10 +1247,10 @@ function _xCOLGROUP(
   **/
 function _xBDI( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -1264,7 +1264,7 @@ function _xBDI(
    *
    * @package : Merge Heading tag BDI
    * @package : Static Procedural
-   * @method  : Html::BDI($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::BDI($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1274,10 +1274,10 @@ function _xBDI(
   
    $Html->BDI( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -1295,10 +1295,10 @@ function _xBDI(
   **/
 function _xBDO( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -1312,7 +1312,7 @@ function _xBDO(
    *
    * @package : Merge Heading tag BDO
    * @package : Static Procedural
-   * @method  : Html::BDO($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::BDO($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1322,10 +1322,10 @@ function _xBDO(
   
    $Html->BDO( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -1343,10 +1343,10 @@ function _xBDO(
   **/
 function _xBLOCKQUOTE( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -1360,7 +1360,7 @@ function _xBLOCKQUOTE(
    *
    * @package : Merge Heading tag BLOCKQUOTE
    * @package : Static Procedural
-   * @method  : Html::BLOCKQUOTE($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::BLOCKQUOTE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1370,10 +1370,10 @@ function _xBLOCKQUOTE(
   
    $Html->BLOCKQUOTE( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -1391,10 +1391,10 @@ function _xBLOCKQUOTE(
   **/
 function _xCAPTION( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -1408,7 +1408,7 @@ function _xCAPTION(
    *
    * @package : Merge Heading tag CAPTION
    * @package : Static Procedural
-   * @method  : Html::CAPTION($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::CAPTION($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1418,10 +1418,10 @@ function _xCAPTION(
   
    $Html->CAPTION(  
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -1439,10 +1439,10 @@ function _xCAPTION(
   **/
 function _xLABEL( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -1457,7 +1457,7 @@ function _xLABEL(
    *
    * @package : Merge Heading tag LABEL
    * @package : Static Procedural
-   * @method  : Html::LABEL($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::LABEL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1467,10 +1467,10 @@ function _xLABEL(
   
    $Html->LABEL( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -1488,10 +1488,10 @@ function _xLABEL(
   **/
 function _xDATALIST( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -1505,7 +1505,7 @@ function _xDATALIST(
    *
    * @package : Merge Heading tag DATALIST
    * @package : Static Procedural
-   * @method  : Html::DATALIST($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::DATALIST($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1515,10 +1515,10 @@ function _xDATALIST(
   
    $Html->DATALIST( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -1536,10 +1536,10 @@ function _xDATALIST(
   **/
 function _xDETAILS( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -1553,7 +1553,7 @@ function _xDETAILS(
    *
    * @package : Merge Heading tag DETAILS
    * @package : Static Procedural
-   * @method  : Html::DETAILS($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::DETAILS($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1563,10 +1563,10 @@ function _xDETAILS(
   
    $Html->DETAILS( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
     
@@ -1584,10 +1584,10 @@ function _xDETAILS(
   **/
 function _xSUMMARY( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -1601,7 +1601,7 @@ function _xSUMMARY(
    *
    * @package : Merge Heading tag SUMMARY
    * @package : Static Procedural
-   * @method  : Html::SUMMARY($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::SUMMARY($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1611,10 +1611,10 @@ function _xSUMMARY(
   
    $Html->SUMMARY( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label            
     ,$assoc
 
@@ -1632,10 +1632,10 @@ function _xSUMMARY(
   **/
 function _xDIALOG( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -1649,7 +1649,7 @@ function _xDIALOG(
    *
    * @package : Merge Heading tag DIALOG
    * @package : Static Procedural
-   * @method  : Html::DIALOG($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::DIALOG($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1659,10 +1659,10 @@ function _xDIALOG(
   
    $Html->DIALOG( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc 
 
@@ -1680,10 +1680,10 @@ function _xDIALOG(
   **/
 function _xOPTION( 
   
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -1697,7 +1697,7 @@ function _xOPTION(
    *
    * @package : Merge Heading tag OPTION
    * @package : Static Procedural
-   * @method  : Html::OPTION($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::OPTION($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1707,10 +1707,10 @@ function _xOPTION(
   
    $Html->OPTION( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -1728,10 +1728,10 @@ function _xOPTION(
   **/
 function _xFIGURE( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -1745,7 +1745,7 @@ function _xFIGURE(
    *
    * @package : Merge Heading tag FIGURE
    * @package : Static Procedural
-   * @method  : Html::FIGURE($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::FIGURE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1755,10 +1755,10 @@ function _xFIGURE(
   
    $Html->FIGURE( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -1776,10 +1776,10 @@ function _xFIGURE(
   **/
 function _xFIGCAPTION( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -1793,7 +1793,7 @@ function _xFIGCAPTION(
    *
    * @package : Merge Heading tag FIGCAPTION
    * @package : Static Procedural
-   * @method  : Html::FIGCAPTION($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::FIGCAPTION($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1803,10 +1803,10 @@ function _xFIGCAPTION(
   
    $Html->FIGCAPTION( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -1824,10 +1824,10 @@ function _xFIGCAPTION(
   **/
 function _xMETER( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -1841,7 +1841,7 @@ function _xMETER(
    *
    * @package : Merge Heading tag METER
    * @package : Static Procedural
-   * @method  : Html::METER($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::METER($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1851,10 +1851,10 @@ function _xMETER(
   
    $Html->METER( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -1872,10 +1872,10 @@ function _xMETER(
   **/
 function _xOBJECT( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -1889,7 +1889,7 @@ function _xOBJECT(
    *
    * @package : Merge Heading tag OBJECT
    * @package : Static Procedural
-   * @method  : Html::OBJECT($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::OBJECT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1899,10 +1899,10 @@ function _xOBJECT(
   
    $Html->OBJECT( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -1920,10 +1920,10 @@ function _xOBJECT(
   **/
 function _xOPTGROUP( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -1937,7 +1937,7 @@ function _xOPTGROUP(
    *
    * @package : Merge Heading tag OPTGROUP
    * @package : Static Procedural
-   * @method  : Html::OPTGROUP($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::OPTGROUP($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1947,10 +1947,10 @@ function _xOPTGROUP(
   
    $Html->OPTGROUP( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -1968,10 +1968,10 @@ function _xOPTGROUP(
   **/
 function _xOUTPUT( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -1985,7 +1985,7 @@ function _xOUTPUT(
    *
    * @package : Merge Heading tag OUTPUT
    * @package : Static Procedural
-   * @method  : Html::OUTPUT($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::OUTPUT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -1995,10 +1995,10 @@ function _xOUTPUT(
   
    $Html->OUTPUT( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2016,10 +2016,10 @@ function _xOUTPUT(
   **/
 function _xPROGRESS( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -2033,7 +2033,7 @@ function _xPROGRESS(
    *
    * @package : Merge Heading tag PROGRESS
    * @package : Static Procedural
-   * @method  : Html::PROGRESS($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::PROGRESS($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2043,10 +2043,10 @@ function _xPROGRESS(
   
    $Html->PROGRESS( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2064,10 +2064,10 @@ function _xPROGRESS(
   **/
 function _xSVG( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null   
 
@@ -2081,7 +2081,7 @@ function _xSVG(
    *
    * @package : Merge Heading tag SVG
    * @package : Static Procedural
-   * @method  : Html::SVG($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::SVG($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2091,10 +2091,10 @@ function _xSVG(
   
    $Html->SVG( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2112,10 +2112,10 @@ function _xSVG(
   **/
 function _xTEMPLATE( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null   
 
@@ -2129,7 +2129,7 @@ function _xTEMPLATE(
    *
    * @package : Merge Heading tag TEMPLATE
    * @package : Static Procedural
-   * @method  : Html::TEMPLATE($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::TEMPLATE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2139,10 +2139,10 @@ function _xTEMPLATE(
   
    $Html->TEMPLATE( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2160,10 +2160,10 @@ function _xTEMPLATE(
   **/
 function _xUL( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -2177,7 +2177,7 @@ function _xUL(
    *
    * @package : Merge Heading tag UL
    * @package : Static Procedural
-   * @method  : Html::UL($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::UL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2187,10 +2187,10 @@ function _xUL(
   
    $Html->UL( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2208,10 +2208,10 @@ function _xUL(
   **/
 function _xOL( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null   
 
@@ -2225,7 +2225,7 @@ function _xOL(
    *
    * @package : Merge Heading tag OL
    * @package : Static Procedural
-   * @method  : Html::OL($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::OL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2235,10 +2235,10 @@ function _xOL(
   
    $Html->OL( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2256,10 +2256,10 @@ function _xOL(
   **/
 function _xLI( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -2273,7 +2273,7 @@ function _xLI(
    *
    * @package : Merge Heading tag LI
    * @package : Static Procedural
-   * @method  : Html::LI($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::LI($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2283,10 +2283,10 @@ function _xLI(
   
    $Html->LI( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2304,10 +2304,10 @@ function _xLI(
   **/
 function _xTABLE( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -2321,7 +2321,7 @@ function _xTABLE(
    *
    * @package : Merge Heading tag TABLE
    * @package : Static Procedural
-   * @method  : Html::TABLE($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::TABLE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2331,10 +2331,10 @@ function _xTABLE(
   
    $Html->TABLE( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2352,10 +2352,10 @@ function _xTABLE(
   **/
 function _xTR( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -2369,7 +2369,7 @@ function _xTR(
    *
    * @package : Merge Heading tag TR
    * @package : Static Procedural
-   * @method  : Html::TR($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::TR($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2379,10 +2379,10 @@ function _xTR(
   
    $Html->TR( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2400,10 +2400,10 @@ function _xTR(
   **/
 function _xTD( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -2417,7 +2417,7 @@ function _xTD(
    *
    * @package : Merge Heading tag TD
    * @package : Static Procedural
-   * @method  : Html::TD($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::TD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2427,10 +2427,10 @@ function _xTD(
   
    $Html->TD( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2448,10 +2448,10 @@ function _xTD(
   **/
 function _xTH( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -2465,7 +2465,7 @@ function _xTH(
    *
    * @package : Merge Heading tag TH
    * @package : Static Procedural
-   * @method  : Html::TH($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::TH($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2475,10 +2475,10 @@ function _xTH(
   
   $Html->TH( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2496,10 +2496,10 @@ function _xTH(
   **/
 function _xLEGEND( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -2513,7 +2513,7 @@ function _xLEGEND(
    *
    * @package : Merge Heading tag LEGEND
    * @package : Static Procedural
-   * @method  : Html::LEGEND($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::LEGEND($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2523,10 +2523,10 @@ function _xLEGEND(
   
    $Html->LEGEND( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2544,10 +2544,10 @@ function _xLEGEND(
   **/
 function _xFIELDSET( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -2561,7 +2561,7 @@ function _xFIELDSET(
    *
    * @package : Merge Heading tag FIELDSET
    * @package : Static Procedural
-   * @method  : Html::FIELDSET($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::FIELDSET($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2571,10 +2571,10 @@ function _xFIELDSET(
   
    $Html->FIELDSET( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
       
@@ -2592,10 +2592,10 @@ function _xFIELDSET(
   **/
 function _xTBODY( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null   
 
@@ -2609,7 +2609,7 @@ function _xTBODY(
    *
    * @package : Merge Heading tag TBODY
    * @package : Static Procedural
-   * @method  : Html::TBODY($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::TBODY($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2619,10 +2619,10 @@ function _xTBODY(
   
    $Html->TBODY( 
     
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2640,10 +2640,10 @@ function _xTBODY(
   **/
 function _xTFOOTER( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -2657,7 +2657,7 @@ function _xTFOOTER(
    *
    * @package : Merge Heading tag TBODY
    * @package : Static Procedural
-   * @method  : Html::TBODY($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::TBODY($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2667,10 +2667,10 @@ function _xTFOOTER(
   
    $Html->TFOOT( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2688,10 +2688,10 @@ function _xTFOOTER(
   **/
 function _xTHEAD( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -2705,7 +2705,7 @@ function _xTHEAD(
    *
    * @package : Merge Heading tag THEAD
    * @package : Static Procedural
-   * @method  : Html::THEAD($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::THEAD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2715,10 +2715,10 @@ function _xTHEAD(
   
    $Html->THEAD( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2736,10 +2736,10 @@ function _xTHEAD(
   **/
 function _xSPAN( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -2753,7 +2753,7 @@ function _xSPAN(
    *
    * @package : Merge Heading tag SPAN
    * @package : Static Procedural
-   * @method  : Html::SPAN($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::SPAN($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2763,10 +2763,10 @@ function _xSPAN(
   
    $Html->SPAN(
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2784,10 +2784,10 @@ function _xSPAN(
   **/
 function _xEM( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -2801,7 +2801,7 @@ function _xEM(
    *
    * @package : Merge Heading tag EM
    * @package : Static Procedural
-   * @method  : Html::EM($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::EM($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2811,10 +2811,10 @@ function _xEM(
   
    $Html->EM( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2832,10 +2832,10 @@ function _xEM(
   **/
 function _xB( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -2850,7 +2850,7 @@ function _xB(
    *
    * @package : Merge Heading tag B
    * @package : Static Procedural
-   * @method  : Html::B($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::B($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2860,10 +2860,10 @@ function _xB(
   
    $Html->B( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2881,10 +2881,10 @@ function _xB(
   **/
 function _xI( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -2898,7 +2898,7 @@ function _xI(
    *
    * @package : Merge Heading tag I
    * @package : Static Procedural
-   * @method  : Html::I($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::I($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2908,10 +2908,10 @@ function _xI(
   
    $Html->I( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2929,10 +2929,10 @@ function _xI(
   **/
 function _xSMALL( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -2946,7 +2946,7 @@ function _xSMALL(
    *
    * @package : Merge Heading tag SMALL
    * @package : Static Procedural
-   * @method  : Html::SMALL($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::SMALL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -2956,10 +2956,10 @@ function _xSMALL(
   
    $Html->SMALL( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -2977,10 +2977,10 @@ function _xSMALL(
   **/
 function _xMARQUEE( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -2994,7 +2994,7 @@ function _xMARQUEE(
    *
    * @package : Merge Heading tag MARQUEE
    * @package : Static Procedural
-   * @method  : Html::MARQUEE($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::MARQUEE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3004,10 +3004,10 @@ function _xMARQUEE(
   
    $Html->MARQUEE( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3025,10 +3025,10 @@ function _xMARQUEE(
   **/
 function _xCENTER( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -3042,7 +3042,7 @@ function _xCENTER(
    *
    * @package : Merge Heading tag CENTER
    * @package : Static Procedural
-   * @method  : Html::CENTER($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::CENTER($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3052,10 +3052,10 @@ function _xCENTER(
   
    $Html->CENTER( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3073,10 +3073,10 @@ function _xCENTER(
   **/
 function _xCODE( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -3090,7 +3090,7 @@ function _xCODE(
    *
    * @package : Merge Heading tag CODE
    * @package : Static Procedural
-   * @method  : Html::CODE($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::CODE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3100,10 +3100,10 @@ function _xCODE(
   
    $Html->CODE( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3121,10 +3121,10 @@ function _xCODE(
   **/
 function _xABBR( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -3138,7 +3138,7 @@ function _xABBR(
    *
    * @package : Merge Heading tag ABBR
    * @package : Static Procedural
-   * @method  : Html::ABBR($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::ABBR($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3148,10 +3148,10 @@ function _xABBR(
   
    $Html->ABBR( 
     
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3169,10 +3169,10 @@ function _xABBR(
   **/
 function _xMAP( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -3186,7 +3186,7 @@ function _xMAP(
    *
    * @package : Merge Heading tag ABBR
    * @package : Static Procedural
-   * @method  : Html::ABBR($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::ABBR($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3196,10 +3196,10 @@ function _xMAP(
   
    $Html->MAP( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3217,10 +3217,10 @@ function _xMAP(
   **/
 function _xCANVAS( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -3234,7 +3234,7 @@ function _xCANVAS(
    *
    * @package : Merge Heading tag ABBR
    * @package : Static Procedural
-   * @method  : Html::ABBR($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::ABBR($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3244,10 +3244,10 @@ function _xCANVAS(
   
    $Html->CANVAS(
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3265,10 +3265,10 @@ function _xCANVAS(
   **/
 function _xDATA( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -3282,7 +3282,7 @@ function _xDATA(
    *
    * @package : Merge Heading tag DATA
    * @package : Static Procedural
-   * @method  : Html::DATA($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::DATA($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3292,10 +3292,10 @@ function _xDATA(
   
    $Html->DATA( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3313,10 +3313,10 @@ function _xDATA(
   **/
 function _xDL( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -3330,7 +3330,7 @@ function _xDL(
    *
    * @package : Merge Heading tag DL
    * @package : Static Procedural
-   * @method  : Html::DL($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::DL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3340,10 +3340,10 @@ function _xDL(
   
    $Html->DL( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3361,10 +3361,10 @@ function _xDL(
   **/
 function _xDT( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -3378,7 +3378,7 @@ function _xDT(
    *
    * @package : Merge Heading tag DT
    * @package : Static Procedural
-   * @method  : Html::DT($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::DT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3388,10 +3388,10 @@ function _xDT(
   
    $Html->DT( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3409,10 +3409,10 @@ function _xDT(
   **/
 function _xDD( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -3426,7 +3426,7 @@ function _xDD(
    *
    * @package : Merge Heading tag DD
    * @package : Static Procedural
-   * @method  : Html::DD($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::DD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3436,10 +3436,10 @@ function _xDD(
   
    $Html->DD( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3457,10 +3457,10 @@ function _xDD(
   **/
 function _xDFN( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -3474,7 +3474,7 @@ function _xDFN(
    *
    * @package : Merge Heading tag DD
    * @package : Static Procedural
-   * @method  : Html::DD($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::DD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3484,10 +3484,10 @@ function _xDFN(
   
    $Html->DFN( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3505,10 +3505,10 @@ function _xDFN(
   **/
 function _xINS( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -3522,7 +3522,7 @@ function _xINS(
    *
    * @package : Merge Heading tag INS
    * @package : Static Procedural
-   * @method  : Html::INS($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::INS($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3532,10 +3532,10 @@ function _xINS(
   
    $Html->INS( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3553,10 +3553,10 @@ function _xINS(
   **/
 function _xDEL( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -3570,7 +3570,7 @@ function _xDEL(
    *
    * @package : Merge Heading tag DEL
    * @package : Static Procedural
-   * @method  : Html::DEL($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::DEL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3580,10 +3580,10 @@ function _xDEL(
   
    $Html->DEL( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3601,10 +3601,10 @@ function _xDEL(
   **/
 function _xKBD( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -3618,7 +3618,7 @@ function _xKBD(
    *
    * @package : Merge Heading tag KBD
    * @package : Static Procedural
-   * @method  : Html::KBD($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::KBD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3628,10 +3628,10 @@ function _xKBD(
   
    $Html->KBD( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3649,10 +3649,10 @@ function _xKBD(
   **/
 function _xMARK( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null    
 
@@ -3666,7 +3666,7 @@ function _xMARK(
    *
    * @package : Merge Heading tag MARK
    * @package : Static Procedural
-   * @method  : Html::MARK($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::MARK($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3676,10 +3676,10 @@ function _xMARK(
   
    $Html->MARK( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3697,10 +3697,10 @@ function _xMARK(
   **/
 function _xPRE( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -3714,7 +3714,7 @@ function _xPRE(
    *
    * @package : Merge Heading tag PRE
    * @package : Static Procedural
-   * @method  : Html::PRE($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::PRE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3724,10 +3724,10 @@ function _xPRE(
   
    $Html->PRE( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3745,10 +3745,10 @@ function _xPRE(
   **/
 function _xRT( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -3762,7 +3762,7 @@ function _xRT(
    *
    * @package : Merge Heading tag PRE
    * @package : Static Procedural
-   * @method  : Html::PRE($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::PRE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3772,10 +3772,10 @@ function _xRT(
   
    $Html->RT( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3793,10 +3793,10 @@ function _xRT(
   **/
 function _xS( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null   
 
@@ -3810,7 +3810,7 @@ function _xS(
    *
    * @package : Merge Heading tag S
    * @package : Static Procedural
-   * @method  : Html::S($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::S($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3820,10 +3820,10 @@ function _xS(
   
    $Html->S( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3841,10 +3841,10 @@ function _xS(
   **/
 function _xSAMP( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null    
 
@@ -3858,7 +3858,7 @@ function _xSAMP(
    *
    * @package : Merge Heading tag SAMP
    * @package : Static Procedural
-   * @method  : Html::SAMP($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::SAMP($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3868,10 +3868,10 @@ function _xSAMP(
   
    $Html->SAMP( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3889,10 +3889,10 @@ function _xSAMP(
   **/
 function _xSTRONG( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -3906,7 +3906,7 @@ function _xSTRONG(
    *
    * @package : Merge Heading tag STRONG
    * @package : Static Procedural
-   * @method  : Html::STRONG($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::STRONG($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3916,10 +3916,10 @@ function _xSTRONG(
   
    $Html->STRONG( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3937,10 +3937,10 @@ function _xSTRONG(
   **/
 function _xSUB( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null  
 
@@ -3954,7 +3954,7 @@ function _xSUB(
    *
    * @package : Merge Heading tag SUB
    * @package : Static Procedural
-   * @method  : Html::SUB($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::SUB($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -3964,10 +3964,10 @@ function _xSUB(
   
    $Html->SUB( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -3985,10 +3985,10 @@ function _xSUB(
   **/
 function _xSUP( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -4002,7 +4002,7 @@ function _xSUP(
    *
    * @package : Merge Heading tag SUP
    * @package : Static Procedural
-   * @method  : Html::SUP($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::SUP($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -4012,10 +4012,10 @@ function _xSUP(
   
    $Html->SUP( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -4033,10 +4033,10 @@ function _xSUP(
   **/
 function _xWBR( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -4050,7 +4050,7 @@ function _xWBR(
    *
    * @package : Merge Heading tag WBR
    * @package : Static Procedural
-   * @method  : Html::WBR($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::WBR($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -4060,10 +4060,10 @@ function _xWBR(
   
    $Html->WBR( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -4081,10 +4081,10 @@ function _xWBR(
   **/
 function _xQ( 
 
-   string        $element_id      =  null 
+   string        $id      =  null 
   ,mixed         $value           =  null 
   ,array|string  $attr            =  null 
-  ,string        $element_class   =  null 
+  ,string        $class   =  null 
   ,string        $label           =  null 
   ,mixed         $assoc           =  null 
 
@@ -4098,7 +4098,7 @@ function _xQ(
    *
    * @package : Merge Heading tag WBR
    * @package : Static Procedural
-   * @method  : Html::WBR($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::WBR($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -4108,10 +4108,10 @@ function _xQ(
   
    $Html->Q( 
 
-    $element_id 
+    $id 
     ,$value          
     ,$attr             
-    ,$element_class    
+    ,$class    
     ,$label 
     ,$assoc
 
@@ -4131,8 +4131,8 @@ function _xHEAD(
 
    string         $value           =  null 
   ,array|string   $attr            =  null 
-  ,string         $element_id      =  null 
-  ,string         $element_class   =  null 
+  ,string         $id      =  null 
+  ,string         $class   =  null 
   ,string         $label           =  null 
   ,mixed          $assoc           =  null 
 
@@ -4146,7 +4146,7 @@ function _xHEAD(
    *
    * @package : Merge Heading tag HEAD
    * @package : Static Procedural
-   * @method  : Html::HEAD($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::HEAD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -4158,8 +4158,8 @@ function _xHEAD(
      
     $value, 
     $attr, 
-    $element_id, 
-    $element_class, 
+    $id, 
+    $class, 
     $label, 
     $assoc
     
@@ -4179,8 +4179,8 @@ function _xTITLE(
 
    string         $value           =  null 
   ,array|string   $attr            =  null 
-  ,string         $element_id      =  null 
-  ,string         $element_class   =  null 
+  ,string         $id      =  null 
+  ,string         $class   =  null 
   ,string         $label           =  null 
   ,mixed          $assoc           =  null 
 
@@ -4195,7 +4195,7 @@ function _xTITLE(
    *
    * @package : Merge Heading tag TITLE
    * @package : Static Procedural
-   * @method  : Html::TITLE($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::TITLE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -4207,8 +4207,8 @@ function _xTITLE(
     
     $value, 
     $attr, 
-    $element_id, 
-    $element_class, 
+    $id, 
+    $class, 
     $label, 
     $assoc
     
@@ -4228,8 +4228,8 @@ function _xBODY(
 
    string         $value           =  null 
   ,array|string   $attr            =  null 
-  ,string         $element_id      =  null 
-  ,string         $element_class   =  null 
+  ,string         $id      =  null 
+  ,string         $class   =  null 
   ,string         $label           =  null 
   ,mixed          $assoc           =  null 
 
@@ -4244,7 +4244,7 @@ function _xBODY(
    *
    * @package : Merge Heading tag BODY
    * @package : Static Procedural
-   * @method  : Html::BODY($value, $attr=null, $element_id, $element_class, $label, $assoc);
+   * @method  : Html::BODY($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
    *
@@ -4256,8 +4256,8 @@ function _xBODY(
      
     $value, 
     $attr, 
-    $element_id, 
-    $element_class, 
+    $id, 
+    $class, 
     $label, 
     $assoc
     
