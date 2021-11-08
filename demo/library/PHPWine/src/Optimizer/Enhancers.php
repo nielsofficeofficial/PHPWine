@@ -771,7 +771,7 @@ private function cpe_xib6_FileHandler_count() {
      // EMTPY ARRAY 
      $Merge    = "";
      // BEGIN MERGE
-     $Merge   .=  _MERGE('PRE') .  $PathValue_i . '  => '; 
+     $Merge   .=  _MERGE('GetKeyFolderPath','PRE') .  $PathValue_i . '  => '; 
       
      // THEN CHECK i IF EQUAL ZERO MEANS WEB ROOT 
      if( $PathValue_i === 0 ) {

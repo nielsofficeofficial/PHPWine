@@ -2,7 +2,8 @@
 <?php require 'header.php'; ?>
 <?php 
 
-use \PHPWine\VanillaFlavour\Optimizer\Form;
+use \PHPWine\VanillaFlavour\Merge\Html;
+ 
 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.2 Cooked by nielsoffice 
@@ -42,6 +43,7 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
  *
  */
   
+
 // FIXED attr array ugly error convert as string ! ***  merge version 
 
 // IMPROVED HTML TAGS OPTIMIZER | MERGE >> v1.1.2++ 
@@ -81,12 +83,12 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
  @since version 1.1.2 
 _xUL( 
 
-   string $element_id      =  null 
-  ,mixed  $value           =  null 
-  ,array|string  $attr     =  null 
-  ,string $element_class   =  null 
-  ,string $label           =  null 
-  ,mixed  $assoc           =  null  
+   string        $element_id      =  null 
+  ,mixed         $value           =  null 
+  ,array|string  $attr            =  null 
+  ,string        $element_class   =  null 
+  ,string        $label           =  null 
+  ,mixed         $assoc           =  null  
 
 ) 
 { ... }
