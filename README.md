@@ -64,7 +64,7 @@ $Enhancer = new OptimizerCare();
 // WordPress Theme/Plugins Installation 
 | - root folder
   | - Theme folder
-    | - Library folder // create Library for there if not yet exist !
+    | - Library folder // create Library folder if not yet exist !
       | - PHPWine
         | - src
         | - PHPWine.php
