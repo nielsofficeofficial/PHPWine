@@ -58,6 +58,28 @@ $Html     = new Optimizer();
 $Enhancer = new OptimizerCare();
 
 ```
+<h3>WordPress Installation:</h3>
+
+```PHP
+// WordPress Theme/Plugins Installation 
+| - root folder
+  | - Theme folder
+    | - Library folder // create Library for there if not yet exist !
+      | - PHPWine
+        | - src
+        | - PHPWine.php
+        | - prop.php
+        | - LICENSE
+        | - README.md
+        | - composer.json        
+        
+// on header.php
+require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
+
+...
+
+```
+
 <h3>Method file Installation:</h3>
 
 ```PHP
