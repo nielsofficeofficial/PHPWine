@@ -90,16 +90,16 @@ use \PHPWine\VanillaFlavour\System\Validation;
 <h3>Prepare Initialize User Request/Data</h3>
 
 ```PHP
-$un           = AUTH::$DATAFORM = [string $inputName, string $err_msg];
-$username     = AUTH::HASCONTAINS($un);  
-$username_err = AUTH::ERROR($username, $un); 
+$un           = VALIDATE::$DATAFORM = [string $inputName, string $err_msg];
+$username     = VALIDATE::HASCONTAINS( input : $un);  
+$username_err = VALIDATE::ERROR( result : $username, require : $un); 
 ```
 <h3>Handling Bind Parameters</h3>
 
 ```PHP
 // Constant param
 SESSION_PORTAL_REQUEST
-SESSION_ENCRYPTDATA_REQUEST     
+SESSION_REGISTERDATA_REQUEST   
 
 ```
 ```PHP
@@ -123,14 +123,14 @@ $auth_err    = AUTH::BIND(string $db,
 ```PHP
 Usage: 
 // Handling bind user data session registerdata param
-$auth_un_err  = AUTH::BIND(string $db, 
+$auth_un_err  = VALIDATE::BIND(string $db, 
 [   
    // SESSION_REGISTERDATA_REQUEST Params  
-  'QUERY_STATEMENT'    => AUTH::RETURNSQL(string $db,[int $col_id],[string $inputName])
+  'QUERY_STATEMENT'    => AUTH::CHECKQUERY(string $db,[int $col_id],[string $inputName])
  ,'INPUT_HASCONTAINS'  => string $username
  ,'INPUT_DATAEXIST'    => string $err_msg
   
- ], SESSION_REGISTERDATA_REQUEST ); 
+ ]); 
 
 ```
 <h3>Handling Form Validation</h3>
