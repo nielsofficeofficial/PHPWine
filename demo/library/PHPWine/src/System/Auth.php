@@ -123,58 +123,25 @@ class Auth Extends System
         endforeach;
        
     }
-
-   /**
-    *
-    * Defined HASCONTAINS() check data if not empty !
-    * @since 04.05.21
-    * @since v1.0
-    *
-    **/ 
-    public static function HASCONTAINS(array $input )
-    {
-         
-        $data    = SYSTEM::POSTDATA( $input );
-        $request = SYSTEM::SANITIZEREQUEST($_POST[$data[0]]);
-
-         if( !isset($request) || empty($request) || is_null($request) ) : return SYSTEM::SANITIZEREQUEST($data[1]); 
-         else                                                           : return $request; 
-
-        endif;
-
-    }
-
-   /**
-    *
-    * Defined ERROR() check error message !
-    * @since 04.05.21
-    * @since v1.0
-    *
-   **/ 
-    public static function ERROR(string  $input, array $require )
-    {
     
-      $data = SYSTEM::POSTDATA( $require ); // if has current value contains
-      if( $input !== $data[1] ) : return ''; 
-      else                      : return  $input; 
-
-      endif;
-  
-    }
-
-   /**
+    /**
     *
-    * Defined CATCH() method is restrict only single data type for registration field !
-    * @since 04.10.21
+    * Defined RETURNSQL() method
+    * @since 04.05.21
     * @since v1.0
     *
    **/ 
-    public static function CATCH(string $input_error = null, string $bind_error = null, array $valid_type = null )
-    {
-      
-       return SYSTEM::RETURN_RESTRICTED_DATA($input_error, $bind_error, $valid_type);
-      
-    }
+  public static function RETURNSQL(string $table, array $col_id, array $col_name = null)
+  {
+     return  [
+
+      [$table]
+     ,[$col_id]
+     ,[$col_name]
+
+    ];
+
+  }
   
 /**
  *
@@ -305,7 +272,7 @@ $getCurrent     = current($datas );
     * @since v1.0
     *
    **/ 
-    public static function BIND( $connection, array $bind_user_data = [] , string $request = null , bool $debugging = false)
+    public static function BIND( $connection, array $bind_user_data = null , string $request = null )
     {
   
     switch ($request) 
@@ -321,6 +288,14 @@ $getCurrent     = current($datas );
     case ($request == 'SESSION_REGISTERDATA_REQUEST' || $request == 'DO_USER_ADD_NEW_REGISTER') ? $request : false;
 
     /**
+     *
+     * Defined Validate BIND_VALIDATE_PORTAL_KEYS !
+     * @since 10.07.21
+     * @since v1.2
+     *
+    **/
+
+  /**
      *
      * Defined Validate BIND_VALIDATE_PORTAL_KEYS !
      * @since 10.07.21
@@ -472,45 +447,21 @@ $getCurrent     = current($datas );
     /**
      * @param _select Bind variables to the prepared statement as parameters
      **/
-     $stmt->bind_param("s", $INPUT_HASCONTAINS);      
+     $stmt->bind_param("s", $INPUT_HASCONTAINS );      
 
      /**
      * @param _select Attempt to execute the prepared statement
      **/
      if($stmt->execute())  : 
-
-       /**
-        * @param _select store result
-        **/
-       $stmt->store_result();
-         
-         if($stmt->num_rows == 1) : return $INPUT_HASERROR;
-         endif;
-
-     else : 
-
-       /**
-        *
-        * Defined else if something wring !
-        * @since 04.12.21
-        * @since v1.0
-        *
-        **/
-        return self::$PROGRAM_MSG = ERROR_DEVELOPER_CONCERN;
-        
+        $stmt->store_result();
+           if($stmt->num_rows == 1) : return $INPUT_HASERROR;  endif; 
+           else                     : return ERROR_DEVELOPER_CONCERN;
      endif;
-
-    /**
-     * @param _Close statement
-    **/
-    $stmt->close();
+       $stmt->close();
 
    endif;
 
-
-     #
-     # END REGISTERDATA
-     #
+   
     break;
       
     /**
@@ -1018,24 +969,6 @@ $getCurrent     = current($datas );
 
  }
 
-   /**
-    *
-    * Defined RETURNSQL() method
-    * @since 04.05.21
-    * @since v1.0
-    *
-   **/ 
-    public static function RETURNSQL(string $table, array $col_id, array $col_name = null)
-    {
-       return  [
-
-        [$table]
-       ,[$col_id]
-       ,[$col_name]
-
-      ];
-
-    }
 
    /**
     *

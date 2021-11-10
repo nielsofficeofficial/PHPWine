@@ -2,6 +2,7 @@
 
 use \PHPWine\VanillaFlavour\System\Auth;
 use \PHPWine\VanillaFlavour\System\Request;
+use \PHPWine\VanillaFlavour\System\Validate;
 use \PHPWine\VanillaFlavour\Optimizer\Form;
 
 /**
@@ -94,9 +95,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") :
     * @since v1.0
     *
     **/ 
-    $un           = AUTH::$DATAFORM = ["username","Enter username or email or mobile"];
-    $username     = AUTH::HASCONTAINS($un);  
-    $err_username = AUTH::ERROR($username, $un);
+    $un           = VALIDATE::$DATAFORM = ["username","Enter username or email or mobile"];
+    $username     = VALIDATE::HASCONTAINS($un);  
+    $err_username = VALIDATE::ERROR($username, $un);
 
    /**
     *
@@ -105,9 +106,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") :
     * @since v1.0
     *
     **/ 
-    $pw           = AUTH::$DATAFORM = ["password","Please enter valid associated password."];
-    $password     = AUTH::HASCONTAINS($pw);  
-    $err_password = AUTH::ERROR($password, $pw);
+    $pw           = VALIDATE::$DATAFORM = ["password","Please enter valid associated password."];
+    $password     = VALIDATE::HASCONTAINS($pw);  
+    $err_password = VALIDATE::ERROR($password, $pw);
 
    /**
     *
