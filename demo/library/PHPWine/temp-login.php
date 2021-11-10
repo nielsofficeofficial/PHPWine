@@ -120,7 +120,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") :
     $auth_err    = AUTH::BIND($connection, 
     [   
        
-        'QUERY_STATEMENT'         => AUTH::RETURNSQL('users_log',['username','email','mobile','password','id','created_at'])
+        'QUERY_STATEMENT'         => AUTH::CHECKQUERY('users_log',['username','email','mobile','password','id','created_at'])
        ,'USERNAME_HASCONTAINS'    => $username 
        ,'USERNAME_ERROR'          => $err_username
        ,'PASSWORD_HASCONTAINS'    => $password

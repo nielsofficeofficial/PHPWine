@@ -137,7 +137,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
     bind_user_data : [   
     
-        'QUERY_STATEMENT'    => VALIDATE::RETURNSQL('users_log',["id"],["username"])
+        'QUERY_STATEMENT'    => VALIDATE::CHECKQUERY('users_log',["id"],["username"])
        ,'INPUT_HASCONTAINS'  => $username  
        ,'INPUT_DATAEXIST'    => "This {$username} was already used."
   
@@ -149,7 +149,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $auth_ue_bind  = VALIDATE::BIND($connection, 
     [   
     
-        'QUERY_STATEMENT'    => VALIDATE::RETURNSQL('users_log',["id"],["email"])
+        'QUERY_STATEMENT'    => VALIDATE::CHECKQUERY('users_log',["id"],["email"])
        ,'INPUT_HASCONTAINS'  => $email  
        ,'INPUT_DATAEXIST'    => "This {$email} was already used."
   
@@ -162,7 +162,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $auth_um_bind  = VALIDATE::BIND( $connection, 
     [   
     
-        'QUERY_STATEMENT'    => VALIDATE::RETURNSQL( table : 'users_log', col_id : ["id"], col_name : ["mobile"])
+        'QUERY_STATEMENT'    => VALIDATE::CHECKQUERY( table : 'users_log', col_id : ["id"], col_name : ["mobile"])
        ,'INPUT_HASCONTAINS'  => $mobile  
        ,'INPUT_DATAEXIST'    => "This {$mobile} was already used."
   
@@ -173,7 +173,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     * @param _Validate information request email from users
     * Bring at the very bottom as mobile accept as null value, check your database table 
     **/ 
-    $catch_um = VALIDATE::CATCH(  $mobile_err ,  $auth_um_bind,  $valid_type = [
+    $catch_um = VALIDATE::CATCH(  input_result :  $mobile_err , bind_result : $auth_um_bind, valid_type :  $valid_type = [
        
       NUMERICTYPE   => ['mobile' ,'Phone must be numeric ex. 123'],
       MAXLENGTH     => ['mobile' , 11 ,'Mobile number must be maximum 11 Digit!'],
