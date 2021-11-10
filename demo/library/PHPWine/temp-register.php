@@ -173,7 +173,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     * @param _Validate information request email from users
     * Bring at the very bottom as mobile accept as null value, check your database table 
     **/ 
-    $catch_um = VALIDATE::CATCH(  $mobile_err ,  $auth_um_bind,  $valid_type = [
+    $catch_um = VALIDATE::CATCH(  input_result :  $mobile_err , bind_result : $auth_um_bind, valid_type :  $valid_type = [
        
       NUMERICTYPE   => ['mobile' ,'Phone must be numeric ex. 123'],
       MAXLENGTH     => ['mobile' , 11 ,'Mobile number must be maximum 11 Digit!'],
