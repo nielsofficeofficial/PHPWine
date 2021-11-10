@@ -96,7 +96,7 @@ public static function HASCONTAINS(array $input )
     * @since v1.0
     *
    **/ 
-  public static function RETURNSQL(string $table, array $col_id, array $col_name = null)
+  public static function CHECKQUERY(string $table, array $col_id, array $col_name = null)
   {
      return  [
 
