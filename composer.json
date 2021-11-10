@@ -1,7 +1,7 @@
 {
     "name": "phpwinevanillaflavour/phpwine",
     "type": "library",
-    "description": " PHPWine (Vanilla Flavour) design for corePHP and WordPress Cloud system application development.
+    "description": " PHPWine Vanilla Flavour design for corePHP and WordPress Cloud system application development.
 Vanilla Flavour: Vanilla flavour means you can use methods outside the class precisely as native PHP functions.
 
 PHP code encrypted, PHP Library, Code designer and Optimizer, Html-minifier Advance Form builder, Form Validation and more... ",
