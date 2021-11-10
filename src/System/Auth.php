@@ -123,58 +123,6 @@ class Auth Extends System
         endforeach;
        
     }
-
-   /**
-    *
-    * Defined HASCONTAINS() check data if not empty !
-    * @since 04.05.21
-    * @since v1.0
-    *
-    **/ 
-    public static function HASCONTAINS(array $input )
-    {
-         
-        $data    = SYSTEM::POSTDATA( $input );
-        $request = SYSTEM::SANITIZEREQUEST($_POST[$data[0]]);
-
-         if( !isset($request) || empty($request) || is_null($request) ) : return SYSTEM::SANITIZEREQUEST($data[1]); 
-         else                                                           : return $request; 
-
-        endif;
-
-    }
-
-   /**
-    *
-    * Defined ERROR() check error message !
-    * @since 04.05.21
-    * @since v1.0
-    *
-   **/ 
-    public static function ERROR(string  $input, array $require )
-    {
-    
-      $data = SYSTEM::POSTDATA( $require ); // if has current value contains
-      if( $input !== $data[1] ) : return ''; 
-      else                      : return  $input; 
-
-      endif;
-  
-    }
-
-   /**
-    *
-    * Defined CATCH() method is restrict only single data type for registration field !
-    * @since 04.10.21
-    * @since v1.0
-    *
-   **/ 
-    public static function CATCH(string $input_error = null, string $bind_error = null, array $valid_type = null )
-    {
-      
-       return SYSTEM::RETURN_RESTRICTED_DATA($input_error, $bind_error, $valid_type);
-      
-    }
   
 /**
  *

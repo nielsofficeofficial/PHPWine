@@ -3,7 +3,7 @@
 
 use \PHPWine\VanillaFlavour\System\Auth;
 use \PHPWine\VanillaFlavour\System\Request;
-use \PHPWine\VanillaFlavour\System\Validation;
+use \PHPWine\VanillaFlavour\System\Validate;
 use \PHPWine\VanillaFlavour\Optimizer\Form;
 
 /**
@@ -92,21 +92,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
      * @since v1.0
      *
      **/
-    $un               =   AUTH::$DATAFORM = ["username","Please enter a username."];
-    $username         =   AUTH::HASCONTAINS( input: $un);  
-    $username_err     =   AUTH::ERROR( input: $username, require : $un);    
+    $un               =   VALIDATE::$DATAFORM = ["username","Please enter a username."];
+    $username         =   VALIDATE::HASCONTAINS( input: $un);  
+    $username_err     =   VALIDATE::ERROR( result: $username, require : $un);    
 
-    $ue               =   AUTH::$DATAFORM = ["email","Please enter a email."];
-    $email            =   AUTH::HASCONTAINS( input: $ue);  
-    $email_err        =   AUTH::ERROR( input: $email, require: $ue);    
+    $ue               =   VALIDATE::$DATAFORM = ["email","Please enter a email."];
+    $email            =   VALIDATE::HASCONTAINS( input: $ue);  
+    $email_err        =   VALIDATE::ERROR(  result: $email, require: $ue);    
 
    /**
     * @param _Bind process request mobile from users
     * Bring at the very bottom as mobile accept as null value, check your database table 
     **/ 
-    $um               =   AUTH::$DATAFORM = ["mobile","Please enter a Phone."];
-    $mobile           =   AUTH::HASCONTAINS( input: $um);  
-    $mobile_err       =   AUTH::ERROR( input: $mobile, require: $um);    
+    $um               =   VALIDATE::$DATAFORM = ["mobile","Please enter a Phone."];
+    $mobile           =   VALIDATE::HASCONTAINS( input: $um);  
+    $mobile_err       =   VALIDATE::ERROR(  result: $mobile, require: $um);    
 
    /**    
      *
@@ -115,13 +115,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
      * @since v1.0
      *
      **/
-    $up               =   AUTH::$DATAFORM = ["password","Please enter a password..."];
-    $userpassword     =   AUTH::HASCONTAINS( input : $up);  
-    $userpassword_err =   AUTH::ERROR( input: $userpassword , require : $up);  
+    $up               =   VALIDATE::$DATAFORM = ["password","Please enter a password..."];
+    $userpassword     =   VALIDATE::HASCONTAINS( input : $up);  
+    $userpassword_err =   VALIDATE::ERROR(  result: $userpassword , require : $up);  
 
-    $upc              =   AUTH::$DATAFORM = ["confirm_password","Please confirm password..."];
-    $conpassword      =   AUTH::HASCONTAINS( input : $upc);  
-    $conpassword_err  =   AUTH::ERROR( input : $conpassword,  require : $upc);  
+    $upc              =   VALIDATE::$DATAFORM = ["confirm_password","Please confirm password..."];
+    $conpassword      =   VALIDATE::HASCONTAINS( input : $upc);  
+    $conpassword_err  =   VALIDATE::ERROR(  result: $conpassword,  require : $upc);  
 
 
 
@@ -172,7 +172,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     * @param _Validate information request email from users
     * Bring at the very bottom as mobile accept as null value, check your database table 
     **/ 
-    $catch_um = AUTH::CATCH(input_error :  $mobile_err , bind_error : $auth_um_bind, valid_type :  $valid_type = [
+    $catch_um = VALIDATE::CATCH(input_result :  $mobile_err , bind_result: $auth_um_bind, valid_type :  $valid_type = [
        
       NUMERICTYPE   => ['mobile' ,'Phone must be numeric ex. 123'],
       MAXLENGTH     => ['mobile' , 11 ,'Mobile number must be maximum 11 Digit!'],
@@ -185,7 +185,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
    /**
     * @param _Validate information request unsername from users
     **/ 
-    $catch_un       = AUTH::CATCH( $username_err, $auth_un_bind, $valid_type = [
+    $catch_un       = VALIDATE::CATCH( $username_err, $auth_un_bind, $valid_type = [
        
      MINLENGTH      => [ 'username', 7, 'MIN of 7 characters!' ]
       
@@ -194,7 +194,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
    /**
     * @param _Validate information request email from users
     **/ 
-    $catch_ue = AUTH::CATCH($email_err, $auth_ue_bind, $valid_type = [
+    $catch_ue = VALIDATE::CATCH($email_err, $auth_ue_bind, $valid_type = [
        
       VALID_EMAIL   => ['email','must be valid email']
  
@@ -203,7 +203,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
    /**
     * @param _Validate information request passwords from users
     **/ 
-    $catch_up = VALIDATION::FORM( input_error: $userpassword_err, valid_type: $valid_type = [
+    $catch_up = VALIDATE::FORM( input_result: $userpassword_err, valid_type: $valid_type = [
       
       MINLENGTH        => ['password', 8,'Password must have atleast 8 characters.'],
       VALIDPASSWORD    => ['password',   'Requere password has at least 8 characters + one number + one upper case letter + one lower case letter and one special character.' ],

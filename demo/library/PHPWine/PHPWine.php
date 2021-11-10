@@ -85,7 +85,7 @@
     };
     
     // Get Loader Prop
-    $phpWine->php_wine('prop');
+    $phpWine->php_wine( requestDependencies: 'prop');
     $phpWine->phpWineLoader();
 
    

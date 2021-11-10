@@ -2,7 +2,9 @@
 
 use \PHPWine\VanillaFlavour\System\Auth;
 use \PHPWine\VanillaFlavour\System\Request;
+use \PHPWine\VanillaFlavour\System\Validate;
 use \PHPWine\VanillaFlavour\Optimizer\Form;
+
 
  #############################################################################################################
  # THIS IS FOR DEMO DATABASE CONNECTION !!! BUILD YOUR OWN DATABSE CONENCTION BASE ON YOUR CURRENT FRAMEWORK !
@@ -26,13 +28,13 @@ $username = $password = $err_username =  $err_password = $auth_err = '';
 
 if($_SERVER["REQUEST_METHOD"] == "POST") : 
  
-    $un           = AUTH::$DATAFORM = ["username","Enter username or email or mobile"];
-    $username     = AUTH::HASCONTAINS($un);  
-    $err_username = AUTH::ERROR($username, $un);
+    $un           = VALIDATE::$DATAFORM = ["username","Enter username or email or mobile"];
+    $username     = VALIDATE::HASCONTAINS($un);  
+    $err_username = VALIDATE::ERROR($username, $un);
 
-    $pw           = AUTH::$DATAFORM = ["password","Please enter valid associated password."];
-    $password     = AUTH::HASCONTAINS($pw);  
-    $err_password = AUTH::ERROR($password, $pw);
+    $pw           = VALIDATE::$DATAFORM = ["password","Please enter valid associated password."];
+    $password     = VALIDATE::HASCONTAINS($pw);  
+    $err_password = VALIDATE::ERROR($password, $pw);
 
     $auth_err    = AUTH::BIND($connection, 
     [   
@@ -63,7 +65,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") :
  
 );
 
-echo (!empty($sets_eCatch)) ? $sets_eCatch : ''; 
+ echo (!empty($sets_eCatch)) ? $sets_eCatch : '';  
 
   _FORM(setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 'POST']));
  

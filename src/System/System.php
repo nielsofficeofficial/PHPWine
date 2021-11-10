@@ -232,7 +232,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
       if( !empty($input_error) )   : return $input_error;
       else                               : 
         
-         if ( new \PHPWine\VanillaFlavour\System\Request() !== false)   :  $RequestErrorHandler = NEW \PHPWine\VanillaFlavour\System\Validation();
+         if ( new \PHPWine\VanillaFlavour\System\Request() !== false)   :  $RequestErrorHandler = NEW \PHPWine\VanillaFlavour\System\Validate();
          else                                                                     :  print( self::HANDLER_DEPENDENCIES( 'CLASS' ) ); 
          endif;
          
