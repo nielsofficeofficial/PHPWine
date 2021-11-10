@@ -157,7 +157,7 @@ VALIDPASSWORD
 
 Getting Array Argument:
 // First Set Validation param you need ex. below :
-$err_catch = AUTH::CATCH( $err_input, $err_bind, $validType = [
+$err_catch = VALIDATE::CATCH( $err_input, $err_bind, $validType = [
    
    // Stay empty array to figure out the argument
    // Click Submit button or run the program then the error message will popup 
@@ -169,7 +169,7 @@ $err_catch = AUTH::CATCH( $err_input, $err_bind, $validType = [
 
 Usage: 
 // Handling Validation Catch method
-$err_catch = AUTH::CATCH( $err_input, $err_bind, $validType = [
+$err_catch = VALIDATE::CATCH( $err_input, $err_bind, $validType = [
        
    STRINGTYPE   => [USERNAME,'No special character letter and space are allowed'],
    MAXLENGTHT   => [USERNAME,5,'Not more than 5 characters!']
@@ -177,7 +177,7 @@ $err_catch = AUTH::CATCH( $err_input, $err_bind, $validType = [
 ]); 
 
 // FORM Validation
-$validation = VALIDATION::FORM( $userpassword_err, $validType = [
+$validation = VALIDATE::FORM( $userpassword_err, $validType = [
         
     MINLENGTH        => ['password', 8,'Password must have atleast 8 characters.'],
     VALIDPASSWORD    => ['password',   'Requere password has at least 8 characters + one number + one upper case letter + one lower case letter and one special character.' ],
