@@ -73,7 +73,7 @@ $Enhancer = new OptimizerCare();
         | - README.md
         | - composer.json        
         
-// on header.php
+// on the very top of file function.php theme file
 require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
 
 ...
