@@ -85,11 +85,11 @@ require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
 ```PHP
 
 // Use on every pages
-use \PHPWine\VanillaFlavour\Optimizer\Form;
 use \PHPWine\VanillaFlavour\Merge\Html;
+use \PHPWine\VanillaFlavour\Optimizer\Form;
 use \PHPWine\VanillaFlavour\System\Auth;
 use \PHPWine\VanillaFlavour\System\Request;
-use \PHPWine\VanillaFlavour\System\Validation;
+use \PHPWine\VanillaFlavour\System\Validate;
 
 ```
 <h2>Thanks To:</h2>
