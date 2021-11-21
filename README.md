@@ -92,6 +92,12 @@ use \PHPWine\VanillaFlavour\System\Request;
 use \PHPWine\VanillaFlavour\System\Validate;
 
 ```
+<h6> Only Official source: </h6>
+Visit fb: https://web.facebook.com/PHPWine <br />
+Website: https://nielsofficeofficial.github.io/PHPWine/ <br />
+Github : https://github.com/nielsofficeofficial/PHPWine/
+<br /> 
+
 <h2>Thanks To:</h2>
 <h5>
 Github : To allow me to upload my PHP Library PHPWine Vanilla Flavour to repository<br /> 
