@@ -92,7 +92,7 @@ use \PHPWine\VanillaFlavour\System\Request;
 use \PHPWine\VanillaFlavour\System\Validate;
 
 ```
-<h6> Only Official source: </h6>
+<h6> Only Official and reliable source links: </h6>
 Visit fb: https://web.facebook.com/PHPWine <br />
 Website: https://nielsofficeofficial.github.io/PHPWine/ <br />
 Github : https://github.com/nielsofficeofficial/PHPWine/
