@@ -58,7 +58,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
     bind_user_data : [   
     
-        'QUERY_STATEMENT'    => VALIDATE::RETURNSQL('users_log',["id"],["username"])
+        'QUERY_STATEMENT'    => VALIDATE::CHECKQUERY('users_log',["id"],["username"])
        ,'INPUT_HASCONTAINS'  => $username  
        ,'INPUT_DATAEXIST'    => "This {$username} was already used."
   
@@ -67,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $auth_ue_bind  = VALIDATE::BIND($connection, 
     [   
     
-        'QUERY_STATEMENT'    => VALIDATE::RETURNSQL('users_log',["id"],["email"])
+        'QUERY_STATEMENT'    => VALIDATE::CHECKQUERY('users_log',["id"],["email"])
        ,'INPUT_HASCONTAINS'  => $email  
        ,'INPUT_DATAEXIST'    => "This {$email} was already used."
   
@@ -76,7 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $auth_um_bind  = VALIDATE::BIND($connection, 
     [   
     
-        'QUERY_STATEMENT'    => VALIDATE::RETURNSQL( table : 'users_log', col_id : ["id"], col_name : ["mobile"])
+        'QUERY_STATEMENT'    => VALIDATE::CHECKQUERY( table : 'users_log', col_id : ["id"], col_name : ["mobile"])
        ,'INPUT_HASCONTAINS'  => $mobile  
        ,'INPUT_DATAEXIST'    => "This {$mobile} was already used."
   
@@ -155,13 +155,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   
 
  _xdiv( 'id-username_from_group',
+   
     FORM::LABEL('label-id-un' , 'Username'       , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
    .FORM::TEXT('id-username'  , 'class-username' , [['name', 'value'] , ['username', DOIF(is_null($catch_un),  $username, FUNC_ASSOC)]], FUNC_ASSOC ) 
 
   ,setElemAttr(['class'],['username_from_group'])
  );  
   
- _xdiv('id-email_from_group', 
+ _xdiv('id-email_from_group',
+ 
     FORM::LABEL('label-id-e'  , 'Email'       , FUNC_ASSOC) .__BR(FUNC_ASSOC)
    .FORM::TEXT('id-email'     , 'class-email' , [['name', 'value'] , ['email',  DOIF(is_null($catch_ue), $email, FUNC_ASSOC)  ]], FUNC_ASSOC ) 
 
@@ -169,6 +171,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
  );
 
  _xdiv('id-mobile_from_group',
+
    FORM::LABEL('label-id-m'  , 'Mobile'       , FUNC_ASSOC) .__BR(FUNC_ASSOC)
   .FORM::TEXT('id-mobile'    , 'class-mobile' , [['name', 'value'],['mobile', DOIF(is_null($catch_um), $mobile, FUNC_ASSOC) ]], FUNC_ASSOC ) 
 
@@ -176,6 +179,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
  );
 
  _xdiv('id-password_from_group',
+
    FORM::LABEL('label-id-p'   , 'Password'     , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
   .FORM::PASSWORD('id-mobile' , 'class-mobile' , [['name'],['password']]  , FUNC_ASSOC ) 
 
@@ -191,6 +195,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
  );
 
   _xdiv('id-button_from_group',
+
    FORM::BUTTONS('id-conPassword' , 'class-submit' , [['value'],['Submit']] , FUNC_ASSOC ) 
   .FORM::RESET('id-conPassword'   , 'class-submit' , [['value'],['Reset']]  , FUNC_ASSOC ) 
 

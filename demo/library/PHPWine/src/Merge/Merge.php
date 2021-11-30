@@ -42,6 +42,7 @@ USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileHandler;
  *
  */
 
+
 /**
   *
   * @since 20.19.2020
@@ -4023,6 +4024,55 @@ function _xSUP(
 
 }
 
+/**
+  *
+  * @since 11.30.2021
+  * @category PHPHtml-Merge
+  * @ Method Defined HTML IMG TAG noHTML  
+  * Inline Heading tag  IMG
+  *
+  **/
+  function _xIMAGE( 
+
+    string        $id     = null
+    ,string       $class  = null
+    ,string       $elem   = null
+    ,array|string $attr   = null
+    ,string       $inline = null
+    ,mixed        $assoc  = null
+  
+  ) 
+  { 
+  
+   /**
+    *
+    *
+    *
+    *
+    *
+    * @package : Merge Heading tag IMG
+    * @package : Static Procedural
+    * @method  : Html::H1($value, $attr=null, $id, $class, $label, $assoc);
+    *
+    *
+    *
+    **/ 
+   $Html = NEW Merge(); 
+   return method_exists($Html, 'ELEMS') ? 
+   
+   $Html->ELEMS(
+  
+     $id
+    ,$class
+    ,'img'
+    ,$attr
+    ,$inline
+    ,$assoc          
+  
+    ) : PERFORM(erorrMessage()); 
+  
+  }
+  
 /**
   *
   * @since 20.19.2020

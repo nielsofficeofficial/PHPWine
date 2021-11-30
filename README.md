@@ -13,7 +13,7 @@
 [![Active](http://img.shields.io/badge/Status-Active-green.svg)](https://nielsofficeofficial.github.io/PHPWine/) 
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/nielsofficeofficial/PHPWine/issues/new) 
 # PHPWine - (Vanilla Flavour) 
-Support PHP v8 and future++ ❗#Warning Do not use wine from not official link❗ 
+Support PHP v8 and future++ 
 
 PHPWine (Vanilla Flavour) design for corePHP and WordPress Cloud system application development. <br />
 <i>Vanilla Flavour: Vanilla flavour means you can use methods outside the class precisely as native PHP functions.</i>
@@ -73,7 +73,7 @@ $Enhancer = new OptimizerCare();
         | - README.md
         | - composer.json        
         
-// on the very top of file function.php theme file
+// on header.php
 require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
 
 ...
@@ -85,19 +85,13 @@ require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
 ```PHP
 
 // Use on every pages
-use \PHPWine\VanillaFlavour\Merge\Html;
 use \PHPWine\VanillaFlavour\Optimizer\Form;
+use \PHPWine\VanillaFlavour\Merge\Html;
 use \PHPWine\VanillaFlavour\System\Auth;
 use \PHPWine\VanillaFlavour\System\Request;
-use \PHPWine\VanillaFlavour\System\Validate;
+use \PHPWine\VanillaFlavour\System\Validation;
 
 ```
-<h6> Only Official and reliable source links: </h6>
-Visit fb: https://web.facebook.com/PHPWine <br />
-Website: https://nielsofficeofficial.github.io/PHPWine/ <br />
-Github : https://github.com/nielsofficeofficial/PHPWine/
-<br /> 
-
 <h2>Thanks To:</h2>
 <h5>
 Github : To allow me to upload my PHP Library PHPWine Vanilla Flavour to repository<br /> 
