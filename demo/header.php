@@ -45,6 +45,7 @@ $fileEnhance = new optimizerCare();
  * @link      https://www.facebook.com/nielsofficeofficial
  * @version   v1.1.4
  *
+ * 
  */
   
     if( isbelongs(['index']          , [1,2,3] ) )  : _xH1("Welcome Home! ");
@@ -61,3 +62,10 @@ $fileEnhance = new optimizerCare();
     , [['a'],['b']], 'MyClass', ' This is it ! ' );
 
     echo ($main_menu) ? $main_menu : false ;
+     
+    
+    ?>
+    
+  
+     
+

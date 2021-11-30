@@ -50,7 +50,6 @@ namespace PHPWine\VanillaFlavour\optimizer;
  * FORM::EMAIL();
  * FORM::FILE();
  * FORM::HIDDEN();
- * FORM::IMAGE();
  * FORM::MONTH();
  * FORM::NUMBER();
  * FORM::PASSWORD();
@@ -346,36 +345,6 @@ namespace PHPWine\VanillaFlavour\optimizer;
     "INLINE",
     'input',  
      $attr = HTML::FORMTYPE( $attr, 'type', 'hidden' ) , 
-     $id, 
-     $class, 
-     $assoc
-  
-   );
-   
-  }
-
-    /**
-    *
-    * Defined Static Form Builder INPUT IMAGE();
-    * @since 11.01.2021
-    * @since v1.4
-    *
-    **/
-  static public function IMAGE(
-
-     string        $id     = null
-    ,string        $class  = null
-    ,array|string  $attr   = null
-    ,mixed         $assoc  = null
-    
-  )
-  {
-
-   return  Parent::HtmlELements_Optimizer(
-     
-    "INLINE",
-    'input',  
-     $attr = HTML::FORMTYPE( $attr, 'type', 'img' ) , 
      $id, 
      $class, 
      $assoc

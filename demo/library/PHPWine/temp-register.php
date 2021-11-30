@@ -6,6 +6,8 @@ use \PHPWine\VanillaFlavour\System\Validate;
 use \PHPWine\VanillaFlavour\System\Request;
 use \PHPWine\VanillaFlavour\Optimizer\Form;
 
+$html->ELEMS('my_img','img','img');
+
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
  *

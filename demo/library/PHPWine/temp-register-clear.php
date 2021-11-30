@@ -6,6 +6,7 @@ use \PHPWine\VanillaFlavour\System\Request;
 use \PHPWine\VanillaFlavour\System\Validate;
 use \PHPWine\VanillaFlavour\Optimizer\Form;
 
+
  #############################################################################################################
  # THIS IS FOR DEMO DATABASE CONNECTION !!! BUILD YOUR OWN DATABSE CONENCTION BASE ON YOUR CURRENT FRAMEWORK !
  #############################################################################################################
@@ -155,7 +156,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   
 
  _xdiv( 'id-username_from_group',
-   
     FORM::LABEL('label-id-un' , 'Username'       , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
    .FORM::TEXT('id-username'  , 'class-username' , [['name', 'value'] , ['username', DOIF(is_null($catch_un),  $username, FUNC_ASSOC)]], FUNC_ASSOC ) 
 
@@ -163,7 +163,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
  );  
   
  _xdiv('id-email_from_group',
- 
     FORM::LABEL('label-id-e'  , 'Email'       , FUNC_ASSOC) .__BR(FUNC_ASSOC)
    .FORM::TEXT('id-email'     , 'class-email' , [['name', 'value'] , ['email',  DOIF(is_null($catch_ue), $email, FUNC_ASSOC)  ]], FUNC_ASSOC ) 
 
@@ -171,7 +170,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
  );
 
  _xdiv('id-mobile_from_group',
-
    FORM::LABEL('label-id-m'  , 'Mobile'       , FUNC_ASSOC) .__BR(FUNC_ASSOC)
   .FORM::TEXT('id-mobile'    , 'class-mobile' , [['name', 'value'],['mobile', DOIF(is_null($catch_um), $mobile, FUNC_ASSOC) ]], FUNC_ASSOC ) 
 
@@ -179,7 +177,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
  );
 
  _xdiv('id-password_from_group',
-
    FORM::LABEL('label-id-p'   , 'Password'     , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
   .FORM::PASSWORD('id-mobile' , 'class-mobile' , [['name'],['password']]  , FUNC_ASSOC ) 
 
@@ -187,7 +184,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
  );
 
  _xdiv('id-cp_from_group',
-
    FORM::LABEL('label-id-confirm_password' , 'Confirm Password'  ,FUNC_ASSOC) .__BR(FUNC_ASSOC)
   .FORM::PASSWORD('id-conPassword'         , 'class-conPassword' , [['name'],['confirm_password']], FUNC_ASSOC ) 
 
@@ -195,7 +191,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
  );
 
   _xdiv('id-button_from_group',
-
    FORM::BUTTONS('id-conPassword' , 'class-submit' , [['value'],['Submit']] , FUNC_ASSOC ) 
   .FORM::RESET('id-conPassword'   , 'class-submit' , [['value'],['Reset']]  , FUNC_ASSOC ) 
 

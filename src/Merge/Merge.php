@@ -4036,7 +4036,6 @@ function _xSUP(
 
     string        $id     = null
     ,string       $class  = null
-    ,string       $elem   = null
     ,array|string $attr   = null
     ,string       $inline = null
     ,mixed        $assoc  = null
