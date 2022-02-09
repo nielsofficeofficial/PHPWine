@@ -3,13 +3,14 @@
 USE \PHPWine\VanillaFlavour\Merge\Html;
 USE \PHPWine\VanillaFlavour\Optimizer\Html AS Merge; 
 USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileHandler;
+USE \PHPWine\VanillaFlavour\system\Request;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.0 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.0 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -28,24 +29,120 @@ USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileHandler;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * @category   PHPWine\VanillaFlavour
- * @package    Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
- *             Handling Form Validation | Same page CRUD | PHPOptimizer | Advance Form Builder
+ * @category   PHPLibrary PHPWine\VanillaFlavour
+ * @package    PHPHtml-Optimizer | CodeDesigner/Enhancer | Advance Form Builder | Handling Form Validation | Form Validation v2 | BASIC-Authentication | HtmlMinifier
  *            
  *            
- * @author    nielfernandez <nielsoffice.wordpress.php@gmail.com>
+ * @author    Leinner Zednanref <nielsoffice.wordpress.php@gmail.com>
  * @license   MIT License
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.4
+ * @version   v1.2.0.0 
+ * @since     02.04.2022
  *
+ * @method / FunctionList 
+ * @method _xH1();
+ * @method _xH2();
+ * @method _xH3();
+ * @method _xH4();
+ * @method _xH5();
+ * @method _xH6();
+ * @method _xDIV();
+ * @method _xP();
+ * @method _xBUTTON();
+ * @method _xA();
+ * @method _xIFRAME();
+ * @method _xMAIN();
+ * @method _xNAV();
+ * @method _xSELECT();
+ * @method _xFORM();
+ * @method _xPICTURE();
+ * @method _xSECTION();
+ * @method _xTEXTAREA();
+ * @method _xFOOTER();
+ * @method _xSCRIPT();
+ * @method _xSTYLE();
+ * @method _xAUDIO();
+ * @method _xVIDEO();
+ * @method _xADDRESS();
+ * @method _xCOLGROUP();
+ * @method _xBDI();
+ * @method _xBDO();
+ * @method _xBLOCKQUOTE();
+ * @method _xCAPTION();
+ * @method _xLABEL();
+ * @method _xDATALIST();
+ * @method _xDETAILS();
+ * @method _xSUMMARY();
+ * @method _xDIALOG();
+ * @method _xOPTION();
+ * @method _xFIGURE();
+ * @method _xFIGCAPTION();
+ * @method _xMETER();
+ * @method _xOBJECT();
+ * @method _xOPTGROUP();
+ * @method _xOUTPUT();
+ * @method _xPROGRESS();
+ * @method _xTEMPLATE();
+ * @method _xUL();
+ * @method _xOL();
+ * @method _xLI();
+ * @method _xTABLE();
+ * @method _xTR();
+ * @method _xTD();
+ * @method _xTH();
+ * @method _xLEGEND();
+ * @method _xFIELDSET();
+ * @method _xTBODY();
+ * @method _xTFOOTER();
+ * @method _xTHEAD();
+ * @method _xSPAN();
+ * @method _xEM();
+ * @method _xB();
+ * @method _xI();
+ * @method _xSMALL();
+ * @method _xMARQUEE();
+ * @method _xCENTER();
+ * @method _xCODE();
+ * @method _xABBR();
+ * @method _xMAP();
+ * @method _xCANVAS();
+ * @method _xDATA();
+ * @method _xDL();
+ * @method _xDT();
+ * @method _xDD();
+ * @method _xDFN();
+ * @method _xINS();
+ * @method _xDEL();
+ * @method _xKBD();
+ * @method _xMARK();
+ * @method _xPRE();
+ * @method _xRT();
+ * @method _xS();
+ * @method _xSAMP();
+ * @method _xSTRONG();
+ * @method _xSUB();
+ * @method _xSUP();
+ * @method _xIMG();
+ * @method _xWBR();
+ * @method _xQ();
+ * @method _xHEAD();
+ * @method _xTITLE();
+ * @method _xBODY();
+ * 
+ * FIXING NOT AVAILABLE TAG USE Enhancer ELEM('svg') instead ! 
+ * @since 02.04.2022
+ * @since v1.2.0.0
+ * # _xSVG();
+ * 
  */
 
+ $request = NEW Request();
 
 /**
   *
-  * @since 20.19.2020
+  * @since 02.19.2020
   * @category PHPHtml-Merge
   * @ Method Defined HTML H1 TAG noHTML  
   * Inline Heading tag H1
@@ -53,20 +150,19 @@ USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileHandler;
   **/
 function _xH1( 
 
-   mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $id      =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   array|string  $value  =  null 
+  ,array|string  $attr   =  null 
+  ,string        $id     =  null 
+  ,string        $class  =  null 
+  ,string        $label  =  null 
+  ,string        $assoc  =  null 
 
 ) 
 { 
  
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H1
@@ -74,9 +170,9 @@ function _xH1(
    * @method  : Html::H1($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 
 	$Html = NEW Merge(); 
+
   return method_exists($Html, 'H1') ? 
   
   $Html->H1(
@@ -88,7 +184,7 @@ function _xH1(
     ,$label            
     ,$assoc           
 
-   ) : PERFORM(erorrMessage()); 
+   ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -102,29 +198,30 @@ function _xH1(
   **/
 function _xH2( 
 
-   mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $id      =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   array|string  $value  =  null 
+  ,array|string  $attr   =  null 
+  ,string        $id     =  null 
+  ,string        $class  =  null 
+  ,string        $label  =  null 
+  ,string        $assoc  =  null   
 
 ) 
 { 
+
+  global $request;
+  
   /**
    *
    *
-   *
-   *
-   *
+   * 
    * @package : Merge Heading tag H2
    * @package : Static Procedural
    * @method  : Html::H2($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 
    $Html = NEW Merge(); 
+
    return method_exists($Html, 'H2') ? 
    
    $Html->H2(
@@ -136,7 +233,7 @@ function _xH2(
     ,$label            
     ,$assoc   
 
-   ) : PERFORM(erorrMessage()); 
+   ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -150,19 +247,19 @@ function _xH2(
   **/
 function _xH3( 
 
-   mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $id      =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null   
+   array|string  $value  =  null
+  ,array|string  $attr   =  null 
+  ,string        $id     =  null 
+  ,string        $class  =  null 
+  ,string        $label  =  null 
+  ,string        $assoc  =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H3
@@ -170,9 +267,9 @@ function _xH3(
    * @method  : Html::H3($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 
    $Html = NEW Merge(); 
+
    return method_exists($Html, 'H3') ? 
    
    $Html->H3(
@@ -184,7 +281,7 @@ function _xH3(
     ,$label            
     ,$assoc  
 
-   ) : PERFORM(erorrMessage());  
+   ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -198,19 +295,19 @@ function _xH3(
   **/
 function _xH4( 
 
-   mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $id      =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null   
+   array|string  $value  =  null
+  ,array|string  $attr   =  null 
+  ,string        $id     =  null 
+  ,string        $class  =  null 
+  ,string        $label  =  null 
+  ,string        $assoc  =  null    
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H3
@@ -218,9 +315,9 @@ function _xH4(
    * @method  : Html::H3($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 
    $Html = NEW Merge(); 
+
    return method_exists($Html, 'H4') ? 
    
    $Html->H4( 
@@ -232,7 +329,7 @@ function _xH4(
     ,$label            
     ,$assoc   
 
-   ) : PERFORM(erorrMessage());   
+   ) : PERFORM( $request->erorrMessage() );   
 
 }
 
@@ -246,29 +343,29 @@ function _xH4(
   **/
 function _xH5( 
 
-   mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $id      =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null      
+   array|string  $value  =  null
+  ,array|string  $attr   =  null 
+  ,string        $id     =  null 
+  ,string        $class  =  null 
+  ,string        $label  =  null 
+  ,string        $assoc  =  null       
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H5
    * @package : Static Procedural
    * @method  : Html::H5($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
+   * 
    *
    **/
    $Html = NEW Merge(); 
+
    return method_exists($Html, 'H5') ? 
    
    $Html->H5(
@@ -280,7 +377,7 @@ function _xH5(
     ,$label            
     ,$assoc   
 
-   ) : PERFORM(erorrMessage()); 
+   ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -294,18 +391,19 @@ function _xH5(
   **/
 function _xH6( 
 
-   mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $id      =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null     
+   array|string  $value  =  null
+  ,array|string  $attr   =  null 
+  ,string        $id     =  null 
+  ,string        $class  =  null 
+  ,string        $label  =  null 
+  ,string        $assoc  =  null      
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
    *
    *
    *
@@ -314,9 +412,9 @@ function _xH6(
    * @method  : Html::H6($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
    $Html = NEW Merge(); 
+
    return method_exists($Html,'H6') ? 
    
    $Html->H6( 
@@ -328,7 +426,7 @@ function _xH6(
     ,$label            
     ,$assoc   
 
-    ) : PERFORM(erorrMessage()); 
+    ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -343,18 +441,18 @@ function _xH6(
 function _xDIV( 
 
    string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
+  ,array|string  $value   =  null 
+  ,array|string  $attr    =  null 
   ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+  ,string        $label   =  null 
+  ,string        $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H6
@@ -362,9 +460,9 @@ function _xDIV(
    * @method  : Html::DIV($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
    $Html = NEW Merge(); 
+
    return method_exists($Html,'DIV') ? 
    
     $Html->DIV( 
@@ -376,7 +474,7 @@ function _xDIV(
     ,$label            
     ,$assoc
 
-    ) : PERFORM(erorrMessage()); 
+    ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -391,18 +489,18 @@ function _xDIV(
 function _xP( 
 
    string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
+  ,array|string  $value   =  null 
+  ,array|string  $attr    =  null 
   ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+  ,string        $label   =  null 
+  ,string        $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag PARAGRAPH
@@ -410,9 +508,9 @@ function _xP(
    * @method  : Html::P($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
    $Html = NEW Merge(); 
+
    return method_exists($Html,'P') ? 
    
     $Html->P( 
@@ -424,7 +522,7 @@ function _xP(
     ,$label            
     ,$assoc
 
-    ) : PERFORM(erorrMessage()); 
+    ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -439,18 +537,18 @@ function _xP(
 function _xBUTTON( 
  
    string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
+  ,array|string  $value   =  null 
+  ,array|string  $attr    =  null 
   ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+  ,string        $label   =  null 
+  ,string        $assoc   =  null
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag BUTTON
@@ -458,9 +556,9 @@ function _xBUTTON(
    * @method  : Html::BUTTON($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
    $Html = NEW Merge(); 
+
    return method_exists($Html,'BUTTON') ? 
    
     $Html->BUTTON(
@@ -472,7 +570,7 @@ function _xBUTTON(
     ,$label            
     ,$assoc
 
-   ) : PERFORM(erorrMessage());
+   ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -487,18 +585,18 @@ function _xBUTTON(
 function _xA( 
 
    string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
+  ,array|string  $value   =  null 
+  ,array|string  $attr    =  null 
   ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+  ,string        $label   =  null 
+  ,string        $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag A LINK
@@ -506,9 +604,9 @@ function _xA(
    * @method  : Html::A($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
    $Html = NEW Merge(); 
+
    return method_exists($Html,'A') ? 
    
     $Html->A( 
@@ -520,7 +618,7 @@ function _xA(
     ,$label            
     ,$assoc
    
-   ) : PERFORM(erorrMessage());
+   ) : PERFORM( $request->erorrMessage() );
    
 }
 
@@ -535,28 +633,28 @@ function _xA(
 function _xIFRAME( 
 
    string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
+  ,array|string  $value   =  null 
+  ,array|string  $attr    =  null 
   ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null    
+  ,string        $label   =  null 
+  ,string        $assoc   =  null     
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag A IFRAME
    * @package : Static Procedural
    * @method  : Html::IFRAME($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
+   * 
    *
    **/
    $Html = NEW Merge(); 
+
    return method_exists($Html,'IFRAME') ?
    
     $Html->IFRAME( 
@@ -568,7 +666,7 @@ function _xIFRAME(
     ,$label            
     ,$assoc
 
-    ) : PERFORM(erorrMessage()); 
+    ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -583,18 +681,18 @@ function _xIFRAME(
 function _xMAIN( 
 
    string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
+  ,array|string  $value   =  null 
+  ,array|string  $attr    =  null 
   ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null   
+  ,string        $label   =  null 
+  ,string        $assoc   =  null     
 
  ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag MAIN
@@ -602,9 +700,9 @@ function _xMAIN(
    * @method  : Html::MAIN($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'MAIN') ? 
   
    $Html->MAIN( 
@@ -616,7 +714,7 @@ function _xMAIN(
     ,$label            
     ,$assoc
 
-   ) : PERFORM(erorrMessage()); 
+   ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -631,18 +729,18 @@ function _xMAIN(
 function _xNAV( 
 
    string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
+  ,array|string  $value   =  null 
+  ,array|string  $attr    =  null 
   ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+  ,string        $label   =  null 
+  ,string        $assoc   =  null  
 
  ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag NAV
@@ -650,9 +748,9 @@ function _xNAV(
    * @method  : Html::NAV($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
    $Html = NEW Merge(); 
+
    return method_exists($Html,'NAV') ? 
    
     $Html->NAV( 
@@ -664,7 +762,7 @@ function _xNAV(
     ,$label            
     ,$assoc
 
-    ) : PERFORM(erorrMessage()); 
+    ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -678,19 +776,19 @@ function _xNAV(
   **/
 function _xSELECT( 
 
-   string $id      =  null 
-  ,mixed  $value           =  null 
-  ,array  $attr            =  null 
-  ,string $class   =  null 
-  ,string $label           =  null 
-  ,mixed  $assoc           =  null  
+   string        $id      =  null 
+  ,array|string  $value   =  null 
+  ,array|string  $attr    =  null 
+  ,string        $class   =  null 
+  ,string        $label   =  null 
+  ,string        $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SELECT
@@ -698,9 +796,9 @@ function _xSELECT(
    * @method  : Html::SELECT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
    $Html = NEW Merge(); 
+
    return method_exists($Html,'SELECT') ?
    
     $Html->SELECT( 
@@ -712,7 +810,7 @@ function _xSELECT(
     ,$label            
     ,$assoc
 
-    ) : PERFORM(erorrMessage()); 
+    ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -727,18 +825,18 @@ function _xSELECT(
 function _xFORM( 
 
    string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
+  ,array|string  $value   =  null 
+  ,array|string  $attr    =  null 
   ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+  ,string        $label   =  null 
+  ,string        $assoc   =  null    
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag FORM
@@ -746,9 +844,9 @@ function _xFORM(
    * @method  : Html::FORM($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
-   $Html = NEW Merge(); 
+   $Html = NEW Merge();
+
    return method_exists($Html,'FORM') ? 
    
     $Html->FORM( 
@@ -760,7 +858,7 @@ function _xFORM(
     ,$label            
     ,$assoc
 
-    ) : PERFORM(erorrMessage()); 
+    ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -775,18 +873,18 @@ function _xFORM(
 function _xPICTURE( 
 
    string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
+  ,array|string  $value   =  null 
+  ,array|string  $attr    =  null 
   ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+  ,string        $label   =  null 
+  ,string        $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag PICTURE
@@ -794,9 +892,9 @@ function _xPICTURE(
    * @method  : Html::PICTURE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'PICTURE') ? 
   
    $Html->PICTURE( 
@@ -808,7 +906,7 @@ function _xPICTURE(
     ,$label            
     ,$assoc
 
-   ) : PERFORM(erorrMessage());  
+   ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -823,18 +921,18 @@ function _xPICTURE(
 function _xSECTION( 
 
    string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
+  ,array|string  $value   =  null 
+  ,array|string  $attr    =  null 
   ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+  ,string        $label   =  null 
+  ,string        $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SECTION
@@ -842,9 +940,9 @@ function _xSECTION(
    * @method  : Html::SECTION($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
    $Html = NEW Merge(); 
+
    return method_exists($Html,'SECTION') ? 
    
     $Html->SECTION( 
@@ -856,7 +954,7 @@ function _xSECTION(
     ,$label            
     ,$assoc
 
-    ) : PERFORM(erorrMessage());  
+    ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -871,18 +969,18 @@ function _xSECTION(
 function _xTEXTAREA( 
 
    string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
+  ,array|string  $value   =  null 
+  ,array|string  $attr    =  null 
   ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null   
+  ,string        $label   =  null 
+  ,string        $assoc   =  null   
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TEXTAREA
@@ -890,9 +988,9 @@ function _xTEXTAREA(
    * @method  : Html::TEXTAREA($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'TEXTAREA') ? 
   
    $Html->TEXTAREA( 
@@ -904,7 +1002,7 @@ function _xTEXTAREA(
     ,$label            
     ,$assoc
 
-   ) : PERFORM(erorrMessage()); 
+   ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -919,18 +1017,18 @@ function _xTEXTAREA(
 function _xFOOTER( 
 
    string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
+  ,array|string  $value   =  null 
+  ,array|string  $attr    =  null 
   ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+  ,string        $label   =  null 
+  ,string        $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TEXTAREA
@@ -938,9 +1036,9 @@ function _xFOOTER(
    * @method  : Html::TEXTAREA($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'FOOTER') ? 
   
    $Html->FOOTER( 
@@ -952,7 +1050,7 @@ function _xFOOTER(
     ,$label            
     ,$assoc
 
-   ) : PERFORM(erorrMessage());
+   ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -966,16 +1064,16 @@ function _xFOOTER(
   **/
 function _xSCRIPT( 
 
-     mixed        $value          =  null
+     string       $value          =  null
     ,array|string $attr           =  null
-    ,mixed        $assoc          =  null 
+    ,string       $assoc          =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SCRIPT
@@ -983,9 +1081,9 @@ function _xSCRIPT(
    * @method  : Html::SCRIPT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'SCRIPT') ? 
   
   $Html->SCRIPT(
@@ -997,7 +1095,7 @@ function _xSCRIPT(
      ,null
      ,$assoc
      
-  ) : PERFORM(erorrMessage());
+  ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -1011,16 +1109,16 @@ function _xSCRIPT(
   **/
 function _xSTYLE( 
 
-     mixed        $value          =  null
-    ,array|string $attr           =  null
-    ,mixed        $assoc          =  null 
+   string       $value          =  null
+  ,array|string $attr           =  null
+  ,string       $assoc          =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TEXTAREA
@@ -1028,9 +1126,9 @@ function _xSTYLE(
    * @method  : Html::TEXTAREA($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'STYLE') ?
   
    $Html->STYLE(
@@ -1042,7 +1140,7 @@ function _xSTYLE(
      ,null
      ,$assoc
      
-  ) : PERFORM(erorrMessage());
+  ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -1056,19 +1154,19 @@ function _xSTYLE(
   **/
 function _xAUDIO( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag AUDIO
@@ -1076,9 +1174,9 @@ function _xAUDIO(
    * @method  : Html::AUDIO($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'AUDIO') ? 
   
    $Html->AUDIO( 
@@ -1090,7 +1188,7 @@ function _xAUDIO(
     ,$label            
     ,$assoc
 
-   ) : PERFORM(erorrMessage()); 
+   ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -1104,19 +1202,19 @@ function _xAUDIO(
   **/
 function _xVIDEO( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag VIDEO
@@ -1124,9 +1222,9 @@ function _xVIDEO(
    * @method  : Html::VIDEO($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge();
+
   return method_exists($Html,'VIDEO') ? 
   
    $Html->VIDEO( 
@@ -1138,7 +1236,7 @@ function _xVIDEO(
     ,$label            
     ,$assoc
 
-   ) : PERFORM(erorrMessage());  
+   ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -1152,19 +1250,19 @@ function _xVIDEO(
   **/
 function _xADDRESS( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null   
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null   
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag ADDRESS
@@ -1172,9 +1270,9 @@ function _xADDRESS(
    * @method  : Html::ADDRESS($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge();
+
   return method_exists($Html,'ADDRESS') ? 
   
    $Html->ADDRESS( 
@@ -1186,7 +1284,7 @@ function _xADDRESS(
     ,$label            
     ,$assoc
 
-   ) : PERFORM(erorrMessage()); 
+   ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -1200,19 +1298,19 @@ function _xADDRESS(
   **/
 function _xCOLGROUP( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null   
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag COLGROUP
@@ -1220,9 +1318,9 @@ function _xCOLGROUP(
    * @method  : Html::COLGROUP($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'COLGROUP') ? 
   
    $Html->COLGROUP( 
@@ -1234,7 +1332,7 @@ function _xCOLGROUP(
     ,$label            
     ,$assoc
 
-   ) : PERFORM(erorrMessage());  
+   ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -1248,19 +1346,19 @@ function _xCOLGROUP(
   **/
 function _xBDI( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null   
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag BDI
@@ -1268,9 +1366,9 @@ function _xBDI(
    * @method  : Html::BDI($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'COLGROUP') ?
   
    $Html->BDI( 
@@ -1282,7 +1380,7 @@ function _xBDI(
     ,$label            
     ,$assoc
 
-   ) : PERFORM(erorrMessage()); 
+   ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -1296,19 +1394,19 @@ function _xBDI(
   **/
 function _xBDO( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag BDO
@@ -1316,9 +1414,9 @@ function _xBDO(
    * @method  : Html::BDO($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'BDO') ? 
   
    $Html->BDO( 
@@ -1330,7 +1428,7 @@ function _xBDO(
     ,$label            
     ,$assoc
 
-   ) : PERFORM(erorrMessage());
+   ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -1344,19 +1442,19 @@ function _xBDO(
   **/
 function _xBLOCKQUOTE( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag BLOCKQUOTE
@@ -1364,9 +1462,9 @@ function _xBLOCKQUOTE(
    * @method  : Html::BLOCKQUOTE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'BLOCKQUOTE') ? 
   
    $Html->BLOCKQUOTE( 
@@ -1378,7 +1476,7 @@ function _xBLOCKQUOTE(
     ,$label            
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -1392,19 +1490,19 @@ function _xBLOCKQUOTE(
   **/
 function _xCAPTION( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag CAPTION
@@ -1412,9 +1510,9 @@ function _xCAPTION(
    * @method  : Html::CAPTION($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'CAPTION') ?
   
    $Html->CAPTION(  
@@ -1426,7 +1524,7 @@ function _xCAPTION(
     ,$label            
     ,$assoc
 
-   ) : PERFORM(erorrMessage()); 
+   ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -1440,20 +1538,20 @@ function _xCAPTION(
   **/
 function _xLABEL( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag LABEL
@@ -1461,9 +1559,9 @@ function _xLABEL(
    * @method  : Html::LABEL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'LABEL') ?
   
    $Html->LABEL( 
@@ -1475,7 +1573,7 @@ function _xLABEL(
     ,$label            
     ,$assoc
 
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -1489,19 +1587,19 @@ function _xLABEL(
   **/
 function _xDATALIST( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DATALIST
@@ -1509,9 +1607,9 @@ function _xDATALIST(
    * @method  : Html::DATALIST($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'DATALIST') ? 
   
    $Html->DATALIST( 
@@ -1523,7 +1621,7 @@ function _xDATALIST(
     ,$label            
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -1537,19 +1635,19 @@ function _xDATALIST(
   **/
 function _xDETAILS( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DETAILS
@@ -1557,9 +1655,9 @@ function _xDETAILS(
    * @method  : Html::DETAILS($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
-  $Html = NEW Merge(); 
+  $Html = NEW Merge();
+
   return method_exists($Html,'DETAILS') ? 
   
    $Html->DETAILS( 
@@ -1571,7 +1669,7 @@ function _xDETAILS(
     ,$label            
     ,$assoc
     
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -1585,19 +1683,19 @@ function _xDETAILS(
   **/
 function _xSUMMARY( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SUMMARY
@@ -1605,9 +1703,9 @@ function _xSUMMARY(
    * @method  : Html::SUMMARY($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'SUMMARY') ?
   
    $Html->SUMMARY( 
@@ -1619,7 +1717,7 @@ function _xSUMMARY(
     ,$label            
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -1633,19 +1731,19 @@ function _xSUMMARY(
   **/
 function _xDIALOG( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DIALOG
@@ -1653,9 +1751,9 @@ function _xDIALOG(
    * @method  : Html::DIALOG($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge();
+
   return method_exists($Html,'DIALOG') ? 
   
    $Html->DIALOG( 
@@ -1667,7 +1765,7 @@ function _xDIALOG(
     ,$label 
     ,$assoc 
 
-   ) : PERFORM(erorrMessage());   
+   ) : PERFORM( $request->erorrMessage() );   
 
 }
 
@@ -1681,19 +1779,19 @@ function _xDIALOG(
   **/
 function _xOPTION( 
   
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag OPTION
@@ -1701,9 +1799,9 @@ function _xOPTION(
    * @method  : Html::OPTION($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge();
+
   return method_exists($Html,'OPTION') ? 
   
    $Html->OPTION( 
@@ -1715,7 +1813,7 @@ function _xOPTION(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -1729,19 +1827,19 @@ function _xOPTION(
   **/
 function _xFIGURE( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag FIGURE
@@ -1749,9 +1847,9 @@ function _xFIGURE(
    * @method  : Html::FIGURE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'FIGURE') ? 
   
    $Html->FIGURE( 
@@ -1763,7 +1861,7 @@ function _xFIGURE(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -1777,19 +1875,19 @@ function _xFIGURE(
   **/
 function _xFIGCAPTION( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag FIGCAPTION
@@ -1797,9 +1895,9 @@ function _xFIGCAPTION(
    * @method  : Html::FIGCAPTION($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'FIGCAPTION') ?
   
    $Html->FIGCAPTION( 
@@ -1811,7 +1909,7 @@ function _xFIGCAPTION(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -1825,19 +1923,19 @@ function _xFIGCAPTION(
   **/
 function _xMETER( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag METER
@@ -1845,9 +1943,9 @@ function _xMETER(
    * @method  : Html::METER($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
-  $Html = NEW Merge(); 
+  $Html = NEW Merge();
+
   return method_exists($Html,'METER') ?
   
    $Html->METER( 
@@ -1859,7 +1957,7 @@ function _xMETER(
     ,$label 
     ,$assoc
 
-   ) : PERFORM(erorrMessage()); 
+   ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -1873,19 +1971,19 @@ function _xMETER(
   **/
 function _xOBJECT( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag OBJECT
@@ -1893,9 +1991,9 @@ function _xOBJECT(
    * @method  : Html::OBJECT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge();
+
   return method_exists($Html,'OBJECT') ? 
   
    $Html->OBJECT( 
@@ -1907,7 +2005,7 @@ function _xOBJECT(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -1921,19 +2019,19 @@ function _xOBJECT(
   **/
 function _xOPTGROUP( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag OPTGROUP
@@ -1941,9 +2039,9 @@ function _xOPTGROUP(
    * @method  : Html::OPTGROUP($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
-  $Html = NEW Merge(); 
+  $Html = NEW Merge();
+
   return method_exists($Html,'OPTGROUP') ? 
   
    $Html->OPTGROUP( 
@@ -1955,7 +2053,7 @@ function _xOPTGROUP(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());   
+  ) : PERFORM( $request->erorrMessage() );   
 
 }
 
@@ -1969,19 +2067,19 @@ function _xOPTGROUP(
   **/
 function _xOUTPUT( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag OUTPUT
@@ -1989,9 +2087,9 @@ function _xOUTPUT(
    * @method  : Html::OUTPUT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
-  $Html = NEW Merge(); 
+  $Html = NEW Merge();
+
   return method_exists($Html,'OUTPUT') ? 
   
    $Html->OUTPUT( 
@@ -2003,7 +2101,7 @@ function _xOUTPUT(
     ,$label 
     ,$assoc
 
-   ) : PERFORM(erorrMessage());  
+   ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -2017,19 +2115,19 @@ function _xOUTPUT(
   **/
 function _xPROGRESS( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag PROGRESS
@@ -2037,9 +2135,9 @@ function _xPROGRESS(
    * @method  : Html::PROGRESS($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'PROGRESS') ? 
   
    $Html->PROGRESS( 
@@ -2051,7 +2149,7 @@ function _xPROGRESS(
     ,$label 
     ,$assoc
 
-   ) : PERFORM(erorrMessage()); 
+   ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -2059,25 +2157,20 @@ function _xPROGRESS(
   *
   * @since 20.19.2020
   * @category PHPHtml-Merge
-  * @ Method Defined HTML SVG noHTML  
+  * @ Method Defined HTML SVG NOT AVAILABLE FOR MERGE VERSION USE Enhancer ELEM('svg') instead !  
   * Inline Heading tag SVG
   *
   **/
-function _xSVG( 
-
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null   
-
-) 
-{ 
+# function _xSVG( 
+#  string         $id      =  null 
+# ,array|string   $value   =  null 
+# ,array|string   $attr    =  null 
+# ,string         $class   =  null 
+# ,string         $label   =  null 
+# ,string         $assoc   =  null   
+# ) 
+# { 
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SVG
@@ -2085,23 +2178,18 @@ function _xSVG(
    * @method  : Html::SVG($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
-  $Html = NEW Merge(); 
-  return method_exists($Html,'SVG') ? 
-  
-   $Html->SVG( 
-
-    $id 
-    ,$value          
-    ,$attr             
-    ,$class    
-    ,$label 
-    ,$assoc
-
-   ) : PERFORM(erorrMessage()); 
-
-}
+# $Html = NEW Merge(); 
+# return method_exists($Html,'SVG') ? 
+# $Html->SVG( 
+#      $id 
+#     ,$value          
+#     ,$attr             
+#     ,$class    
+#     ,$label 
+#     ,$assoc
+#    ) : PERFORM(erorrMessage()); 
+# }
 
 /**
   *
@@ -2113,29 +2201,29 @@ function _xSVG(
   **/
 function _xTEMPLATE( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null   
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
    *
-   *
-   *
-   *
-   *
+   * 
    * @package : Merge Heading tag TEMPLATE
    * @package : Static Procedural
    * @method  : Html::TEMPLATE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'TEMPLATE') ?
   
    $Html->TEMPLATE( 
@@ -2147,7 +2235,7 @@ function _xTEMPLATE(
     ,$label 
     ,$assoc
 
-   ) : PERFORM(erorrMessage());  
+   ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -2161,19 +2249,19 @@ function _xTEMPLATE(
   **/
 function _xUL( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag UL
@@ -2181,9 +2269,9 @@ function _xUL(
    * @method  : Html::UL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'UL') ?
   
    $Html->UL( 
@@ -2195,7 +2283,7 @@ function _xUL(
     ,$label 
     ,$assoc
 
-   ) : PERFORM(erorrMessage()); 
+   ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -2209,19 +2297,19 @@ function _xUL(
   **/
 function _xOL( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null   
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag OL
@@ -2229,9 +2317,9 @@ function _xOL(
    * @method  : Html::OL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'OL') ? 
   
    $Html->OL( 
@@ -2243,7 +2331,7 @@ function _xOL(
     ,$label 
     ,$assoc
 
-   ) : PERFORM(erorrMessage());  
+   ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -2257,19 +2345,19 @@ function _xOL(
   **/
 function _xLI( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag LI
@@ -2277,9 +2365,9 @@ function _xLI(
    * @method  : Html::LI($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge();
+
   return method_exists($Html,'LI') ?
   
    $Html->LI( 
@@ -2291,7 +2379,7 @@ function _xLI(
     ,$label 
     ,$assoc
 
-   ) : PERFORM(erorrMessage());  
+   ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -2305,19 +2393,19 @@ function _xLI(
   **/
 function _xTABLE( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+  
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TABLE
@@ -2325,9 +2413,9 @@ function _xTABLE(
    * @method  : Html::TABLE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'TABLE') ? 
   
    $Html->TABLE( 
@@ -2339,7 +2427,7 @@ function _xTABLE(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -2353,29 +2441,29 @@ function _xTABLE(
   **/
 function _xTR( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TR
    * @package : Static Procedural
    * @method  : Html::TR($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
+   * 
    *
    **/
-  $Html = NEW Merge(); 
+  $Html = NEW Merge();
+
   return method_exists($Html,'TR') ? 
   
    $Html->TR( 
@@ -2387,7 +2475,7 @@ function _xTR(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -2401,19 +2489,19 @@ function _xTR(
   **/
 function _xTD( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TD
@@ -2421,9 +2509,9 @@ function _xTD(
    * @method  : Html::TD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
-  $Html = NEW Merge(); 
+  $Html = NEW Merge();
+
   return method_exists($Html,'TD') ?
   
    $Html->TD( 
@@ -2435,7 +2523,7 @@ function _xTD(
     ,$label 
     ,$assoc
 
-   ) : PERFORM(erorrMessage());  
+   ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -2449,19 +2537,19 @@ function _xTD(
   **/
 function _xTH( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TH
@@ -2469,9 +2557,9 @@ function _xTH(
    * @method  : Html::TH($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge();
+
   return method_exists($Html,'TH') ? 
   
   $Html->TH( 
@@ -2483,7 +2571,7 @@ function _xTH(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -2497,19 +2585,19 @@ function _xTH(
   **/
 function _xLEGEND( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null   
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag LEGEND
@@ -2517,9 +2605,9 @@ function _xLEGEND(
    * @method  : Html::LEGEND($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'LEGEND') ?
   
    $Html->LEGEND( 
@@ -2531,7 +2619,7 @@ function _xLEGEND(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -2545,19 +2633,19 @@ function _xLEGEND(
   **/
 function _xFIELDSET( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag FIELDSET
@@ -2565,9 +2653,9 @@ function _xFIELDSET(
    * @method  : Html::FIELDSET($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'FIELDSET') ? 
   
    $Html->FIELDSET( 
@@ -2579,7 +2667,7 @@ function _xFIELDSET(
     ,$label 
     ,$assoc
       
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -2593,19 +2681,19 @@ function _xFIELDSET(
   **/
 function _xTBODY( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null   
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TBODY
@@ -2613,9 +2701,9 @@ function _xTBODY(
    * @method  : Html::TBODY($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'TBODY') ? 
   
    $Html->TBODY( 
@@ -2627,7 +2715,7 @@ function _xTBODY(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -2641,19 +2729,19 @@ function _xTBODY(
   **/
 function _xTFOOTER( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TBODY
@@ -2661,9 +2749,9 @@ function _xTFOOTER(
    * @method  : Html::TBODY($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'TFOOT') ? 
   
    $Html->TFOOT( 
@@ -2675,7 +2763,7 @@ function _xTFOOTER(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -2689,19 +2777,19 @@ function _xTFOOTER(
   **/
 function _xTHEAD( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag THEAD
@@ -2709,9 +2797,9 @@ function _xTHEAD(
    * @method  : Html::THEAD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'THEAD') ? 
   
    $Html->THEAD( 
@@ -2723,7 +2811,7 @@ function _xTHEAD(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());
+  ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -2737,19 +2825,19 @@ function _xTHEAD(
   **/
 function _xSPAN( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SPAN
@@ -2757,9 +2845,9 @@ function _xSPAN(
    * @method  : Html::SPAN($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'SPAN') ? 
   
    $Html->SPAN(
@@ -2771,7 +2859,7 @@ function _xSPAN(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -2785,19 +2873,19 @@ function _xSPAN(
   **/
 function _xEM( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag EM
@@ -2805,9 +2893,9 @@ function _xEM(
    * @method  : Html::EM($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'EM') ? 
   
    $Html->EM( 
@@ -2819,7 +2907,7 @@ function _xEM(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -2833,20 +2921,20 @@ function _xEM(
   **/
 function _xB( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 
 ) 
 {
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag B
@@ -2854,9 +2942,9 @@ function _xB(
    * @method  : Html::B($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'B') ? 
   
    $Html->B( 
@@ -2868,7 +2956,7 @@ function _xB(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -2882,19 +2970,19 @@ function _xB(
   **/
 function _xI( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag I
@@ -2902,9 +2990,9 @@ function _xI(
    * @method  : Html::I($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'I') ? 
   
    $Html->I( 
@@ -2916,7 +3004,7 @@ function _xI(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -2930,19 +3018,19 @@ function _xI(
   **/
 function _xSMALL( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SMALL
@@ -2950,9 +3038,9 @@ function _xSMALL(
    * @method  : Html::SMALL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'SMALL') ? 
   
    $Html->SMALL( 
@@ -2964,7 +3052,7 @@ function _xSMALL(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -2978,19 +3066,19 @@ function _xSMALL(
   **/
 function _xMARQUEE( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag MARQUEE
@@ -2998,9 +3086,9 @@ function _xMARQUEE(
    * @method  : Html::MARQUEE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'MARQUEE') ? 
   
    $Html->MARQUEE( 
@@ -3012,7 +3100,7 @@ function _xMARQUEE(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -3026,19 +3114,19 @@ function _xMARQUEE(
   **/
 function _xCENTER( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
-{ 
+{
+  
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag CENTER
@@ -3046,9 +3134,9 @@ function _xCENTER(
    * @method  : Html::CENTER($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'CENTER') ? 
   
    $Html->CENTER( 
@@ -3060,7 +3148,7 @@ function _xCENTER(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -3074,19 +3162,19 @@ function _xCENTER(
   **/
 function _xCODE( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag CODE
@@ -3094,9 +3182,9 @@ function _xCODE(
    * @method  : Html::CODE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge();
+
   return method_exists($Html,'CODE') ? 
   
    $Html->CODE( 
@@ -3108,7 +3196,7 @@ function _xCODE(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
  
 }
 
@@ -3122,19 +3210,19 @@ function _xCODE(
   **/
 function _xABBR( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag ABBR
@@ -3142,9 +3230,9 @@ function _xABBR(
    * @method  : Html::ABBR($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'ABBR') ?
   
    $Html->ABBR( 
@@ -3156,7 +3244,7 @@ function _xABBR(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -3170,19 +3258,19 @@ function _xABBR(
   **/
 function _xMAP( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag ABBR
@@ -3190,9 +3278,9 @@ function _xMAP(
    * @method  : Html::ABBR($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'MAP') ? 
   
    $Html->MAP( 
@@ -3204,7 +3292,7 @@ function _xMAP(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -3218,19 +3306,19 @@ function _xMAP(
   **/
 function _xCANVAS( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag ABBR
@@ -3238,9 +3326,9 @@ function _xCANVAS(
    * @method  : Html::ABBR($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge();
+
   return method_exists($Html,'CANVAS') ?
   
    $Html->CANVAS(
@@ -3252,7 +3340,7 @@ function _xCANVAS(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());   
+  ) : PERFORM( $request->erorrMessage() );   
 
 }
 
@@ -3266,19 +3354,19 @@ function _xCANVAS(
   **/
 function _xDATA( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DATA
@@ -3286,9 +3374,9 @@ function _xDATA(
    * @method  : Html::DATA($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'DATA') ? 
   
    $Html->DATA( 
@@ -3300,7 +3388,7 @@ function _xDATA(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());
+  ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -3314,19 +3402,19 @@ function _xDATA(
   **/
 function _xDL( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DL
@@ -3334,9 +3422,9 @@ function _xDL(
    * @method  : Html::DL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
-  $Html = NEW Merge(); 
+  $Html = NEW Merge();
+
   return method_exists($Html,'DL') ? 
   
    $Html->DL( 
@@ -3348,7 +3436,7 @@ function _xDL(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -3362,19 +3450,19 @@ function _xDL(
   **/
 function _xDT( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DT
@@ -3382,9 +3470,9 @@ function _xDT(
    * @method  : Html::DT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+  
   return method_exists($Html,'DT') ? 
   
    $Html->DT( 
@@ -3396,7 +3484,7 @@ function _xDT(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());
+  ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -3410,19 +3498,19 @@ function _xDT(
   **/
 function _xDD( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DD
@@ -3430,9 +3518,9 @@ function _xDD(
    * @method  : Html::DD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'DD') ? 
   
    $Html->DD( 
@@ -3444,7 +3532,7 @@ function _xDD(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -3458,19 +3546,19 @@ function _xDD(
   **/
 function _xDFN( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DD
@@ -3478,9 +3566,9 @@ function _xDFN(
    * @method  : Html::DD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'DFN') ? 
   
    $Html->DFN( 
@@ -3492,7 +3580,7 @@ function _xDFN(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());
+  ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -3506,19 +3594,19 @@ function _xDFN(
   **/
 function _xINS( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag INS
@@ -3526,9 +3614,9 @@ function _xINS(
    * @method  : Html::INS($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'INS') ? 
   
    $Html->INS( 
@@ -3540,7 +3628,7 @@ function _xINS(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());
+  ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -3554,19 +3642,19 @@ function _xINS(
   **/
 function _xDEL( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DEL
@@ -3574,9 +3662,9 @@ function _xDEL(
    * @method  : Html::DEL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
-  $Html = NEW Merge(); 
+  $Html = NEW Merge();
+
   return method_exists($Html,'DEL') ? 
   
    $Html->DEL( 
@@ -3588,7 +3676,7 @@ function _xDEL(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -3602,29 +3690,29 @@ function _xDEL(
   **/
 function _xKBD( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
    *
-   *
-   *
-   *
-   *
+   * 
    * @package : Merge Heading tag KBD
    * @package : Static Procedural
    * @method  : Html::KBD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge();
+
   return method_exists($Html,'KBD') ? 
   
    $Html->KBD( 
@@ -3636,7 +3724,7 @@ function _xKBD(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -3650,19 +3738,19 @@ function _xKBD(
   **/
 function _xMARK( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null    
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null   
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag MARK
@@ -3670,9 +3758,9 @@ function _xMARK(
    * @method  : Html::MARK($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
-  $Html = NEW Merge(); 
+  $Html = NEW Merge();
+
   return method_exists($Html,'MARK') ?
   
    $Html->MARK( 
@@ -3684,7 +3772,7 @@ function _xMARK(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -3698,19 +3786,19 @@ function _xMARK(
   **/
 function _xPRE( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag PRE
@@ -3718,9 +3806,9 @@ function _xPRE(
    * @method  : Html::PRE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'PRE') ? 
   
    $Html->PRE( 
@@ -3732,7 +3820,7 @@ function _xPRE(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -3746,19 +3834,19 @@ function _xPRE(
   **/
 function _xRT( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag PRE
@@ -3766,9 +3854,9 @@ function _xRT(
    * @method  : Html::PRE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+  
   return method_exists($Html,'RT') ? 
   
    $Html->RT( 
@@ -3780,7 +3868,7 @@ function _xRT(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -3794,29 +3882,29 @@ function _xRT(
   **/
 function _xS( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null   
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null    
 
 ) 
 { 
+
+  global $request;
+
   /**
    *
    *
-   *
-   *
-   *
-   * @package : Merge Heading tag S
+   * @package : Merge Heading tag 
    * @package : Static Procedural
    * @method  : Html::S($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge();
+
   return method_exists($Html,'S') ? 
   
    $Html->S( 
@@ -3828,7 +3916,7 @@ function _xS(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -3842,19 +3930,19 @@ function _xS(
   **/
 function _xSAMP( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null    
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null     
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SAMP
@@ -3862,9 +3950,9 @@ function _xSAMP(
    * @method  : Html::SAMP($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge();
+
   return method_exists($Html,'SAMP') ?
   
    $Html->SAMP( 
@@ -3876,7 +3964,7 @@ function _xSAMP(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -3890,19 +3978,19 @@ function _xSAMP(
   **/
 function _xSTRONG( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null   
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag STRONG
@@ -3910,9 +3998,9 @@ function _xSTRONG(
    * @method  : Html::STRONG($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'STRONG') ? 
   
    $Html->STRONG( 
@@ -3924,7 +4012,7 @@ function _xSTRONG(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -3938,19 +4026,19 @@ function _xSTRONG(
   **/
 function _xSUB( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null  
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null  
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SUB
@@ -3958,9 +4046,9 @@ function _xSUB(
    * @method  : Html::SUB($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'SUB') ? 
   
    $Html->SUB( 
@@ -3972,7 +4060,7 @@ function _xSUB(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -3986,19 +4074,19 @@ function _xSUB(
   **/
 function _xSUP( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SUP
@@ -4006,9 +4094,9 @@ function _xSUP(
    * @method  : Html::SUP($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'SUP') ? 
   
    $Html->SUP( 
@@ -4020,7 +4108,7 @@ function _xSUP(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage());
+  ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -4032,9 +4120,9 @@ function _xSUP(
   * Inline Heading tag  IMG
   *
   **/
-  function _xIMAGE( 
+  function _xIMG( 
 
-    string        $id     = null
+     string       $id     = null
     ,string       $class  = null
     ,array|string $attr   = null
     ,string       $inline = null
@@ -4043,10 +4131,9 @@ function _xSUP(
   ) 
   { 
   
+    global $request;
+
    /**
-    *
-    *
-    *
     *
     *
     * @package : Merge Heading tag IMG
@@ -4054,9 +4141,9 @@ function _xSUP(
     * @method  : Html::H1($value, $attr=null, $id, $class, $label, $assoc);
     *
     *
-    *
     **/ 
-   $Html = NEW Merge(); 
+   $Html = NEW Merge();
+
    return method_exists($Html, 'ELEMS') ? 
    
    $Html->ELEMS(
@@ -4068,7 +4155,7 @@ function _xSUP(
     ,$inline
     ,$assoc          
   
-    ) : PERFORM(erorrMessage()); 
+    ) : PERFORM( $request->erorrMessage() ); 
   
   }
   
@@ -4082,19 +4169,19 @@ function _xSUP(
   **/
 function _xWBR( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag WBR
@@ -4102,9 +4189,9 @@ function _xWBR(
    * @method  : Html::WBR($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'WBR') ? 
   
    $Html->WBR( 
@@ -4116,7 +4203,7 @@ function _xWBR(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -4130,19 +4217,19 @@ function _xWBR(
   **/
 function _xQ( 
 
-   string        $id      =  null 
-  ,mixed         $value           =  null 
-  ,array|string  $attr            =  null 
-  ,string        $class   =  null 
-  ,string        $label           =  null 
-  ,mixed         $assoc           =  null 
+   string         $id      =  null 
+  ,array|string   $value   =  null 
+  ,array|string   $attr    =  null 
+  ,string         $class   =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag WBR
@@ -4150,9 +4237,9 @@ function _xQ(
    * @method  : Html::WBR($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'Q') ? 
   
    $Html->Q( 
@@ -4164,7 +4251,7 @@ function _xQ(
     ,$label 
     ,$assoc
 
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ) ; 
 
 }
 
@@ -4178,19 +4265,19 @@ function _xQ(
   **/
 function _xHEAD( 
 
-   string         $value           =  null 
-  ,array|string   $attr            =  null 
+   string         $value   =  null 
+  ,array|string   $attr    =  null 
   ,string         $id      =  null 
   ,string         $class   =  null 
-  ,string         $label           =  null 
-  ,mixed          $assoc           =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag HEAD
@@ -4198,9 +4285,9 @@ function _xHEAD(
    * @method  : Html::HEAD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
-  $Html = NEW Merge(); 
+  $Html = NEW Merge();
+
   return method_exists($Html,'HEAD') ? 
   
    $Html->HEAD(
@@ -4212,7 +4299,7 @@ function _xHEAD(
     $label, 
     $assoc
     
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -4226,20 +4313,20 @@ function _xHEAD(
   **/
 function _xTITLE( 
 
-   string         $value           =  null 
-  ,array|string   $attr            =  null 
+   string         $value   =  null 
+  ,array|string   $attr    =  null 
   ,string         $id      =  null 
   ,string         $class   =  null 
-  ,string         $label           =  null 
-  ,mixed          $assoc           =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TITLE
@@ -4247,9 +4334,9 @@ function _xTITLE(
    * @method  : Html::TITLE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge(); 
+
   return method_exists($Html,'TITLE') ? 
   
   $Html->TITLE(
@@ -4261,7 +4348,7 @@ function _xTITLE(
     $label, 
     $assoc
     
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -4275,20 +4362,20 @@ function _xTITLE(
   **/
 function _xBODY( 
 
-   string         $value           =  null 
-  ,array|string   $attr            =  null 
+   string         $value   =  null 
+  ,array|string   $attr    =  null 
   ,string         $id      =  null 
   ,string         $class   =  null 
-  ,string         $label           =  null 
-  ,mixed          $assoc           =  null 
+  ,string         $label   =  null 
+  ,string         $assoc   =  null 
 
 
 ) 
 { 
+
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag BODY
@@ -4296,9 +4383,9 @@ function _xBODY(
    * @method  : Html::BODY($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
   $Html = NEW Merge();
+
   return method_exists($Html,'BODY') ? 
   
    $Html->BODY(
@@ -4310,7 +4397,7 @@ function _xBODY(
     $label, 
     $assoc
     
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 

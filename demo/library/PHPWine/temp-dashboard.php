@@ -1,6 +1,11 @@
 <?php 
- 
- /**
+
+use \PHPWine\VanillaFlavour\System\Auth;
+use \PHPWine\VanillaFlavour\System\Request;
+use \PHPWine\VanillaFlavour\System\Validate;
+use \PHPWine\VanillaFlavour\Optimizer\Form;
+
+/**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.0 Cooked by nielsoffice 
  *
  * MIT License
@@ -38,54 +43,17 @@
  *
  */
 
-  $phpWine = new class {
-        
-        public function php_wine(string $requestDependencies) 
-        {
+ /**
+ *
+ * Defined If the session is true or active then redirect to certain page!
+ * @since 04.05.21
+ * @since v1.0
+ * 
+ **/ 
+AUTH::USERAUTH('login');
 
-          /**
-            *
-            * Defined Class Dependencies
-            * @since 10.25.21
-            * @since v1.0
-            * 
-            **/ 
-            require dirname(__FILE__) . DIRECTORY_SEPARATOR . $requestDependencies .'.'.'php';
-        }
+echo " Welcome Hello This a Page :)) ";
 
-        public function phpWineLoader() 
-        {        
 
-          /**
-            *
-            * Defined SPR4 Autoloader
-            * @since 10.25.21
-            * @since v1.0
-            * 
-            **/ 
-            spl_autoload_register(function($class) 
-            {
-            
-                // File name space
-                $systemFileRequest = DIRECTORY_FILE_REQUEST_;
-            
-                // base directory system file
-                $sourceFileRquest  = BASE_DIR_SYSTEM_FILE;                
-                if (strncmp($systemFileRequest, $class, strlen($systemFileRequest)) !== 0) return;
-            
-                // Directory system data files
-                $dataRequest = $sourceFileRquest . str_replace('\\', '/', substr($class, strlen($systemFileRequest))) . _PHP_;
-            
-                // if the file exists, require it
-                (file_exists($dataRequest)) ? require $dataRequest : false;
-            
-            });
 
-        }
-    };
-    
-    // Get Loader Prop
-    $phpWine->php_wine( requestDependencies: 'prop');
-    $phpWine->phpWineLoader();
-
-   
+  

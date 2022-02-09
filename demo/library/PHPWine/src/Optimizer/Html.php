@@ -3,11 +3,11 @@
   namespace PHPWine\VanillaFlavour\optimizer;
   
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.0 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.0 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -26,25 +26,23 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * @category   PHPWine\VanillaFlavour
- * @package    Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
- *             Handling Form Validation | Same page CRUD | PHPOptimizer | Advance Form Builder
+ * @category   PHPLibrary PHPWine\VanillaFlavour
+ * @package    PHPHtml-Optimizer | CodeDesigner/Enhancer | Advance Form Builder | Handling Form Validation | Form Validation v2 | BASIC-Authentication | HtmlMinifier
  *            
  *            
- * @author    nielfernandez <nielsoffice.wordpress.php@gmail.com>
+ * @author    Leinner Zednanref <nielsoffice.wordpress.php@gmail.com>
  * @license   MIT License
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.4
+ * @version   v1.2.0.0 
+ * @since     02.04.2022
  * 
  * 
  * noHTML dynamic  structure 
  * non/WITH CLASS|METHOD|FUNCTION ASSOCIATED  
  *
  * @method $noHtml->REAK(); 
- * @method $noHtml->LINE();  
- * @method $noHtml->STRING();    
  * @method $noHtml->H1();
  * @method $noHtml->H3();
  * @method $noHtml->H2();
@@ -84,7 +82,7 @@
  * @method $noHtml->OPTGROUP();
  * @method $noHtml->OUTPUT();
  * @method $noHtml->PROGRESS();
- * @method $noHtml->SVG();
+ * 
  * @method $noHtml->TEMPLATE();
  * @method $noHtml->TIME();
  * @method $noHtml->VAR();
@@ -134,121 +132,110 @@
  * @method $noHtml->HEAD();
  * @method $noHtml->TITLE();
  * @method $noHtml->BODY();
- * @method $noHtml->noHTML();
- *
- * noHTML dynamic structure 
- * w/ CLASS|METHOD|FUNCTION ASSOCIATED
- *
- * @method $noHtml->ELEMENT('H1');
- * @method $noHtml->ELEMENT('H2');
- * @method $noHtml->ELEMENT('H3');
- * @method $noHtml->ELEMENT('H4');
- * @method $noHtml->ELEMENT('H5');
- * @method $noHtml->ELEMENT('H6');
- * @method $noHtml->ELEMENT('H1');
- * @method $noHtml->ELEMENT('BUTTON');
- * @method $noHtml->ELEMENT('A');
- * @method $noHtml->ELEMENT('IFRAME');
- * @method $noHtml->ELEMENT('MAIN');
- * @method $noHtml->ELEMENT('NAV');
- * @method $noHtml->ELEMENT('SELECT');
- * @method $noHtml->ELEMENT('FORM');
- * @method $noHtml->ELEMENT('PICTURE');
- * @method $noHtml->ELEMENT('SECTION');
- * @method $noHtml->ELEMENT('TEXTAREA');
- * @method $noHtml->ELEMENT('AUDIO');
- * @method $noHtml->ELEMENT('VIDEO');
- * @method $noHtml->ELEMENT('ADDRESS');
- * @method $noHtml->ELEMENT('COLGROUP');
- * @method $noHtml->ELEMENT('BDI');
- * @method $noHtml->ELEMENT('BDO');
- * @method $noHtml->ELEMENT('CAPTION');
- * @method $noHtml->ELEMENT('LABEL');
- * @method $noHtml->ELEMENT('DATALIST');
- * @method $noHtml->ELEMENT('DETAILS');
- * @method $noHtml->ELEMENT('SUMMARY');
- * @method $noHtml->ELEMENT('DIALOG');
- * @method $noHtml->ELEMENT('OPTION');
- * @method $noHtml->ELEMENT('FIGURE');
- * @method $noHtml->ELEMENT('FIGCAPTION');
- * @method $noHtml->ELEMENT('METER');
- * @method $noHtml->ELEMENT('OBJECT');
- * @method $noHtml->ELEMENT('OPTGROUP');
- * @method $noHtml->ELEMENT('OUTPUT');
- * @method $noHtml->ELEMENT('PROGRESS');
- * @method $noHtml->ELEMENT('SVG');
- * @method $noHtml->ELEMENT('TEMPLATE');
- * @method $noHtml->ELEMENT('TIME');
- * @method $noHtml->ELEMENT('VAR');
- * @method $noHtml->ELEMENT('UL');
- * @method $noHtml->ELEMENT('OL');
- * @method $noHtml->ELEMENT('LI');
- * @method $noHtml->ELEMENT('TABLE');
- * @method $noHtml->ELEMENT('TR');
- * @method $noHtml->ELEMENT('TD');
- * @method $noHtml->ELEMENT('TH');
- * @method $noHtml->ELEMENT('LEGEND');
- * @method $noHtml->ELEMENT('FIELDSET');
- * @method $noHtml->ELEMENT('TBODY');
- * @method $noHtml->ELEMENT('TFOOT');
- * @method $noHtml->ELEMENT('THEAD');
- * @method $noHtml->ELEMENT('SPAN');
- * @method $noHtml->ELEMENT('EM');
- * @method $noHtml->ELEMENT('B');
- * @method $noHtml->ELEMENT('I');
- * @method $noHtml->ELEMENT('SMALL');
- * @method $noHtml->ELEMENT('MARQUEE');
- * @method $noHtml->ELEMENT('CENTER');
- * @method $noHtml->ELEMENT('CODE');
- * @method $noHtml->ELEMENT('ABBR');
- * @method $noHtml->ELEMENT('MAP');
- * @method $noHtml->ELEMENT('CANVAS');
- * @method $noHtml->ELEMENT('CITE');
- * @method $noHtml->ELEMENT('DATA');
- * @method $noHtml->ELEMENT('DL');
- * @method $noHtml->ELEMENT('DT');
- * @method $noHtml->ELEMENT('DD');
- * @method $noHtml->ELEMENT('INS');
- * @method $noHtml->ELEMENT('DEL');
- * @method $noHtml->ELEMENT('KBD');
- * @method $noHtml->ELEMENT('MARK');
- * @method $noHtml->ELEMENT('PRE');
- * @method $noHtml->ELEMENT('RT');
- * @method $noHtml->ELEMENT('RP');
- * @method $noHtml->ELEMENT('S');
- * @method $noHtml->ELEMENT('SAMP');
- * @method $noHtml->ELEMENT('STRONG');
- * @method $noHtml->ELEMENT('SUB');
- * @method $noHtml->ELEMENT('SUP');
- * @method $noHtml->ELEMENT('WBR');
- * @method $noHtml->ELEMENT('Q');
- * @method $noHtml->ELEMENT('HEAD');
- * @method $noHtml->ELEMENT('TITLE');
- * @method $noHtml->ELEMENT('BODY');
- * @method $noHtml->ELEMENT('HTML');
- * @method $noHtml->ELEMENT('BLOCKQUOTE');
- *
- * noHTML dynamic  structure 
- * non/WITH CLASS|METHOD|FUNCTION ASSOCIATED noHTML Form no x tag
  * 
- * @method $noHtml->ELEM('my_input','INPUT');
- * @method $noHtml->ELEM('my_track','track');
- * @method $noHtml->ELEM('my_circle','circle');
- * @method $noHtml->ELEM('my_param','param');
- * @method $noHtml->ELEM('my_meta','meta');
- * @method $noHtml->ELEM('my_link','link');
- * @method $noHtml->ELEM('my_img','img');
- * @method $noHtml->ELEM('my_embed','embed');
- * @method $noHtml->ELEM('my_option','option');
- * @method $noHtml->ELEM('my_col','col');
- * @method $noHtml->ELEM('my_base','base');
- * @method $noHtml->ELEM('my_aside','aside');
- * @method $noHtml->ELEM('my_area','area');
- * @method $noHtml->ELEM('my_DOCTYPE','DOCTYPE');
- *  
- * noHTML  structure non CLASS|METHOD|FUNCTION ASSOCIATED
- * noHTML  structure w/ closing tag
- *
+ * @method echo $noHtml->ELEMENT('H1');
+ * @method echo $noHtml->ELEMENT('H2');
+ * @method echo $noHtml->ELEMENT('H3');
+ * @method echo $noHtml->ELEMENT('H4');
+ * @method echo $noHtml->ELEMENT('H5');
+ * @method echo $noHtml->ELEMENT('H6');
+ * @method echo $noHtml->ELEMENT('H1');
+ * @method echo $noHtml->ELEMENT('BUTTON');
+ * @method echo $noHtml->ELEMENT('A');
+ * @method echo $noHtml->ELEMENT('IFRAME');
+ * @method echo $noHtml->ELEMENT('MAIN');
+ * @method echo $noHtml->ELEMENT('NAV');
+ * @method echo $noHtml->ELEMENT('SELECT');
+ * @method echo $noHtml->ELEMENT('FORM');
+ * @method echo $noHtml->ELEMENT('PICTURE');
+ * @method echo $noHtml->ELEMENT('SECTION');
+ * @method echo $noHtml->ELEMENT('TEXTAREA');
+ * @method echo $noHtml->ELEMENT('AUDIO');
+ * @method echo $noHtml->ELEMENT('VIDEO');
+ * @method echo $noHtml->ELEMENT('ADDRESS');
+ * @method echo $noHtml->ELEMENT('COLGROUP');
+ * @method echo $noHtml->ELEMENT('BDI');
+ * @method echo $noHtml->ELEMENT('BDO');
+ * @method echo $noHtml->ELEMENT('CAPTION');
+ * @method echo $noHtml->ELEMENT('LABEL');
+ * @method echo $noHtml->ELEMENT('DATALIST');
+ * @method echo $noHtml->ELEMENT('DETAILS');
+ * @method echo $noHtml->ELEMENT('SUMMARY');
+ * @method echo $noHtml->ELEMENT('DIALOG');
+ * @method echo $noHtml->ELEMENT('OPTION');
+ * @method echo $noHtml->ELEMENT('FIGURE');
+ * @method echo $noHtml->ELEMENT('FIGCAPTION');
+ * @method echo $noHtml->ELEMENT('METER');
+ * @method echo $noHtml->ELEMENT('OBJECT');
+ * @method echo $noHtml->ELEMENT('OPTGROUP');
+ * @method echo $noHtml->ELEMENT('OUTPUT');
+ * @method echo $noHtml->ELEMENT('PROGRESS');
+ * 
+ * @method echo $noHtml->ELEMENT('TEMPLATE');
+ * @method echo $noHtml->ELEMENT('TIME');
+ * @method echo $noHtml->ELEMENT('VAR');
+ * @method echo $noHtml->ELEMENT('UL');
+ * @method echo $noHtml->ELEMENT('OL');
+ * @method echo $noHtml->ELEMENT('LI');
+ * @method echo $noHtml->ELEMENT('TABLE');
+ * @method echo $noHtml->ELEMENT('TR');
+ * @method echo $noHtml->ELEMENT('TD');
+ * @method echo $noHtml->ELEMENT('TH');
+ * @method echo $noHtml->ELEMENT('LEGEND');
+ * @method echo $noHtml->ELEMENT('FIELDSET');
+ * @method echo $noHtml->ELEMENT('TBODY');
+ * @method echo $noHtml->ELEMENT('TFOOT');
+ * @method echo $noHtml->ELEMENT('THEAD');
+ * @method echo $noHtml->ELEMENT('SPAN');
+ * @method echo $noHtml->ELEMENT('EM');
+ * @method echo $noHtml->ELEMENT('B');
+ * @method echo $noHtml->ELEMENT('I');
+ * @method echo $noHtml->ELEMENT('SMALL');
+ * @method echo $noHtml->ELEMENT('MARQUEE');
+ * @method echo $noHtml->ELEMENT('CENTER');
+ * @method echo $noHtml->ELEMENT('CODE');
+ * @method echo $noHtml->ELEMENT('ABBR');
+ * @method echo $noHtml->ELEMENT('MAP');
+ * @method echo $noHtml->ELEMENT('CANVAS');
+ * @method echo $noHtml->ELEMENT('CITE');
+ * @method echo $noHtml->ELEMENT('DATA');
+ * @method echo $noHtml->ELEMENT('DL');
+ * @method echo $noHtml->ELEMENT('DT');
+ * @method echo $noHtml->ELEMENT('DD');
+ * @method echo $noHtml->ELEMENT('INS');
+ * @method echo $noHtml->ELEMENT('DEL');
+ * @method echo $noHtml->ELEMENT('KBD');
+ * @method echo $noHtml->ELEMENT('MARK');
+ * @method echo $noHtml->ELEMENT('PRE');
+ * @method echo $noHtml->ELEMENT('RT');
+ * @method echo $noHtml->ELEMENT('RP');
+ * @method echo $noHtml->ELEMENT('S');
+ * @method echo $noHtml->ELEMENT('SAMP');
+ * @method echo $noHtml->ELEMENT('STRONG');
+ * @method echo $noHtml->ELEMENT('SUB');
+ * @method echo $noHtml->ELEMENT('SUP');
+ * @method echo $noHtml->ELEMENT('WBR');
+ * @method echo $noHtml->ELEMENT('Q');
+ * @method echo $noHtml->ELEMENT('HEAD');
+ * @method echo $noHtml->ELEMENT('TITLE');
+ * @method echo $noHtml->ELEMENT('BODY');
+ * @method echo $noHtml->ELEMENT('HTML');
+ * @method echo $noHtml->ELEMENT('BLOCKQUOTE');
+ * 
+ * @method echo $noHtml->ELEMS('my_input','my_input','INPUT');
+ * @method echo $noHtml->ELEMS('my_track','my_track','track');
+ * @method echo $noHtml->ELEMS('my_circle','my_circle','circle');
+ * @method echo $noHtml->ELEMS('my_param','my_param','param');
+ * @method echo $noHtml->ELEMS('my_meta','my_meta','meta');
+ * @method echo $noHtml->ELEMS('my_link','my_link','link');
+ * @method echo $noHtml->ELEMS('my_img','my_img','img');
+ * @method echo $noHtml->ELEMS('my_embed','my_embed','embed');
+ * @method echo $noHtml->ELEMS('my_option','my_option','option');
+ * @method echo $noHtml->ELEMS('my_col','my_col','col');
+ * @method echo $noHtml->ELEMS('my_base','my_base','base');
+ * @method echo $noHtml->ELEMS('my_aside','my_aside','aside');
+ * @method echo $noHtml->ELEMS('my_area','my_area','area');
+ * 
  * @method $noHtml->_H1();
  * @method $noHtml->xH1();
  * @method $noHtml->_H2();
@@ -427,8 +414,11 @@
  * @method $noHtml->xTITLE();
  * @method $noHtml->_BODY();
  * @method $noHtml->xBODY();
- * @method $noHtml->_noHTML();
- * @method $noHtml->xnoHTML();
+ * 
+ *  # HTML TAG NOT AVAIALBE FOR THIS VERSION !
+ *  # $noHtml->ELEMENT('SVG');
+ *  # $noHtml->SVG();
+ * 
  *
  */
 
@@ -785,6 +775,42 @@ class Html {
 
 /**
   * @var 
+  * @property ARRAY_KEY_CHILD
+  * defined array key to CHILD Enhancer/Optimizer quick child
+  * @since v1.2.0.0 
+  * @since 02.02.2022
+  **/
+CONST CHILD_MANDATORY_KEY = 'CHILD';
+
+/**
+  * @var 
+  * @property ARRAY_KEY_ATTR
+  * defined array key to CHILD Enhancer/Optimizer quick child
+  * @since v1.2.0.0 
+  * @since 02.02.2022
+  **/
+CONST ATTR_MANDATORY_KEY  = 'ATTR';
+
+/**
+  * @var 
+  * @property ARRAY_KEY_INNER
+  * defined array key to CHILD Enhancer/Optimizer quick child
+  * @since v1.2.0.0 
+  * @since 02.02.2022
+  **/
+CONST INNER_MANDATORY_KEY = 'INNER';
+
+/**
+  * @var 
+  * @property ARRAY_KEY_VALUE
+  * defined array key to CHILD Enhancer/Optimizer quick child
+  * @since v1.2.0.0 
+  * @since 02.02.2022
+  **/
+CONST VALUE_MANDATORY_KEY = 'VALUE';
+
+/**
+  * @var 
   * @property @html_extend  (register_new_html_syntax)
   * defined arrays of data html 
   **/
@@ -818,7 +844,10 @@ protected function _getBREAK()      {
     * @method ""
     *
     **/   
-   return $this->hBreak[0];    }
+    
+    return  $this->doMinified( $this->hBreak[0] );
+
+  }
 
 /**
  *
@@ -836,7 +865,10 @@ protected function _doBREAK()       {
     * @method ""
     *
     **/  
-   return $this->hBreak[1];    }
+
+    return   $this->hBreak[1] ;
+
+   }
 
 /**
  *
@@ -854,7 +886,10 @@ protected function _makeLine()      {
     * @method ""
     *
     **/    
-   return $this->hBreak[2];    }
+   
+    return  $this->hBreak[2] ;
+  
+  }
 
 /**
  *
@@ -1171,7 +1206,7 @@ protected function _setCOMBEGIN() {
     ) 
     { 
    
-       return $this->_isTrue_SET_STRING($str, $assoc); 
+       return $this->is_true_set_string($str, $assoc); 
    
     }
 
@@ -1196,7 +1231,7 @@ protected function _setCOMBEGIN() {
  )
  {
  
- return $this->_setReturnELEMENT(
+ return $this->set_assoc_element(
    
     $this->_setELEMENTS($elem), 
 
@@ -1220,16 +1255,16 @@ protected function _setCOMBEGIN() {
    public function ELEMS(
 
      string       $id     = null
-    ,string       $class  = null
+    ,string       $inline = null
     ,string       $elem   = null
     ,array|string $attr   = null
-    ,string       $inline = null
-    ,mixed        $assoc  = null
+    ,string       $class  = null
+    ,string       $assoc  = null
 
   )
   { 
     
-   return $this->HtmlELements_Optimizer(
+   return $this->html_elements_optimizer(
      
      $inline, 
      $elem, 
@@ -1261,7 +1296,7 @@ protected function _setCOMBEGIN() {
  ) 
  {
  
- return  $this->_setReturnELEMENT(
+ return  $this->set_assoc_element(
    
   $this->_setELEMENTS($elem), 
   
@@ -6227,7 +6262,7 @@ protected function _setCOMBEGIN() {
 
     # return $sets = [
       # $one = ['1','2'],
-      # $two = ['_niel_','_fernandez_'],
+      # $two = ['niels','office'],
     # ];
   
   # }
@@ -6256,12 +6291,12 @@ protected function _setCOMBEGIN() {
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   ) 
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'PRIMARY', 
       0, 
@@ -6290,12 +6325,12 @@ protected function _setCOMBEGIN() {
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   ) 
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'PRIMARY'
     ,1
@@ -6324,12 +6359,12 @@ protected function _setCOMBEGIN() {
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'PRIMARY'
       ,2
@@ -6358,12 +6393,12 @@ protected function _setCOMBEGIN() {
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'PRIMARY'
       ,3
@@ -6392,12 +6427,12 @@ protected function _setCOMBEGIN() {
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'PRIMARY'
     ,4
@@ -6426,12 +6461,12 @@ protected function _setCOMBEGIN() {
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'PRIMARY'
     ,5
@@ -6460,12 +6495,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'PRIMARY'
     ,6
@@ -6490,12 +6525,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'PRIMARY'
     ,7
@@ -6524,12 +6559,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'PRIMARY'
       ,8
@@ -6558,12 +6593,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'PRIMARY'
       ,9
@@ -6592,12 +6627,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'PRIMARY'
       ,10
@@ -6626,12 +6661,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'PRIMARY'
       ,11
@@ -6660,12 +6695,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'PRIMARY'
       ,12
@@ -6694,12 +6729,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'PRIMARY'
       ,13
@@ -6728,12 +6763,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'PRIMARY'
     ,14
@@ -6762,12 +6797,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'PRIMARY'
     ,15
@@ -6796,12 +6831,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'PRIMARY'
       ,16
@@ -6830,12 +6865,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'PRIMARY'
       ,17
@@ -6864,12 +6899,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'PRIMARY'
     ,18
@@ -6901,7 +6936,7 @@ protected function _setCOMBEGIN() {
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'PRIMARY'
     ,19
@@ -6933,7 +6968,7 @@ protected function _setCOMBEGIN() {
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'PRIMARY'
     ,20
@@ -6962,12 +6997,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'SECONDARY'
     ,0
@@ -6996,12 +7031,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'SECONDARY'
       ,1
@@ -7030,12 +7065,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'SECONDARY'
       ,2
@@ -7064,12 +7099,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'SECONDARY'
     ,3
@@ -7098,12 +7133,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'SECONDARY'
     ,4
@@ -7132,12 +7167,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'SECONDARY'
       ,5
@@ -7166,12 +7201,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'SECONDARY'
       ,6
@@ -7200,12 +7235,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'SECONDARY'
       ,7
@@ -7234,12 +7269,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'SECONDARY'
       ,8
@@ -7268,12 +7303,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'SECONDARY'
       ,9
@@ -7302,12 +7337,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'SECONDARY'
       ,10
@@ -7336,12 +7371,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'SECONDARY'
       ,11
@@ -7369,12 +7404,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'SECONDARY'
       ,12
@@ -7403,12 +7438,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'SECONDARY'
       ,13
@@ -7437,12 +7472,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'SUPPORT'
       ,0
@@ -7471,12 +7506,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'SUPPORT'
     ,1
@@ -7505,12 +7540,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
      'SUPPORT'
      ,2
@@ -7539,12 +7574,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'SUPPORT'
       ,3
@@ -7573,12 +7608,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'SUPPORT'
       ,4
@@ -7607,12 +7642,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'SUPPORT'
       ,5
@@ -7641,12 +7676,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc   = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'SUPPORT'
       ,6
@@ -7661,39 +7696,33 @@ protected function _setCOMBEGIN() {
   
   }
 
-/**
-  *
+/*********************************************************************************
+  * NOT AVAILABLE ON THIS VERSION ! 
   * @method public function noHTML
-  * @ Method Defined HTML SVG TAG noHTML  
+  * @ Method Defined HTML SVG TAG noHTML 
   * RETURN NODE HTML _ noHTML TAG
-  *
-  **/
-  public function SVG(
-
-     string        $id      =  null 
-    ,mixed         $value   =  null 
-    ,array|string  $attr    =  null 
-    ,string        $class   =  null 
-    ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
-
-  )
-  {
-  
-     return $this->_istrue_assoc_ELEMENTINLINE('
-     
-     SUPPORT'
-     ,7
-     ,$value
-     ,$attr
-     ,$id
-     ,$class
-     ,$label
-     ,$assoc
-    
-     );
-  
-  }
+  *********************************************************************************/
+#  public function SVG(
+#   string        $id      =  null 
+#    ,mixed         $value   =  null 
+#    ,array|string  $attr    =  null 
+#    ,string        $class   =  null 
+#    ,string        $label   =  null 
+#    ,string        $assoc   =  null
+#  )
+#  {
+#   return $this->is_true_assoc_element_inline('
+#   SUPPORT'
+#     ,7
+#     ,$value
+#     ,$attr
+#     ,$id
+#     ,$class
+#     ,$label
+#     ,$assoc
+#    );
+#  }
+#
 
 /**
   *
@@ -7709,12 +7738,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'SUPPORT'
       ,8
@@ -7743,12 +7772,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'SUPPORT'
       ,9
@@ -7777,12 +7806,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'SUPPORT'
       ,10
@@ -7811,12 +7840,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null  
+    ,string        $assoc  = null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'LIST'
       ,0
@@ -7845,12 +7874,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'LIST'
     ,1
@@ -7879,12 +7908,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'LIST'
     ,2
@@ -7913,12 +7942,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
        
      'LIST'
      ,3
@@ -7947,12 +7976,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'LIST'
       ,4
@@ -7981,12 +8010,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'LIST'
       ,5
@@ -8015,12 +8044,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'LIST'
       ,6
@@ -8049,12 +8078,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'LIST'
       ,7
@@ -8083,12 +8112,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'LIST'
       ,8
@@ -8117,12 +8146,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'LIST'
       ,9
@@ -8151,12 +8180,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'LIST'
       ,10
@@ -8185,12 +8214,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'LIST'
       ,11
@@ -8219,12 +8248,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMAT'
       ,0
@@ -8253,12 +8282,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMAT'
       ,1
@@ -8287,12 +8316,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMAT'
       ,2
@@ -8321,12 +8350,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMAT'
       ,2
@@ -8355,12 +8384,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMAT'
       ,3
@@ -8389,12 +8418,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
        'FORMAT'
        ,4
@@ -8423,12 +8452,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMAT'
       ,5
@@ -8457,12 +8486,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMAT'
       ,6
@@ -8491,12 +8520,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMAT'
       ,7
@@ -8525,12 +8554,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMAT'
       ,8
@@ -8559,12 +8588,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMAT'
       ,9
@@ -8593,12 +8622,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMAT'
       ,10
@@ -8627,12 +8656,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMAT'
       ,11
@@ -8661,12 +8690,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMAT'
       ,12
@@ -8695,12 +8724,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
        
       'FORMAT'
       ,13
@@ -8729,12 +8758,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMAT'
       ,14
@@ -8763,12 +8792,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'FORMAT'
     ,15
@@ -8797,12 +8826,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'FORMAT'
     ,16
@@ -8831,12 +8860,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'FORMAT'
     ,17
@@ -8865,12 +8894,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMATC'
       ,0
@@ -8899,12 +8928,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMATC'
       ,1
@@ -8933,12 +8962,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMATC'
       ,2
@@ -8967,12 +8996,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMATC'
       ,3
@@ -9001,12 +9030,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMATC'
       ,4
@@ -9035,12 +9064,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'FORMATC'
       ,5
@@ -9069,12 +9098,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'FORMATC'
       ,6
@@ -9103,12 +9132,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'FORMATC'
       ,7
@@ -9137,12 +9166,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'FORMATC'
       ,8
@@ -9171,12 +9200,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'FORMATC'
     ,9
@@ -9205,12 +9234,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'FORMATC'
     ,10
@@ -9239,12 +9268,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
  )
  {
   
-   return $this->_istrue_assoc_ELEMENTINLINE(
+   return $this->is_true_assoc_element_inline(
      
     'FORMATC'
     ,11
@@ -9273,12 +9302,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'FORMATC'
       ,12
@@ -9307,12 +9336,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc  = null
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'FORMATC'
       ,13
@@ -9341,12 +9370,12 @@ protected function _setCOMBEGIN() {
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null  
+    ,string        $assoc  = null 
 
   )
   {
   
-     return $this->_istrue_assoc_ELEMENTINLINE(
+     return $this->is_true_assoc_element_inline(
        
       'STRUCTURE'
       ,0
@@ -9380,7 +9409,7 @@ protected function _setCOMBEGIN() {
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'STRUCTURE'
       ,1
@@ -9414,7 +9443,7 @@ protected function _setCOMBEGIN() {
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
       'STRUCTURE'
       ,2
@@ -9448,7 +9477,7 @@ protected function _setCOMBEGIN() {
  )
  {
   
-    return $this->_istrue_assoc_ELEMENTINLINE(
+    return $this->is_true_assoc_element_inline(
       
     'STRUCTURE'
     ,3
@@ -9477,13 +9506,107 @@ protected function _setCOMBEGIN() {
 }
 
 /**
+ *
+ * Defined GET CHILD PRINT OPTIMIER ARRAY KEYS FOR | CHILD | ATTR | VALUE | INNER
+ * @since 02.03.2022
+ * @since v1.2.0.0
+ *
+**/
+private function get_value_child_optimizer( $value )
+{
+  
+  // PREPARED EMPTY ARRAY
+  $next_child = [];
+  
+  # CHECK IF THE CHILD KEY IS EXIST IN ARRAY THE IF TRUE 
+  # PRINT THE CHILD ARRAY
+ if( is_array( $value ) && $this->check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY,  $value ) )  
+ {
+    
+   # IF THE KEY REQUIRE IS EXIST THEN SELECT THAT KET FOR THE ASSOCIATED OF ARRAY OF DATAS
+   # THEN LOOP THE REQUEST DATA ELEMNT HTML
+   if ( $this->check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY ,  $value ) ) :
+
+      
+     # FOR EACH CHILD VALUE THE LOOP AND RETURN THE DATA
+     foreach (  $value[SELF::CHILD_MANDATORY_KEY] as $key => $values ) 
+     {
+       
+      
+       $next_child[] = $this->_setGATE() . $values[0] . ' ';
+
+       # CHECK IF THE ATTR IS NOT EMPTY AND IF IT IS ASSOCIATED OF ARRAY ?
+       # THEN SINCE ATTR IS TYPE OF MASTER KEY THEN LOOP IT AS CUSTOM ATTR HTML ELEM TAGS
+       if (  $this->check_key_mandatory_array( SELF::ATTR_MANDATORY_KEY ,  $values ) ) 
+       {
+           
+          # PROCESSING OF LOOPING
+          foreach ($values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) 
+          {
+          
+           $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() . $val . $this->_set_tagSPACER();     
+                         
+
+          }
+                             
+       }
+       
+       # SET UP THE NEXT CHILD HTML ELEMENTS # GET THE VALUE NEXT CHILD
+       # GET THE NEXT CHILD INNER            # PRINT THE ATTRIBUITE ELEMEN TAG
+       $next_child[] = $this->_setENDGATE()
+                     . $this->get_values_next_child(       SELF::VALUE_MANDATORY_KEY , $values )
+                     . $this->get_values_next_child_inner( SELF::INNER_MANDATORY_KEY , $values )
+                     . $this->_setGATE().$this->_setENDS() . $values[0] . $this-> _setENDGATE();
+       
+     }
+     
+     // COOKED THE INGREDIENTS 
+    return implode("", $next_child);
+  
+    endif;
+
+  }
+
+}
+
+/**
   *
   * @method private function noHTML
   * @ @private  Method Defined  if TRUE ELEMENT TAG noHTML  
   * RETURN NODE HTML _ noHTML TAG
   *
   **/
- private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label, $assoc) {
+ private function is_true_assoc_element_inline($elem_val, $elem_key, $value, $attr, $id, $class, $label, $assoc) {
+  
+  // installing request error handler for instances
+  $request    = NEW \PHPWine\VanillaFlavour\System\Request();
+ 
+  # CHECK IF THE VALUE IS ARRAY AND MANDATORY KEY IS EXIST THEN CHILD KEY SET
+  if ( is_array( $value ) && $this->check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY,  $value )  ) 
+  {
+    # IF PLAN OR CHILD IS TRUE ? 
+    # EXECUTE THE PLAN BASE ON ARRAY KEY MANDATORY
+    $value = $this->get_value_child_optimizer( $value );
+
+  } 
+  
+  # IF THAT IS JUST AN ARRRAY OF DATA THEN
+  elseif( is_array($value) ) 
+  {
+  
+    // EXECUTE THE PLAN
+    $request->CURRENT_VALUE_REQUEST( $value );
+    die;
+
+  } 
+   
+   # ELSE VALUE RETURN AS VALUE AS IT IS SET AS STRING !
+   else {
+   
+   # OPTIMIZED THE VALUE ON THE PLAN !
+   $value = $value;
+
+  }
 
   /*
    * PHPWine @since version 1.1.2 
@@ -9508,7 +9631,7 @@ protected function _setCOMBEGIN() {
       ) :  
 
         # RETURN_ELEMENT_WHERE_ATTRIBITE_IS_SET_AS_NULL
-        return $this->_elemenHTMLINLINE($elem_val, $elem_key, $value, NULL, $id, $class, $label);   
+        return $this->assoc_element_inline($elem_val, $elem_key, $value, NULL, $id, $class, $label);   
 
       /*
        * PHPWine @since version 1.1.2 
@@ -9525,7 +9648,7 @@ protected function _setCOMBEGIN() {
         ) : 
     
         # RETURN_ELEMENT_WHERE_ID_IS_SET_AS_NULL
-        return $this->_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, NULL, $class, $label);
+        return $this->assoc_element_inline($elem_val, $elem_key, $value, $attr, NULL, $class, $label);
 
       /*
        * PHPWine @since version 1.1.2 
@@ -9541,7 +9664,7 @@ protected function _setCOMBEGIN() {
         ) : 
 
         # RETURN_ELEMENT_WHERE_CLASS_IS_SET_AS_NULL
-        return $this->_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, NULL, $label);   
+        return $this->assoc_element_inline($elem_val, $elem_key, $value, $attr, $id, NULL, $label);   
 
       /*
        * PHPWine @since version 1.1.2 
@@ -9558,7 +9681,7 @@ protected function _setCOMBEGIN() {
        ) : 
     
         # RETURN_ELEMENT_WHERE_LABEL_IS_SET_AS_NULL
-        return $this->_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, $class, NULL);   
+        return $this->assoc_element_inline($elem_val, $elem_key, $value, $attr, $id, $class, NULL);   
 
   # INLINE_OR_ANY_LABEL_REQUIRED
   # CHECK_IF_THE_PARAM_REQUIRED_IS_NOT_NULL
@@ -9573,10 +9696,10 @@ protected function _setCOMBEGIN() {
      /**
        *
        * @var $elem_val, $elem_key, $value, $attr, $id, $class, $label
-       * @method function return_elementINLINE()
+       * @method function perform_assoc_element_inline()
        *
        **/
-      $this->PERFORM( $this->return_elementINLINE($elem_val, $elem_key, $value, NULL, $id, $class, $label) );
+      $this->PERFORM( $this->perform_assoc_element_inline($elem_val, $elem_key, $value, NULL, $id, $class, $label) );
       
    elseif ( 
      
@@ -9588,10 +9711,10 @@ protected function _setCOMBEGIN() {
   /**
     *
     * @var $elem_val, $elem_key, $value, $attr, $id, $class, $label
-    * @method function return_elementINLINE()
+    * @method function perform_assoc_element_inline()
     *
     **/
-   $this->PERFORM( $this->return_elementINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label) );
+   $this->PERFORM( $this->perform_assoc_element_inline($elem_val, $elem_key, $value, $attr, $id, $class, $label) );
 
   # INLINE_OR_ANY_LABEL_REQUIRED 
   # ELSEIF_ASSOCU_===_FUNC_ASSOC_||_CLASS_ASSOC_||_METHOD_ASSOC
@@ -9605,13 +9728,15 @@ protected function _setCOMBEGIN() {
      /**
        * THEN_IF_IT_IS TRUE_RETURN!
        * @var  $elem_val, $elem_key, $value, $attr, $id, $class, $label
-       * @method function _elemenHTMLINLINE()
+       * @method function assoc_element_inline()
        *
        **/
-     return $this->_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label);  
+     return $this->assoc_element_inline($elem_val, $elem_key, $value, $attr, $id, $class, $label);  
   
    endif;
 
+   
+  
 } 
 
 /**
@@ -9621,7 +9746,7 @@ protected function _setCOMBEGIN() {
   * RETURN NODE HTML _ noHTML TAG
   *
   **/
- private function return_elementINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label) {
+ private function perform_assoc_element_inline($elem_val, $elem_key, $value, $attr, $id, $class, $label) {
    
     # IF_INLINE_ELEMENT_IS_EQUAL_TRUE_THE_RETURN_ECHO_STATIC_noHTML
     # RETURN_GET___HTML_METHOD_INCLUDED_ 
@@ -9645,7 +9770,7 @@ protected function _setCOMBEGIN() {
      * @method function get_xHTML()
      *
      **/ 
-   $this->PERFORM( $return_elementINLINE  = $this->get_xHTML($elem_val, $elem_key, $label) ); 
+   $this->PERFORM( $this->get_xHTML($elem_val, $elem_key, $label) ); 
 
 }
 
@@ -9656,8 +9781,8 @@ protected function _setCOMBEGIN() {
   * RETURN NODE HTML _ noHTML TAG
   *
   **/
- protected function _elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label) {
-   
+ protected function assoc_element_inline($elem_val, $elem_key, $value, $attr, $id, $class, $label) {
+  
      if ( $label == TRUE && $label === 'MERGE') {
      
      # IF_INLINE_ELEMENT_IS_EQUAL_NEW_ELEMENT_AND_TRUE_THE_RETURN_ECHO_STATIC_noHTML
@@ -9683,8 +9808,10 @@ protected function _setCOMBEGIN() {
       **/    
      return $return_elementINLINE  = $this->new_get_xHTML($elem_val, $elem_key, $label); 
 
-   } else {
-
+   }   
+   
+   else {
+    
      # IF_INLINE_ELEMENT_IS_EQUAL_NEW_ELEMENT_AND_TRUE_THE_RETURN_ECHO_STATIC_noHTML
      # RETURN_GET___HTML_METHOD_INCLUDED_ 
    /**
@@ -9695,8 +9822,6 @@ protected function _setCOMBEGIN() {
      **/ 
     $return_elementINLINE   = $this->new_get__HTML($elem_val, $elem_key, $attr, $id, $class);  
   
-  
-
      # WHEN_THE_LOOP_IS_TRUE_THEN
      # DO_CONTENT
      $return_elementINLINE  .= (!empty($value) && $value !== NULL) ? $value : FALSE ;  
@@ -9713,8 +9838,9 @@ protected function _setCOMBEGIN() {
   
     # get_ELEMENT_RETURN!
     return $return_elementINLINE;
-
+    
    }
+
 
 }
 
@@ -9742,7 +9868,7 @@ protected function _setCOMBEGIN() {
        *
        **/
      $this->PERFORM( $get_inline__HTML  = $this->_setELEMENT($elem_val, $elem_key) );
-     $this->PERFORM( $get_inline__HTML  = $this->_setinLINEHTMLattr($attr, $id, $class, NULL) );   
+     $this->PERFORM( $get_inline__HTML  = $this->set_inline_tag_attr($attr, $id, $class, NULL) );   
   
   }
   # CHECK_ASSOC_IF_IT_IS_TRUE_THEN
@@ -9758,7 +9884,7 @@ protected function _setCOMBEGIN() {
        *
        **/ 
      $get_inline__HTML   = $this->_setELEMENT($elem_val, $elem_key);
-     $get_inline__HTML  .= $this->_setinLINEHTMLattr($attr, $id, $class, $assoc); 
+     $get_inline__HTML  .= $this->set_inline_tag_attr($attr, $id, $class, $assoc); 
 
      return $get_inline__HTML;    
   }
@@ -9824,7 +9950,7 @@ protected function _setCOMBEGIN() {
    
    # SET_VALUE_IS_TRUE_ELEMENT
    # ASIGNED-TO_SET_VAR_ELEMENT 
-   $set             = $this->_isTRUELEM($elem_val); 
+   $set             = $this->is_true_element_exist($elem_val); 
    
    # DEFINE_ELEMENTS_AND_EMTHODS
    # ASSIGNED_GET___TAG_SET_GETENDS_RETURN-SET_ARRAY_KEY
@@ -9833,8 +9959,8 @@ protected function _setCOMBEGIN() {
                     
                        .$set[$elem_key]
                        .$this->_getxTAG()
-                       .$this->_getBREAK();
-   
+                       .$this->_getBREAK();          
+                                      
    # CHECK_IF_LABEL_IS_TRUE_AFTER_NODE
    # IF_LABEL_IS_TRUE_THEN_RETURN_LABEL_AFTER_NODE
    # SET_COMMENTS_AS LABEL                  
@@ -9864,7 +9990,7 @@ protected function _setCOMBEGIN() {
   **/
  protected function new_get_xHTML($elem_val, $elem_key, $label) {
 
-   $set               = $this->_isTRUELEM($elem_val); 
+   $set               = $this->is_true_element_exist($elem_val); 
    
    # SAMETHING_SET_AS_RETURN
    $defined_htm       = $this->_get_TAG().$this->_getENDS()
@@ -9872,6 +9998,7 @@ protected function _setCOMBEGIN() {
                        .$set[$elem_key]
                        .$this->_getxTAG()
                        .$this->_getBREAK();
+                       
 
    # CHECK_IF_LABEL_IS_TRUE_AFTER_NODE
    # IF_LABEL_IS_TRUE_THEN_RETURN_LABEL_AFTER_NODE
@@ -9897,7 +10024,7 @@ protected function _setCOMBEGIN() {
   **/
  protected function _setHTMLattr($attr = [], $id=NULL, $class=NULL) {
 
-      # DEFINE_STATIC_SET_RETURN_TO_HTML
+    # DEFINE_STATIC_SET_RETURN_TO_HTML
     # METHOD_SET_AS_PRINT
     /**
       *
@@ -9906,9 +10033,14 @@ protected function _setCOMBEGIN() {
       * @method function _getxTAG()
       *
       **/     
-    $this->PERFORM( $_setHTMLattr  = $this->_isJStrue($attr, $id, $class) );
-    $this->PERFORM( $_setHTMLattr = $this->_getxTAG().$this->_getBREAK() );   
-}
+    $this->PERFORM( $this->_isJStrue($attr, $id, $class) );
+   # $this->PERFORM(   $this->_getxTAG()  . $this->_getBREAK()   );
+
+   if( defined('PHPWINE_BEAUTIFY') == true && PHPWINE_BEAUTIFY !== false  )  : $this->PERFORM(   $this->_getxTAG() ); 
+   else                                                                      : $this->PERFORM(   $this->_getxTAG()  . $this->_getBREAK());
+  endif;
+
+  }
 
 /**
   *
@@ -9941,7 +10073,7 @@ protected function _setCOMBEGIN() {
   * RETURN NODE HTML _ noHTML TAG
   *
   **/
- protected function _setinLINEHTMLattr($attr = [], $id=NULL, $class=NULL, $assoc=NULL) {
+ protected function set_inline_tag_attr($attr = [], $id=NULL, $class=NULL, $assoc=NULL) {
    
   # CHECK_IF_ASSOC_IS_NULL_OR_FLASE_DEFAULT
   # IF_ASSOC_IS_FALSE_THEN_SET_AS_PRINT_STATIC  
@@ -9957,7 +10089,7 @@ protected function _setCOMBEGIN() {
       *
       **/     
     $this->PERFORM( $_setinLINEHTMLattr = $this->_isJStrue($attr, $id, $class) );
-    $this->PERFORM( $_setinLINEHTMLattr = $this->_set_tagSPACER().$this->_setENDS().$this->_getxTAG().$this->_getBREAK() );  
+    $this->PERFORM( $_setinLINEHTMLattr = $this->_set_tagSPACER().$this->_setENDS().$this->_getxTAG().$this->_getBREAK() );
 
   } /**
       *
@@ -10134,11 +10266,11 @@ protected function _setCOMBEGIN() {
   /**
     *
     * SET_FUNCTION-CONCAT_THEN_RETURN
-    * @method function _isTRUELEM
+    * @method function is_true_element_exist
     * @method function _get_TAG
     *
     **/     
-   $set =  $this->_isTRUELEM($_variable);
+   $set =  $this->is_true_element_exist($_variable);
    return  $this->_get_TAG().$set[$set_tag];
 
 }
@@ -10225,7 +10357,7 @@ protected function _setCOMBEGIN() {
   * RETURN NODE HTML _ noHTML TAG
   *
   **/
-protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $assoc) {
+protected function html_elements_optimizer($inline, $elem, $attr, $id, $class, $assoc) {
 
     if ($assoc == NULL || $assoc == FALSE || $assoc == 'DEFUALT') {
 
@@ -10246,7 +10378,7 @@ protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $a
         }
       
         # RETURN_INLINE_ELEMENT_NO_HTML_CLOSING_TAG 
-        $this->PERFORM( $this->_setReturnINLINELEMENT($this->_setINLINELEMENTS($elem),$attr, $id, $class, NULL) ); 
+        $this->PERFORM( $this->set_assoc_element_inline($this->set_inline_elements($elem),$attr, $id, $class, NULL) ); 
 
    } else {
 
@@ -10272,7 +10404,7 @@ protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $a
           }
       
           # RETURN_INLINE_ELEMENT_NO_HTML_CLOSING_TAG 
-          return $this->_setReturnINLINELEMENT($this->_setINLINELEMENTS($elem),$attr, $id, $class, $assoc);      
+          return $this->set_assoc_element_inline($this->set_inline_elements($elem),$attr, $id, $class, $assoc);      
        }
 
   }
@@ -10334,11 +10466,11 @@ protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $a
 /**
   *
   * @method private function noHTML
-  * @ @private Method Defined _isTRUELEM 
+  * @ @private Method Defined is_true_element_exist 
   * RETURN NODE HTML _ noHTML TAG
   *
   **/
- protected function _isTRUELEM($elements) {
+ protected function is_true_element_exist($elements) {
    
    if ($elements == 'PRIMARY')            
     {
@@ -10348,7 +10480,7 @@ protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $a
    /**
      *
      * @var elements 
-     * @method _isTRUELEM
+     * @method is_true_element_exist
      * RETURN NODE HTML _ noHTML TAG
      *
      **/
@@ -10361,7 +10493,7 @@ protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $a
      *
      * @var elements 
      * @var $htm_ss 
-     * @method _isTRUELEM
+     * @method is_true_element_exist
      * RETURN NODE HTML _ noHTML TAG
      *
      **/
@@ -10374,7 +10506,7 @@ protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $a
      *
      * @var elements 
      * @var $htm_t
-     * @method _isTRUELEM
+     * @method is_true_element_exist
      * RETURN NODE HTML _ noHTML TAG
      *
      **/ 
@@ -10387,7 +10519,7 @@ protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $a
      *
      * @var elements 
      * @var $htm_f
-     * @method _isTRUELEM
+     * @method is_true_element_exist
      * RETURN NODE HTML _ noHTML TAG
      *
      **/
@@ -10400,7 +10532,7 @@ protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $a
      *
      * @var elements
      * @var $htm_fc 
-     * @method _isTRUELEM
+     * @method is_true_element_exist
      * RETURN NODE HTML _ noHTML TAG
      *
      **/
@@ -10413,7 +10545,7 @@ protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $a
      *
      * @var elements 
      * @var $htm_L
-     * @method _isTRUELEM
+     * @method is_true_element_exist
      * RETURN NODE HTML _ noHTML TAG
      *
      **/
@@ -10427,7 +10559,7 @@ protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $a
      *
      * @var elements
      * @var $htm_st 
-     * @method _isTRUELEM
+     * @method is_true_element_exist
      * RETURN NODE HTML _ noHTML TAG
      *
      **/
@@ -10500,7 +10632,8 @@ protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $a
     # ELSE_IF_THE_ASSOC_PARA_IS_TRUE_THEN_SET_RETURN 
     elseif ($assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC) {
     # RETURN_METHOD_ASSOC
-    return $this->_get_TAG().$this->_makeLine().$this->_tagSPACER().$this->_getENDS().$this->_getxTAG().$this->_getBREAK();      
+    return $this->_get_TAG().$this->_makeLine().$this->_tagSPACER().$this->_getENDS().$this->_getxTAG().$this->_getBREAK(); 
+    
    
    }
 }
@@ -10508,11 +10641,11 @@ protected function HtmlELements_Optimizer($inline, $elem, $attr, $id, $class, $a
 /**
   *
   * @method private function noHTML
-  * @static @private Method Defined _isTrueBREAK_assoc  
+  * @static @private Method Defined is_true_break_assoc  
   * RETURN NODE HTML _ noHTML TAG
   *
   **/
-protected function _isTrueBREAK_assoc($assoc) {
+protected function is_true_break_assoc($assoc) {
   
   if ($assoc == NULL || $assoc == FALSE || $assoc == 'DEFUALT') 
    {
@@ -10520,13 +10653,18 @@ protected function _isTrueBREAK_assoc($assoc) {
     # CHECK_IF_aSSOC_IS_NOT_TRUE_OR_IF_IT_IS_FALSE
     # SET_AS_PRINT_STATIC_HTML 
     $this->PERFORM( $this->_get_TAG().$this->_doBREAK().$this->_tagSPACER().$this->_getENDS().$this->_getxTAG().$this->_getBREAK() ); 
+    
    } 
 
     # ELSE_IF_THE_ASSOC_PARA_IS_TRUE_THEN_SET_RETURN 
     elseif ($assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC) {
     # RETURN_METHOD_ASSOC
-    return $this->_get_TAG().$this->_doBREAK().$this->_tagSPACER().$this->_getENDS().$this->_getxTAG().$this->_getBREAK();       
+
+    return $this->_get_TAG().$this->_doBREAK().$this->_tagSPACER().$this->_getENDS().$this->_getxTAG().$this->_getBREAK(); 
+    
+
    }
+
 }
 
 /**
@@ -10541,14 +10679,14 @@ protected function cpe_FileJandler_meta($metaQS__, $metaPar__) {
    $cpe_FileHander_keys = array_keys($metaQS__);
     
     # BEGIN FROM ZERO THEN RETURN COUNT QUICKSTART ++
-   for($QuickStart_ = 0; $QuickStart_ < count($metaQS__); $QuickStart_++) 
+   for($quick_start = 0; $quick_start < count($metaQS__); $quick_start++) 
    {
      
      # BEGIN PERFORM HTML
      $this->PERFORM($this->_setGATE().strtolower($metaPar__).__SPACE()); 
      
      # LOOP WITHIN MULTI ASSOC ARRAY INTO FORMS OF VALUE INTO HTML
-     foreach( $metaQS__[$cpe_FileHander_keys[$QuickStart_]] as $ATTR_NAME => $ATTR_VALUE)  { 
+     foreach( $metaQS__[$cpe_FileHander_keys[$quick_start]] as $ATTR_NAME => $ATTR_VALUE)  { 
      
       #RETURN ALL VALUE IF IT IS TRUE
       $this->PERFORM($ATTR_NAME."=\"".$ATTR_VALUE."\"".__SPACE()); 
@@ -10575,14 +10713,14 @@ protected function cpe_FileJandler_link($linkQt__, $linkPara__) {
    $cpe_FileHander_keys = array_keys($linkQt__);
    
    # BEGIN FROM ZERO THEN RETURN COUNT QUICKSTART ++
-   for($QuickStart_ = 0; $QuickStart_ < count($linkQt__); $QuickStart_++) 
+   for($quick_start = 0; $quick_start < count($linkQt__); $quick_start++) 
    {
      
      # BEGIN PERFORM HTML
      $this->PERFORM($this->_setGATE().strtolower($linkPara__).__SPACE()); 
 
      # LOOP WITHIN MULTI ASSOC ARRAY INTO FORMS OF VALUE INTO HTML
-     foreach( $linkQt__[$cpe_FileHander_keys[$QuickStart_]] as $ATTR_NAME => $ATTR_VALUE)  { 
+     foreach( $linkQt__[$cpe_FileHander_keys[$quick_start]] as $ATTR_NAME => $ATTR_VALUE)  { 
 
       #RETURN ALL VALUE IF IT IS TRUE
       $this->PERFORM($ATTR_NAME."=\"".$ATTR_VALUE."\"".__SPACE()); 
@@ -10590,7 +10728,7 @@ protected function cpe_FileJandler_link($linkQt__, $linkPara__) {
     }  
 
     # END PERFORM
-    $this->PERFORM("/>\n");
+    $this->PERFORM("/>".$this->_getBREAK());
 
    }
 
@@ -10609,14 +10747,14 @@ protected function cpe_FileJandler_script($scriptQS__, $scripPara__) {
    $cpe_FileHander_keys = array_keys($scriptQS__);
    
    # BEGIN FROM ZERO THEN RETURN COUNT QUICKSTART ++   
-   for($QuickStart_ = 0; $QuickStart_ < count($scriptQS__); $QuickStart_++) 
+   for($quick_start = 0; $quick_start < count($scriptQS__); $quick_start++) 
    {
 
      # BEGIN PERFORM HTML
      $this->PERFORM($this->_setGATE().strtolower($scripPara__).__SPACE()); 
 
      # LOOP WITHIN MULTI ASSOC ARRAY INTO FORMS OF VALUE INTO HTML
-     foreach( $scriptQS__[$cpe_FileHander_keys[$QuickStart_]] as $ATTR_NAME => $ATTR_VALUE)  {
+     foreach( $scriptQS__[$cpe_FileHander_keys[$quick_start]] as $ATTR_NAME => $ATTR_VALUE)  {
 
       #RETURN ALL VALUE IF IT IS TRUE
       $this->PERFORM($ATTR_NAME."=\"".$ATTR_VALUE."\"".__SPACE()); 
@@ -10624,7 +10762,7 @@ protected function cpe_FileJandler_script($scriptQS__, $scripPara__) {
     }  
 
     # END PERFORM
-    $this->PERFORM(">".$this->_setGATE()."/".strtolower($scripPara__).">\n");
+    $this->PERFORM(">".$this->_setGATE()."/".strtolower($scripPara__).">".$this->_getBREAK());
 
    }
 
@@ -10637,20 +10775,20 @@ protected function cpe_FileJandler_script($scriptQS__, $scripPara__) {
   * RETURN inline elem
   *
   **/
-protected function cpe_FileJandler_cutom_elem_inline($elem_inlineQS__, $tag) { 
+protected function file_handler_custom_element_inline($elem_inlineQS__, $tag) { 
 
   # IF THE PARAMETERS IS CUTOM END THEN CUSTOM HTML WILL RETURN
    $cpe_FileHander_keys = array_keys($elem_inlineQS__);
    
    # BEGIN FROM ZERO THEN RETURN COUNT QUICKSTART ++      
-   for($QuickStart_ = 0; $QuickStart_ < count($elem_inlineQS__); $QuickStart_++) 
+   for($quick_start = 0; $quick_start < count($elem_inlineQS__); $quick_start++) 
    {
 
      # BEGIN PERFORM HTML
-     $this->PERFORM($this->_setGATE().strtolower($cpe_FileHander_keys[$QuickStart_])." "); 
+     $this->PERFORM($this->_setGATE().strtolower($cpe_FileHander_keys[$quick_start])." "); 
 
      # LOOP WITHIN MULTI ASSOC ARRAY INTO FORMS OF VALUE INTO HTML
-     foreach( $elem_inlineQS__[$cpe_FileHander_keys[$QuickStart_]] as $ATTR_NAME => $ATTR_VALUE) { 
+     foreach( $elem_inlineQS__[$cpe_FileHander_keys[$quick_start]] as $ATTR_NAME => $ATTR_VALUE) { 
 
       #RETURN ALL VALUE IF IT IS TRUE
       $this->PERFORM($ATTR_NAME."=\"".$ATTR_VALUE."\"".__SPACE()); 
@@ -10658,7 +10796,7 @@ protected function cpe_FileJandler_cutom_elem_inline($elem_inlineQS__, $tag) {
     }  
 
     # END PERFORM    
-    $this->PERFORM(">\n");
+    $this->PERFORM(">".$this->_getBREAK());
 
   }
 
@@ -10678,31 +10816,31 @@ protected function cpe_FileJandler_doctype($tag) {
   $this->PERFORM($this->_setGATE().'!'.strtolower($tag).' html'); 
 
   # END PERFORM    
-  $this->PERFORM(">\n");
+  $this->PERFORM(">".$this->_getBREAK());
 
   }
 
 /**
   *
   * @method private function noHTML
-  * @static @private Method Defined cpe_FileJandler_cutom_elem_closing_tag  
+  * @static @private Method Defined file_handler_custom_element_closing_tag  
   * RETURN inline closing tag
   *
   **/
-protected function cpe_FileJandler_cutom_elem_closing_tag($attr, $tag) { 
+protected function file_handler_custom_element_closing_tag($attr, $tag) { 
 
    # IF THE PARAMETERS IS CUTOM END THEN CUSTOM HTML WILL RETURN
    $cpe_FileHander_keys = array_keys($attr);
    
    # BEGIN FROM ZERO THEN RETURN COUNT QUICKSTART ++    
-   for($QuickStart_ = 0; $QuickStart_ < count($attr); $QuickStart_++) 
+   for($quick_start = 0; $quick_start < count($attr); $quick_start++) 
    {
 
      # BEGIN PERFORM HTML
-     $this->PERFORM($this->_setGATE().strtolower($cpe_FileHander_keys[$QuickStart_])." "); 
+     $this->PERFORM($this->_setGATE().strtolower($cpe_FileHander_keys[$quick_start])." "); 
 
      # LOOP WITHIN MULTI ASSOC ARRAY INTO FORMS OF VALUE INTO HTML
-     foreach( $attr[$cpe_FileHander_keys[$QuickStart_]] as $ATTR_NAME => $ATTR_VALUE)  {
+     foreach( $attr[$cpe_FileHander_keys[$quick_start]] as $ATTR_NAME => $ATTR_VALUE)  {
 
       #RETURN ALL VALUE IF IT IS TRUE
       $this->PERFORM($ATTR_NAME."=\"".$ATTR_VALUE."\"".__SPACE()); 
@@ -10710,7 +10848,7 @@ protected function cpe_FileJandler_cutom_elem_closing_tag($attr, $tag) {
     }  
 
     # END PERFORM  
-    $this->PERFORM(">".$this->_setGATE()."/".strtolower($cpe_FileHander_keys[$QuickStart_]).">\n");
+    $this->PERFORM(">".$this->_setGATE()."/".strtolower($cpe_FileHander_keys[$quick_start]).">".$this->_getBREAK());
 
    }
 
@@ -10731,7 +10869,7 @@ protected function cpe_custom_elements($elem, $value, $attr, $id, $class) {
    $ElementAttr__ = $this->new_setHTMLattr($attr, $id, $class);
    
    # THEN RETURN ALL TRUE? RETURN FUNCTION CUSTOM MODIFIED HTML
-   return $this->cpe_Filehandler_Val($value, $elem,$ElementAttr__);
+   return $this->cpe_Filehandler_Val( $value, $elem, $ElementAttr__ );
 
 }
 
@@ -10754,7 +10892,7 @@ private function cpe_FileHandler_html_type($attr, $id, $class) {
   * @package @private Method Defined __magicELSE() // use alternaive if else statement inside function
   *
   **/
-protected function return_method_concat_else($con,$res1,$res2,$as) {
+protected function assoc_method_concat_else($con,$res1,$res2,$as) {
  
   # SET_FOR_IF_CONDITION  
   $condition_statements = $con;
@@ -10791,7 +10929,7 @@ protected function return_method_concat_else($con,$res1,$res2,$as) {
   * @package @private Method Defined HTML FOUNDATION _isTrue_SET_STRING
   *
   **/
- protected function _isTrue_SET_Merge($argument) {
+ protected function is_true_set_merge($argument) {
     
     #_GET_RESUKT_SET_AS_RETURN_TO_MERGE
     return !empty($argument) && $argument !== NULL ? $argument : FALSE;
@@ -10804,7 +10942,7 @@ protected function IssueSubmitAttr() {
     return $sets = [
          
       $attr_name = ['href'],
-      $attr_val  = ['https://github.com/nielsofficeofficial/PHPHtml-Optimizer/issues']
+      $attr_val  = ['https://github.com/nielsofficeofficial/PHPWine/issues']
         
    ];
    
@@ -10816,7 +10954,7 @@ protected function DocxSubmitAttr() {
     return $sets = [
          
       $attr_name = ['href'],
-      $attr_val  = ['https://github.com/nielsofficeofficial/PHPHtml-Optimizer']
+      $attr_val  = ['https://github.com/nielsofficeofficial/PHPWine']
         
    ];
 }
@@ -10827,7 +10965,7 @@ protected function DocxEnahncerSubmitAttr() {
     return $sets = [
          
       $attr_name = ['href'],
-      $attr_val  = ['https://github.com/nielsofficeofficial/PHPHtml-Optimizer-Enhancers']
+      $attr_val  = ['https://github.com/nielsofficeofficial/PHPWine']
         
    ];
 }
@@ -10964,10 +11102,10 @@ protected function cpe_xib6_FileHandler_MultiPage_array($GMultiP__, $GTCP__) {
  /**
   *
   * @method private function Set_Element_Header_Attr noHTML
-  * @ @private Method Defined HTML return element array
+  * @private Method Defined HTML return element array
   *
   **/
- protected function Set_Element_Attr($attr_name,$attr_val) {
+ protected function set_Element_Attr($attr_name,$attr_val) {
 
     return $Set_Element_Header_Attr = [ $attr_name = $attr_name, $attr_val  = $attr_val  ];
  }
@@ -11002,37 +11140,87 @@ protected function cpe_xib6_FileHandler_MultiPage_array($GMultiP__, $GTCP__) {
 
 }
 
-private function cpe_workflow_get_saver($GetPath__) {
- 
-spl_autoload_register(function ($class) use ($GetPath__){
-    
-    // project-specific namespace prefix
-    $prefix = 'crownPHPEXTEND\\WorkFlow\\';
-
-    strncmp($prefix, $class, strlen($prefix)) !== 0 ? TRUE : FALSE; 
-
-    // replace the namespace prefi with the base directory, replace namespace
-    // separators with directory separators in the relative class name, append
-    $GetFilesSaver__ = __DIR__ . $this->cpx_ixb6_proprty_get_path($GetPath__) . str_replace('\\', '/', substr($class, strlen($prefix))) . '.php';
-
-    // if the file exists, require it
-    if (file_exists( $GetFilesSaver__ )) { require $GetFilesSaver__; }
-    
-});
- 
-}
-
 /**
   *
   * @method private function 
   * @package @private Method Defined  ModifiedHTML
   *
   **/
-private function SetReturnElement_ModifiedHTML($modifiedHTMLE_) {
+private function set_assoc_element_modified_tag($modifiedHTMLE_) {
 
-  return $this->_setGATE().$this->_setENDS().strtolower($modifiedHTMLE_).$this->_setENDGATE()."\n";
+   
+ return $this->_setGATE().$this->_setENDS().strtolower($modifiedHTMLE_).$this->_setENDGATE().$this->_getBREAK();
+
 
 }
+
+  /**
+    *
+    * Defined get_values_next_child()
+    * @method Print array as child tag HTML ELements
+    * @since 02.01.2022
+    * @since v1.2.0.0
+    *
+   **/
+protected function get_values_next_child($valueKey,  $array)
+{
+   
+  // CHECK IF THE KEY IS EXISTING THEN IMPLODE !
+  if (array_key_exists($valueKey,  $array ) ) {
+       
+      return implode("", $array[$valueKey] );
+
+  }
+
+}
+
+  /**
+    *
+    * Defined get_values_next_child_inner()
+    * @method Print array as child tag HTML ELements INNER keys
+    * @since 02.01.2022
+    * @since v1.2.0.0
+    *
+   **/
+protected function get_values_next_child_inner( $getInner, $array )
+{
+   // set an emtpy array for tag implode
+   $next_child = [];
+
+   # IF THE KEY REQUIRE IS EXIST THEN SELECT THAT KET FOR THE ASSOCIATED OF ARRAY OF DATAS
+   # THEN LOOP THE REQUEST DATA ELEMNT HTML
+ if ( $this->check_key_mandatory_array( $getInner , $array ) )
+  {
+    
+    # LOOP THE ARRAY WITH DATA INTO HTML ELEMENT TAGS
+    # GET THE VALUE OF THE ARRAY KEY        
+    foreach ($array[$getInner] as $key => $values) 
+    {
+
+       // APPENED CHILD 
+       $next_child[] = $this->_setGATE() . $values[0] . ' ';
+       
+       # LOOP THE ATTRIBUTE OF ELEMENT HTML TAG
+       # BASE ON ARRAY OF DATA
+       foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() . $val . $this->_set_tagSPACER(); }
+      
+       # APPEND ON THE ENDGATE HTML
+       $next_child[] = $this->_setENDGATE();
+
+       # GET THE VALUE IF IS HAS SET
+       if ( $this->check_key_mandatory_array( SELF::VALUE_MANDATORY_KEY ,  $values  ) ) { $next_child[] = implode("",  $values[SELF::VALUE_MANDATORY_KEY] ); }
+       
+       # CLOSE THE HTML ELEMENT TAG
+       $next_child[] = $this->_setGATE().$this->_setENDS() . $values[0] . $this-> _setENDGATE();
+
+   }  
+  
+  // COOKED AND DESIGNATE THE DATA REQUEST  
+  return implode("", $next_child);
+       
+ }
+  
+}       
 
 /**
   *
@@ -11041,26 +11229,60 @@ private function SetReturnElement_ModifiedHTML($modifiedHTMLE_) {
   *
   **/
 private function cpe_Filehandler_Val($tagVHtml__, $ValElem__,$ValEAttr__) {
+  
+  // installing request error handler for instances
+  $request    = NEW \PHPWine\VanillaFlavour\System\Request();
+  
+  # CHECK IF THERE IS ARRAY AND IF THERE IS A REQUIRE ARAAY KEY NEXT_CHILD ?
+  # THEN GET THE VALUE AND LOOP IT THROUGH AN ARRAY AND RETURN THE DATAS
+  if( is_array( $tagVHtml__ ) && array_key_exists( SELF::CHILD_MANDATORY_KEY , $tagVHtml__ ) ) 
+   {
+           
+      // COOKED THE INGREDIENTS 
+      $tagVHtml__ = $this->get_value_child_optimizer( $tagVHtml__ );
+     
+      // DESIGNATE THE DATA APPROPRIATELY 
+      $next_child_array  = "";
+      $next_child_array  .= $this->_setGATE().$ValElem__.$ValEAttr__;
+      $next_child_array  .= (!empty($tagVHtml__) && $tagVHtml__ !== NULL) ? $tagVHtml__ : FALSE ; 
+      $next_child_array  .= $this->set_assoc_element_modified_tag($ValElem__);       
+      
+      return($next_child_array);
 
-   $cpe_get_customELement  = "";
+ 
+  }
+    # ELSE IF  ? NOT EXIST THE NEXT_CHILD 
+    # THEN PRINT WITH REQUEST CLASS ERROR HANDLER MESSAGE TO SEE THE DATA OF CURRETN ARRAY
+    elseif(is_array($tagVHtml__)) 
+    {
+        // EXECUTE THE PLAN
+        $request->CURRENT_VALUE_REQUEST( $tagVHtml__ );
+        die;
 
-   $cpe_get_customELement  .= $this->_setGATE().$ValElem__.$ValEAttr__;
+    }
+      
+    else 
+    {
+        # DO THE DEFAULT PROCESSING IF THE VALUE IS NOT ARRAY
+        # RETURN APPROPRIATE THE STRING DATA 
+        $enhancer_element_print   = "";
+        $enhancer_element_print  .= $this->_setGATE().$ValElem__.$ValEAttr__;
+        $enhancer_element_print  .= (!empty($tagVHtml__) && $tagVHtml__ !== NULL) ? $tagVHtml__ : FALSE ; 
+        $enhancer_element_print  .= $this->set_assoc_element_modified_tag($ValElem__);       
+        
+        return($enhancer_element_print);
 
-   $cpe_get_customELement  .= (!empty($tagVHtml__) && $tagVHtml__ !== NULL) ? $tagVHtml__ : FALSE ; 
-   
-   $cpe_get_customELement  .= $this->SetReturnElement_ModifiedHTML($ValElem__);       
-   
-   return($cpe_get_customELement);
+    }
 
 }
 
 /**
   *
-  * @method protected function noHTML
+  * @method protected function noHTML_isTrue_SET_STRING
   * @protected Method Defined HTML FOUNDATION _isTrue_SET_STRING
   *
   **/
- protected function _isTrue_SET_STRING($str=null, $assoc=null) {
+ protected function is_true_set_string($str=null, $assoc=null) {
 
    if ($assoc == NULL || $assoc == FALSE || $assoc == 'DEFUALT') 
    {
@@ -11117,6 +11339,33 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
 
 }
 
+/**
+ *
+ * Defined SAVE SECONDARY FUNCTION PHP GET ARRAY KEY 
+ * @since 02.03.2022
+ * @since v1.2.0.0
+ *
+**/
+private function check_key_mandatory_array( string $key_array, array $value_array  )
+{
+  return array_key_exists( $key_array,  $value_array );
+}
+
+/**
+  *
+  * @method private function doMinified
+  * @private Method Defined set to TRUE to make minified HTML
+  * @since 1.31.2022
+  *
+  **/
+private function doMinified( $html_optimized )
+{
+ 
+  if( defined('PHPWINE_MINIFIED') == true && PHPWINE_MINIFIED !== false  )   : return false; 
+  else                                                                       : return $html_optimized; 
+ endif;
+
+}
 
 /**
   *
@@ -12374,7 +12623,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
 
 }
 
- protected function _setINLINELEMENTS($elem) {
+ protected function set_inline_elements($elem) {
     // VALIDATE HTML ELEMENTS THE RETURN BASE ON ELEMENT HTML !
 
    if ( $elem === 'source'        || $elem === 'SOURCE' )  { 
@@ -12576,7 +12825,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
 } # END OF SET ELEMENTS
 
 
- protected function _setReturnELEMENT($elem, $value, $attr, $id, $class, $label) {
+ protected function set_assoc_element($elem, $value, $attr, $id, $class, $label) {
 
   $elem = $this->_setELEMENTS($elem); 
   switch ($elem) {
@@ -12592,7 +12841,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/      
-       return $this->_elemenHTMLINLINE('STRUCTURE', 0, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('STRUCTURE', 0, $value, $attr, $id, $class, $label);
       break;  
     case "title":
     
@@ -12605,7 +12854,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/      
-       return $this->_elemenHTMLINLINE('STRUCTURE', 1, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('STRUCTURE', 1, $value, $attr, $id, $class, $label);
       break;  
     case "body":
 
@@ -12618,7 +12867,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/    
-       return $this->_elemenHTMLINLINE('STRUCTURE', 2, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('STRUCTURE', 2, $value, $attr, $id, $class, $label);
       break;  
     case "html":
 
@@ -12631,7 +12880,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/     
-       return $this->_elemenHTMLINLINE('STRUCTURE', 3, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('STRUCTURE', 3, $value, $attr, $id, $class, $label);
       break;
     case "del":
 
@@ -12644,7 +12893,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/    
-       return $this->_elemenHTMLINLINE('FORMATC', 0, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMATC', 0, $value, $attr, $id, $class, $label);
       break;
     case "kbd":
 
@@ -12657,7 +12906,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/     
-       return $this->_elemenHTMLINLINE('FORMATC', 1, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMATC', 1, $value, $attr, $id, $class, $label);
       break;
     case "mark":
 
@@ -12670,7 +12919,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/     
-       return $this->_elemenHTMLINLINE('FORMATC', 2, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMATC', 2, $value, $attr, $id, $class, $label);
       break;
     case "pre":
 
@@ -12683,7 +12932,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/   
-       return $this->_elemenHTMLINLINE('FORMATC', 3, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMATC', 3, $value, $attr, $id, $class, $label);
       break;
     case "rt":
 
@@ -12696,7 +12945,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/     
-       return $this->_elemenHTMLINLINE('FORMATC', 4, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMATC', 4, $value, $attr, $id, $class, $label);
       break;
     case "rp":
 
@@ -12709,7 +12958,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/  
-       return $this->_elemenHTMLINLINE('FORMATC', 5, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMATC', 5, $value, $attr, $id, $class, $label);
       break;
     case "ruby":
 
@@ -12722,7 +12971,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/  
-       return $this->_elemenHTMLINLINE('FORMATC', 6, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMATC', 6, $value, $attr, $id, $class, $label);
       break;
     case "s":
 
@@ -12735,7 +12984,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/  
-       return $this->_elemenHTMLINLINE('FORMATC', 7, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMATC', 7, $value, $attr, $id, $class, $label);
       break;        
     case "samp":
 
@@ -12748,7 +12997,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/     
-       return $this->_elemenHTMLINLINE('FORMATC', 8, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMATC', 8, $value, $attr, $id, $class, $label);
       break; 
     case "strong":
 
@@ -12761,7 +13010,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-       return $this->_elemenHTMLINLINE('FORMATC', 9, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMATC', 9, $value, $attr, $id, $class, $label);
       break; 
     case "sub":
 
@@ -12774,7 +13023,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-       return $this->_elemenHTMLINLINE('FORMATC', 10, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMATC', 10, $value, $attr, $id, $class, $label);
       break;
     case "sup":
 
@@ -12787,7 +13036,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-       return $this->_elemenHTMLINLINE('FORMATC', 11, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMATC', 11, $value, $attr, $id, $class, $label);
       break;
     case "wbr":
 
@@ -12800,7 +13049,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-       return $this->_elemenHTMLINLINE('FORMATC', 12, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMATC', 12, $value, $attr, $id, $class, $label);
       break;
     case "q":
 
@@ -12813,7 +13062,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-       return $this->_elemenHTMLINLINE('FORMATC', 13, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMATC', 13, $value, $attr, $id, $class, $label);
       break;
 
     case "span":
@@ -12827,7 +13076,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-       return $this->_elemenHTMLINLINE('FORMAT', 0, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 0, $value, $attr, $id, $class, $label);
       break;
     case "em":
 
@@ -12840,7 +13089,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-       return $this->_elemenHTMLINLINE('FORMAT', 1, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 1, $value, $attr, $id, $class, $label);
       break;
     case "b":
 
@@ -12853,7 +13102,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 2, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 2, $value, $attr, $id, $class, $label);
       break;
     case "i":
 
@@ -12866,7 +13115,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 3, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 3, $value, $attr, $id, $class, $label);
       break;
     case "small":
 
@@ -12879,7 +13128,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 4, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 4, $value, $attr, $id, $class, $label);
       break;
     case "strike":
 
@@ -12892,7 +13141,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 5, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 5, $value, $attr, $id, $class, $label);
       break;
     case "marquee":
 
@@ -12905,7 +13154,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 6, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 6, $value, $attr, $id, $class, $label);
       break;
     case "center":
 
@@ -12918,7 +13167,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 7, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 7, $value, $attr, $id, $class, $label);
       break;
     case "code":
 
@@ -12931,7 +13180,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 8, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 8, $value, $attr, $id, $class, $label);
       break;
     case "abbr":
 
@@ -12944,7 +13193,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 9, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 9, $value, $attr, $id, $class, $label);
       break;
     case "map":
 
@@ -12957,7 +13206,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 10, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 10, $value, $attr, $id, $class, $label);
       break;
     case "canvas":
 
@@ -12970,7 +13219,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 11, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 11, $value, $attr, $id, $class, $label);
       break;
     case "cite":
 
@@ -12983,7 +13232,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 12, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 12, $value, $attr, $id, $class, $label);
       break;
     case "data":
 
@@ -12996,7 +13245,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 13, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 13, $value, $attr, $id, $class, $label);
       break;
     case "dl":
 
@@ -13009,7 +13258,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 14, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 14, $value, $attr, $id, $class, $label);
       break;
     case "dt":
 
@@ -13022,7 +13271,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 15, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 15, $value, $attr, $id, $class, $label);
       break;
     case "dd":
 
@@ -13035,7 +13284,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 16, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 16, $value, $attr, $id, $class, $label);
       break;
     case "dfn":
 
@@ -13048,7 +13297,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 17, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 17, $value, $attr, $id, $class, $label);
       break;
     case "ins":
 
@@ -13061,7 +13310,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('FORMAT', 18, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('FORMAT', 18, $value, $attr, $id, $class, $label);
       break;
     case "ul":
 
@@ -13074,7 +13323,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('LIST', 0, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('LIST', 0, $value, $attr, $id, $class, $label);
       break;
     case "ol":
 
@@ -13087,7 +13336,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('LIST', 1, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('LIST', 1, $value, $attr, $id, $class, $label);
       break;
     case "li":
 
@@ -13100,7 +13349,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('LIST', 2, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('LIST', 2, $value, $attr, $id, $class, $label);
       break;
     case "table":
 
@@ -13113,7 +13362,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('LIST', 3, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('LIST', 3, $value, $attr, $id, $class, $label);
       break;
     case "tr":
 
@@ -13126,7 +13375,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('LIST', 4, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('LIST', 4, $value, $attr, $id, $class, $label);
       break;
     case "td":
 
@@ -13139,7 +13388,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('LIST', 5, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('LIST', 5, $value, $attr, $id, $class, $label);
       break;
     case "th":
 
@@ -13152,7 +13401,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('LIST', 6, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('LIST', 6, $value, $attr, $id, $class, $label);
       break;
     case "legend":
 
@@ -13165,7 +13414,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('LIST', 7, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('LIST', 7, $value, $attr, $id, $class, $label);
       break;
     case "fieldset":
 
@@ -13178,7 +13427,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('LIST', 8, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('LIST', 8, $value, $attr, $id, $class, $label);
       break;
     case "tbody":
 
@@ -13191,7 +13440,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('LIST', 9, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('LIST', 9, $value, $attr, $id, $class, $label);
       break;
     case "tfoot":
 
@@ -13204,7 +13453,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('LIST', 10, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('LIST', 10, $value, $attr, $id, $class, $label);
       break;
     case "thead":
 
@@ -13217,7 +13466,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('LIST', 11, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('LIST', 11, $value, $attr, $id, $class, $label);
       break;
     case "figure":
 
@@ -13230,7 +13479,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SUPPORT', 0, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SUPPORT', 0, $value, $attr, $id, $class, $label);
       break;
     case "figcaption":
 
@@ -13243,7 +13492,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SUPPORT', 1, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SUPPORT', 1, $value, $attr, $id, $class, $label);
       break;      
     case "meter":
 
@@ -13256,7 +13505,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SUPPORT', 2, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SUPPORT', 2, $value, $attr, $id, $class, $label);
       break;      
     case "object":
 
@@ -13269,7 +13518,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SUPPORT', 3, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SUPPORT', 3, $value, $attr, $id, $class, $label);
       break;     
     case "optgroup":
 
@@ -13282,7 +13531,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SUPPORT', 4, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SUPPORT', 4, $value, $attr, $id, $class, $label);
       break;     
     case "output":
 
@@ -13295,7 +13544,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SUPPORT', 5, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SUPPORT', 5, $value, $attr, $id, $class, $label);
       break;  
     case "progress":
 
@@ -13308,7 +13557,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SUPPORT', 6, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SUPPORT', 6, $value, $attr, $id, $class, $label);
       break;
     case "svg":
 
@@ -13321,7 +13570,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SUPPORT', 7, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SUPPORT', 7, $value, $attr, $id, $class, $label);
       break;
     case "template":
 
@@ -13334,7 +13583,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SUPPORT', 8, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SUPPORT', 8, $value, $attr, $id, $class, $label);
       break;
     case "time":
 
@@ -13347,7 +13596,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SUPPORT', 9, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SUPPORT', 9, $value, $attr, $id, $class, $label);
       break;
     case "var":
 
@@ -13360,7 +13609,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SUPPORT', 10, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SUPPORT', 10, $value, $attr, $id, $class, $label);
       break;
 
     case "audio":
@@ -13374,7 +13623,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SECONDARY', 0, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SECONDARY', 0, $value, $attr, $id, $class, $label);
       break;
     case "video":
 
@@ -13387,7 +13636,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SECONDARY', 1, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SECONDARY', 1, $value, $attr, $id, $class, $label);
       break;
     case "address":
 
@@ -13400,7 +13649,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SECONDARY', 2, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SECONDARY', 2, $value, $attr, $id, $class, $label);
       break;
     case "colgroup":
 
@@ -13413,7 +13662,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SECONDARY', 3, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SECONDARY', 3, $value, $attr, $id, $class, $label);
       break;
     case "bdi":
 
@@ -13426,7 +13675,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SECONDARY', 4, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SECONDARY', 4, $value, $attr, $id, $class, $label);
       break;
     case "bdo":
 
@@ -13439,7 +13688,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SECONDARY', 5, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SECONDARY', 5, $value, $attr, $id, $class, $label);
       break;
     case "blockquote":
 
@@ -13452,7 +13701,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SECONDARY', 6, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SECONDARY', 6, $value, $attr, $id, $class, $label);
       break;
     case "caption":
 
@@ -13465,7 +13714,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SECONDARY', 7, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SECONDARY', 7, $value, $attr, $id, $class, $label);
       break;
     case "label":
 
@@ -13477,7 +13726,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SECONDARY', 8, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SECONDARY', 8, $value, $attr, $id, $class, $label);
       break;
     case "datalist":
 
@@ -13489,7 +13738,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SECONDARY', 9, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SECONDARY', 9, $value, $attr, $id, $class, $label);
       break;
     case "details":
 
@@ -13501,7 +13750,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SECONDARY', 10, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SECONDARY', 10, $value, $attr, $id, $class, $label);
       break;
     case "summary":
 
@@ -13513,7 +13762,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SECONDARY', 11, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SECONDARY', 11, $value, $attr, $id, $class, $label);
       break;
     case "dialog":
 
@@ -13525,7 +13774,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SECONDARY', 12, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SECONDARY', 12, $value, $attr, $id, $class, $label);
       break;
     case "option":
 
@@ -13537,7 +13786,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('SECONDARY', 13, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('SECONDARY', 13, $value, $attr, $id, $class, $label);
       break;
     case "h1":
 
@@ -13549,7 +13798,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-       return $this->_elemenHTMLINLINE('PRIMARY', 0, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('PRIMARY', 0, $value, $attr, $id, $class, $label);
       break;
     case "h2":
 
@@ -13561,7 +13810,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-      return $this->_elemenHTMLINLINE('PRIMARY', 1, $value, $attr, $id, $class, $label);
+      return $this->assoc_element_inline('PRIMARY', 1, $value, $attr, $id, $class, $label);
       break;
     case "h3":
 
@@ -13573,7 +13822,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-      return $this->_elemenHTMLINLINE('PRIMARY', 2, $value, $attr, $id, $class, $label);
+      return $this->assoc_element_inline('PRIMARY', 2, $value, $attr, $id, $class, $label);
       break; 
     case "h4":
 
@@ -13585,7 +13834,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-      return $this->_elemenHTMLINLINE('PRIMARY', 3, $value, $attr, $id, $class, $label);
+      return $this->assoc_element_inline('PRIMARY', 3, $value, $attr, $id, $class, $label);
       break;
     case "h5":
 
@@ -13597,7 +13846,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-      return $this->_elemenHTMLINLINE('PRIMARY', 4, $value, $attr, $id, $class, $label);
+      return $this->assoc_element_inline('PRIMARY', 4, $value, $attr, $id, $class, $label);
       break;
     case "h6":
 
@@ -13609,7 +13858,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-      return $this->_elemenHTMLINLINE('PRIMARY', 5, $value, $attr, $id, $class, $label);
+      return $this->assoc_element_inline('PRIMARY', 5, $value, $attr, $id, $class, $label);
       break;                 
   case "div":
 
@@ -13621,7 +13870,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/
-      return $this->_elemenHTMLINLINE('PRIMARY', 6, $value, $attr, $id, $class, $label);
+      return $this->assoc_element_inline('PRIMARY', 6, $value, $attr, $id, $class, $label);
       break;       
     case "p":
 
@@ -13633,7 +13882,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-       return $this->_elemenHTMLINLINE('PRIMARY', 7, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('PRIMARY', 7, $value, $attr, $id, $class, $label);
       break;
     case "button":
 
@@ -13645,7 +13894,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-       return $this->_elemenHTMLINLINE('PRIMARY', 8, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('PRIMARY', 8, $value, $attr, $id, $class, $label);
       break;
     case "a":
 
@@ -13657,7 +13906,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-      return $this->_elemenHTMLINLINE('PRIMARY', 9, $value, $attr, $id, $class, $label);
+      return $this->assoc_element_inline('PRIMARY', 9, $value, $attr, $id, $class, $label);
       break;
     case "iframe":
 
@@ -13669,7 +13918,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-       return $this->_elemenHTMLINLINE('PRIMARY', 10, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('PRIMARY', 10, $value, $attr, $id, $class, $label);
       break;
     case "main":
 
@@ -13681,7 +13930,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-      return $this->_elemenHTMLINLINE('PRIMARY', 11, $value, $attr, $id, $class, $label);
+      return $this->assoc_element_inline('PRIMARY', 11, $value, $attr, $id, $class, $label);
       break;
     case "nav":
 
@@ -13693,7 +13942,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-       return $this->_elemenHTMLINLINE('PRIMARY', 12, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('PRIMARY', 12, $value, $attr, $id, $class, $label);
       break;
     case "select":
 
@@ -13705,7 +13954,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-      return $this->_elemenHTMLINLINE('PRIMARY', 13, $value, $attr, $id, $class, $label);
+      return $this->assoc_element_inline('PRIMARY', 13, $value, $attr, $id, $class, $label);
       break;
     case "form":
 
@@ -13717,7 +13966,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-       return $this->_elemenHTMLINLINE('PRIMARY', 14, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('PRIMARY', 14, $value, $attr, $id, $class, $label);
       break;
     case "picture":
 
@@ -13729,7 +13978,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-      return $this->_elemenHTMLINLINE('PRIMARY', 15, $value, $attr, $id, $class, $label);
+      return $this->assoc_element_inline('PRIMARY', 15, $value, $attr, $id, $class, $label);
       break;
     case "section":
 
@@ -13741,7 +13990,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-       return $this->_elemenHTMLINLINE('PRIMARY', 16, $value, $attr, $id, $class, $label);
+       return $this->assoc_element_inline('PRIMARY', 16, $value, $attr, $id, $class, $label);
       break;
     case "textarea":
 
@@ -13753,7 +14002,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-      return $this->_elemenHTMLINLINE('PRIMARY', 17, $value, $attr, $id, $class, $label);
+      return $this->assoc_element_inline('PRIMARY', 17, $value, $attr, $id, $class, $label);
       break;
 
     case "footer":
@@ -13766,7 +14015,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-      return $this->_elemenHTMLINLINE('PRIMARY', 18, $value, $attr, $id, $class, $label);
+      return $this->assoc_element_inline('PRIMARY', 18, $value, $attr, $id, $class, $label);
       break;
 
     case "script":
@@ -13779,7 +14028,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-      return $this->_elemenHTMLINLINE('PRIMARY', 19, $value, $attr, $id, $class, $label);
+      return $this->assoc_element_inline('PRIMARY', 19, $value, $attr, $id, $class, $label);
       break;
 
     case "style":
@@ -13792,7 +14041,7 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
        *
        *
       **/ 
-      return $this->_elemenHTMLINLINE('PRIMARY', 20, $value, $attr, $id, $class, $label);
+      return $this->assoc_element_inline('PRIMARY', 20, $value, $attr, $id, $class, $label);
       break;
 
     default:
@@ -13808,9 +14057,9 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
   }
 } # END OF SET ELEMENT
 
- protected function _setReturnINLINELEMENT($elem, $attr, $id, $class,$assoc){
+ protected function set_assoc_element_inline($elem, $attr, $id, $class,$assoc){
 
-   $elem = $this->_setINLINELEMENTS($elem);
+   $elem = $this->set_inline_elements($elem);
 
    switch ($elem) {
     case "source":
@@ -14010,16 +14259,3 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
 
 }  
 
-/**
-  * NOTE! This library is fully FREE NO WARRANTY (for more info. read license on the top of this page)*  
-  * PHPHtml-Optimizer cooked by nielsoffice
-  * Developer Support  $FREE
-  * Freelancer Support $Free
-  * Agency Support     $500 USD Get support Valid for 30 days / 50% will developer recieved from nielsoffice  
-  * 
-  * @author nielfernandez
-  * <nieldigitalsolution@gmail.com>
-  * www.nielsoffice.com
-  * https://www.facebook.com/nielsofficeofficial
-  * 
-  **/

@@ -3,13 +3,14 @@
 USE \PHPWine\VanillaFlavour\Merge\Html;
 USE \PHPWine\VanillaFlavour\Optimizer\Html AS MergeBox; 
 USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileHandler;
+USE \PHPWine\VanillaFlavour\system\Request;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.0 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.0 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -28,19 +29,198 @@ USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileHandler;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * @category   PHPWine\VanillaFlavour
- * @package    Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
- *             Handling Form Validation | Same page CRUD | PHPOptimizer | Advance Form Builder
+ * @category   PHPLibrary PHPWine\VanillaFlavour
+ * @package    PHPHtml-Optimizer | CodeDesigner/Enhancer | Advance Form Builder | Handling Form Validation | Form Validation v2 | BASIC-Authentication | HtmlMinifier
  *            
  *            
- * @author    nielfernandez <nielsoffice.wordpress.php@gmail.com>
+ * @author    Leinner Zednanref <nielsoffice.wordpress.php@gmail.com>
  * @license   MIT License
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.4
+ * @version   v1.2.0.0 
+ * @since     02.04.2022
  *
+ * @method / FunctionList 
+ * @method _H1();
+ * @method xH1();
+ * @method _H2();
+ * @method xH2();
+ * @method _H3();
+ * @method xH3();
+ * @method _H4();
+ * @method xH4(); 
+ * @method _H5();
+ * @method xH5();
+ * @method _H6();
+ * @method xH6();
+ * @method _DIV();
+ * @method xDIV(); 
+ * @method _P();
+ * @method xP();
+ * @method _BUTTON();
+ * @method xBUTTON();
+ * @method _A();
+ * @method xA();
+ * @method _IFRAME();
+ * @method xIFRAME();
+ * @method _MAIN();
+ * @method xMAIN();
+ * @method _NAV();
+ * @method xNAV();
+ * @method _SELECT();
+ * @method xSELECT();
+ * @method _FORM();
+ * @method xFORM();
+ * @method _PICTURE();
+ * @method xPICTURE();
+ * @method _SECTION();
+ * @method xSECTION();
+ * @method _TEXTAREA();
+ * @method xTEXTAREA();
+ * @method _FOOTER();
+ * @method xFOOTER();
+ * @method _SCRIPT();
+ * @method xSCRIPT();
+ * @method _STYLE();
+ * @method xSTYLE();
+ * @method _AUDIO();
+ * @method xAUDIO();
+ * @method _VIDEO();
+ * @method xVIDEO();
+ * @method _ADDRESS();
+ * @method xADDRESS();
+ * @method _COLGROUP();
+ * @method xCOLGROUP();
+ * @method _BDI();
+ * @method xBDI();
+ * @method _BDO();
+ * @method xBDO();
+ * @method _BLOCKQUOTE();
+ * @method xBLOCKQUOTE();
+ * @method _CAPTION();
+ * @method xCAPTION();
+ * @method _LABEL();
+ * @method xLABEL();
+ * @method _DATALIST();
+ * @method xDATALIST();
+ * @method _DETAILS();
+ * @method xDETAILS();
+ * @method _SUMMARY();
+ * @method xSUMMARY();
+ * @method _DIALOG();
+ * @method xDIALOG();
+ * @method _OPTION();
+ * @method xOPTION();
+ * @method _FIGURE();
+ * @method xFIGURE();
+ * @method _FIGCAPTION();
+ * @method xFIGCAPTION();
+ * @method _METER();
+ * @method xMETER();
+ * @method _OBJECT();
+ * @method xOBJECT();
+ * @method _OPTGROUP();
+ * @method xOPTGROUP();
+ * @method _OUTPUT();
+ * @method xOUTPUT();
+ * @method _PROGRESS();
+ * @method xPROGRESS();
+ * @method _TEMPLATE();
+ * @method xTEMPLATE();
+ * @method _UL();
+ * @method xUL();
+ * @method _OL();
+ * @method xOL();
+ * @method _LI();
+ * @method xLI();
+ * @method _TABLE();
+ * @method xTABLE();
+ * @method _TR();
+ * @method xTR();
+ * @method _TD();
+ * @method xTD();
+ * @method _TH();
+ * @method xTH();
+ * @method _LEGEND();
+ * @method xLEGEND();
+ * @method _FIELDSET();
+ * @method xFIELDSET();
+ * @method _TBODY();
+ * @method xTBODY();
+ * @method _TFOOT();
+ * @method xTFOOT();
+ * @method _THEAD();
+ * @method xTHEAD();
+ * @method _SPAN();
+ * @method xSPAN();
+ * @method _EM();
+ * @method xEM();
+ * @method _SMALL();
+ * @method xSMALL();
+ * @method _MARQUEE();
+ * @method xMARQUEE();
+ * @method _CENTER();
+ * @method xCENTER();
+ * @method _CODE();
+ * @method xCODE();
+ * @method _ABBR();
+ * @method xABBR();
+ * @method _MAP();
+ * @method xMAP();
+ * @method _CANVAS();
+ * @method xCANVAS();
+ * @method _DATA();
+ * @method xDATA();
+ * @method _DL();
+ * @method xDL();
+ * @method _DT();
+ * @method xDT();
+ * @method _DD();
+ * @method xDD();
+ * @method _DFN();
+ * @method xDFN();
+ * @method _INS();
+ * @method xINS();
+ * @method _DEL();
+ * @method xDEL();
+ * @method _KBD();
+ * @method xKBD();
+ * @method _MARK();
+ * @method xMARK();
+ * @method _xPRE();
+ * @method _RT();
+ * @method xRT();
+ * @method _SAMP();
+ * @method xSAMP();
+ * @method _STRONG();
+ * @method xSTRONG();
+ * @method _SUB();
+ * @method xSUB();
+ * @method _SUP();
+ * @method xSUP();
+ * @method _WBR();
+ * @method xWBR();
+ * @method _HEAD();
+ * @method xHEAD();
+ * @method _TITLE();
+ * @method xTITLE();
+ * @method _BODY();
+ * @method xBODY();
+ * 
+ *  # SINGLE CHARACTER HTML TAG SUCH LIST BELOW ARE NOT SUPPORTED FOR MERGEBOX BASE ON PHP STANDARD !
+ *  # _P();
+ *  # xP();
+ *  # _A();
+ *  # xA();
+ *  # _i();
+ *  # xi();
+ *  # _b();
+ *  # xb();
+ * 
  */
+
+$request = NEW Request();
 
 /**
   *
@@ -52,17 +232,16 @@ USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileHandler;
   **/
 function _H1(
 
-      array|string $attr    =  null
-     ,string $id    =  null
-     ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H1
@@ -70,9 +249,9 @@ function _H1(
    * @method  : Html::_H1($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_H1') ? 
   
    $Html->_H1(
@@ -81,7 +260,7 @@ function _H1(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM($request->erorrMessage());	
 
 }
 /**
@@ -98,11 +277,14 @@ function xH1(
 
 )
 {
+ 
+  global $request;
 
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xH1') ? 
   
-   $Html->xH1($label) : PERFORM(erorrMessage());	
+   $Html->xH1($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -116,17 +298,16 @@ function xH1(
   **/
 function _H2(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
  
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H2
@@ -134,9 +315,9 @@ function _H2(
    * @method  : Html::_H2($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/   
  $Html = NEW MergeBox(); 
+
  return method_exists($Html, '_H2') ? 
  
   $Html->_H2(
@@ -145,7 +326,7 @@ function _H2(
    $id, 
    $class
    
-   ) : PERFORM(erorrMessage());	
+   ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -164,10 +345,13 @@ function xH2(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xH2') ? 
   
-   $Html->xH2($label) : PERFORM(erorrMessage());	
+   $Html->xH2($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -181,17 +365,16 @@ function xH2(
   **/
 function _H3(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
   
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H3
@@ -199,9 +382,9 @@ function _H3(
    * @method  : Html::_H3($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/   
  $Html = NEW MergeBox(); 
+
  return method_exists($Html, '_H3') ? 
  
   $Html->_H3(
@@ -210,7 +393,7 @@ function _H3(
   $id, 
   $class
   
-   ) : PERFORM(erorrMessage());	
+   ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -229,10 +412,13 @@ function xH3(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xH3') ? 
   
-   $Html->xH3($label) : PERFORM(erorrMessage());	
+   $Html->xH3($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -246,17 +432,16 @@ function xH3(
   **/
 function _H4(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
-
+  
+  global $request;
+  
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H3
@@ -264,9 +449,9 @@ function _H4(
    * @method  : Html::_H3($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 
  $Html = NEW MergeBox(); 
+
  return method_exists($Html, '_H4') ? 
  
   $Html->_H4(
@@ -275,7 +460,7 @@ function _H4(
   $id, 
   $class
   
-   ) : PERFORM(erorrMessage());	
+   ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -294,10 +479,13 @@ function xH4(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+  
   return method_exists($Html, 'xH4') ?
   
-   $Html->xH4($label) : PERFORM(erorrMessage());  	
+   $Html->xH4($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -311,17 +499,16 @@ function xH4(
   **/
 function _H5(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H5
@@ -329,9 +516,9 @@ function _H5(
    * @method  : Html::_H5($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/
  $Html = NEW MergeBox(); 
+
  return method_exists($Html, '_H5') ? 
  
   $Html->_H5(
@@ -340,7 +527,7 @@ function _H5(
   $id, 
   $class
   
-   ) : PERFORM(erorrMessage());	
+   ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -359,10 +546,13 @@ function xH5(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xH5') ? 
   
-   $Html->xH5($label) : PERFORM(erorrMessage());	
+   $Html->xH5($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -376,17 +566,16 @@ function xH5(
   **/
 function _H6(
  
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H6
@@ -394,9 +583,9 @@ function _H6(
    * @method  : Html::_H($v6alue, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
  $Html = NEW MergeBox(); 
+
  return method_exists($Html, '_H6') ?
  
    $Html->_H6(
@@ -405,7 +594,7 @@ function _H6(
   $id, 
   $class
   
-  ) : PERFORM(erorrMessage()); 	
+  ) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -424,10 +613,13 @@ function xH6(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xH6') ?
   
-   $Html->xH6($label) : PERFORM(erorrMessage());	
+   $Html->xH6($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -441,17 +633,16 @@ function xH6(
   **/
 function _DIV(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DIV
@@ -459,9 +650,9 @@ function _DIV(
    * @method  : Html::_DIV($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_DIV') ? 
   
    $Html->_DIV(
@@ -470,7 +661,7 @@ function _DIV(
     $id, 
     $class
     
-    ) : PERFORM(erorrMessage());	
+    ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -489,10 +680,13 @@ function xDIV(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xDIV') ?
   
-   $Html->xDIV($label) : PERFORM(erorrMessage());	
+   $Html->xDIV($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -506,17 +700,16 @@ function xDIV(
   **/
 function _BUTTON(  
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag BUTTON
@@ -524,9 +717,9 @@ function _BUTTON(
    * @method  : Html::_BUTTON($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/   	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_BUTTON') ? 
   
    $Html->_BUTTON(
@@ -535,7 +728,7 @@ function _BUTTON(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage());  	
+  ) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -554,10 +747,13 @@ function xBUTTON(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xBUTTON') ? 
   
-   $Html->xBUTTON($label) : PERFORM(erorrMessage());	
+   $Html->xBUTTON($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -571,17 +767,16 @@ function xBUTTON(
   **/
 function _IFRAME( 
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag IFRAME
@@ -589,9 +784,9 @@ function _IFRAME(
    * @method  : Html::_IFRAME($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_IFRAME') ? 
   
    $Html->_IFRAME(
@@ -600,7 +795,7 @@ function _IFRAME(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -619,10 +814,13 @@ function xIFRAME(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xIFRAME') ? 
   
-   $Html->xIFRAME($label) : PERFORM(erorrMessage());  	
+   $Html->xIFRAME($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -636,17 +834,16 @@ function xIFRAME(
   **/
 function _MAIN(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag MAIN
@@ -654,9 +851,9 @@ function _MAIN(
    * @method  : Html::_MAIN($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_MAIN') ?
   
    $Html->_MAIN(
@@ -665,7 +862,7 @@ function _MAIN(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -684,10 +881,13 @@ function xMAIN(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xMAIN') ? 
   
-   $Html->xMAIN($label) : PERFORM(erorrMessage());	
+   $Html->xMAIN($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -701,17 +901,16 @@ function xMAIN(
   **/
 function _NAV(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag NAV
@@ -719,9 +918,9 @@ function _NAV(
    * @method  : Html::_NAV($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
-  $Html = NEW MergeBox(); 
+  $Html = NEW MergeBox();
+
   return method_exists($Html, '_NAV') ? 
   
    $Html->_NAV(
@@ -730,7 +929,7 @@ function _NAV(
     $id, 
     $class
   
-   ) : PERFORM(erorrMessage());	
+   ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -749,10 +948,13 @@ function xNAV(
 )
 {
 
-  $Html = NEW MergeBox(); 
+  global $request;
+
+  $Html = NEW MergeBox();
+
   return method_exists($Html, 'xNAV') ?
   
-   $Html->xNAV($label) : PERFORM(erorrMessage());	
+   $Html->xNAV($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -766,17 +968,16 @@ function xNAV(
   **/
 function _SELECT(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SELECT
@@ -784,9 +985,9 @@ function _SELECT(
    * @method  : Html::_SELECT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_SELECT') ? 
   
    $Html->_SELECT(
@@ -795,7 +996,7 @@ function _SELECT(
     $id, 
     $class
   
-   ) : PERFORM(erorrMessage());	
+   ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -814,10 +1015,13 @@ function xSELECT(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox();
+
   return method_exists($Html, 'xSELECT') ? 
   
-   $Html->xSELECT($label) : PERFORM(erorrMessage());
+   $Html->xSELECT($label) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -831,17 +1035,16 @@ function xSELECT(
   **/
 function _FORM(
 
-  array  $attr          =  null
- ,string $id    =  null
- ,string $class =  null
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag FORM
@@ -849,9 +1052,9 @@ function _FORM(
    * @method  : Html::_FORM($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
-  $Html = NEW MergeBox(); 
+  $Html = NEW MergeBox();
+
   return method_exists($Html, '_FORM') ? 
   
    $Html->_FORM(
@@ -860,7 +1063,7 @@ function _FORM(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -879,10 +1082,13 @@ function xFORM(
 )
 {
 
-  $Html = NEW MergeBox(); 
+  global $request;
+
+  $Html = NEW MergeBox();
+
   return method_exists($Html, 'xFORM') ? 
   
-   $Html->xFORM($label) : PERFORM(erorrMessage());  	
+   $Html->xFORM($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -896,17 +1102,16 @@ function xFORM(
   **/
 function _PICTURE(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag PICTURE
@@ -914,9 +1119,9 @@ function _PICTURE(
    * @method  : Html::_PICTURE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 
   $Html = NEW MergeBox(); 
+  
   return method_exists($Html, '_PICTURE') ?
   
    $Html->_PICTURE(
@@ -925,7 +1130,7 @@ function _PICTURE(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage());  	
+  ) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -944,10 +1149,13 @@ function xPICTURE(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+ 
   return method_exists($Html, 'xPICTURE') ? 
   
-   $Html->xPICTURE($label) : PERFORM(erorrMessage()); 	
+   $Html->xPICTURE($label) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -961,17 +1169,16 @@ function xPICTURE(
   **/
 function _SECTION(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SECTION
@@ -979,9 +1186,9 @@ function _SECTION(
    * @method  : Html::_SECTION($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/   
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_SECTION') ? 
   
    $Html->_SECTION(
@@ -990,7 +1197,7 @@ function _SECTION(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -1009,10 +1216,13 @@ function xSECTION(
 )
 {
 
+  global $request;
+  
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xSECTION') ? 
   
-   $Html->xSECTION($label) : PERFORM(erorrMessage());  	
+   $Html->xSECTION($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -1026,17 +1236,16 @@ function xSECTION(
   **/
 function _TEXTAREA(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H3
@@ -1044,9 +1253,9 @@ function _TEXTAREA(
    * @method  : Html::_H3($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_TEXTAREA') ? 
   
    $Html->_TEXTAREA(
@@ -1055,7 +1264,7 @@ function _TEXTAREA(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage());  	
+  ) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -1074,10 +1283,13 @@ function xTEXTAREA(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xTEXTAREA') ? 
   
-   $Html->xTEXTAREA($label) : PERFORM(erorrMessage()); 
+   $Html->xTEXTAREA($label) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -1091,17 +1303,16 @@ function xTEXTAREA(
   **/
 function _FOOTER(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H3
@@ -1109,9 +1320,9 @@ function _FOOTER(
    * @method  : Html::_H3($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_FOOTER') ? 
   
    $Html->_FOOTER(
@@ -1120,7 +1331,7 @@ function _FOOTER(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage());   
+  ) : PERFORM( $request->erorrMessage() );   
 
 }
 
@@ -1139,10 +1350,13 @@ function xFOOTER(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xFOOTER') ?
   
-   $Html->xFOOTER($label) : PERFORM(erorrMessage());   
+   $Html->xFOOTER($label) : PERFORM( $request->erorrMessage() );   
 
 }
 
@@ -1162,10 +1376,9 @@ function _SCRIPT(
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H3
@@ -1173,9 +1386,9 @@ function _SCRIPT(
    * @method  : Html::_H3($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  
-  $Html = NEW MergeBox(); 
+  $Html = NEW MergeBox();
+
   return method_exists($Html, '_SCRIPT') ? 
   
    $Html->_SCRIPT(
@@ -1184,7 +1397,7 @@ function _SCRIPT(
     NULL, 
     NULL
   
-   ) : PERFORM(erorrMessage());   
+   ) : PERFORM( $request->erorrMessage() );   
 
 }
 
@@ -1203,10 +1416,13 @@ function xSCRIPT(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+  
   return method_exists($Html, 'xSCRIPT') ? 
   
-   $Html->xSCRIPT($label) : PERFORM(erorrMessage());   
+   $Html->xSCRIPT($label) : PERFORM( $request->erorrMessage() );   
 
 }
 
@@ -1227,10 +1443,9 @@ function _STYLE(
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge _STYLE TAG
@@ -1238,9 +1453,9 @@ function _STYLE(
    * @method  : Html::_H3($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_STYLE') ? 
   
    $Html->_STYLE(
@@ -1249,7 +1464,7 @@ function _STYLE(
     NULL, 
     NULL
     
- ) : PERFORM(erorrMessage());   
+ ) : PERFORM( $request->erorrMessage() );   
 
 }
 
@@ -1268,10 +1483,13 @@ function xSTYLE(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xSTYLE') ? 
   
-   $Html->xSTYLE($label) : PERFORM(erorrMessage());   
+   $Html->xSTYLE($label) : PERFORM( $request->erorrMessage() );   
 
 }
 
@@ -1285,27 +1503,24 @@ function xSTYLE(
   **/
 function _AUDIO(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
 )
 {
-
+ 
+  global $request;
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag AUDIO
    * @package : Static Procedural
    * @method  : Html::_AUDIO($value, $attr=null, $id, $class, $label, $assoc);
    *
-   *
-   *
    **/	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_AUDIO') ? 
   
    $Html->_AUDIO(
@@ -1314,7 +1529,7 @@ function _AUDIO(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage()); 	
+  ) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -1333,10 +1548,13 @@ function xAUDIO(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xAUDIO') ? 
   
-   $Html->xAUDIO($label) : PERFORM(erorrMessage()); 
+   $Html->xAUDIO($label) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -1350,17 +1568,16 @@ function xAUDIO(
   **/
 function _VIDEO(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag VIDEO
@@ -1368,9 +1585,9 @@ function _VIDEO(
    * @method  : Html::_VIDEO($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_VIDEO') ? 
   
    $Html->_VIDEO(
@@ -1379,7 +1596,7 @@ function _VIDEO(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -1398,10 +1615,12 @@ function xVIDEO(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox();
   return method_exists($Html, 'xVIDEO') ?
   
-   $Html->xVIDEO($label) : PERFORM(erorrMessage());
+   $Html->xVIDEO($label) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -1415,17 +1634,16 @@ function xVIDEO(
   **/
 function _ADDRESS(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
  
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag ADDRESS
@@ -1433,9 +1651,9 @@ function _ADDRESS(
    * @method  : Html::_ADDRESS($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_ADDRESS') ? 
   
    $Html->_ADDRESS(
@@ -1444,7 +1662,7 @@ function _ADDRESS(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -1464,10 +1682,13 @@ function xADDRESS(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xADDRESS') ? 
   
-   $Html->xADDRESS($label) : PERFORM(erorrMessage());  	
+   $Html->xADDRESS($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -1481,17 +1702,16 @@ function xADDRESS(
   **/
 function _COLGROUP(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H3
@@ -1499,9 +1719,9 @@ function _COLGROUP(
    * @method  : Html::_H3($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_COLGROUP') ? 
   
   $Html->_COLGROUP(
@@ -1510,7 +1730,7 @@ function _COLGROUP(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -1529,10 +1749,13 @@ function xCOLGROUP(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xCOLGROUP') ?
   
-   $Html->xCOLGROUP($label) : PERFORM(erorrMessage());  	
+   $Html->xCOLGROUP($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -1546,17 +1769,16 @@ function xCOLGROUP(
   **/
 function _BDI(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H3
@@ -1564,9 +1786,9 @@ function _BDI(
    * @method  : Html::_H3($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_BDI') ?
   
   $Html->_BDI(
@@ -1575,7 +1797,7 @@ function _BDI(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -1594,10 +1816,13 @@ function xBDI(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xBDI') ? 
   
-   $Html->xBDI($label) : PERFORM(erorrMessage());	
+   $Html->xBDI($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -1611,17 +1836,16 @@ function xBDI(
   **/
 function _BDO(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H3
@@ -1629,9 +1853,9 @@ function _BDO(
    * @method  : Html::_H3($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_BDO') ?
   
    $Html->_BDO(
@@ -1640,7 +1864,7 @@ function _BDO(
    $id, 
    $class
   
- ) : PERFORM(erorrMessage());  	
+ ) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -1659,10 +1883,13 @@ function xBDO(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xBDO') ? 
   
-   $Html->xBDO($label) : PERFORM(erorrMessage()); 	
+   $Html->xBDO($label) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -1676,17 +1903,16 @@ function xBDO(
   **/
 function _BLOCKQUOTE(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag BLOCKQUOTE
@@ -1694,9 +1920,9 @@ function _BLOCKQUOTE(
    * @method  : Html::_BLOCKQUOTE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
  $Html = NEW MergeBox(); 
+
  return method_exists($Html, '_BLOCKQUOTE') ? 
  
   $Html->_BLOCKQUOTE(
@@ -1705,7 +1931,7 @@ function _BLOCKQUOTE(
   $id, 
   $class
  
-  ) : PERFORM(erorrMessage());
+  ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -1724,10 +1950,13 @@ function xBLOCKQUOTE(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xBLOCKQUOTE') ? 
   
-   $Html->xBLOCKQUOTE($label) : PERFORM(erorrMessage());	
+   $Html->xBLOCKQUOTE($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -1741,17 +1970,16 @@ function xBLOCKQUOTE(
   **/
 function _CAPTION(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag CAPTION
@@ -1759,9 +1987,9 @@ function _CAPTION(
    * @method  : Html::_CAPTION($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_CAPTION') ? 
   
    $Html->_CAPTION(
@@ -1770,7 +1998,7 @@ function _CAPTION(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -1789,10 +2017,13 @@ function xCAPTION(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xCAPTION') ? 
    
-   $Html->xCAPTION($label) : PERFORM(erorrMessage());
+   $Html->xCAPTION($label) : PERFORM(  $request->erorrMessage() );
 
 }
 
@@ -1806,17 +2037,16 @@ function xCAPTION(
   **/
 function _LABEL(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag LABEL
@@ -1824,9 +2054,9 @@ function _LABEL(
    * @method  : Html::_LABEL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 
   $Html = NEW MergeBox();
+
   return method_exists($Html, '_LABEL') ? 
   
    $Html->_LABEL(
@@ -1835,7 +2065,7 @@ function _LABEL(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage()); 	
+  ) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -1853,11 +2083,14 @@ function xLABEL(
 
 )
 {
+  
+  global $request;
 
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xLABEL') ? 
   
-   $Html->xLABEL($label) : PERFORM(erorrMessage());	
+   $Html->xLABEL($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -1871,17 +2104,16 @@ function xLABEL(
   **/
 function _DATALIST(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DATALIST
@@ -1889,9 +2121,9 @@ function _DATALIST(
    * @method  : Html::_DATALIST($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+  
   return method_exists($Html, '_DATALIST') ? 
   
    $Html->_DATALIST(
@@ -1900,7 +2132,7 @@ function _DATALIST(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage());  	
+  ) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -1919,10 +2151,13 @@ function xDATALIST(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xDATALIST') ? 
   
-   $Html->xDATALIST($label) : PERFORM(erorrMessage());  	
+   $Html->xDATALIST($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -1936,17 +2171,16 @@ function xDATALIST(
   **/
 function _DETAILS(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null  
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DETAILS
@@ -1954,9 +2188,9 @@ function _DETAILS(
    * @method  : Html::_DETAILS($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
  $Html = NEW MergeBox(); 
+
  return method_exists($Html, '_DETAILS') ? 
  
   $Html->_DETAILS(
@@ -1965,7 +2199,7 @@ function _DETAILS(
   $id, 
   $class
  
- ) : PERFORM(erorrMessage());	
+ ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -1984,10 +2218,13 @@ function xDETAILS(
 )
 {
 
-  $Html = NEW MergeBox(); 
+  global $request;
+
+  $Html = NEW MergeBox();
+
   return method_exists($Html, 'xDETAILS') ? 
   
-   $Html->xDETAILS($label) : PERFORM(erorrMessage());	
+   $Html->xDETAILS($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -2001,17 +2238,16 @@ function xDETAILS(
   **/
 function _SUMMARY(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
   )
   {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H3
@@ -2019,9 +2255,9 @@ function _SUMMARY(
    * @method  : Html::_H3($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/   	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_SUMMARY') ? 
   
    $Html->_SUMMARY(
@@ -2030,7 +2266,7 @@ function _SUMMARY(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -2049,10 +2285,13 @@ function xSUMMARY(
 )
 {
 
-  $Html = NEW MergeBox(); 
+  global $request;
+
+  $Html = NEW MergeBox();
+
   return method_exists($Html, 'xSUMMARY') ?
 
-    $Html->xSUMMARY($label) : PERFORM(erorrMessage());  	
+    $Html->xSUMMARY($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -2066,17 +2305,16 @@ function xSUMMARY(
   **/
 function _DIALOG(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DIALOG
@@ -2084,9 +2322,9 @@ function _DIALOG(
    * @method  : Html::_DIALOG($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_DIALOG') ?
   
    $Html->_DIALOG(
@@ -2095,7 +2333,7 @@ function _DIALOG(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage()); 	
+  ) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -2114,10 +2352,13 @@ function xDIALOG(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox();
+
   return method_exists($Html, 'xDIALOG') ?
   
-   $Html->xDIALOG($label) : PERFORM(erorrMessage()); 	
+   $Html->xDIALOG($label) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -2131,17 +2372,16 @@ function xDIALOG(
   **/
 function _OPTION(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag OPTION
@@ -2149,9 +2389,9 @@ function _OPTION(
    * @method  : Html::_OPTION($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/   	
   $Html = NEW MergeBox();
+
   return method_exists($Html, '_OPTION') ?
   
    $Html->_OPTION(
@@ -2160,7 +2400,7 @@ function _OPTION(
     $id, 
     $class
    
-  ) : PERFORM(erorrMessage());  	
+  ) : PERFORM($request->erorrMessage());  	
 
 }
 
@@ -2179,10 +2419,13 @@ function xOPTION(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xOPTION') ? 
   
-   $Html->xOPTION($label) : PERFORM(erorrMessage());  	
+   $Html->xOPTION($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -2196,17 +2439,16 @@ function xOPTION(
   **/
 function _FIGURE(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag FIGURE
@@ -2214,9 +2456,9 @@ function _FIGURE(
    * @method  : Html::_FIGURE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_FIGURE') ? 
   
    $Html->_FIGURE(
@@ -2225,7 +2467,7 @@ function _FIGURE(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage()); 	
+  ) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -2244,10 +2486,13 @@ function xFIGURE(
  )
  {
   
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xFIGURE') ?
   
-   $Html->xFIGURE($label) : PERFORM(erorrMessage());
+   $Html->xFIGURE($label) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -2261,17 +2506,16 @@ function xFIGURE(
   **/
 function _FIGCAPTION(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag FIGCAPTION
@@ -2279,9 +2523,9 @@ function _FIGCAPTION(
    * @method  : Html::_FIGCAPTION($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_FIGCAPTION') ?
   
    $Html->_FIGCAPTION(
@@ -2290,7 +2534,7 @@ function _FIGCAPTION(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -2309,10 +2553,13 @@ function xFIGCAPTION(
  )
  {
   
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xFIGCAPTION') ?
   
-   $Html->xFIGCAPTION($label) : PERFORM(erorrMessage());
+   $Html->xFIGCAPTION($label) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -2326,17 +2573,16 @@ function xFIGCAPTION(
   **/
 function _METER(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag METER
@@ -2344,9 +2590,9 @@ function _METER(
    * @method  : Html::_METER($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/   
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_METER') ? 
   
    $Html->_METER(
@@ -2355,7 +2601,7 @@ function _METER(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -2374,8 +2620,13 @@ function xMETER(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
-  return method_exists($Html, 'xMETER') ? $Html->xMETER($label) : PERFORM(erorrMessage());  	
+
+  return method_exists($Html, 'xMETER') ?
+   
+  $Html->xMETER($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -2390,17 +2641,16 @@ function xMETER(
   **/
 function _OBJECT(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag OBJECT
@@ -2408,9 +2658,9 @@ function _OBJECT(
    * @method  : Html::_OBJECT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_OBJECT') ? 
   
    $Html->_OBJECT(
@@ -2419,7 +2669,7 @@ function _OBJECT(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -2438,10 +2688,13 @@ function xOBJECT(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xOBJECT') ? 
   
-   $Html->xOBJECT($label) : PERFORM(erorrMessage());  	
+   $Html->xOBJECT($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -2455,17 +2708,16 @@ function xOBJECT(
   **/
 function _OPTGROUP(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag OPTGROUP
@@ -2473,9 +2725,9 @@ function _OPTGROUP(
    * @method  : Html::_OPTGROUP($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_OPTGROUP') ? 
   
   $Html->_OPTGROUP(
@@ -2484,7 +2736,7 @@ function _OPTGROUP(
     $id, 
     $class
   
- ) : PERFORM(erorrMessage()); 	
+ ) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -2503,10 +2755,13 @@ function xOPTGROUP(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xOPTGROUP') ? 
   
-  $Html->xOPTGROUP($label) : PERFORM(erorrMessage());	
+  $Html->xOPTGROUP($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -2520,17 +2775,16 @@ function xOPTGROUP(
   **/
 function _OUTPUT(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag OUTPUT
@@ -2538,9 +2792,9 @@ function _OUTPUT(
    * @method  : Html::_OUTPUT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox();
+
   return method_exists($Html, '_OUTPUT') ?
   
   $Html->_OUTPUT(
@@ -2549,7 +2803,7 @@ function _OUTPUT(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage());   	
+  ) : PERFORM( $request->erorrMessage() );   	
 
 }
 
@@ -2568,10 +2822,13 @@ function xOUTPUT(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xOUTPUT') ?
   
-   $Html->xOUTPUT($label) : PERFORM(erorrMessage()); 	
+   $Html->xOUTPUT($label) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -2585,17 +2842,16 @@ function xOUTPUT(
   **/
 function _PROGRESS(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag PROGRESS
@@ -2603,9 +2859,9 @@ function _PROGRESS(
    * @method  : Html::_PROGRESS($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_PROGRESS') ?
   
     $Html->_PROGRESS(
@@ -2614,7 +2870,7 @@ function _PROGRESS(
       $id, 
       $class
   
-  ) : PERFORM(erorrMessage());  	
+  ) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -2633,10 +2889,13 @@ function xPROGRESS(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xPROGRESS') ? 
   
-  $Html->xPROGRESS($label) : PERFORM(erorrMessage());	
+  $Html->xPROGRESS($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -2650,17 +2909,16 @@ function xPROGRESS(
   **/
 function _SVG(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null 
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SVG
@@ -2668,9 +2926,9 @@ function _SVG(
    * @method  : Html::_SVG($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_SVG') ?
   
   $Html->_SVG(
@@ -2679,7 +2937,7 @@ function _SVG(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -2698,10 +2956,13 @@ function xSVG(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xSVG') ? 
   
-   $Html->xSVG($label) : PERFORM(erorrMessage());	
+   $Html->xSVG($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -2715,17 +2976,16 @@ function xSVG(
   **/
 function _TEMPLATE(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null 
 
  ) 
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TEMPLATE
@@ -2733,9 +2993,9 @@ function _TEMPLATE(
    * @method  : Html::_TEMPLATE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_TEMPLATE') ? 
   
   $Html->_TEMPLATE(
@@ -2744,7 +3004,7 @@ function _TEMPLATE(
     $id, 
     $class
  
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -2763,10 +3023,13 @@ function xTEMPLATE(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox();
+
   return method_exists($Html, 'xTEMPLATE') ? 
   
-    $Html->xTEMPLATE($label) : PERFORM(erorrMessage());  	
+    $Html->xTEMPLATE($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -2780,17 +3043,16 @@ function xTEMPLATE(
   **/
 function _UL(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null 
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag UL
@@ -2798,9 +3060,9 @@ function _UL(
    * @method  : Html::_UL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_UL') ?
   
    $Html->_UL(
@@ -2809,7 +3071,7 @@ function _UL(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -2828,10 +3090,13 @@ function xUL(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xUL') ?
   
-   $Html->xUL($label) : PERFORM(erorrMessage());
+   $Html->xUL($label) : PERFORM( $request->erorrMessage() );
 	
 }
 
@@ -2845,17 +3110,16 @@ function xUL(
   **/
 function _OL(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag OL
@@ -2863,9 +3127,9 @@ function _OL(
    * @method  : Html::_OL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/	
   $Html = NEW MergeBox();
+
   return method_exists($Html, '_OL') ? 
   
     $Html->_OL(
@@ -2874,7 +3138,7 @@ function _OL(
       $id, 
       $class
       
-  ) : PERFORM(erorrMessage());
+  ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -2893,10 +3157,13 @@ function xOL(
  )
  {
   
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xOL') ? 
   
-   $Html->xOL($label) : PERFORM(erorrMessage());	
+   $Html->xOL($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -2910,17 +3177,16 @@ function xOL(
   **/
 function _LI(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null 
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag LI
@@ -2928,9 +3194,9 @@ function _LI(
    * @method  : Html::_LI($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_LI') ? 
   
     $Html->_LI(
@@ -2939,7 +3205,7 @@ function _LI(
       $id, 
       $class
       
-  ) : PERFORM(erorrMessage());
+  ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -2958,10 +3224,13 @@ function xLI(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xLI') ?
   
-   $Html->xLI($label) : PERFORM(erorrMessage());	
+   $Html->xLI($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -2975,17 +3244,16 @@ function xLI(
   **/
 function _TABLE(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null 
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TABLE
@@ -2993,9 +3261,9 @@ function _TABLE(
    * @method  : Html::_TABLE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_TABLE') ? 
   
    $Html->_TABLE(
@@ -3004,7 +3272,7 @@ function _TABLE(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3023,10 +3291,13 @@ function xTABLE(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xTABLE') ? 
   
-    $Html->xTABLE($label) : PERFORM(erorrMessage());	
+    $Html->xTABLE($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3040,17 +3311,16 @@ function xTABLE(
   **/
 function _TR(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
   )
   {
 
+    global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TR
@@ -3058,9 +3328,9 @@ function _TR(
    * @method  : Html::_TR($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
  $Html = NEW MergeBox(); 
+
  return method_exists($Html, '_TR') ? 
  
   $Html->_TR(
@@ -3069,7 +3339,7 @@ function _TR(
     $id, 
     $class
     
- ) : PERFORM(erorrMessage());	
+ ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3088,10 +3358,13 @@ function xTR(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xTR') ? 
   
-   $Html->xTR($label) : PERFORM(erorrMessage());  
+   $Html->xTR($label) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -3105,17 +3378,16 @@ function xTR(
   **/
 function _TD(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
  /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TD
@@ -3123,9 +3395,9 @@ function _TD(
    * @method  : Html::_TD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_TD') ?
   
    $Html->_TD(
@@ -3134,7 +3406,7 @@ function _TD(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3153,10 +3425,12 @@ function xTD(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox();
   return method_exists($Html, 'xTD') ?
   
-   $Html->xTD($label) : PERFORM(erorrMessage());  	
+   $Html->xTD($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -3170,17 +3444,16 @@ function xTD(
   **/
 function _TH(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TH
@@ -3188,9 +3461,9 @@ function _TH(
    * @method  : Html::_TH($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  
   $Html = NEW MergeBox();
+
   return method_exists($Html, '_TH') ? 
   
     $Html->_TH(
@@ -3199,7 +3472,7 @@ function _TH(
       $id, 
       $class
 
-  ) : PERFORM(erorrMessage());  	
+  ) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -3219,10 +3492,13 @@ function xTH(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+  
   return method_exists($Html, 'xTH') ? 
   
-    $Html->xTH($label) : PERFORM(erorrMessage());	
+    $Html->xTH($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3236,17 +3512,16 @@ function xTH(
   **/
 function _LEGEND(
    
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag LEGEND
@@ -3254,9 +3529,9 @@ function _LEGEND(
    * @method  : Html::_LEGEND($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/   	
-  $Html = NEW MergeBox(); 
+  $Html = NEW MergeBox();
+
   return method_exists($Html, '_LEGEND') ? 
   
    $Html->_LEGEND(
@@ -3265,7 +3540,7 @@ function _LEGEND(
       $id, 
       $class
    
-   ) : PERFORM(erorrMessage());
+   ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -3284,10 +3559,13 @@ function xLEGEND(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xLEGEND') ? 
   
-   $Html->xLEGEND($label) : PERFORM(erorrMessage());	
+   $Html->xLEGEND($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3301,17 +3579,16 @@ function xLEGEND(
   **/
 function _FIELDSET(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag H3
@@ -3319,9 +3596,9 @@ function _FIELDSET(
    * @method  : Html::_H3($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/   	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_FIELDSET') ? 
   
     $Html->_FIELDSET(
@@ -3330,7 +3607,7 @@ function _FIELDSET(
       $id, 
       $class
   
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3349,10 +3626,13 @@ function xFIELDSET(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xFIELDSET') ?
   
-    $Html->xFIELDSET($label) : PERFORM(erorrMessage());	
+    $Html->xFIELDSET($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3366,27 +3646,26 @@ function xFIELDSET(
   **/
 function _TBODY(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TBODY
    * @package : Static Procedural
    * @method  : Html::_TBODY($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
+   * 
    *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_TBODY') ? 
   
    $Html->_TBODY(
@@ -3395,7 +3674,7 @@ function _TBODY(
      $id, 
      $class
   
-  ) : PERFORM(erorrMessage());  	
+  ) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -3413,11 +3692,14 @@ function xTBODY(
 
 )
 {
+  
+  global $request;
 
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xTBODY') ?
   
-   $Html->xTBODY($label) : PERFORM(erorrMessage());	
+   $Html->xTBODY($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3431,17 +3713,16 @@ function xTBODY(
   **/
 function _TFOOT(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TFOOT
@@ -3449,9 +3730,9 @@ function _TFOOT(
    * @method  : Html::_TFOOT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_TFOOT') ?
   
    $Html->_TFOOT(
@@ -3460,7 +3741,7 @@ function _TFOOT(
     $id, 
     $class
  
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3479,10 +3760,13 @@ function xTFOOT(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox();
+
   return method_exists($Html, 'xTFOOT') ?
   
-   $Html->xTFOOT($label) : PERFORM(erorrMessage());  	
+   $Html->xTFOOT($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -3496,17 +3780,16 @@ function xTFOOT(
   **/
 function _THEAD(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag THEAD
@@ -3514,9 +3797,9 @@ function _THEAD(
    * @method  : Html::_THEAD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_THEAD') ?
   
    $Html->_THEAD(
@@ -3525,7 +3808,7 @@ function _THEAD(
     $id, 
     $class
  
-  ) : PERFORM(erorrMessage());  	
+  ) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -3544,10 +3827,13 @@ function xTHEAD(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xTHEAD') ? 
   
-   $Html->xTHEAD($label) : PERFORM(erorrMessage());	
+   $Html->xTHEAD($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3561,17 +3847,16 @@ function xTHEAD(
   **/
 function _SPAN(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
   )
   {
 
+    global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SPAN
@@ -3579,9 +3864,9 @@ function _SPAN(
    * @method  : Html::_SPAN($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_SPAN') ? 
   
     $Html->_SPAN(
@@ -3590,7 +3875,7 @@ function _SPAN(
       $id, 
       $class
   
-   ) : PERFORM(erorrMessage());
+   ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -3609,10 +3894,13 @@ function xSPAN(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xSPAN') ? 
   
-   $Html->xSPAN($label) : PERFORM(erorrMessage());	
+   $Html->xSPAN($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3626,17 +3914,16 @@ function xSPAN(
   **/
 function _EM(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null 
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag EM
@@ -3644,9 +3931,9 @@ function _EM(
    * @method  : Html::_EM($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_EM') ? 
   
     $Html->_EM(
@@ -3655,7 +3942,7 @@ function _EM(
       $id, 
       $class
   
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3674,10 +3961,13 @@ function xEM(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xEM') ? 
   
-    $Html->xEM($label) : PERFORM(erorrMessage());	
+    $Html->xEM($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3691,17 +3981,16 @@ function xEM(
   **/
 function _SMALL(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null 
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SMALL
@@ -3709,9 +3998,9 @@ function _SMALL(
    * @method  : Html::_SMALL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_SMALL') ? 
   
    $Html->_SMALL(
@@ -3720,7 +4009,7 @@ function _SMALL(
     $id, 
     $class
   
-  ) : PERFORM(erorrMessage());  	
+  ) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -3739,10 +4028,13 @@ function xSMALL(
 )
 {
 
-  $Html = NEW MergeBox(); 
+  global $request;
+
+  $Html = NEW MergeBox();
+
   return method_exists($Html, 'xSMALL') ? 
    
-   $Html->xSMALL($label) : PERFORM(erorrMessage());	
+   $Html->xSMALL($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3756,17 +4048,16 @@ function xSMALL(
   **/
 function _STRIKE(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
  
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag STRIKE
@@ -3774,9 +4065,9 @@ function _STRIKE(
    * @method  : Html::_STRIKE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_STRIKE') ? 
   
     $Html->_STRIKE(
@@ -3785,7 +4076,7 @@ function _STRIKE(
       $id, 
       $class
   
-  ) : PERFORM(erorrMessage());  	
+  ) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -3804,10 +4095,13 @@ function xSTRIKE(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xSTRIKE') ? 
   
-    $Html->xSTRIKE($label) : PERFORM(erorrMessage());	
+    $Html->xSTRIKE($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -3821,17 +4115,16 @@ function xSTRIKE(
   **/
 function _MARQUEE(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null 
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag MARQUEE
@@ -3839,17 +4132,18 @@ function _MARQUEE(
    * @method  : Html::_MARQUEE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
-  $Html = NEW MergeBox(); 
+  $Html = NEW MergeBox();
+
   return method_exists($Html, '_MARQUEE') ?
+  
    $Html->_MARQUEE(
        
     $attr, 
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -3868,10 +4162,13 @@ function xMARQUEE(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xMARQUEE') ? 
    
-   $Html->xMARQUEE($label) : PERFORM(erorrMessage());
+   $Html->xMARQUEE($label) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -3885,17 +4182,16 @@ function xMARQUEE(
   **/
 function _CENTER(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag CENTER
@@ -3903,9 +4199,9 @@ function _CENTER(
    * @method  : Html::_CENTER($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/	
   $Html = NEW MergeBox();
+
   return method_exists($Html, '_CENTER') ? 
   
    $Html->_CENTER(
@@ -3914,7 +4210,7 @@ function _CENTER(
     $id, 
     $class
  
- ) : PERFORM(erorrMessage()); 	
+ ) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -3933,10 +4229,13 @@ function xCENTER(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xCENTER') ? 
   
-   $Html->xCENTER($label) : PERFORM(erorrMessage());  	
+   $Html->xCENTER($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -3950,17 +4249,16 @@ function xCENTER(
   **/
 function _ABBR(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag ABBR
@@ -3968,9 +4266,9 @@ function _ABBR(
    * @method  : Html::_ABBR($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
  $Html = NEW MergeBox();
+
  return method_exists($Html, '_ABBR') ?
  
   $Html->_ABBR(
@@ -3979,7 +4277,7 @@ function _ABBR(
      $id, 
      $class
   
-  ) : PERFORM(erorrMessage()); 	
+  ) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -3998,10 +4296,13 @@ function xABBR(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xABBR') ? 
   
-   $Html->xABBR($label) : PERFORM(erorrMessage());  	
+   $Html->xABBR($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -4015,17 +4316,16 @@ function xABBR(
   **/
 function _MAP(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag MAP
@@ -4033,9 +4333,9 @@ function _MAP(
    * @method  : Html::_MAP($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox();
+
   return method_exists($Html, '_MAP') ? 
     
    $Html->_MAP(
@@ -4044,7 +4344,7 @@ function _MAP(
      $id, 
      $class
      
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -4063,10 +4363,13 @@ function xMAP(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xMAP') ? 
    
-   $Html->xMAP($label) : PERFORM(erorrMessage()); 	
+   $Html->xMAP($label) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -4080,17 +4383,16 @@ function xMAP(
   **/
 function _CANVAS(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null 
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag CANVAS
@@ -4098,9 +4400,9 @@ function _CANVAS(
    * @method  : Html::_CANVAS($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/   	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_CANVAS') ? 
   
     $Html->_CANVAS(
@@ -4109,7 +4411,7 @@ function _CANVAS(
         $id, 
         $class
     
-   ) : PERFORM(erorrMessage());	
+   ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4128,10 +4430,13 @@ function xCANVAS(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox();
+
   return method_exists($Html, 'xCANVAS') ? 
   
-   $Html->xCANVAS($label) : PERFORM(erorrMessage());	
+   $Html->xCANVAS($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4145,17 +4450,16 @@ function xCANVAS(
   **/
 function _CITE(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag CITE
@@ -4163,9 +4467,9 @@ function _CITE(
    * @method  : Html::_CITE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_CITE') ? 
   
    $Html->_CITE(
@@ -4174,7 +4478,7 @@ function _CITE(
      $id, 
      $class
      
-  ) : PERFORM(erorrMessage());
+  ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -4193,10 +4497,13 @@ function xCITE(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xCITE') ? 
     
-   $Html->xCITE($label) : PERFORM(erorrMessage());	
+   $Html->xCITE($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4210,17 +4517,16 @@ function xCITE(
   **/
 function _DATA(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DATA
@@ -4228,9 +4534,9 @@ function _DATA(
    * @method  : Html::_DATA($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_DATA') ? 
   
     $Html->_DATA(
@@ -4239,7 +4545,7 @@ function _DATA(
       $id, 
       $class
    
-   ) : PERFORM(erorrMessage());	
+   ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4258,10 +4564,12 @@ function xDATA(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
   return method_exists($Html, 'xDATA') ? 
   
-   $Html->xDATA($label) : PERFORM(erorrMessage());	
+   $Html->xDATA($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4275,17 +4583,16 @@ function xDATA(
   **/
 function _DL(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DL
@@ -4293,9 +4600,9 @@ function _DL(
    * @method  : Html::_DL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/   
   $Html = NEW MergeBox();
+
   return method_exists($Html, '_DL') ?
   
    $Html->_DL(
@@ -4304,7 +4611,7 @@ function _DL(
      $id, 
      $class
   
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -4323,10 +4630,13 @@ function xDL(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xDL') ? 
   
-   $Html->xDL($label) : PERFORM(erorrMessage());	
+   $Html->xDL($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4340,17 +4650,16 @@ function xDL(
   **/
 function _DT(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DT
@@ -4358,9 +4667,9 @@ function _DT(
    * @method  : Html::_DT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox();
+
   return method_exists($Html, '_DT') ?
   
    $Html->_DT(
@@ -4369,7 +4678,7 @@ function _DT(
      $id, 
      $class
    
- ) : PERFORM(erorrMessage()); 	
+ ) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -4388,10 +4697,13 @@ function xDT(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xDT') ? 
   
-   $Html->xDT($label) : PERFORM(erorrMessage());  	
+   $Html->xDT($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -4405,17 +4717,16 @@ function xDT(
   **/
 function _DD(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DD
@@ -4423,9 +4734,9 @@ function _DD(
    * @method  : Html::_DD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_DD') ?
   
    $Html->_DD(
@@ -4434,7 +4745,7 @@ function _DD(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage());
+  ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -4453,10 +4764,13 @@ function xDD(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xDD') ? 
   
-   $Html->xDD($label) : PERFORM(erorrMessage());
+   $Html->xDD($label) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -4470,17 +4784,16 @@ function xDD(
   **/
 function _DFN(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DFN
@@ -4488,9 +4801,9 @@ function _DFN(
    * @method  : Html::_DFN($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_DFN') ? 
   
    $Html->_DFN(
@@ -4498,8 +4811,8 @@ function _DFN(
     $attr, 
     $id, 
     $class
-  
-  ) : PERFORM(erorrMessage());	
+   
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4518,10 +4831,13 @@ function xDFN(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xDFN') ? 
   
-   $Html->xDFN($label) : PERFORM(erorrMessage());  
+   $Html->xDFN($label) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -4535,17 +4851,16 @@ function xDFN(
   **/
 function _INS(
  
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag INS
@@ -4553,9 +4868,9 @@ function _INS(
    * @method  : Html::_INS($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox();
+
   return method_exists($Html, '_INS') ?
   
    $Html->_INS(
@@ -4564,7 +4879,7 @@ function _INS(
     $id, 
     $class
  
- ) : PERFORM(erorrMessage()); 
+ ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -4583,10 +4898,13 @@ function xINS(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xINS') ?
   
-   $Html->xINS($label) : PERFORM(erorrMessage()); 	
+   $Html->xINS($label) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -4600,17 +4918,16 @@ function xINS(
   **/
 function _DEL(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag DEL
@@ -4618,9 +4935,9 @@ function _DEL(
    * @method  : Html::_DEL($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_DEL') ? 
   
    $Html->_DEL(
@@ -4629,7 +4946,7 @@ function _DEL(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4648,10 +4965,13 @@ function xDEL(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xDEL') ? 
   
-    $Html->xDEL($label) : PERFORM(erorrMessage());	
+    $Html->xDEL($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4665,17 +4985,16 @@ function xDEL(
   **/
 function _KBD(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
  /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag KBD
@@ -4683,9 +5002,9 @@ function _KBD(
    * @method  : Html::_KBD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_KBD') ?
   
    $Html->_KBD(
@@ -4694,7 +5013,7 @@ function _KBD(
      $id, 
      $class
      
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4713,10 +5032,13 @@ function xKBD(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xKBD') ?
   
-   $Html->xKBD($label) : PERFORM(erorrMessage());	
+   $Html->xKBD($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4730,17 +5052,16 @@ function xKBD(
   **/
 function _MARK(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null  
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
  /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag MARK
@@ -4748,9 +5069,9 @@ function _MARK(
    * @method  : Html::_MARK($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
-  $Html = NEW MergeBox(); 
+  $Html = NEW MergeBox();
+
   return method_exists($Html, '_MARK') ? 
   
    $Html->_MARK(
@@ -4759,7 +5080,7 @@ function _MARK(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4778,10 +5099,13 @@ function xMARK(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xMARK') ? 
   
-   $Html->xMARK($label) : PERFORM(erorrMessage());
+   $Html->xMARK($label) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -4795,17 +5119,16 @@ function xMARK(
   **/
 function _PRE(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null 
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag PRE
@@ -4813,9 +5136,9 @@ function _PRE(
    * @method  : Html::_PRE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_PRE') ?
   
    $Html->_PRE(
@@ -4824,7 +5147,7 @@ function _PRE(
     $id, 
     $class
     
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4843,10 +5166,13 @@ function xPRE(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xPRE') ?
   
-   $Html->xPRE($label) : PERFORM(erorrMessage());	
+   $Html->xPRE($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4860,17 +5186,16 @@ function xPRE(
   **/
 function _RT(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
  /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag RT
@@ -4878,9 +5203,9 @@ function _RT(
    * @method  : Html::_RT($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_RT') ? 
   
    $Html->_RT(
@@ -4889,7 +5214,7 @@ function _RT(
      $id, 
      $class
      
-  ) : PERFORM(erorrMessage());
+  ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -4908,10 +5233,13 @@ function xRT(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xRT') ? 
   
-   $Html->xRT($label) : PERFORM(erorrMessage());	
+   $Html->xRT($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4925,17 +5253,16 @@ function xRT(
   **/
 function _RP(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null 
 
   )
   {
 
+    global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag RP
@@ -4943,9 +5270,9 @@ function _RP(
    * @method  : Html::_RP($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/	
   $Html = NEW MergeBox();
+
   return method_exists($Html, '_RP') ?
   
    $Html->_RP(
@@ -4954,7 +5281,7 @@ function _RP(
      $id, 
      $class
    
-  ) : PERFORM(erorrMessage()); 	
+  ) : PERFORM( $request->erorrMessage() ); 	
 
 }
 
@@ -4973,10 +5300,13 @@ function xRP(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox();
+
   return method_exists($Html, 'xRP') ?
   
-   $Html->xRP($label) : PERFORM(erorrMessage());	
+   $Html->xRP($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -4990,17 +5320,16 @@ function xRP(
   **/
 function _SAMP(
  
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null 
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SAMP
@@ -5008,9 +5337,9 @@ function _SAMP(
    * @method  : Html::_SAMP($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_SAMP') ? 
   
     $Html->_SAMP(
@@ -5019,7 +5348,7 @@ function _SAMP(
       $id, 
       $class
       
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -5038,10 +5367,13 @@ function xSAMP(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xSAMP') ? 
   
-   $Html->xSAMP($label) : PERFORM(erorrMessage());	
+   $Html->xSAMP($label) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -5055,17 +5387,16 @@ function xSAMP(
   **/
 function _STRONG(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag STRONG
@@ -5073,9 +5404,9 @@ function _STRONG(
    * @method  : Html::_STRONG($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_STRONG') ?
   
    $Html->_STRONG(
@@ -5084,7 +5415,7 @@ function _STRONG(
      $id, 
      $class
      
-   ) : PERFORM(erorrMessage());	
+   ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -5103,10 +5434,13 @@ function xSTRONG(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xSTRONG') ? 
   
-   $Html->xSTRONG($label) : PERFORM(erorrMessage());  
+   $Html->xSTRONG($label) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -5120,27 +5454,26 @@ function xSTRONG(
   **/
 function _SUB(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null 
 
   )
   {
 
+    global $request;
+
   /**
    *
-   *
-   *
-   *
-   *
+   * 
    * @package : Merge Heading tag SUB
    * @package : Static Procedural
    * @method  : Html::_SUB($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
   $Html = NEW MergeBox();
+
   return method_exists($Html, '_SUB') ? 
   
     $Html->_SUB(
@@ -5149,7 +5482,7 @@ function _SUB(
       $id, 
       $class
   
-  ) : PERFORM(erorrMessage());  
+  ) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -5168,10 +5501,13 @@ function xSUB(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xSUB') ? 
   
-   $Html->xSUB($label) : PERFORM(erorrMessage());  	
+   $Html->xSUB($label) : PERFORM( $request->erorrMessage() );  	
 }
 
 /**
@@ -5184,17 +5520,16 @@ function xSUB(
   **/
 function _SUP(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag SUP
@@ -5202,9 +5537,9 @@ function _SUP(
    * @method  : Html::_SUP($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_SUP') ? 
     
     $Html->_SUP(
@@ -5213,7 +5548,7 @@ function _SUP(
      $id, 
      $class
    
-   ) : PERFORM(erorrMessage());  	
+   ) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -5232,10 +5567,13 @@ function xSUP(
  )
  {
   
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xSUP') ? 
   
-   $Html->xSUP($label) : PERFORM(erorrMessage());  	
+   $Html->xSUP($label) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -5249,17 +5587,16 @@ function xSUP(
   **/
 function _WBR(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag WBR
@@ -5267,9 +5604,9 @@ function _WBR(
    * @method  : Html::_WBR($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/   
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_WBR') ?
     
   $Html->_WBR(
@@ -5278,7 +5615,7 @@ function _WBR(
     $id, 
     $class
       
-  ) : PERFORM(erorrMessage()); 
+  ) : PERFORM( $request->erorrMessage() ); 
 
 }
 
@@ -5297,12 +5634,84 @@ function xWBR(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+  
   return method_exists($Html, 'xWBR') ? 
     
-    $Html->xWBR($label) : PERFORM(erorrMessage());
+    $Html->xWBR($label) : PERFORM( $request->erorrMessage() );
 
 }
+
+
+/**
+  *
+  * @since 20.19.2020
+  * @category PHPHtml-Merge
+  * @ Method Defined HTML WBR OPEN TAG noHTML  
+  * Inline Heading tag WBR
+  *
+  **/
+  function _CODE(
+
+    array        $attr  =  null
+   ,string       $id    =  null
+   ,string       $class =  null
+
+)
+{
+
+  global $request;
+
+/**
+ *
+ *
+ * @package : Merge Heading tag WBR
+ * @package : Static Procedural
+ * @method  : Html::_WBR($value, $attr=null, $id, $class, $label, $assoc);
+ *
+ *
+ **/   
+$Html = NEW MergeBox(); 
+
+return method_exists($Html, '_CODE') ?
+  
+$Html->_CODE(
+  
+  $attr, 
+  $id, 
+  $class
+    
+) : PERFORM( $request->erorrMessage() ); 
+
+}
+
+/**
+*
+* @since 20.19.2020
+* @category PHPHtml-Merge
+* @ Method Defined HTML WBR CLOSE TAG noHTML  
+* Inline Heading tag WBR
+*
+**/
+function xCODE(
+
+ string $label = NULL
+
+)
+{
+
+global $request;
+
+$Html = NEW MergeBox(); 
+
+return method_exists($Html, 'xCODE') ? 
+  
+  $Html->xCODE($label) : PERFORM( $request->erorrMessage() );
+
+}
+
 
 /**
   *
@@ -5314,17 +5723,16 @@ function xWBR(
   **/
 function _HEAD(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+   array        $attr  =  null
+  ,string       $id    =  null
+  ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag HEAD
@@ -5332,9 +5740,9 @@ function _HEAD(
    * @method  : Html::_HEAD($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_HEAD') ? 
      
     $Html->_HEAD(
@@ -5343,7 +5751,7 @@ function _HEAD(
       $id, 
       $class
   
-  ) : PERFORM(erorrMessage());	
+  ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -5362,10 +5770,13 @@ function xHEAD(
  )
  {
 
-  $Html = NEW MergeBox(); 
+  global $request;
+
+  $Html = NEW MergeBox();
+
   return method_exists($Html, 'xHEAD') ? 
   
-    $Html->xHEAD($label) : PERFORM(erorrMessage());  
+    $Html->xHEAD($label) : PERFORM( $request->erorrMessage() );  
 
 }
 
@@ -5379,17 +5790,16 @@ function xHEAD(
   **/
 function _TITLE(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null 
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag TITLE
@@ -5397,9 +5807,9 @@ function _TITLE(
    * @method  : Html::_TITLE($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, '_TITLE') ?
   
    $Html->_TITLE(
@@ -5408,7 +5818,7 @@ function _TITLE(
      $id, 
      $class
      
-  ) : PERFORM(erorrMessage());  	
+  ) : PERFORM( $request->erorrMessage() );  	
 
 }
 
@@ -5427,10 +5837,13 @@ function xTITLE(
  )
  {
 
-  $Html = NEW MergeBox(); 
+  global $request;
+
+  $Html = NEW MergeBox();
+
   return method_exists($Html, 'xTITLE') ? 
   
-   $Html->xTITLE($label) : PERFORM(erorrMessage());    
+   $Html->xTITLE($label) : PERFORM( $request->erorrMessage() );    
 
 }
 
@@ -5444,17 +5857,16 @@ function xTITLE(
   **/
 function _BODY(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag BODY
@@ -5462,9 +5874,9 @@ function _BODY(
    * @method  : Html::_BODY($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/ 	
- $Html = NEW MergeBox(); 
+ $Html = NEW MergeBox();
+
  return method_exists($Html, '_BODY') ? 
  
   $Html->_BODY(
@@ -5473,7 +5885,7 @@ function _BODY(
     $id, 
     $class
  
- ) : PERFORM(erorrMessage());	
+ ) : PERFORM( $request->erorrMessage() );	
 
 }
 
@@ -5492,10 +5904,13 @@ function xBODY(
  )
  {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xBODY') ? 
   
-   $Html->xBODY($label) : PERFORM(erorrMessage());
+   $Html->xBODY($label) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -5509,17 +5924,16 @@ function xBODY(
   **/
 function _HTML(
 
-   array|string $attr    =  null
-  ,string $id    =  null
-  ,string $class =  null 
+      array        $attr  =  null
+     ,string       $id    =  null
+     ,string       $class =  null
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : Merge Heading tag HTML
@@ -5527,9 +5941,9 @@ function _HTML(
    * @method  : Html::_HTML($value, $attr=null, $id, $class, $label, $assoc);
    *
    *
-   *
    **/  	
  $Html = NEW MergeBox(); 
+
  return method_exists($Html, '_noHTML') ? 
  
    $Html->_noHTML(
@@ -5538,7 +5952,7 @@ function _HTML(
      $id, 
      $class
      
-   ) : PERFORM(erorrMessage());
+   ) : PERFORM( $request->erorrMessage() );
 
 }
 
@@ -5557,10 +5971,13 @@ function xHTML(
 )
 {
 
+  global $request;
+
   $Html = NEW MergeBox(); 
+
   return method_exists($Html, 'xnoHTML') ? 
   
-    $Html->xnoHTML($label) : PERFORM(erorrMessage());	
+    $Html->xnoHTML($label) : PERFORM( $request->erorrMessage() );	
 
 }
 

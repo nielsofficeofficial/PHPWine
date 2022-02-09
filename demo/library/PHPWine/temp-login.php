@@ -6,11 +6,11 @@ use \PHPWine\VanillaFlavour\System\Validate;
 use \PHPWine\VanillaFlavour\Optimizer\Form;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.0 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.0 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -29,17 +29,17 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * @category   PHPWine\VanillaFlavour
- * @package    Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
- *             Handling Form Validation | Same page CRUD | PHPOptimizer | Advance Form Builder
+ * @category   PHPLibrary PHPWine\VanillaFlavour
+ * @package    PHPHtml-Optimizer | CodeDesigner/Enhancer | Advance Form Builder | Handling Form Validation | Form Validation v2 | BASIC-Authentication | HtmlMinifier
  *            
  *            
- * @author    nielfernandez <nielsoffice.wordpress.php@gmail.com>
+ * @author    Leinner Zednanref <nielsoffice.wordpress.php@gmail.com>
  * @license   MIT License
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.4
+ * @version   v1.2.0.0 
+ * @since     02.09.2022
  *
  */
 
@@ -71,13 +71,44 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
 AUTH::USERAUTH('dashboard', true); 
 
 /**
- * 
- * Defined Defined vars initialize with empty values
- * @since 04.05.21
- * @since v1.0
- *
- **/ 
-$username = $password = $err_username =  $err_password = $auth_err = '';
+  * @var  
+  * defined Input username
+  * @since v1.2.0.0 
+  * @since 02.07.2022
+  **/  
+$username =  '';
+
+/**
+  * @var  
+  * defined Input password
+  * @since v1.2.0.0 
+  * @since 02.07.2022
+  **/  
+$password = '';
+
+/**
+  * @var  
+  * defined Input error username
+  * @since v1.2.0.0 
+  * @since 02.07.2022
+  **/  
+$err_username =  '';
+
+/**
+  * @var  
+  * defined Input error password
+  * @since v1.2.0.0 
+  * @since 02.07.2022
+  **/  
+$err_password = '';
+ 
+/**
+  * @var  
+  * defined Input auth error
+  * @since v1.2.0.0 
+  * @since 02.07.2022
+  **/  
+$auth_err = '';
 
 /**
  *
@@ -142,9 +173,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") :
   **/ 
   $sets_eCatch = _xUL( 'id-eCatch_err' ,
    
-   DOIF( !empty($err_username)   ,ELEM('li' ,$err_username ,setElemAttr(['class'],['err_username_msg'])) ,FUNC_ASSOC)
-  .DOIF( !empty($err_password)   ,ELEM('li' ,$err_password ,setElemAttr(['class'],['err_password_msg'])) ,FUNC_ASSOC)
-  .DOIF( !empty($auth_err)       ,ELEM('li' ,$auth_err     ,setElemAttr(['class'],['err_password_msg'])) ,FUNC_ASSOC)
+   DOIF( !empty($err_username)   ,ELEM('li' ,$err_username ,setElemAttr(['class'],['err_username_msg'])) , FUNC_ASSOC )
+  .DOIF( !empty($err_password)   ,ELEM('li' ,$err_password ,setElemAttr(['class'],['err_password_msg'])) , FUNC_ASSOC )
+  .DOIF( !empty($auth_err)       ,ELEM('li' ,$auth_err     ,setElemAttr(['class'],['err_password_msg'])) , FUNC_ASSOC )
  
  ,null
  ,'eCatch_error'
@@ -156,77 +187,71 @@ if($_SERVER["REQUEST_METHOD"] == "POST") :
 echo (!empty($sets_eCatch)) ? $sets_eCatch : ''; 
 
  /**
-  *
   * Defined BEGIN the Login Form !
   * @since 04.06.21
   * @since v1.0
-  *
   **/ 
-  _FORM(setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 'POST']));
+_FORM(setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 'POST']));
  
- /**
-  *
-  * Defined Input username
-  * @since 04.06.21
-  * @since v1.0
-  * 
-  **/ 
-  _xDIV( 'id-login',
+ $user_login_attr  = [
+   
+   [],
+   []
 
-     FORM::LABEL('label-id-un'  , 'Username/Email/Mobile' , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
-    .FORM::TEXT('id-username'   , 'class-username'        , [['name', 'value'] , ['username',  (isset($_COOKIE['username'])) ? $_COOKIE['username'] :  $username ]], FUNC_ASSOC ) 
+ ];  
+
+ $user_login          =  FORM::LABEL('label-id-un'  , 'Username/Email/Mobile' , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
+                        .FORM::TEXT('id-username'   , 'class-username'        , [['name', 'value'] , ['username',  (isset($_COOKIE['username'])) ? $_COOKIE['username'] :  $username ]], FUNC_ASSOC );
+ 
+
+ $user_password_attr  = [
+   
+   [],
+   []
+
+ ];  
+
+ $user_password        =  FORM::LABEL('label-id-un'    , 'Password'        , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
+                         .FORM::PASSWORD('id-username' , 'class-username'  , [['name', 'value'] , ['password', (isset($_COOKIE['password'])) ? $_COOKIE['password'] :  $password ]], FUNC_ASSOC );
+
+                        
+ $user_remember_attr  = [
+   
+    [],
+    []
+
+ ];  
+
+ $user_remember        =  FORM::CHECKBOX('checkbox' , 'class-checkbox' , [['name', ''] , ['remember', (isset($_COOKIE["username"])) ? 'checked' : false ] ], FUNC_ASSOC ) 
+                         .FORM::LABEL('label-id-un' , 'Remember me'    , FUNC_ASSOC );
+                  
+ $user_submit_btn_attr = [
+   
+    [],
+    []
+
+ ];  
+
+  $user_submit_btn   = ELEM( 'div' , 
+                         
+                        FORM::BUTTONS( 'id-conPassword','class-submit', [['value'],['Submit']], FUNC_ASSOC ) 
+                  
+                      ,[['id','class'],['id-submit','submit_from_group']] 
+                     
+                      );
+
+  $login_form = _xdiv( FUNC_ASSOC ,
     
-   ,setElemAttr(['class'],['username_from_group'])
+      ELEM('div', $user_login       , $user_login_attr      )
+     .ELEM('div', $user_password    , $user_password_attr   )
+     .ELEM('div', $user_remember    , $user_remember_attr   )
+     .ELEM('div', $user_submit_btn  , $user_submit_btn_attr )
+
+     ._xp( 'singup-id', ELEM('p','Don\'t have an account?'.ELEM('a','Sign up now',[['href'],['register.php']]) ) , FUNC_ASSOC )
+  
   );
 
- /**
-  *
-  * Defined Input password
-  * @since 04.06.21
-  * @since v1.0
-  *
-  **/ 
- _xDIV( 'login-password',
+  echo $login_form;
   
-    FORM::LABEL('label-id-un'    , 'Password'        , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
-   .FORM::PASSWORD('id-username' , 'class-username'  , [['name', 'value'] , ['password', (isset($_COOKIE['password'])) ? $_COOKIE['password'] :  $password ]], FUNC_ASSOC ) 
-
-  ,setElemAttr(['class'],['username_from_group'])
- );
-
- /**
-  *
-  * Defined checkbox remember me
-  * @since 04.06.21
-  * @since v1.0
-  *
-  **/ 
-  _xDIV('checkbox-remeberme',
-
-     FORM::CHECKBOX('checkbox' , 'class-checkbox' , [['name', ''] , ['remember', (isset($_COOKIE["username"])) ? 'checked' : false ] ], FUNC_ASSOC ) 
-    .FORM::LABEL('label-id-un' , 'Remember me'    , FUNC_ASSOC ) 
-    
-   ,setElemAttr(['class'],['rememberme_from_group'])
-  );
-
-
- /**
-  *
-  * Defined Input btn submit
-  * @since 04.06.21
-  * @since v1.0
-  *
-  **/ 
-  _xDIV('id-submit', FORM::BUTTONS( 'id-conPassword','class-submit', [['value'],['Submit']], FUNC_ASSOC ) ,setElemAttr(['class'],['submit_from_group']));
-  
- /**
-  *
-  * Defined Link register form
-  * @since 04.06.21
-  * @since v1.0
-  *
-  **/ 
-  _xDIV( 'singup-id', ELEM('p','Don\'t have an account?'.ELEM('a','Sign up now',[['href'],['register.php']]) ));
-
 
  xFORM(" END Of the form ");

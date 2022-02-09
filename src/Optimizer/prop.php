@@ -1,11 +1,11 @@
 <?php 
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.0 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.0 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -24,21 +24,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * @category   PHPWine\VanillaFlavour
- * @package    Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
- *             Handling Form Validation | Same page CRUD | PHPOptimizer | Advance Form Builder
+ * @category   PHPLibrary PHPWine\VanillaFlavour
+ * @package    PHPHtml-Optimizer | CodeDesigner/Enhancer | Advance Form Builder | Handling Form Validation | Form Validation v2 | BASIC-Authentication | HtmlMinifier
  *            
  *            
- * @author    nielfernandez <nielsoffice.wordpress.php@gmail.com>
+ * @author    Leinner Zednanref <nielsoffice.wordpress.php@gmail.com>
  * @license   MIT License
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.4
+ * @version   v1.2.0.0 
+ * @since     02.04.2022
  *
- *
- * @method belongs_to(); 
- * @method MapFolderPath();  
  *
  */
   
@@ -49,7 +46,7 @@
   * @since v1.0
   *
   **/ 
-  define('__PATH__'               ,  __DIR__ . DIRECTORY_SEPARATOR ); 
+  define('__PATH__',  __DIR__ . DIRECTORY_SEPARATOR ); 
 
 /**
   *
@@ -58,7 +55,7 @@
   * @since v1.0
   *
   **/ 
-  define('__ROOTPATH__'           ,  __PATH__ . '../../' );
+  define('__ROOTPATH__',__PATH__ . '../../' );
 
 /**
   *
@@ -67,7 +64,7 @@
   * @since v1.0
   *
   **/
-  define('__PHPFILE__'            ,  '.php');
+  define('__PHPFILE__','.php');
 
 /**
   *
@@ -76,7 +73,7 @@
   * @since v1.0
   *
   **/
-  define('__SELF_REQUEST__'       ,  explode('/', $_SERVER['PHP_SELF'] !== null ? $_SERVER['PHP_SELF'] : false )); 
+  define('__SELF_REQUEST__', explode('/', $_SERVER['PHP_SELF'] !== null ? $_SERVER['PHP_SELF'] : false )); 
 
 /**
   *
@@ -85,7 +82,7 @@
   * @since v1.0
   *
   **/
-  define('__EMPTY__'              ,  '');   
+  define('__EMPTY__',  '');   
 
 /**
   *
@@ -94,7 +91,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_KEY_FOLDER_PATH__',  'GetKeyFolderPath'); 
+  define('__GET_KEY_FOLDER_PATH__','GetKeyFolderPath'); 
 
 /**
   *
@@ -103,7 +100,7 @@
   * @since v1.0
   *
   **/
-  define('__ISBELONG__'           ,  'isbelongs' ); 
+  define('__ISBELONG__','isbelongs' ); 
 
 /**
   *
@@ -112,7 +109,7 @@
   * @since v1.0
   *
   **/
-  define('__KEYPATH__'            ,  'GetKeyPath' ); 
+  define('__KEYPATH__','GetKeyPath' ); 
 
 /**
   *
@@ -121,7 +118,7 @@
   * @since v1.0
   *
   **/
-  define('__BR__'                 ,  '__BR' );
+  define('__BR__','__BR' );
 
 /**
   *
@@ -130,7 +127,7 @@
   * @since v1.0
   *
   **/
-  define('__HR__'                 ,  '__HR' ); 
+  define('__HR__','__HR' ); 
 
 /**
   *
@@ -139,7 +136,7 @@
   * @since v1.0
   *
   **/
-  define('__SPACE__'              ,  '__space' ); 
+  define('__SPACE__','__space' ); 
 
 /**
   *
@@ -148,7 +145,7 @@
   * @since v1.0
   *
   **/
-  define('__FILEEXTENSION__'      ,  'SetFileExT' );  
+  define('__FILEEXTENSION__','setFileExT' );  
   
 /**
   *
@@ -157,7 +154,7 @@
   * @since v1.0
   *
   **/
-  define('__META__'               ,  'META' );
+  define('__META__','META' );
 
 /**
   *
@@ -166,7 +163,7 @@
   * @since v1.0
   *
   **/
-  define('__LINK__'               ,  'LINK' ); 
+  define('__LINK__','LINK' ); 
 
 /**
   *
@@ -175,7 +172,7 @@
   * @since v1.0
   *
   **/
-  define('__SCRIPT__'             ,  'SCRIPT' ); 
+  define('__SCRIPT__','SCRIPT' ); 
 
 /**
   *
@@ -184,7 +181,7 @@
   * @since v1.0
   *
   **/
-  define('__TITLE__'              ,  'TITLE' ); 
+  define('__TITLE__','TITLE' ); 
 
 /**
   *
@@ -193,7 +190,7 @@
   * @since v1.0
   *
   **/
-  define('__CUSTOM_END__'         ,  'CUSTOM_END' );
+  define('__CUSTOM_END__','CUSTOM_END' );
 
 /**
   *
@@ -202,7 +199,7 @@
   * @since v1.0
   *
   **/
-  define('__BEGIN_CUSTOM_END__'   ,  'BEGIN_CUSTOM_END' ); 
+  define('__BEGIN_CUSTOM_END__','BEGIN_CUSTOM_END' ); 
 
 /**
   *
@@ -211,7 +208,7 @@
   * @since v1.0
   *
   **/
-  define('__MERGE__'              ,  'MERGE' ); 
+  define('__MERGE__','MERGE' ); 
 
 /**
   *
@@ -220,7 +217,7 @@
   * @since v1.0
   *
   **/
-  define('__SetElemAttr__'        ,  'SetElemAttr' ); 
+  define('__SetElemAttr__','setElemAttr' ); 
 
 /**
   *
@@ -229,7 +226,7 @@
   * @since v1.0
   *
   **/
-  define('__DOELSE__'             ,  'DOELSE' ); 
+  define('__DOELSE__','DOELSE' ); 
 
 /**
   *
@@ -238,7 +235,7 @@
   * @since v1.0
   *
   **/
-  define('__DOIF__'               ,  'DOIF' ); 
+  define('__DOIF__','DOIF' ); 
 
 /**
   *
@@ -247,7 +244,7 @@
   * @since v1.0
   *
   **/
-  define('__PERFORM__'            ,  'PERFORM' ); 
+  define('__PERFORM__','PERFORM' ); 
 
 /**
   *
@@ -256,7 +253,7 @@
   * @since v1.0
   *
   **/
-  define('__STRING__'             ,  'STRING' );
+  define('__STRING__','STRING' );
 
 /**
   *
@@ -265,7 +262,7 @@
   * @since v1.0
   *
   **/
-  define('__ATTR__'               ,  'ATTR' ); 
+  define('__ATTR__','ATTR' ); 
 
 /**
   *
@@ -274,7 +271,7 @@
   * @since v1.0
   *
   **/
-  define('__ELEM__'               ,  'ELEM' ); 
+  define('__ELEM__','ELEM' ); 
 
 /**
   *
@@ -283,7 +280,7 @@
   * @since v1.0
   *
   **/
-  define('__GETFROM__'            ,  'GETFROM' ); 
+  define('__GETFROM__','GETFROM' ); 
 
 /**
   *
@@ -292,7 +289,7 @@
   * @since v1.0
   *
   **/
-  define('__BRINGTO__'            ,  'bring_to' ); 
+  define('__BRINGTO__','bring_to' ); 
 
 /**
   *
@@ -301,7 +298,7 @@
   * @since v1.0
   *
   **/
-  define('__VIEWSTO__'            ,  'view_to' ); 
+  define('__VIEWSTO__','view_to' ); 
 
 /**
   *
@@ -310,7 +307,7 @@
   * @since v1.0
   *
   **/
-  define('__SENDTO__'             ,  'send_to' ); 
+  define('__SENDTO__','send_to' ); 
 
 /**
   *
@@ -319,7 +316,7 @@
   * @since v1.0
   *
   **/
-  define('__SETDIRPATH__'         ,  'SET_DIR_PATH' ); 
+  define('__SETDIRPATH__','SET_DIR_PATH' ); 
 
 /**
   *
@@ -328,7 +325,7 @@
   * @since v1.0
   *
   **/
-  define('__DOCTYPE__'            ,  'DOCTYPE' ); 
+  define('__DOCTYPE__','DOCTYPE' ); 
 
 /**
   *
@@ -346,7 +343,7 @@
   * @since v1.0
   *
   **/
-  define('__INC__'                ,  'INCLUDE' );
+  define('__INC__','INCLUDE' );
 
 /**
   *
@@ -355,7 +352,7 @@
   * @since v1.0
   *
   **/
-  define('__INCONCE__'            ,  'INCLUDE_ONCE' );
+  define('__INCONCE__','INCLUDE_ONCE' );
   
 /**
   *
@@ -364,7 +361,7 @@
   * @since v1.0
   *
   **/
-  define('__REQUIRE__'            ,  'REQUIRE' ); 
+  define('__REQUIRE__','REQUIRE' ); 
 
 /**
   *
@@ -373,7 +370,7 @@
   * @since v1.0
   *
   **/
-  define('LOCALHOST'              ,  'LOCALHOST' ); 
+  define('LOCALHOST','LOCALHOST' ); 
 
 /**
   *
@@ -382,7 +379,7 @@
   * @since v1.0
   *
   **/
-  define('__ARRPATH__'            ,  'path' ); 
+  define('__ARRPATH__','path' ); 
 
 /**
   *
@@ -391,7 +388,7 @@
   * @since v1.0
   *
   **/
-  define('__ARRVIEWS__'           ,  'dir' ); 
+  define('__ARRVIEWS__','dir' ); 
 
 /**
   *
@@ -400,7 +397,41 @@
   * @since v1.0
   *
   **/
-  define('__ARRVRURI__'           ,  'ruri' ); 
+  define('__ARRVRURI__','ruri' ); 
   
-  
+/**
+  *
+  * Defined Set PARAM ARRAY CHILD Optimizer/Enhancer 
+  * @since 02.07.2022
+  * @since v1.2.0.0
+  *
+  **/
+  define('CHILD' , 'CHILD' ); 
+
+/**
+  *
+  * Defined Set PARAM ARRAY ATTR Optimizer/Enhancer 
+  * @since 02.07.2022
+  * @since v1.2.0.0
+  *
+  **/
+  define('ATTR' ,'ATTR' ); 
+
+/**
+  *
+  * Defined Set PARAM ARRAY VALUE Optimizer/Enhancer 
+  * @since 02.07.2022
+  * @since v1.2.0.0
+  *
+  **/
+  define('VALUE' , 'VALUE' );
+
+/**
+  *
+  * Defined Set PARAM ARRAY INNER Optimizer/Enhancer 
+  * @since 02.07.2022
+  * @since v1.2.0.0
+  *
+  **/
+  define('INNER' , 'INNER' ); 
   

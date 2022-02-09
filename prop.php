@@ -1,11 +1,11 @@
 <?php 
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.0 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.0 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -24,18 +24,18 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * @category   PHPWine\VanillaFlavour
- * @package    Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
- *             Handling Form Validation | Same page CRUD | PHPOptimizer | Advance Form Builder
+ * @category   PHPLibrary PHPWine\VanillaFlavour
+ * @package    PHPHtml-Optimizer | CodeDesigner/Enhancer | Advance Form Builder | Handling Form Validation | Form Validation v2 | BASIC-Authentication | HtmlMinifier
  *            
  *            
- * @author    nielfernandez <nielsoffice.wordpress.php@gmail.com>
+ * @author    Leinner Zednanref <nielsoffice.wordpress.php@gmail.com>
  * @license   MIT License
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.4
- * 
+ * @version   v1.2.0.0 
+ * @since     02.09.2022
+ *
  */
 
 /**
@@ -666,7 +666,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_FROM_DIR_ROOT__'           ,   __DIR__ ); 
+  define('__GET_FROM_DIR_ROOT__' , __DIR__ ); 
 
   /**
   *
@@ -675,7 +675,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_STATIC_CLASS_HTML__'       ,   '/src/Merge/Html.php'); 
+  define('__GET_STATIC_CLASS_HTML__' , '/src/Merge/Html.php'); 
 
  /**
   *
@@ -684,7 +684,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_INSTANTIATE_CLASS_HTML__'  ,   '/src/Optimizer/Html.php'); 
+  define('__GET_INSTANTIATE_CLASS_HTML__' , '/src/Optimizer/Html.php'); 
   
  /**
   *
@@ -693,7 +693,7 @@
   * @since v1.0
   *
   **/
-  define('__CHECK_MAIN_MERGE_ON_PAGE__'    ,   '/../Merge/Html.php'); 
+  define('__CHECK_MAIN_MERGE_ON_PAGE__' , '/../Merge/Html.php'); 
 
  /**
   *
@@ -702,7 +702,7 @@
   * @since v1.0
   *
   **/
-  define('__CHECK_MAIN_MERGE_ON_CLASS__'   ,   '/../Optimizer/Html.php');
+  define('__CHECK_MAIN_MERGE_ON_CLASS__' , '/../Optimizer/Html.php');
   
  /**
   *
@@ -711,7 +711,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_VALIDATE_FILE_PAGE_EXIST__',   '/src/Merge/Html.php');
+  define('__GET_VALIDATE_FILE_PAGE_EXIST__' , '/src/Merge/Html.php');
 
  /**
   *
@@ -720,7 +720,7 @@
   * @since v1.0
   *
   **/
-  define('__HTMLOPTIMIZER__'               ,   'Html.php');
+  define('__HTMLOPTIMIZER__' , 'Html.php');
 
  /**
   *
@@ -729,7 +729,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_MERGE_FILES__'             ,   SOM_PATH_DIR . 'src/Merge/prop.php');
+  define('__GET_MERGE_FILES__' , SOM_PATH_DIR . 'src/Merge/prop.php');
   
  /**
   *
@@ -738,7 +738,7 @@
   * @since v1.0
   *
   **/
-  define('__DIRECTORY_OPTIMIZER_CLASS__'   ,   SOM_PATH_DIR . 'src/');
+  define('__DIRECTORY_OPTIMIZER_CLASS__' , SOM_PATH_DIR . 'src/');
 
  /**
   *
@@ -747,7 +747,7 @@
   * @since v1.0
   *
   **/
-  define('__DIRECTORY_OPTIMIZER_PAGE__'    ,   SOM_PATH_DIR . 'src/Merge/html.php'); 
+  define('__DIRECTORY_OPTIMIZER_PAGE__' , SOM_PATH_DIR . 'src/Merge/html.php'); 
 
  /**
   *
@@ -756,7 +756,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_LOAD_MERGE__'              ,   SOM_PATH_DIR . 'src/Merge/Merge.php' );
+  define('__GET_LOAD_MERGE__' , SOM_PATH_DIR . 'src/Merge/Merge.php' );
 
  /**
   *
@@ -765,7 +765,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_LOAD_MERGEBOX__'           ,   SOM_PATH_DIR . 'src/Merge/MergeBox.php' );
+  define('__GET_LOAD_MERGEBOX__' , SOM_PATH_DIR . 'src/Merge/MergeBox.php' );
 
  /**
   *
@@ -774,7 +774,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_LOAD_MERGEELEMENT__'       ,   SOM_PATH_DIR . 'src/Merge/MergeElements.php' ); 
+  define('__GET_LOAD_MERGEELEMENT__' , SOM_PATH_DIR . 'src/Merge/MergeElements.php' ); 
 
  /**
   *
@@ -783,7 +783,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_PROPERTY_ITSELF__'         ,   SOM_PATH_DIR . '../../'.__PROP__.'' ); 
+  define('__GET_PROPERTY_ITSELF__' , SOM_PATH_DIR . '../../'.__PROP__.'' ); 
 
  /**
   *
@@ -792,4 +792,4 @@
   * @since v1.0
   *
   **/
-  define('__FILECONFIG__'                  ,   SOM_PATH_DIR . '../../'.__CONFIG__.'' ); 
+  define('__FILECONFIG__' , SOM_PATH_DIR . '../../'.__CONFIG__.'' ); 

@@ -2,12 +2,13 @@
 
 require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
 
-use \PHPWine\VanillaFlavour\Merge\Html;
-use \PHPWine\VanillaFlavour\Optimizer\Html as optimizer;
-use \PHPWine\VanillaFlavour\Optimizer\Enhancers as optimizerCare; 
+use \PHPWine\VanillaFlavour\Optimizer\Html as Optimizer;
+use \PHPWine\VanillaFlavour\Optimizer\Enhancers as OptimizerCare; 
+use \PHPWine\VanillaFlavour\System\Auth;
 
-$html        = new optimizer();
-$fileEnhance = new optimizerCare();
+$Html     = new Optimizer();
+$Enhancer = new OptimizerCare();
+
 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
@@ -47,25 +48,30 @@ $fileEnhance = new optimizerCare();
  *
  * 
  */
-  
-    if( isbelongs(['index']          , [1,2,3] ) )  : _xH1("Welcome Home! ");
-     elseif ( isbelongs(['register'] , [1,2,3] ) )  : _xH1("Welcome to Register! "); 
-     elseif ( isbelongs(['login']    , [1,2,3] ) )  : _xH1("Welcome to Login! ");
+
+  if(  isbelongs(['register', 'contact']) ) {
+
+    define('PHPWINE_MINIFIED',  true );
+ 
+   }  
+
+   if( isbelongs(['index']) )              : _xH1("Welcome Home! ");
+     elseif ( isbelongs(['register']) )    : _xH1("Welcome to Register! "); 
+     elseif ( isbelongs(['contact'] ) )    : _xH1("Welcome to Contact! ");
+     elseif ( isbelongs(['login'] )  )     : _xH1( "Welcome to Login! ");
+     elseif ( isbelongs(['dashboard'] )  ) : _xH1( "Welcome to Dashboard! ");
     endif;
 
     $main_menu =  _xUL( FUNC_ASSOC , 
    
-     DOIF( !isbelongs(['index']    , [1,2,3] )    , ELEM('Li', ELEM('a', 'Home'    , [['href'],['index.php']])    ) ,  FUNC_ASSOC  )
-    .DOIF( !isbelongs(['register'] , [1,2,3] )    , ELEM('Li', ELEM('a', 'Register', [['href'],['register.php']]) ) ,  FUNC_ASSOC  )
-    .DOIF( !isbelongs(['login']    , [1,2,3] )    , ELEM('Li', ELEM('a', 'Login'   , [['href'],['login.php']])    ) ,  FUNC_ASSOC  )
+     DOIF( !isbelongs(['index']     )    , ELEM('Li', ELEM('a', 'Home'    , [['href'],['index.php']])    ) ,  FUNC_ASSOC  )
+    .DOIF( !isbelongs(['register']  )    , ELEM('Li', ELEM('a', 'Register', [['href'],['register.php']]) ) ,  FUNC_ASSOC  )
+    .DOIF( !isbelongs(['contact']   )    , ELEM('Li', ELEM('a', 'Contact' , [['href'],['contact.php']])  ) ,  FUNC_ASSOC  )
+    .DOIF( !isbelongs(['login']     )  && !AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Login'    , [['href'],['login.php']])    ) ,  FUNC_ASSOC  )
+    .DOIF( !isbelongs(['logout']    )  &&  AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Logout'   , [['href'],['logout.php']])    ) ,  FUNC_ASSOC  )
 
     , [['a'],['b']], 'MyClass', ' This is it ! ' );
 
     echo ($main_menu) ? $main_menu : false ;
-     
-    
-    ?>
-    
-  
-     
 
+  

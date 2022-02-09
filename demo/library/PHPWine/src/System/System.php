@@ -5,11 +5,11 @@
  use \PHPWine\VanillaFlavour\System\Request;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.0 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.0 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -28,17 +28,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * @category   PHPWine\VanillaFlavour
- * @package    Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
- *             Handling Form Validation | Same page CRUD | PHPOptimizer | Advance Form Builder
+ * @category   PHPLibrary PHPWine\VanillaFlavour
+ * @package    PHPHtml-Optimizer | CodeDesigner/Enhancer | Advance Form Builder | Handling Form Validation | Form Validation v2 | BASIC-Authentication | HtmlMinifier
  *            
  *            
- * @author    nielfernandez <nielsoffice.wordpress.php@gmail.com>
+ * @author    Leinner Zednanref <nielsoffice.wordpress.php@gmail.com>
  * @license   MIT License
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.4
+ * @version   v1.2.0.0 
+ * @since     02.09.2022
  *
  */
  
@@ -50,6 +50,20 @@
     'AUTH'
 
   ];  
+
+ 
+ 
+/**
+ *
+ * Defined SAVE SECONDARY FUNCTION PHP GET ARRAY KEY 
+ * @since 02.03.2022
+ * @since v1.2.0.0
+ *
+**/
+protected static function check_key_mandatory_array( string $key_array, array $value_array  )
+{
+  return array_key_exists( $key_array,  $value_array );
+} 
 
  /**
   *
@@ -72,7 +86,7 @@
   * @since v1.0
   * 
  **/
- protected static function SANITIZEREQUEST($dataRequest, bool $specialCharRemove = false ) 
+ protected static function SANITIZEREQUEST( $dataRequest, bool $specialCharRemove = false ) 
  {
 
    /**
@@ -202,7 +216,7 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
   * @since v1.3
   * 
  **/
-  private static function RETURN_ARRAY_AS_STRING($request)
+  protected static function RETURN_ARRAY_AS_STRING($request)
   {
     return implode($request);
   }
@@ -1057,9 +1071,9 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
                
         $CATCH_ERROR_PARAM_HANDLER = REQUEST::CATCH_ERROR_PARAM_HANDLER();
       
-        $REH_SP1 = VALIDATION::STRINGTYPE(  $valid_type[CONFIRMPASSWORD][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_CONFIRMPASSWORD']));
-        $REH_SP2 = VALIDATION::STRINGTYPE(  $valid_type[CONFIRMPASSWORD][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_CONFIRMPASSWORD']));
-        $REH_SP3 = VALIDATION::STRINGTYPE(  $valid_type[CONFIRMPASSWORD][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_CONFIRMPASSWORD']));
+        $REH_SP1 = VALIDATE::STRINGTYPE(  $valid_type[CONFIRMPASSWORD][0]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['FIRST_CONFIRMPASSWORD']));
+        $REH_SP2 = VALIDATE::STRINGTYPE(  $valid_type[CONFIRMPASSWORD][1]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['SECOND_CONFIRMPASSWORD']));
+        $REH_SP3 = VALIDATE::STRINGTYPE(  $valid_type[CONFIRMPASSWORD][2]  , self::RETURN_ARRAY_AS_STRING($CATCH_ERROR_PARAM_HANDLER['THIRD_CONFIRMPASSWORD']));
       
 
         if(  ( isset( $REH_SP1 )) == true )

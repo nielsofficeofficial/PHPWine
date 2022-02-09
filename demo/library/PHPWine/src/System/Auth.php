@@ -6,11 +6,11 @@
  use \PHPWine\VanillaFlavour\System\System;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.0 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.0 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -29,18 +29,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * @category   PHPWine\VanillaFlavour
- * @package    Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
- *             Handling Form Validation | Same page CRUD | PHPOptimizer | Advance Form Builder
+ * @category   PHPLibrary PHPWine\VanillaFlavour
+ * @package    PHPHtml-Optimizer | CodeDesigner/Enhancer | Advance Form Builder | Handling Form Validation | Form Validation v2 | BASIC-Authentication | HtmlMinifier
  *            
  *            
- * @author    nielfernandez <nielsoffice.wordpress.php@gmail.com>
+ * @author    Leinner Zednanref <nielsoffice.wordpress.php@gmail.com>
  * @license   MIT License
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.4
- *
+ * @version   v1.2.0.0 
+ * @since     02.09.2022
  *
  * @method AUTH::SESSION();
  * @method AUTH::USERAUTH();
@@ -122,6 +121,19 @@ class Auth Extends System
 
         endforeach;
        
+    }
+
+   /**
+    * Defined AUTH::IS_LOGGEDIN() Check if the user current active session then it set as true do whatever you wish on it !
+    * @since 02.09.2022
+    * @since v1.2.0.0
+    *
+    **/ 
+    public static function IS_LOGGEDIN()
+    {
+        
+      $dataSession = SYSTEM::DataRequest;  foreach ($dataSession as $dataRequest) : if( isset($_SESSION[$dataRequest]) && !is_null($_SESSION[$dataRequest])) : return true; endif; endforeach;
+
     }
     
     /**

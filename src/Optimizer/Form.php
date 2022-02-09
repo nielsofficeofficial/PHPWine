@@ -5,11 +5,11 @@ namespace PHPWine\VanillaFlavour\optimizer;
  USE \PHPWine\VanillaFlavour\Merge\Html;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.0 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.0 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -28,47 +28,46 @@ namespace PHPWine\VanillaFlavour\optimizer;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * @category   PHPWine\VanillaFlavour
- * @package    Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
- *             Handling Form Validation | Same page CRUD | PHPOptimizer | Advance Form Builder
+ * @category   PHPLibrary PHPWine\VanillaFlavour
+ * @package    PHPHtml-Optimizer | CodeDesigner/Enhancer | Advance Form Builder | Handling Form Validation | Form Validation v2 | BASIC-Authentication | HtmlMinifier
  *            
  *            
- * @author    nielfernandez <nielsoffice.wordpress.php@gmail.com>
+ * @author    Leinner Zednanref <nielsoffice.wordpress.php@gmail.com>
  * @license   MIT License
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.4
+ * @version   v1.2.0.0 
+ * @since     02.04.2022
  * 
- * @Method
- * FORM::TEXT();
- * FORM::BUTTONS();
- * FORM::CHECKBOX();
- * FORM::COLOR();
- * FORM::DATE();
- * FORM::DATETIME();
- * FORM::EMAIL();
- * FORM::FILE();
- * FORM::HIDDEN();
- * FORM::MONTH();
- * FORM::NUMBER();
- * FORM::PASSWORD();
- * FORM::RADIO();
- * FORM::RANGE();
- * FORM::RESET();
- * FORM::SEARCH();
- * FORM::SUBMIT();
- * FORM::TEL();
- * FORM::TIMES();
- * FORM::URL();
- * FORM::WEEK();
- * FORM::TEXTAREA();
- * FORM::SELECT();
- * FORM::OPTION();
- * FORM::OPTGROUP();
- * FORM::FIELDSET();
- * FORM::LABEL();
- * FORM::OUTPUT();
+ * @method FORM::TEXT();
+ * @method FORM::BUTTONS();
+ * @method FORM::CHECKBOX();
+ * @method FORM::COLOR();
+ * @method FORM::DATE();
+ * @method FORM::DATETIME();
+ * @method FORM::EMAIL();
+ * @method FORM::FILE();
+ * @method FORM::HIDDEN();
+ * @method FORM::MONTH();
+ * @method FORM::NUMBER();
+ * @method FORM::PASSWORD();
+ * @method FORM::RADIO();
+ * @method FORM::RANGE();
+ * @method FORM::RESET();
+ * @method FORM::SEARCH();
+ * @method FORM::SUBMIT();
+ * @method FORM::TEL();
+ * @method FORM::TIMES();
+ * @method FORM::URL();
+ * @method FORM::WEEK();
+ * @method FORM::TEXTAREA();
+ * @method FORM::SELECT();
+ * @method FORM::OPTION();
+ * @method FORM::OPTGROUP();
+ * @method FORM::FIELDSET();
+ * @method FORM::LABEL();
+ * @method FORM::OUTPUT();
  *
  */
 
@@ -95,7 +94,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -125,7 +124,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -155,7 +154,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -185,7 +184,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -215,7 +214,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -245,7 +244,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -275,7 +274,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -305,7 +304,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -335,7 +334,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -365,7 +364,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -395,7 +394,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -425,7 +424,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -455,7 +454,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -485,7 +484,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -515,7 +514,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -545,7 +544,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -575,7 +574,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -605,7 +604,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -635,7 +634,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -665,7 +664,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -695,7 +694,7 @@ namespace PHPWine\VanillaFlavour\optimizer;
      string        $id     = null
     ,string        $class  = null
     ,array|string  $attr   = null
-    ,mixed         $assoc  = null
+    ,string        $assoc  = null
     
   )
   {
@@ -723,24 +722,20 @@ namespace PHPWine\VanillaFlavour\optimizer;
   static public function TEXTAREA( 
 
     string       $id      =  null 
-   ,mixed        $value           =  null 
-   ,array|string $attr            =  null 
+   ,mixed        $value   =  null 
+   ,array|string $attr    =  null 
    ,string       $class   =  null 
-   ,string       $label           =  null 
-   ,mixed        $assoc           =  null 
+   ,string       $label   =  null 
+   ,string       $assoc   =  null 
  
  ) 
  { 
    /**
     *
     *
-    *
-    *
-    *
     * @package : Merge Heading tag TEXTAREA
     * @package : Static Procedural
     * @method  : Html::TEXTAREA($value, $attr=null, $id, $class, $label, $assoc);
-    *
     *
     *
     **/
@@ -767,24 +762,20 @@ namespace PHPWine\VanillaFlavour\optimizer;
     static public function SELECT( 
 
        string       $id      =  null 
-      ,mixed        $value           =  null 
-      ,array|string $attr            =  null 
+      ,mixed        $value   =  null 
+      ,array|string $attr    =  null 
       ,string       $class   =  null 
-      ,string       $label           =  null 
-      ,mixed        $assoc           =  null 
+      ,string       $label   =  null 
+      ,string       $assoc   =  null 
 
  ) 
  { 
  /**
   *
   *
-  *
-  *
-  *
   * @package : Merge Heading tag SELECT
   * @package : Static Procedural
   * @method  : Html::SELECT($value, $attr=null, $id, $class, $label, $assoc);
-  *
   *
   *
   **/
@@ -811,24 +802,20 @@ namespace PHPWine\VanillaFlavour\optimizer;
   static public function OPTION( 
   
     string       $id      =  null 
-   ,mixed        $value           =  null 
-   ,array|string $attr            =  null 
+   ,mixed        $value   =  null 
+   ,array|string $attr    =  null 
    ,string       $class   =  null 
-   ,string       $label           =  null 
-   ,mixed        $assoc           =  null 
+   ,string       $label   =  null 
+   ,string       $assoc   =  null 
 
  ) 
  { 
  /**
   *
   *
-  *
-  *
-  *
   * @package : Merge Heading tag OPTION
   * @package : Static Procedural
   * @method  : Html::OPTION($value, $attr=null, $id, $class, $label, $assoc);
-  *
   *
   *
   **/
@@ -855,18 +842,15 @@ namespace PHPWine\VanillaFlavour\optimizer;
  static public function OPTGROUP( 
 
    string       $id      =  null 
-  ,mixed        $value           =  null 
-  ,array|string $attr            =  null 
+  ,mixed        $value   =  null 
+  ,array|string $attr    =  null 
   ,string       $class   =  null 
-  ,string       $label           =  null 
-  ,mixed        $assoc           =  null 
+  ,string       $label   =  null 
+  ,string       $assoc   =  null 
 
 ) 
 { 
  /**
-  *
-  *
-  *
   *
   *
   * @package : Merge Heading tag OPTGROUP
@@ -874,9 +858,8 @@ namespace PHPWine\VanillaFlavour\optimizer;
   * @method  : Html::OPTGROUP($value, $attr=null, $id, $class, $label, $assoc);
   *
   *
-  *
   **/
- return PArent::OPTGROUP(
+ return Parent::OPTGROUP(
    
    $id, 
    $value, 
@@ -899,24 +882,20 @@ namespace PHPWine\VanillaFlavour\optimizer;
   static public function FIELDSET( 
 
     string       $id      =  null 
-   ,mixed        $value           =  null 
-   ,array|string $attr            =  null 
+   ,mixed        $value   =  null 
+   ,array|string $attr    =  null 
    ,string       $class   =  null 
-   ,string       $label           =  null 
-   ,mixed        $assoc           =  null 
+   ,string       $label   =  null 
+   ,string       $assoc   =  null 
 
 ) 
 { 
  /**
   *
   *
-  *
-  *
-  *
   * @package : Merge Heading tag FIELDSET
   * @package : Static Procedural
   * @method  : Html::FIELDSET($value, $attr=null, $id, $class, $label, $assoc);
-  *
   *
   *
   **/
@@ -942,24 +921,20 @@ namespace PHPWine\VanillaFlavour\optimizer;
  static public function LABEL( 
 
    string       $id      =  null 
-  ,mixed        $value           =  null 
-  ,array|string $attr            =  null 
+  ,mixed        $value   =  null 
+  ,array|string $attr    =  null 
   ,string       $class   =  null 
-  ,string       $label           =  null 
-  ,mixed        $assoc           =  null 
+  ,string       $label   =  null 
+  ,mixed        $assoc   =  null 
 
 ) 
 { 
  /**
   *
   *
-  *
-  *
-  *
   * @package : Merge Heading tag LABEL
   * @package : Static Procedural
   * @method  : Html::LABEL($value, $attr=null, $id, $class, $label, $assoc);
-  *
   *
   *
   **/
@@ -985,11 +960,11 @@ namespace PHPWine\VanillaFlavour\optimizer;
  static public function OUTPUT( 
 
    string       $id      =  null 
-  ,mixed        $value           =  null 
-  ,array|string $attr            =  null 
+  ,mixed        $value   =  null 
+  ,array|string $attr    =  null 
   ,string       $class   =  null 
-  ,string       $label           =  null 
-  ,mixed        $assoc           =  null 
+  ,string       $label   =  null 
+  ,mixed        $assoc   =  null 
 
  ) 
  { 
