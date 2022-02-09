@@ -67,9 +67,9 @@ $Enhancer = new OptimizerCare();
      DOIF( !isbelongs(['index']     )    , ELEM('Li', ELEM('a', 'Home'    , [['href'],['index.php']])    ) ,  FUNC_ASSOC  )
     .DOIF( !isbelongs(['register']  )    , ELEM('Li', ELEM('a', 'Register', [['href'],['register.php']]) ) ,  FUNC_ASSOC  )
     .DOIF( !isbelongs(['contact']   )    , ELEM('Li', ELEM('a', 'Contact' , [['href'],['contact.php']])  ) ,  FUNC_ASSOC  )
-    .DOIF( !isbelongs(['login']     )  && !AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Login'    , [['href'],['login.php']])    ) ,  FUNC_ASSOC  )
-    .DOIF( !isbelongs(['logout']    )  &&  AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Dashboard', [['href'],['dashboard.php']])    ) ,  FUNC_ASSOC  )
-    .DOIF( !isbelongs(['logout']    )  &&  AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Logout'   , [['href'],['logout.php']])    ) ,  FUNC_ASSOC  )
+    .DOIF( !isbelongs(['login']     )  && !AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Login'    , [['href'],['login.php']])       ) ,  FUNC_ASSOC  )
+    .DOIF( !isbelongs(['dashboard'] )  &&  AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Dashboard', [['href'],['dashboard.php']])   ) ,  FUNC_ASSOC  )
+    .DOIF( !isbelongs(['logout']    )  &&  AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Logout'   , [['href'],['logout.php']])      ) ,  FUNC_ASSOC  )
 
     , [['a'],['b']], 'MyClass', ' This is it ! ' );
 
