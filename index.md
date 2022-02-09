@@ -21,16 +21,14 @@ PHPWine (Vanilla Flavour) design for corePHP and WordPress Cloud system applicat
 PHP code encrypted, PHP Library, Code designer and Optimizer, Html-minifier Advance Form builder, Form Validation and more... 
 
 - PHPHtml-Optimizer / Code Designer
-- Advance Form Builder <i>(Optimizier v1.0 )</i>
+- Advance Form Builder 
 - Handling Form Validation
-- Authentication
-- Login Form
-- Registration
-- Reset Password
-- Register Email confirmation
-- Recovery Email confirmation
+- Form Validation_V2 @since v1.2
+- BASIC Authentication
+- HTMLMinifier @since v1.2
+- PHPSaver (RESTful_API) <sup><i>Available on PHPWine v2.0</i></sup>
 
-<h3>Downloading Library/Repository:</h3>
+<h3>Downloading Library/Dependencies:</h3>
 
 ```PHP
 
@@ -56,16 +54,18 @@ $Html     = new Optimizer();
 $Enhancer = new OptimizerCare();
 
 ```
-<h3>Method file Installation:</h3>
+<h3>Dependencies Installation:</h3>
 
 ```PHP
 
-// Use on every pages
+# Namespace / Dependencies
+use \PHPWine\VanillaFlavour\Optimizer\Enhancers;
 use \PHPWine\VanillaFlavour\Optimizer\Form;
-use \PHPWine\VanillaFlavour\Merge\Html;
 use \PHPWine\VanillaFlavour\System\Auth;
 use \PHPWine\VanillaFlavour\System\Request;
-use \PHPWine\VanillaFlavour\System\Validation;
+use \PHPWine\VanillaFlavour\System\Validate;
+use \PHPWine\VanillaFlavour\System\Validate_v2;
+use \PHPWine\VanillaFlavour\Merge\Html;
 
 ```
 <h3>SQL demo for Authentication and Handling form Validation :</h3>
