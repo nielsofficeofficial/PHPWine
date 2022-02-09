@@ -2,12 +2,9 @@
 <?php require 'header.php'; ?>
 <?php 
 
-<<<<<<< HEAD
 use \PHPWine\VanillaFlavour\Merge\Html;
  
 
-=======
->>>>>>> 5f8f670b965282bffc442b9f9d68cc737fa6b994
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
  *
@@ -46,15 +43,5 @@ use \PHPWine\VanillaFlavour\Merge\Html;
  *
  */
 
-<<<<<<< HEAD
 
-=======
-/**
- *
- * Defined Register file 
- * @since 04.05.21
- * @since v1.0
- * 
- **/ 
->>>>>>> 5f8f670b965282bffc442b9f9d68cc737fa6b994
 require __DIR__ . '/library/PHPWine/temp-dashboard.php'; 
