@@ -4,7 +4,10 @@ require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
 
 use \PHPWine\VanillaFlavour\Optimizer\Html as Optimizer;
 use \PHPWine\VanillaFlavour\Optimizer\Enhancers as OptimizerCare; 
+<<<<<<< HEAD
 use \PHPWine\VanillaFlavour\System\Auth;
+=======
+>>>>>>> 5f8f670b965282bffc442b9f9d68cc737fa6b994
 
 $Html     = new Optimizer();
 $Enhancer = new OptimizerCare();
@@ -49,6 +52,7 @@ $Enhancer = new OptimizerCare();
  * 
  */
 
+<<<<<<< HEAD
   if(  isbelongs(['register', 'contact']) ) {
 
     define('PHPWINE_MINIFIED',  true );
@@ -60,15 +64,37 @@ $Enhancer = new OptimizerCare();
      elseif ( isbelongs(['contact'] ) )    : _xH1("Welcome to Contact! ");
      elseif ( isbelongs(['login'] )  )     : _xH1( "Welcome to Login! ");
      elseif ( isbelongs(['dashboard'] )  ) : _xH1( "Welcome to Dashboard! ");
+=======
+
+  
+ if(  isbelongs(['register', 'contact']) ) {
+
+  define('PHPWINE_MINIFIED',  true );
+ 
+ }
+
+
+    if( isbelongs(['index']) )           : _xH1("Welcome Home! ");
+     elseif ( isbelongs(['register']) )  : _xH1("Welcome to Register! "); 
+     elseif ( isbelongs(['login'] ) )    : _xH1("Welcome to Login! ");
+     elseif ( isbelongs(['contact'] ) )  : _xH1("Welcome to Contact! ");
+>>>>>>> 5f8f670b965282bffc442b9f9d68cc737fa6b994
     endif;
 
     $main_menu =  _xUL( FUNC_ASSOC , 
    
+<<<<<<< HEAD
      DOIF( !isbelongs(['index']     )    , ELEM('Li', ELEM('a', 'Home'    , [['href'],['index.php']])    ) ,  FUNC_ASSOC  )
     .DOIF( !isbelongs(['register']  )    , ELEM('Li', ELEM('a', 'Register', [['href'],['register.php']]) ) ,  FUNC_ASSOC  )
     .DOIF( !isbelongs(['contact']   )    , ELEM('Li', ELEM('a', 'Contact' , [['href'],['contact.php']])  ) ,  FUNC_ASSOC  )
     .DOIF( !isbelongs(['login']     )  && !AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Login'    , [['href'],['login.php']])    ) ,  FUNC_ASSOC  )
     .DOIF( !isbelongs(['logout']    )  &&  AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Logout'   , [['href'],['logout.php']])    ) ,  FUNC_ASSOC  )
+=======
+     DOIF( !isbelongs(['index']  )     , ELEM('Li', ELEM('a', 'Home'    , [['href'],['index.php']])    ) ,  FUNC_ASSOC  )
+    .DOIF( !isbelongs(['register']  )  , ELEM('Li', ELEM('a', 'Register', [['href'],['register.php']]) ) ,  FUNC_ASSOC  )
+    .DOIF( !isbelongs(['login']  )     , ELEM('Li', ELEM('a', 'Login'   , [['href'],['login.php']])    ) ,  FUNC_ASSOC  )
+    .DOIF( !isbelongs(['contact'] )    , ELEM('Li', ELEM('a', 'Contact' , [['href'],['contact.php']])  ) ,  FUNC_ASSOC  )
+>>>>>>> 5f8f670b965282bffc442b9f9d68cc737fa6b994
 
     , [['a'],['b']], 'MyClass', ' This is it ! ' );
 

@@ -43,6 +43,7 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
  *
  */
 
+<<<<<<< HEAD
  /**
  *
  * Defined If the session is true or active then redirect to certain page!
@@ -57,3 +58,7 @@ echo " Welcome Hello This a Page :)) ";
 
 
   
+=======
+
+ 
+>>>>>>> 5f8f670b965282bffc442b9f9d68cc737fa6b994

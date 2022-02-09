@@ -40,6 +40,12 @@
  * @link      https://www.facebook.com/nielsofficeofficial
  * @version   v1.2.0.0 
  * @since     02.09.2022
+<<<<<<< HEAD
+=======
+ *
+ */
+ *
+>>>>>>> 5f8f670b965282bffc442b9f9d68cc737fa6b994
  *
  * @method AUTH::SESSION();
  * @method AUTH::USERAUTH();
