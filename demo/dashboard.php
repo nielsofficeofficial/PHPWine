@@ -1,13 +1,6 @@
+<?php session_start(); ?>
+<?php require 'header.php'; ?>
 <?php 
-
-require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
-
-use \PHPWine\VanillaFlavour\Optimizer\Html as Optimizer;
-use \PHPWine\VanillaFlavour\Optimizer\Enhancers as OptimizerCare; 
-
-$Html     = new Optimizer();
-$Enhancer = new OptimizerCare();
-
 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
@@ -45,32 +38,13 @@ $Enhancer = new OptimizerCare();
  * @link      https://www.facebook.com/nielsofficeofficial
  * @version   v1.1.4
  *
- * 
  */
 
-
-  
- if(  isbelongs(['register', 'contact']) ) {
-
-  define('PHPWINE_MINIFIED',  true );
- 
- }
-
-
-    if( isbelongs(['index']) )           : _xH1("Welcome Home! ");
-     elseif ( isbelongs(['register']) )  : _xH1("Welcome to Register! "); 
-     elseif ( isbelongs(['login'] ) )    : _xH1("Welcome to Login! ");
-     elseif ( isbelongs(['contact'] ) )  : _xH1("Welcome to Contact! ");
-    endif;
-
-    $main_menu =  _xUL( FUNC_ASSOC , 
-   
-     DOIF( !isbelongs(['index']  )     , ELEM('Li', ELEM('a', 'Home'    , [['href'],['index.php']])    ) ,  FUNC_ASSOC  )
-    .DOIF( !isbelongs(['register']  )  , ELEM('Li', ELEM('a', 'Register', [['href'],['register.php']]) ) ,  FUNC_ASSOC  )
-    .DOIF( !isbelongs(['login']  )     , ELEM('Li', ELEM('a', 'Login'   , [['href'],['login.php']])    ) ,  FUNC_ASSOC  )
-    .DOIF( !isbelongs(['contact'] )    , ELEM('Li', ELEM('a', 'Contact' , [['href'],['contact.php']])  ) ,  FUNC_ASSOC  )
-
-    , [['a'],['b']], 'MyClass', ' This is it ! ' );
-
-    echo ($main_menu) ? $main_menu : false ;
-
+/**
+ *
+ * Defined Register file 
+ * @since 04.05.21
+ * @since v1.0
+ * 
+ **/ 
+require __DIR__ . '/library/PHPWine/temp-dashboard.php'; 
