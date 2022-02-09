@@ -39,7 +39,7 @@ USE \PHPWine\VanillaFlavour\system\Request;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.4.0.0
+ * @version   v1.1.4.0
  *
  */
  
