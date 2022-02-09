@@ -156,8 +156,7 @@ private static array $require_fields = [
                               MINLENGTH           => [ 8 , 'Invalid username!' ] ,  
                               CONTAIN_SPECIALCHAR => [ 'Invalid username!' ] 
 
-            ],
-            'bind_data'  => [ 'table_name', 'id' , 'This username was already used !']
+            ]
           
        ],
       
@@ -165,8 +164,7 @@ private static array $require_fields = [
 
             'mandatory'  => 'Please Enter your last name',
             'tooltips'   => [],
-            'valid_type' => [],
-            'bind_data'  => []
+            'valid_type' => []
       
       ],
 
@@ -174,8 +172,7 @@ private static array $require_fields = [
 
             'mandatory'  => 'Please Enter your email',
             'tooltips'   => [ VALID_EMAIL => ['VALID_EMAIL'] ],
-            'valid_type' => [ VALID_EMAIL => ['Invalid Email !'] ],
-            'bind_data'  => [ 'email', 'id', 'email' , 'This username was already used !']
+            'valid_type' => [ VALID_EMAIL => ['Invalid Email !'] ]
           
        ],
 
@@ -183,8 +180,7 @@ private static array $require_fields = [
 
             'mandatory'  => 'Please Enter your website or social media',
             'tooltips'   => [],
-            'valid_type' => [],
-            'bind_data'  => []
+            'valid_type' => []
           
        ],
 
@@ -192,8 +188,7 @@ private static array $require_fields = [
 
             'mandatory'  => 'Please Enter your message',
             'tooltips'   => [],
-            'valid_type' => [],
-            'bind_data'  => []
+            'valid_type' => []
           
        ]
     
@@ -323,8 +318,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
    if( ( $validationV2::$tooltips_email_tag == VALID_EMAIL ) || is_null( $validationV2::$tooltips_email_tag) ) 
    {
 
-     _xSTYLE( ' .red { color: red; } .green { color: green; } ' );
-     
     $first_child_attr =  [
        
       ['class'],
@@ -332,11 +325,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     
     ];
 
-    $validationV2::$tooltips_email =  _xUL( 'tooltips' ,
-      
-       ELEM('li', 'Must be Valid Email ex. youremail@domain.com' , $first_child_attr  ) 
-      
-      , FUNC_ASSOC );
+    $validationV2::$tooltips_email =  _xUL( 'tooltips' , ELEM('li', 'Must be Valid Email ex. youremail@domain.com' , $first_child_attr  ) , FUNC_ASSOC );
 
   }
 
