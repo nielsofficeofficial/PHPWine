@@ -29,16 +29,16 @@
  * SOFTWARE.
  *
  * @category   PHPWine\VanillaFlavour
- * @package    Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
+ * @package    Basic Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
  *             Handling Form Validation | Same page CRUD | PHPOptimizer | Advance Form Builder
  *            
  *            
- * @author    nielfernandez <nielsoffice.wordpress.php@gmail.com>
+ * @author    Leinner Zednanref <nielsoffice.wordpress.php@gmail.com>
  * @license   MIT License
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.4
+ * @version   v1.4.0.0
  *
  * noHTML dynamic static structure _
  * non/WITH CLASS|METHOD|FUNCTION ASSOCIATED  
@@ -517,160 +517,6 @@ static private $exSymbol;
 static private $str;
 
 /**
-  * @var @property CONST | FUNC_ASSOC  
-  * defined Assigned associsated dstring within the function/Class/Method
-  * minify optimized html attribute 
-  **/
- CONST FUNC_ASSOC       = 'FUNC_ASSOC';
-
-/**
-  * @var @property @static CONST | CLASS_ASSOC  
-  * defined Assigned associsated dstring within the function/Class/Method
-  * minify optimized html attribute 
-  **/
- CONST CLASS_ASSOC      = 'CLASS_ASSOC';
- 
-/**
-  * @var @property @static CONST | METHOD_ASSOC  
-  * defined Assigned associsated dstring within the function/Class/Method
-  * minify optimized html attribute 
-  **/
- CONST METHOD_ASSOC     = 'METHOD_ASSOC';
-
-/**
-  * @var @property @static CONST | __SetPHP__  
-  * @since 16.10.2020
-  * defined Assigned Asset Extenstion File as .PHP
-  **/
- CONST __PHP__       = '__PHP__';
- 
-/**
-  * @var @property @static CONST | __SetHTML__  
-  * @since 16.10.2020
-  * defined Assigned Asset Extenstion File as .HTML
-  **/ 
- CONST __HTML__      = '__HTML__';
-
-/**
-  * @var @property @static CONST | __SetCSS__  
-  * @since 16.10.2020
-  * defined Assigned Asset Extenstion File as .CSS
-  **/ 
- CONST __CSS__       = '__CSS__'; 
-
-/**
-  * @var @property @static CONST | __SetJS__  
-  * @since 16.10.2020
-  * defined Assigned Asset Extenstion File as .JS
-  **/ 
- CONST __JS__        = '__JS__'; 
-
-/**
-  * @var @property @static CONST | __SetJPG__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .JPG
-  **/ 
- CONST __JPG__       = '__JPG__';
-
-/**
-  * @var @property @static CONST | __SetJPEG__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .JPEG
-  **/ 
- CONST __JPEG__      = '__JPEG__';   
-
-/**
-  * @var @property @static CONST | __SetPNG__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .JPEG
-  **/  
- CONST __PNG__       = '__PNG_';
-
-/**
-  * @var @property @static CONST | __SetGIF__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .GIF
-  **/  
- CONST __GIF__       = '__GIF__'; 
-
-/**
-  * @var @property @static CONST | __SetBMP__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .BMP
-  **/  
- CONST __BMP__       = '__BMP__';
-
-/**
-  * @var @property @static CONST | __SetTEX__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .TEX
-  **/  
- CONST __TEX__       = '__TEX__';
-
-/**
-  * @var @property @static CONST | __SetXLS__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .XLS
-  **/  
- CONST __XLS__       = '__XLS__'; 
-
-/**
-  * @var @property @static CONST | __SetXLSX__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .XLSX_
-  **/ 
- CONST __XLSX__      = '__XLSX__';  
-
-/**
-  * @var @property @static CONST | __SetDOC__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .DOC
-  **/ 
- CONST __DOC__       = '__DOC__';
-
-/**
-  * @var @property @static CONST | __SetDOCX__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .DOCX
-  **/ 
- CONST __DOCX__      = '__DOCX__';    
-
-/**
-  * @var @property @static CONST | __SetPPT__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .PPT
-  **/ 
- CONST __PPT__       = '__PPT__';
-
-/**
-  * @var @property @static CONST | __SetPPTX__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .PPTX
-  **/ 
- CONST __PPTX__      = '__PPTX__';
-
-/**
-  * @var @property @static CONST | __SetODT__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as .ODT
-  **/ 
- CONST __ODT__       = '__ODT__'; 
-
-/**
-  * @var @property @static CONST | __SetTXT__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as ._TXT
-  **/ 
- CONST __TXT__       = '__TXT__';  
-
-/**
-  * @var @property @static CONST | __SetRTF__  
-  * @since 16.10.2020
-  * defined Assigned Image Extenstion as ._RTF
-  **/ 
- CONST __RTF__       = '__RTF__'; 
-
-/**
   * @var @property Array of data 
   * defined CONST ARRAY EXNTION FILES
   *
@@ -887,7 +733,7 @@ static protected $htm_L  = [
   * @var 
   * @property @STRUCTURE_VARIABLE  (NO x HTML TAG)
   * defined arrays of data html 
-  S**/
+  **/
 static protected $htm_st = [
 
    'head'
@@ -6282,7 +6128,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6316,7 +6162,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -6350,7 +6196,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -6384,7 +6230,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6418,7 +6264,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6452,7 +6298,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6486,7 +6332,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6520,7 +6366,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6554,7 +6400,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6588,7 +6434,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6622,7 +6468,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6656,7 +6502,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6690,7 +6536,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6724,7 +6570,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6758,7 +6604,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6792,7 +6638,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6826,7 +6672,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6860,7 +6706,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6894,7 +6740,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6963,7 +6809,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -6997,7 +6843,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7031,7 +6877,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7065,7 +6911,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7099,7 +6945,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7133,7 +6979,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7167,7 +7013,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null  
+    ,string         $assoc    =  null  
 
  )
  {
@@ -7201,7 +7047,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7235,7 +7081,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7268,7 +7114,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -7302,7 +7148,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -7336,7 +7182,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -7370,7 +7216,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -7404,7 +7250,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7438,7 +7284,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7472,7 +7318,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7506,7 +7352,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7540,7 +7386,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7574,7 +7420,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7608,7 +7454,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7642,7 +7488,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -7676,7 +7522,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -7710,7 +7556,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -7744,7 +7590,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -7778,7 +7624,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7812,7 +7658,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7846,7 +7692,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7880,7 +7726,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -7914,7 +7760,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -7948,7 +7794,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -7982,7 +7828,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -8016,7 +7862,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -8050,7 +7896,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -8084,7 +7930,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -8118,7 +7964,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -8152,7 +7998,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
   )
   {
@@ -8186,7 +8032,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8220,7 +8066,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8254,7 +8100,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8288,7 +8134,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8322,7 +8168,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8356,7 +8202,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8390,7 +8236,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8424,7 +8270,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8458,7 +8304,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8492,7 +8338,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8526,7 +8372,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8560,7 +8406,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8594,7 +8440,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8628,7 +8474,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8662,7 +8508,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8696,7 +8542,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8730,7 +8576,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8764,7 +8610,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8798,7 +8644,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8832,7 +8678,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8866,7 +8712,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8900,7 +8746,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8934,7 +8780,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -8968,7 +8814,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -9002,7 +8848,7 @@ static protected $hextend = [];
     ,array|string  $attr     =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -9036,7 +8882,7 @@ static protected $hextend = [];
     ,string        $id       =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -9070,7 +8916,7 @@ static protected $hextend = [];
     ,string        $id       =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null 
+    ,string         $assoc    =  null 
 
  )
  {
@@ -9104,7 +8950,7 @@ static protected $hextend = [];
     ,string        $id       =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -9138,7 +8984,7 @@ static protected $hextend = [];
     ,string        $id       =  null
     ,string        $class    =  null
     ,string        $label    =  null
-    ,mixed         $assoc    =  null
+    ,string         $assoc    =  null
 
  )
  {
@@ -9396,7 +9242,7 @@ static private function _elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $
      # DO_CONTENT
      $return_elementINLINE  .= (!empty($value) && $value !== NULL) ? $value : FALSE ; 
    
-     # IF_INLINE_ELEMENT_IS_EQUAL_TRUE_THE_RETURN_ECHO_STATIC_noHTML
+     # IF_INLINE_ELEMENT_IS_EQUAL_TRUE_THE_RETURN_ECHO_STATIC_noHTML_setELEMENT
      # RETURN_GET___HTML_METHOD_INCLUDED_ 
    /**
      *
@@ -9606,8 +9452,11 @@ static protected function _setHTMLattr($attr = [], $id=NULL, $class=NULL) {
       * @method function _getxTAG()
       *
       **/     
-    self::PERFORM( $_setHTMLattr  = self::_isJStrue($attr, $id, $class) );
-    self::PERFORM( $_setHTMLattr = self::_getxTAG().self::_getBREAK() );   
+    self::PERFORM( $_setHTMLattr  = self::_isJStrue($attr, $id, $class) );  
+
+   if( defined('PHPWINE_BEAUTIFY') == true && PHPWINE_BEAUTIFY !== false  )  : self::PERFORM( self::_getxTAG() );
+   else                                                                      : self::PERFORM( self::_getxTAG().self::_getBREAK() );
+  endif;
 }
 
 /**
@@ -10431,7 +10280,9 @@ static protected function _getBREAK()      {
      * @method ""
      *
      **/   
-    return self::$hBreak[0];    }
+  return self::doMinified( self::$hBreak[0] );
+  
+  }
 
 /**
   *
@@ -10449,7 +10300,7 @@ static protected function _doBREAK()       {
      * @method ""
      *
      **/  
-    return self::$hBreak[1];    }
+    return  self::$hBreak[1] ;    }
 
 /**
   *
@@ -10467,7 +10318,7 @@ static protected function _makeLine()      {
      * @method ""
      *
      **/    
-    return self::$hBreak[2];    }
+    return  self::$hBreak[2] ;    }
 
 /**
   *
@@ -10856,7 +10707,23 @@ static private function Set_Element_Attr($attr_name,$attr_val) {
     ];
 
 }
- 
+
+/**
+  *
+  * @method private function doMinified
+  * @private Method Defined set to TRUE to make minified HTML
+  * @since 1.31.2022
+  *
+  **/
+  static private function doMinified( $html_optimized )
+  {
+   
+    if( defined('PHPWINE_MINIFIED') == true && PHPWINE_MINIFIED !== false  )  : return false; 
+    else                                                                      : return $html_optimized; 
+   endif;
+  
+  }
+
 /**
   *
   * @method private function noHTML
@@ -13669,19 +13536,4 @@ static protected function _setReturnINLINELEMENT($elem, $attr, $id, $class,$asso
  } #END OF SET RETURN ELEMENT
 
 }  
-
-
-/**
-  * NOTE! This library is fully FREE NO WARRANTY (for more info. read license on the top of this page)*  
-  * PHPHtml-Optimizer cooked by nielsoffice
-  * Developer Support  $FREE
-  * Freelancer Support $Free
-  * Agency Support     $500 USD Get support Valid for 30 days / 50% will developer recieved from nielsoffice  
-  * 
-  * @author nielfernandez
-  * <nieldigitalsolution@gmail.com>
-  * www.nielsoffice.com
-  * https://www.facebook.com/nielsofficeofficial
-  * 
-  **/
 

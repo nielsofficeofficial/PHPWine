@@ -44,6 +44,17 @@ use \PHPWine\VanillaFlavour\Merge\Html;
  */
   
 
+//  _xDIV('test-array', 
+    
+//   [1,2,3,4,5,6,7,8,9]
+ 
+// ); 
+
+// echo "<br />";
+// echo "<hr />";
+
+// echo  ELEM('h1',  [1,2,3,4,5,6,7,8] );
+
 // FIXED attr array ugly error convert as string ! ***  merge version 
 
 // IMPROVED HTML TAGS OPTIMIZER | MERGE >> v1.1.2++ 
@@ -128,3 +139,4 @@ TEXTAREA(
 ) 
 { ... }
 */
+

@@ -1,19 +1,15 @@
 <?php 
 
-
 use \PHPWine\VanillaFlavour\System\Auth;
 use \PHPWine\VanillaFlavour\System\Validate;
-use \PHPWine\VanillaFlavour\System\Request;
 use \PHPWine\VanillaFlavour\Optimizer\Form;
 
-$html->ELEMS('my_img','img','img');
-
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.0 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.0 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -32,17 +28,17 @@ $html->ELEMS('my_img','img','img');
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * @category   PHPWine\VanillaFlavour
- * @package    Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
- *             Handling Form Validation | Same page CRUD | PHPOptimizer | Advance Form Builder
+ * @category   PHPLibrary PHPWine\VanillaFlavour
+ * @package    PHPHtml-Optimizer | CodeDesigner/Enhancer | Advance Form Builder | Handling Form Validation | Form Validation v2 | BASIC-Authentication | HtmlMinifier
  *            
  *            
- * @author    nielfernandez <nielsoffice.wordpress.php@gmail.com>
+ * @author    Leinner Zednanref <nielsoffice.wordpress.php@gmail.com>
  * @license   MIT License
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.4
+ * @version   v1.2.0.0 
+ * @since     02.09.2022
  *
  */
 
@@ -63,37 +59,82 @@ $html->ELEMS('my_img','img','img');
  # THIS IS FOR DEMO DATABASE CONNECTION !!! BUILD YOUR OWN DATABSE CONENCTION BASE ON YOUR CURRENT FRAMEWORK !
  #############################################################################################################
 
+/**
+  * @var  
+  * defined Input username
+  * @since v1.2.0.0 
+  * @since 02.07.2022
+  **/  
+ $username         = '';
 
 /**
- * @param _Define variables and initialize with empty values
-**/ 
-$username = $email = $mobile = $catch_un = $catch_ue = $catch_um = $catch_up = $auth_up_bind = $conpassword_err =  '';
+  * @var  
+  * defined Input email
+  * @since v1.2.0.0 
+  * @since 02.07.2022
+  **/ 
+ $email            = '';
 
 /**
- * @param _Processing form data new user register
-**/ 
+  * @var  
+  * defined Input $mobile
+  * @since v1.2.0.0 
+  * @since 02.07.2022
+  **/  
+ $mobile           = '';
+
+/**
+  * @var  
+  * defined Input username
+  * @since v1.2.0.0 
+  * @since 02.07.2022
+  **/  
+ $catch_un         = '';
+
+/**
+  * @var  
+  * defined Input catch username errors
+  * @since v1.2.0.0 
+  * @since 02.07.2022
+  **/  
+ $catch_ue         = '';
+
+/**
+  * @var  
+  * defined Input catch user mobile errors
+  * @since v1.2.0.0 
+  * @since 02.07.2022
+  **/
+ $catch_um         = '';
+
+/**
+  * @var  
+  * defined Input catch user password errors
+  * @since v1.2.0.0 
+  * @since 02.07.2022
+  **/
+ $catch_up         = '';
+
+/**
+  * @var  
+  * defined Input catch user bind errors
+  * @since v1.2.0.0 
+  * @since 02.07.2022
+  **/ 
+ $auth_up_bind     = '';
+
+/**
+  * @var  
+  * defined Input catch user password errors
+  * @since v1.2.0.0 
+  * @since 02.07.2022
+  **/
+ $conpassword_err  = '';
+
+ 
 if($_SERVER["REQUEST_METHOD"] == "POST")
 {  
 
-  /**
-   * @param _Check_error_if input errors empty | 
-   * bring to very last the field accept null value on your database !
-   * like sample below: $catch_um
-   **/ 
-   $initializeRequestError = ( 
-
-        !empty($catch_un)     && !empty($catch_ue)    
-     && !empty($catch_up)     && !empty($catch_um)    
-
-   ) ? true : false ;
-
-    /**
-     *
-     * Defined User info 
-     * @since 04.12.21
-     * @since v1.0
-     *
-     **/
     $un               =   VALIDATE::$DATAFORM = ["username","Please enter a username."];
     $username         =   VALIDATE::HASCONTAINS( input: $un);  
     $username_err     =   VALIDATE::ERROR( result: $username, require : $un);    
@@ -102,21 +143,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $email            =   VALIDATE::HASCONTAINS( input: $ue);  
     $email_err        =   VALIDATE::ERROR(  result: $email, require: $ue);    
 
-   /**
-    * @param _Bind process request mobile from users
-    * Bring at the very bottom as mobile accept as null value, check your database table 
-    **/ 
     $um               =   VALIDATE::$DATAFORM = ["mobile","Please enter a Phone."];
     $mobile           =   VALIDATE::HASCONTAINS( input: $um);  
     $mobile_err       =   VALIDATE::ERROR(  result: $mobile, require: $um);    
 
-   /**    
-     *
-     * Defined Password 
-     * @since 04.12.21
-     * @since v1.0
-     *
-     **/
     $up               =   VALIDATE::$DATAFORM = ["password","Please enter a password..."];
     $userpassword     =   VALIDATE::HASCONTAINS( input : $up);  
     $userpassword_err =   VALIDATE::ERROR(  result: $userpassword , require : $up);  
@@ -124,16 +154,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $upc              =   VALIDATE::$DATAFORM = ["confirm_password","Please confirm password..."];
     $conpassword      =   VALIDATE::HASCONTAINS( input : $upc);  
     $conpassword_err  =   VALIDATE::ERROR(  result: $conpassword,  require : $upc);  
-
-    $auth_un_bind = "";
-  
-   /**
-    *  VALIDATE BIND BEGIN 
-    **/ 
-  
-   /**
-    * @param _Bind process request unsername from users
-    **/ 
 
     $auth_un_bind  = VALIDATE::BIND( connection : $connection, 
 
@@ -145,9 +165,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   
     ]); 
 
-  /**
-    * @param _Bind process request email from users
-    **/ 
     $auth_ue_bind  = VALIDATE::BIND($connection, 
     [   
     
@@ -157,25 +174,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   
     ]); 
 
-   /**
-    * @param _Bind process request mobile from users
-    * Bring at the very bottom as mobile accept as null value, check your database table 
-    **/ 
-    $auth_um_bind  = VALIDATE::BIND( $connection, 
+    $auth_um_bind  = VALIDATE::BIND($connection, 
     [   
     
         'QUERY_STATEMENT'    => VALIDATE::CHECKQUERY( table : 'users_log', col_id : ["id"], col_name : ["mobile"])
        ,'INPUT_HASCONTAINS'  => $mobile  
        ,'INPUT_DATAEXIST'    => "This {$mobile} was already used."
   
-    ]);
-    
+    ]); 
 
-   /**
-    * @param _Validate information request email from users
-    * Bring at the very bottom as mobile accept as null value, check your database table 
-    **/ 
-    $catch_um = VALIDATE::CATCH(  input_result :  $mobile_err , bind_result : $auth_um_bind, valid_type :  $valid_type = [
+    $catch_um = VALIDATE::CATCH(input_result :  $mobile_err , bind_result: $auth_um_bind, valid_type :  $valid_type = [
        
       NUMERICTYPE   => ['mobile' ,'Phone must be numeric ex. 123'],
       MAXLENGTH     => ['mobile' , 11 ,'Mobile number must be maximum 11 Digit!'],
@@ -183,29 +191,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   
    ]);
     
-
-
-   /**
-    * @param _Validate information request unsername from users
-    **/ 
     $catch_un       = VALIDATE::CATCH( $username_err, $auth_un_bind, $valid_type = [
        
      MINLENGTH      => [ 'username', 7, 'MIN of 7 characters!' ]
       
     ]);
 
-   /**
-    * @param _Validate information request email from users
-    **/ 
     $catch_ue = VALIDATE::CATCH($email_err, $auth_ue_bind, $valid_type = [
        
-      VALID_EMAIL   => ['email','must be valid email']
+     VALID_EMAIL   => ['email','must be valid email']
  
     ]);
 
-   /**
-    * @param _Validate information request passwords from users
-    **/ 
     $catch_up = VALIDATE::FORM( input_result: $userpassword_err, valid_type: $valid_type = [
       
       MINLENGTH        => ['password', 8,'Password must have atleast 8 characters.'],
@@ -214,52 +211,37 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     
     ]);
 
+    # CHECK IF ANYTHING IS TRUE THE  RETURN APPROPRIATE
+    $initializeRequestError = ( 
 
-        /**
-         * @param _process_Check input errors empty
-        **/    
+         !empty($catch_un)     && !empty($catch_ue)    
+      && !empty($catch_up)     && !empty($catch_um)    
+
+    ) ? true : false ;
+
+
         if( isset($initializeRequestError) == true ) :
             
-            /**
-             * @param _Prepare insert statement clean up sql
-            **/            
-
             if($stmt = $connection->prepare( AUTH::BINDSQL( 'users_log', ['username', 'email', 'mobile', 'password'] , ['?', '?', '?' , '?']) ) ) : 
 
-                /**
-                * @param _Bind variables statement as parameters
-                **/ 
                 $stmt->bind_param("ssss", $param_username, $param_email, $param_mobile, $param_password);
 
-                /**
-                * @param _parameters
-                **/ 
                 $param_username =  DOIF(is_null($catch_un)   ,  $username      , FUNC_ASSOC);
                 $param_email    =  DOIF(is_null($catch_ue)   ,  $email         , FUNC_ASSOC);
                 $param_mobile   =  DOIF(is_null($catch_um)   ,  $mobile        , FUNC_ASSOC);
                 $param_password =  DOIF(is_null($catch_up)   ,  password_hash( $userpassword , PASSWORD_DEFAULT) , FUNC_ASSOC);
-                
-                /**
-                * @param _execute the prepared statement /  redirect
-                **/ 
+
                 AUTH::BINDEXECUTE( redirect : 'login', report : ERROR_DEVELOPER_CONCERN);        
    
-               /**
-                * @param _Close statement
-                **/
                 $stmt->close();
 
             endif;
 
         endif;
         
-        /**
-         * @param _Close connection
-        **/
-        $connection->close();
+    $connection->close();
    
  }
-
 
  /**
   *
@@ -292,106 +274,81 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   * @since v1.0
   *
   **/ 
-  _FORM( attr : setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 'POST']));
-  
- /**
-  *
-  * Defined Input email
-  * @since 04.06.21
-  * @since v1.0
-  *
-  **/ 
- _xdiv( 'id-username_from_group',
+ _FORM( attr : setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 'POST']));
+
+  $user_name_attr   = [
    
-    FORM::LABEL('label-id-un' , 'Username'       , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
-   .FORM::TEXT('id-username'  , 'class-username' , [['name', 'value'] , ['username', DOIF(is_null($catch_un),  $username, FUNC_ASSOC)]], FUNC_ASSOC ) 
+    [],
+    []
 
-  ,setElemAttr(['class'],['username_from_group'])
- );  
+  ];
+
+  $user_name        = FORM::LABEL('label-id-un' , 'Username'       , FUNC_ASSOC ) . __BR( FUNC_ASSOC )
+                     .FORM::TEXT('id-username'  , 'class-username' , [['name', 'value'] , ['username', DOIF(is_null($catch_un),  $username, FUNC_ASSOC)]], FUNC_ASSOC ); 
+
+  $user_email_attr  = [
+   
+    [],
+    []
+
+  ];  
+
+  $user_email        = FORM::LABEL('label-id-e'  , 'Email'       , FUNC_ASSOC) . __BR(FUNC_ASSOC)
+                      .FORM::TEXT('id-email'     , 'class-email' , [['name', 'value'] , ['email',  DOIF(is_null($catch_ue), $email, FUNC_ASSOC)  ]], FUNC_ASSOC );
+
+  $user_mobile_attr  = [
+   
+    [],
+    []
+
+  ];  
+
+  $user_mobile        = FORM::LABEL('label-id-m'  , 'Mobile'       , FUNC_ASSOC) . __BR(FUNC_ASSOC)
+                       .FORM::TEXT('id-mobile'    , 'class-mobile' , [['name', 'value'],['mobile', DOIF(is_null($catch_um), $mobile, FUNC_ASSOC) ]], FUNC_ASSOC );
+
+  $user_password_attr = [
+   
+    [],
+    []
+
+  ];  
+
+  $user_password      = FORM::LABEL('label-id-p'   , 'Password'     , FUNC_ASSOC ) . __BR(FUNC_ASSOC)
+                       .FORM::PASSWORD('id-mobile' , 'class-mobile' , [['name'],['password']]  , FUNC_ASSOC );
+
+  $con_password_attr = [
+   
+    [],
+    []
+
+  ];  
+
+  $user_con_password   = FORM::LABEL('label-id-confirm_password' , 'Confirm Password'  ,FUNC_ASSOC) . __BR(FUNC_ASSOC)
+                        .FORM::PASSWORD('id-conPassword'         , 'class-conPassword' , [['name'],['confirm_password']], FUNC_ASSOC );
+
+  $user_submit_btn_attr = [
+   
+    [],
+    []
+
+  ];  
+
+  $user_submit_btn   = FORM::BUTTONS('id-conPassword' , 'class-submit' , [['value'],['Submit']] , FUNC_ASSOC ) 
+                      .FORM::RESET('id-conPassword'   , 'class-submit' , [['value'],['Reset']]  , FUNC_ASSOC ); 
+
+  $registration_form = _xdiv( FUNC_ASSOC ,
+    
+      ELEM('div', $user_name         , $user_name_attr     )
+     .ELEM('div', $user_email        , $user_email_attr    )
+     .ELEM('div', $user_mobile       , $user_mobile_attr   )
+     .ELEM('div', $user_password     , $user_password_attr )
+     .ELEM('div', $user_con_password , $con_password_attr  )
+     .ELEM('div', $user_submit_btn   , $user_submit_btn_attr  )
+
+     ._xp('id-heading-Para',"Already have an account?".ELEM('a','Log in now',setElemAttr(['href'],['login.php'])) , FUNC_ASSOC )
   
- /**
-  *
-  * Defined Input email
-  * @since 04.06.21
-  * @since v1.0
-  *
-  **/ 
- _xdiv('id-email_from_group',
- 
-    FORM::LABEL('label-id-e'  , 'Email'       , FUNC_ASSOC) .__BR(FUNC_ASSOC)
-   .FORM::TEXT('id-email'     , 'class-email' , [['name', 'value'] , ['email',  DOIF(is_null($catch_ue), $email, FUNC_ASSOC)  ]], FUNC_ASSOC ) 
+  );
 
-  ,setElemAttr(['class'],['email_from_group'])
- );
-
- /**
-  *
-  * Defined Input mobile
-  * @since 04.06.21
-  * @since v1.0
-  *
-  **/ 
- _xdiv('id-mobile_from_group',
-
-   FORM::LABEL('label-id-m'  , 'Mobile'       , FUNC_ASSOC) .__BR(FUNC_ASSOC)
-  .FORM::TEXT('id-mobile'    , 'class-mobile' , [['name', 'value'],['mobile', DOIF(is_null($catch_um), $mobile, FUNC_ASSOC) ]], FUNC_ASSOC ) 
-
-  ,setElemAttr(['class'],['mobile_from_group'])
- );
-
-/**
-  *
-  * Defined Input password
-  * @since 04.06.21
-  * @since v1.0
-  *
-  **/ 
- _xdiv('id-password_from_group',
-
-   FORM::LABEL('label-id-p'   , 'Password'     , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
-  .FORM::PASSWORD('id-mobile' , 'class-mobile' , [['name'],['password']]  , FUNC_ASSOC ) 
-
-  ,setElemAttr(['class'],['username_from_group'])
- );
-
-/**
-  *
-  * Defined Input confirm password
-  * @since 04.06.21
-  * @since v1.0
-  *
-  **/ 
- _xdiv('id-cp_from_group',
-
-   FORM::LABEL('label-id-confirm_password' , 'Confirm Password'  ,FUNC_ASSOC) .__BR(FUNC_ASSOC)
-  .FORM::PASSWORD('id-conPassword'         , 'class-conPassword' , [['name'],['confirm_password']], FUNC_ASSOC ) 
-
-  ,setElemAttr(['class'],['username_from_group'])
- );
-
-/**
-  *
-  * Defined Input btn submit
-  * @since 04.06.21
-  * @since v1.0
-  *
-  **/ 
-
-  _xdiv('id-button_from_group',
-
-   FORM::BUTTONS('id-conPassword' , 'class-submit' , [['value'],['Submit']] , FUNC_ASSOC ) 
-  .FORM::RESET('id-conPassword'   , 'class-submit' , [['value'],['Reset']]  , FUNC_ASSOC ) 
-
- ,setElemAttr(['class'],['submit_from_group'])
- );
-
- /**
-  *
-  * Defined Link register form
-  * @since 04.06.21
-  * @since v1.0
-  *
-  **/ 
-  _xP('id-heading-Para',"Already have an account?".ELEM('a','Log in now',setElemAttr(['href'],['login.php'])));
-
-  xFORM(" END Of the form ");
+  echo $registration_form;
+  
+ xFORM(" END Of the form ");

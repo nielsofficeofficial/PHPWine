@@ -3,6 +3,7 @@
 USE \PHPWine\VanillaFlavour\merge\Html;
 USE \PHPWine\VanillaFlavour\optimizer\Html AS Optimzer;
 USE \PHPWine\VanillaFlavour\optimizer\Enhancers AS PHPFileHandler;
+USE \PHPWine\VanillaFlavour\system\Request;
 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
@@ -29,22 +30,20 @@ USE \PHPWine\VanillaFlavour\optimizer\Enhancers AS PHPFileHandler;
  * SOFTWARE.
  *
  * @category   PHPWine\VanillaFlavour
- * @package    Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
+ * @package    Basic Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
  *             Handling Form Validation | Same page CRUD | PHPOptimizer | Advance Form Builder
  *            
  *            
- * @author    nielfernandez <nielsoffice.wordpress.php@gmail.com>
+ * @author    Leinner Zednanref <nielsoffice.wordpress.php@gmail.com>
  * @license   MIT License
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.4
- *
- *
- * @method belongs_to(); 
- * @method KeyFolderPath();  
+ * @version   v1.4.0.0
  *
  */
+ 
+ $request = NEW Request();
 
 /**
   *
@@ -64,9 +63,9 @@ function bring_to(
  )
  {
   
+  global $request;
+
  /**
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
@@ -74,13 +73,12 @@ function bring_to(
    * @method  : $FileEnhance->bring_to(GETFROM(['PATH','F']), 'file',__PHP__, OPTIONAL); "Optional" // REQUIRE | INCLUDES | INCLUDES ONCE | REQUIREONCE DEFAULT
    *
    *
-   *
    **/  
  $Enhancer = new PHPFileHandler();
  
  return method_exists($Enhancer, 'bring_to') ? 
         $Enhancer->bring_to($config, $fileName, $extension, $Optional) : 
-        PERFORM(erorrMessage());
+        PERFORM( $request->erorrMessage() );
 } 
 
 /**
@@ -98,10 +96,9 @@ function view_to(
 
 )
 {
-  
+  global $request;
+
  /**
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
@@ -109,13 +106,12 @@ function view_to(
    * @method  : $FileEnhance->bring_to(GETFROM(['PATH','F']), 'file',__PHP__, OPTIONAL); "Optional" // REQUIRE | INCLUDES | INCLUDES ONCE | REQUIREONCE DEFAULT
    *
    *
-   *
    **/  
   $Enhancer = new PHPFileHandler();
 
   return method_exists($Enhancer, 'view_to') ?  
          $Enhancer->view_to($config, $fileName) : 
-         PERFORM(erorrMessage());
+         PERFORM( $request->erorrMessage());
  
 } 
 
@@ -134,9 +130,9 @@ function send_to(
  )
  {
   
+  global $request;
+
  /**
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
@@ -144,13 +140,12 @@ function send_to(
    * @method  : $FileEnhance->bring_to(GETFROM(['PATH','F']), 'file',__PHP__, OPTIONAL); "Optional" // REQUIRE | INCLUDES | INCLUDES ONCE | REQUIREONCE DEFAULT
    *
    *
-   *
    **/  
  $Enhancer = new PHPFileHandler();
 
  return method_exists($Enhancer, 'send_to') ? 
         $Enhancer->send_to($uri) : 
-        PERFORM(erorrMessage());
+        PERFORM( $request->erorrMessage());
  
 } 
 
@@ -169,11 +164,10 @@ function SET_DIR_PATH(
 
   )
   {
- 
+  
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
@@ -181,13 +175,12 @@ function SET_DIR_PATH(
    * @method  : $FileEnhance->SET_DIR_PATH(['path','dir'])
    *
    *
-   *
    **/  
  $Enhancer = new PHPFileHandler();
  
  return method_exists($Enhancer, 'SET_DIR_PATH') ? 
         $Enhancer->SET_DIR_PATH($uri, $serverHost) : 
-        PERFORM(erorrMessage());
+        PERFORM( $request->erorrMessage());
 
 }
 
@@ -205,17 +198,15 @@ function  GETFROM(
 
  )
  {  
- 
+  
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
    * @package : Static Procedural
    * @method  : $FileEnhance->GETFROM(['path','dir'])
-   *
    *
    *
    **/ 
@@ -227,7 +218,7 @@ function  GETFROM(
 
  return method_exists($Enhancer, 'GETFROM') ? 
         $Enhancer->GETFROM($REAL_PATH, $array_realpath_dir[1]) : 
-        PERFORM(erorrMessage());
+        PERFORM( $request->erorrMessage());
 
 }
 
@@ -241,15 +232,14 @@ function  GETFROM(
 function isbelongs(
 
     array|string $page               = null 
-   ,array|string $GetKeyFolderPath   = null 
+   ,array|string $GetKeyFolderPath   = [] 
 
  )
  {
- 
+  
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
@@ -257,13 +247,13 @@ function isbelongs(
    * @method  : $FileEnhance->belongs_to('index',  4)
    *
    *
-   *
-   **/ 
+   **/  
+
  $Enhancer = new PHPFileHandler();
 
  return method_exists($Enhancer, 'belongs_to') ? 
-        $Enhancer->belongs_to($page, $GetKeyFolderPath) : 
-        PERFORM(erorrMessage());
+        $Enhancer->belongs_to($page, $GetKeyFolderPath = [1,2,3,4,5,6,7,8] ) : 
+        PERFORM($request->erorrMessage());
 
 }
 
@@ -276,24 +266,21 @@ function isbelongs(
   **/
 function getKeyPath() {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
    * @package : Static Procedural
    * @method  : MapFolderPath()
    *
-   *
-   *
    **/ 
  $Enhancer = new PHPFileHandler();
 
  return method_exists($Enhancer, 'GetKeyFolderPath') ? 
         $Enhancer->GetKeyFolderPath() : 
-        PERFORM(erorrMessage());
+        PERFORM( $request->erorrMessage());
 
 }
 
@@ -311,16 +298,14 @@ function __BR(
 )
 {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
    * @package : Static Procedural
    * @method  : BR()
-   *
    *
    *
    **/ 
@@ -330,7 +315,7 @@ function __BR(
 
     $Enhancer->BREAK($optional_assoc) : 
 
-       PERFORM(erorrMessage());
+       PERFORM( $request->erorrMessage());
 
 }
 
@@ -348,16 +333,14 @@ function __HR(
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
    * @package : Static Procedural
    * @method  : HR()
-   *
    *
    *
    **/ 
@@ -367,7 +350,7 @@ function __HR(
 
     $Enhancer->LINE($optional_assoc) :
 
-      PERFORM(erorrMessage());
+      PERFORM( $request->erorrMessage());
 
 }
 
@@ -380,16 +363,14 @@ function __HR(
   **/
 function __space() {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
    * @package : Static Procedural
    * @method  : __space()
-   *
    *
    *
    **/ 
@@ -399,7 +380,7 @@ function __space() {
 
     $Enhancer->SPACE() :
 
-      PERFORM(erorrMessage());
+      PERFORM( $request->erorrMessage());
 
 }
 
@@ -410,23 +391,21 @@ function __space() {
   * @method Defined SetFileEx  
   *
   **/
-function SetFileExT(
+function setFileExT(
 
    $argu
 
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
    * @package : Static Procedural
    * @method  : SetFileEx()
-   *
    *
    *
    **/ 
@@ -436,7 +415,7 @@ function SetFileExT(
 
     $Enhancer->SetFileExtension($argu) :
 
-      PERFORM(erorrMessage());
+      PERFORM( $request->erorrMessage());
 
 }
 
@@ -447,7 +426,7 @@ function SetFileExT(
   * @method Defined SetElemAttr  
   *
   **/
-function SetElemAttr(
+function setElemAttr(
 
     array $attr_type
    ,array $attr_value
@@ -455,16 +434,14 @@ function SetElemAttr(
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
    * @package : Static Procedural
    * @method  : SetElemAttr()
-   *
    *
    *
    **/ 
@@ -474,7 +451,7 @@ function SetElemAttr(
 
     $Enhancer->SetElemAttr($attr_type, $attr_value) : 
 
-       PERFORM(erorrMessage());
+       PERFORM( $request->erorrMessage());
 
 }
 
@@ -493,16 +470,14 @@ function ATTR(
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
    * @package : Static Procedural
    * @method  : ATTR()
-   *
    *
    *
    **/ 
@@ -512,7 +487,7 @@ function ATTR(
 
     $Enhancer->ATTR($tag, $attr) : 
 
-       PERFORM(erorrMessage());
+       PERFORM( $request->erorrMessage());
 
 }
 
@@ -525,8 +500,8 @@ function ATTR(
   **/
 function ELEM(
 
-    string        $elem    =  null
-   ,mixed         $value      =  null
+    string        $elem   =  null
+   ,array|string  $value  =  null
    ,array|string  $attr   =  null
    ,string        $id     =  null
    ,string        $class  =  null
@@ -534,16 +509,14 @@ function ELEM(
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
    * @package : Static Procedural
    * @method  : MODIFIED ELEM() HTML
-   *
    *
    *
    **/ 
@@ -553,7 +526,7 @@ function ELEM(
 
     $Enhancer->ELEM($elem, $value, $attr, $id, $class) : 
 
-      PERFORM(erorrMessage());
+      PERFORM( $request->erorrMessage());
 
 }
 
@@ -573,17 +546,15 @@ function DOELSE(
 
  )
  {
+ 
+  global $request;
 
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
    * @package : Static Procedural
    * @method  : DOELSE()
-   *
    *
    *
    **/ 
@@ -593,7 +564,7 @@ function DOELSE(
 
     $Enhancer->__magicELSE($condition, $if_result, $else_result, $assoc) : 
 
-      PERFORM(erorrMessage());
+      PERFORM( $request->erorrMessage());
 
 }
 
@@ -614,16 +585,14 @@ function DOIF(
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
    * @package : Static Procedural
    * @method  : DOIF()
-   *
    *
    *
    **/ 
@@ -633,7 +602,7 @@ function DOIF(
 
     $Enhancer->__magicIF($condition, $if_result, $assoc) : 
 
-       PERFORM(erorrMessage());
+       PERFORM( $request->erorrMessage());
 
 }
 
@@ -651,16 +620,14 @@ function MERGE(
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
    * @package : Static Procedural
    * @method  : MERGE()
-   *
    *
    *
    **/ 
@@ -670,7 +637,7 @@ function MERGE(
 
     $Enhancer->MERGE($merge) : 
 
-       PERFORM(erorrMessage());
+       PERFORM( $request->erorrMessage());
 
 }
 
@@ -688,17 +655,15 @@ function PERFORM(
 
  )
  {
+  
+  global $request;
 
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
    * @package : Static Procedural
    * @method  : PERFORM()
-   *
    *
    *
    **/ 
@@ -708,7 +673,7 @@ function PERFORM(
 
      $Enhancer->PERFORM($str, $assoc) :
 
-        PERFORM(erorrMessage());
+        PERFORM( $request->erorrMessage());
 
 }
 
@@ -727,16 +692,14 @@ function STRING(
  )
  {
 
+  global $request;
+
   /**
-   *
-   *
-   *
    *
    *
    * @package : PHPFileEnhancer
    * @package : Static Procedural
    * @method  : STRING()
-   *
    *
    *
    **/ 
@@ -746,17 +709,12 @@ function STRING(
 
    $Enhancer->STRING($str, $assoc) : 
 
-     PERFORM(erorrMessage());
+     PERFORM( $request->erorrMessage());
 
 }
 
 
 
-function erorrMessage() {
-
-  return "Class can Extends but cannot be modify" . __BR();
- 
-}
 
 
 

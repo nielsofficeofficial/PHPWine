@@ -1,6 +1,10 @@
 <?php 
- 
- /**
+
+use \PHPWine\VanillaFlavour\System\Validate;
+use \PHPWine\VanillaFlavour\System\Request;
+use \PHPWine\VanillaFlavour\Optimizer\Form;
+
+/**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.0 Cooked by nielsoffice 
  *
  * MIT License
@@ -38,54 +42,42 @@
  *
  */
 
-  $phpWine = new class {
-        
-        public function php_wine(string $requestDependencies) 
-        {
 
-          /**
-            *
-            * Defined Class Dependencies
-            * @since 10.25.21
-            * @since v1.0
-            * 
-            **/ 
-            require dirname(__FILE__) . DIRECTORY_SEPARATOR . $requestDependencies .'.'.'php';
-        }
 
-        public function phpWineLoader() 
-        {        
+ /**
+ * BIOLERPLATE PHPWine / Optimizer
+ * PHPHtml-Optimizer
+ * @since v1.2.0.0
+ * @since 1.22.22
+ **/
 
-          /**
-            *
-            * Defined SPR4 Autoloader
-            * @since 10.25.21
-            * @since v1.0
-            * 
-            **/ 
-            spl_autoload_register(function($class) 
-            {
-            
-                // File name space
-                $systemFileRequest = DIRECTORY_FILE_REQUEST_;
-            
-                // base directory system file
-                $sourceFileRquest  = BASE_DIR_SYSTEM_FILE;                
-                if (strncmp($systemFileRequest, $class, strlen($systemFileRequest)) !== 0) return;
-            
-                // Directory system data files
-                $dataRequest = $sourceFileRquest . str_replace('\\', '/', substr($class, strlen($systemFileRequest))) . _PHP_;
-            
-                // if the file exists, require it
-                (file_exists($dataRequest)) ? require $dataRequest : false;
-            
-            });
+ _div( [['id'],['main-container']] );
+  
+  // My attributes 
+  $attributes = [
+      
+    // attribute key
+    // attribute val
+    [ ],
+    [ ]
 
-        }
-    };
-    
-    // Get Loader Prop
-    $phpWine->php_wine( requestDependencies: 'prop');
-    $phpWine->phpWineLoader();
+  ];
+  
+  $child_container    =  ELEM('h1', 'WLECOME !')
+                        .ELEM('p' , 'Thank you for visiting Us!');
 
+  $boilerplate = _xdiv( 'child-container' ,
+
+    ELEM('div', $child_container , $attributes, 'id-child' , ' class-container ' )
    
+   , attr  :  null
+   , class : 'parent-class'
+   , label : 'END-OF-child-container'
+   , assoc :  FUNC_ASSOC  
+    
+  );
+ 
+  // execution 
+  echo $boilerplate;
+
+ xdiv('END-OF-main-container');

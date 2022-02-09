@@ -30,17 +30,16 @@
  * SOFTWARE.
  *
  * @category   PHPWine\VanillaFlavour
- * @package    Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
+ * @package    Basic Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
  *             Handling Form Validation | Same page CRUD | PHPOptimizer | Advance Form Builder
  *            
  *            
- * @author    nielfernandez <nielsoffice.wordpress.php@gmail.com>
+ * @author    Leinner Zednanref <nielsoffice.wordpress.php@gmail.com>
  * @license   MIT License
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.1.4
- *
+ * @version   v1.4.0.0
  *
  * @method belongs_to(); 
  * @method GetKeyFolderPath(); 
@@ -48,8 +47,8 @@
  * @method deliver_to(); 
  * @method send_to(); 
  * @method view_to();
- * @method SetFileExtension()
- * @method SetElemAttr() 
+ * @method setFileExtension()
+ * @method setElemAttr() 
  * @method BREAK();     
  * @method LINE();  
  * @method SPACE();    
@@ -167,7 +166,7 @@ public function bring_to(
 public function belongs_to(
 
     array|string $thisPage     = null
-   ,array|string $page_array   = null
+   ,array|string $page_array   = [1,2,3,4,5,6,7,8,9] 
 
  )
  {
@@ -217,7 +216,7 @@ public function GetKeyFolderPath() {
  
    return function_exists(__BR__) ? 
 
-      parent::_isTrueBREAK_assoc($assoc) : 
+      parent::is_true_break_assoc($assoc) : 
 
          $this->EnhanceeCoreErrorMsg(); 
  
@@ -280,7 +279,7 @@ public function SPACE() {
 
      return function_exists(__MERGE__) ? 
 
-        $this->_isTrue_SET_Merge($merge) : 
+        $this->is_true_set_merge($merge) : 
 
            $this->EnhanceeCoreErrorMsg();     
  }
@@ -397,7 +396,7 @@ public function SPACE() {
 
      return function_exists(__DOIF__) ? 
 
-       parent::return_method_concat_else( $condition, $if_result, null, $assoc) : 
+       parent::assoc_method_concat_else( $condition, $if_result, null, $assoc) : 
 
           $this->EnhanceeCoreErrorMsg();  
   }
@@ -419,7 +418,7 @@ public function SPACE() {
 
      return function_exists(__PERFORM__) ? 
 
-       parent::_isTrue_SET_STRING($str, $assoc) : 
+       parent::is_true_set_string($str, $assoc) : 
 
          $this->EnhanceeCoreErrorMsg(); 
   }
@@ -441,7 +440,7 @@ public function SPACE() {
 
      return function_exists(__STRING__) ? 
 
-       parent::_isTrue_SET_STRING($str, $assoc) : 
+       parent::is_true_set_string($str, $assoc) : 
 
           $this->EnhanceeCoreErrorMsg(); 
   }
@@ -583,43 +582,42 @@ public function SET_DIR_PATH(
   **/
 private function cpe_xib6_FileHandler_belongs_to($page, $page_file)  {
 
- // INPUT_CURRENT_PAGE_NAME_VALIDATE
- // CHECL_INPUT_IF_IT_IS_AN_ARRAY | IF_TRUE_THEN_RETURN_AS_ARRAY_IF_FALSE_RETURN_AS_SIGNLE_POST
+ # INPUT_CURRENT_PAGE_NAME_VALIDATE
+ # CHECL_INPUT_IF_IT_IS_AN_ARRAY | IF_TRUE_THEN_RETURN_AS_ARRAY_IF_FALSE_RETURN_AS_SIGNLE_POST
  $getMultiPage__ = is_array($page) ? $page : $page; 
 
- // INPUT_CURRENT_PAGE_NAME_VALIDATE
- // CHECL_INPUT_IF_IT_IS_AN_ARRAY | IF_TRUE_THEN_RETURN_AS_ARRAY_IF_FALSE_RETURN_AS_SIGNLE_POST
+ # INPUT_CURRENT_PAGE_NAME_VALIDATE
+ # CHECL_INPUT_IF_IT_IS_AN_ARRAY | IF_TRUE_THEN_RETURN_AS_ARRAY_IF_FALSE_RETURN_AS_SIGNLE_POST
  $getMultiPagesFile__ = is_array($page_file) ? $page_file : $page_file; 
 
- // CHECK_WHICH_PAGE_YOU_ARE_CUURENT_REQUEST
- // THEN_GET_THE_FILE_PAGE
+ # CHECK_WHICH_PAGE_YOU_ARE_CUURENT_REQUEST
+ # THEN_GET_THE_FILE_PAGE
  $checkCurrentPage__ = __SELF_REQUEST__;
    
-   // CHECK_IF_SECOND_PARAM_IS_EQUAL_TO_MapFolderPath_OR___MAP_FOLDER_PATH__THEN_RETURN_FOLDER_MAP
-   // ELSE_RETURN_TRUE_AS_BASE_ON_INT_PARAM_ASSIGNED_TO_BE_TRUE
+   # CHECK_IF_SECOND_PARAM_IS_EQUAL_TO_MapFolderPath_OR___MAP_FOLDER_PATH__THEN_RETURN_FOLDER_MAP
+   # ELSE_RETURN_TRUE_AS_BASE_ON_INT_PARAM_ASSIGNED_TO_BE_TRUE
    if ($page_file === 'GetKeyFolderPath' || $page_file === __GET_KEY_FOLDER_PATH__) {  $this->PERFORM( $this->GetKeyFolderPath() );
       
-       // IF_THE_PAGE_FILE_IS_NULL_OR_EMPTY_THEN_DEFAULT_LEVEL_3
-       // IF_IT_IS_TRUE_RETURN_DEFAULT 
+       # IF_THE_PAGE_FILE_IS_NULL_OR_EMPTY_THEN_DEFAULT_LEVEL_3
+       # IF_IT_IS_TRUE_RETURN_DEFAULT 
      } elseif ( empty($page_file) || $page_file == NULL ) { 
 
         return $checkCurrentPage__[1];   
         
      }  else {
 
-      // CHECK_IF_THE_PATH_IS_IN_ARRAY_THE_IF_TRUE_RETURN_ARRAYS_IF_FALSE_RETURN_SINGLE_PAGE 
-      // REMOVE_PHP_EXTENSION_VALIDATE_FROM_PAGE_PARAM
-      // IF_PARAM_AND_GIVE_IS_EQUAL_TRUE 
+      # CHECK_IF_THE_PATH_IS_IN_ARRAY_THE_IF_TRUE_RETURN_ARRAYS_IF_FALSE_RETURN_SINGLE_PAGE 
+      # REMOVE_PHP_EXTENSION_VALIDATE_FROM_PAGE_PARAM
+      # IF_PARAM_AND_GIVE_IS_EQUAL_TRUE 
       $getData__ = parent::cpe_xib6_FileHandler_MultiPage_array($getMultiPage__, 
 
-        // CHECK_IF_THE_PAGE_IS_IN_ARRAY_THE_IF_TRUE_RETURN_ARRAYS_IF_FALSE_RETURN_SINGLE_PAGE 
+        # CHECK_IF_THE_PAGE_IS_IN_ARRAY_THE_IF_TRUE_RETURN_ARRAYS_IF_FALSE_RETURN_SINGLE_PAGE 
         str_replace( __PHPFILE__ , __EMPTY__ , parent::cpe_xib6_FileHandler_mulipath_array($getMultiPagesFile__, $checkCurrentPage__, $page_file)));
 
       return isset($getData__) ? $getData__ : '';
 
      }
       
-
 
 } // End of Method 
 
