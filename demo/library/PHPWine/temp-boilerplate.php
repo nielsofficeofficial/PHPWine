@@ -58,8 +58,8 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
       
     // attribute key
     // attribute val
-    [ ],
-    [ ]
+    [],
+    []
 
   ];
   

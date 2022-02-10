@@ -8,7 +8,7 @@ use \PHPWine\VanillaFlavour\Optimizer\Enhancers as OptimizerCare;
 
 $Html     = new Optimizer();
 
-_HTML(SetElemAttr(['class','lang'],['no-js','']));
+_HTML(  [['class','lang'],['no-js','']] );
 _HEAD();
 
 ATTR('META', [

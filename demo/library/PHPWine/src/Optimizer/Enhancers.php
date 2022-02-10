@@ -370,7 +370,7 @@ public function SPACE() {
  
       return function_exists(__DOELSE__) ? 
 
-         parent::return_method_concat_else( $condition, $if_result, $else_result, $assoc) : 
+         parent::assoc_method_concat_else( $condition, $if_result, $else_result, $assoc) : 
 
            $this->EnhanceeCoreErrorMsg();      
 
@@ -459,7 +459,7 @@ public function SPACE() {
 public function ATTR(
 
     string $tag 
-   ,array $attr
+   ,array|string $attr
 
  )
  {
@@ -661,12 +661,12 @@ private function cpe_FileHander_hdr($tag, $attr) {
 
      case __CUSTOM_END__:
        
-       parent::cpe_FileJandler_cutom_elem_inline($attr, $tag);
+       parent::file_handler_custom_element_inline($attr, $tag);
        break;  
 
      case __BEGIN_CUSTOM_END__:
        
-       parent::cpe_FileJandler_cutom_elem_closing_tag($attr, $tag);
+       parent::file_handler_custom_element_closing_tag($attr, $tag);
        break;  
 
      case '_xhtml_modify':

@@ -155,7 +155,6 @@ private static array $require_fields = [
 
                               MINLENGTH           => [ 8 , 'Invalid username!' ] ,  
                               CONTAIN_SPECIALCHAR => [ 'Invalid username!' ] 
-
             ]
           
        ],
@@ -313,7 +312,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
    }
 
-  $validationV2::$tooltips_email_tag  = $validationV2::tooltips_validate_tag( 'email' );   
+   $validationV2::$tooltips_email_tag  = $validationV2::tooltips_validate_tag( 'email' );   
     
    if( ( $validationV2::$tooltips_email_tag == VALID_EMAIL ) || is_null( $validationV2::$tooltips_email_tag) ) 
    {

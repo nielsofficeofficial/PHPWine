@@ -9505,6 +9505,17 @@ protected function _setCOMBEGIN() {
    return $this->get_inline__HTML($elem_val, $elem_key, $attr, $id, $class, $assoc);    
 }
 
+
+private function errors_array_handler( array|string $value)
+{
+      
+     // installing request error handler for instances
+     $request    = NEW \PHPWine\VanillaFlavour\System\Request();   
+    
+     $request->CURRENT_VALUE_REQUEST( $value );
+    die;
+}
+
 /**
  *
  * Defined GET CHILD PRINT OPTIMIER ARRAY KEYS FOR | CHILD | ATTR | VALUE | INNER
@@ -9518,21 +9529,29 @@ private function get_value_child_optimizer( $value )
   // PREPARED EMPTY ARRAY
   $next_child = [];
   
-  # CHECK IF THE CHILD KEY IS EXIST IN ARRAY THE IF TRUE 
-  # PRINT THE CHILD ARRAY
- if( is_array( $value ) && $this->check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY,  $value ) )  
- {
-    
+   # CHECK IF THE CHILD KEY IS EXIST IN ARRAY THE IF TRUE 
+   # PRINT THE CHILD ARRAY
+  if( is_array( $value ) && $this->check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY,  $value ) )  
+  {
+  
    # IF THE KEY REQUIRE IS EXIST THEN SELECT THAT KET FOR THE ASSOCIATED OF ARRAY OF DATAS
    # THEN LOOP THE REQUEST DATA ELEMNT HTML
-   if ( $this->check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY ,  $value ) ) :
+   if ( $this->check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY , $value ) ) :
 
-      
+    
+    if( (count( $value['CHILD'] ) == 0 ) || ( count( $value['CHILD'][0] ) == 0 ) || ( count( $value['CHILD'][0]['INNER']) == 0 ) )
+    {
+
+    
+      $this->errors_array_handler( $value );
+      die;
+
+    }
+
      # FOR EACH CHILD VALUE THE LOOP AND RETURN THE DATA
      foreach (  $value[SELF::CHILD_MANDATORY_KEY] as $key => $values ) 
      {
        
-      
        $next_child[] = $this->_setGATE() . $values[0] . ' ';
 
        # CHECK IF THE ATTR IS NOT EMPTY AND IF IT IS ASSOCIATED OF ARRAY ?
@@ -9560,12 +9579,12 @@ private function get_value_child_optimizer( $value )
        
      }
      
-     // COOKED THE INGREDIENTS 
+    // COOKED THE INGREDIENTS 
     return implode("", $next_child);
   
     endif;
 
-  }
+ }
 
 }
 
@@ -9586,7 +9605,8 @@ private function get_value_child_optimizer( $value )
   {
     # IF PLAN OR CHILD IS TRUE ? 
     # EXECUTE THE PLAN BASE ON ARRAY KEY MANDATORY
-    $value = $this->get_value_child_optimizer( $value );
+     
+     $value = $this->get_value_child_optimizer( $value );
 
   } 
   
@@ -10883,7 +10903,7 @@ private function cpe_FileHandler_html_type($attr, $id, $class) {
 
     $Enhancer = NEW \PHPWine\VanillaFlavour\optimizer\Enhancers();
     
-    return $Enhancer->ATTR('_xhtml_modify','doctype').$this->get__HTML('STRUCTURE', 3, $attr, $id, $class);  
+    return $Enhancer->ATTR('_xhtml_modify','doctype').$this->get__HTML('STRUCTURE', 3 , $attr, $id, $class);  
 }
 
 /**
@@ -11202,8 +11222,8 @@ protected function get_values_next_child_inner( $getInner, $array )
        
        # LOOP THE ATTRIBUTE OF ELEMENT HTML TAG
        # BASE ON ARRAY OF DATA
-       foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() . $val . $this->_set_tagSPACER(); }
-      
+       if(  $this->check_key_mandatory_array( SELF::ATTR_MANDATORY_KEY , $values ) ) {  foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() . $val . $this->_set_tagSPACER(); }}
+       
        # APPEND ON THE ENDGATE HTML
        $next_child[] = $this->_setENDGATE();
 
