@@ -49,31 +49,55 @@ $Enhancer = new OptimizerCare();
  * 
  */
 
+
+
   if(  isbelongs(['register', 'contact']) ) {
 
     define('PHPWINE_MINIFIED',  true );
  
    }  
 
-   if( isbelongs(['index']) )              : _xH1("Welcome Home! ");
-     elseif ( isbelongs(['register']) )    : _xH1("Welcome to Register! "); 
-     elseif ( isbelongs(['contact'] ) )    : _xH1("Welcome to Contact! ");
-     elseif ( isbelongs(['login'] )  )     : _xH1( "Welcome to Login! ");
-     elseif ( isbelongs(['dashboard'] )  ) : _xH1( "Welcome to Dashboard! ");
+   if( isbelongs(['index'])              )  : _xH1("Welcome Home!");
+     elseif ( isbelongs(['register'])    )  : _xH1("Welcome to Register!"); 
+     elseif ( isbelongs(['contact'] )    )  : _xH1("Welcome to Contact!");
+     elseif ( isbelongs(['login'] )      )  : _xH1("Welcome to Login!");
+     elseif ( isbelongs(['dashboard'] )  )  : _xH1("Welcome to Dashboard!");
     endif;
 
     $main_menu =  _xUL( FUNC_ASSOC , 
    
-     DOIF( !isbelongs(['index']     )    , ELEM('Li', ELEM('a', 'Home'    , [['href'],['index.php']])    ) ,  FUNC_ASSOC  )
-    .DOIF( !isbelongs(['register']  )    , ELEM('Li', ELEM('a', 'Register', [['href'],['register.php']]) ) ,  FUNC_ASSOC  )
-    .DOIF( !isbelongs(['contact']   )    , ELEM('Li', ELEM('a', 'Contact' , [['href'],['contact.php']])  ) ,  FUNC_ASSOC  )
+     DOIF( !isbelongs(  ['index']     )    , ELEM('Li', ELEM('a', 'Home'    , [['href'],['index.php']])    ) ,  FUNC_ASSOC  )
+    .DOIF( !isbelongs(  ['register']  )    , ELEM('Li', ELEM('a', 'Register', [['href'],['register.php']]) ) ,  FUNC_ASSOC  )
+    .DOIF( !isbelongs(  ['contact']   )    , ELEM('Li', ELEM('a', 'Contact' , [['href'],['contact.php']])  ) ,  FUNC_ASSOC  )
     
-    .DOIF( !isbelongs(['login']     )  && !AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Login'    , [['href'],['login.php']])       ) ,  FUNC_ASSOC  )
-    .DOIF( !isbelongs(['dashboard'] )  &&  AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Dashboard', [['href'],['dashboard.php']])   ) ,  FUNC_ASSOC  )
-    .DOIF( !isbelongs(['logout']    )  &&  AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Logout'   , [['href'],['logout.php']])      ) ,  FUNC_ASSOC  )
+    .DOIF( !isbelongs(  ['login']     )  && !AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Login'    , [['href'],['login.php']])       ) ,  FUNC_ASSOC  )
+    .DOIF( !isbelongs(  ['dashboard'] )  &&  AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Dashboard', [['href'],['dashboard.php']])   ) ,  FUNC_ASSOC  )
+    .DOIF( !isbelongs(  ['logout']    )  &&  AUTH::IS_LOGGEDIN()  , ELEM('Li', ELEM('a', 'Logout'   , [['href'],['logout.php']])      ) ,  FUNC_ASSOC  )
 
     , [['a'],['b']], 'MyClass', ' This is it ! ' );
 
-    echo ($main_menu) ? $main_menu : false ;
+    echo ( $main_menu ) ? $main_menu : false ;
 
-  
+    $array  = [ 'CHILD' => [ 
+         
+
+      ['div' , 'ATTR'  => ['id'=> '_id'] 
+             , 'VALUE' => ['HELLO']
+             , 'INNER' => [ 
+             
+               [ 'div' , 'ATTR'  => ['id'=> '_id'] , 'VALUE' => ['HELLO'] ],
+               [ 'p' ]
+             
+            ]
+      ],
+
+      ['div'],
+      ['div'] 
+
+      ]
+      
+  ];
+
+  _xdiv('test_id', $array  );
+     
+   
