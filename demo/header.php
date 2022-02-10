@@ -78,26 +78,4 @@ $Enhancer = new OptimizerCare();
 
     echo ( $main_menu ) ? $main_menu : false ;
 
-    $array  = [ 'CHILD' => [ 
-         
-
-      ['div' , 'ATTR'  => ['id'=> '_id'] 
-             , 'VALUE' => ['HELLO']
-             , 'INNER' => [ 
-             
-               [ 'div' , 'ATTR'  => ['id'=> '_id'] , 'VALUE' => ['HELLO'] ],
-               [ 'p' ]
-             
-            ]
-      ],
-
-      ['div'],
-      ['div'] 
-
-      ]
-      
-  ];
-
-  _xdiv('test_id', $array  );
-     
    

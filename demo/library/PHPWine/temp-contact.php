@@ -308,7 +308,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
        ELEM('li', 'Not less than 8 Characters'             , $first_child_attr  ) 
       .ELEM('li', 'Must have atleast 1 Special Character'  , $second_child_attr )
       
-      ,FUNC_ASSOC );
+    ,FUNC_ASSOC );
 
    }
 

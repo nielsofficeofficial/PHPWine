@@ -9505,17 +9505,6 @@ protected function _setCOMBEGIN() {
    return $this->get_inline__HTML($elem_val, $elem_key, $attr, $id, $class, $assoc);    
 }
 
-
-private function errors_array_handler( array|string $value)
-{
-      
-     // installing request error handler for instances
-     $request    = NEW \PHPWine\VanillaFlavour\System\Request();   
-    
-     $request->CURRENT_VALUE_REQUEST( $value );
-    die;
-}
-
 /**
  *
  * Defined GET CHILD PRINT OPTIMIER ARRAY KEYS FOR | CHILD | ATTR | VALUE | INNER
@@ -9597,9 +9586,6 @@ private function get_value_child_optimizer( $value )
   **/
  private function is_true_assoc_element_inline($elem_val, $elem_key, $value, $attr, $id, $class, $label, $assoc) {
   
-  // installing request error handler for instances
-  $request    = NEW \PHPWine\VanillaFlavour\System\Request();
- 
   # CHECK IF THE VALUE IS ARRAY AND MANDATORY KEY IS EXIST THEN CHILD KEY SET
   if ( is_array( $value ) && $this->check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY,  $value )  ) 
   {
@@ -9615,7 +9601,7 @@ private function get_value_child_optimizer( $value )
   {
   
     // EXECUTE THE PLAN
-    $request->CURRENT_VALUE_REQUEST( $value );
+    $this->errors_array_handler( $value );
     die;
 
   } 
@@ -10054,11 +10040,10 @@ private function get_value_child_optimizer( $value )
       *
       **/     
     $this->PERFORM( $this->_isJStrue($attr, $id, $class) );
-   # $this->PERFORM(   $this->_getxTAG()  . $this->_getBREAK()   );
 
-   if( defined('PHPWINE_BEAUTIFY') == true && PHPWINE_BEAUTIFY !== false  )  : $this->PERFORM(   $this->_getxTAG() ); 
-   else                                                                      : $this->PERFORM(   $this->_getxTAG()  . $this->_getBREAK());
-  endif;
+    if( defined('PHPWINE_BEAUTIFY') == true && PHPWINE_BEAUTIFY !== false  ) : $this->PERFORM( $this->_getxTAG() ); 
+    else                                                                     : $this->PERFORM( $this->_getxTAG()  . $this->_getBREAK());
+   endif;
 
   }
 
@@ -11369,6 +11354,23 @@ protected function cpe_ixb6_FielEnhancers_do_swicth_path($REAL_PATH=null, $GET_P
 private function check_key_mandatory_array( string $key_array, array $value_array  )
 {
   return array_key_exists( $key_array,  $value_array );
+}
+
+
+/**
+  * @method private function errors_array_handler
+  * @since 02.09.2022
+  * @since v1.2.0.1
+  *
+  **/
+private function errors_array_handler( array|string $value)
+{
+      
+     // installing request error handler for instances
+     $request    = NEW \PHPWine\VanillaFlavour\System\Request();   
+    
+     $request->CURRENT_VALUE_REQUEST( $value );
+    die;
 }
 
 /**
