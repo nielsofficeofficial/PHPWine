@@ -4,11 +4,11 @@
  use \PHPWine\VanillaFlavour\system\Auth;  
  
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.2 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.3 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.2 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.3 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -36,13 +36,67 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.2 
- * @since     02.09.2022
+ * @version   v1.2.0.3 
+ * @since     02.13.2022
  *
  */
 
 trait RequestSession
 {
+
+  /**
+    * @var 
+    * @property 
+    * defined $username on input form tag
+    * @since v1.2.0.0 
+    * @since 02.12.20222
+    **/  
+    protected static string|null  $username;
+
+  /**
+    * @var 
+    * @property 
+    * defined $email on input form tag
+    * @since v1.2.0.0 
+    * @since 02.12.20222
+    **/ 
+    protected static string|null  $email;
+
+  /**
+    * @var 
+    * @property 
+    * defined $mobile on input form tag
+    * @since v1.2.0.0 
+    * @since 02.12.20222
+    **/ 
+    protected static string|null  $mobile;
+
+  /**
+    * @var 
+    * @property 
+    * defined $hashed_password on input form tag
+    * @since v1.2.0.0 
+    * @since 02.12.20222
+    **/ 
+    protected static string|null  $hashed_password;
+
+  /**
+    * @var 
+    * @property 
+    * defined $id on input form tag
+    * @since v1.2.0.0 
+    * @since 02.12.20222
+    **/ 
+    protected static string|null  $id;
+
+  /**
+    * @var 
+    * @property 
+    * defined $created_at on input form tag
+    * @since v1.2.0.0 
+    * @since 02.12.20222
+    **/ 
+    protected static string|null  $created_at;
 
 /**
   *
@@ -53,20 +107,15 @@ trait RequestSession
  **/
  public static function SYSTEMQUERY(string $USER_REDIRECT, string $NOTASSOCIATED_CREDENTIAL, $PASSWORD_HASCONTAINS, $stmt)
  {
-  
-    // Initialize bind going to be empty variables
-   $username = $email = $mobile = $hashed_password = $id = $created_at  = "";
 
   /**
-  *
-  *
-  * @param _1 $username
-  * @param _2 $email
-  * @param _3 $mobile
-  * @param _4 $hashed_password
-  * @param AUTH::BIND( $connection, array $bind_user_data = [] ); 
-  * @param Default|CaseSensitive = ["username","email","mobile","password"...etc...]
-  * @param 
+   * @param _1 $username
+   * @param _2 $email
+   * @param _3 $mobile
+   * @param _4 $hashed_password
+   * @param AUTH::BIND( $connection, array $bind_user_data = [] ); 
+   * @param Default|CaseSensitive = ["username","email","mobile","password"...etc...]
+   * @param 
      AUTH::RETURNSQL('users',[
         "username"
         ,"email"
@@ -79,14 +128,14 @@ trait RequestSession
   *
   *
   **/
-  $stmt->bind_result($username, $email, $mobile, $hashed_password, $id, $created_at);
+  $stmt->bind_result(SELF::$username, SELF::$email, SELF::$mobile, SELF::$hashed_password, SELF::$id, SELF::$created_at);
   
   if($stmt->fetch()) : 
         
         /**
          * @param _execute veryfied password
         **/
-        if(password_verify($PASSWORD_HASCONTAINS, $hashed_password)) : 
+        if(password_verify($PASSWORD_HASCONTAINS, self::$hashed_password)) : 
          
         /**
          *
@@ -97,7 +146,7 @@ trait RequestSession
          **/ 
          $getStamp = AUTH::REMEMBERME( REMEMBER , USERNAME , PASSWORD
 
-          ,$username
+          ,self::$username
           ,$PASSWORD_HASCONTAINS
           ,$timeStamp = [
 
@@ -116,7 +165,7 @@ trait RequestSession
                            
          // ADD YOUR SESSION DATA GOES HERE
          $_SESSION["AUTH"]       = true;
-         $_SESSION["id"]         = $id;
+         $_SESSION["id"]         = SELF::$id;
     
              
     

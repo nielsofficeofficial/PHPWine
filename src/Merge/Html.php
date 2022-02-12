@@ -5,11 +5,11 @@
  USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileCare;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.3 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.3 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -28,9 +28,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * @category   PHPWine\VanillaFlavour
- * @package    Basic Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
- *             Handling Form Validation | Same page CRUD | PHPOptimizer | Advance Form Builder
+ * @category   PHPLibrary PHPWine\VanillaFlavour
+ * @package    PHPHtml-Optimizer | CodeDesigner/Enhancer | Advance Form Builder | Handling Form Validation | Form Validation v2 | BASIC-Authentication | HtmlMinifier
  *            
  *            
  * @author    Leinner Zednanref <nielsoffice.wordpress.php@gmail.com>
@@ -38,21 +37,12 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.4.0.0
+ * @version   v1.2.0.3 
+ * @since     02.13.2022
  *
  * noHTML dynamic static structure _
  * non/WITH CLASS|METHOD|FUNCTION ASSOCIATED  
  *
- * @method html::BREAK(); 
- * @method html::LINE();   
- * @method html::STRING();     
- * @method html::H1();
- * @method html::H3();
- * @method html::H2();
- * @method html::H4();
- * @method html::H5();
- * @method html::H6();
- * @method html::DIV();
  * @method html::P();
  * @method html::BUTTON();
  * @method html::A();
@@ -75,7 +65,6 @@
  * @method html::LABEL();
  * @method html::DATALIST();
  * @method html::DETAILS();
- * @method html::SUMMARY();
  * @method html::DIALOG();
  * @method html::OPTION();
  * @method html::FIGURE();
@@ -135,117 +124,118 @@
  * @method html::HEAD();
  * @method html::TITLE();
  * @method html::BODY();
- * @method html::noHTML();
  *
  * noHTML dynamic structure 
  * w/ CLASS|METHOD|FUNCTION ASSOCIATED
  *
- * @method html::ELEMENT('H1');
- * @method html::ELEMENT('H2');
- * @method html::ELEMENT('H3');
- * @method html::ELEMENT('H4');
- * @method html::ELEMENT('H5');
- * @method html::ELEMENT('H6');
- * @method html::ELEMENT('H1');
- * @method html::ELEMENT('BUTTON');
- * @method html::ELEMENT('A');
- * @method html::ELEMENT('IFRAME');
- * @method html::ELEMENT('MAIN');
- * @method html::ELEMENT('NAV');
- * @method html::ELEMENT('SELECT');
- * @method html::ELEMENT('FORM');
- * @method html::ELEMENT('PICTURE');
- * @method html::ELEMENT('SECTION');
- * @method html::ELEMENT('TEXTAREA');
- * @method html::ELEMENT('AUDIO');
- * @method html::ELEMENT('VIDEO');
- * @method html::ELEMENT('ADDRESS');
- * @method html::ELEMENT('COLGROUP');
- * @method html::ELEMENT('BDI');
- * @method html::ELEMENT('BDO');
- * @method html::ELEMENT('CAPTION');
- * @method html::ELEMENT('LABEL');
- * @method html::ELEMENT('DATALIST');
- * @method html::ELEMENT('DETAILS');
- * @method html::ELEMENT('SUMMARY');
- * @method html::ELEMENT('DIALOG');
- * @method html::ELEMENT('OPTION');
- * @method html::ELEMENT('FIGURE');
- * @method html::ELEMENT('FIGCAPTION');
- * @method html::ELEMENT('METER');
- * @method html::ELEMENT('OBJECT');
- * @method html::ELEMENT('OPTGROUP');
- * @method html::ELEMENT('OUTPUT');
- * @method html::ELEMENT('PROGRESS');
- * @method html::ELEMENT('SVG');
- * @method html::ELEMENT('TEMPLATE');
- * @method html::ELEMENT('TIME');
- * @method html::ELEMENT('VAR');
- * @method html::ELEMENT('UL');
- * @method html::ELEMENT('OL');
- * @method html::ELEMENT('LI');
- * @method html::ELEMENT('TABLE');
- * @method html::ELEMENT('TR');
- * @method html::ELEMENT('TD');
- * @method html::ELEMENT('TH');
- * @method html::ELEMENT('LEGEND');
- * @method html::ELEMENT('FIELDSET');
- * @method html::ELEMENT('TBODY');
- * @method html::ELEMENT('TFOOT');
- * @method html::ELEMENT('THEAD');
- * @method html::ELEMENT('SPAN');
- * @method html::ELEMENT('EM');
- * @method html::ELEMENT('B');
- * @method html::ELEMENT('I');
- * @method html::ELEMENT('SMALL');
- * @method html::ELEMENT('MARQUEE');
- * @method html::ELEMENT('CENTER');
- * @method html::ELEMENT('CODE');
- * @method html::ELEMENT('ABBR');
- * @method html::ELEMENT('MAP');
- * @method html::ELEMENT('CANVAS');
- * @method html::ELEMENT('CITE');
- * @method html::ELEMENT('DATA');
- * @method html::ELEMENT('DL');
- * @method html::ELEMENT('DT');
- * @method html::ELEMENT('DD');
- * @method html::ELEMENT('INS');
- * @method html::ELEMENT('DEL');
- * @method html::ELEMENT('KBD');
- * @method html::ELEMENT('MARK');
- * @method html::ELEMENT('PRE');
- * @method html::ELEMENT('RT');
- * @method html::ELEMENT('RP');
- * @method html::ELEMENT('S');
- * @method html::ELEMENT('SAMP');
- * @method html::ELEMENT('STRONG');
- * @method html::ELEMENT('SUB');
- * @method html::ELEMENT('SUP');
- * @method html::ELEMENT('WBR');
- * @method html::ELEMENT('Q');
- * @method html::ELEMENT('HEAD');
- * @method html::ELEMENT('TITLE');
- * @method html::ELEMENT('BODY');
- * @method html::ELEMENT('HTML');
- * @method html::ELEMENT('BLOCKQUOTE');
+ * @method echo html::ELEMENT('H1' );
+ * @method echo html::ELEMENT('H2');
+ * @method echo html::ELEMENT('H3');
+ * @method echo html::ELEMENT('H4');
+ * @method echo html::ELEMENT('H5');
+ * @method echo html::ELEMENT('H6');
+ * @method echo html::ELEMENT('H1');
+ * @method echo html::ELEMENT('DIV');
+ * @method echo html::ELEMENT('BUTTON');
+ * @method echo html::ELEMENT('A');
+ * @method echo html::ELEMENT('IFRAME');
+ * @method echo html::ELEMENT('MAIN');
+ * @method echo html::ELEMENT('NAV');
+ * @method echo html::ELEMENT('SELECT');
+ * @method echo html::ELEMENT('FORM');
+ * @method echo html::ELEMENT('PICTURE');
+ * @method echo html::ELEMENT('SECTION');
+ * @method echo html::ELEMENT('TEXTAREA');
+ * @method echo html::ELEMENT('AUDIO');
+ * @method echo html::ELEMENT('VIDEO');
+ * @method echo html::ELEMENT('ADDRESS');
+ * @method echo html::ELEMENT('COLGROUP');
+ * @method echo html::ELEMENT('BDI');
+ * @method echo html::ELEMENT('BDO');
+ * @method echo html::ELEMENT('CAPTION');
+ * @method echo html::ELEMENT('LABEL');
+ * @method echo html::ELEMENT('DATALIST');
+ * @method echo html::ELEMENT('DETAILS');
+ * @method echo html::ELEMENT('SUMMARY');
+ * @method echo html::ELEMENT('DIALOG');
+ * @method echo html::ELEMENT('OPTION');
+ * @method echo html::ELEMENT('FIGURE');
+ * @method echo html::ELEMENT('FIGCAPTION');
+ * @method echo html::ELEMENT('METER');
+ * @method echo html::ELEMENT('OBJECT');
+ * @method echo html::ELEMENT('OPTGROUP');
+ * @method echo html::ELEMENT('OUTPUT');
+ * @method echo html::ELEMENT('PROGRESS');
+ * @method echo html::ELEMENT('SVG');
+ * @method echo html::ELEMENT('TEMPLATE');
+ * @method echo html::ELEMENT('TIME');
+ * @method echo html::ELEMENT('VAR');
+ * @method echo html::ELEMENT('UL');
+ * @method echo html::ELEMENT('OL');
+ * @method echo html::ELEMENT('LI');
+ * @method echo html::ELEMENT('TABLE');
+ * @method echo html::ELEMENT('TR');
+ * @method echo html::ELEMENT('TD');
+ * @method echo html::ELEMENT('TH');
+ * @method echo html::ELEMENT('LEGEND');
+ * @method echo html::ELEMENT('FIELDSET');
+ * @method echo html::ELEMENT('TBODY');
+ * @method echo html::ELEMENT('TFOOT');
+ * @method echo html::ELEMENT('THEAD');
+ * @method echo html::ELEMENT('SPAN');
+ * @method echo html::ELEMENT('EM');
+ * @method echo html::ELEMENT('B');
+ * @method echo html::ELEMENT('I');
+ * @method echo html::ELEMENT('SMALL');
+ * @method echo html::ELEMENT('MARQUEE');
+ * @method echo html::ELEMENT('CENTER');
+ * @method echo html::ELEMENT('CODE');
+ * @method echo html::ELEMENT('ABBR');
+ * @method echo html::ELEMENT('MAP');
+ * @method echo html::ELEMENT('CANVAS');
+ * @method echo html::ELEMENT('CITE');
+ * @method echo html::ELEMENT('DATA');
+ * @method echo html::ELEMENT('DL');
+ * @method echo html::ELEMENT('DT');
+ * @method echo html::ELEMENT('DD');
+ * @method echo html::ELEMENT('INS');
+ * @method echo html::ELEMENT('DEL');
+ * @method echo html::ELEMENT('KBD');
+ * @method echo html::ELEMENT('MARK');
+ * @method echo html::ELEMENT('PRE');
+ * @method echo html::ELEMENT('RT');
+ * @method echo html::ELEMENT('RP');
+ * @method echo html::ELEMENT('S');
+ * @method echo html::ELEMENT('SAMP');
+ * @method echo html::ELEMENT('STRONG');
+ * @method echo html::ELEMENT('SUB');
+ * @method echo html::ELEMENT('SUP');
+ * @method echo html::ELEMENT('WBR');
+ * @method echo html::ELEMENT('Q');
+ * @method echo html::ELEMENT('HEAD');
+ * @method echo html::ELEMENT('TITLE');
+ * @method echo html::ELEMENT('BODY');
+ * @method echo html::ELEMENT('HTML');
+ * @method echo html::ELEMENT('BLOCKQUOTE');
  *
  * noHTML dynamic static structure 
  * non/WITH CLASS|METHOD|FUNCTION ASSOCIATED noHTML Form no x tag
  * 
- * @method html::ELEM('my_input','INPUT');
- * @method html::ELEM('my_track','track');
- * @method html::ELEM('my_circle','circle');
- * @method html::ELEM('my_param','param');
- * @method html::ELEM('my_meta','meta');
- * @method html::ELEM('my_link','link');
- * @method html::ELEM('my_img','img');
- * @method html::ELEM('my_embed','embed');
- * @method html::ELEM('my_option','option');
- * @method html::ELEM('my_col','col');
- * @method html::ELEM('my_base','base');
- * @method html::ELEM('my_aside','aside');
- * @method html::ELEM('my_area','area');
- * @method html::ELEM('my_DOCTYPE','DOCTYPE');
+ * Deprecated @since v1.2.0.3
+ * # html::ELEM();
+ * # html::ELEM();
+ * # html::ELEM();
+ * # html::ELEM();
+ * # html::ELEM();
+ * # html::ELEM();
+ * # html::ELEM();
+ * # html::ELEM();
+ * # html::ELEM();
+ * # html::ELEM();
+ * # html::ELEM();
+ * # html::ELEM();
+ * # html::ELEM();
+ * # html::ELEM();
  *  
  * noHTML static structure non CLASS|METHOD|FUNCTION ASSOCIATED
  * noHTML static structure w/ closing tag
@@ -426,10 +416,6 @@
  * @method html::xHEAD();
  * @method html::_TITLE();
  * @method html::xTITLE();
- * @method html::_BODY();``
- * @method html::xBODY();
- * @method html::_noHTML();
- * @method html::xnoHTML();
  *
  */
 
@@ -515,6 +501,51 @@ static private $exSymbol;
   * minify optimized html attribute 
   **/
 static private $str;
+
+/**
+  * @var 
+  * @property ARRAY_KEY_CHILD
+  * defined array key to CHILD Enhancer/Optimizer quick child
+  * @since v1.2.0.0 
+  * @since 02.02.2022
+  **/
+  CONST CHILD_MANDATORY_KEY = 'CHILD';
+
+  /**
+    * @var 
+    * @property ARRAY_KEY_ATTR
+    * defined array key to CHILD Enhancer/Optimizer quick child
+    * @since v1.2.0.0 
+    * @since 02.02.2022
+    **/
+  CONST ATTR_MANDATORY_KEY  = 'ATTR';
+  
+  /**
+    * @var 
+    * @property ARRAY_KEY_INNER
+    * defined array key to CHILD Enhancer/Optimizer quick child
+    * @since v1.2.0.0 
+    * @since 02.02.2022
+    **/
+  CONST INNER_MANDATORY_KEY = 'INNER';
+  
+  /**
+    * @var 
+    * @property ARRAY_KEY_VALUE
+    * defined array key to CHILD Enhancer/Optimizer quick child
+    * @since v1.2.0.0 
+    * @since 02.02.2022
+    **/
+  CONST VALUE_MANDATORY_KEY = 'VALUE';
+  
+  /**
+    * @var 
+    * @property ARRAY_KEY_VALUE
+    * defined array key to CHILD Enhancer/Optimizer quick child
+    * @since v1.2.0.0 
+    * @since 02.02.2022
+    **/
+    CONST PARENT_MANDATORY_KEY = 'PARENT';
 
 /**
   * @var @property Array of data 
@@ -9017,6 +9048,146 @@ static private function return_inline_element($elem_val, $elem_key, $attr, $id, 
 }
 
 /**
+ *
+ * Defined SAVE SECONDARY FUNCTION PHP GET ARRAY KEY 
+ * @since 02.03.2022
+ * @since v1.2.0.0
+ *
+**/
+static private function check_key_mandatory_array( string $key_array, array $value_array  )
+{
+  return array_key_exists( $key_array,  $value_array );
+}
+
+static private function get_value_child_optimizer( $value )
+{
+  
+  // PREPARED EMPTY ARRAY
+  $next_child = [];
+  
+   # CHECK IF THE CHILD KEY IS EXIST IN ARRAY THE IF TRUE 
+   # PRINT THE CHILD ARRAY
+  if( is_array( $value ) && self::check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY,  $value ) )  
+  {
+  
+   # IF THE KEY REQUIRE IS EXIST THEN SELECT THAT KET FOR THE ASSOCIATED OF ARRAY OF DATAS
+   # THEN LOOP THE REQUEST DATA ELEMNT HTML
+   if ( self::check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY , $value ) ) :
+    
+    # SANITIZED ARRAY CHILD IF ZERO OR EMPTY CHILD !
+    if( (count( $value[SELF::CHILD_MANDATORY_KEY] ) == 0 ) || ( count( $value[SELF::CHILD_MANDATORY_KEY][0] ) == 0 ) )
+    {    
+        
+      self::errors_array_handler( $value );
+      die;
+
+      # SANITIZED ARRAY INNER AND ITS CHILD IF ZERO OR EMPTY CHILD !
+      if( count( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY] ) == 0  ) { self::errors_array_handler( $value ); }   
+
+    }
+
+     # FOR EACH CHILD VALUE THE LOOP AND RETURN THE DATA
+     foreach (  $value[SELF::CHILD_MANDATORY_KEY] as $key => $values ) 
+     {
+       
+       $next_child[] = self::_setGATE() . $values[0] . ' ';
+
+       # CHECK IF THE ATTR IS NOT EMPTY AND IF IT IS ASSOCIATED OF ARRAY ?
+       # THEN SINCE ATTR IS TYPE OF MASTER KEY THEN LOOP IT AS CUSTOM ATTR HTML ELEM TAGS
+       if (  self::check_key_mandatory_array( SELF::ATTR_MANDATORY_KEY ,  $values ) ) 
+       {
+           
+          # PROCESSING OF LOOPING
+          foreach ($values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) 
+          {
+          
+           $next_child[] = self::_set_tagSPACER() . $attr . self::_setES() . $val . self::_set_tagSPACER();     
+                         
+
+          }
+                             
+       }
+       
+       # SET UP THE NEXT CHILD HTML ELEMENTS # GET THE VALUE NEXT CHILD
+       # GET THE NEXT CHILD INNER            # PRINT THE ATTRIBUITE ELEMEN TAG
+       $next_child[] = self::_setENDGATE()
+                     . self::get_values_next_child(       SELF::VALUE_MANDATORY_KEY , $values )
+                     . self::get_values_next_child_inner( SELF::INNER_MANDATORY_KEY , $values )
+                     . self::_setGATE().self::_setENDS() . $values[0] . self::_setENDGATE();
+       
+     }
+     
+    // COOKED THE INGREDIENTS 
+    return implode("", $next_child);
+  
+    endif;
+
+ }
+
+}
+
+static protected function get_values_next_child_inner( $getInner, $array )
+{
+   // set an emtpy array for tag implode
+   $next_child = [];
+
+   # IF THE KEY REQUIRE IS EXIST THEN SELECT THAT KET FOR THE ASSOCIATED OF ARRAY OF DATAS
+   # THEN LOOP THE REQUEST DATA ELEMNT HTML
+ if ( self::check_key_mandatory_array( $getInner , $array ) )
+  {
+    
+    # LOOP THE ARRAY WITH DATA INTO HTML ELEMENT TAGS
+    # GET THE VALUE OF THE ARRAY KEY        
+    foreach ($array[$getInner] as $key => $values) 
+    {
+
+       // APPENED CHILD 
+       $next_child[] = self::_setGATE() . $values[0] . ' ';
+       
+       # LOOP THE ATTRIBUTE OF ELEMENT HTML TAG
+       # BASE ON ARRAY OF DATA
+       if(  self::check_key_mandatory_array( SELF::ATTR_MANDATORY_KEY , $values ) ) {  foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = self::_set_tagSPACER() . $attr . self::_setES() . $val . self::_set_tagSPACER(); }}
+       
+       # APPEND ON THE ENDGATE HTML
+       $next_child[] = self::_setENDGATE();
+
+       # GET THE VALUE IF IS HAS SET
+       if ( self::check_key_mandatory_array( SELF::VALUE_MANDATORY_KEY ,  $values  ) ) { $next_child[] = implode("",  $values[SELF::VALUE_MANDATORY_KEY] ); }
+       
+       # CLOSE THE HTML ELEMENT TAG
+       $next_child[] = self::_setGATE().self::_setENDS() . $values[0] . self::_setENDGATE();
+
+   }  
+  
+  // COOKED AND DESIGNATE THE DATA REQUEST  
+  return implode("", $next_child);
+       
+ }
+  
+} 
+
+static protected function get_values_next_child($valueKey,  $array)
+{
+   
+  // CHECK IF THE KEY IS EXISTING THEN IMPLODE !
+  if (array_key_exists($valueKey,  $array ) ) {
+       
+      return implode("", $array[$valueKey] );
+
+  }
+
+}
+
+static private function errors_array_handler( array|string $value)
+{
+      
+     // installing request error handler for instances
+     $request    = NEW \PHPWine\VanillaFlavour\System\Request();   
+    
+     $request->CURRENT_VALUE_REQUEST( $value );
+    die;
+}
+/**
   *
   * @method private function noHTML
   * @static @private  Method Defined  if TRUE ELEMENT TAG noHTML  
@@ -9025,6 +9196,36 @@ static private function return_inline_element($elem_val, $elem_key, $attr, $id, 
   **/
 static private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label, $assoc) {
     
+   # CHECK IF THE VALUE IS ARRAY AND MANDATORY KEY IS EXIST THEN CHILD KEY SET
+   if ( is_array( $value ) && self::check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY,  $value )  ) 
+   {
+     # IF PLAN OR CHILD IS TRUE ? 
+     # EXECUTE THE PLAN BASE ON ARRAY KEY MANDATORY
+      
+      $value = self::get_value_child_optimizer( $value );
+ 
+   } 
+   
+   # IF THAT IS JUST AN ARRRAY OF DATA THEN
+   elseif( is_array($value) ) 
+   {
+   
+     // EXECUTE THE PLAN
+     self::errors_array_handler( $value );
+     die;
+ 
+   } 
+    
+    # ELSE VALUE RETURN AS VALUE AS IT IS SET AS STRING !
+    else {
+    
+    # OPTIMIZED THE VALUE ON THE PLAN !
+    $value = $value;
+ 
+   }
+ 
+
+
   /*
    * PHPWine @since version 1.1.2 
    * @since 11.06.2021  
@@ -9044,7 +9245,7 @@ static private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value
        # IF_THE_ATTRTIBUTE_SET_AS_FUNCTION_ASSOCIATED_THEN_RETURN_APPROPRIATE
        # DEFINED_ATTRIBUTE_AS_NULL
 
-      !is_array($attr) &&  ( $attr  === FUNC_ASSOC || $attr  === CLASS_ASSOC || $attr  === METHOD_ASSOC ) 
+       ( !is_array($attr)  || !is_null($attr) || !empty($attr) ) &&  ( $attr  === FUNC_ASSOC || $attr  === CLASS_ASSOC || $attr  === METHOD_ASSOC )  
       
       ) :  
 
@@ -9105,8 +9306,8 @@ static private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value
   # CHECK_IF_THE_PARAM_REQUIRED_IS_NOT_NULL
   # IF_IT_IS_NULL_RETURN_FLASE  
   elseif ( 
-    
-       !is_array( $attr ) && ( $attr  !== FUNC_ASSOC || $attr  !== CLASS_ASSOC || $attr  !== METHOD_ASSOC  ) 
+     
+    is_array( $attr ) && ( $attr  !== FUNC_ASSOC || $attr  !== CLASS_ASSOC || $attr  !== METHOD_ASSOC)    
   
        )   :
       
@@ -9225,6 +9426,34 @@ static private function _elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $
      return $return_elementINLINE  = self::new_get_xHTML($elem_val, $elem_key, $label); 
 
    } else {
+
+      # CHECK IF THE VALUE IS ARRAY AND MANDATORY KEY IS EXIST THEN CHILD KEY SET
+      if ( is_array( $value ) && self::check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY,  $value )  ) 
+      {
+        # IF PLAN OR CHILD IS TRUE ? 
+        # EXECUTE THE PLAN BASE ON ARRAY KEY MANDATORY
+         
+         $value = self::get_value_child_optimizer( $value );
+    
+      } 
+      
+      # IF THAT IS JUST AN ARRRAY OF DATA THEN
+      elseif( is_array($value) ) 
+      {
+      
+        // EXECUTE THE PLAN
+        self::errors_array_handler( $value );
+        die;
+    
+      } 
+       
+       # ELSE VALUE RETURN AS VALUE AS IT IS SET AS STRING !
+       else {
+       
+       # OPTIMIZED THE VALUE ON THE PLAN !
+       $value = $value;
+    
+      }
 
      # IF_INLINE_ELEMENT_IS_EQUAL_NEW_ELEMENT_AND_TRUE_THE_RETURN_ECHO_STATIC_noHTML
      # RETURN_GET___HTML_METHOD_INCLUDED_ 
