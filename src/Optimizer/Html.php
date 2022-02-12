@@ -3,11 +3,11 @@
   namespace PHPWine\VanillaFlavour\optimizer;
   
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.2 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.3 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.2 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.3 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -35,8 +35,8 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.2 
- * @since     02.09.2022
+ * @version   v1.2.0.3 
+ * @since     02.13.2022
  * 
  * 
  * noHTML dynamic  structure 
@@ -808,6 +808,15 @@ CONST INNER_MANDATORY_KEY = 'INNER';
   * @since 02.02.2022
   **/
 CONST VALUE_MANDATORY_KEY = 'VALUE';
+
+/**
+  * @var 
+  * @property ARRAY_KEY_VALUE
+  * defined array key to CHILD Enhancer/Optimizer quick child
+  * @since v1.2.0.0 
+  * @since 02.02.2022
+  **/
+  CONST PARENT_MANDATORY_KEY = 'PARENT';
 
 /**
   * @var 
@@ -9526,17 +9535,16 @@ private function get_value_child_optimizer( $value )
    # IF THE KEY REQUIRE IS EXIST THEN SELECT THAT KET FOR THE ASSOCIATED OF ARRAY OF DATAS
    # THEN LOOP THE REQUEST DATA ELEMNT HTML
    if ( $this->check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY , $value ) ) :
-
     
-    if( (count( $value['CHILD'] ) == 0 ) || ( count( $value['CHILD'][0] ) == 0 ) )
-    {
-
-    
+    # SANITIZED ARRAY CHILD IF ZERO OR EMPTY CHILD !
+    if( (count( $value[SELF::CHILD_MANDATORY_KEY] ) == 0 ) || ( count( $value[SELF::CHILD_MANDATORY_KEY][0] ) == 0 ) )
+    {    
+        
       $this->errors_array_handler( $value );
       die;
 
-       
-      if( count( $value['CHILD'][0]['INNER']) == 0  ) { $this->errors_array_handler( $value ); }   
+      # SANITIZED ARRAY INNER AND ITS CHILD IF ZERO OR EMPTY CHILD !
+      if( count( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY] ) == 0  ) { $this->errors_array_handler( $value ); }   
 
     }
 
@@ -9821,6 +9829,34 @@ private function get_value_child_optimizer( $value )
    
    else {
     
+      # CHECK IF THE VALUE IS ARRAY AND MANDATORY KEY IS EXIST THEN CHILD KEY SET
+  if ( is_array( $value ) && $this->check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY,  $value )  ) 
+  {
+    # IF PLAN OR CHILD IS TRUE ? 
+    # EXECUTE THE PLAN BASE ON ARRAY KEY MANDATORY
+     
+     $value = $this->get_value_child_optimizer( $value );
+
+  } 
+  
+  # IF THAT IS JUST AN ARRRAY OF DATA THEN
+  elseif( is_array($value) ) 
+  {
+  
+    // EXECUTE THE PLAN
+    $this->errors_array_handler( $value );
+    die;
+
+  } 
+   
+   # ELSE VALUE RETURN AS VALUE AS IT IS SET AS STRING !
+   else {
+   
+   # OPTIMIZED THE VALUE ON THE PLAN !
+   $value = $value;
+
+  }
+
      # IF_INLINE_ELEMENT_IS_EQUAL_NEW_ELEMENT_AND_TRUE_THE_RETURN_ECHO_STATIC_noHTML
      # RETURN_GET___HTML_METHOD_INCLUDED_ 
    /**
@@ -9847,10 +9883,8 @@ private function get_value_child_optimizer( $value )
   
     # get_ELEMENT_RETURN!
     return $return_elementINLINE;
-    
+  
    }
-
-
 }
 
 /**

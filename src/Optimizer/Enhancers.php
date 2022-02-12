@@ -2,15 +2,14 @@
 
  namespace PHPWine\VanillaFlavour\optimizer;
 
- USE \PHPWine\VanillaFlavour\Merge\Html;
  USE \PHPWine\VanillaFlavour\Optimizer\Html AS Optimizer;
  
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.1.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.3 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.1.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.3 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -29,9 +28,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * @category   PHPWine\VanillaFlavour
- * @package    Basic Authentication | Login Form | Registration | Reset Password | Register Email confirmation | Recovery Email confirmation
- *             Handling Form Validation | Same page CRUD | PHPOptimizer | Advance Form Builder
+ * @category   PHPLibrary PHPWine\VanillaFlavour
+ * @package    PHPHtml-Optimizer | CodeDesigner/Enhancer | Advance Form Builder | Handling Form Validation | Form Validation v2 | BASIC-Authentication | HtmlMinifier
  *            
  *            
  * @author    Leinner Zednanref <nielsoffice.wordpress.php@gmail.com>
@@ -39,15 +37,11 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.4.0.0
+ * @version   v1.2.0.3 
+ * @since     02.13.2022
  *
  * @method belongs_to(); 
  * @method GetKeyFolderPath(); 
- * @method bring_to(); 
- * @method deliver_to(); 
- * @method send_to(); 
- * @method view_to();
- * @method setFileExtension()
  * @method setElemAttr() 
  * @method BREAK();     
  * @method LINE();  
@@ -59,6 +53,11 @@
  * @method STRING();   
  * @method ATTR();     
  * @method ELEM();  
+ * @method deprecated @since v1.2.02 : bring_to(); 
+ * @method deprecated @since v1.2.02 : deliver_to(); 
+ * @method deprecated @since v1.2.02 : send_to(); 
+ * @method deprecated @since v1.2.02 : view_to();
+ * @method deprecated @since v1.2.02 : setFileExtension()
  *
  */
 
@@ -865,3 +864,4 @@ private function EnhanceeCoreErrorMsg() {
 
 
 } // End of class
+

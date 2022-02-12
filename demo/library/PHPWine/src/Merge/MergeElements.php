@@ -1,16 +1,14 @@
 <?php 
 
-USE \PHPWine\VanillaFlavour\Merge\Html;
 USE \PHPWine\VanillaFlavour\optimizer\Html AS MergeElements; 
-USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileHandler; 
 USE \PHPWine\VanillaFlavour\system\Request;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.2 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.3 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.2 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.3 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -38,8 +36,8 @@ USE \PHPWine\VanillaFlavour\system\Request;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.2 
- * @since     02.09.2022
+ * @version   v1.2.0.3 
+ * @since     02.13.2022
  *
  * @method __HTML('my_input','my_input','INPUT');
  * @method __HTML('my_track','my_track','track');
@@ -391,12 +389,9 @@ function _xHTML(
   global $request;
 
   /**
-   *
-   *
    * @package : Merge ASSOCIATED ELEMENTS 
    * @package : Static Procedural
    * @method  : Html::ELEMENT($elem, $value, $attr=null, $id, $class, $label)
-   *
    *
    **/ 
   $Html = NEW MergeElements();
@@ -438,12 +433,9 @@ function _MERGE(
   global $request;
 
   /**
-   *
-   *
    * @package : Merge ASSOCIATED ELEMENTS 
    * @package : Static Procedural
    * @method  : Html::__magicMERGE($elem, 'MERGE', $attr=null, $id, $class);
-   *
    *
    **/ 
   $Html = NEW MergeElements();
@@ -476,6 +468,8 @@ function xMERGE(
 
 )
 {
+
+ global $request;
 
  $Html = NEW MergeElements(); 
  
