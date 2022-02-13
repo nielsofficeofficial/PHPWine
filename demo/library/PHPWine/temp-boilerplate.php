@@ -109,15 +109,17 @@ _div( [['id','class'],['product-section','fluid-container']] );
                     .ELEM('p' , 'Thank you for visiting Us!');
 
 
-$boilerplate = _xdiv(  FUNC_ASSOC , [
-            
+$boilerplate = _xdiv(  FUNC_ASSOC , 
+                     
+  [
+                    
     'CHILD' => [
      
       ['div', 'ATTR' => [ 'class' => 'col-md-6' ] , 'VALUE'=> [  $child_values  ] ]
  
     ]
 
-  ]
+ ]
 
  , attr  :  [ ]
  , class : 'container'
