@@ -67,7 +67,7 @@ $enhancer = new OptimizerCare();
         | - README.md
         | - composer.json        
         
-// on header.php
+// on plugin-index or functions.php
 require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
 
 ...
