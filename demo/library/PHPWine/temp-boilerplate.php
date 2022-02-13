@@ -70,7 +70,7 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
 
     ELEM('div', $child_container , $attributes, 'id-child' , ' class-container ' )
    
-   , attr  :  null
+   , attr  :  [ ]
    , class : 'parent-class'
    , label : 'END-OF-child-container'
    , assoc :  FUNC_ASSOC  
