@@ -5916,12 +5916,12 @@ static protected $hextend = [];
   **/
   static public function H1(
 
-     mixed         $value   =  null 
+    string         $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc   =  null 
 
  )
  {
@@ -5950,12 +5950,12 @@ static protected $hextend = [];
   **/
   static public function H2(
 
-     mixed         $value   =  null 
+     string        $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -5984,12 +5984,12 @@ static protected $hextend = [];
   **/
   static public function H3(
 
-     mixed         $value   =  null 
+     string        $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -6018,12 +6018,12 @@ static protected $hextend = [];
   **/
   static public function H4(
   
-     mixed         $value   =  null 
+     string        $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -6052,12 +6052,12 @@ static protected $hextend = [];
   **/
   static public function H5(
 
-     mixed         $value   =  null 
+     string        $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc   =  null 
 
  )
  {
@@ -6086,12 +6086,12 @@ static protected $hextend = [];
   **/
   static public function H6(
 
-     mixed         $value   =  null 
+     string        $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6121,11 +6121,11 @@ static protected $hextend = [];
   static public function DIV(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null  
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6154,12 +6154,12 @@ static protected $hextend = [];
   **/
   static public function P(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6188,12 +6188,12 @@ static protected $hextend = [];
   **/
   static public function BUTTON(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -6222,12 +6222,12 @@ static protected $hextend = [];
   **/
   static public function A(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -6256,12 +6256,12 @@ static protected $hextend = [];
   **/
   static public function IFRAME(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6290,12 +6290,12 @@ static protected $hextend = [];
   **/
   static public function MAIN(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6324,12 +6324,12 @@ static protected $hextend = [];
   **/
   static public function NAV(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6358,12 +6358,12 @@ static protected $hextend = [];
   **/
   static public function SELECT(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6392,12 +6392,12 @@ static protected $hextend = [];
   **/
   static public function FORM(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6426,12 +6426,12 @@ static protected $hextend = [];
   **/
   static public function PICTURE(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6460,12 +6460,12 @@ static protected $hextend = [];
   **/
   static public function SECTION(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6494,12 +6494,12 @@ static protected $hextend = [];
   **/
   static public function TEXTAREA(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6528,12 +6528,12 @@ static protected $hextend = [];
   **/
   static public function AUDIO(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6562,12 +6562,12 @@ static protected $hextend = [];
   **/
   static public function VIDEO(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6596,12 +6596,12 @@ static protected $hextend = [];
   **/
   static public function ADDRESS(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6630,12 +6630,12 @@ static protected $hextend = [];
   **/
   static public function COLGROUP(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6664,12 +6664,12 @@ static protected $hextend = [];
   **/
   static public function BDI(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6698,12 +6698,12 @@ static protected $hextend = [];
   **/
   static public function BDO(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6732,12 +6732,12 @@ static protected $hextend = [];
   **/
   static public function BLOCKQUOTE(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6766,12 +6766,12 @@ static protected $hextend = [];
   **/
   static public function CAPTION(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6801,11 +6801,11 @@ static protected $hextend = [];
   static public function LABEL(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,mixed         $assoc   =  null  
+    ,string        $assoc   =  null   
   
 
  )
@@ -6835,12 +6835,12 @@ static protected $hextend = [];
   **/
   static public function DATALIST(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6869,12 +6869,12 @@ static protected $hextend = [];
   **/
   static public function DETAILS(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6903,12 +6903,12 @@ static protected $hextend = [];
   **/
   static public function SUMMARY(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6937,12 +6937,12 @@ static protected $hextend = [];
   **/
   static public function DIALOG(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -6971,12 +6971,12 @@ static protected $hextend = [];
   **/
   static public function OPTION(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -7005,12 +7005,12 @@ static protected $hextend = [];
   **/
   static public function FIGURE(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -7039,12 +7039,12 @@ static protected $hextend = [];
   **/
   static public function FIGCAPTION(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null  
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null   
 
  )
  {
@@ -7073,12 +7073,12 @@ static protected $hextend = [];
   **/
   static public function METER(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -7107,12 +7107,12 @@ static protected $hextend = [];
   **/
   static public function OBJECT(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -7140,12 +7140,12 @@ static protected $hextend = [];
   **/
   static public function OPTGROUP(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -7174,12 +7174,12 @@ static protected $hextend = [];
   **/
   static public function OUTPUT(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -7208,12 +7208,12 @@ static protected $hextend = [];
   **/
   static public function PROGRESS(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -7242,12 +7242,12 @@ static protected $hextend = [];
   **/
   static public function SVG(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -7276,12 +7276,12 @@ static protected $hextend = [];
   **/
   static public function TEMPLATE(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -7310,12 +7310,12 @@ static protected $hextend = [];
   **/
   static public function TIME(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -7344,12 +7344,12 @@ static protected $hextend = [];
   **/
   static public function VAR(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -7378,12 +7378,12 @@ static protected $hextend = [];
   **/
   static public function UL(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -7412,12 +7412,12 @@ static protected $hextend = [];
   **/
   static public function OL(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -7446,12 +7446,12 @@ static protected $hextend = [];
   **/
   static public function LI(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -7480,12 +7480,12 @@ static protected $hextend = [];
   **/
   static public function TABLE(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -7514,12 +7514,12 @@ static protected $hextend = [];
   **/
   static public function TR(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -7548,12 +7548,12 @@ static protected $hextend = [];
   **/
   static public function TD(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -7582,12 +7582,12 @@ static protected $hextend = [];
   **/
   static public function TH(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -7616,12 +7616,12 @@ static protected $hextend = [];
   **/
   static public function LEGEND(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -7650,12 +7650,12 @@ static protected $hextend = [];
   **/
   static public function FIELDSET(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -7684,12 +7684,12 @@ static protected $hextend = [];
   **/
   static public function TBODY(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -7718,12 +7718,12 @@ static protected $hextend = [];
   **/
   static public function TFOOT(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -7752,12 +7752,12 @@ static protected $hextend = [];
   **/
   static public function THEAD(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -7786,12 +7786,12 @@ static protected $hextend = [];
   **/
   static public function SPAN(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -7820,12 +7820,12 @@ static protected $hextend = [];
   **/
   static public function EM(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -7854,12 +7854,12 @@ static protected $hextend = [];
   **/
   static public function B(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -7888,12 +7888,12 @@ static protected $hextend = [];
   **/
   static public function I(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -7922,12 +7922,12 @@ static protected $hextend = [];
   **/
   static public function SMALL(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -7956,12 +7956,12 @@ static protected $hextend = [];
   **/
   static public function STRIKE(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -7990,12 +7990,12 @@ static protected $hextend = [];
   **/
   static public function MARQUEE(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -8024,12 +8024,12 @@ static protected $hextend = [];
   **/
   static public function CENTER(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
   )
   {
@@ -8058,12 +8058,12 @@ static protected $hextend = [];
   **/
   static public function CODE(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8092,12 +8092,12 @@ static protected $hextend = [];
   **/
   static public function ABBR(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8126,12 +8126,12 @@ static protected $hextend = [];
   **/
   static public function MAP(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8160,12 +8160,12 @@ static protected $hextend = [];
   **/
   static public function CANVAS(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8194,12 +8194,12 @@ static protected $hextend = [];
   **/
   static public function CITE(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8228,12 +8228,12 @@ static protected $hextend = [];
   **/
   static public function DATA(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8262,12 +8262,12 @@ static protected $hextend = [];
   **/
   static public function DL(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8296,12 +8296,12 @@ static protected $hextend = [];
   **/
   static public function DT(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8330,12 +8330,12 @@ static protected $hextend = [];
   **/
   static public function DD(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8364,12 +8364,12 @@ static protected $hextend = [];
   **/
   static public function DFN(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8398,12 +8398,12 @@ static protected $hextend = [];
   **/
   static public function INS(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8432,12 +8432,12 @@ static protected $hextend = [];
   **/
   static public function DEL(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8466,12 +8466,12 @@ static protected $hextend = [];
   **/
   static public function KBD(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8500,12 +8500,12 @@ static protected $hextend = [];
   **/
   static public function MARK(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8534,12 +8534,12 @@ static protected $hextend = [];
   **/
   static public function PRE(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8568,12 +8568,12 @@ static protected $hextend = [];
   **/
   static public function RT(
    
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8602,12 +8602,12 @@ static protected $hextend = [];
   **/
   static public function RP(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8636,12 +8636,12 @@ static protected $hextend = [];
   **/
   static public function RUBY(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8670,12 +8670,12 @@ static protected $hextend = [];
   **/
   static public function S(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8704,12 +8704,12 @@ static protected $hextend = [];
   **/
   static public function SAMP(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8738,12 +8738,12 @@ static protected $hextend = [];
   **/
   static public function STRONG(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8772,12 +8772,12 @@ static protected $hextend = [];
   **/
   static public function SUB(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8806,12 +8806,12 @@ static protected $hextend = [];
   **/
   static public function SUP(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8840,12 +8840,12 @@ static protected $hextend = [];
   **/
   static public function WBR(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8874,12 +8874,12 @@ static protected $hextend = [];
   **/
   static public function Q(
 
-     string        $id       =  null
-    ,mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8908,12 +8908,12 @@ static protected $hextend = [];
   **/
   static public function HEAD(
 
-     mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $id       =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -8942,12 +8942,12 @@ static protected $hextend = [];
   **/
   static public function TITLE(
 
-     mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $id       =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null 
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null   
 
  )
  {
@@ -8976,12 +8976,12 @@ static protected $hextend = [];
   **/
   static public function BODY(
 
-     mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $id       =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -9010,12 +9010,12 @@ static protected $hextend = [];
   **/
   static public function noHTML(
 
-     mixed         $value    =  null
-    ,array|string  $attr     =  null
-    ,string        $id       =  null
-    ,string        $class    =  null
-    ,string        $label    =  null
-    ,string         $assoc    =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null  
 
  )
  {
@@ -9098,13 +9098,7 @@ static private function get_value_child_optimizer( $value )
        {
            
           # PROCESSING OF LOOPING
-          foreach ($values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) 
-          {
-          
-           $next_child[] = self::_set_tagSPACER() . $attr . self::_setES() . $val . self::_set_tagSPACER();     
-                         
-
-          }
+          foreach ($values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = self::_set_tagSPACER() . $attr . self::_setES() .  self::_getDQUOTE() . $val .  self::_getDQUOTE();  }
                              
        }
        
@@ -9146,7 +9140,7 @@ static protected function get_values_next_child_inner( $getInner, $array )
        
        # LOOP THE ATTRIBUTE OF ELEMENT HTML TAG
        # BASE ON ARRAY OF DATA
-       if(  self::check_key_mandatory_array( SELF::ATTR_MANDATORY_KEY , $values ) ) {  foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = self::_set_tagSPACER() . $attr . self::_setES() . $val . self::_set_tagSPACER(); }}
+       if(  self::check_key_mandatory_array( SELF::ATTR_MANDATORY_KEY , $values ) ) {  foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = self::_set_tagSPACER() . $attr . self::_setES() .  self::_getDQUOTE() . $val .  self::_getDQUOTE();  }}
        
        # APPEND ON THE ENDGATE HTML
        $next_child[] = self::_setENDGATE();
@@ -9224,8 +9218,6 @@ static private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value
  
    }
  
-
-
   /*
    * PHPWine @since version 1.1.2 
    * @since 11.06.2021  

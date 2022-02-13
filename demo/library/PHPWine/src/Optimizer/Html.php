@@ -6295,12 +6295,12 @@ protected function _setCOMBEGIN() {
   **/
   public function H1(
 
-     mixed         $value   =  null 
+     array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   ) 
   {
@@ -6328,13 +6328,13 @@ protected function _setCOMBEGIN() {
   *
   **/
   public function H2(
-
-     mixed         $value   =  null 
+  
+     array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   ) 
   {
@@ -6363,12 +6363,12 @@ protected function _setCOMBEGIN() {
   **/
   public function H3(
 
-     mixed         $value   =  null 
+     array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -6397,12 +6397,12 @@ protected function _setCOMBEGIN() {
   **/
   public function H4(
 
-     mixed         $value   =  null 
+     array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -6431,12 +6431,12 @@ protected function _setCOMBEGIN() {
   **/
   public function H5(
 
-     mixed         $value   =  null 
+     array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -6465,12 +6465,12 @@ protected function _setCOMBEGIN() {
   **/
   public function H6(
 
-     mixed         $value   =  null 
+     array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $id      =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -6500,11 +6500,11 @@ protected function _setCOMBEGIN() {
   public function DIV(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -6530,11 +6530,11 @@ protected function _setCOMBEGIN() {
   public function P(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -6564,11 +6564,11 @@ protected function _setCOMBEGIN() {
   public function BUTTON(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -6598,11 +6598,11 @@ protected function _setCOMBEGIN() {
   public function A(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -6632,11 +6632,11 @@ protected function _setCOMBEGIN() {
   public function IFRAME(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -6666,11 +6666,11 @@ protected function _setCOMBEGIN() {
   public function MAIN(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -6700,11 +6700,11 @@ protected function _setCOMBEGIN() {
   public function NAV(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -6734,11 +6734,11 @@ protected function _setCOMBEGIN() {
   public function SELECT(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -6768,11 +6768,11 @@ protected function _setCOMBEGIN() {
   public function FORM(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -6802,11 +6802,11 @@ protected function _setCOMBEGIN() {
   public function PICTURE(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -6836,11 +6836,11 @@ protected function _setCOMBEGIN() {
   public function SECTION(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -6870,11 +6870,11 @@ protected function _setCOMBEGIN() {
   public function TEXTAREA(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -6904,11 +6904,11 @@ protected function _setCOMBEGIN() {
   public function FOOTER(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -6937,10 +6937,10 @@ protected function _setCOMBEGIN() {
   **/
   public function SCRIPT(
 
-       mixed          $value     =  null
+       string         $value     =  null
       ,array|string   $attr      =  null
       ,string         $label     =  null
-      ,mixed          $assoc     =  null
+      ,string         $assoc     =  null
 
  )
  {
@@ -6969,10 +6969,10 @@ protected function _setCOMBEGIN() {
   **/
   public function STYLE(
 
-       mixed        $value     =  null
+       string       $value     =  null
       ,array|string $attr      =  null
       ,string       $label     =  null
-      ,mixed        $assoc     =  null
+      ,string       $assoc     =  null
 
  )
  {
@@ -7002,11 +7002,11 @@ protected function _setCOMBEGIN() {
   public function AUDIO(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -7036,11 +7036,11 @@ protected function _setCOMBEGIN() {
   public function VIDEO(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7070,11 +7070,11 @@ protected function _setCOMBEGIN() {
   public function ADDRESS(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7104,11 +7104,11 @@ protected function _setCOMBEGIN() {
   public function COLGROUP(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7138,11 +7138,11 @@ protected function _setCOMBEGIN() {
   public function BDI(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7172,11 +7172,11 @@ protected function _setCOMBEGIN() {
   public function BDO(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7206,11 +7206,11 @@ protected function _setCOMBEGIN() {
   public function BLOCKQUOTE(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7240,11 +7240,11 @@ protected function _setCOMBEGIN() {
   public function CAPTION(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7274,11 +7274,11 @@ protected function _setCOMBEGIN() {
   public function LABEL(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7308,11 +7308,11 @@ protected function _setCOMBEGIN() {
   public function DATALIST(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7342,11 +7342,11 @@ protected function _setCOMBEGIN() {
   public function DETAILS(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7376,11 +7376,11 @@ protected function _setCOMBEGIN() {
   public function SUMMARY(
   
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7409,11 +7409,11 @@ protected function _setCOMBEGIN() {
   public function DIALOG(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7443,11 +7443,11 @@ protected function _setCOMBEGIN() {
   public function OPTION(
     
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7477,11 +7477,11 @@ protected function _setCOMBEGIN() {
   public function FIGURE(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7511,11 +7511,11 @@ protected function _setCOMBEGIN() {
   public function FIGCAPTION(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7545,11 +7545,11 @@ protected function _setCOMBEGIN() {
   public function METER(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7579,11 +7579,11 @@ protected function _setCOMBEGIN() {
   public function OBJECT(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7613,11 +7613,11 @@ protected function _setCOMBEGIN() {
   public function OPTGROUP(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7647,11 +7647,11 @@ protected function _setCOMBEGIN() {
   public function OUTPUT(
     
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7681,11 +7681,11 @@ protected function _setCOMBEGIN() {
   public function PROGRESS(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc   = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7743,11 +7743,11 @@ protected function _setCOMBEGIN() {
   public function TEMPLATE(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7777,11 +7777,11 @@ protected function _setCOMBEGIN() {
   public function TIME(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7811,11 +7811,11 @@ protected function _setCOMBEGIN() {
   public function VAR(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7845,11 +7845,11 @@ protected function _setCOMBEGIN() {
   public function UL(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null 
+    ,string        $assoc   =  null 
 
   )
   {
@@ -7879,11 +7879,11 @@ protected function _setCOMBEGIN() {
   public function OL(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7913,11 +7913,11 @@ protected function _setCOMBEGIN() {
   public function LI(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7947,11 +7947,11 @@ protected function _setCOMBEGIN() {
   public function TABLE(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -7981,11 +7981,11 @@ protected function _setCOMBEGIN() {
   public function TR(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8015,11 +8015,11 @@ protected function _setCOMBEGIN() {
   public function TD(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8049,11 +8049,11 @@ protected function _setCOMBEGIN() {
   public function TH(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8083,11 +8083,11 @@ protected function _setCOMBEGIN() {
   public function LEGEND(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -8117,11 +8117,11 @@ protected function _setCOMBEGIN() {
   public function FIELDSET(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -8151,11 +8151,11 @@ protected function _setCOMBEGIN() {
   public function TBODY(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -8185,11 +8185,11 @@ protected function _setCOMBEGIN() {
   public function TFOOT(
    
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -8219,11 +8219,11 @@ protected function _setCOMBEGIN() {
   public function THEAD(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -8253,11 +8253,11 @@ protected function _setCOMBEGIN() {
   public function SPAN(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -8287,11 +8287,11 @@ protected function _setCOMBEGIN() {
   public function EM(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8321,11 +8321,11 @@ protected function _setCOMBEGIN() {
   public function B(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8355,11 +8355,11 @@ protected function _setCOMBEGIN() {
   public function I(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8389,11 +8389,11 @@ protected function _setCOMBEGIN() {
   public function SMALL(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -8423,11 +8423,11 @@ protected function _setCOMBEGIN() {
   public function STRIKE(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -8457,11 +8457,11 @@ protected function _setCOMBEGIN() {
   public function MARQUEE(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -8491,11 +8491,11 @@ protected function _setCOMBEGIN() {
   public function CENTER(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8525,11 +8525,11 @@ protected function _setCOMBEGIN() {
   public function CODE(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null 
 
   )
   {
@@ -8559,11 +8559,11 @@ protected function _setCOMBEGIN() {
   public function ABBR(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8593,11 +8593,11 @@ protected function _setCOMBEGIN() {
   public function MAP(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8627,11 +8627,11 @@ protected function _setCOMBEGIN() {
   public function CANVAS(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8661,11 +8661,11 @@ protected function _setCOMBEGIN() {
   public function CITE(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8695,11 +8695,11 @@ protected function _setCOMBEGIN() {
   public function DATA(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8729,11 +8729,11 @@ protected function _setCOMBEGIN() {
   public function DL(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8763,11 +8763,11 @@ protected function _setCOMBEGIN() {
   public function DT(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8797,11 +8797,11 @@ protected function _setCOMBEGIN() {
   public function DD(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -8831,11 +8831,11 @@ protected function _setCOMBEGIN() {
   public function DFN(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -8865,11 +8865,11 @@ protected function _setCOMBEGIN() {
   public function INS(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -8899,11 +8899,11 @@ protected function _setCOMBEGIN() {
   public function DEL(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8933,11 +8933,11 @@ protected function _setCOMBEGIN() {
   public function KBD(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -8967,11 +8967,11 @@ protected function _setCOMBEGIN() {
   public function MARK(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -9001,11 +9001,11 @@ protected function _setCOMBEGIN() {
   public function PRE(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -9035,11 +9035,11 @@ protected function _setCOMBEGIN() {
   public function RT(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -9069,11 +9069,11 @@ protected function _setCOMBEGIN() {
   public function RP(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -9103,11 +9103,11 @@ protected function _setCOMBEGIN() {
   public function RUBY(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -9137,11 +9137,11 @@ protected function _setCOMBEGIN() {
   public function S(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -9171,11 +9171,11 @@ protected function _setCOMBEGIN() {
   public function SAMP(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -9205,11 +9205,11 @@ protected function _setCOMBEGIN() {
   public function STRONG(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -9239,11 +9239,11 @@ protected function _setCOMBEGIN() {
   public function SUB(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -9273,11 +9273,11 @@ protected function _setCOMBEGIN() {
   public function SUP(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
  )
  {
@@ -9307,11 +9307,11 @@ protected function _setCOMBEGIN() {
   public function WBR(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -9341,11 +9341,11 @@ protected function _setCOMBEGIN() {
   public function Q(
    
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null
+    ,string        $assoc   =  null
 
   )
   {
@@ -9375,11 +9375,11 @@ protected function _setCOMBEGIN() {
   public function HEAD(
 
      string        $id      =  null 
-    ,mixed         $value   =  null 
+    ,array|string  $value   =  null 
     ,array|string  $attr    =  null 
     ,string        $class   =  null 
     ,string        $label   =  null 
-    ,string        $assoc  = null 
+    ,string        $assoc   =  null 
 
   )
   {
@@ -9408,12 +9408,12 @@ protected function _setCOMBEGIN() {
   **/
   public function TITLE(
 
-     mixed         $value      =  null
-    ,array |string $attr       =  null
-    ,string        $id         =  null
-    ,string        $class      =  null
-    ,string        $label      =  null
-    ,string        $assoc      =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null
 
  )
  {
@@ -9442,12 +9442,12 @@ protected function _setCOMBEGIN() {
   **/
   public function BODY(
 
-     mixed         $value      =  null
-    ,array |string $attr       =  null
-    ,string        $id         =  null
-    ,string        $class      =  null
-    ,string        $label      =  null
-    ,string        $assoc      =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null
 
  )
  {
@@ -9476,12 +9476,12 @@ protected function _setCOMBEGIN() {
   **/
   public function noHTML(
 
-       mixed         $value      =  null
-      ,array |string $attr       =  null
-      ,string        $id         =  null
-      ,string        $class      =  null
-      ,string        $label      =  null
-      ,string        $assoc      =  null
+     string        $id      =  null 
+    ,array|string  $value   =  null 
+    ,array|string  $attr    =  null 
+    ,string        $class   =  null 
+    ,string        $label   =  null 
+    ,string        $assoc   =  null
 
  )
  {
