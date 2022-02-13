@@ -21,9 +21,9 @@ PHPWine (Vanilla Flavour) is a PHP Library design for corePHP and WordPress Clou
 - PHPHtml-Optimizer / Code Designer
 - Advance Form Builder 
 - Handling Form Validation
-- Form Validation_V2 @since v1.2
+- Form Validation_V2 ```@since v1.2```
 - BASIC Authentication
-- HTMLMinifier @since v1.2
+- HTMLMinifier ```@since v1.2```
 - PHPSaver (RESTful_API) <sup><i>Available on PHPWine v2.0</i></sup>
 
 <h3>Downloading Library/Dependencies:</h3>
