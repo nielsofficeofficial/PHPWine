@@ -177,10 +177,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") :
   .DOIF( !empty($err_password)   ,ELEM('li' ,$err_password ,setElemAttr(['class'],['err_password_msg'])) , FUNC_ASSOC )
   .DOIF( !empty($auth_err)       ,ELEM('li' ,$auth_err     ,setElemAttr(['class'],['err_password_msg'])) , FUNC_ASSOC )
  
- ,null
- ,'eCatch_error'
- ,'end-of-id-eCatch_err'
- ,FUNC_ASSOC
+ , attr  : [ ]
+ , class : 'eCatch_error'
+ , label : 'end-of-id-eCatch_err'
+ , assoc : FUNC_ASSOC
  
 );
 
@@ -232,13 +232,10 @@ _FORM(setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 
 
  ];  
 
-  $user_submit_btn   = ELEM( 'div' , 
-                         
-                        FORM::BUTTONS( 'id-conPassword','class-submit', [['value'],['Submit']], FUNC_ASSOC ) 
+  $user_submit_btn   = ELEM( 'div' , FORM::BUTTONS( 'id-conPassword','class-submit', [['value'],['Submit']], FUNC_ASSOC ) 
                   
-                      ,[['id','class'],['id-submit','submit_from_group']] 
-                     
-                      );
+                       ,[['id','class'],['id-submit','submit_from_group']] 
+                       );
 
   $login_form = _xdiv( FUNC_ASSOC ,
     
