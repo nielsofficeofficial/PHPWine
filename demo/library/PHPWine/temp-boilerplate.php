@@ -51,7 +51,7 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
  * @since 1.22.22
  **/
 
- _div( [['id'],['main-container']] );
+ _div( [['id','class'],['main-container','fluid-container']] );
   
   // My attributes 
   $attributes = [
@@ -68,10 +68,10 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
 
   $boilerplate = _xdiv( 'child-container' ,
 
-    ELEM('div', $child_container , $attributes, 'id-child' , ' class-container ' )
+    ELEM('div', $child_container , $attributes )
    
    , attr  :  [ ]
-   , class : 'parent-class'
+   , class : 'container'
    , label : 'END-OF-child-container'
    , assoc :  FUNC_ASSOC  
     
@@ -81,3 +81,101 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
   echo $boilerplate;
 
  xdiv('END-OF-main-container');
+
+
+
+ ########################################################################################
+ /**
+ * PRODUCT SECTION : w/CHILD Elements array | BIOLERPLATE PHPWine / Optimizer
+ * PHPHtml-Optimizer
+ * @version   v1.2.0.2 
+ * @since 1.22.22
+ **/
+########################################################################################
+
+_div( [['id','class'],['product-section','fluid-container']] );
+  
+ // My attributes 
+ $attributes = [
+    
+  // attribute key
+  // attribute val
+  ['class'],
+  ['col-md-6']
+
+ ];
+
+ $child_values    =  ELEM('h1', 'WLECOME !')
+                    .ELEM('p' , 'Thank you for visiting Us!');
+
+
+$boilerplate = _xdiv(  FUNC_ASSOC , [
+            
+    'CHILD' => [
+     
+      ['div', 'ATTR' => [ 'class' => 'col-md-6' ] , 'VALUE'=> [  $child_values  ] ]
+ 
+    ]
+
+  ]
+
+ , attr  :  [ ]
+ , class : 'container'
+ , label : 'END-OF-child-container' 
+  
+);
+
+// execution 
+echo ( !empty( $boilerplate ) ) ?  $boilerplate : false;
+
+xdiv('END-OF-section');
+
+
+ ########################################################################################
+ /**
+ * TESTIMONIAL SECTION : w/CHILD Elements array | BIOLERPLATE PHPWine / Optimizer
+ * PHPHtml-Optimizer
+ * @version v1.2.0.2 
+ * @since 1.22.22
+ **/
+########################################################################################
+
+
+
+_div( [ ['id', 'class'],['testimonial-section','fluid-container'] ] );
+
+ $attributes = [
+    
+  // attribute key
+  // attribute val
+  [],
+  []
+
+ ];
+
+ $child_values    =  ELEM('h1', 'My Name')
+                    .ELEM('p' , 'Testimonial descriptions');
+
+ $boilerplate = _xdiv( FUNC_ASSOC   , $child_values
+ 
+  , attr  :  [ ]
+  , class :  ''
+  , label : 'END-OF-child-container' 
+  
+ );
+
+ $parent_container_attr = [
+    
+  ['class'],
+  ['container']
+
+ ];
+
+ echo ELEM('div', [  
+      
+       'CHILD' => [ ['div', 'ATTR' => ['class' => 'col-md-6'], 'VALUE'=> [ $boilerplate ] ] ] 
+    
+      ] , $parent_container_attr );
+
+xdiv('END-OF-testimonial-section');
+
