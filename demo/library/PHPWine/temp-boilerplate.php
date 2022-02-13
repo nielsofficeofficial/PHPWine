@@ -128,7 +128,7 @@ $boilerplate = _xdiv(  FUNC_ASSOC , [
 // execution 
 echo ( !empty( $boilerplate ) ) ?  $boilerplate : false;
 
-xdiv('END-OF-section');
+xdiv('END-OF-product-section');
 
 
  ########################################################################################
