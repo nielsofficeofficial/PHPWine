@@ -42,7 +42,7 @@
  * noHTML dynamic  structure 
  * non/WITH CLASS|METHOD|FUNCTION ASSOCIATED  
  *
- * @method $noHtml->REAK(); 
+ * @method $noHtml->BREAK(); 
  * @method $noHtml->H1();
  * @method $noHtml->H3();
  * @method $noHtml->H2();
@@ -9552,7 +9552,7 @@ private function get_value_child_optimizer( $value )
      foreach (  $value[SELF::CHILD_MANDATORY_KEY] as $key => $values ) 
      {
        
-       $next_child[] = $this->_setGATE() . $values[0] . ' ';
+       $next_child[] = $this->_setGATE() . $values[0] . '';
 
        # CHECK IF THE ATTR IS NOT EMPTY AND IF IT IS ASSOCIATED OF ARRAY ?
        # THEN SINCE ATTR IS TYPE OF MASTER KEY THEN LOOP IT AS CUSTOM ATTR HTML ELEM TAGS
@@ -9563,7 +9563,7 @@ private function get_value_child_optimizer( $value )
           foreach ($values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) 
           {
           
-           $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() . $val . $this->_set_tagSPACER();     
+           $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() .  $this->_getDQUOTE() . $val .  $this->_getDQUOTE();     
                          
 
           }
@@ -11244,7 +11244,7 @@ protected function get_values_next_child_inner( $getInner, $array )
        
        # LOOP THE ATTRIBUTE OF ELEMENT HTML TAG
        # BASE ON ARRAY OF DATA
-       if(  $this->check_key_mandatory_array( SELF::ATTR_MANDATORY_KEY , $values ) ) {  foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() . $val . $this->_set_tagSPACER(); }}
+       if(  $this->check_key_mandatory_array( SELF::ATTR_MANDATORY_KEY , $values ) ) {  foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() . $this->_getDQUOTE() . $val .  $this->_getDQUOTE();  }}
        
        # APPEND ON THE ENDGATE HTML
        $next_child[] = $this->_setENDGATE();
