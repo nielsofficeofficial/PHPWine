@@ -82,8 +82,6 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
 
  xdiv('END-OF-main-container');
 
-
-
  ########################################################################################
  /**
  * PRODUCT SECTION : w/CHILD Elements array | BIOLERPLATE PHPWine / Optimizer
@@ -108,8 +106,7 @@ _div( [['id','class'],['product-section','fluid-container']] );
  $child_values    =  ELEM('h1', 'WLECOME !')
                     .ELEM('p' , 'Thank you for visiting Us!');
 
-
-$boilerplate = _xdiv(  FUNC_ASSOC , 
+ $boilerplate = _xdiv(  FUNC_ASSOC , 
                      
   [
                     
@@ -132,7 +129,6 @@ echo ( !empty( $boilerplate ) ) ?  $boilerplate : false;
 
 xdiv('END-OF-product-section');
 
-
  ########################################################################################
  /**
  * TESTIMONIAL SECTION : w/CHILD Elements array | BIOLERPLATE PHPWine / Optimizer
@@ -141,8 +137,6 @@ xdiv('END-OF-product-section');
  * @since 1.22.22
  **/
 ########################################################################################
-
-
 
 _div( [ ['id', 'class'],['testimonial-section','fluid-container'] ] );
 
