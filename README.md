@@ -15,10 +15,8 @@
 # PHPWine - (Vanilla Flavour) 
 Support PHP v8 and future++ 
 
-PHPWine (Vanilla Flavour) design for corePHP and WordPress Cloud system application development. <br />
+PHPWine (Vanilla Flavour) is a PHP Library design for corePHP and WordPress Cloud system application development. <br />
 <i>Vanilla Flavour: Vanilla flavour means you can use methods outside the class precisely as native PHP functions.</i>
-
-PHP code encrypted, PHP Library, Code designer and Optimizer, Html-minifier Advance Form builder, Form Validation and more... 
 
 - PHPHtml-Optimizer / Code Designer
 - Advance Form Builder 
