@@ -5,11 +5,11 @@ use \PHPWine\VanillaFlavour\System\Validate;
 use \PHPWine\VanillaFlavour\Optimizer\Form;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.5 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -37,8 +37,14 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.4 
- * @since     02.13.2022
+ * @version   v1.2.0.5
+ * @since     02.15.2022
+ * 
+ * Would you like me to treat a cake and coffee ?
+ * Become a donor, Because with you! We can build more...
+ * Donate:
+ * GCash : +639650332900
+ * Paypal account: syncdevprojects@gmail.com
  *
  */
 
@@ -155,7 +161,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $conpassword      =   VALIDATE::HASCONTAINS( input : $upc);  
     $conpassword_err  =   VALIDATE::ERROR(  result: $conpassword,  require : $upc);  
 
-    $auth_un_bind  = VALIDATE::BIND( connection : $connection, 
+    $auth_un_bind     =   VALIDATE::BIND( connection : $connection, 
 
     bind_user_data : [   
     
@@ -165,7 +171,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   
     ]); 
 
-    $auth_ue_bind  = VALIDATE::BIND($connection, 
+    $auth_ue_bind      =  VALIDATE::BIND($connection, 
     [   
     
         'QUERY_STATEMENT'    => VALIDATE::CHECKQUERY('users_log',["id"],["email"])
@@ -174,7 +180,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   
     ]); 
 
-    $auth_um_bind  = VALIDATE::BIND($connection, 
+    $auth_um_bind      =  VALIDATE::BIND($connection, 
     [   
     
         'QUERY_STATEMENT'    => VALIDATE::CHECKQUERY( table : 'users_log', col_id : ["id"], col_name : ["mobile"])
@@ -183,7 +189,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   
     ]); 
 
-    $catch_um = VALIDATE::CATCH(input_result :  $mobile_err , bind_result: $auth_um_bind, valid_type :  $valid_type = [
+    $catch_um          =  VALIDATE::CATCH(input_result :  $mobile_err , bind_result: $auth_um_bind, valid_type :  $valid_type = [
        
       NUMERICTYPE   => ['mobile' ,'Phone must be numeric ex. 123'],
       MAXLENGTH     => ['mobile' , 11 ,'Mobile number must be maximum 11 Digit!'],
@@ -191,19 +197,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   
    ]);
     
-    $catch_un       = VALIDATE::CATCH( $username_err, $auth_un_bind, $valid_type = [
+    $catch_un          =  VALIDATE::CATCH( $username_err, $auth_un_bind, $valid_type = [
        
      MINLENGTH      => [ 'username', 7, 'MIN of 7 characters!' ]
       
     ]);
 
-    $catch_ue = VALIDATE::CATCH($email_err, $auth_ue_bind, $valid_type = [
+    $catch_ue          =  VALIDATE::CATCH($email_err, $auth_ue_bind, $valid_type = [
        
      VALID_EMAIL   => ['email','must be valid email']
  
     ]);
 
-    $catch_up = VALIDATE::FORM( input_result: $userpassword_err, valid_type: $valid_type = [
+    $catch_up          =  VALIDATE::FORM( input_result: $userpassword_err, valid_type: $valid_type = [
       
       MINLENGTH        => ['password', 8,'Password must have atleast 8 characters.'],
       VALIDPASSWORD    => ['password',   'Requere password has at least 8 characters + one number + one upper case letter + one lower case letter and one special character.' ],
@@ -222,14 +228,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
         if( isset($initializeRequestError) == true ) :
             
-            if($stmt = $connection->prepare( AUTH::BINDSQL( 'users_log', ['username', 'email', 'mobile', 'password'] , ['?', '?', '?' , '?']) ) ) : 
+            if($stmt = $connection->prepare( AUTH::BINDQUERY( 'users_log', ['username', 'email', 'mobile', 'password'] , ['?', '?', '?' , '?']) ) ) : 
 
                 $stmt->bind_param("ssss", $param_username, $param_email, $param_mobile, $param_password);
 
-                $param_username =  DOIF(is_null($catch_un)   ,  $username      , FUNC_ASSOC);
-                $param_email    =  DOIF(is_null($catch_ue)   ,  $email         , FUNC_ASSOC);
-                $param_mobile   =  DOIF(is_null($catch_um)   ,  $mobile        , FUNC_ASSOC);
-                $param_password =  DOIF(is_null($catch_up)   ,  password_hash( $userpassword , PASSWORD_DEFAULT) , FUNC_ASSOC);
+                $param_username =  DOIF(is_null($catch_un)   ,  $username     );
+                $param_email    =  DOIF(is_null($catch_ue)   ,  $email        );
+                $param_mobile   =  DOIF(is_null($catch_um)   ,  $mobile       );
+                $param_password =  DOIF(is_null($catch_up)   ,  password_hash( $userpassword , PASSWORD_DEFAULT) );
 
                 AUTH::BINDEXECUTE( redirect : 'login', report : ERROR_DEVELOPER_CONCERN);        
    
@@ -252,16 +258,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   **/ 
   $eCatch_errors =  _xUL( 'id-eCatch_err',
    
-    DOIF( !empty($catch_un)        ,ELEM('li' , $catch_un        ,setElemAttr(['class'],['err_username_msg']))     ,FUNC_ASSOC)
-   .DOIF( !empty($catch_ue)        ,ELEM('li' , $catch_ue        ,setElemAttr(['class'],['err_user_email_msg']))   ,FUNC_ASSOC)
-   .DOIF( !empty($catch_um )       ,ELEM('li' , $catch_um        ,setElemAttr(['class'],['err_user_mobile_msg']))  ,FUNC_ASSOC)
-   .DOIF( !empty($catch_up)        ,ELEM('li' , $catch_up        ,setElemAttr(['class'],['err_con_password_msg'])) ,FUNC_ASSOC)
-   .DOIF( !empty($conpassword_err) ,ELEM('li' , $conpassword_err ,setElemAttr(['class'],['err_password_msg']))     ,FUNC_ASSOC)
+    DOIF( !empty($catch_un)        ,ELEM('li' , $catch_un        ,setElemAttr(['class'],['err_username_msg']))     )
+   .DOIF( !empty($catch_ue)        ,ELEM('li' , $catch_ue        ,setElemAttr(['class'],['err_user_email_msg']))   )
+   .DOIF( !empty($catch_um )       ,ELEM('li' , $catch_um        ,setElemAttr(['class'],['err_user_mobile_msg']))  )
+   .DOIF( !empty($catch_up)        ,ELEM('li' , $catch_up        ,setElemAttr(['class'],['err_con_password_msg'])) )
+   .DOIF( !empty($conpassword_err) ,ELEM('li' , $conpassword_err ,setElemAttr(['class'],['err_password_msg']))     )
 
- ,null
- ,'eCatch_error'
- ,'end-of-id-eCatch_err'
- ,FUNC_ASSOC
+ , null
+ , 'eCatch_error'
+ , 'end-of-id-eCatch_err'
+ , FUNC_ASSOC
 
  );
   
@@ -283,8 +289,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
   ];
 
-  $user_name        = FORM::LABEL('label-id-un' , 'Username'       , FUNC_ASSOC ) . __BR( FUNC_ASSOC )
-                     .FORM::TEXT('id-username'  , 'class-username' , [['name', 'value'] , ['username', DOIF(is_null($catch_un),  $username, FUNC_ASSOC)]], FUNC_ASSOC ); 
+  $user_name        = FORM::LABEL('label-id-un' , 'Username'       ) . __BR()
+                     .FORM::TEXT('id-username'  , 'class-username' , [['name', 'value'] , ['username', DOIF(is_null($catch_un),  $username )]]); 
 
   $user_email_attr  = [
    
@@ -293,8 +299,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
   ];  
 
-  $user_email        = FORM::LABEL('label-id-e'  , 'Email'       , FUNC_ASSOC) . __BR(FUNC_ASSOC)
-                      .FORM::TEXT('id-email'     , 'class-email' , [['name', 'value'] , ['email',  DOIF(is_null($catch_ue), $email, FUNC_ASSOC)  ]], FUNC_ASSOC );
+  $user_email        = FORM::LABEL('label-id-e'  , 'Email' ) . __BR()
+                      .FORM::TEXT('id-email'     , 'class-email' , [['name', 'value'] , ['email',  DOIF(is_null($catch_ue), $email )  ]]);
 
   $user_mobile_attr  = [
    
@@ -303,8 +309,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
   ];  
 
-  $user_mobile        = FORM::LABEL('label-id-m'  , 'Mobile'       , FUNC_ASSOC) . __BR(FUNC_ASSOC)
-                       .FORM::TEXT('id-mobile'    , 'class-mobile' , [['name', 'value'],['mobile', DOIF(is_null($catch_um), $mobile, FUNC_ASSOC) ]], FUNC_ASSOC );
+  $user_mobile        = FORM::LABEL('label-id-m'  , 'Mobile' ) . __BR()
+                       .FORM::TEXT('id-mobile'    , 'class-mobile' , [['name', 'value'],['mobile', DOIF(is_null($catch_um), $mobile ) ]] );
 
   $user_password_attr = [
    
@@ -313,8 +319,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
   ];  
 
-  $user_password      = FORM::LABEL('label-id-p'   , 'Password'     , FUNC_ASSOC ) . __BR(FUNC_ASSOC)
-                       .FORM::PASSWORD('id-mobile' , 'class-mobile' , [['name'],['password']]  , FUNC_ASSOC );
+  $user_password      = FORM::LABEL('label-id-p'   , 'Password' ) . __BR()
+                       .FORM::PASSWORD('id-mobile' , 'class-mobile' , [['name'],['password']]);
 
   $con_password_attr = [
    
@@ -323,8 +329,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
   ];  
 
-  $user_con_password   = FORM::LABEL('label-id-confirm_password' , 'Confirm Password'  ,FUNC_ASSOC) . __BR(FUNC_ASSOC)
-                        .FORM::PASSWORD('id-conPassword'         , 'class-conPassword' , [['name'],['confirm_password']], FUNC_ASSOC );
+  $user_con_password   = FORM::LABEL('label-id-confirm_password' , 'Confirm Password'  ) . __BR()
+                        .FORM::PASSWORD('id-conPassword'         , 'class-conPassword' , [['name'],['confirm_password']] );
 
   $user_submit_btn_attr = [
    
@@ -333,8 +339,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
   ];  
 
-  $user_submit_btn   = FORM::BUTTONS('id-conPassword' , 'class-submit' , [['value'],['Submit']] , FUNC_ASSOC ) 
-                      .FORM::RESET('id-conPassword'   , 'class-submit' , [['value'],['Reset']]  , FUNC_ASSOC ); 
+  $user_submit_btn   = FORM::BUTTONS('id-conPassword' , 'class-submit' , [['value'],['Submit']] ) 
+                      .FORM::RESET('id-conPassword'   , 'class-submit' , [['value'],['Reset']]  ); 
 
   $registration_form = _xdiv( FUNC_ASSOC ,
     

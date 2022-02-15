@@ -4,11 +4,11 @@ USE \PHPWine\VanillaFlavour\optimizer\Enhancers AS PHPFileHandler;
 USE \PHPWine\VanillaFlavour\system\Request;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.3 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.3 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.5 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -36,8 +36,8 @@ USE \PHPWine\VanillaFlavour\system\Request;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.3 
- * @since     02.13.2022
+ * @version   v1.2.0.5
+ * @since     02.15.2022
  *
  * @method deprecated @since v1.1.4.1 bring_to();
  * @method deprecated @since v1.1.4.1 view_to();
@@ -48,157 +48,6 @@ USE \PHPWine\VanillaFlavour\system\Request;
  */
  
  $request = NEW Request();
-
-/**
-  * @since 22.11.2020
-  * @category PHPFileEnhancer
-  * @method Defined bring_to(GETFROM(['PATH','KEY']), 'file',__PHP__, OPTIONAL);
-  **/
-function bring_to(
-
-   $config
-  ,$fileName    =  null
-  ,$extension   =  null
-  ,$Optional    =  null
-
- )
- {
-  
-  global $request;
-
- /**
-   * @package : PHPFileEnhancer
-   * @package : Static Procedural
-   * @method  : $FileEnhance->bring_to(GETFROM(['PATH','F']), 'file',__PHP__, OPTIONAL); "Optional" // REQUIRE | INCLUDES | INCLUDES ONCE | REQUIREONCE DEFAULT
-   **/  
- $Enhancer = new PHPFileHandler();
- 
- return method_exists($Enhancer, 'bring_to') ? 
-
-        $Enhancer->bring_to($config, $fileName, $extension, $Optional) : 
- 
-        PERFORM( $request->erorrMessage() );
-} 
-
-/**
-  * @since 22.11.2020
-  * @category PHPFileEnhancer
-  * @method Defined view_to(GETFROM(['PATH','KEY']), 'about' );
-  **/
-function view_to(
-
-   $config
-  ,$fileName
-
-)
-{
-  global $request;
-
- /**
-   * @package : PHPFileEnhancer
-   * @package : Static Procedural
-   * @method  : $FileEnhance->bring_to(GETFROM(['PATH','F']), 'file',__PHP__, OPTIONAL); "Optional" // REQUIRE | INCLUDES | INCLUDES ONCE | REQUIREONCE DEFAULT
-   **/  
-  $Enhancer = new PHPFileHandler();
-
-  return method_exists($Enhancer, 'view_to') ? 
-
-         $Enhancer->view_to($config, $fileName) : 
-  
-         PERFORM( $request->erorrMessage());
- 
-} 
-
-/**
-  * @since 22.11.2020
-  * @category PHPFileEnhancer
-  * @method Defined send_to($uri);
-  **/
-function send_to(
-
-  $uri
-
- )
- {
-  
-  global $request;
-
- /**
-   * @package : PHPFileEnhancer
-   * @package : Static Procedural
-   * @method  : $FileEnhance->bring_to(GETFROM(['PATH','F']), 'file',__PHP__, OPTIONAL); "Optional" // REQUIRE | INCLUDES | INCLUDES ONCE | REQUIREONCE DEFAULT
-   **/  
- $Enhancer = new PHPFileHandler();
-
- return method_exists($Enhancer, 'send_to') ? 
-
-        $Enhancer->send_to($uri) : 
- 
-        PERFORM( $request->erorrMessage());
- 
-} 
-
-/**
-  * @since 22.11.2020
-  * @category PHPFileEnhancer
-  * @method Defined 'UNIQUE_KEY' => SET_DIR_PATH('dir');  
-  **/
-function SET_DIR_PATH(
-
-   $uri
-  ,$serverHost     = null
-
-  )
-  {
-  
-  global $request;
-
-  /**
-   * @package : PHPFileEnhancer
-   * @package : Static Procedural
-   * @method  : $FileEnhance->SET_DIR_PATH(['path','dir'])
-   **/  
- $Enhancer = new PHPFileHandler();
- 
- return method_exists($Enhancer, 'SET_DIR_PATH')   ? 
-
-        $Enhancer->SET_DIR_PATH($uri, $serverHost) : 
-
-        PERFORM( $request->erorrMessage());
-
-}
-
-/**
-  * @since 20.19.2020
-  * @category PHPFileEnhancer
-  * @method Defined GETFROM(['array'])  
-  * GETFROM(['PATH','DIR']) //  SUPPRTED/VALID PARAM  : PATH | VIEWS | RURI 
-  **/
-function  GETFROM( 
-
-    $array_realpath_dir   = null
-
- )
- {  
-  
-  global $request;
-
-  /**
-   * @package : PHPFileEnhancer
-   * @package : Static Procedural
-   * @method  : $FileEnhance->GETFROM(['path','dir'])
-   **/ 
- $array_realpath_dir = !is_array($array_realpath_dir) ? FILE_HANDLER_MSG_STR : $array_realpath_dir ;
-  
- $getValues = array_values($array_realpath_dir);
- $REAL_PATH = strtolower($getValues[0]);
- $Enhancer  = new PHPFileHandler();
-
- return method_exists($Enhancer, 'GETFROM') ? 
-        $Enhancer->GETFROM($REAL_PATH, $array_realpath_dir[1]) : 
-        PERFORM( $request->erorrMessage());
-
-}
 
 /**
   * @since 20.19.2020
@@ -262,7 +111,7 @@ function getKeyPath() {
   **/
 function __BR(
 
-    $optional_assoc     = null
+    $optional_assoc     = METHOD_ASSOC
 
 )
 {
@@ -291,7 +140,7 @@ function __BR(
   **/
 function __HR(
 
-   $optional_assoc     = null
+   $optional_assoc     = METHOD_ASSOC
 
  )
  {
@@ -332,35 +181,6 @@ function __space() {
  return method_exists($Enhancer, 'SPACE') ? 
 
         $Enhancer->SPACE() :
-
-        PERFORM( $request->erorrMessage());
-
-}
-
-/**
-  * @since 05.11.2020
-  * @category PHPFileEnhancer
-  * @method Defined SetFileEx  
-  **/
-function setFileExT(
-
-   $argu
-
- )
- {
-
-  global $request;
-
-  /**
-   * @package : PHPFileEnhancer
-   * @package : Static Procedural
-   * @method  : SetFileEx()
-   **/ 
- $Enhancer = new PHPFileHandler();
-
- return method_exists($Enhancer, 'SetFileExtension') ? 
-
-        $Enhancer->SetFileExtension($argu) :
 
         PERFORM( $request->erorrMessage());
 
@@ -466,10 +286,9 @@ function ELEM(
   **/
 function DOELSE(
 
-    bool  $condition     =  null
-   ,mixed $if_result     =  null
-   ,mixed $else_result   =  null
-   ,mixed $assoc         =  null
+    bool   $condition     =  null
+   ,string $if_result     =  null
+   ,string $else_result   =  null
 
  )
  {
@@ -485,7 +304,7 @@ function DOELSE(
 
  return method_exists($Enhancer, '__magicELSE') ? 
 
-    $Enhancer->__magicELSE($condition, $if_result, $else_result, $assoc) : 
+    $Enhancer->__magicELSE($condition, $if_result, $else_result, METHOD_ASSOC) : 
 
       PERFORM( $request->erorrMessage());
 
@@ -499,9 +318,8 @@ function DOELSE(
   **/
 function DOIF(
 
-    bool  $condition     =  null
-   ,mixed $if_result     =  null
-   ,mixed $assoc         =  null
+     bool  $condition      =  null
+    ,string $if_result     =  null
 
  )
  {
@@ -517,7 +335,7 @@ function DOIF(
 
  return method_exists($Enhancer, '__magicIF') ? 
 
-        $Enhancer->__magicIF($condition, $if_result, $assoc) : 
+        $Enhancer->__magicIF($condition, $if_result, METHOD_ASSOC ) : 
 
         PERFORM( $request->erorrMessage());
 
@@ -559,8 +377,8 @@ function MERGE(
   **/
 function PERFORM(
 
-     mixed $str      =  null
-    ,mixed $assoc    =  null
+     string $str      =  null
+    ,string $assoc    =  null
 
  )
  {
@@ -590,7 +408,7 @@ function PERFORM(
 function STRING(
 
     string $str   =  null
-   ,mixed $assoc =  null
+   ,string $assoc =  METHOD_ASSOC
 
  )
  {
