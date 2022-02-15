@@ -5,11 +5,11 @@
  USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileCare;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.5 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -37,8 +37,8 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.4 
- * @since     02.13.2022
+ * @version   v1.2.0.5
+ * @since     02.15.2022
  *
  * noHTML dynamic static structure _
  * non/WITH CLASS|METHOD|FUNCTION ASSOCIATED  
@@ -9292,7 +9292,23 @@ static private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value
        ) : 
     
         # RETURN_ELEMENT_WHERE_LABEL_IS_SET_AS_NULL
-        return self::_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, $class, NULL);   
+        return self::_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, $class, NULL ); 
+        
+       # INLINE_OR_ANY_LABEL_REQUIRED 
+       # ELSEIF_ASSOCU_===_FUNC_ASSOC_||_CLASS_ASSOC_||_METHOD_ASSOC
+       elseif( 
+    
+         $assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC 
+    
+       )  :
+
+      /**
+        * THEN_IF_IT_IS TRUE_RETURN!
+        * @var  $elem_val, $elem_key, $value, $attr, $id, $class, $label
+        * @method function _elemenHTMLINLINE()
+        *
+        **/
+      return self::_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label );  
 
   # INLINE_OR_ANY_LABEL_REQUIRED
   # CHECK_IF_THE_PARAM_REQUIRED_IS_NOT_NULL
@@ -9310,7 +9326,7 @@ static private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value
        * @method function return_elementINLINE()
        *
        **/
-      self::PERFORM( self::return_elementINLINE($elem_val, $elem_key, $value, NULL, $id, $class, $label) );
+      self::PERFORM( self::return_elementINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label) );
       
    elseif ( 
      
@@ -9326,23 +9342,6 @@ static private function _istrue_assoc_ELEMENTINLINE($elem_val, $elem_key, $value
     *
     **/
     self::PERFORM( self::return_elementINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label) );
-
-  # INLINE_OR_ANY_LABEL_REQUIRED 
-  # ELSEIF_ASSOCU_===_FUNC_ASSOC_||_CLASS_ASSOC_||_METHOD_ASSOC
-  elseif( 
-    
-     $assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC 
-     
-   )  :
- 
-       
-     /**
-       * THEN_IF_IT_IS TRUE_RETURN!
-       * @var  $elem_val, $elem_key, $value, $attr, $id, $class, $label
-       * @method function _elemenHTMLINLINE()
-       *
-       **/
-     return self::_elemenHTMLINLINE($elem_val, $elem_key, $value, $attr, $id, $class, $label);  
   
    endif;
   

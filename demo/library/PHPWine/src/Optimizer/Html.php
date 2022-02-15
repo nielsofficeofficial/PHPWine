@@ -3,11 +3,11 @@
   namespace PHPWine\VanillaFlavour\optimizer;
   
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.3 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.3 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.5 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -35,8 +35,8 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.3 
- * @since     02.13.2022
+ * @version   v1.2.0.5
+ * @since     02.15.2022
  * 
  * 
  * noHTML dynamic  structure 
@@ -9700,6 +9700,23 @@ private function get_value_child_optimizer( $value )
         # RETURN_ELEMENT_WHERE_LABEL_IS_SET_AS_NULL
         return $this->assoc_element_inline($elem_val, $elem_key, $value, $attr, $id, $class, NULL);   
 
+  # INLINE_OR_ANY_LABEL_REQUIRED 
+  # ELSEIF_ASSOCU_===_FUNC_ASSOC_||_CLASS_ASSOC_||_METHOD_ASSOC
+  elseif( 
+    
+    $assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC 
+    
+  )  :
+
+      
+    /**
+      * THEN_IF_IT_IS TRUE_RETURN!
+      * @var  $elem_val, $elem_key, $value, $attr, $id, $class, $label
+      * @method function assoc_element_inline()
+      *
+      **/
+    return $this->assoc_element_inline($elem_val, $elem_key, $value, $attr, $id, $class, $label);  
+
   # INLINE_OR_ANY_LABEL_REQUIRED
   # CHECK_IF_THE_PARAM_REQUIRED_IS_NOT_NULL
   # IF_IT_IS_NULL_RETURN_FLASE  
@@ -9716,43 +9733,24 @@ private function get_value_child_optimizer( $value )
        * @method function perform_assoc_element_inline()
        *
        **/
-      $this->PERFORM( $this->perform_assoc_element_inline($elem_val, $elem_key, $value, NULL, $id, $class, $label) );
-      
-   elseif ( 
-     
-     $assoc == FALSE || $assoc == NULL || $assoc == 'DEFAULT' 
-     
-     ) :
-      
-    # RETURN_INLINE_ELEMENT_NO_HTML_CLOSING_TAG 
-  /**
-    *
-    * @var $elem_val, $elem_key, $value, $attr, $id, $class, $label
-    * @method function perform_assoc_element_inline()
-    *
-    **/
-   $this->PERFORM( $this->perform_assoc_element_inline($elem_val, $elem_key, $value, $attr, $id, $class, $label) );
+      $this->PERFORM( $this->perform_assoc_element_inline($elem_val, $elem_key, $value, $attr, $id, $class, $label) );
 
-  # INLINE_OR_ANY_LABEL_REQUIRED 
-  # ELSEIF_ASSOCU_===_FUNC_ASSOC_||_CLASS_ASSOC_||_METHOD_ASSOC
-  elseif( 
-    
-     $assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC 
+  elseif ( 
      
-   )  :
- 
+      $assoc == FALSE || $assoc == NULL || $assoc == 'DEFAULT' 
+      
+      ) :
        
-     /**
-       * THEN_IF_IT_IS TRUE_RETURN!
-       * @var  $elem_val, $elem_key, $value, $attr, $id, $class, $label
-       * @method function assoc_element_inline()
-       *
-       **/
-     return $this->assoc_element_inline($elem_val, $elem_key, $value, $attr, $id, $class, $label);  
+     # RETURN_INLINE_ELEMENT_NO_HTML_CLOSING_TAG 
+   /**
+     *
+     * @var $elem_val, $elem_key, $value, $attr, $id, $class, $label
+     * @method function perform_assoc_element_inline()
+     *
+     **/
+    $this->PERFORM( $this->perform_assoc_element_inline($elem_val, $elem_key, $value, $attr, $id, $class, $label) );
   
    endif;
-
-   
   
 } 
 

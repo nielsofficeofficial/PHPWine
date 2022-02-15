@@ -6,11 +6,11 @@ use \PHPWine\VanillaFlavour\System\Request;
 use \PHPWine\VanillaFlavour\System\System;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.5 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -38,8 +38,8 @@ use \PHPWine\VanillaFlavour\System\System;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.4 
- * @since     02.13.2022
+ * @version   v1.2.0.5
+ * @since     02.15.2022
  * 
  * @method VALIDATE_V2::MANDATORY();
  * @method VALIDATE_V2::TOOLTIPS();

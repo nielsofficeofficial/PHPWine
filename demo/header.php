@@ -70,5 +70,3 @@ $Enhancer = new OptimizerCare();
     , [['a'],['b']], 'MyClass', ' This is it ! ' );
 
     echo ( $main_menu ) ? $main_menu : false ;
-
- 

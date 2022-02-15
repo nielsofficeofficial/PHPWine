@@ -4,11 +4,11 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
 use \PHPWine\VanillaFlavour\system\Validate_v2 as v2; 
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.4 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.4 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.5 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -36,12 +36,18 @@ use \PHPWine\VanillaFlavour\system\Validate_v2 as v2;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.4 
- * @since     02.13.2022
+ * @version   v1.2.0.5
+ * @since     02.15.2022
+ * 
+ * Would you like me to treat a cake and coffee ?
+ * Become a donor, Because with you! We can build more...
+ * Donate:
+ * GCash : +639650332900
+ * Paypal account: syncdevprojects@gmail.com
  *
  */
 
-$validationV2 = NEW class extends v2 {
+$v2 = NEW class extends v2 {
 
 /**
   * @var 
@@ -236,7 +242,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 {  
 
    # SANITIZED FOR DATABASE
-   $validationV2::$request_value = $validationV2::sanitized_request_value( ['username','last_name','email'] );
+   $v2::$request_value = $v2::sanitized_request_value( ['username','last_name','email'] );
 
 /**
   * @var 
@@ -245,7 +251,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   * @since v1.2.0.0 
   * @since 02.07.2022
   **/
-  $validationV2::$validate_tag  = $validationV2::mandatory_validate_tag(  [ 'username','last_name', 'email', 'website', 'message' ] );
+  $v2::$validate_tag  = $v2::mandatory_validate_tag(  [ 'username','last_name', 'email', 'website', 'message' ] );
   
   $attributes = [
     
@@ -254,7 +260,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
    ];
      
-  $required  = []; foreach ($validationV2::$validate_tag as $value) { $required[] =  ELEM('li',  $value ); }  _xdiv( 'Required' , ELEM('UL', implode("", $required ) , $attributes ) );
+  $required  = []; foreach ($v2::$validate_tag as $value) { $required[] =  ELEM('li',  $value ); }  _xdiv( 'Required' , ELEM('UL', implode("", $required ) , $attributes ) );
 
 /**
   * @var 
@@ -263,11 +269,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   * @since v1.2.0.0 
   * @since 02.07.2022
   **/
-  $validationV2::$validtype_validate_tag  = $validationV2::validtype_validate_tag( 'username' );   
-  $validationV2::$validtype_email_tag     = $validationV2::validtype_validate_tag( 'email' );   
+  $v2::$validtype_validate_tag  = $v2::validtype_validate_tag( 'username' );   
+  $v2::$validtype_email_tag     = $v2::validtype_validate_tag( 'email' );   
 
-  $valid_type_child = DOIF( !empty(  $validationV2::$validtype_validate_tag ) , ELEM('li',  $validationV2::$validtype_validate_tag ,  [['class'],['red']] ) , FUNC_ASSOC )
-                     .DOIF( !empty(  $validationV2::$validtype_email_tag   )  , ELEM('li',  $validationV2::$validtype_email_tag    ,  [['class'],['red']] ) , FUNC_ASSOC );
+  $valid_type_child = DOIF( !empty(  $v2::$validtype_validate_tag ) , ELEM('li',  $v2::$validtype_validate_tag ,  [['class'],['red']] ) )
+                     .DOIF( !empty(  $v2::$validtype_email_tag   )  , ELEM('li',  $v2::$validtype_email_tag    ,  [['class'],['red']] ) );
                       
   _xdiv( 'validtype' , 
   
@@ -282,9 +288,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   * @since v1.2.0.0 
   * @since 02.07.2022
   **/
-  $validationV2::$tooltips_validate_tag  = $validationV2::tooltips_validate_tag( 'username' );   
+  $v2::$tooltips_validate_tag  = $v2::tooltips_validate_tag( 'username' );   
     
-   if( ( $validationV2::$tooltips_validate_tag == MINLENGTH )  || ( $validationV2::$tooltips_validate_tag == CONTAIN_SPECIALCHAR )  || is_null( $validationV2::$tooltips_validate_tag) ) 
+   if( ( $v2::$tooltips_validate_tag == MINLENGTH )  || ( $v2::$tooltips_validate_tag == CONTAIN_SPECIALCHAR )  || is_null( $v2::$tooltips_validate_tag) ) 
    {
 
      _xSTYLE( ' .red { color: red; } .green { color: green; } ' );
@@ -292,18 +298,18 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $first_child_attr =  [
        
       ['class'],
-      [ (  !empty( $validationV2::$tooltips_validate_tag ) &&  $validationV2::$tooltips_validate_tag == MINLENGTH ) ? 'red' : 'green' ]
+      [ (  !empty( $v2::$tooltips_validate_tag ) &&  $v2::$tooltips_validate_tag == MINLENGTH ) ? 'red' : 'green' ]
     
     ];
 
     $second_child_attr = [
         
       [ 'class' ],
-      [ ( (!empty( $validationV2::$tooltips_validate_tag ) &&  $validationV2::$tooltips_validate_tag == MINLENGTH ) || (!empty( $validationV2::$tooltips_validate_tag ) &&  $validationV2::$tooltips_validate_tag == CONTAIN_SPECIALCHAR )  ) ? 'red' : 'green' ]
+      [ ( (!empty( $v2::$tooltips_validate_tag ) &&  $v2::$tooltips_validate_tag == MINLENGTH ) || (!empty( $v2::$tooltips_validate_tag ) &&  $v2::$tooltips_validate_tag == CONTAIN_SPECIALCHAR )  ) ? 'red' : 'green' ]
     
     ];
 
-    $validationV2::$tooltips =  _xUL( 'tooltips',
+    $v2::$tooltips =  _xUL( 'tooltips',
       
        ELEM('li', 'Not less than 8 Characters'             , $first_child_attr  ) 
       .ELEM('li', 'Must have atleast 1 Special Character'  , $second_child_attr )
@@ -312,19 +318,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
    }
 
-   $validationV2::$tooltips_email_tag  = $validationV2::tooltips_validate_tag( 'email' );   
+   $v2::$tooltips_email_tag  = $v2::tooltips_validate_tag( 'email' );   
     
-   if( ( $validationV2::$tooltips_email_tag == VALID_EMAIL ) || is_null( $validationV2::$tooltips_email_tag) ) 
+   if( ( $v2::$tooltips_email_tag == VALID_EMAIL ) || is_null( $v2::$tooltips_email_tag) ) 
    {
 
     $first_child_attr =  [
        
       ['class'],
-      [ (  !empty( $validationV2::$tooltips_email_tag ) &&  $validationV2::$tooltips_email_tag == VALID_EMAIL ) ? 'red' : 'green' ]
+      [ (  !empty( $v2::$tooltips_email_tag ) &&  $v2::$tooltips_email_tag == VALID_EMAIL ) ? 'red' : 'green' ]
     
     ];
 
-    $validationV2::$tooltips_email =  _xUL( 'tooltips' , ELEM('li', 'Must be Valid Email ex. youremail@domain.com' , $first_child_attr  ) , FUNC_ASSOC );
+    $v2::$tooltips_email =  _xUL( 'tooltips' , ELEM('li', 'Must be Valid Email ex. youremail@domain.com' , $first_child_attr  ) , FUNC_ASSOC );
 
   }
 
@@ -349,13 +355,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   $username_input_attr = [
       
      ['name'     ,  'value'],
-     ['username' ,  !empty($validationV2::$request_value[0]) ? $validationV2::$request_value[0] : false ]
+     ['username' ,  !empty($v2::$request_value[0]) ? $v2::$request_value[0] : false ]
 
    ];
   
-  $user_name =  ELEM('div', (!empty($validationV2::$tooltips)) ? $validationV2::$tooltips : false )
-               .FORM::LABEL('label_username' , 'Username: '                        , FUNC_ASSOC )
-               .FORM::TEXT('username'        , 'username'   , $username_input_attr , FUNC_ASSOC );
+  $user_name =  ELEM('div', (!empty($v2::$tooltips)) ? $v2::$tooltips : false )
+               .FORM::LABEL('label_username' , 'Username: '                        )
+               .FORM::TEXT('username'        , 'username'   , $username_input_attr );
 
   $last_name_attr = [
       
@@ -367,12 +373,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   $last_name_input_attr = [
       
     ['name'      , 'value'],
-    ['last_name' , !empty($validationV2::$request_value[1]) ? $validationV2::$request_value[1] : false  ]
+    ['last_name' , !empty($v2::$request_value[1]) ? $v2::$request_value[1] : false  ]
 
    ];
 
-  $last_name =  FORM::LABEL('label_last_name' , 'Last name: '                          , FUNC_ASSOC )
-               .FORM::TEXT('last_name'        , 'last_name'   , $last_name_input_attr  , FUNC_ASSOC );
+  $last_name =  FORM::LABEL('label_last_name' , 'Last name: '                         )
+               .FORM::TEXT('last_name'        , 'last_name'   , $last_name_input_attr );
 
   $email_attr = [
       
@@ -384,13 +390,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
   $email_input_attr = [
       
     ['name'  , 'value'],
-    ['email' , !empty($validationV2::$request_value[2]) ? $validationV2::$request_value[2] : false  ]
+    ['email' , !empty($v2::$request_value[2]) ? $v2::$request_value[2] : false  ]
 
    ];
 
-  $email =  ELEM('div', (!empty($validationV2::$tooltips_email)) ? $validationV2::$tooltips_email : false )
-           .FORM::LABEL('email' , 'Email: '                     , FUNC_ASSOC )
-           .FORM::TEXT('email'  , 'email'  , $email_input_attr  , FUNC_ASSOC );
+  $email =  ELEM('div', (!empty($v2::$tooltips_email)) ? $v2::$tooltips_email : false )
+           .FORM::LABEL('email' , 'Email: '                     )
+           .FORM::TEXT('email'  , 'email'  , $email_input_attr  );
 
 
   $website_attr = [
@@ -400,8 +406,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
    ];
 
-  $website = FORM::LABEL('website' , 'Website: '                          , FUNC_ASSOC )
-            .FORM::TEXT('website'  , 'website'   , [['name'],['website']] , FUNC_ASSOC );
+  $website = FORM::LABEL('website' , 'Website: '                          )
+            .FORM::TEXT('website'  , 'website'   , [['name'],['website']] );
   
   $message_attr = [
       
@@ -410,8 +416,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
    ];
 
-  $message = FORM::LABEL('message'     , 'Message: '                  , FUNC_ASSOC  )
-            .FORM::TEXTAREA('message'  , '' , [['name'],['message']]  , FUNC_ASSOC  );
+  $message = FORM::LABEL('message'     , 'Message: '                  )
+            .FORM::TEXTAREA('message'  , '' , [['name'],['message']]  );
 
   $contact_form  = _xdiv( 'contact-form' ,
   
@@ -421,7 +427,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     .ELEM('div', $website   , $website_attr   )
     .ELEM('div', $message   , $message_attr   )
 
-    .FORM::BUTTONS('submit', 'submit' , [['value'],['submit']] , FUNC_ASSOC ) 
+    .FORM::BUTTONS('submit', 'submit' , [['value'],['submit']] ) 
 
     ,FUNC_ASSOC
            

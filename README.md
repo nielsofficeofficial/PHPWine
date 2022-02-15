@@ -30,7 +30,6 @@ PHPWine (Vanilla Flavour) is a PHP Library design for core PHP and WordPress, CM
 <h3>Downloading Library/Dependencies:</h3>
  
 ```PHP
-
 // Clone repository from githug | GitBus | CMD | CLi
 
 // Download latest version 
@@ -42,7 +41,6 @@ PHPWine (Vanilla Flavour) is a PHP Library design for core PHP and WordPress, CM
 ```PHP
 // Download Repository via Composer | Packagist
  composer require phpwinevanillaflavour/phpwine
-
 ```
 <h3>Library Installation:</h3>
 
@@ -50,13 +48,11 @@ PHPWine (Vanilla Flavour) is a PHP Library design for core PHP and WordPress, CM
 // Install on header.php
 require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
 
-use \PHPWine\VanillaFlavour\Merge\Html;
 use \PHPWine\VanillaFlavour\Optimizer\Html as Optimizer;
 use \PHPWine\VanillaFlavour\Optimizer\Enhancers as OptimizerCare; 
 
 $html     = new Optimizer();
 $enhancer = new OptimizerCare();
-
 ```
 <h3>WordPress Installation:</h3>
 
@@ -73,17 +69,15 @@ $enhancer = new OptimizerCare();
         | - README.md
         | - composer.json        
         
-// on plugin-index or functions.php
+// on the very top of functions.php or plugin-index.
 require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
 
 ...
-
 ```
 
 <h3>Dependencies Installation:</h3>
 
 ```PHP
-
 # Namespace / Dependencies
 use \PHPWine\VanillaFlavour\Optimizer\Enhancers;
 use \PHPWine\VanillaFlavour\Optimizer\Form;
@@ -92,8 +86,44 @@ use \PHPWine\VanillaFlavour\System\Request;
 use \PHPWine\VanillaFlavour\System\Validate;
 use \PHPWine\VanillaFlavour\System\Validate_v2;
 use \PHPWine\VanillaFlavour\Merge\Html;
-
 ```
+<h3>PHPWine Plugins + (FrontEnd Frameworks) :</h3>
+<h5>Wants to become a contributor in PHPWine Plugins?, Let's talk email me at: syncdevprojects@gmail.com</h5>
+ <ul>
+  <li><a href="#">PHPPortal : </a><span> Bootstrap Portal/Login System. </span>
+    <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
+   </li>
+  <li><a href="#">PHPCRUD: </a><span> Fully optimized bootstrap CRUD </span>
+      <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
+  </li>
+  <li><a href="#">PHPSamePageCRUD: </a><span> Fully optimized bootstrap CRUD </span>
+      <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
+  </li>
+  <li><a href="#">PHPDashboard: </a><span> Bootstrap dashboard into PHPWine. 
+  </span>
+     <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
+  </li>
+  <li><a href="#">PHPMenu : </a><span> Dynamic Bootstrap menu. </span> 
+  <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
+  </li>
+    <li><a href="#">PHPUserProfile: </a><span>Fully optimized bootstrap user profile. </span>
+  <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>  
+  </li>
+  <li><a href="#">PHPSlider : </a><span> Dynamic and fully optimized create variety of slider hero and topfold. </span></li>
+  <li><a href="#">PHPProductSlider : </a><span> Display Dynamic and fully optimized product slider. </span></li>
+  <li><a href="#">PHPTestimonials: </a><span> Display Dynamic and fully optimized tetimonial Slider. </span></li>
+  <li><a href="#">PHPContactPage: </a><span> Static contact page with form validation and PHPMailer.  </span></li>
+  <li><a href="#">PHPUserRole: </a><span>Dynamic restrict user role and permission. </span></li>
+  <li><a href="#">PHPStore: </a><span> eCommerce/online store. </span></li>
+  <li><a href="#">PHPCart: </a><span> Cart integrating all payment gateway </span></li>
+  <li><a href="#">PHPBlog: </a><span> Optimize module blog post including category and tag post  </span></li>
+  <li><a href="#">PHPCategory: </a><span> Create a category and extended  </span></li>
+  <li><a href="#">PHPTag: </a><span> Create a tag and extended  </span></li>
+
+</ul>
+
+<hr /> 
+
 <h2>Thanks To:</h2>
 <h5>
 Github : To allow me to upload my PHP Library PHPWine Vanilla Flavour to repository<br /> 
@@ -105,8 +135,16 @@ __Please kindly read license and agreement under by MIT__
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 <br />
 
-__For suggestion and donation/sponsors you can send via GCash : +639650332900__ <br /> __Also you can send via Paypal account: syncdevprojects@gmail.com__ 
-<br /><br /> Thanks and good luck! 
+<hr />
+Would you like me to treat a cake and coffee ? <br />
+Become a donor, Because with you! We can build more... 
+
+Donate: <br />
+GCash : +639650332900 <br /> 
+Paypal account: syncdevprojects@gmail.com
+<hr />
+<br />
+Thanks and good luck! 
 
 
 [![GitHub stars](https://img.shields.io/github/stars/nielsofficeofficial/PHPWine.svg?style=social&label=Star)](https://github.com/nielsofficeofficial/PHPWine/)

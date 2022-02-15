@@ -38,8 +38,14 @@ use \PHPWine\VanillaFlavour\Optimizer\Form;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.4 
+ * @version   v1.2.0.5
  * @since     02.13.2022
+ * 
+ * Would you like me to treat a cake and coffee ?
+ * Become a donor, Because with you! We can build more...
+ * Donate:
+ * GCash : +639650332900
+ * Paypal account: syncdevprojects@gmail.com
  *
  */
 
@@ -148,7 +154,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") :
     * @since v1.0
     *
     **/ 
-    $auth_err    = AUTH::BIND($connection, 
+    $auth_err    = AUTH::BIND( $connection, 
     [   
        
         'QUERY_STATEMENT'         => AUTH::CHECKQUERY('users_log',['username','email','mobile','password','id','created_at'])
@@ -173,9 +179,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") :
   **/ 
   $sets_eCatch = _xUL( 'id-eCatch_err' ,
    
-   DOIF( !empty($err_username)   ,ELEM('li' ,$err_username ,setElemAttr(['class'],['err_username_msg'])) , FUNC_ASSOC )
-  .DOIF( !empty($err_password)   ,ELEM('li' ,$err_password ,setElemAttr(['class'],['err_password_msg'])) , FUNC_ASSOC )
-  .DOIF( !empty($auth_err)       ,ELEM('li' ,$auth_err     ,setElemAttr(['class'],['err_password_msg'])) , FUNC_ASSOC )
+   DOIF( !empty($err_username)   ,ELEM('li' ,$err_username ,setElemAttr(['class'],['err_username_msg']))  )
+  .DOIF( !empty($err_password)   ,ELEM('li' ,$err_password ,setElemAttr(['class'],['err_password_msg']))  )
+  .DOIF( !empty($auth_err)       ,ELEM('li' ,$auth_err     ,setElemAttr(['class'],['err_password_msg']))  )
  
  , attr  : [ ]
  , class : 'eCatch_error'
@@ -200,8 +206,8 @@ _FORM(setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 
 
  ];  
 
- $user_login          =  FORM::LABEL('label-id-un'  , 'Username/Email/Mobile' , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
-                        .FORM::TEXT('id-username'   , 'class-username'        , [['name', 'value'] , ['username',  (isset($_COOKIE['username'])) ? $_COOKIE['username'] :  $username ]], FUNC_ASSOC );
+ $user_login          =  FORM::LABEL('label-id-un'  , 'Username/Email/Mobile') . __BR()
+                        .FORM::TEXT('id-username'   , 'class-username'        , [['name', 'value'] , ['username',  (isset($_COOKIE['username'])) ? $_COOKIE['username'] :  $username ]] );
  
 
  $user_password_attr  = [
@@ -211,8 +217,8 @@ _FORM(setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 
 
  ];  
 
- $user_password        =  FORM::LABEL('label-id-un'    , 'Password'        , FUNC_ASSOC ) .__BR(FUNC_ASSOC)
-                         .FORM::PASSWORD('id-username' , 'class-username'  , [['name', 'value'] , ['password', (isset($_COOKIE['password'])) ? $_COOKIE['password'] :  $password ]], FUNC_ASSOC );
+ $user_password        =  FORM::LABEL('label-id-un'    , 'Password'        ) . __BR()
+                         .FORM::PASSWORD('id-username' , 'class-username'  , [['name', 'value'] , ['password', (isset($_COOKIE['password'])) ? $_COOKIE['password'] :  $password ]] );
 
                         
  $user_remember_attr  = [
@@ -222,8 +228,8 @@ _FORM(setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 
 
  ];  
 
- $user_remember        =  FORM::CHECKBOX('checkbox' , 'class-checkbox' , [['name', ''] , ['remember', (isset($_COOKIE["username"])) ? 'checked' : false ] ], FUNC_ASSOC ) 
-                         .FORM::LABEL('label-id-un' , 'Remember me'    , FUNC_ASSOC );
+ $user_remember        =  FORM::CHECKBOX('checkbox' , 'class-checkbox' , [['name', ''] , ['remember', (isset($_COOKIE["username"])) ? 'checked' : false ] ] ) 
+                         .FORM::LABEL('label-id-un' , 'Remember me'    );
                   
  $user_submit_btn_attr = [
    
@@ -232,7 +238,7 @@ _FORM(setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 
 
  ];  
 
-  $user_submit_btn   = ELEM( 'div' , FORM::BUTTONS( 'id-conPassword','class-submit', [['value'],['Submit']], FUNC_ASSOC ) 
+  $user_submit_btn   = ELEM( 'div' , FORM::BUTTONS( 'id-conPassword','class-submit', [['value'],['Submit']] ) 
                   
                        ,[['id','class'],['id-submit','submit_from_group']] 
                        );
@@ -250,5 +256,4 @@ _FORM(setElemAttr(['action','method'],[ htmlspecialchars($_SERVER["PHP_SELF"]), 
 
   echo $login_form;
   
-
  xFORM(" END Of the form ");
