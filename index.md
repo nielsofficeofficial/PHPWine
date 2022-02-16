@@ -241,7 +241,7 @@ $html  .= "<ul id=\"My_id_ParentTags\" class=\"MyClass\">";
     { 
      $datas[] = "<li class=\"col-sm-3\" id=\"MyList\">Count Number. " $i . "</li>";  
     }
-    return implode('', $datas); 
+  $html  .= $datas; 
     
 $html  .= "</ul >";
 
@@ -309,166 +309,6 @@ if (FLASE) {
 // Sample Code | PHPHtml-Optimizer/Procedural
 // PHPHtml-Optimizer/Merge:
 _xH1('heading-id',DOELSE( FALSE ,'Yes', 'PHPHtml-Optimizer/Merge: NO', FUNC_ASSOC));
-
-```
-
-```PHP
-
-// Demo Codes | PHPHtml-Optimizer/Merge Using File Extension
-// PHPHtml-Optimizer/Merge:
-// SetExtension($argu);  
-
-function setExtension($src,$path,$argu) {
-
-   $merge = $path.$extension = Html::setFileExtension($argu);
-       
-    return $sets = [
-        
-      $attr_name = [$src],
-      $attr_val  = [$merge]
-       
-    ];
-}
-
-Html::ELEM('id','class', 'link', setExtension('src','/../profile', __PHP__),'Profile' );
-
-```
-
-```PHP
-
-// Demo Codes | PHPHtml-Optimizer/Merge Using Image Extension
-// PHPHtml-Optimizer/Merge:
-// SetImageExtension()
-
-function SetImgExtension($src,$path, $argu=null) {
-
-      $merge = $path.$extension = Html::SetFileExtension($argu);
-        
-       return $sets = [
-         
-           $attr_name = [$src],
-           $attr_val  = [$merge]
-        
-        ];
-
-}
-
-$name = 'fileName';
-
-__HTML('id','Avatar','img',SetImgExtension('src','/../'.$name.'', __PNG__ ));
-
-```
-
-<h4>Demo Codes | Using Method MERGE() PHPHtml-Optimizer/Procedural</h4>
-
-```PHP
-
-// Method USING MERGE() 1
-_xHTML('id-div','div',Html::MERGE(
-  
-  // Heading
-  _xHTML('id-div','h1','Hello World') .
-  // Content
-  _xHTML('id-div','div', $object->UsersList() )
-
- ) // End of Merge
- 
- // Begin  Div Attributes & End of . Div ParentContainer
-,SetElemtAttr(['attr_name'],['attr_val']), $id='ParentContainer', $class=null ); 
-
-// Method USING MERGE() 2
-USE \PHPHtml\CodeOptimizer\merge\Html; 
-
-// BEGIN Parent
-  _div('id-parent',SetElemtAttr(['id'],['ParentContainer'])); 
-  
-  // Begin Child
-   _xdiv('id-child',Html::MERGE( 
-   
-     //  your code goes here...   
-   
-    )
- 
-   ,SetElemtAttr(['id'],['ChildContainer']));
-  // END pf / Child Container 
- 
- xdiv('END / of ParentContainer '); 
-// END of / Parent Container
-
-```
-
-```PHP
-
-// BONUS: 
-
-_div('id','parentTagElement'); 
-
-  Html::PERFORM( $getCons = [
-         'do_print' => function ($trim, $trims) {
-         
-            $TrimThis  =  trim($trim);
-            $TrimThis_ =  trim($trims);
-            $merge   = $TrimThis . $check = $varVal = isset($TrimThis_) ? $TrimThis_ : '' ; 
-            
-            return $getReturn = $varSet = TRUE ?  $merge : 'Nope'; 
-            
-          }  // end of index
-          
-  ], FUNC_ASSOC);
-  
- _xdiv(
-    
-    Html::MERGE(
-  
-     _xHTML('heading-1-id','h1',$user->allUsers,'','H1_iD') .
-     _xHTML('para-id','p', $getCons['do_print']('Hello','World') ) 
-     
-    ) // End of merge
-    
-  ); // End of div
-  
-xdiv('END of / parentTagElement'); 
-
-```
-
-
-```PHP
-
-// ANONYMOUS CALL_BACK
-function make_merge($cb, $do) {
-  return $cb; 
-}
-
-Html::PERFORM(
-
-  make_merge('Check_cb', $cb_merge = function () {
-  
-   return   'Hello Merge return ';
-  
-  }) . $cb_merge();
-
-);
-
-$TrimThis = $message = 'Hello World';
-
-Html::PERFORM(
-
-  make_merge('Check_cb', $do_merge = function () use ($message) { return  $message; }) 
-  . $do_merge() 
-);
-
-// RETURN CALL_BACK
-_xdiv('id-container', Html::MERGE( 
-
-   _xHTML('id','div', make_merge('CHECK_IF_TRUE_THEN', $cb_merge = function () use ($TrimThis)  { 
-   
-         $merge   = $TrimThis . $check = $varVal = isset($TrimThis_) ? $TrimThis_ : '' ; 
-         return $getReturn = $varSet = TRUE ?  $merge : 'Nope'; 
-   
-   }) 
-  )  
- ) . _xHTML('heading-id','h1',$cb_merge()) <br />
-);
 
 ```
 
@@ -708,16 +548,12 @@ xSTYLE($label = NULL);
 
 |Function        | Method         |  Description   |  Parameters |  
 |:---            |:---            |:---            |:---      |
-| `send_to()`    | `send_to()`    | redirect to    |url       |
-| `view_to()`    | `view_to()`    | template file  |DIR/KEY/filename |
-| `bring_to()`    | `bring_to()`  | get file       |DIR/KEY/filename/Extension/INCLUDES/INCLUDES_ONCE/REQUIRE |
 | `isbelongs()`   | `belongs_to()` | send file into page ? |PageName/KeyFolderPath/__KEY_FOLDER_PATH__/'keyFolderPath' |
 | `getKeyPath()`   | `GetKeyFolderPath()` | get page? folder key | none |
 | `__BR()`   | `BREAK()` | Html `<Br/>` tag | FUNC_ASSOC/METHOD_ASSOC/CLASS_ASSOC |
 | `__HR()`   | `LINE()` | Html `<hr/>` tag | FUNC_ASSOC/METHOD_ASSOC/CLASS_ASSOC |
 | `__space()`   | `SPACE()` | Space string | none |
 | `MERGE()`   | `MERGE()` | Make ELEM/ELEMENTS Once at the time| none |
-| `SetFileExT()`   | `SetFileExtension() ` | Set file extention | `__PHP__`,` __HTML__ `,`__CSS__`,`__JS__`,`__JPG__`,`__JPEG__`,`__PNG__`,`__GIF__`, ` __BMP__`, `__TEX__`,`__XLS__`,`__XLSX__`,`__DOCX__`, `__DOCX__`,`__PPT__`,`__PPTX__`,`__ODT__`, `__TXT__`, `__RTF__` |
 | `SetElemAttr()`   | `SetElemAttr()` | Set Elements HTML custom attr | ['attrName'],['attrValue'] |
 | `DOIF()`   | `__magicIF()` | append version of IF statements design for optimizer inline | Condition[Bool]/Result __NOTE:__ Not support Global variable use Ternary IF instead |
 | `DOELSE()`   | `__magicELSE()` | append version of IFELSE statements design for optimizer inline | Condition[Bool]/DefaultValue/Result  __NOTE:__ Not support Global variable use Ternary IF instead|
@@ -725,57 +561,7 @@ xSTYLE($label = NULL);
 | `STRING()`   | `STRING()` | Print "String" without Element | strings/FUNC_ASSOC/METHOD_ASSOC/CLASS_ASSOC |
 | `ATTR()`   | `ATTR()` | Html Header body template | META / TITLE / LINK / SCRIPT / CUSTOM_END / BEGIN_CUSTOM_END |
 | `ELEM()`   | `ELEM()` | Custom HTML Elements/Tags | ElemName/Value/ElemAttr/ElemId/ElemClass |
-| `GETFROM()`   | `GETFROM()` | Directory/Path Cleaner parameter of bring_to,view_to  | DIR/KEY/ ` bring_to(GETFROM(['PATH','inc']), 'hero', __PHP__);` `view_to()` |
-| `SET_DIR_PATH()`   | `SET_DIR_PATH()` | Path/Dir/Ruri - registration holder | folder-file-directory, LOCALHOST |
 
-__directories.php__ file register file currently support : PATH | DIR | RURI, make your code clean and safe. 
-
-```PHP
-<?php $Care = NEW \PHPHtml\CodeOptimizer\optimizer\Enhancers();  ?>
-<?php 
-/*
-|
-| Register Current PATH 
-|--------------------------------------------------------------------------
-|
-*/
-$PATH['REGISTERED'] = [
- 
- // live version
- 'inc' => SET_DIR_PATH('includes'),
- 
- // Localhost version 
- 'inc' => SET_DIR_PATH('includes', LOCALHOST)
-
-];
-
-/*
-|
-| Register Current DIR / VIEW Templates
-|--------------------------------------------------------------------------
-|
-*/
-$VIEWS['REGISTERED'] = [
- 
-  'Views'        => SET_DIR_PATH('saver/views'),
-  'VTemplates'   => SET_DIR_PATH('saver/views/templates')        
-
-];
-
-/*
-|
-| Register Current RURI / LOCALHOST
-|--------------------------------------------------------------------------   
-|
-*/
-$RURI['REGISTERED'] = [
-  
-  // For LocalHost 
-  'redirect'   => SET_DIR_PATH('404')     
-
-];
-
-```
 <a href="https://github.com/nielsofficeofficial/PHPWine/blob/gh-pages/index.md">Clear Version Docx Click here >></a>
 
 <h2>Thanks To:</h2>
