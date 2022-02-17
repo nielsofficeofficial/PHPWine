@@ -15,7 +15,7 @@
 # PHPWine - (Vanilla Flavour) 
 Support PHP v8 and future++ 
 
-PHPWine (Vanilla Flavour) is a PHP Library design for core PHP and WordPress, CMS, Platforms and Frameworks Cloud system application development. <br />
+PHPWine v1.2.0.5 (Vanilla Flavour) is a PHP Library design cross PHP Platform and frameworks Cloud system application development.  <br />
 <br />
 <i>Vanilla Flavour: Vanilla flavour means you can use methods outside the class precisely as native PHP functions.</i>
 
@@ -86,6 +86,12 @@ use \PHPWine\VanillaFlavour\System\Request;
 use \PHPWine\VanillaFlavour\System\Validate;
 use \PHPWine\VanillaFlavour\System\Validate_v2;
 use \PHPWine\VanillaFlavour\Merge\Html;
+
+# Group Declaration 
+use \PHPWine\VanillaFlavour\Optimizer\{ Enhancers, Form } ;
+
+#Alias 
+use \PHPWine\VanillaFlavour\Optimizer\{ Enhancers, Form as Optimizer } ;
 ```
 <h3>PHPWine Plugins + (FrontEnd Frameworks) :</h3>
 <h5>Wants to become a contributor in PHPWine Plugins?, Let's talk email me at: syncdevprojects@gmail.com</h5>
