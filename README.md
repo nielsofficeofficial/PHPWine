@@ -90,7 +90,7 @@ use \PHPWine\VanillaFlavour\Merge\Html;
 # Group Declaration 
 use \PHPWine\VanillaFlavour\Optimizer\{ Enhancers, Form } ;
 
-# Alias 
+# Group Declaration w/Alias 
 use \PHPWine\VanillaFlavour\Optimizer\{ Enhancers, Form as Optimizer } ;
 ```
 <h3>PHPWine Plugins + (FrontEnd Frameworks) :</h3>
