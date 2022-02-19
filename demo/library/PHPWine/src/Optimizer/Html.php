@@ -10734,7 +10734,7 @@ protected function cpe_FileJandler_meta($metaQS__, $metaPar__) {
      }  
     
     # END PERFORM
-    $this->PERFORM(">\n");
+    $this->PERFORM(">".$this->_getBREAK());
 
    }
 

@@ -162,7 +162,7 @@ class Auth Extends System
  * @since v1.0
  *
 **/
-public static function BINDSQL(string $connection, array $datas , array $values )  
+public static function BINDQUERY(string $connection, array $datas , array $values )  
 {
  /**
  *
