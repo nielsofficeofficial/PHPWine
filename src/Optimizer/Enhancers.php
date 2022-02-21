@@ -83,75 +83,6 @@ public function __construct() {
 
 /**
   *
-  * @method public function add breaktag html as noHTML
-  * Defined as break tag no string quotes 
-  * send_to()
-  *
-  **/ 
-public function send_to(
-
-     $uri
-
-  )
-  {
-
-     return function_exists(__SENDTO__) ?
-
-        header('Location: https://www.'.trim($uri).'.com/') : 
-
-          $this->EnhanceeCoreErrorMsg();   // 
-
-  }
-
-/**
-  *
-  * @method public function add breaktag html as noHTML
-  * Defined as break tag no string quotes 
-  * view_to()
-  *
-  **/ 
-public function view_to(
-
-   $config
-  ,$fileName
-
- )
- {
-  
-   return function_exists(__VIEWSTO__) ? 
-
-      $this->cps_ixb6_FileHandler_bring_to($config, $fileName, __PHP__, __INCONCE__) : 
-
-         $this->EnhanceeCoreErrorMsg(); 
-
- }
-
-/**
-  *
-  * @method public function add breaktag html as noHTML
-  * Defined as break tag no string quotes 
-  * bring_to()
-  *
-  **/ 
-public function bring_to(
-
-   $config
-  ,$fileName      =  null
-  ,$extension     =  null
-  ,$optional      =  null
-
- )
- {
-  
-    return function_exists(__BRINGTO__) ? 
-
-      $this->cps_ixb6_FileHandler_bring_to($config, $fileName, $extension, $optional) : 
-
-        $this->EnhanceeCoreErrorMsg(); 
-}
-
-/**
-  *
   * @method protected function PHPFileEnhancer
   * @static Method Defined Usage: belong_to() 
   * RETURN TRUE IF YOU ARE IN CURRENT PAGE BASE ON CONFIG.PHP
@@ -501,77 +432,6 @@ public function ELEM(
 
 /**
   *
-  * @method public function PHPFileEnhancer
-  * @static Method Defined Usage: Switch Support/Valid GLOBAL ARRAY 
-  * RETURN DATA FROM ARRAY METHOD ACCODING TO SWITCH 
-  * NEED TO BE REGISTER TO CONFIGP.HP
-  * @since 27.10.2020
-  * USAGE: bring_to(GETFROM(['PATH','F']), 'file2.php'); || bring_to(GETFROM(['PATH','F']), 'file',__PHP__, OPTIONAL); "Optional" // REQUIRE | INCLUDES | INCLUDES ONCE | REQUIREONCE DEFAULT
-  *
-  *
-  * MAP
-   |- root
-   |- library
-     |- files.php
-   |- files
-     |- TEST 
-       |- apps.php
-
-   $PATH['REGISTERED'] = [
-    
-     'Library' => SET_DIR_PATH('library'),
-     'FT'      => SET_DIR_PATH('files/TEST'),
-     'F'       => SET_DIR_PATH('files')
- 
-   ];
-
-  * $Enhancer->DO_PATH_SWITCH()
-  */
-public function GETFROM(
-
-     $rPwhitch_to_swicth
-    ,$gP_whitch_to_fetch
-
-
-)
-{
-
- return function_exists(__GETFROM__) ? 
-
-   $this->cpe_ixb6_FielEnhancers_do_swicth_path($rPwhitch_to_swicth, $gP_whitch_to_fetch) : 
-
-      $this->PERFORM($this->Enhance_ErrorMsg_att()); 
-}
-
-public function SET_DIR_PATH(
-
-    $uri
-    ,$serverHost
-
- )
- {
- 
- // Trim any uri that sent to var
- $ReturnUri     = trim($uri);
- 
- // remove given directory bby replacing emoty  
- ($serverHost === LOCALHOST || !empty($serverHost) || $serverHost !== null ) ? 
-
-     $registeredURI = str_replace( __REPLACE_ABSOLUTE_PATH__[0] , __EMPTY__ , __DIR__ ) :
-
-        $registeredURI = str_replace( __REPLACE_ABSOLUTE_PATH__[1] , __EMPTY__ , __DIR__ );
- 
- // assigned direcotry return looking for "library" folder
- return function_exists(__SETDIRPATH__) ? 
-
-    $registeredURI ."/". $ReturnUri . '/'  : 
-
-       $this->PERFORM($this->Enhance_ErrorMsg_att()); 
-
-}
-
-/**
-  *
   * @method protected function PHPFileEnhancer
   * @static Method Defined defineCurrentPage() 
   * RETURN FOLDER Check CurrentPage 
@@ -679,46 +539,6 @@ private function cpe_FileHander_hdr($tag, $attr) {
    } 
 
 } // END OF METHOD
-
-/**
-  *
-  * @method protected function PHPFileEnhancer
-  * @static Method Defined cps_ixb6_FileHandler_bring_to() 
-  * RETURN bring_to(GETFROM(['PATH','F']), 'file',__PHP__, OPTIONAL); "Optional" // REQUIRE | INCLUDES | INCLUDES ONCE | REQUIREONCE DEFAULT
-  * 
-  * @since 08.11.2020
-  *
-  **/
-private function cps_ixb6_FileHandler_bring_to($config=null, $fileName=null, $extension=null, $optional=null) {
-
-   $designateDiR    = trim($config  . $fileName);
-   $getDesignateDiR = $designateDiR . SetFileExT($extension); 
-
-  switch ($optional) {
-     
-     case __INC__:
-
-       empty($extension) || $extension == null ? include $designateDiR : include  $getDesignateDiR;
-       break;
-     
-     case __INCONCE__:
-        
-       empty($extension) || $extension == null ? include_once $designateDiR : include_once $getDesignateDiR;        
-       break;
-
-     case __REQUIRE__:
-        
-       empty($extension) || $extension == null ? require $designateDiR : require $getDesignateDiR;       
-       break;
-
-     default:
-        
-       empty($extension) || $extension == null ? require_once $designateDiR : require_once $getDesignateDiR;        
-       break;
-       
-  } 
-
-}
 
 /**
   *
