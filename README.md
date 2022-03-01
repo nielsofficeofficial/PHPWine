@@ -48,8 +48,8 @@ PHPWine v1.2.0.5 (Vanilla Flavour) is a PHP Library design cross PHP Platform an
 // Install on header.php
 require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
 
-use \PHPWine\VanillaFlavour\Optimizer\Html as Optimizer;
-use \PHPWine\VanillaFlavour\Optimizer\Enhancers as OptimizerCare; 
+use \PHPWine\VanillaFlavour\Wine\Optimizer\Html as Optimizer;
+use \PHPWine\VanillaFlavour\Wine\Optimizer\Enhancers as OptimizerCare; 
 
 $html     = new Optimizer();
 $enhancer = new OptimizerCare();
