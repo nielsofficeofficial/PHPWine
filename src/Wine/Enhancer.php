@@ -1,7 +1,7 @@
 <?php 
 
-USE \PHPWine\VanillaFlavour\optimizer\Enhancers AS PHPFileHandler;
-USE \PHPWine\VanillaFlavour\system\Request;
+USE \PHPWine\VanillaFlavour\Wine\optimizer\Enhancers AS PHPFileHandler;
+USE \PHPWine\VanillaFlavour\Wine\system\Request;
 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 

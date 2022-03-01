@@ -1,8 +1,8 @@
-<?php namespace PHPWine\VanillaFlavour\system; ?>
+<?php namespace PHPWine\VanillaFlavour\Wine\system; ?>
 <?php 
 
- use \PHPWine\VanillaFlavour\system\Auth;
- use \PHPWine\VanillaFlavour\System\Request;
+ use \PHPWine\VanillaFlavour\Wine\system\Auth;
+ use \PHPWine\VanillaFlavour\Wine\System\Request;
 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 
@@ -247,8 +247,8 @@ protected static function BIND_SESSION_ENCRYPTDATA_REQUEST($BIND_SESSION_ENCRYPT
       if( !empty($input_error) )         : return $input_error;
       else                               : 
         
-         if ( new \PHPWine\VanillaFlavour\System\Request() !== false)             :  $RequestErrorHandler = NEW \PHPWine\VanillaFlavour\System\Validate();
-         else                                                                     :  print( self::HANDLER_DEPENDENCIES( 'CLASS' ) ); 
+         if ( new \PHPWine\VanillaFlavour\Wine\System\Request() !== false)    :  $RequestErrorHandler = NEW \PHPWine\VanillaFlavour\Wine\System\Validate();
+         else                                                                 :  print( self::HANDLER_DEPENDENCIES( 'CLASS' ) ); 
          endif;
          
          /**

@@ -1,7 +1,7 @@
-<?php namespace PHPWine\VanillaFlavour; ?>
+<?php namespace PHPWine\VanillaFlavour\Wine; ?>
 <?php  
 
- use \PHPWine\VanillaFlavour\system\Auth;  
+ use \PHPWine\VanillaFlavour\Wine\system\Auth;  
  
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 

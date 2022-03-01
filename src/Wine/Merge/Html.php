@@ -1,8 +1,9 @@
 <?php 
 
- namespace PHPWine\VanillaFlavour\merge;
+ namespace PHPWine\VanillaFlavour\Wine\Merge;
 
  USE \PHPWine\VanillaFlavour\Optimizer\Enhancers AS PHPFileCare;
+
 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 

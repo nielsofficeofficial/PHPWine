@@ -1,6 +1,6 @@
 <?php 
 
-  namespace PHPWine\VanillaFlavour\optimizer;
+  namespace PHPWine\VanillaFlavour\Wine\optimizer;
   
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 
@@ -524,7 +524,7 @@ class Html {
   * @since 11.05.2020
   * defined Assigned Image Extenstion as ._RTF
   **/ 
- CONST __PHPHO_PROP__ = __DIR__ . '/../../prop.php'; 
+ CONST __PHPHO_PROP__ =  __DIR__ . '/../../../prop.php'; 
 
 /**
   * @var @property Array of data 
@@ -10921,7 +10921,7 @@ protected function cpe_custom_elements($elem, $value, $attr, $id, $class) {
   **/
 private function cpe_FileHandler_html_type($attr, $id, $class) {
 
-    $Enhancer = NEW \PHPWine\VanillaFlavour\optimizer\Enhancers();
+    $Enhancer = NEW \PHPWine\VanillaFlavour\Wine\Optimizer\Enhancers();
     
     return $Enhancer->ATTR('_xhtml_modify','doctype').$this->get__HTML('STRUCTURE', 3 , $attr, $id, $class);  
 }
@@ -11271,7 +11271,7 @@ protected function get_values_next_child_inner( $getInner, $array )
 private function cpe_Filehandler_Val($tagVHtml__, $ValElem__,$ValEAttr__) {
   
   // installing request error handler for instances
-  $request    = NEW \PHPWine\VanillaFlavour\System\Request();
+  $request    = NEW \PHPWine\VanillaFlavour\Wine\System\Request();
   
   # CHECK IF THERE IS ARRAY AND IF THERE IS A REQUIRE ARAAY KEY NEXT_CHILD ?
   # THEN GET THE VALUE AND LOOP IT THROUGH AN ARRAY AND RETURN THE DATAS
@@ -11402,7 +11402,7 @@ private function errors_array_handler( array|string $value)
 {
       
      // installing request error handler for instances
-     $request    = NEW \PHPWine\VanillaFlavour\System\Request();   
+     $request    = NEW \PHPWine\VanillaFlavour\Wine\optimizer\HtmlSystem\Request();   
     
      $request->CURRENT_VALUE_REQUEST( $value );
     die;

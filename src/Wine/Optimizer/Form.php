@@ -1,8 +1,8 @@
 <?php 
 
-namespace PHPWine\VanillaFlavour\optimizer;
+namespace PHPWine\VanillaFlavour\Wine\optimizer;
 
- USE \PHPWine\VanillaFlavour\Merge\Html;
+ USE \PHPWine\VanillaFlavour\Wine\Merge\Html;
 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 

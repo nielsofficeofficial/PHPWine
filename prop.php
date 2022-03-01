@@ -675,7 +675,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_STATIC_CLASS_HTML__' , '/src/Merge/Html.php'); 
+  define('__GET_STATIC_CLASS_HTML__' , '/src/Wine/Merge/Html.php'); 
 
  /**
   *
@@ -684,7 +684,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_INSTANTIATE_CLASS_HTML__' , '/src/Optimizer/Html.php'); 
+  define('__GET_INSTANTIATE_CLASS_HTML__' , '/src/Wine/Optimizer/Html.php'); 
   
  /**
   *
@@ -693,7 +693,7 @@
   * @since v1.0
   *
   **/
-  define('__CHECK_MAIN_MERGE_ON_PAGE__' , '/../Merge/Html.php'); 
+  define('__CHECK_MAIN_MERGE_ON_PAGE__' , '/../Wine/Merge/Html.php'); 
 
  /**
   *
@@ -702,7 +702,7 @@
   * @since v1.0
   *
   **/
-  define('__CHECK_MAIN_MERGE_ON_CLASS__' , '/../Optimizer/Html.php');
+  define('__CHECK_MAIN_MERGE_ON_CLASS__' , '/../Wine/Optimizer/Html.php');
   
  /**
   *
@@ -711,7 +711,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_VALIDATE_FILE_PAGE_EXIST__' , '/src/Merge/Html.php');
+  define('__GET_VALIDATE_FILE_PAGE_EXIST__' , '/src/Wine/Merge/Html.php');
 
  /**
   *
@@ -729,7 +729,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_MERGE_FILES__' , SOM_PATH_DIR . 'src/Merge/prop.php');
+  define('__GET_MERGE_FILES__' , SOM_PATH_DIR . 'src/Wine/Merge/prop.php');
   
  /**
   *
@@ -747,7 +747,7 @@
   * @since v1.0
   *
   **/
-  define('__DIRECTORY_OPTIMIZER_PAGE__' , SOM_PATH_DIR . 'src/Merge/html.php'); 
+  define('__DIRECTORY_OPTIMIZER_PAGE__' , SOM_PATH_DIR . 'src/Wine/Merge/html.php'); 
 
  /**
   *
@@ -756,7 +756,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_LOAD_MERGE__' , SOM_PATH_DIR . 'src/Merge/Merge.php' );
+  define('__GET_LOAD_MERGE__' , SOM_PATH_DIR . 'src/Wine/Merge/Merge.php' );
 
  /**
   *
@@ -765,7 +765,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_LOAD_MERGEBOX__' , SOM_PATH_DIR . 'src/Merge/MergeBox.php' );
+  define('__GET_LOAD_MERGEBOX__' , SOM_PATH_DIR . 'src/Wine/Merge/MergeBox.php' );
 
  /**
   *
@@ -774,7 +774,7 @@
   * @since v1.0
   *
   **/
-  define('__GET_LOAD_MERGEELEMENT__' , SOM_PATH_DIR . 'src/Merge/MergeElements.php' ); 
+  define('__GET_LOAD_MERGEELEMENT__' , SOM_PATH_DIR . 'src/Wine/Merge/MergeElements.php' ); 
 
  /**
   *

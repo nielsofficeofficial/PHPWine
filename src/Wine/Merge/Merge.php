@@ -1,7 +1,7 @@
 <?php 
 
-USE \PHPWine\VanillaFlavour\Optimizer\Html AS Merge; 
-USE \PHPWine\VanillaFlavour\system\Request;
+USE \PHPWine\VanillaFlavour\Wine\Optimizer\Html AS Merge; 
+USE \PHPWine\VanillaFlavour\Wine\system\Request;
 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 

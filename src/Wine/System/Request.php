@@ -1,4 +1,4 @@
-<?php namespace PHPWine\VanillaFlavour\system; ?>
+<?php namespace PHPWine\VanillaFlavour\Wine\system; ?>
 <?php
   
 /**

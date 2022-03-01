@@ -1,9 +1,9 @@
-<?php namespace PHPWine\VanillaFlavour\system; ?>
+<?php namespace PHPWine\VanillaFlavour\Wine\system; ?>
 <?php 
 
- use \PHPWine\VanillaFlavour\RequestSession;
- use \PHPWine\VanillaFlavour\System\Request;
- use \PHPWine\VanillaFlavour\System\System;
+ use \PHPWine\VanillaFlavour\Wine\RequestSession;
+ use \PHPWine\VanillaFlavour\Wine\System\Request;
+ use \PHPWine\VanillaFlavour\Wine\System\System;
 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 
