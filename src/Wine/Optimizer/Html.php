@@ -9535,7 +9535,16 @@ private function get_value_child_optimizer( $value )
    # THEN LOOP THE REQUEST DATA ELEMNT HTML
    if ( $this->check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY , $value ) ) :
     
-    # SANITIZED ARRAY CHILD IF ZERO OR EMPTY CHILD !
+    if( !is_array($value[SELF::CHILD_MANDATORY_KEY]) || !is_array( $value[SELF::CHILD_MANDATORY_KEY][0] ) )
+    {    
+        
+      $this->errors_array_handler( $value );
+      die;
+
+      # SANITIZED ARRAY INNER AND ITS CHILD IF ZERO OR EMPTY CHILD !
+      if( !is_array($value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY])  ) { $this->errors_array_handler( $value ); }   
+
+    }
     if( (count( $value[SELF::CHILD_MANDATORY_KEY] ) == 0 ) || ( count( $value[SELF::CHILD_MANDATORY_KEY][0] ) == 0 ) )
     {    
         
@@ -9544,8 +9553,12 @@ private function get_value_child_optimizer( $value )
 
       # SANITIZED ARRAY INNER AND ITS CHILD IF ZERO OR EMPTY CHILD !
       if( count( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY] ) == 0  ) { $this->errors_array_handler( $value ); }   
+   }
 
-    }
+
+
+
+
 
      # FOR EACH CHILD VALUE THE LOOP AND RETURN THE DATA
      foreach (  $value[SELF::CHILD_MANDATORY_KEY] as $key => $values ) 
