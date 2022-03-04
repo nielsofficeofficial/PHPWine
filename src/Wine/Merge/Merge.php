@@ -4,11 +4,11 @@ USE \PHPWine\VanillaFlavour\Wine\Optimizer\Html AS Merge;
 USE \PHPWine\VanillaFlavour\Wine\system\Request;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.9 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.5 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.9 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -36,8 +36,8 @@ USE \PHPWine\VanillaFlavour\Wine\system\Request;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.5
- * @since     02.15.2022
+ * @version   v1.2.0.9
+ * @since     03.03.2022
  *
  * @method / FunctionList 
  * @method _xH1();
@@ -136,8 +136,6 @@ USE \PHPWine\VanillaFlavour\Wine\system\Request;
  * 
  */
 
- $request = NEW Request();
-
 /**
   *
   * @since 02.19.2020
@@ -157,19 +155,13 @@ function _xH1(
 
 ) 
 { 
- 
-  global $request;
 
   /**
-   *
-   *
    * @package : Merge Heading tag H1
    * @package : Static Procedural
    * @method  : Html::H1($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/ 
-	$Html = NEW Merge(); 
+  $Html    = NEW Merge(); 
 
   return method_exists($Html, 'H1') ? 
   
@@ -182,17 +174,15 @@ function _xH1(
     ,$label            
     ,$assoc           
 
-   ) : PERFORM( $request->erorrMessage() ); 
+   ) : PERFORM(  Request::erorrMessage() ); 
 
 }
 
 /**
-  *
   * @since 20.19.2020
   * @category PHPHtml-Merge
   * @ Method Defined HTML H2 TAG noHTML  
   * Inline Heading tag H2
-  *
   **/
 function _xH2( 
 
@@ -205,20 +195,14 @@ function _xH2(
 
 ) 
 { 
-
-  global $request;
   
   /**
-   *
-   *
-   * 
    * @package : Merge Heading tag H2
    * @package : Static Procedural
    * @method  : Html::H2($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/ 
-   $Html = NEW Merge(); 
+   
+   $Html    = NEW Merge(); 
 
    return method_exists($Html, 'H2') ? 
    
@@ -231,17 +215,15 @@ function _xH2(
     ,$label            
     ,$assoc   
 
-   ) : PERFORM( $request->erorrMessage() ); 
+   ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
 /**
-  *
   * @since 20.19.2020
   * @category PHPHtml-Merge
   * @ Method Defined HTML H3 TAG noHTML  
   * Inline Heading tag H3
-  *
   **/
 function _xH3( 
 
@@ -255,18 +237,13 @@ function _xH3(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag H3
    * @package : Static Procedural
    * @method  : Html::H3($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/ 
-   $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
    return method_exists($Html, 'H3') ? 
    
@@ -279,17 +256,15 @@ function _xH3(
     ,$label            
     ,$assoc  
 
-   ) : PERFORM( $request->erorrMessage() );  
+   ) : PERFORM( Request::erorrMessage() );  
 
 }
 
 /**
-  *
   * @since 20.19.2020
   * @category PHPHtml-Merge
   * @ Method Defined HTML H4 TAG noHTML  
   * Inline Heading tag H4
-  *
   **/
 function _xH4( 
 
@@ -303,18 +278,13 @@ function _xH4(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag H3
    * @package : Static Procedural
    * @method  : Html::H3($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/ 
-   $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
    return method_exists($Html, 'H4') ? 
    
@@ -327,7 +297,7 @@ function _xH4(
     ,$label            
     ,$assoc   
 
-   ) : PERFORM( $request->erorrMessage() );   
+   ) : PERFORM( Request::erorrMessage() );   
 
 }
 
@@ -351,18 +321,13 @@ function _xH5(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag H5
    * @package : Static Procedural
    * @method  : Html::H5($value, $attr=null, $id, $class, $label, $assoc);
-   * 
-   *
    **/
-   $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge();  
 
    return method_exists($Html, 'H5') ? 
    
@@ -375,7 +340,7 @@ function _xH5(
     ,$label            
     ,$assoc   
 
-   ) : PERFORM( $request->erorrMessage() ); 
+   ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -399,19 +364,13 @@ function _xH6(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
-   *
    * @package : Merge Heading tag H6
    * @package : Static Procedural
    * @method  : Html::H6($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-   $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
    return method_exists($Html,'H6') ? 
    
@@ -424,7 +383,7 @@ function _xH6(
     ,$label            
     ,$assoc   
 
-    ) : PERFORM( $request->erorrMessage() ); 
+    ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -448,18 +407,13 @@ function _xDIV(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag H6
    * @package : Static Procedural
    * @method  : Html::DIV($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-   $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge();  
 
    return method_exists($Html,'DIV') ? 
    
@@ -472,7 +426,7 @@ function _xDIV(
     ,$label            
     ,$assoc
 
-    ) : PERFORM( $request->erorrMessage() ); 
+    ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -496,18 +450,13 @@ function _xP(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag PARAGRAPH
    * @package : Static Procedural
    * @method  : Html::P($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-   $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
    return method_exists($Html,'P') ? 
    
@@ -520,7 +469,7 @@ function _xP(
     ,$label            
     ,$assoc
 
-    ) : PERFORM( $request->erorrMessage() ); 
+    ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -544,18 +493,13 @@ function _xBUTTON(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag BUTTON
    * @package : Static Procedural
    * @method  : Html::BUTTON($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-   $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge();  
 
    return method_exists($Html,'BUTTON') ? 
    
@@ -568,7 +512,7 @@ function _xBUTTON(
     ,$label            
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() );
+   ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -592,18 +536,13 @@ function _xA(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag A LINK
    * @package : Static Procedural
    * @method  : Html::A($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-   $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
    return method_exists($Html,'A') ? 
    
@@ -616,7 +555,7 @@ function _xA(
     ,$label            
     ,$assoc
    
-   ) : PERFORM( $request->erorrMessage() );
+   ) : PERFORM( Request::erorrMessage() );
    
 }
 
@@ -640,18 +579,13 @@ function _xIFRAME(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag A IFRAME
    * @package : Static Procedural
    * @method  : Html::IFRAME($value, $attr=null, $id, $class, $label, $assoc);
-   * 
-   *
    **/
-   $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
    return method_exists($Html,'IFRAME') ?
    
@@ -664,7 +598,7 @@ function _xIFRAME(
     ,$label            
     ,$assoc
 
-    ) : PERFORM( $request->erorrMessage() ); 
+    ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -688,18 +622,13 @@ function _xMAIN(
  ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag MAIN
    * @package : Static Procedural
    * @method  : Html::MAIN($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'MAIN') ? 
   
@@ -712,7 +641,7 @@ function _xMAIN(
     ,$label            
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() ); 
+   ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -736,18 +665,13 @@ function _xNAV(
  ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag NAV
    * @package : Static Procedural
    * @method  : Html::NAV($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-   $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
    return method_exists($Html,'NAV') ? 
    
@@ -760,7 +684,7 @@ function _xNAV(
     ,$label            
     ,$assoc
 
-    ) : PERFORM( $request->erorrMessage() ); 
+    ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -784,18 +708,13 @@ function _xSELECT(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag SELECT
    * @package : Static Procedural
    * @method  : Html::SELECT($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-   $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
    return method_exists($Html,'SELECT') ?
    
@@ -808,7 +727,7 @@ function _xSELECT(
     ,$label            
     ,$assoc
 
-    ) : PERFORM( $request->erorrMessage() ); 
+    ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -832,18 +751,13 @@ function _xFORM(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag FORM
    * @package : Static Procedural
    * @method  : Html::FORM($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-   $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
    return method_exists($Html,'FORM') ? 
    
@@ -856,7 +770,7 @@ function _xFORM(
     ,$label            
     ,$assoc
 
-    ) : PERFORM( $request->erorrMessage() ); 
+    ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -880,18 +794,13 @@ function _xPICTURE(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag PICTURE
    * @package : Static Procedural
    * @method  : Html::PICTURE($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'PICTURE') ? 
   
@@ -904,7 +813,7 @@ function _xPICTURE(
     ,$label            
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() );  
+   ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -928,18 +837,13 @@ function _xSECTION(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag SECTION
    * @package : Static Procedural
    * @method  : Html::SECTION($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-   $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
    return method_exists($Html,'SECTION') ? 
    
@@ -952,7 +856,7 @@ function _xSECTION(
     ,$label            
     ,$assoc
 
-    ) : PERFORM( $request->erorrMessage() );  
+    ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -976,18 +880,13 @@ function _xTEXTAREA(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag TEXTAREA
    * @package : Static Procedural
    * @method  : Html::TEXTAREA($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'TEXTAREA') ? 
   
@@ -1000,7 +899,7 @@ function _xTEXTAREA(
     ,$label            
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() ); 
+   ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -1024,18 +923,13 @@ function _xFOOTER(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag TEXTAREA
    * @package : Static Procedural
    * @method  : Html::TEXTAREA($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'FOOTER') ? 
   
@@ -1048,7 +942,7 @@ function _xFOOTER(
     ,$label            
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() );
+   ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -1069,18 +963,13 @@ function _xSCRIPT(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag SCRIPT
    * @package : Static Procedural
    * @method  : Html::SCRIPT($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'SCRIPT') ? 
   
@@ -1093,7 +982,7 @@ function _xSCRIPT(
      ,null
      ,$assoc
      
-  ) : PERFORM( $request->erorrMessage() );
+  ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -1114,18 +1003,13 @@ function _xSTYLE(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag TEXTAREA
    * @package : Static Procedural
    * @method  : Html::TEXTAREA($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge();  
 
   return method_exists($Html,'STYLE') ?
   
@@ -1138,7 +1022,7 @@ function _xSTYLE(
      ,null
      ,$assoc
      
-  ) : PERFORM( $request->erorrMessage() );
+  ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -1162,18 +1046,13 @@ function _xAUDIO(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag AUDIO
    * @package : Static Procedural
    * @method  : Html::AUDIO($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'AUDIO') ? 
   
@@ -1186,7 +1065,7 @@ function _xAUDIO(
     ,$label            
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() ); 
+   ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -1210,18 +1089,13 @@ function _xVIDEO(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag VIDEO
    * @package : Static Procedural
    * @method  : Html::VIDEO($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'VIDEO') ? 
   
@@ -1234,7 +1108,7 @@ function _xVIDEO(
     ,$label            
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() );  
+   ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -1258,18 +1132,13 @@ function _xADDRESS(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag ADDRESS
    * @package : Static Procedural
    * @method  : Html::ADDRESS($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'ADDRESS') ? 
   
@@ -1282,7 +1151,7 @@ function _xADDRESS(
     ,$label            
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() ); 
+   ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -1306,18 +1175,13 @@ function _xCOLGROUP(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag COLGROUP
    * @package : Static Procedural
    * @method  : Html::COLGROUP($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'COLGROUP') ? 
   
@@ -1330,7 +1194,7 @@ function _xCOLGROUP(
     ,$label            
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() );  
+   ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -1354,18 +1218,13 @@ function _xBDI(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag BDI
    * @package : Static Procedural
    * @method  : Html::BDI($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'COLGROUP') ?
   
@@ -1378,7 +1237,7 @@ function _xBDI(
     ,$label            
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() ); 
+   ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -1402,18 +1261,13 @@ function _xBDO(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag BDO
    * @package : Static Procedural
    * @method  : Html::BDO($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge();  
 
   return method_exists($Html,'BDO') ? 
   
@@ -1426,7 +1280,7 @@ function _xBDO(
     ,$label            
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() );
+   ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -1450,18 +1304,13 @@ function _xBLOCKQUOTE(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag BLOCKQUOTE
    * @package : Static Procedural
    * @method  : Html::BLOCKQUOTE($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'BLOCKQUOTE') ? 
   
@@ -1474,7 +1323,7 @@ function _xBLOCKQUOTE(
     ,$label            
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -1498,18 +1347,13 @@ function _xCAPTION(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag CAPTION
    * @package : Static Procedural
    * @method  : Html::CAPTION($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'CAPTION') ?
   
@@ -1522,7 +1366,7 @@ function _xCAPTION(
     ,$label            
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() ); 
+   ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -1547,18 +1391,13 @@ function _xLABEL(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag LABEL
    * @package : Static Procedural
    * @method  : Html::LABEL($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'LABEL') ?
   
@@ -1571,7 +1410,7 @@ function _xLABEL(
     ,$label            
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -1595,18 +1434,13 @@ function _xDATALIST(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag DATALIST
    * @package : Static Procedural
    * @method  : Html::DATALIST($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'DATALIST') ? 
   
@@ -1619,7 +1453,7 @@ function _xDATALIST(
     ,$label            
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -1643,18 +1477,13 @@ function _xDETAILS(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag DETAILS
    * @package : Static Procedural
    * @method  : Html::DETAILS($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'DETAILS') ? 
   
@@ -1667,7 +1496,7 @@ function _xDETAILS(
     ,$label            
     ,$assoc
     
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -1691,18 +1520,13 @@ function _xSUMMARY(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag SUMMARY
    * @package : Static Procedural
    * @method  : Html::SUMMARY($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'SUMMARY') ?
   
@@ -1715,7 +1539,7 @@ function _xSUMMARY(
     ,$label            
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -1739,18 +1563,13 @@ function _xDIALOG(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag DIALOG
    * @package : Static Procedural
    * @method  : Html::DIALOG($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'DIALOG') ? 
   
@@ -1763,7 +1582,7 @@ function _xDIALOG(
     ,$label 
     ,$assoc 
 
-   ) : PERFORM( $request->erorrMessage() );   
+   ) : PERFORM( Request::erorrMessage() );   
 
 }
 
@@ -1787,18 +1606,13 @@ function _xOPTION(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag OPTION
    * @package : Static Procedural
    * @method  : Html::OPTION($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'OPTION') ? 
   
@@ -1811,7 +1625,7 @@ function _xOPTION(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -1835,18 +1649,13 @@ function _xFIGURE(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag FIGURE
    * @package : Static Procedural
    * @method  : Html::FIGURE($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'FIGURE') ? 
   
@@ -1859,7 +1668,7 @@ function _xFIGURE(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -1883,18 +1692,13 @@ function _xFIGCAPTION(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag FIGCAPTION
    * @package : Static Procedural
    * @method  : Html::FIGCAPTION($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'FIGCAPTION') ?
   
@@ -1907,7 +1711,7 @@ function _xFIGCAPTION(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -1931,18 +1735,13 @@ function _xMETER(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag METER
    * @package : Static Procedural
    * @method  : Html::METER($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'METER') ?
   
@@ -1955,7 +1754,7 @@ function _xMETER(
     ,$label 
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() ); 
+   ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -1979,18 +1778,13 @@ function _xOBJECT(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag OBJECT
    * @package : Static Procedural
    * @method  : Html::OBJECT($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'OBJECT') ? 
   
@@ -2003,7 +1797,7 @@ function _xOBJECT(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -2027,18 +1821,13 @@ function _xOPTGROUP(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag OPTGROUP
    * @package : Static Procedural
    * @method  : Html::OPTGROUP($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'OPTGROUP') ? 
   
@@ -2051,7 +1840,7 @@ function _xOPTGROUP(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );   
+  ) : PERFORM( Request::erorrMessage() );   
 
 }
 
@@ -2075,18 +1864,13 @@ function _xOUTPUT(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag OUTPUT
    * @package : Static Procedural
    * @method  : Html::OUTPUT($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'OUTPUT') ? 
   
@@ -2099,7 +1883,7 @@ function _xOUTPUT(
     ,$label 
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() );  
+   ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -2123,18 +1907,13 @@ function _xPROGRESS(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag PROGRESS
    * @package : Static Procedural
    * @method  : Html::PROGRESS($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge();  
 
   return method_exists($Html,'PROGRESS') ? 
   
@@ -2147,7 +1926,7 @@ function _xPROGRESS(
     ,$label 
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() ); 
+   ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -2209,18 +1988,13 @@ function _xTEMPLATE(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   * 
    * @package : Merge Heading tag TEMPLATE
    * @package : Static Procedural
    * @method  : Html::TEMPLATE($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'TEMPLATE') ?
   
@@ -2233,7 +2007,7 @@ function _xTEMPLATE(
     ,$label 
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() );  
+   ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -2257,18 +2031,13 @@ function _xUL(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag UL
    * @package : Static Procedural
    * @method  : Html::UL($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'UL') ?
   
@@ -2281,7 +2050,7 @@ function _xUL(
     ,$label 
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() ); 
+   ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -2305,18 +2074,13 @@ function _xOL(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag OL
    * @package : Static Procedural
    * @method  : Html::OL($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge();  
 
   return method_exists($Html,'OL') ? 
   
@@ -2329,7 +2093,7 @@ function _xOL(
     ,$label 
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() );  
+   ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -2353,18 +2117,13 @@ function _xLI(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag LI
    * @package : Static Procedural
    * @method  : Html::LI($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'LI') ?
   
@@ -2377,7 +2136,7 @@ function _xLI(
     ,$label 
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() );  
+   ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -2401,18 +2160,13 @@ function _xTABLE(
 ) 
 { 
   
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag TABLE
    * @package : Static Procedural
    * @method  : Html::TABLE($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'TABLE') ? 
   
@@ -2425,7 +2179,7 @@ function _xTABLE(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -2449,18 +2203,13 @@ function _xTR(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag TR
    * @package : Static Procedural
    * @method  : Html::TR($value, $attr=null, $id, $class, $label, $assoc);
-   * 
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); ;
 
   return method_exists($Html,'TR') ? 
   
@@ -2473,7 +2222,7 @@ function _xTR(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -2497,18 +2246,13 @@ function _xTD(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag TD
    * @package : Static Procedural
    * @method  : Html::TD($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'TD') ?
   
@@ -2521,7 +2265,7 @@ function _xTD(
     ,$label 
     ,$assoc
 
-   ) : PERFORM( $request->erorrMessage() );  
+   ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -2544,19 +2288,13 @@ function _xTH(
 
 ) 
 { 
-
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag TH
    * @package : Static Procedural
    * @method  : Html::TH($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'TH') ? 
   
@@ -2569,7 +2307,7 @@ function _xTH(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -2593,18 +2331,13 @@ function _xLEGEND(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag LEGEND
    * @package : Static Procedural
    * @method  : Html::LEGEND($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge();  
 
   return method_exists($Html,'LEGEND') ?
   
@@ -2617,7 +2350,7 @@ function _xLEGEND(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -2641,18 +2374,13 @@ function _xFIELDSET(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag FIELDSET
    * @package : Static Procedural
    * @method  : Html::FIELDSET($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'FIELDSET') ? 
   
@@ -2665,7 +2393,7 @@ function _xFIELDSET(
     ,$label 
     ,$assoc
       
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -2689,18 +2417,13 @@ function _xTBODY(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag TBODY
    * @package : Static Procedural
    * @method  : Html::TBODY($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'TBODY') ? 
   
@@ -2713,7 +2436,7 @@ function _xTBODY(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -2737,18 +2460,13 @@ function _xTFOOTER(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag TBODY
    * @package : Static Procedural
    * @method  : Html::TBODY($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge();  
 
   return method_exists($Html,'TFOOT') ? 
   
@@ -2761,7 +2479,7 @@ function _xTFOOTER(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -2785,18 +2503,13 @@ function _xTHEAD(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag THEAD
    * @package : Static Procedural
    * @method  : Html::THEAD($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'THEAD') ? 
   
@@ -2809,7 +2522,7 @@ function _xTHEAD(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );
+  ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -2833,18 +2546,13 @@ function _xSPAN(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag SPAN
    * @package : Static Procedural
    * @method  : Html::SPAN($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge();  
 
   return method_exists($Html,'SPAN') ? 
   
@@ -2857,7 +2565,7 @@ function _xSPAN(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -2881,18 +2589,13 @@ function _xEM(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag EM
    * @package : Static Procedural
    * @method  : Html::EM($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'EM') ? 
   
@@ -2905,7 +2608,7 @@ function _xEM(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -2930,18 +2633,13 @@ function _xB(
 ) 
 {
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag B
    * @package : Static Procedural
    * @method  : Html::B($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'B') ? 
   
@@ -2954,7 +2652,7 @@ function _xB(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -2978,18 +2676,13 @@ function _xI(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag I
    * @package : Static Procedural
    * @method  : Html::I($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'I') ? 
   
@@ -3002,7 +2695,7 @@ function _xI(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -3026,18 +2719,13 @@ function _xSMALL(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag SMALL
    * @package : Static Procedural
    * @method  : Html::SMALL($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'SMALL') ? 
   
@@ -3050,7 +2738,7 @@ function _xSMALL(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -3074,18 +2762,13 @@ function _xMARQUEE(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag MARQUEE
    * @package : Static Procedural
    * @method  : Html::MARQUEE($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'MARQUEE') ? 
   
@@ -3098,7 +2781,7 @@ function _xMARQUEE(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -3121,19 +2804,14 @@ function _xCENTER(
 
 ) 
 {
-  
-  global $request;
 
   /**
-   *
-   *
    * @package : Merge Heading tag CENTER
    * @package : Static Procedural
    * @method  : Html::CENTER($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'CENTER') ? 
   
@@ -3146,7 +2824,7 @@ function _xCENTER(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -3170,18 +2848,13 @@ function _xCODE(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag CODE
    * @package : Static Procedural
    * @method  : Html::CODE($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'CODE') ? 
   
@@ -3194,7 +2867,7 @@ function _xCODE(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
  
 }
 
@@ -3218,18 +2891,13 @@ function _xABBR(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag ABBR
    * @package : Static Procedural
    * @method  : Html::ABBR($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'ABBR') ?
   
@@ -3242,7 +2910,7 @@ function _xABBR(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -3266,18 +2934,13 @@ function _xMAP(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag ABBR
    * @package : Static Procedural
    * @method  : Html::ABBR($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'MAP') ? 
   
@@ -3290,7 +2953,7 @@ function _xMAP(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -3314,18 +2977,13 @@ function _xCANVAS(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag ABBR
    * @package : Static Procedural
    * @method  : Html::ABBR($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'CANVAS') ?
   
@@ -3338,7 +2996,7 @@ function _xCANVAS(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );   
+  ) : PERFORM( Request::erorrMessage() );   
 
 }
 
@@ -3362,18 +3020,13 @@ function _xDATA(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag DATA
    * @package : Static Procedural
    * @method  : Html::DATA($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'DATA') ? 
   
@@ -3386,7 +3039,7 @@ function _xDATA(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );
+  ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -3410,18 +3063,13 @@ function _xDL(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag DL
    * @package : Static Procedural
    * @method  : Html::DL($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'DL') ? 
   
@@ -3434,7 +3082,7 @@ function _xDL(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -3458,18 +3106,13 @@ function _xDT(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag DT
    * @package : Static Procedural
    * @method  : Html::DT($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
   
   return method_exists($Html,'DT') ? 
   
@@ -3482,7 +3125,7 @@ function _xDT(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );
+  ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -3506,18 +3149,13 @@ function _xDD(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag DD
    * @package : Static Procedural
    * @method  : Html::DD($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'DD') ? 
   
@@ -3530,7 +3168,7 @@ function _xDD(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -3554,18 +3192,13 @@ function _xDFN(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag DD
    * @package : Static Procedural
    * @method  : Html::DD($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'DFN') ? 
   
@@ -3578,7 +3211,7 @@ function _xDFN(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );
+  ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -3602,18 +3235,13 @@ function _xINS(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag INS
    * @package : Static Procedural
    * @method  : Html::INS($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'INS') ? 
   
@@ -3626,7 +3254,7 @@ function _xINS(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );
+  ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -3650,18 +3278,13 @@ function _xDEL(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag DEL
    * @package : Static Procedural
    * @method  : Html::DEL($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'DEL') ? 
   
@@ -3674,7 +3297,7 @@ function _xDEL(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -3698,18 +3321,13 @@ function _xKBD(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   * 
    * @package : Merge Heading tag KBD
    * @package : Static Procedural
    * @method  : Html::KBD($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'KBD') ? 
   
@@ -3722,7 +3340,7 @@ function _xKBD(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -3746,18 +3364,13 @@ function _xMARK(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag MARK
    * @package : Static Procedural
    * @method  : Html::MARK($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'MARK') ?
   
@@ -3770,7 +3383,7 @@ function _xMARK(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -3794,18 +3407,13 @@ function _xPRE(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag PRE
    * @package : Static Procedural
    * @method  : Html::PRE($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge();  
 
   return method_exists($Html,'PRE') ? 
   
@@ -3818,7 +3426,7 @@ function _xPRE(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -3842,18 +3450,13 @@ function _xRT(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag PRE
    * @package : Static Procedural
    * @method  : Html::PRE($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge();  
   
   return method_exists($Html,'RT') ? 
   
@@ -3866,7 +3469,7 @@ function _xRT(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -3890,18 +3493,13 @@ function _xS(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag 
    * @package : Static Procedural
    * @method  : Html::S($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'S') ? 
   
@@ -3914,7 +3512,7 @@ function _xS(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -3938,18 +3536,13 @@ function _xSAMP(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag SAMP
    * @package : Static Procedural
    * @method  : Html::SAMP($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'SAMP') ?
   
@@ -3962,7 +3555,7 @@ function _xSAMP(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -3986,18 +3579,13 @@ function _xSTRONG(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag STRONG
    * @package : Static Procedural
    * @method  : Html::STRONG($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'STRONG') ? 
   
@@ -4010,7 +3598,7 @@ function _xSTRONG(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -4034,18 +3622,13 @@ function _xSUB(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag SUB
    * @package : Static Procedural
    * @method  : Html::SUB($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'SUB') ? 
   
@@ -4058,7 +3641,7 @@ function _xSUB(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -4082,18 +3665,13 @@ function _xSUP(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag SUP
    * @package : Static Procedural
    * @method  : Html::SUP($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'SUP') ? 
   
@@ -4106,7 +3684,7 @@ function _xSUP(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() );
+  ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -4128,19 +3706,14 @@ function _xSUP(
   
   ) 
   { 
-  
-    global $request;
 
    /**
-    *
-    *
     * @package : Merge Heading tag IMG
     * @package : Static Procedural
     * @method  : Html::H1($value, $attr=null, $id, $class, $label, $assoc);
-    *
-    *
     **/ 
-   $Html = NEW Merge();
+    
+    $Html    = NEW Merge(); 
 
    return method_exists($Html, 'ELEMS') ? 
    
@@ -4153,7 +3726,7 @@ function _xSUP(
     ,$inline
     ,$assoc          
   
-    ) : PERFORM( $request->erorrMessage() ); 
+    ) : PERFORM( Request::erorrMessage() ); 
   
   }
   
@@ -4177,18 +3750,13 @@ function _xWBR(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag WBR
    * @package : Static Procedural
    * @method  : Html::WBR($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'WBR') ? 
   
@@ -4201,7 +3769,7 @@ function _xWBR(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -4225,18 +3793,13 @@ function _xQ(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag WBR
    * @package : Static Procedural
    * @method  : Html::WBR($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge();  
 
   return method_exists($Html,'Q') ? 
   
@@ -4249,7 +3812,7 @@ function _xQ(
     ,$label 
     ,$assoc
 
-  ) : PERFORM( $request->erorrMessage() ) ; 
+  ) : PERFORM( Request::erorrMessage() ) ; 
 
 }
 
@@ -4273,18 +3836,13 @@ function _xHEAD(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag HEAD
    * @package : Static Procedural
    * @method  : Html::HEAD($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'HEAD') ? 
   
@@ -4297,7 +3855,7 @@ function _xHEAD(
     $label, 
     $assoc
     
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -4322,18 +3880,13 @@ function _xTITLE(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag TITLE
    * @package : Static Procedural
    * @method  : Html::TITLE($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge(); 
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'TITLE') ? 
   
@@ -4346,7 +3899,7 @@ function _xTITLE(
     $label, 
     $assoc
     
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -4371,18 +3924,13 @@ function _xBODY(
 ) 
 { 
 
-  global $request;
-
   /**
-   *
-   *
    * @package : Merge Heading tag BODY
    * @package : Static Procedural
    * @method  : Html::BODY($value, $attr=null, $id, $class, $label, $assoc);
-   *
-   *
    **/
-  $Html = NEW Merge();
+  
+  $Html    = NEW Merge(); 
 
   return method_exists($Html,'BODY') ? 
   
@@ -4395,7 +3943,7 @@ function _xBODY(
     $label, 
     $assoc
     
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 

@@ -46,7 +46,7 @@ PHPWine v1.2.0.5 (Vanilla Flavour) is a PHP Library design cross PHP Platform an
 
 ```PHP
 // Install on header.php
-require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
+require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/Wine/PHPWine.php';
 
 use \PHPWine\VanillaFlavour\Wine\Optimizer\Html as Optimizer;
 use \PHPWine\VanillaFlavour\Wine\Optimizer\Enhancers as OptimizerCare; 
@@ -79,22 +79,15 @@ require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
 
 ```PHP
 # Namespace / Dependencies
-use \PHPWine\VanillaFlavour\Optimizer\Enhancers;
-use \PHPWine\VanillaFlavour\Optimizer\Form;
-use \PHPWine\VanillaFlavour\System\Auth;
-use \PHPWine\VanillaFlavour\System\Request;
-use \PHPWine\VanillaFlavour\System\Validate;
-use \PHPWine\VanillaFlavour\System\Validate_v2;
-use \PHPWine\VanillaFlavour\Merge\Html;
+use \PHPWine\VanillaFlavour\Wine\Optimizer\Enhancers;
+use \PHPWine\VanillaFlavour\Wine\Optimizer\Form;
+use \PHPWine\VanillaFlavour\Wine\System\Auth;
+use \PHPWine\VanillaFlavour\Wine\System\Request;
+use \PHPWine\VanillaFlavour\Wine\System\Validate;
+use \PHPWine\VanillaFlavour\Wine\System\Validate_v2;
+use \PHPWine\VanillaFlavour\Wine\Merge\Html;
 ```
-```PHP
-# Group Declaration 
-use \PHPWine\VanillaFlavour\Optimizer\{ Enhancers, Form } ;
-```
-```PHP
-# Group Declaration w/Alias 
-use \PHPWine\VanillaFlavour\Optimizer\{ Enhancers, Form as Optimizer } ;
-```
+
 <h3>PHPWine Plugins + (FrontEnd Frameworks) :</h3>
 <h5>Wants to become a contributor in PHPWine Plugins?, Let's talk email me at: syncdevprojects@gmail.com</h5>
  <ul>

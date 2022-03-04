@@ -4,11 +4,11 @@ USE \PHPWine\VanillaFlavour\Wine\Optimizer\Html AS MergeBox;
 USE \PHPWine\VanillaFlavour\Wine\system\Request;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.9 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.5 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.9 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -36,8 +36,8 @@ USE \PHPWine\VanillaFlavour\Wine\system\Request;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.5
- * @since     02.15.2022
+ * @version   v1.2.0.9
+ * @since     03.03.2022
  *
  * @method / FunctionList 
  * @method _H1();
@@ -54,12 +54,8 @@ USE \PHPWine\VanillaFlavour\Wine\system\Request;
  * @method xH6();
  * @method _DIV();
  * @method xDIV(); 
- * @method _P();
- * @method xP();
  * @method _BUTTON();
  * @method xBUTTON();
- * @method _A();
- * @method xA();
  * @method _IFRAME();
  * @method xIFRAME();
  * @method _MAIN();
@@ -218,7 +214,7 @@ USE \PHPWine\VanillaFlavour\Wine\system\Request;
  * 
  */
 
-$request = NEW Request();
+
 
 /**
   *
@@ -237,7 +233,7 @@ function _H1(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -258,7 +254,7 @@ function _H1(
     $id, 
     $class
     
-  ) : PERFORM($request->erorrMessage());	
+  ) : PERFORM(Request::erorrMessage());	
 
 }
 /**
@@ -276,13 +272,13 @@ function xH1(
 )
 {
  
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xH1') ? 
   
-   $Html->xH1($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xH1($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -303,7 +299,7 @@ function _H2(
 )
 {
  
-  global $request;
+ 
 
   /**
    *
@@ -324,7 +320,7 @@ function _H2(
    $id, 
    $class
    
-   ) : PERFORM( $request->erorrMessage() );	
+   ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -343,13 +339,13 @@ function xH2(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xH2') ? 
   
-   $Html->xH2($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xH2($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -370,7 +366,7 @@ function _H3(
 )
 {
   
-  global $request;
+ 
 
   /**
    *
@@ -391,7 +387,7 @@ function _H3(
   $id, 
   $class
   
-   ) : PERFORM( $request->erorrMessage() );	
+   ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -410,13 +406,13 @@ function xH3(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xH3') ? 
   
-   $Html->xH3($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xH3($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -437,7 +433,7 @@ function _H4(
 )
 {
   
-  global $request;
+ 
   
   /**
    *
@@ -458,7 +454,7 @@ function _H4(
   $id, 
   $class
   
-   ) : PERFORM( $request->erorrMessage() );	
+   ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -477,13 +473,13 @@ function xH4(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
   
   return method_exists($Html, 'xH4') ?
   
-   $Html->xH4($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xH4($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -504,7 +500,7 @@ function _H5(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -525,7 +521,7 @@ function _H5(
   $id, 
   $class
   
-   ) : PERFORM( $request->erorrMessage() );	
+   ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -544,13 +540,13 @@ function xH5(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xH5') ? 
   
-   $Html->xH5($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xH5($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -571,7 +567,7 @@ function _H6(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -592,7 +588,7 @@ function _H6(
   $id, 
   $class
   
-  ) : PERFORM( $request->erorrMessage() ); 	
+  ) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -611,13 +607,13 @@ function xH6(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xH6') ?
   
-   $Html->xH6($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xH6($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -638,7 +634,7 @@ function _DIV(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -659,7 +655,7 @@ function _DIV(
     $id, 
     $class
     
-    ) : PERFORM( $request->erorrMessage() );	
+    ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -678,13 +674,13 @@ function xDIV(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xDIV') ?
   
-   $Html->xDIV($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xDIV($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -705,7 +701,7 @@ function _BUTTON(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -726,7 +722,7 @@ function _BUTTON(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() );  	
+  ) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -745,13 +741,13 @@ function xBUTTON(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xBUTTON') ? 
   
-   $Html->xBUTTON($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xBUTTON($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -772,7 +768,7 @@ function _IFRAME(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -793,7 +789,7 @@ function _IFRAME(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -812,13 +808,13 @@ function xIFRAME(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xIFRAME') ? 
   
-   $Html->xIFRAME($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xIFRAME($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -839,7 +835,7 @@ function _MAIN(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -860,7 +856,7 @@ function _MAIN(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -879,13 +875,13 @@ function xMAIN(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xMAIN') ? 
   
-   $Html->xMAIN($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xMAIN($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -906,7 +902,7 @@ function _NAV(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -927,7 +923,7 @@ function _NAV(
     $id, 
     $class
   
-   ) : PERFORM( $request->erorrMessage() );	
+   ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -946,13 +942,13 @@ function xNAV(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox();
 
   return method_exists($Html, 'xNAV') ?
   
-   $Html->xNAV($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xNAV($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -973,7 +969,7 @@ function _SELECT(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -994,7 +990,7 @@ function _SELECT(
     $id, 
     $class
   
-   ) : PERFORM( $request->erorrMessage() );	
+   ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -1013,13 +1009,13 @@ function xSELECT(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox();
 
   return method_exists($Html, 'xSELECT') ? 
   
-   $Html->xSELECT($label) : PERFORM( $request->erorrMessage() );
+   $Html->xSELECT($label) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -1040,7 +1036,7 @@ function _FORM(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -1061,7 +1057,7 @@ function _FORM(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -1080,13 +1076,13 @@ function xFORM(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox();
 
   return method_exists($Html, 'xFORM') ? 
   
-   $Html->xFORM($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xFORM($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -1107,7 +1103,7 @@ function _PICTURE(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -1128,7 +1124,7 @@ function _PICTURE(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() );  	
+  ) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -1147,13 +1143,13 @@ function xPICTURE(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
  
   return method_exists($Html, 'xPICTURE') ? 
   
-   $Html->xPICTURE($label) : PERFORM( $request->erorrMessage() ); 	
+   $Html->xPICTURE($label) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -1174,7 +1170,7 @@ function _SECTION(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -1195,7 +1191,7 @@ function _SECTION(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -1214,13 +1210,13 @@ function xSECTION(
 )
 {
 
-  global $request;
+ 
   
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xSECTION') ? 
   
-   $Html->xSECTION($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xSECTION($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -1241,7 +1237,7 @@ function _TEXTAREA(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -1262,7 +1258,7 @@ function _TEXTAREA(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() );  	
+  ) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -1281,13 +1277,13 @@ function xTEXTAREA(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xTEXTAREA') ? 
   
-   $Html->xTEXTAREA($label) : PERFORM( $request->erorrMessage() ); 
+   $Html->xTEXTAREA($label) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -1308,7 +1304,7 @@ function _FOOTER(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -1329,7 +1325,7 @@ function _FOOTER(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() );   
+  ) : PERFORM( Request::erorrMessage() );   
 
 }
 
@@ -1348,13 +1344,13 @@ function xFOOTER(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xFOOTER') ?
   
-   $Html->xFOOTER($label) : PERFORM( $request->erorrMessage() );   
+   $Html->xFOOTER($label) : PERFORM( Request::erorrMessage() );   
 
 }
 
@@ -1374,7 +1370,7 @@ function _SCRIPT(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -1395,7 +1391,7 @@ function _SCRIPT(
     NULL, 
     NULL
   
-   ) : PERFORM( $request->erorrMessage() );   
+   ) : PERFORM( Request::erorrMessage() );   
 
 }
 
@@ -1414,13 +1410,13 @@ function xSCRIPT(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
   
   return method_exists($Html, 'xSCRIPT') ? 
   
-   $Html->xSCRIPT($label) : PERFORM( $request->erorrMessage() );   
+   $Html->xSCRIPT($label) : PERFORM( Request::erorrMessage() );   
 
 }
 
@@ -1441,7 +1437,7 @@ function _STYLE(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -1462,7 +1458,7 @@ function _STYLE(
     NULL, 
     NULL
     
- ) : PERFORM( $request->erorrMessage() );   
+ ) : PERFORM( Request::erorrMessage() );   
 
 }
 
@@ -1481,13 +1477,13 @@ function xSTYLE(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xSTYLE') ? 
   
-   $Html->xSTYLE($label) : PERFORM( $request->erorrMessage() );   
+   $Html->xSTYLE($label) : PERFORM( Request::erorrMessage() );   
 
 }
 
@@ -1508,7 +1504,7 @@ function _AUDIO(
 )
 {
  
-  global $request;
+ 
   /**
    *
    *
@@ -1527,7 +1523,7 @@ function _AUDIO(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() ); 	
+  ) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -1546,13 +1542,13 @@ function xAUDIO(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xAUDIO') ? 
   
-   $Html->xAUDIO($label) : PERFORM( $request->erorrMessage() ); 
+   $Html->xAUDIO($label) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -1573,7 +1569,7 @@ function _VIDEO(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -1594,7 +1590,7 @@ function _VIDEO(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -1613,12 +1609,12 @@ function xVIDEO(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox();
   return method_exists($Html, 'xVIDEO') ?
   
-   $Html->xVIDEO($label) : PERFORM( $request->erorrMessage() );
+   $Html->xVIDEO($label) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -1639,7 +1635,7 @@ function _ADDRESS(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -1660,7 +1656,7 @@ function _ADDRESS(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -1680,13 +1676,13 @@ function xADDRESS(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xADDRESS') ? 
   
-   $Html->xADDRESS($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xADDRESS($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -1707,7 +1703,7 @@ function _COLGROUP(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -1728,7 +1724,7 @@ function _COLGROUP(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -1747,13 +1743,13 @@ function xCOLGROUP(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xCOLGROUP') ?
   
-   $Html->xCOLGROUP($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xCOLGROUP($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -1774,7 +1770,7 @@ function _BDI(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -1795,7 +1791,7 @@ function _BDI(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -1814,13 +1810,13 @@ function xBDI(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xBDI') ? 
   
-   $Html->xBDI($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xBDI($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -1841,7 +1837,7 @@ function _BDO(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -1862,7 +1858,7 @@ function _BDO(
    $id, 
    $class
   
- ) : PERFORM( $request->erorrMessage() );  	
+ ) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -1881,13 +1877,13 @@ function xBDO(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xBDO') ? 
   
-   $Html->xBDO($label) : PERFORM( $request->erorrMessage() ); 	
+   $Html->xBDO($label) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -1908,7 +1904,7 @@ function _BLOCKQUOTE(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -1929,7 +1925,7 @@ function _BLOCKQUOTE(
   $id, 
   $class
  
-  ) : PERFORM( $request->erorrMessage() );
+  ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -1948,13 +1944,13 @@ function xBLOCKQUOTE(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xBLOCKQUOTE') ? 
   
-   $Html->xBLOCKQUOTE($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xBLOCKQUOTE($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -1975,7 +1971,7 @@ function _CAPTION(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -1996,7 +1992,7 @@ function _CAPTION(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -2015,13 +2011,13 @@ function xCAPTION(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xCAPTION') ? 
    
-   $Html->xCAPTION($label) : PERFORM(  $request->erorrMessage() );
+   $Html->xCAPTION($label) : PERFORM(  Request::erorrMessage() );
 
 }
 
@@ -2042,7 +2038,7 @@ function _LABEL(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -2063,7 +2059,7 @@ function _LABEL(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() ); 	
+  ) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -2082,13 +2078,13 @@ function xLABEL(
 )
 {
   
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xLABEL') ? 
   
-   $Html->xLABEL($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xLABEL($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -2109,7 +2105,7 @@ function _DATALIST(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -2130,7 +2126,7 @@ function _DATALIST(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() );  	
+  ) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -2149,13 +2145,13 @@ function xDATALIST(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xDATALIST') ? 
   
-   $Html->xDATALIST($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xDATALIST($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -2176,7 +2172,7 @@ function _DETAILS(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -2197,7 +2193,7 @@ function _DETAILS(
   $id, 
   $class
  
- ) : PERFORM( $request->erorrMessage() );	
+ ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -2216,13 +2212,13 @@ function xDETAILS(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox();
 
   return method_exists($Html, 'xDETAILS') ? 
   
-   $Html->xDETAILS($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xDETAILS($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -2243,7 +2239,7 @@ function _SUMMARY(
   )
   {
 
-  global $request;
+ 
 
   /**
    *
@@ -2264,7 +2260,7 @@ function _SUMMARY(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -2283,13 +2279,13 @@ function xSUMMARY(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox();
 
   return method_exists($Html, 'xSUMMARY') ?
 
-    $Html->xSUMMARY($label) : PERFORM( $request->erorrMessage() );  	
+    $Html->xSUMMARY($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -2310,7 +2306,7 @@ function _DIALOG(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -2331,7 +2327,7 @@ function _DIALOG(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() ); 	
+  ) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -2350,13 +2346,13 @@ function xDIALOG(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox();
 
   return method_exists($Html, 'xDIALOG') ?
   
-   $Html->xDIALOG($label) : PERFORM( $request->erorrMessage() ); 	
+   $Html->xDIALOG($label) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -2377,7 +2373,7 @@ function _OPTION(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -2398,7 +2394,7 @@ function _OPTION(
     $id, 
     $class
    
-  ) : PERFORM($request->erorrMessage());  	
+  ) : PERFORM(Request::erorrMessage());  	
 
 }
 
@@ -2417,13 +2413,13 @@ function xOPTION(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xOPTION') ? 
   
-   $Html->xOPTION($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xOPTION($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -2444,7 +2440,7 @@ function _FIGURE(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -2465,7 +2461,7 @@ function _FIGURE(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() ); 	
+  ) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -2484,13 +2480,13 @@ function xFIGURE(
  )
  {
   
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xFIGURE') ?
   
-   $Html->xFIGURE($label) : PERFORM( $request->erorrMessage() );
+   $Html->xFIGURE($label) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -2511,7 +2507,7 @@ function _FIGCAPTION(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -2532,7 +2528,7 @@ function _FIGCAPTION(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -2551,13 +2547,13 @@ function xFIGCAPTION(
  )
  {
   
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xFIGCAPTION') ?
   
-   $Html->xFIGCAPTION($label) : PERFORM( $request->erorrMessage() );
+   $Html->xFIGCAPTION($label) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -2578,7 +2574,7 @@ function _METER(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -2599,7 +2595,7 @@ function _METER(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -2618,13 +2614,13 @@ function xMETER(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xMETER') ?
    
-  $Html->xMETER($label) : PERFORM( $request->erorrMessage() );  	
+  $Html->xMETER($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -2646,7 +2642,7 @@ function _OBJECT(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -2667,7 +2663,7 @@ function _OBJECT(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -2686,13 +2682,13 @@ function xOBJECT(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xOBJECT') ? 
   
-   $Html->xOBJECT($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xOBJECT($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -2713,7 +2709,7 @@ function _OPTGROUP(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -2734,7 +2730,7 @@ function _OPTGROUP(
     $id, 
     $class
   
- ) : PERFORM( $request->erorrMessage() ); 	
+ ) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -2753,13 +2749,13 @@ function xOPTGROUP(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xOPTGROUP') ? 
   
-  $Html->xOPTGROUP($label) : PERFORM( $request->erorrMessage() );	
+  $Html->xOPTGROUP($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -2780,7 +2776,7 @@ function _OUTPUT(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -2801,7 +2797,7 @@ function _OUTPUT(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() );   	
+  ) : PERFORM( Request::erorrMessage() );   	
 
 }
 
@@ -2820,13 +2816,13 @@ function xOUTPUT(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xOUTPUT') ?
   
-   $Html->xOUTPUT($label) : PERFORM( $request->erorrMessage() ); 	
+   $Html->xOUTPUT($label) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -2847,7 +2843,7 @@ function _PROGRESS(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -2868,7 +2864,7 @@ function _PROGRESS(
       $id, 
       $class
   
-  ) : PERFORM( $request->erorrMessage() );  	
+  ) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -2887,13 +2883,13 @@ function xPROGRESS(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xPROGRESS') ? 
   
-  $Html->xPROGRESS($label) : PERFORM( $request->erorrMessage() );	
+  $Html->xPROGRESS($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -2914,7 +2910,7 @@ function _SVG(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -2935,7 +2931,7 @@ function _SVG(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -2954,13 +2950,13 @@ function xSVG(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xSVG') ? 
   
-   $Html->xSVG($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xSVG($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -2981,7 +2977,7 @@ function _TEMPLATE(
  ) 
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -3002,7 +2998,7 @@ function _TEMPLATE(
     $id, 
     $class
  
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3021,13 +3017,13 @@ function xTEMPLATE(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox();
 
   return method_exists($Html, 'xTEMPLATE') ? 
   
-    $Html->xTEMPLATE($label) : PERFORM( $request->erorrMessage() );  	
+    $Html->xTEMPLATE($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -3048,7 +3044,7 @@ function _UL(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -3069,7 +3065,7 @@ function _UL(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3088,13 +3084,13 @@ function xUL(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xUL') ?
   
-   $Html->xUL($label) : PERFORM( $request->erorrMessage() );
+   $Html->xUL($label) : PERFORM( Request::erorrMessage() );
 	
 }
 
@@ -3115,7 +3111,7 @@ function _OL(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -3136,7 +3132,7 @@ function _OL(
       $id, 
       $class
       
-  ) : PERFORM( $request->erorrMessage() );
+  ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -3155,13 +3151,13 @@ function xOL(
  )
  {
   
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xOL') ? 
   
-   $Html->xOL($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xOL($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3182,7 +3178,7 @@ function _LI(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -3203,7 +3199,7 @@ function _LI(
       $id, 
       $class
       
-  ) : PERFORM( $request->erorrMessage() );
+  ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -3222,13 +3218,13 @@ function xLI(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xLI') ?
   
-   $Html->xLI($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xLI($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3249,7 +3245,7 @@ function _TABLE(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -3270,7 +3266,7 @@ function _TABLE(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3289,13 +3285,13 @@ function xTABLE(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xTABLE') ? 
   
-    $Html->xTABLE($label) : PERFORM( $request->erorrMessage() );	
+    $Html->xTABLE($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3316,7 +3312,7 @@ function _TR(
   )
   {
 
-    global $request;
+   
 
   /**
    *
@@ -3337,7 +3333,7 @@ function _TR(
     $id, 
     $class
     
- ) : PERFORM( $request->erorrMessage() );	
+ ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3356,13 +3352,13 @@ function xTR(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xTR') ? 
   
-   $Html->xTR($label) : PERFORM( $request->erorrMessage() );  
+   $Html->xTR($label) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -3383,7 +3379,7 @@ function _TD(
  )
  {
 
-  global $request;
+ 
 
  /**
    *
@@ -3404,7 +3400,7 @@ function _TD(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3423,12 +3419,12 @@ function xTD(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox();
   return method_exists($Html, 'xTD') ?
   
-   $Html->xTD($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xTD($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -3449,7 +3445,7 @@ function _TH(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -3470,7 +3466,7 @@ function _TH(
       $id, 
       $class
 
-  ) : PERFORM( $request->erorrMessage() );  	
+  ) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -3490,13 +3486,13 @@ function xTH(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
   
   return method_exists($Html, 'xTH') ? 
   
-    $Html->xTH($label) : PERFORM( $request->erorrMessage() );	
+    $Html->xTH($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3517,7 +3513,7 @@ function _LEGEND(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -3538,7 +3534,7 @@ function _LEGEND(
       $id, 
       $class
    
-   ) : PERFORM( $request->erorrMessage() );
+   ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -3557,13 +3553,13 @@ function xLEGEND(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xLEGEND') ? 
   
-   $Html->xLEGEND($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xLEGEND($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3584,7 +3580,7 @@ function _FIELDSET(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -3605,7 +3601,7 @@ function _FIELDSET(
       $id, 
       $class
   
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3624,13 +3620,13 @@ function xFIELDSET(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xFIELDSET') ?
   
-    $Html->xFIELDSET($label) : PERFORM( $request->erorrMessage() );	
+    $Html->xFIELDSET($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3651,7 +3647,7 @@ function _TBODY(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -3672,7 +3668,7 @@ function _TBODY(
      $id, 
      $class
   
-  ) : PERFORM( $request->erorrMessage() );  	
+  ) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -3691,13 +3687,13 @@ function xTBODY(
 )
 {
   
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xTBODY') ?
   
-   $Html->xTBODY($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xTBODY($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3718,7 +3714,7 @@ function _TFOOT(
 )
 {
 
-  global $request;
+ 
 
   /**
    *
@@ -3739,7 +3735,7 @@ function _TFOOT(
     $id, 
     $class
  
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3758,13 +3754,13 @@ function xTFOOT(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox();
 
   return method_exists($Html, 'xTFOOT') ?
   
-   $Html->xTFOOT($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xTFOOT($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -3785,7 +3781,7 @@ function _THEAD(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -3806,7 +3802,7 @@ function _THEAD(
     $id, 
     $class
  
-  ) : PERFORM( $request->erorrMessage() );  	
+  ) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -3825,13 +3821,13 @@ function xTHEAD(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xTHEAD') ? 
   
-   $Html->xTHEAD($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xTHEAD($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3852,7 +3848,7 @@ function _SPAN(
   )
   {
 
-    global $request;
+   
 
   /**
    *
@@ -3873,7 +3869,7 @@ function _SPAN(
       $id, 
       $class
   
-   ) : PERFORM( $request->erorrMessage() );
+   ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -3892,13 +3888,13 @@ function xSPAN(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xSPAN') ? 
   
-   $Html->xSPAN($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xSPAN($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3919,7 +3915,7 @@ function _EM(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -3940,7 +3936,7 @@ function _EM(
       $id, 
       $class
   
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3959,13 +3955,13 @@ function xEM(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xEM') ? 
   
-    $Html->xEM($label) : PERFORM( $request->erorrMessage() );	
+    $Html->xEM($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -3986,7 +3982,7 @@ function _SMALL(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -4007,7 +4003,7 @@ function _SMALL(
     $id, 
     $class
   
-  ) : PERFORM( $request->erorrMessage() );  	
+  ) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -4026,13 +4022,13 @@ function xSMALL(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox();
 
   return method_exists($Html, 'xSMALL') ? 
    
-   $Html->xSMALL($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xSMALL($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -4053,7 +4049,7 @@ function _STRIKE(
  )
  {
  
-  global $request;
+ 
 
   /**
    *
@@ -4074,7 +4070,7 @@ function _STRIKE(
       $id, 
       $class
   
-  ) : PERFORM( $request->erorrMessage() );  	
+  ) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -4093,13 +4089,13 @@ function xSTRIKE(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xSTRIKE') ? 
   
-    $Html->xSTRIKE($label) : PERFORM( $request->erorrMessage() );	
+    $Html->xSTRIKE($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -4120,7 +4116,7 @@ function _MARQUEE(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -4141,7 +4137,7 @@ function _MARQUEE(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -4160,13 +4156,13 @@ function xMARQUEE(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xMARQUEE') ? 
    
-   $Html->xMARQUEE($label) : PERFORM( $request->erorrMessage() );
+   $Html->xMARQUEE($label) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -4187,7 +4183,7 @@ function _CENTER(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -4208,7 +4204,7 @@ function _CENTER(
     $id, 
     $class
  
- ) : PERFORM( $request->erorrMessage() ); 	
+ ) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -4227,13 +4223,13 @@ function xCENTER(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xCENTER') ? 
   
-   $Html->xCENTER($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xCENTER($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -4254,7 +4250,7 @@ function _ABBR(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -4275,7 +4271,7 @@ function _ABBR(
      $id, 
      $class
   
-  ) : PERFORM( $request->erorrMessage() ); 	
+  ) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -4294,13 +4290,13 @@ function xABBR(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xABBR') ? 
   
-   $Html->xABBR($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xABBR($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -4321,7 +4317,7 @@ function _MAP(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -4342,7 +4338,7 @@ function _MAP(
      $id, 
      $class
      
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -4361,13 +4357,13 @@ function xMAP(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xMAP') ? 
    
-   $Html->xMAP($label) : PERFORM( $request->erorrMessage() ); 	
+   $Html->xMAP($label) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -4388,7 +4384,7 @@ function _CANVAS(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -4409,7 +4405,7 @@ function _CANVAS(
         $id, 
         $class
     
-   ) : PERFORM( $request->erorrMessage() );	
+   ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -4428,13 +4424,13 @@ function xCANVAS(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox();
 
   return method_exists($Html, 'xCANVAS') ? 
   
-   $Html->xCANVAS($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xCANVAS($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -4455,7 +4451,7 @@ function _CITE(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -4476,7 +4472,7 @@ function _CITE(
      $id, 
      $class
      
-  ) : PERFORM( $request->erorrMessage() );
+  ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -4495,13 +4491,13 @@ function xCITE(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xCITE') ? 
     
-   $Html->xCITE($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xCITE($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -4522,7 +4518,7 @@ function _DATA(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -4543,7 +4539,7 @@ function _DATA(
       $id, 
       $class
    
-   ) : PERFORM( $request->erorrMessage() );	
+   ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -4562,12 +4558,12 @@ function xDATA(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
   return method_exists($Html, 'xDATA') ? 
   
-   $Html->xDATA($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xDATA($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -4588,7 +4584,7 @@ function _DL(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -4609,7 +4605,7 @@ function _DL(
      $id, 
      $class
   
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -4628,13 +4624,13 @@ function xDL(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xDL') ? 
   
-   $Html->xDL($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xDL($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -4655,7 +4651,7 @@ function _DT(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -4676,7 +4672,7 @@ function _DT(
      $id, 
      $class
    
- ) : PERFORM( $request->erorrMessage() ); 	
+ ) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -4695,13 +4691,13 @@ function xDT(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xDT') ? 
   
-   $Html->xDT($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xDT($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -4722,7 +4718,7 @@ function _DD(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -4743,7 +4739,7 @@ function _DD(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() );
+  ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -4762,13 +4758,13 @@ function xDD(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xDD') ? 
   
-   $Html->xDD($label) : PERFORM( $request->erorrMessage() );
+   $Html->xDD($label) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -4789,7 +4785,7 @@ function _DFN(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -4810,7 +4806,7 @@ function _DFN(
     $id, 
     $class
    
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -4829,13 +4825,13 @@ function xDFN(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xDFN') ? 
   
-   $Html->xDFN($label) : PERFORM( $request->erorrMessage() );  
+   $Html->xDFN($label) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -4856,7 +4852,7 @@ function _INS(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -4877,7 +4873,7 @@ function _INS(
     $id, 
     $class
  
- ) : PERFORM( $request->erorrMessage() ); 
+ ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -4896,13 +4892,13 @@ function xINS(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xINS') ?
   
-   $Html->xINS($label) : PERFORM( $request->erorrMessage() ); 	
+   $Html->xINS($label) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -4923,7 +4919,7 @@ function _DEL(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -4944,7 +4940,7 @@ function _DEL(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -4963,13 +4959,13 @@ function xDEL(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xDEL') ? 
   
-    $Html->xDEL($label) : PERFORM( $request->erorrMessage() );	
+    $Html->xDEL($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -4990,7 +4986,7 @@ function _KBD(
  )
  {
 
-  global $request;
+ 
 
  /**
    *
@@ -5011,7 +5007,7 @@ function _KBD(
      $id, 
      $class
      
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -5030,13 +5026,13 @@ function xKBD(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xKBD') ?
   
-   $Html->xKBD($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xKBD($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -5057,7 +5053,7 @@ function _MARK(
  )
  {
 
-  global $request;
+ 
 
  /**
    *
@@ -5078,7 +5074,7 @@ function _MARK(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -5097,13 +5093,13 @@ function xMARK(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xMARK') ? 
   
-   $Html->xMARK($label) : PERFORM( $request->erorrMessage() );
+   $Html->xMARK($label) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -5124,7 +5120,7 @@ function _PRE(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -5145,7 +5141,7 @@ function _PRE(
     $id, 
     $class
     
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -5164,13 +5160,13 @@ function xPRE(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xPRE') ?
   
-   $Html->xPRE($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xPRE($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -5191,7 +5187,7 @@ function _RT(
  )
  {
 
-  global $request;
+ 
 
  /**
    *
@@ -5212,7 +5208,7 @@ function _RT(
      $id, 
      $class
      
-  ) : PERFORM( $request->erorrMessage() );
+  ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -5231,13 +5227,13 @@ function xRT(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xRT') ? 
   
-   $Html->xRT($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xRT($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -5258,7 +5254,7 @@ function _RP(
   )
   {
 
-    global $request;
+   
 
   /**
    *
@@ -5279,7 +5275,7 @@ function _RP(
      $id, 
      $class
    
-  ) : PERFORM( $request->erorrMessage() ); 	
+  ) : PERFORM( Request::erorrMessage() ); 	
 
 }
 
@@ -5298,13 +5294,13 @@ function xRP(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox();
 
   return method_exists($Html, 'xRP') ?
   
-   $Html->xRP($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xRP($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -5325,7 +5321,7 @@ function _SAMP(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -5346,7 +5342,7 @@ function _SAMP(
       $id, 
       $class
       
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -5365,13 +5361,13 @@ function xSAMP(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xSAMP') ? 
   
-   $Html->xSAMP($label) : PERFORM( $request->erorrMessage() );	
+   $Html->xSAMP($label) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -5392,7 +5388,7 @@ function _STRONG(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -5413,7 +5409,7 @@ function _STRONG(
      $id, 
      $class
      
-   ) : PERFORM( $request->erorrMessage() );	
+   ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -5432,13 +5428,13 @@ function xSTRONG(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xSTRONG') ? 
   
-   $Html->xSTRONG($label) : PERFORM( $request->erorrMessage() );  
+   $Html->xSTRONG($label) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -5459,7 +5455,7 @@ function _SUB(
   )
   {
 
-    global $request;
+   
 
   /**
    *
@@ -5480,7 +5476,7 @@ function _SUB(
       $id, 
       $class
   
-  ) : PERFORM( $request->erorrMessage() );  
+  ) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -5499,13 +5495,13 @@ function xSUB(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xSUB') ? 
   
-   $Html->xSUB($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xSUB($label) : PERFORM( Request::erorrMessage() );  	
 }
 
 /**
@@ -5525,7 +5521,7 @@ function _SUP(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -5546,7 +5542,7 @@ function _SUP(
      $id, 
      $class
    
-   ) : PERFORM( $request->erorrMessage() );  	
+   ) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -5565,13 +5561,13 @@ function xSUP(
  )
  {
   
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xSUP') ? 
   
-   $Html->xSUP($label) : PERFORM( $request->erorrMessage() );  	
+   $Html->xSUP($label) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -5592,7 +5588,7 @@ function _WBR(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -5613,7 +5609,7 @@ function _WBR(
     $id, 
     $class
       
-  ) : PERFORM( $request->erorrMessage() ); 
+  ) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -5632,13 +5628,13 @@ function xWBR(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
   
   return method_exists($Html, 'xWBR') ? 
     
-    $Html->xWBR($label) : PERFORM( $request->erorrMessage() );
+    $Html->xWBR($label) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -5660,7 +5656,7 @@ function xWBR(
 )
 {
 
-  global $request;
+ 
 
 /**
  *
@@ -5681,7 +5677,7 @@ $Html->_CODE(
   $id, 
   $class
     
-) : PERFORM( $request->erorrMessage() ); 
+) : PERFORM( Request::erorrMessage() ); 
 
 }
 
@@ -5706,7 +5702,7 @@ $Html = NEW MergeBox();
 
 return method_exists($Html, 'xCODE') ? 
   
-  $Html->xCODE($label) : PERFORM( $request->erorrMessage() );
+  $Html->xCODE($label) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -5728,7 +5724,7 @@ function _HEAD(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -5749,7 +5745,7 @@ function _HEAD(
       $id, 
       $class
   
-  ) : PERFORM( $request->erorrMessage() );	
+  ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -5768,13 +5764,13 @@ function xHEAD(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox();
 
   return method_exists($Html, 'xHEAD') ? 
   
-    $Html->xHEAD($label) : PERFORM( $request->erorrMessage() );  
+    $Html->xHEAD($label) : PERFORM( Request::erorrMessage() );  
 
 }
 
@@ -5795,7 +5791,7 @@ function _TITLE(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -5816,7 +5812,7 @@ function _TITLE(
      $id, 
      $class
      
-  ) : PERFORM( $request->erorrMessage() );  	
+  ) : PERFORM( Request::erorrMessage() );  	
 
 }
 
@@ -5835,13 +5831,13 @@ function xTITLE(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox();
 
   return method_exists($Html, 'xTITLE') ? 
   
-   $Html->xTITLE($label) : PERFORM( $request->erorrMessage() );    
+   $Html->xTITLE($label) : PERFORM( Request::erorrMessage() );    
 
 }
 
@@ -5862,7 +5858,7 @@ function _BODY(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -5883,7 +5879,7 @@ function _BODY(
     $id, 
     $class
  
- ) : PERFORM( $request->erorrMessage() );	
+ ) : PERFORM( Request::erorrMessage() );	
 
 }
 
@@ -5902,13 +5898,13 @@ function xBODY(
  )
  {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xBODY') ? 
   
-   $Html->xBODY($label) : PERFORM( $request->erorrMessage() );
+   $Html->xBODY($label) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -5929,7 +5925,7 @@ function _HTML(
  )
  {
 
-  global $request;
+ 
 
   /**
    *
@@ -5950,7 +5946,7 @@ function _HTML(
      $id, 
      $class
      
-   ) : PERFORM( $request->erorrMessage() );
+   ) : PERFORM( Request::erorrMessage() );
 
 }
 
@@ -5969,13 +5965,13 @@ function xHTML(
 )
 {
 
-  global $request;
+ 
 
   $Html = NEW MergeBox(); 
 
   return method_exists($Html, 'xnoHTML') ? 
   
-    $Html->xnoHTML($label) : PERFORM( $request->erorrMessage() );	
+    $Html->xnoHTML($label) : PERFORM( Request::erorrMessage() );	
 
 }
 

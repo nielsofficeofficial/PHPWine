@@ -1,11 +1,11 @@
 <?php 
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.9 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.5 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.9 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -33,8 +33,8 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.5
- * @since     02.15.2022
+ * @version   v1.2.0.9
+ * @since     03.03.2022
  *
  */
 
@@ -334,7 +334,7 @@
   * @since v1.0
   *
   **/
-  define('__REPLACE_ABSOLUTE_PATH__', ['\library\PHPWine\src\optimizer', 'library/PHPWine/src/optimizer'] );
+  define('__REPLACE_ABSOLUTE_PATH__', ['\library\PHPWine\src\Wine\Optimizer', 'library/PHPWine/src/Wine/Optimizer'] );
 
 /**
   *

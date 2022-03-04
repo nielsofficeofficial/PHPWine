@@ -3,11 +3,11 @@
   namespace PHPWine\VanillaFlavour\Wine\optimizer;
   
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.9 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.5 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.9 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -35,14 +35,13 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.5
- * @since     02.15.2022
+ * @version   v1.2.0.9
+ * @since     03.03.2022
  * 
  * 
  * noHTML dynamic  structure 
  * non/WITH CLASS|METHOD|FUNCTION ASSOCIATED  
- *
- * @method $noHtml->BREAK(); 
+ * 
  * @method $noHtml->H1();
  * @method $noHtml->H3();
  * @method $noHtml->H2();
@@ -11402,7 +11401,7 @@ private function errors_array_handler( array|string $value)
 {
       
      // installing request error handler for instances
-     $request    = NEW \PHPWine\VanillaFlavour\Wine\optimizer\HtmlSystem\Request();   
+     $request    = NEW \PHPWine\VanillaFlavour\Wine\System\Request();   
     
      $request->CURRENT_VALUE_REQUEST( $value );
     die;

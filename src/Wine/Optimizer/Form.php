@@ -5,11 +5,11 @@ namespace PHPWine\VanillaFlavour\Wine\optimizer;
  USE \PHPWine\VanillaFlavour\Wine\Merge\Html;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.5 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.9 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.5 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.2.0.9 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -37,37 +37,37 @@ namespace PHPWine\VanillaFlavour\Wine\optimizer;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.5
- * @since     02.15.2022
+ * @version   v1.2.0.9
+ * @since     03.03.2022
  * 
- * @method FORM::TEXT();
- * @method FORM::BUTTONS();
- * @method FORM::CHECKBOX();
- * @method FORM::COLOR();
- * @method FORM::DATE();
- * @method FORM::DATETIME();
- * @method FORM::EMAIL();
- * @method FORM::FILE();
- * @method FORM::HIDDEN();
- * @method FORM::MONTH();
- * @method FORM::NUMBER();
- * @method FORM::PASSWORD();
- * @method FORM::RADIO();
- * @method FORM::RANGE();
- * @method FORM::RESET();
- * @method FORM::SEARCH();
- * @method FORM::SUBMIT();
- * @method FORM::TEL();
- * @method FORM::TIMES();
- * @method FORM::URL();
- * @method FORM::WEEK();
- * @method FORM::TEXTAREA();
- * @method FORM::SELECT();
- * @method FORM::OPTION();
- * @method FORM::OPTGROUP();
- * @method FORM::FIELDSET();
- * @method FORM::LABEL();
- * @method FORM::OUTPUT();
+ * @method echo FORM::TEXT();
+ * @method echo FORM::BUTTONS();
+ * @method echo FORM::CHECKBOX();
+ * @method echo FORM::COLOR();
+ * @method echo FORM::DATE();
+ * @method echo FORM::DATETIME();
+ * @method echo FORM::EMAIL();
+ * @method echo FORM::FILE();
+ * @method echo FORM::HIDDEN();
+ * @method echo FORM::MONTH();
+ * @method echo FORM::NUMBER();
+ * @method echo FORM::PASSWORD();
+ * @method echo FORM::RADIO();
+ * @method echo FORM::RANGE();
+ * @method echo FORM::RESET();
+ * @method echo FORM::SEARCH();
+ * @method echo FORM::SUBMIT();
+ * @method echo FORM::TEL();
+ * @method echo FORM::TIMES();
+ * @method echo FORM::URL();
+ * @method echo FORM::WEEK();
+ * @method echo FORM::TEXTAREA();
+ * @method echo FORM::SELECT();
+ * @method echo FORM::OPTION();
+ * @method echo FORM::OPTGROUP();
+ * @method echo FORM::FIELDSET();
+ * @method echo FORM::LABEL();
+ * @method echo FORM::OUTPUT();
  *
  */
 
