@@ -6507,7 +6507,7 @@ protected function _setCOMBEGIN() {
 
  )
  {
-  
+                 
    return $this->is_true_assoc_element_inline(
      
     'PRIMARY'
@@ -9522,43 +9522,26 @@ protected function _setCOMBEGIN() {
 **/
 private function get_value_child_optimizer( $value )
 {
+
+  # var_dump( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::VALUE_MANDATORY_KEY] );
   
   // PREPARED EMPTY ARRAY
   $next_child = [];
-  
+
    # CHECK IF THE CHILD KEY IS EXIST IN ARRAY THE IF TRUE 
    # PRINT THE CHILD ARRAY
   if( is_array( $value ) && $this->check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY,  $value ) )  
   {
-  
+    
+    # check if the child element array is not string and not empty then return error handler  
+   ( !is_array($value[SELF::CHILD_MANDATORY_KEY] ) || count( $value[SELF::CHILD_MANDATORY_KEY] ) == 0  ) ? $this->errors_array_handler( $value ) . die : '';
+
+    # check if the child element array is not string and not empty then return error handler
+   ( !is_array( $value[SELF::CHILD_MANDATORY_KEY][0] ) || count( $value[SELF::CHILD_MANDATORY_KEY][0] ) == 0 ) ? $this->errors_array_handler( $value ) . die : '';
+
    # IF THE KEY REQUIRE IS EXIST THEN SELECT THAT KET FOR THE ASSOCIATED OF ARRAY OF DATAS
    # THEN LOOP THE REQUEST DATA ELEMNT HTML
    if ( $this->check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY , $value ) ) :
-    
-    if( !is_array($value[SELF::CHILD_MANDATORY_KEY]) || !is_array( $value[SELF::CHILD_MANDATORY_KEY][0] ) )
-    {    
-        
-      $this->errors_array_handler( $value );
-      die;
-
-      # SANITIZED ARRAY INNER AND ITS CHILD IF ZERO OR EMPTY CHILD !
-      if( !is_array($value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY])  ) { $this->errors_array_handler( $value ); }   
-
-    }
-    if( (count( $value[SELF::CHILD_MANDATORY_KEY] ) == 0 ) || ( count( $value[SELF::CHILD_MANDATORY_KEY][0] ) == 0 ) )
-    {    
-        
-      $this->errors_array_handler( $value );
-      die;
-
-      # SANITIZED ARRAY INNER AND ITS CHILD IF ZERO OR EMPTY CHILD !
-      if( count( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY] ) == 0  ) { $this->errors_array_handler( $value ); }   
-   }
-
-
-
-
-
 
      # FOR EACH CHILD VALUE THE LOOP AND RETURN THE DATA
      foreach (  $value[SELF::CHILD_MANDATORY_KEY] as $key => $values ) 
@@ -9570,16 +9553,30 @@ private function get_value_child_optimizer( $value )
        # THEN SINCE ATTR IS TYPE OF MASTER KEY THEN LOOP IT AS CUSTOM ATTR HTML ELEM TAGS
        if (  $this->check_key_mandatory_array( SELF::ATTR_MANDATORY_KEY ,  $values ) ) 
        {
+
+          # check if the child element array is not string and not empty then return error handler
+          ( !is_array( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::ATTR_MANDATORY_KEY] ) ) ? $this->errors_array_handler( $value ) . die : '';  
            
           # PROCESSING OF LOOPING
-          foreach ($values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) 
-          {
-          
-           $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() .  $this->_getDQUOTE() . $val .  $this->_getDQUOTE();     
-                         
-
-          }
+          foreach ($values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() .  $this->_getDQUOTE() . $val .  $this->_getDQUOTE();      }
                              
+       }
+
+       # check if the child element array is not string and not empty then return error handler
+       if( isset( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::VALUE_MANDATORY_KEY]) ) {
+        ( is_string( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::VALUE_MANDATORY_KEY] ) ) ? $this->errors_array_handler( $value ) . die : '';
+       }
+       # check if the child element array is not string and not empty then return error handler
+       if( isset( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY] ) ) {
+       ( !is_array( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY] ) ) ? $this->errors_array_handler( $value ) . die : '';
+       }
+       # check if the child element array is not string and not empty then return error handler
+       if( isset( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY] ) ) {
+       ( !is_array( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY][0] ) ) ? $this->errors_array_handler( $value ) . die : '';
+       }
+       # check if the child element array is not string and not empty then return error handler
+       if( isset( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY] ) ) {
+       ( count( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY][0] ) == 0 ) ? $this->errors_array_handler( $value ) . die : '';
        }
        
        # SET UP THE NEXT CHILD HTML ELEMENTS # GET THE VALUE NEXT CHILD
@@ -11254,13 +11251,23 @@ protected function get_values_next_child_inner( $getInner, $array )
        
        # LOOP THE ATTRIBUTE OF ELEMENT HTML TAG
        # BASE ON ARRAY OF DATA
-       if(  $this->check_key_mandatory_array( SELF::ATTR_MANDATORY_KEY , $values ) ) {  foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() . $this->_getDQUOTE() . $val .  $this->_getDQUOTE();  }}
+       if(  $this->check_key_mandatory_array( SELF::ATTR_MANDATORY_KEY , $values ) ) { 
+         
+       # check if the inner attribute is not array then return error handler  
+       ( !is_array( $values[SELF::ATTR_MANDATORY_KEY] ) ) ? $this->errors_array_handler(  $values ) . die : '' ; 
+  
+        foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() . $this->_getDQUOTE() . $val .  $this->_getDQUOTE();  }}
        
        # APPEND ON THE ENDGATE HTML
        $next_child[] = $this->_setENDGATE();
 
        # GET THE VALUE IF IS HAS SET
-       if ( $this->check_key_mandatory_array( SELF::VALUE_MANDATORY_KEY ,  $values  ) ) { $next_child[] = implode("",  $values[SELF::VALUE_MANDATORY_KEY] ); }
+       if ( $this->check_key_mandatory_array( SELF::VALUE_MANDATORY_KEY ,  $values  ) ) {
+
+       # check if the inner value is not array then return error handler  
+       ( is_string( $values[SELF::VALUE_MANDATORY_KEY] ) ) ? $this->errors_array_handler(  $values ) . die : '';
+ 
+        $next_child[] = implode("",  $values[SELF::VALUE_MANDATORY_KEY] ); }
        
        # CLOSE THE HTML ELEMENT TAG
        $next_child[] = $this->_setGATE().$this->_setENDS() . $values[0] . $this-> _setENDGATE();
