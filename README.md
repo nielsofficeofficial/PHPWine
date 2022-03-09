@@ -97,26 +97,26 @@ use \PHPWine\VanillaFlavour\Wine\Merge\Html;
   <li><a href="https://github.com/nielsofficeofficial/PHPCrud">PHPCRUD: </a><span> Extend PHPWine Features crud </span>
       <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
   </li>
-  <li><a href="#">PHPDashboard: </a><span> Bootstrap dashboard into PHPWine. 
+  <li>(soon!)<a href="#">PHPDashboard: </a><span> Bootstrap dashboard into PHPWine. 
   </span>
      <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
   </li>
-  <li><a href="#">PHPMenu : </a><span> Dynamic Bootstrap menu. </span> 
+  <li>(soon!)<a href="#">PHPMenu : </a><span> Dynamic Bootstrap menu. </span> 
   <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
   </li>
-    <li><a href="#">PHPUserProfile: </a><span>Fully optimized bootstrap user profile. </span>
+    <li>(soon!)<a href="#">PHPUserProfile: </a><span>Fully optimized bootstrap user profile. </span>
   <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>  
   </li>
-  <li><a href="#">PHPSlider : </a><span> Dynamic and fully optimized create variety of slider hero and topfold. </span></li>
-  <li><a href="#">PHPProductSlider : </a><span> Display Dynamic and fully optimized product slider. </span></li>
-  <li><a href="#">PHPTestimonials: </a><span> Display Dynamic and fully optimized tetimonial Slider. </span></li>
-  <li><a href="#">PHPContactPage: </a><span> Static contact page with form validation and PHPMailer.  </span></li>
-  <li><a href="#">PHPUserRole: </a><span>Dynamic restrict user role and permission. </span></li>
-  <li><a href="#">PHPStore: </a><span> eCommerce/online store. </span></li>
-  <li><a href="#">PHPCart: </a><span> Cart integrating all payment gateway </span></li>
-  <li><a href="#">PHPBlog: </a><span> Optimize module blog post including category and tag post  </span></li>
-  <li><a href="#">PHPCategory: </a><span> Create a category and extended  </span></li>
-  <li><a href="#">PHPTag: </a><span> Create a tag and extended  </span></li>
+  <li>(soon!)<a href="#">PHPSlider : </a><span> Dynamic and fully optimized create variety of slider hero and topfold. </span></li>
+  <li>(soon!)<a href="#">PHPProductSlider : </a><span> Display Dynamic and fully optimized product slider. </span></li>
+  <li>(soon!)<a href="#">PHPTestimonials: </a><span> Display Dynamic and fully optimized tetimonial Slider. </span></li>
+  <li>(soon!)<a href="#">PHPContactPage: </a><span> Static contact page with form validation and PHPMailer.  </span></li>
+  <li>(soon!)<a href="#">PHPUserRole: </a><span>Dynamic restrict user role and permission. </span></li>
+  <li>(soon!)<a href="#">PHPStore: </a><span> eCommerce/online store. </span></li>
+  <li>(soon!)<a href="#">PHPCart: </a><span> Cart integrating all payment gateway </span></li>
+  <li>(soon!)<a href="#">PHPBlog: </a><span> Optimize module blog post including category and tag post  </span></li>
+  <li>(soon!)<a href="#">PHPCategory: </a><span> Create a category and extended  </span></li>
+  <li>(soon!)<a href="#">PHPTag: </a><span> Create a tag and extended  </span></li>
 
 </ul>
 
