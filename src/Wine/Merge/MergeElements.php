@@ -4,11 +4,11 @@ USE \PHPWine\VanillaFlavour\Wine\Optimizer\Html AS MergeElements;
 USE \PHPWine\VanillaFlavour\Wine\System\Request;
 
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.9 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.3.0.0 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.9 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.3.0.0 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -36,96 +36,8 @@ USE \PHPWine\VanillaFlavour\Wine\System\Request;
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.9
- * @since     03.03.2022
- * 
- * @method echo _xHTML('id','H1');
- * @method echo _xHTML('id','H2');
- * @method echo _xHTML('id','H3');
- * @method echo _xHTML('id','H4');
- * @method echo _xHTML('id','H5');
- * @method echo _xHTML('id','H6');
- * @method echo _xHTML('id','H1');
- * @method echo _xHTML('id','BUTTON');
- * @method echo _xHTML('id','A');
- * @method echo _xHTML('id','IFRAME');
- * @method echo _xHTML('id','MAIN');
- * @method echo _xHTML('id','NAV');
- * @method echo _xHTML('id','SELECT');
- * @method echo _xHTML('id','FORM');
- * @method echo _xHTML('id','PICTURE');
- * @method echo _xHTML('id','SECTION');
- * @method echo _xHTML('id','TEXTAREA');
- * @method echo _xHTML('id','AUDIO');
- * @method echo _xHTML('id','VIDEO');
- * @method echo _xHTML('id','ADDRESS');
- * @method echo _xHTML('id','COLGROUP');
- * @method echo _xHTML('id','BDI');
- * @method echo _xHTML('id','BDO');
- * @method echo _xHTML('id','CAPTION');
- * @method echo _xHTML('id','LABEL');
- * @method echo _xHTML('id','DATALIST');
- * @method echo _xHTML('id','DETAILS');
- * @method echo _xHTML('id','SUMMARY');
- * @method echo _xHTML('id','DIALOG');
- * @method echo _xHTML('id','OPTION');
- * @method echo _xHTML('id','FIGURE');
- * @method echo _xHTML('id','FIGCAPTION');
- * @method echo _xHTML('id','METER');
- * @method echo _xHTML('id','OBJECT');
- * @method echo _xHTML('id','OPTGROUP');
- * @method echo _xHTML('id','OUTPUT');
- * @method echo _xHTML('id','PROGRESS');
- * @method echo _xHTML('id','TEMPLATE');
- * @method echo _xHTML('id','TIME');
- * @method echo _xHTML('id','VAR');
- * @method echo _xHTML('id','UL');
- * @method echo _xHTML('id','OL');
- * @method echo _xHTML('id','LI');
- * @method echo _xHTML('id','TABLE');
- * @method echo _xHTML('id','TR');
- * @method echo _xHTML('id','TD');
- * @method echo _xHTML('id','TH');
- * @method echo _xHTML('id','LEGEND');
- * @method echo _xHTML('id','FIELDSET');
- * @method echo _xHTML('id','TBODY');
- * @method echo _xHTML('id','TFOOT');
- * @method echo _xHTML('id','THEAD');
- * @method echo _xHTML('id','SPAN');
- * @method echo _xHTML('id','EM');
- * @method echo _xHTML('id','B');
- * @method echo _xHTML('id','I');
- * @method echo _xHTML('id','SMALL');
- * @method echo _xHTML('id','MARQUEE');
- * @method echo _xHTML('id','CENTER');
- * @method echo _xHTML('id','CODE');
- * @method echo _xHTML('id','ABBR');
- * @method echo _xHTML('id','MAP');
- * @method echo _xHTML('id','CANVAS');
- * @method echo _xHTML('id','CITE');
- * @method echo _xHTML('id','DATA');
- * @method echo _xHTML('id','DL');
- * @method echo _xHTML('id','DT');
- * @method echo _xHTML('id','DD');
- * @method echo _xHTML('id','INS');
- * @method echo _xHTML('id','DEL');
- * @method echo _xHTML('id','KBD');
- * @method echo _xHTML('id','MARK');
- * @method echo _xHTML('id','PRE');
- * @method echo _xHTML('id','RT');
- * @method echo _xHTML('id','RP');
- * @method echo _xHTML('id','S');
- * @method echo _xHTML('id','SAMP');
- * @method echo _xHTML('id','STRONG');
- * @method echo _xHTML('id','SUB');
- * @method echo _xHTML('id','SUP');
- * @method echo _xHTML('id','WBR');
- * @method echo _xHTML('id','Q');
- * @method echo _xHTML('id','HEAD');
- * @method echo _xHTML('id','TITLE');
- * @method echo _xHTML('id','BODY');
- * @method echo _xHTML('id','HTML');
- * @method echo _xHTML('id','BLOCKQUOTE');
+ * @version   v1.3.0.0
+ * @since     03.26.2022 
  * 
  * ASSOCIATED OPEN AND CLOSED TAG HTML
  * @method echo _MERGE('id','h1');
@@ -300,163 +212,6 @@ USE \PHPWine\VanillaFlavour\Wine\System\Request;
  * 
  */
 
-/**
-  *
-  * @since 20.19.2020
-  * @category PHPHtml-Merge
-  * @ Method Defined OPTIONAL ASSOCIATED ELEMENTS  
-  * NONE CLOSING TAG INLINE HTML
-  *
-  **/
-function __HTML(  
 
-
-      string $id            =  null
-     ,string $label         =  null
-     ,string $elem          =  null
-     ,array  $attr          =  null
-     ,string $class         =  null
-     ,string $assoc         =  null
-
-)
-{
-
-  /**
-   * @package : Merge OPTIONAL ASSOCIATED ELEMENTS 
-   * @package : Static Procedural
-   * @method  : Html::_ELEMENT($label, $elem, $attr=null, $id, $class, $assoc);
-   **/ 
-  $Html    = NEW MergeElements();
-  
-
-  return method_exists($Html,'ELEMS') ? 
-  
-    $Html->ELEMS(
-      
-       $label, 
-       $elem, 
-       $attr, 
-       $id, 
-       $class, 
-       $assoc
-       
-  ) : PERFORM( Request::erorrMessage() );
-
-}
-
-/**
-  *
-  * @since 20.19.2020
-  * @category PHPHtml-Merge
-  * @ Method Defined ASSOCIATED ELEMENTS  
-  * WITH CLOSING TAG INLINE HTML
-  *
-  **/
-function _xHTML(
-
-      string        $id      =  null
-     ,string        $elem    =  null
-     ,array|string  $value   =  null
-     ,array|string  $attr    =  null
-     ,string        $class   =  null
-     ,string        $label   =  null
-
-)
-{
-
-  /**
-   * @package : Merge ASSOCIATED ELEMENTS 
-   * @package : Static Procedural
-   * @method  : Html::ELEMENT($elem, $value, $attr=null, $id, $class, $label)
-   *
-   **/ 
-  $Html    = NEW MergeElements();
-  
-
-  return method_exists($Html,'ELEMENT') ? 
-  
-   $Html->ELEMENT(
-     
-    $elem, 
-    $value, 
-    $attr, 
-    $id, 
-    $class, 
-    $label
-  
-  ) : PERFORM( Request::erorrMessage() ); 
-
-}
-
-/**
-  *
-  * @since 20.19.2020
-  * @category PHPHtml-Merge
-  * @ Method Defined ASSOCIATED ELEMENTS  
-  * BEGIN TAG HTML
-  *
-  **/
-function _MERGE(
-
-      string        $id     =  null
-     ,string        $elem   =  null
-     ,string        $class  =  null
-     ,array|string  $attr   =  null
-
-
-)
-{
-
-  /**
-   * @package : Merge ASSOCIATED ELEMENTS 
-   * @package : Static Procedural
-   * @method  : Html::__magicMERGE($elem, 'MERGE', $attr=null, $id, $class);
-   *
-   **/ 
-  $Html    = NEW MergeElements();
-  
-
-  return method_exists($Html,'__magicMERGE') ? 
-  
-   $Html->__magicMERGE(
-     
-     $elem, 
-     'MERGE', 
-     $attr, 
-     $id, 
-     $class
-     
-  ) : PERFORM( Request::erorrMessage());
-
-}
-
-/**
-  *
-  * @since 20.19.2020
-  * @category PHPHtml-Merge
-  * @ Method Defined ASSOCIATED ELEMENTS  
-  * END TAG HTML
-  *
-  **/
-function xMERGE( 
-
- string $elem        =  null
-
-)
-{
-
- $Html    = NEW MergeElements();
- 
- 
- return method_exists($Html,'__magicMERGE') ? 
- 
-  $Html->__magicMERGE(
-    
-    $elem, 
-    'MERGE_END'
- 
- ) : PERFORM( Request::erorrMessage() );
-	
-}
 
 

@@ -5,11 +5,11 @@
  USE \PHPWine\VanillaFlavour\Wine\Optimizer\Html AS Optimizer;
  
 /**
- * @copyright (c) 2021 PHPWine\VanillaFlavour v1.2.0.9 Cooked by nielsoffice 
+ * @copyright (c) 2021 PHPWine\VanillaFlavour v1.3.0.0 Cooked by nielsoffice 
  *
  * MIT License
  *
- * PHPWine\VanillaFlavour v1.2.0.9 free software: you can redistribute it and/or modify.
+ * PHPWine\VanillaFlavour v1.3.0.0 free software: you can redistribute it and/or modify.
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
@@ -37,8 +37,8 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
- * @version   v1.2.0.9
- * @since     03.03.2022
+ * @version   v1.3.0.0
+ * @since     03.26.2022
  *
  * @method belongs_to(); 
  * @method GetKeyFolderPath(); 
@@ -212,44 +212,6 @@ public function SPACE() {
         $this->is_true_set_merge($merge) : 
 
            $this->EnhanceeCoreErrorMsg();     
- }
-
- /**
-  *
-  * @method public Method Set File Asstes Extension within custom att HTML 
-  * Defined File Image Extension | __getAssEXTENSION__
-  * $extension = Html::SetExtension($argu); 
-  
-    function getMeIMG($src,$path, $argu=null) 
-    {
-
-       $extension = Html::SetImageExtension($argu);
-        
-       return $sets = [
-         
-           $attr_name = [$src],
-           $attr_val  = [$path.$extension]
-        
-        ];
-
-    }
-
-  * Build Beautiful and Maintainable
-  *
-  **/  
-  public function setFileExtension(
-
-      $argu     = null
-
-  )
-  {
-
-       return function_exists(__FILEEXTENSION__) ? 
-
-         parent::Validate_extension_assets_files($argu) : 
-
-             $this->EnhanceeCoreErrorMsg();    
-
  }
 
  /**
@@ -549,7 +511,7 @@ private function cpe_FileHander_hdr($tag, $attr) {
   * @since 08.11.2020
   *
   **/
-private function cpe_FileHandler_custom_elem($elem, $value, $attr, $id, $class) {
+protected function cpe_FileHandler_custom_elem($elem, $value, $attr, $id, $class) {
   
   # RETURN ELEMENT CUSTOM HTML 
   return parent::cpe_custom_elements($elem, $value, $attr, $id, $class);

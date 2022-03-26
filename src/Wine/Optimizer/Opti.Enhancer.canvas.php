@@ -1,0 +1,21 @@
+<?php 
+     
+   use \PHPWine\VanillaFlavour\Wine\Optimizer\Enhancers;
+
+   $canvas = new Class extends Enhancers { function  __construct() {  function canvas( 
+
+              array|string  $value  =  null
+             ,array|string  $attr   =  null
+             ,string        $id     =  null
+             ,string        $class  =  null
+       
+           ) { 
+
+            $Enhancer = new Enhancers;  return $Enhancer->ELEM('canvas', $value, $attr, $id, $class);
+               
+          }
+
+      }
+
+   };
+     
