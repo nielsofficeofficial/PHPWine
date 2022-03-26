@@ -1113,7 +1113,7 @@ private function get_value_child_optimizer( array|string  $value ) : array|strin
      foreach (  $value[SELF::CHILD_MANDATORY_KEY] as $key => $values ) 
      {
        
-       $next_child[] = $this->_setGATE() . $values[0] . '';
+       $next_child[] = $this->_setGATE() . strtolower($values[0]) . '';
 
        # CHECK IF THE ATTR IS NOT EMPTY AND IF IT IS ASSOCIATED OF ARRAY ?
        # THEN SINCE ATTR IS TYPE OF MASTER KEY THEN LOOP IT AS CUSTOM ATTR HTML ELEM TAGS
@@ -1150,7 +1150,7 @@ private function get_value_child_optimizer( array|string  $value ) : array|strin
        $next_child[] = $this->_setENDGATE()
                      . $this->get_values_next_child(       SELF::VALUE_MANDATORY_KEY , $values )
                      . $this->get_values_next_child_inner( SELF::INNER_MANDATORY_KEY , $values )
-                     . $this->_setGATE().$this->_setENDS() . $values[0] . $this-> _setENDGATE();
+                     . $this->_setGATE().$this->_setENDS() . strtolower($values[0]) . $this-> _setENDGATE() . $this->_getBREAK();
        
      }
      
@@ -2685,9 +2685,7 @@ protected function cpe_xib6_FileHandler_MultiPage_array( array|string $GMultiP__
   **/
 private function set_assoc_element_modified_tag( string $modifiedHTMLE_ = null) : string {
 
-   
  return $this->_setGATE().$this->_setENDS().strtolower($modifiedHTMLE_).$this->_setENDGATE().$this->_getBREAK();
-
 
 }
 
@@ -2699,7 +2697,7 @@ private function set_assoc_element_modified_tag( string $modifiedHTMLE_ = null) 
     * @since v1.2.0.0
     *
    **/
-protected function get_values_next_child( string $valueKey = null, array $array = null ) : bool {
+protected function get_values_next_child( string $valueKey = null, array $array = null ) : bool|string {
    
   // CHECK IF THE KEY IS EXISTING THEN IMPLODE !
   if (array_key_exists($valueKey,  $array ) ) {
@@ -2718,7 +2716,7 @@ protected function get_values_next_child( string $valueKey = null, array $array 
     * @since v1.2.0.0
     *
    **/
-protected function get_values_next_child_inner( string $getInner = null, array $array = null ) : string {
+protected function get_values_next_child_inner( string $getInner = null, array $array = null ) {
 
    // set an emtpy array for tag implode
    $next_child = [];
@@ -2732,7 +2730,7 @@ protected function get_values_next_child_inner( string $getInner = null, array $
     foreach ($array[$getInner] as $key => $values) {
 
        // APPENED CHILD 
-       $next_child[] = $this->_setGATE() . $values[0] . ' ';
+       $next_child[] = $this->_setGATE() . strtolower($values[0]) . ' ';
        
        # LOOP THE ATTRIBUTE OF ELEMENT HTML TAG
        # BASE ON ARRAY OF DATA
@@ -2741,7 +2739,7 @@ protected function get_values_next_child_inner( string $getInner = null, array $
        # check if the inner attribute is not array then return error handler  
        ( !is_array( $values[SELF::ATTR_MANDATORY_KEY] ) ) ? $this->errors_array_handler(  $values ) . die : '' ; 
   
-        foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() . $this->_getDQUOTE() . $val .  $this->_getDQUOTE();  }}
+        foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $attr . $this->_setES() . $this->_getDQUOTE() . $val .  $this->_getDQUOTE();  }}
        
        # APPEND ON THE ENDGATE HTML
        $next_child[] = $this->_setENDGATE();
@@ -2751,11 +2749,12 @@ protected function get_values_next_child_inner( string $getInner = null, array $
 
        # check if the inner value is not array then return error handler  
        ( is_string( $values[SELF::VALUE_MANDATORY_KEY] ) ) ? $this->errors_array_handler(  $values ) . die : '';
+       ( !isset( $values[SELF::VALUE_MANDATORY_KEY] ) ) ? $this->errors_array_handler(  $values ) . die : '';
  
         $next_child[] = implode("",  $values[SELF::VALUE_MANDATORY_KEY] ); }
        
        # CLOSE THE HTML ELEMENT TAG
-       $next_child[] = $this->_setGATE().$this->_setENDS() . $values[0] . $this-> _setENDGATE();
+       $next_child[] = $this->_setGATE().$this->_setENDS() . strtolower($values[0]) . $this-> _setENDGATE() . $this->_getBREAK();
 
    }  
   
