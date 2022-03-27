@@ -1,6 +1,6 @@
 <?php 
 
-  namespace PHPWineVanillaFlavour\Wine\optimizer; 
+  namespace PHPWineVanillaFlavour\Wine\Optimizer; 
   
   use \PHPWineVanillaFlavour\Wine\Optimizer\Tags;
 
