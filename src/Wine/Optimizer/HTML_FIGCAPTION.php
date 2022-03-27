@@ -51,7 +51,7 @@ class HTML_FIGCAPTION Extends Tags {
     
     }
     
-    static private function getElement() : void { require  dirname(__FILE__) . DIRECTORY_SEPARATOR . self::$file_name['FIGCAPTION']; }
+    static private function getElement() : void { require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . self::$file_name['FIGCAPTION']); }
     
 }
     
