@@ -47,7 +47,7 @@ PHPWine (Vanilla Flavour) is a PHP Library design cross PHP Platform and framewo
 ```PHP
   # Install on header.php
   
-  // use \PHPWineVanillaFlavour\Wine\Optimizer\Html;
+  use \PHPWineVanillaFlavour\Wine\Optimizer\Html;
 
   $PHPWine = new class {
         
@@ -86,7 +86,7 @@ PHPWine (Vanilla Flavour) is a PHP Library design cross PHP Platform and framewo
         
   # On the very top of functions.php or plugin-index.
   
-  // use \PHPWineVanillaFlavour\Wine\Optimizer\Html;
+  use \PHPWineVanillaFlavour\Wine\Optimizer\Html;
 
   $PHPWine = new class {
         
