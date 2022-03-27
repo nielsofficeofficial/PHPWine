@@ -97,6 +97,10 @@ use \PHPWine\VanillaFlavour\Wine\Merge\Html;
   <li><a href="https://github.com/nielsofficeofficial/PHPCrud">PHPCRUD: </a><span> Extend PHPWine Features crud </span>
       <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
   </li>
+   <li><a href="https://github.com/nielsofficeofficial/PHPCrud_RESTAPI-Template">PHPCRUD_RESTAPI-Template: </a><span> Rest-api using PHPCrud snippet </span>
+      <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
+  </li>
+ 
   <li>(soon!)<a href="#">PHPDashboard: </a><span> Bootstrap dashboard into PHPWine. 
   </span>
      <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
