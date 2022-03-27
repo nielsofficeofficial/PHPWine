@@ -112,7 +112,7 @@ new \HTML_BODY;   [ body(); ]    |  new \HTML_BOLD; [ bold(); ]     |  new \HTML
 new \HTML_BUTTON; [ button(); ]  |  new \HTML_CODE; [ code(); ]     |  new \HTML_CANVAS; [ canvas(); ]
 new \HTML_DATA;   [ data(); ]    |  new \HTML_DD;   [ dd();  ]      |  new \HTML_CAPTION; [ caption(); ]
 new \HTML_CENTER; [ center(); ]  |  new \HTML_DEL;  [ del(); ]      |  new \HTML_COLGROUP; [ colgroup(); ]
-new \HTML_DFN;    [ dfn(); ]     |  new \HTML_DIV;  [ dev(); ]      |  new \HTML_DATALIST; [ datalist(); ]
+new \HTML_DFN;    [ dfn(); ]     |  new \HTML_DIV;  [ div(); ]      |  new \HTML_DATALIST; [ datalist(); ]
 new \HTML_DL;     [ dl(); ]      |  new \HTML_DT;   [ dt(); ]       |  new \HTML_EM; [ em(); ]
 new \HTML_FORM;   [ form(); ]    |  new \HTML_IMG;  [ img(); ]      |  new \HTML_FOOTER;  [ footer(); ]
 new \HTML_INS;    [ ins(); ]     |  new \HTML_HEAD; [ head(); ]     |  new \HTML_KBD; [ kbd(); ]
