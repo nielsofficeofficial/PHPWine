@@ -15,7 +15,7 @@
 # PHPWine - (Vanilla Flavour) 
 Support PHP v8 and future++ 
 
-PHPWine v1.2.0.5 (Vanilla Flavour) is a PHP Library design cross PHP Platform and frameworks Cloud system application development.  <br />
+PHPWine (Vanilla Flavour) is a PHP Library design cross PHP Platform and frameworks Cloud system application development.  <br />
 <br />
 <i>Vanilla Flavour: Vanilla flavour means you can use methods outside the class precisely as native PHP functions.</i>
 
@@ -30,7 +30,7 @@ PHPWine v1.2.0.5 (Vanilla Flavour) is a PHP Library design cross PHP Platform an
 <h3>Downloading Library/Dependencies:</h3>
  
 ```PHP
-// Clone repository from githug | GitBus | CMD | CLi
+// Clone repository from githug | GitBus | CMD | CLi 
 
 // Download latest version 
  $ git clone https://github.com/nielsofficeofficial/PHPWine
