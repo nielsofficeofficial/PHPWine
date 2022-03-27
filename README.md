@@ -45,8 +45,29 @@ PHPWine (Vanilla Flavour) is a PHP Library design cross PHP Platform and framewo
 <h3>Library Installation:</h3>
 
 ```PHP
-// Install on header.php
-require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
+  # Install on header.php
+  
+  use \PHPWineVanillaFlavour\Wine\Optimizer\Html;
+
+  $PHPWine = new class {
+        
+    public function __construct() {
+      
+      $this->php_wine('autoload');
+
+      new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ELEM; // this is mandatory when dev use merge !
+      new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H1;  // follow by merge version HTML_H1 and so on!...
+      new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_DIV;
+      
+    }
+
+    private function php_wine(string $autoload) : void {
+
+      require dirname(__FILE__) . DIRECTORY_SEPARATOR .'vendor/' . $autoload.'.'.'php';
+
+    }
+
+ }; 
 ```
 <h3>WordPress Installation:</h3>
 
@@ -63,8 +84,29 @@ require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
         | - README.md
         | - composer.json        
         
-// on the very top of functions.php or plugin-index.
-require dirname(__FILE__) . DIRECTORY_SEPARATOR . 'library/PHPWine/PHPWine.php';
+  # On the very top of functions.php or plugin-index.
+  
+  use \PHPWineVanillaFlavour\Wine\Optimizer\Html;
+
+  $PHPWine = new class {
+        
+    public function __construct() {
+      
+      $this->php_wine('autoload');
+
+      new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ELEM; // this is mandatory when dev use merge !
+      new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H1;  // follow by merge version HTML_H1 and so on!...
+      new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_DIV;
+      
+    }
+
+    private function php_wine(string $autoload) : void {
+
+      require dirname(__FILE__) . DIRECTORY_SEPARATOR .'vendor/' . $autoload.'.'.'php';
+
+    }
+
+ }; 
 ```
 
 <h3>Dependencies Installation:</h3>
