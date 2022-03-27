@@ -113,26 +113,26 @@ PHPWine (Vanilla Flavour) is a PHP Library design cross PHP Platform and framewo
 
 ```PHP
 # Namespace / Dependencies
-use \PHPWine\VanillaFlavour\Wine\Optimizer\Html;
-use \PHPWine\VanillaFlavour\Wine\Optimizer\Enhancers;
-use \PHPWine\VanillaFlavour\Wine\Optimizer\Form;
-use \PHPWine\VanillaFlavour\Wine\Merge\Html;
-use \PHPWine\VanillaFlavour\Wine\System\Auth;
-use \PHPWine\VanillaFlavour\Wine\System\Request;
-use \PHPWine\VanillaFlavour\Wine\System\Validate;
-use \PHPWine\VanillaFlavour\Wine\System\Validate_v2;
+use \PHPWineVanillaFlavour\Wine\Optimizer\Html;
+use \PHPWineVanillaFlavour\Wine\Optimizer\Enhancers;
+use \PHPWineVanillaFlavour\Wine\Optimizer\Form;
+use \PHPWineVanillaFlavour\Wine\Merge\Html;
+use \PHPWineVanillaFlavour\Wine\System\Auth;
+use \PHPWineVanillaFlavour\Wine\System\Request;
+use \PHPWineVanillaFlavour\Wine\System\Validate;
+use \PHPWineVanillaFlavour\Wine\System\Validate_v2;
 ```
 ```PHP
 # Using Enhancer Installation 
-$enhancer = new \PHPWine\VanillaFlavour\Wine\Optimizer\ENHANCER_ELEM; // then follow by other dependencies
+new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ELEM; // then follow by other dependencies
 
 # HTML Tags using ( Merge Version PHPWine v1.3.0.0 )
-$H1 = new \PHPWine\VanillaFlavour\Wine\Optimizer\HTML_H1;
-$H2 = new \PHPWine\VanillaFlavour\Wine\Optimizer\HTML_H2;
-$H3 = new \PHPWine\VanillaFlavour\Wine\Optimizer\HTML_H3;
-$H4 = new \PHPWine\VanillaFlavour\Wine\Optimizer\HTML_H4;
-$H5 = new \PHPWine\VanillaFlavour\Wine\Optimizer\HTML_H5;
-$H6 = new \PHPWine\VanillaFlavour\Wine\Optimizer\HTML_H6;
+new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H1;
+new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H2;
+new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H3;
+new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H4;
+new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H5;
+new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H6;
 
 // Merge HTML Definition 
 H1( array|string [ $value ] , array|string [ $attr ] , string $id , string $class );
