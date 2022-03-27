@@ -1,6 +1,6 @@
 <?php 
      
-   use \PHPWine\VanillaFlavour\Wine\Optimizer\Enhancers;
+   use \PHPWineVanillaFlavour\Wine\Optimizer\Enhancers;
 
    $span = new Class extends Enhancers { function  __construct() {  function span( 
 

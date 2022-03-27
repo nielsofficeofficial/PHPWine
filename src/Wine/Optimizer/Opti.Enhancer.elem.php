@@ -1,6 +1,6 @@
 <?php 
      
-   use \PHPWine\VanillaFlavour\Wine\Optimizer\Enhancers;
+   use \PHPWineVanillaFlavour\Wine\Optimizer\Enhancers;
 
    $object = new Class extends Enhancers { function  __construct() { function ELEM(
 
@@ -13,9 +13,7 @@
   )
   { 
 
-   $Enhancer = new Enhancers; return method_exists($Enhancer, 'ELEM') ? 
-  
-   $Enhancer->ELEM($elem, $value, $attr, $id, $class) : false;
+   $Enhancer = new Enhancers; return method_exists($Enhancer, 'ELEM') ? $Enhancer->ELEM($elem, $value, $attr, $id, $class) : false;
  
   }
  

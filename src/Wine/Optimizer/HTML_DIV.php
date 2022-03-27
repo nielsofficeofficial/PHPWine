@@ -1,8 +1,8 @@
 <?php 
 
-  namespace PHPWine\VanillaFlavour\Wine\optimizer; 
+  namespace PHPWineVanillaFlavour\Wine\optimizer; 
   
-  use \PHPWine\VanillaFlavour\Wine\Optimizer\Tags;
+  use \PHPWineVanillaFlavour\Wine\Optimizer\Tags;
 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.3.0.0 Cooked by nielsoffice 

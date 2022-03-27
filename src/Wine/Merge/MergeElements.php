@@ -1,8 +1,5 @@
 <?php 
 
-USE \PHPWine\VanillaFlavour\Wine\Optimizer\Html AS MergeElements; 
-USE \PHPWine\VanillaFlavour\Wine\System\Request;
-
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.3.0.0 Cooked by nielsoffice 
  *

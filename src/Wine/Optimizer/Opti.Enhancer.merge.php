@@ -1,6 +1,6 @@
 <?php 
      
-  use \PHPWine\VanillaFlavour\Wine\Optimizer\Html AS MergeElements; 
+  use \PHPWineVanillaFlavour\Wine\Optimizer\Html AS MergeElements; 
 
   $abbr = new Class extends MergeElements { function  __construct() {  function _MERGE(
 

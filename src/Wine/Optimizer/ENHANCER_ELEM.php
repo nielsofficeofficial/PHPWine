@@ -1,8 +1,8 @@
 <?php 
 
-  namespace PHPWine\VanillaFlavour\Wine\optimizer; 
+  namespace PHPWineVanillaFlavour\Wine\Optimizer; 
   
-  use \PHPWine\VanillaFlavour\Wine\Optimizer\Tags;
+  use \PHPWineVanillaFlavour\Wine\Optimizer\Tags;
   
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.3.0.0 Cooked by nielsoffice 
@@ -52,7 +52,10 @@ class ENHANCER_ELEM Extends Tags {
     
     }
     
-    static private function getElement() : void { require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . self::$file_name['ELEM']); }
+    static private function getElement() : void { 
+
+      require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . '/../../prop.php' );
+      require_once (dirname(__FILE__) . DIRECTORY_SEPARATOR . self::$file_name['ELEM']); }
     
 }
     

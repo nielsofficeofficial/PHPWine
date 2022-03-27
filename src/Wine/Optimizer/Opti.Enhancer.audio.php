@@ -1,6 +1,6 @@
 <?php 
      
-   use \PHPWine\VanillaFlavour\Wine\Optimizer\Enhancers;
+   use \PHPWineVanillaFlavour\Wine\Optimizer\Enhancers;
 
    $Audio = new Class extends Enhancers { function  __construct() {  function Audio( 
 

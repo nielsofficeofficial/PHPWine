@@ -1,6 +1,6 @@
 <?php 
      
-   use \PHPWine\VanillaFlavour\Wine\Optimizer\Enhancers;
+   use \PHPWineVanillaFlavour\Wine\Optimizer\Enhancers;
 
    $body = new Class extends Enhancers { function  __construct() {  function body( 
 

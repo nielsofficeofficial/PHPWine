@@ -1,6 +1,6 @@
 <?php 
 
- namespace PHPWine\VanillaFlavour\Wine\Merge;
+ namespace PHPWineVanillaFlavour\Wine\Merge;
 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.3.0.0 Cooked by nielsoffice 
