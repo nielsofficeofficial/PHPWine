@@ -13,6 +13,11 @@
             "role": "PHPDeveloper/Programmer"
         } 
     ],
+    "autoload" : {
+        "psr-4" : {
+            "PHPWineVanillaFlavour\\" : "src/"
+        }
+    },
     "require": {
         
         "php": ">=8.0"
