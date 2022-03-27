@@ -59,13 +59,14 @@ $Enhancer = new OptimizerCare();
 ```PHP
 
 # Namespace / Dependencies
-use \PHPWine\VanillaFlavour\Optimizer\Enhancers;
-use \PHPWine\VanillaFlavour\Optimizer\Form;
-use \PHPWine\VanillaFlavour\System\Auth;
-use \PHPWine\VanillaFlavour\System\Request;
-use \PHPWine\VanillaFlavour\System\Validate;
-use \PHPWine\VanillaFlavour\System\Validate_v2;
-use \PHPWine\VanillaFlavour\Merge\Html;
+use \PHPWineVanillaFlavour\Wine\Optimizer\Html;
+use \PHPWineVanillaFlavour\Wine\Optimizer\Enhancers;
+use \PHPWineVanillaFlavour\Wine\Optimizer\Form;
+use \PHPWineVanillaFlavour\Wine\Merge\Html;
+use \PHPWineVanillaFlavour\Wine\System\Auth;
+use \PHPWineVanillaFlavour\Wine\System\Request;
+use \PHPWineVanillaFlavour\Wine\System\Validate;
+use \PHPWineVanillaFlavour\Wine\System\Validate_v2;
 
 ```
 <h3>SQL demo for Authentication and Handling form Validation :</h3>
