@@ -7,10 +7,10 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "nielsoffice",
+            "name": "nielsoffice by Leinner Zednanref",
             "email": "nielsoffice.wordpress.php@gmail.com",
             "homepage": "https://nielsoffice197227997.wordpress.com/",
-            "role": "PHPDeveloper/Programmer"
+            "role": "Author and Maintainer"
         } 
     ],
     "autoload" : {
