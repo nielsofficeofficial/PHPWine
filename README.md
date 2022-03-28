@@ -47,8 +47,6 @@ PHPWine (Vanilla Flavour) is a PHP Library design cross PHP Platform and framewo
 ```PHP
   # Install on header.php
   
-  use \PHPWineVanillaFlavour\Wine\Optimizer\Html;
-
   $PHPWine = new class {
         
     public function __construct() {
@@ -74,9 +72,6 @@ PHPWine (Vanilla Flavour) is a PHP Library design cross PHP Platform and framewo
 ```PHP
   // WordPress Theme/Plugins Installation 
   # On the very top of functions.php or plugin-index.
-  
-  use \PHPWineVanillaFlavour\Wine\Optimizer\Html;
-
   $PHPWine = new class {
         
     public function __construct() {
