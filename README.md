@@ -72,18 +72,7 @@ PHPWine (Vanilla Flavour) is a PHP Library design cross PHP Platform and framewo
 <h3>WordPress Installation:</h3>
 
 ```PHP
-// WordPress Theme/Plugins Installation 
-| - root folder
-  | - Theme folder
-    | - Library folder // create Library folder if not yet exist !
-      | - PHPWine
-        | - src
-        | - PHPWine.php
-        | - prop.php
-        | - LICENSE
-        | - README.md
-        | - composer.json        
-        
+  // WordPress Theme/Plugins Installation 
   # On the very top of functions.php or plugin-index.
   
   use \PHPWineVanillaFlavour\Wine\Optimizer\Html;
