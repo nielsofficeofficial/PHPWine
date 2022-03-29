@@ -206,11 +206,6 @@ h2, h3, h4, h5, h6, div, p, a, nav, main, form, bdi, bdo, time, audio, button, i
       <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
   </li>
  
-  <li>(soon!)<a href="#">PHPDashboard: </a><span> Bootstrap dashboard into PHPWine. 
-  </span>
-     <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
-  </li>
-
 
 </ul>
 
