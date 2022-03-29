@@ -46,6 +46,8 @@ PHPWine (Vanilla Flavour) is a PHP Library design cross PHP Platform and framewo
 
 ```PHP
   # Install on header.php
+  // WordPress Theme/Plugins Installation 
+  # On the very top of functions.php or plugin-index.
   
   $PHPWine = new class {
         
@@ -67,30 +69,27 @@ PHPWine (Vanilla Flavour) is a PHP Library design cross PHP Platform and framewo
 
  }; 
 ```
-<h3>WordPress Installation:</h3>
+<h3> Child Element Array keys: CHILD | ATTR | VALUE | INNER :</h3>
 
 ```PHP
-  // WordPress Theme/Plugins Installation 
-  # On the very top of functions.php or plugin-index.
-  $PHPWine = new class {
-        
-    public function __construct() {
-      
-      $this->php_wine('autoload');
 
-      new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ELEM; // this is mandatory when dev use merge !
-      new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H1;  // follow by merge version HTML_H1 and so on!...
-      new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_DIV;
-      
-    }
+  $childElement = [ CHILD => [
+  
+    ['div', ATTR  => ['class' =>'demo'] , VALUE => [ H1('Hello!') ]],  
+    ['p'  , VALUE => ["This is the array values!"] 
+          , INNER => [
 
-    private function php_wine(string $autoload) : void {
+        ['p'   , VALUE => ["Hello"] , ATTR => ['class' =>'demo'] ],
+        ['SPAN', VALUE => ["World"] , ATTR => ['class' =>'demo'] ]
 
-      require dirname(__FILE__) . DIRECTORY_SEPARATOR .'vendor/' . $autoload.'.'.'php';
+    ]],
 
-    }
+    ['div', VALUE => ["Say hi! "]    , ATTR => [ 'class' =>'demo'] ],
+    ['div', VALUE => ["Say hello! "] , ATTR => [ 'class' =>'demo'] ]
 
- }; 
+  ]]
+  
+  echo div($childElement , [['attr'],['value']], 'id' , 'class');
 ```
 
 <h3>Dependencies Installation:</h3>
