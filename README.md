@@ -210,22 +210,7 @@ h2, h3, h4, h5, h6, div, p, a, nav, main, form, bdi, bdo, time, audio, button, i
   </span>
      <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
   </li>
-  <li>(soon!)<a href="#">PHPMenu : </a><span> Dynamic Bootstrap menu. </span> 
-  <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
-  </li>
-    <li>(soon!)<a href="#">PHPUserProfile: </a><span>Fully optimized bootstrap user profile. </span>
-  <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>  
-  </li>
-  <li>(soon!)<a href="#">PHPSlider : </a><span> Dynamic and fully optimized create variety of slider hero and topfold. </span></li>
-  <li>(soon!)<a href="#">PHPProductSlider : </a><span> Display Dynamic and fully optimized product slider. </span></li>
-  <li>(soon!)<a href="#">PHPTestimonials: </a><span> Display Dynamic and fully optimized tetimonial Slider. </span></li>
-  <li>(soon!)<a href="#">PHPContactPage: </a><span> Static contact page with form validation and PHPMailer.  </span></li>
-  <li>(soon!)<a href="#">PHPUserRole: </a><span>Dynamic restrict user role and permission. </span></li>
-  <li>(soon!)<a href="#">PHPStore: </a><span> eCommerce/online store. </span></li>
-  <li>(soon!)<a href="#">PHPCart: </a><span> Cart integrating all payment gateway </span></li>
-  <li>(soon!)<a href="#">PHPBlog: </a><span> Optimize module blog post including category and tag post  </span></li>
-  <li>(soon!)<a href="#">PHPCategory: </a><span> Create a category and extended  </span></li>
-  <li>(soon!)<a href="#">PHPTag: </a><span> Create a tag and extended  </span></li>
+
 
 </ul>
 
