@@ -69,28 +69,6 @@ PHPWine (Vanilla Flavour) is a PHP Library design cross PHP Platform and framewo
 
  }; 
 ```
-<h3> Child Element Array keys: CHILD | ATTR | VALUE | INNER :</h3>
-
-```PHP
-
-  $childElement = [ CHILD => [
-  
-    ['div', ATTR  => ['class' =>'demo'] , VALUE => [ H1('Hello!') ]],  
-    ['p'  , VALUE => ["This is the array values!"] 
-          , INNER => [
-
-        ['p'   , VALUE => ["Hello"] , ATTR => ['class' =>'demo'] ],
-        ['SPAN', VALUE => ["World"] , ATTR => ['class' =>'demo'] ]
-
-    ]],
-
-    ['div', VALUE => ["Say hi! "]    , ATTR => [ 'class' =>'demo'] ],
-    ['div', VALUE => ["Say hello! "] , ATTR => [ 'class' =>'demo'] ]
-
-  ]]
-  
-  echo div($childElement , [['attr'],['value']], 'id' , 'class');
-```
 
 <h3>Dependencies Installation:</h3>
 
@@ -181,6 +159,29 @@ Hello World
 
 h2, h3, h4, h5, h6, div, p, a, nav, main, form, bdi, bdo, time, audio, button, iframe, select, picture, section, textarea, video, address, colgroup, blockquote, caption, label, datalist, details, summary, dialog, option, figure, figcaption, meter, object, optgroup, output, progress, template, var, ul, ol, li, table, tr, td, th, legend, fieldset, tbody, tfoot, thead, span, small, marquee, center, code, abbr, map, canvas, cite, data, dl, dt, dd, dfn, ins, del, mark, pre, rt, rp, s, samp, strong, sub, sup, wbr, q, head, title, body.  
 ```
+<h3> Child Element Array keys: CHILD | ATTR | VALUE | INNER :</h3>
+
+```PHP
+
+  $childElement = [ CHILD => [
+  
+    ['div', ATTR  => ['class' =>'demo'] , VALUE => [ H1('Hello!') ]],  
+    ['p'  , VALUE => ["This is the array values!"] 
+          , INNER => [
+
+        ['p'   , VALUE => ["Hello"] , ATTR => ['class' =>'demo'] ],
+        ['SPAN', VALUE => ["World"] , ATTR => ['class' =>'demo'] ]
+
+    ]],
+
+    ['div', VALUE => ["Say hi! "]    , ATTR => [ 'class' =>'demo'] ],
+    ['div', VALUE => ["Say hello! "] , ATTR => [ 'class' =>'demo'] ]
+
+  ]]
+  
+  echo div($childElement , [['attr'],['value']], 'id' , 'class');
+```
+
 <h3>Functions and Constant:</h3>
 <p>Support only plain PHPWine ``` @since v1.2.1.0 ```. </p>
 
