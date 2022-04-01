@@ -4,7 +4,7 @@
 
    $Details = new Class extends Enhancers { function  __construct() {  function Details( 
 
-              array|string  $value  =  null
+              array|string|callable  $value  =  null
              ,array|string  $attr   =  null
              ,string        $id     =  null
              ,string        $class  =  null

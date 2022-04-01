@@ -2476,7 +2476,7 @@ protected function file_handler_custom_element_closing_tag( array|string $attr =
   * @package @private Method Defined cpe_custom_elements() // use custom HTML
   *
   **/
-protected function cpe_custom_elements( string $elem = null, array|string $value = null, array|string $attr = null, string $id = null, string $class = null) {
+protected function cpe_custom_elements( string $elem = null, array|string|callable $value = null, array|string $attr = null, string $id = null, string $class = null) {
   
    # GET STRING_ELEMENT_THEN_RETURN
    $elem     = strtolower($elem);
@@ -2771,7 +2771,7 @@ protected function get_values_next_child_inner( string $getInner = null, array $
   * @package @private Method Defined  ModifiedHTML Val
   *
   **/
-private function cpe_Filehandler_Val( array|string $tagVHtml__ = null, string $ValElem__ = null, array|string $ValEAttr__ = null ) : string {
+private function cpe_Filehandler_Val( array|string|callable $tagVHtml__ = null, string $ValElem__ = null, array|string $ValEAttr__ = null ) : string {
   
   // installing request error handler for instances
   $request    = NEW \PHPWineVanillaFlavour\Wine\System\Request();
@@ -2785,37 +2785,44 @@ private function cpe_Filehandler_Val( array|string $tagVHtml__ = null, string $V
       $tagVHtml__ = $this->get_value_child_optimizer( $tagVHtml__ );
      
       // DESIGNATE THE DATA APPROPRIATELY 
-      $next_child_array  = "";
-      $next_child_array  .= $this->_setGATE().$ValElem__.$ValEAttr__;
-      $next_child_array  .= (!empty($tagVHtml__) && $tagVHtml__ !== NULL) ? $tagVHtml__ : FALSE ; 
-      $next_child_array  .= $this->set_assoc_element_modified_tag($ValElem__);       
-      
-      return($next_child_array);
-
+      return $this->getValueCallableStringArray( $tagVHtml__ , $ValElem__ , $ValEAttr__);
  
   }
     # ELSE IF  ? NOT EXIST THE NEXT_CHILD 
     # THEN PRINT WITH REQUEST CLASS ERROR HANDLER MESSAGE TO SEE THE DATA OF CURRETN ARRAY
-    elseif(is_array($tagVHtml__)) 
+    else if(is_array($tagVHtml__)) 
     {
-        // EXECUTE THE PLAN
+        // EXECUTE TO TERMINATE THE PLAN
         $request->CURRENT_VALUE_REQUEST( $tagVHtml__ );
         die;
 
-    }
-      
-    else 
+    } else if(is_callable( $tagVHtml__  ))
     {
+        // EXECUTE CALLABLE 
+        if ($tagVHtml__( true )) {
+
+          return $this->getValueCallableStringArray( $tagVHtml__( true ) , $ValElem__ , $ValEAttr__);
+
+        };      
+
+    } else {
+
         # DO THE DEFAULT PROCESSING IF THE VALUE IS NOT ARRAY
         # RETURN APPROPRIATE THE STRING DATA 
-        $enhancer_element_print   = "";
-        $enhancer_element_print  .= $this->_setGATE().$ValElem__.$ValEAttr__;
-        $enhancer_element_print  .= (!empty($tagVHtml__) && $tagVHtml__ !== NULL) ? $tagVHtml__ : FALSE ; 
-        $enhancer_element_print  .= $this->set_assoc_element_modified_tag($ValElem__);       
-        
-        return($enhancer_element_print);
+        return $this->getValueCallableStringArray( $tagVHtml__ , $ValElem__ , $ValEAttr__);
 
     }
+
+}
+
+private function getValueCallableStringArray( array|string|callable $tagVHtml__ = null , string $ValElem__ = null , array|string $ValEAttr__ = null ) : string {
+
+  $next_child_array  = "";
+  $next_child_array  .= $this->_setGATE().$ValElem__.$ValEAttr__;
+  $next_child_array  .= (!empty($tagVHtml__) && $tagVHtml__ !== NULL) ? $tagVHtml__ : FALSE ; 
+  $next_child_array  .= $this->set_assoc_element_modified_tag($ValElem__);       
+  
+  return((string) $next_child_array);
 
 }
 

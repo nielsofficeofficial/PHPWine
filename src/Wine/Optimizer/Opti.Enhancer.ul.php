@@ -1,10 +1,10 @@
 <?php 
      
-   use \PHPWine\VanillaFlavour\Wine\Optimizer\Enhancers;
+   use \PHPWineVanillaFlavour\Wine\Optimizer\Enhancers;
 
    $ul = new Class extends Enhancers { function  __construct() {  function ul( 
 
-              array|string  $value  =  null
+              array|string|callable  $value  =  null
              ,array|string  $attr   =  null
              ,string        $id     =  null
              ,string        $class  =  null
