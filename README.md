@@ -108,6 +108,32 @@ echo H1('Hello World!', [['style'],['color: blue;']], 'id', 'class' );
 Hello World
 ```
 ```PHP
+// Callable value data type @since v1.3.0.3
+function Div( 
+
+    array|string|callable  $value  =  null
+   ,array|string  $attr   =  null
+   ,string        $id     =  null
+   ,string        $class  =  null
+  
+)
+           
+ echo div( function() {
+
+   return H1('Hi Call back', [['attr'],['value']] , 'id' , 'class');
+
+ }, [['attr_div'],['val_div']] );
+ 
+ // variable outside scope 
+ $varadd = 'Hi Call Foo Bar';
+
+ echo div( function() use ( $varadd ) {
+
+   return H1( $varadd , [['attr'],['value']] , 'id' , 'class');
+
+ }, [['attr_div'],['val_div']] );
+```
+```PHP
 // Installing dependecies HTML Elements 
 new \HTML_SELECT; [ select(); ]  |  new \HTML_ABBR; [ abbr(); ]     |  new \HTML_ADDRESS; [ address(); ]
 new \HTML_AUDIO;  [ audio(); ]   |  new \HTML_BDI;  [ bdi(); ]      |  new \HTML_BDO; [ bdo(); ]
