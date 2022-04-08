@@ -127,30 +127,29 @@ function Div(
  // variable loop arrays of data inside of div element
  $data  = array('Hello','World','From','PHP');
 
- echo div( function() use ( $data ) { $loop = new Class {
+ echo div( function() use ( $data ) { 
+ 
+  return UL((new Class {
 
    private array $container = [];
-   private string $holder;
+   private array $holder = [];
 
-   public function loop( array $data) : string { $this->container = $data;
+   public function menu_items( array $data) : string  { $this->container = $data;
 
-        array_map( function() {
+     if( is_array($this->container) ) { 
+       
+       foreach ($this->container  as $value) { 
+           
+        $this->holder[] = li( alink($value, [['href'],['#']]) );  
+       
+       } 
+    
+     }
 
-           if( in_array('PHP', $this->container)) {
-        
-               $this->holder =  " Web Development <br />" ;
-        
-            }
-        
-         } , $this->container ) ;
- 
-         return (implode(" ", $this->container) . " " . $this->holder );
+       return implode(" ", $this->holder);
+   }
 
-      }
- 
-   };
-   
-   return H1($loop->loop($data));
+  })->menu_items($data));
 
  }, [['attr_div'],['val_div']] );
 ```
