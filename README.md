@@ -154,7 +154,7 @@ function Div(
  }, [['attr_div'],['val_div']] );
 ```
 ```HTML
-<!-- End result | Loop Callable @since v1.3.0.3 -->
+<!-- End result | Loop menu_items Callable @since v1.3.0.3 -->
 <div attr_div="val_div">
   <ul>
     <li> <a href="#"> Hello  </a> </li>
