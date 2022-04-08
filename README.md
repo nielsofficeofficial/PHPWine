@@ -127,9 +127,7 @@ function Div(
  // variable loop arrays of data inside of div element
  $data  = array('Hello','World','From','PHP');
 
- echo div( function() use ( $data ) {
-
-    $loop = new Class {
+ echo div( function() use ( $data ) { $loop = new Class {
 
     public array $container = [];
     private string $holder;
