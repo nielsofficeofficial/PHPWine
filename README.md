@@ -129,30 +129,28 @@ function Div(
 
  echo div( function() use ( $data ) { $loop = new Class {
 
-    public array $container = [];
-    private string $holder;
+   private array $container = [];
+   private string $holder;
 
-    public function loop() : string{
+   public function loop($data) : string { $this->container = $data;
 
         array_map( function() {
 
-            if( in_array('PHP', $this->container)) {
+           if( in_array('PHP', $this->container)) {
         
                $this->holder =  " Web Development <br />" ;
         
             }
         
          } , $this->container ) ;
-
-        return (implode(" ", $this->container) . " " . $this->holder );
-
-    }
  
-  };
-  
-  $loop->container = $data;
+         return (implode(" ", $this->container) . " " . $this->holder );
+
+      }
  
-  return H1($loop->loop());
+   };
+   
+   return H1($loop->loop($data));
 
  }, [['attr_div'],['val_div']] );
 ```
