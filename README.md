@@ -124,12 +124,37 @@ function Div(
 
  }, [['attr_div'],['val_div']] );
  
- // variable outside scope 
- $varadd = 'Hi Call Foo Bar';
+ // variable loop arrays of data inside of div element
+ $data  = array('Hello','World','From','PHP');
 
- echo div( function() use ( $varadd ) {
+ echo div( function() use ( $data ) {
 
-   return H1( $varadd , [['attr'],['value']] , 'id' , 'class');
+    $loop = new Class {
+
+    public array $container = [];
+    private string $holder;
+
+    public function loop() : string{
+
+        array_map( function() {
+
+            if( in_array('PHP', $this->container)) {
+        
+               $this->holder =  " Web Development <br />" ;
+        
+            }
+        
+         } , $this->container ) ;
+
+        return (implode(" ", $this->container) . " " . $this->holder );
+
+    }
+ 
+  };
+  
+  $loop->container = $data;
+ 
+  return H1($loop->loop());
 
  }, [['attr_div'],['val_div']] );
 ```
