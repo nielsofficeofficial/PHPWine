@@ -153,6 +153,18 @@ function Div(
 
  }, [['attr_div'],['val_div']] );
 ```
+```HTML
+<!-- End result | Loop Callable @since v1.3.0.3 -->
+<div attr_div="val_div">
+  <ul>
+    <li> <a href="#"> Hello  </a> </li>
+    <li> <a href="#"> World </a> </li>
+    <li> <a href="#"> From </a> </li>
+    <li> <a href="#"> PHP </a> </li>
+  </ul>
+</div>
+
+```
 ```PHP
 // Installing dependecies HTML Elements 
 new \HTML_SELECT; [ select(); ]  |  new \HTML_ABBR; [ abbr(); ]     |  new \HTML_ADDRESS; [ address(); ]
