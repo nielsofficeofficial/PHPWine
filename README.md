@@ -132,7 +132,7 @@ function Div(
    private array $container = [];
    private string $holder;
 
-   public function loop($data) : string { $this->container = $data;
+   public function loop( array $data) : string { $this->container = $data;
 
         array_map( function() {
 
