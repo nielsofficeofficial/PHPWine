@@ -116,7 +116,8 @@ function Div(
    ,string        $id     =  null
    ,string        $class  =  null
   
-)
+) : string 
+{}
            
  echo div( function() {
 
