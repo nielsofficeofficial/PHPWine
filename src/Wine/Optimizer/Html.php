@@ -2387,7 +2387,7 @@ protected function get_values_next_child_inner( string $getInner = null, array $
   * @package @private Method Defined  ModifiedHTML Val
   *
   **/
-private function cpe_Filehandler_Val( array|string|callable $tagVHtml__ = null, string $ValElem__ = null, array|string $ValEAttr__ = null ) : string {
+private function cpe_Filehandler_Val( array|string|callable $tagVHtml__ = null, string $ValElem__ = null, array|string $ValEAttr__ = null ) : bool|string {
   
   // installing request error handler for instances
   $request    = NEW \PHPWineVanillaFlavour\Wine\System\Request();
@@ -2412,14 +2412,18 @@ private function cpe_Filehandler_Val( array|string|callable $tagVHtml__ = null, 
         $request->CURRENT_VALUE_REQUEST( $tagVHtml__ );
         die;
 
-    } else if(is_callable( $tagVHtml__  ))
+    } else if( is_callable( $tagVHtml__  )  )
     {
         // EXECUTE CALLABLE 
-        if ($tagVHtml__( $this->callable )) {
+        if ($tagVHtml__( $this->callable ) && ( $tagVHtml__ == false  ||  $tagVHtml__ == null ) ) {
 
-          return $this->getValueCallableStringArray( $tagVHtml__( $this->callable ) , $ValElem__ , $ValEAttr__);
+          return false ;
 
-        };      
+        } else {
+
+          return  $this->getValueCallableStringArray( $tagVHtml__( $this->callable ) , $ValElem__ , $ValEAttr__);
+
+        }      
 
     } else {
 
@@ -2431,11 +2435,11 @@ private function cpe_Filehandler_Val( array|string|callable $tagVHtml__ = null, 
 
 }
 
-private function getValueCallableStringArray( array|string|callable $tagVHtml__ = null , string $ValElem__ = null , array|string $ValEAttr__ = null ) : string {
+private function getValueCallableStringArray( array|string|callable $tagVHtml__ = null , string $ValElem__ = null , array|string $ValEAttr__ = null ) : bool|string {
 
   $next_child_array  = "";
   $next_child_array  .= $this->_setGATE().$ValElem__.$ValEAttr__;
-  $next_child_array  .= (!empty($tagVHtml__) && $tagVHtml__ !== NULL) ? $tagVHtml__ : FALSE ; 
+  $next_child_array  .= (!empty($tagVHtml__) && $tagVHtml__ !== NULL) ? $tagVHtml__ : false ; 
   $next_child_array  .= $this->set_assoc_element_modified_tag($ValElem__);    
   
   return((string) $next_child_array);
