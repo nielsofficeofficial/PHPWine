@@ -16,7 +16,14 @@
     "autoload" : {
         "psr-4" : {
             "PHPWineVanillaFlavour\\" : "src/"
-        }
+        },
+        "classmap": [
+            "src/",
+            "src/Wine",
+            "src/prop.php",
+            "src/Wine/Optimizer/prop.php"
+
+          ]
     },
     "require": {
         
