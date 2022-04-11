@@ -2,7 +2,7 @@
 
 namespace PHPWineVanillaFlavour\Wine\Optimizer;
 
- USE \PHPWineVanillaFlavour\Wine\Merge\Html;
+ use \PHPWineVanillaFlavour\Wine\Merge\Html;
 
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.3.0.0 Cooked by nielsoffice 

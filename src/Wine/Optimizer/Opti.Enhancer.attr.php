@@ -1,18 +1,19 @@
 <?php 
      
-  use \PHPWineVanillaFlavour\Wine\Optimizer\Enhancers;
-
+ use \PHPWineVanillaFlavour\Wine\Optimizer\Enhancers;
+ 
   $object = new Class extends Enhancers { function  __construct() { function ATTR(
 
-        $tag
-       ,$attr
+        string $tag  = null
+       ,array  $attr = null 
      
       )
       {
-    
-       $Enhancer = new Enhancers; return method_exists($Enhancer, 'ATTR') ? 
+
+      
+       return method_exists((new Enhancers), 'ATTR' ) ? 
      
-       $Enhancer->ATTR($tag, $attr) : false;
+        (new Enhancers)->ATTR($tag, $attr)  : false;
      
       }
 

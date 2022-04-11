@@ -1,9 +1,7 @@
 <?php 
 
   namespace PHPWineVanillaFlavour\Wine\Optimizer; 
-  
-  use \PHPWineVanillaFlavour\Wine\Optimizer\Tags;
-  
+    
 /**
  * @copyright (c) 2021 PHPWine\VanillaFlavour v1.3.0.0 Cooked by nielsoffice 
  *
@@ -44,7 +42,7 @@
  */ 
 
  
-class ENHANCER_ATTR Extends Tags {
+class ENHANCER_ATTR Extends \PHPWineVanillaFlavour\Wine\Optimizer\Tags {
 
     public function __construct() {
             

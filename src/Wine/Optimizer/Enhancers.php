@@ -103,9 +103,7 @@ public function belongs_to(
    
     return function_exists(__ISBELONG__) ? 
 
-       $this->cpe_xib6_FileHandler_belongs_to($thisPage, $page_array) : 
-
-          $this->PERFORM($this->Enhacer_ErrorMsg());  
+       $this->cpe_xib6_FileHandler_belongs_to($thisPage, $page_array) : false ;
  
  }
 
@@ -124,9 +122,7 @@ public function GetKeyFolderPath() {
  
   return function_exists(__KEYPATH__) ? 
 
-     $this->cpe_xib6_FileHandler_count() : 
-
-       $this->PERFORM($this->Enhacer_ErrorMsg()); 
+     $this->cpe_xib6_FileHandler_count() : false ;
 
 }
 
@@ -146,9 +142,7 @@ public function GetKeyFolderPath() {
  
    return function_exists(__BR__) ? 
 
-      parent::is_true_break_assoc($assoc) : 
-
-         $this->EnhanceeCoreErrorMsg(); 
+      parent::is_true_break_assoc($assoc) : false ;
  
  }
 
@@ -168,10 +162,7 @@ public function GetKeyFolderPath() {
 
       return function_exists(__HR__) ? 
 
-         parent::_isTrueLine_assoc($assoc) : 
-
-            $this->EnhanceeCoreErrorMsg();     
- 
+         parent::_isTrueLine_assoc($assoc) : false ;
   }
 
 /**
@@ -185,9 +176,7 @@ public function SPACE() {
  
   return function_exists(__SPACE__) ?
      
-     parent::_tagSPACER() : 
-
-       $this->EnhanceeCoreErrorMsg();     
+     parent::_tagSPACER() : false ;
 
 
 }
@@ -209,9 +198,7 @@ public function SPACE() {
 
      return function_exists(__MERGE__) ? 
 
-        $this->is_true_set_merge($merge) : 
-
-           $this->EnhanceeCoreErrorMsg();     
+        $this->is_true_set_merge($merge) : false ;   
  }
 
  /**
@@ -235,10 +222,7 @@ public function SPACE() {
    
      return function_exists(__SetElemAttr__) ? 
 
-        parent::set_Element_Attr($attr_type,$array_set_2) : 
-
-           $this->EnhanceeCoreErrorMsg();     
- 
+        parent::set_Element_Attr($attr_type,$array_set_2) : false ;
  }
 
   /**
@@ -262,10 +246,7 @@ public function SPACE() {
  
       return function_exists(__DOELSE__) ? 
 
-         parent::assoc_method_concat_else( $condition, $if_result, $else_result, $assoc) : 
-
-           $this->EnhanceeCoreErrorMsg();      
-
+         parent::assoc_method_concat_else( $condition, $if_result, $else_result, $assoc) : false ;
   }
 
 /**
@@ -288,9 +269,7 @@ public function SPACE() {
 
      return function_exists(__DOIF__) ? 
 
-       parent::assoc_method_concat_else( $condition, $if_result, null, $assoc) : 
-
-          $this->EnhanceeCoreErrorMsg();  
+       parent::assoc_method_concat_else( $condition, $if_result, null, $assoc) : false ;
   }
  
 /**
@@ -310,9 +289,7 @@ public function SPACE() {
 
      return function_exists(__PERFORM__) ? 
 
-       parent::is_true_set_string($str, $assoc) : 
-
-         $this->EnhanceeCoreErrorMsg(); 
+       parent::is_true_set_string($str, $assoc) : false ;
   }
 
 /**
@@ -332,9 +309,7 @@ public function SPACE() {
 
      return function_exists(__STRING__) ? 
 
-       parent::is_true_set_string($str, $assoc) : 
-
-          $this->EnhanceeCoreErrorMsg(); 
+       parent::is_true_set_string($str, $assoc) : false ;
   }
 
 /**
@@ -356,13 +331,9 @@ public function ATTR(
  )
  {
 
-  return function_exists(__ATTR__) ? 
+  return function_exists(__ATTR__) ?  $this->cpe_FileHander_hdr($tag, $attr) : false ;
 
-    $this->cpe_FileHander_hdr($tag, $attr) : 
-
-      $this->PERFORM($this->Enhance_ErrorMsg_att()); 
-
-}
+ }
 
 /**
   *
@@ -387,10 +358,10 @@ public function ELEM(
    
  return function_exists(__ELEM__) ? 
 
-    $this->cpe_FileHandler_custom_elem($elem, $value, $attr, $id, $class) : 
+    $this->cpe_FileHandler_custom_elem($elem, $value, $attr, $id, $class) : false;
 
-      $this->PERFORM($this->Enhance_ErrorMsg_att()); 
  }
+
 
 /**
   *
@@ -451,52 +422,53 @@ private function cpe_xib6_FileHandler_belongs_to($page, $page_file)  {
   * @since 27.10.2020
   *
   **/
-private function cpe_FileHander_hdr($tag, $attr) {
+private function cpe_FileHander_hdr( string $tag = null , array|string $attr = [] ) : string {
   
   # CHECK_IF_THE_QUICKSTART_vAR_IS_IN_ARRAY_AND_IF_IT_IS_TRUE
   # DO_ARRAY_RETURN_ESLE_SINGLE_VALUE
   is_array($attr) ? $attr = $attr : $quickStart_ = $attr;
-  
+
   # CHECK THE PARAMTERS IF EQUAL TOO GIVEN REQUIRED PARAMETER 
   switch ($tag) {
 
      case __META__:
        
-       parent::cpe_FileJandler_meta($attr, $tag);
+       return parent::cpe_FileJandler_meta($attr, $tag);
        break;
 
      case __LINK__:
        
-       parent::cpe_FileJandler_link($attr, $tag);
+       return parent::cpe_FileJandler_link($attr, $tag);
        break;     
 
      case __SCRIPT__:
        
-       parent::cpe_FileJandler_script($attr, $tag);
+      return parent::cpe_FileJandler_script($attr, $tag);
        break;   
+
 
      case __TITLE__:
        
-       $this->PERFORM(parent::TITLE($quickStart_));
+      return $this->PERFORM(parent::TITLE($quickStart_));
        break;  
 
      case __CUSTOM_END__:
        
-       parent::file_handler_custom_element_inline($attr, $tag);
+      return parent::file_handler_custom_element_inline($attr, $tag);
        break;  
 
      case __BEGIN_CUSTOM_END__:
        
-       parent::file_handler_custom_element_closing_tag($attr, $tag);
+      return parent::file_handler_custom_element_closing_tag($attr, $tag);
        break;  
 
      case '_xhtml_modify':
        
-       parent::cpe_FileJandler_doctype(strtolower($attr));
+      return parent::cpe_FileJandler_doctype(strtolower($attr));
        break; 
 
      default:
-       $this->Enhance_ErrorMsg_att();
+       return  'Please contact support on github nielsoffice/PHPWine';
        break;
    } 
 
@@ -594,56 +566,11 @@ private function cpe_xib6_FileHandler_count() {
   } else {
    
    // ELSE RETURN ERROR HANDLER MSG
-   $this->PERFORM($this->Enhacer_ErrorMsg());
+   return false;
 
   }
 
 }
-
-/**
-  *
-  * @method protected function PHPFileEnhancer
-  * @static Method Defined HANDLER ERROR MESSAGE 
-  * RETURN FOLDER FILE CONFIG>PHP
-  * @since 27.10.2020
-  *
-  */
-private function Enhacer_ErrorMsg() {
-        
-  $ERROR_MSG  = " ";
-  $ERROR_MSG .= " Classes Must be Instantiated <br />";
-  $ERROR_MSG .= " For Developer support visit github submit issue: ".parent::ELEMENT('a','Submit Github Support', parent::IssueSubmitAttr()).$this->BREAK(METHOD_ASSOC);   
-  $ERROR_MSG .= " Recomendation: ".parent::ELEMENT('a','Read Documentation Click Here',parent::DocxEnahncerSubmitAttr());      
-
-  return ($ERROR_MSG);  
-
-}
-
-private function Enhance_ErrorMsg_att() {
-
-  # PERFORM ERROR MASSGES
-  $ERROR_MSG  = " ";
-  $ERROR_MSG .= " Check ATTR('VALID_PARAM', [ ] ) only valid parameter can used <br />";
-  $ERROR_MSG .= " For Developer support visit github submit issue: ".parent::ELEMENT('a','Submit Github Support', parent::IssueSubmitAttr()).$this->BREAK(METHOD_ASSOC);   
-  $ERROR_MSG .= " Recomendation: ".parent::ELEMENT('a','Read Documentation Click Here',parent::DocxEnahncerSubmitAttr());      
-  
-   $this->PERFORM($ERROR_MSG);
-
-}
-
-private function EnhanceeCoreErrorMsg() {
-
-  # PERFORM ERROR MASSGES
-  $ERROR_MSG  = " ";
-  $ERROR_MSG .= " Class can be extends But Function and Method Cannot be modify! <br />";
-  $ERROR_MSG .= " Warning Retore all Modification PHPHtml-Optimizer use default! <br />";  
-  $ERROR_MSG .= " For Developer support visit github submit issue: ".parent::ELEMENT('a','Submit Github Support', parent::IssueSubmitAttr()).$this->BREAK(METHOD_ASSOC);   
-  $ERROR_MSG .= " Recomendation: ".parent::ELEMENT('a','Read Documentation Click Here',parent::DocxEnahncerSubmitAttr());      
-  
-   $this->PERFORM($ERROR_MSG);
-
-}
-
 
 } // End of class
 

@@ -1166,7 +1166,7 @@ static private function errors_array_handler( array|string $value)
 {
       
      // installing request error handler for instances
-     $request    = NEW \PHPWine\VanillaFlavour\Wine\System\Request();   
+     $request    = NEW \PHPWineVanillaFlavour\Wine\System\Request();   
     
      $request->CURRENT_VALUE_REQUEST( $value );
     die;

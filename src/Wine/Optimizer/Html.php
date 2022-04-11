@@ -36,258 +36,11 @@
  * @link      https://github.com/nielsofficeofficial/PHPWine/blob/PHPWine_Vanilla_Flavour/README.md
  * @link      https://www.facebook.com/nielsofficeofficial
  * @version   v1.3.0.0
- * @since     03.26.2022
- * 
- * 
- * noHTML dynamic  structure 
- * non/WITH CLASS|METHOD|FUNCTION ASSOCIATED  
- * 
- * @method echo $noHtml->ELEMENT('H1');
- * @method echo $noHtml->ELEMENT('H2');
- * @method echo $noHtml->ELEMENT('H3');
- * @method echo $noHtml->ELEMENT('H4');
- * @method echo $noHtml->ELEMENT('H5');
- * @method echo $noHtml->ELEMENT('H6');
- * @method echo $noHtml->ELEMENT('H1');
- * @method echo $noHtml->ELEMENT('BUTTON');
- * @method echo $noHtml->ELEMENT('A');
- * @method echo $noHtml->ELEMENT('IFRAME');
- * @method echo $noHtml->ELEMENT('MAIN');
- * @method echo $noHtml->ELEMENT('NAV');
- * @method echo $noHtml->ELEMENT('SELECT');
- * @method echo $noHtml->ELEMENT('FORM');
- * @method echo $noHtml->ELEMENT('PICTURE');
- * @method echo $noHtml->ELEMENT('SECTION');
- * @method echo $noHtml->ELEMENT('TEXTAREA');
- * @method echo $noHtml->ELEMENT('AUDIO');
- * @method echo $noHtml->ELEMENT('VIDEO');
- * @method echo $noHtml->ELEMENT('ADDRESS');
- * @method echo $noHtml->ELEMENT('COLGROUP');
- * @method echo $noHtml->ELEMENT('BDI');
- * @method echo $noHtml->ELEMENT('BDO');
- * @method echo $noHtml->ELEMENT('CAPTION');
- * @method echo $noHtml->ELEMENT('LABEL');
- * @method echo $noHtml->ELEMENT('DATALIST');
- * @method echo $noHtml->ELEMENT('DETAILS');
- * @method echo $noHtml->ELEMENT('SUMMARY');
- * @method echo $noHtml->ELEMENT('DIALOG');
- * @method echo $noHtml->ELEMENT('OPTION');
- * @method echo $noHtml->ELEMENT('FIGURE');
- * @method echo $noHtml->ELEMENT('FIGCAPTION');
- * @method echo $noHtml->ELEMENT('METER');
- * @method echo $noHtml->ELEMENT('OBJECT');
- * @method echo $noHtml->ELEMENT('OPTGROUP');
- * @method echo $noHtml->ELEMENT('OUTPUT');
- * @method echo $noHtml->ELEMENT('PROGRESS');
- * 
- * @method echo $noHtml->ELEMENT('TEMPLATE');
- * @method echo $noHtml->ELEMENT('TIME');
- * @method echo $noHtml->ELEMENT('VAR');
- * @method echo $noHtml->ELEMENT('UL');
- * @method echo $noHtml->ELEMENT('OL');
- * @method echo $noHtml->ELEMENT('LI');
- * @method echo $noHtml->ELEMENT('TABLE');
- * @method echo $noHtml->ELEMENT('TR');
- * @method echo $noHtml->ELEMENT('TD');
- * @method echo $noHtml->ELEMENT('TH');
- * @method echo $noHtml->ELEMENT('LEGEND');
- * @method echo $noHtml->ELEMENT('FIELDSET');
- * @method echo $noHtml->ELEMENT('TBODY');
- * @method echo $noHtml->ELEMENT('TFOOT');
- * @method echo $noHtml->ELEMENT('THEAD');
- * @method echo $noHtml->ELEMENT('SPAN');
- * @method echo $noHtml->ELEMENT('EM');
- * @method echo $noHtml->ELEMENT('B');
- * @method echo $noHtml->ELEMENT('I');
- * @method echo $noHtml->ELEMENT('SMALL');
- * @method echo $noHtml->ELEMENT('MARQUEE');
- * @method echo $noHtml->ELEMENT('CENTER');
- * @method echo $noHtml->ELEMENT('CODE');
- * @method echo $noHtml->ELEMENT('ABBR');
- * @method echo $noHtml->ELEMENT('MAP');
- * @method echo $noHtml->ELEMENT('CANVAS');
- * @method echo $noHtml->ELEMENT('CITE');
- * @method echo $noHtml->ELEMENT('DATA');
- * @method echo $noHtml->ELEMENT('DL');
- * @method echo $noHtml->ELEMENT('DT');
- * @method echo $noHtml->ELEMENT('DD');
- * @method echo $noHtml->ELEMENT('INS');
- * @method echo $noHtml->ELEMENT('DEL');
- * @method echo $noHtml->ELEMENT('KBD');
- * @method echo $noHtml->ELEMENT('MARK');
- * @method echo $noHtml->ELEMENT('PRE');
- * @method echo $noHtml->ELEMENT('RT');
- * @method echo $noHtml->ELEMENT('RP');
- * @method echo $noHtml->ELEMENT('S');
- * @method echo $noHtml->ELEMENT('SAMP');
- * @method echo $noHtml->ELEMENT('STRONG');
- * @method echo $noHtml->ELEMENT('SUB');
- * @method echo $noHtml->ELEMENT('SUP');
- * @method echo $noHtml->ELEMENT('WBR');
- * @method echo $noHtml->ELEMENT('Q');
- * @method echo $noHtml->ELEMENT('HEAD');
- * @method echo $noHtml->ELEMENT('TITLE');
- * @method echo $noHtml->ELEMENT('BODY');
- * @method echo $noHtml->ELEMENT('HTML');
- * @method echo $noHtml->ELEMENT('BLOCKQUOTE');
- * 
- * @method echo $noHtml->ELEMS('my_input','my_input','INPUT');
- * @method echo $noHtml->ELEMS('my_track','my_track','track');
- * @method echo $noHtml->ELEMS('my_circle','my_circle','circle');
- * @method echo $noHtml->ELEMS('my_param','my_param','param');
- * @method echo $noHtml->ELEMS('my_meta','my_meta','meta');
- * @method echo $noHtml->ELEMS('my_link','my_link','link');
- * @method echo $noHtml->ELEMS('my_img','my_img','img');
- * @method echo $noHtml->ELEMS('my_embed','my_embed','embed');
- * @method echo $noHtml->ELEMS('my_option','my_option','option');
- * @method echo $noHtml->ELEMS('my_col','my_col','col');
- * @method echo $noHtml->ELEMS('my_base','my_base','base');
- * @method echo $noHtml->ELEMS('my_aside','my_aside','aside');
- * @method echo $noHtml->ELEMS('my_area','my_area','area');
- * 
- *  # HTML TAG NOT AVAIALBE FOR THIS VERSION !
- *  # $noHtml->ELEMENT('SVG');
- *  # $noHtml->SVG();
- * 
+ * @since     03.26.2022 
  *
  */
 
 class Html {
-
-/**
-  * @var @property Private 
-  * defined Properties
-  * minify optimized html attribute
-  *
-  * Each Property dedicated to html
-  * Create Beautiful Clean Codes 
-  * 
-  **/
- private $sq;
-
-/**
-  * @var @property Private 
-  * defined double quotes
-  * minify optimized html attribute 
-  **/
- private $dq;
-
-/**
-  * @var @property Private 
-  * defined less than sign
-  * minify optimized html attribute 
-  **/
- private $lt; 
-
-/**
-  * @var @property Private 
-  * defined greather than sign 
-  * minify optimized html attribute 
-  **/
- private $gt;
-
-/**
-  * @var @property Private 
-  * defined equal sign
-  * minify optimized html attribute 
-  **/
- private $es;
-
-/**
-  * @var @property Private 
-  * defined html end sign
-  * minify optimized html attribute 
-  **/
- private $ends;
-
-/**
-  * @var @property Private 
-  * defined comment begin sign
-  * minify optimized html attribute 
-  **/
- private $comBEGIN;
-
-/**
-  * @var @property Private 
-  * defined comment end sign
-  * minify optimized html attribute 
-  **/
- private $comEND;
-
-/**
-  * @var @property Private 
-  * defined empty space
-  * minify optimized html attribute 
-  **/
- private $sHTML;
-
-/**
-  * @var @property Private 
-  * defined exclamation mark sign
-  * minify optimized html attribute 
-  **/
- private $exSymbol;
-
-/**
-  * @var @property Private 
-  * defined execute string no tag
-  * minify optimized html attribute 
-  **/
- private $str;
-
-/**
-  * @var @property Private 
-  * defined path
-  * get thirdparty library 
-  **/
- private $path;
-
-/**
-  * @var @property @static CONST | OPTIMIZER PROP  
-  * @since 11.05.2020
-  * defined Assigned Image Extenstion as ._RTF
-  **/ 
- CONST __OPTI_PROP__ = __DIR__ . '/prop.php'; 
-
-/**
-  * @var @property @static CONST | PHPHtml-OPTIMIZER PROP  
-  * @since 11.05.2020
-  * defined Assigned Image Extenstion as ._RTF
-  **/ 
- CONST __PHPHO_PROP__ =  __DIR__ . '/../../prop.php'; 
-
-/**
-  * @var @property Array of data 
-  * defined CONST ARRAY EXNTION FILES
-  *
-  * @var @__getAssEXTENSION__ 
-  *
-  **/
- CONST __FILEEXTENSION__  = [ 
-
-
-     __PHP__  => 'php'
-    ,__HTML__ => 'html'
-    ,__CSS__  => 'css'
-    ,__JS__   => 'js'
-    ,__JPG__  => 'jpg'
-    ,__JPEG__ => 'jpeg'
-    ,__PNG__  => 'png'
-    ,__GIF__  => 'gif'
-    ,__BMP__  => 'bmp'
-    ,__TEX__  => 'tex'
-    ,__XLS__  => 'xls'
-    ,__XLSX__ => 'xlsx'
-    ,__DOCX__ => 'doc'
-    ,__DOCX__ => 'docx'
-    ,__PPT__  => 'ppt'
-    ,__PPTX__ => 'pptx'
-    ,__ODT__  => 'odt'
-    ,__TXT__  => 'txt'
-    ,__RTF__  => 'rtf'
-
-
-]; 
 
 /**
   * @var @property Array of data 
@@ -502,6 +255,32 @@ class Html {
    ,"hr"
 
 ];
+
+ private bool $callable = true;
+
+/**
+  * @var @property @static CONST | OPTIMIZER PROP  
+  * @since 11.05.2020
+  * defined Assigned Image Extenstion as ._RTF
+  **/ 
+  CONST __OPTI_PROP__ = __DIR__ . './prop.php'; 
+
+
+
+  /**
+    * @var @property @static CONST | PHPHtml-OPTIMIZER PROP  
+    * @since 11.05.2020
+    * defined Assigned Image Extenstion as ._RTF
+    **/ 
+   CONST __PHPHO_PROP__ =  __DIR__ . './../../prop.php'; 
+  
+  /**
+    * @var @property Array of data 
+    * defined CONST ARRAY EXNTION FILES
+    *
+    * @var @__getAssEXTENSION__ 
+    *
+    **/
 
 /**
   * @var 
@@ -968,118 +747,7 @@ protected function _setCOMBEGIN() {
    
     }
 
-/**
-  *
-  * @method public function __magicELEMENT noHTML
-  * @static Method Defined single call through param html element no closing tag  
-  * Neat and clean noHTML
-  * $elem  = 'HTML ELEMENT' ex. p, ul, li etc..
-  * $label = 'MERGE' output: <p> | _ any tag elements html
-  * $label = 'MERGE_END' output: </p> | x any tag elements html
-  *
-  **/
- public function __magicMERGE(
-
-    string       $elem   = null
-   ,string       $label  = null
-   ,array|string $attr   = null
-   ,string       $id     = null
-   ,string       $class  = null
-
- )
- {
  
- return $this->set_assoc_element(
-   
-    $this->_setELEMENTS($elem), 
-
-    null, 
-    $attr, 
-    $id, 
-    $class, 
-    $label
-  
-  ); 
-
- } 
-
-/**
-  *
-  * @method public function _ELEMENT noHTML
-  * @ Method Defined single html element no closing tag  
-  * Neat and clean noHTML
-  *
-  **/
-   public function ELEMS(
-
-     string       $id     = null
-    ,string       $inline = null
-    ,string       $elem   = null
-    ,array|string $attr   = null
-    ,string       $class  = null
-    ,string       $assoc  = null
-
-  )
-  { 
-    
-   return $this->html_elements_optimizer(
-     
-     $inline, 
-     $elem, 
-     $attr, 
-     $id, 
-     $class, 
-     $assoc
-   
-   );
-  
-  }
-
-/**
-  *
-  * @method public function ELEMENT noHTML
-  * @ Method Defined single call through param html element no closing tag  
-  * Neat and clean noHTML
-  *
-  **/
-  public function ELEMENT(  
-
-     string       $elem      =  null
-    ,mixed        $value     =  null
-    ,array|string $attr      =  null
-    ,string       $id        =  null
-    ,string       $class     =  null
-    ,string       $label     =  null
-
- ) 
- {
- 
- return  $this->set_assoc_element(
-   
-  $this->_setELEMENTS($elem), 
-  
-  $value, 
-  $attr, 
-  $id, 
-  $class, 
-  $label
- 
- ); 
-
- } 
-
-/**
-  *
-  * @method private function noHTML
-  * @ @private Method Defined  return_inline_element
-  * RETURN NODE HTML _ noHTML TAG
-  * 
-  **/
- private function return_inline_element( array|string  $elem_val = null, array|string  $elem_key = null, array|string  $attr = null, string $id = null, string $class = null, string $assoc = null) {
-
-   return $this->get_inline__HTML($elem_val, $elem_key, $attr, $id, $class, $assoc);    
-}
-
 /**
  *
  * Defined GET CHILD PRINT OPTIMIER ARRAY KEYS FOR | CHILD | ATTR | VALUE | INNER
@@ -1088,9 +756,7 @@ protected function _setCOMBEGIN() {
  *
 **/
 private function get_value_child_optimizer( array|string  $value ) : array|string {
-
-  # var_dump( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::VALUE_MANDATORY_KEY] );
-  
+ 
   // PREPARED EMPTY ARRAY
   $next_child = [];
 
@@ -1099,11 +765,17 @@ private function get_value_child_optimizer( array|string  $value ) : array|strin
   if( is_array( $value ) && $this->check_key_mandatory_array( SELF::CHILD_MANDATORY_KEY,  $value ) )  
   {
     
-    # check if the child element array is not string and not empty then return error handler  
-   ( !is_array($value[SELF::CHILD_MANDATORY_KEY] ) || count( $value[SELF::CHILD_MANDATORY_KEY] ) == 0  ) ? $this->errors_array_handler( $value ) . die : '';
+    # check if the child element array is not string and not empty then return error handler   
+    $this->trace_element_child_array_errors( 
+      
+        $value[SELF::CHILD_MANDATORY_KEY] 
+       ,$value[SELF::CHILD_MANDATORY_KEY] , $value );
 
     # check if the child element array is not string and not empty then return error handler
-   ( !is_array( $value[SELF::CHILD_MANDATORY_KEY][0] ) || count( $value[SELF::CHILD_MANDATORY_KEY][0] ) == 0 ) ? $this->errors_array_handler( $value ) . die : '';
+    $this->trace_element_child_array_errors(
+      
+        $value[SELF::CHILD_MANDATORY_KEY][0]
+       ,$value[SELF::CHILD_MANDATORY_KEY][0] , $value );
 
    # IF THE KEY REQUIRE IS EXIST THEN SELECT THAT KET FOR THE ASSOCIATED OF ARRAY OF DATAS
    # THEN LOOP THE REQUEST DATA ELEMNT HTML
@@ -1129,29 +801,34 @@ private function get_value_child_optimizer( array|string  $value ) : array|strin
        }
 
        # check if the child element array is not string and not empty then return error handler
-       if( isset( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::VALUE_MANDATORY_KEY]) ) {
-        ( is_string( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::VALUE_MANDATORY_KEY] ) ) ? $this->errors_array_handler( $value ) . die : '';
+       if( isset( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::VALUE_MANDATORY_KEY] ) ) {
+        $this->trace_element_child_array_errors_isset($value[SELF::CHILD_MANDATORY_KEY][0][SELF::VALUE_MANDATORY_KEY] , $value );
        }
+
        # check if the child element array is not string and not empty then return error handler
        if( isset( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY] ) ) {
-       ( !is_array( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY] ) ) ? $this->errors_array_handler( $value ) . die : '';
+        $this->trace_element_child_array_errors_isset( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY] , $value );
        }
+      
        # check if the child element array is not string and not empty then return error handler
        if( isset( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY] ) ) {
-       ( !is_array( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY][0] ) ) ? $this->errors_array_handler( $value ) . die : '';
+        $this->trace_element_child_array_errors_isset( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY][0] , $value );
        }
+     
        # check if the child element array is not string and not empty then return error handler
        if( isset( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY] ) ) {
-       ( count( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY][0] ) == 0 ) ? $this->errors_array_handler( $value ) . die : '';
-       }
+        $this->trace_element_child_array_errors_isset($value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY][0] , $value );
+      }
        
+       $elemInlineNon_wClosingTag =  ( in_array( strtolower($values[0]) , $this->htm_L ) ) ? '' :  $this->_setGATE().$this->_setENDS() . strtolower($values[0])  . $this-> _setENDGATE() . $this->_getBREAK();
+
        # SET UP THE NEXT CHILD HTML ELEMENTS # GET THE VALUE NEXT CHILD
        # GET THE NEXT CHILD INNER            # PRINT THE ATTRIBUITE ELEMEN TAG
        $next_child[] = $this->_setENDGATE()
                      . $this->get_values_next_child(       SELF::VALUE_MANDATORY_KEY , $values )
                      . $this->get_values_next_child_inner( SELF::INNER_MANDATORY_KEY , $values )
-                     . $this->_setGATE().$this->_setENDS() . strtolower($values[0]) . $this-> _setENDGATE() . $this->_getBREAK();
-       
+                     . $elemInlineNon_wClosingTag;
+                
      }
      
     // COOKED THE INGREDIENTS 
@@ -1330,6 +1007,30 @@ private function get_value_child_optimizer( array|string  $value ) : array|strin
 } 
 
 /**
+ * Defined  trace_element_child_array_errors ARRAY KEYS FOR | CHILD | ATTR | VALUE | INNER
+ * @since 04.10.2022
+ * @since v1.3.1.0
+ *
+**/
+private function trace_element_child_array_errors(array|string $array_str = null, array|string $array_str_opt = null, array|string  $value = null ) : void {
+
+  ( !is_array($array_str) || count( $array_str_opt ) == 0  ) ? $this->errors_array_handler( $value ) . die : '';
+
+ } 
+ 
+/**
+ * Defined  trace_element_child_array_errors_isset ARRAY KEYS FOR | CHILD | ATTR | VALUE | INNER
+ * @since 04.10.2022
+ * @since v1.3.1.0
+ *
+**/
+ private function trace_element_child_array_errors_isset(array|string $array_str_opt = null,  array|string  $value = null ) : void {
+
+    ( is_string( $array_str_opt ) ) ? $this->errors_array_handler( $value ) . die : '';
+
+ }
+
+/**
   *
   * @method private function noHTML
   * @ @private  Method Defined  if TRUE ELEMENT TAG noHTML  
@@ -1458,53 +1159,6 @@ private function get_value_child_optimizer( array|string  $value ) : array|strin
     return $return_elementINLINE;
   
    }
-}
-
-/**
-  *
-  * @method private function noHTML
-  * @ @private Method Defined if get_inline__HTML assoc TRUE  
-  * RETURN NODE HTML _ noHTML TAG
-  *
-  **/
- private function get_inline__HTML(array|string  $elem_val = null, array|string  $elem_key = null, array|string  $attr = null, string $id = null, string $class = null, string $assoc = null) : string {
-  
-  # ÌF_ASSOC_IS_SET_AS_NULL_THEN_RETURN_DATA_SET_ECHO
-  # CHECK_IF_ASSOC_IS_FALSE_NULL_DEFAULT
-  if ($assoc == FALSE || $assoc == NULL || $assoc == 'DEFAULT') 
-  {
-       # SET_DATA_ECHO_FOR_STATIC_DISPLAY_HTML
-       # IF_DATA_IS_NOT_ASSOC_WITH_CLASS_METHOD_FUNCTION
-     /**
-       * 
-       * @method function _setELEMENT()
-       * @var $elem_val, $elem_key
-       * @method function _setinLINEHTMLattr
-       * @var $attr, $id, $class, NULL
-       *
-       **/
-     $this->PERFORM( $get_inline__HTML  = $this->_setELEMENT($elem_val, $elem_key) );
-     $this->PERFORM( $get_inline__HTML  = $this->set_inline_tag_attr($attr, $id, $class, NULL) );   
-  
-  }
-  # CHECK_ASSOC_IF_IT_IS_TRUE_THEN
-  # IF_ASSOC_IS_TRUE_SET_AS_FUNC_ASSC_OR_CLASS_ASSOC_OR_MTHOD_ASSOC
-  # THEN_RETURN_SET_AS_IT_IS_ASSOC_WITH_CLASS-AND_METHOD_AND_FUNCTION  
-  elseif ($assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC) {
-    
-     /**
-       *
-       * SET_FUNCTION-CONCAT_THEN_RETURN
-       * @method function _setELEMENT()
-       * @method function _setinLINEHTMLattr
-       *
-       **/ 
-     $get_inline__HTML   = $this->_setELEMENT($elem_val, $elem_key);
-     $get_inline__HTML  .= $this->set_inline_tag_attr($attr, $id, $class, $assoc); 
-
-     return $get_inline__HTML;    
-  }
-    
 }
 
 /**
@@ -1968,68 +1622,6 @@ private function get_value_child_optimizer( array|string  $value ) : array|strin
 
 /**
   *
-  * @method private function HtmlELements_Optimizer noHTML
-  * @ @private Method Defined new_html_attr 
-  * RETURN NODE HTML _ noHTML TAG
-  *
-  **/
-protected function html_elements_optimizer( string $inline = null, string $elem = null, array|string $attr = null, string $id = null, string $class = null, string $assoc = null) {
-
-    if ($assoc == NULL || $assoc == FALSE || $assoc == 'DEFUALT') {
-
-        # INLINE_OR_ANY_LABEL_REQUIRED
-        # CHECK_IF_THE_PARAM_REQUIRED_IS_NOT_NULL
-        # IF_IT_IS_NULL_RETURN_FLASE  
-        if ( ($inline == FALSE || $inline == NULL) && ($elem == FALSE || $elem == NULL) ) 
-        {
-          # RETURN_REQUIRED_FIELD_PARAM
-          # IF_FALSE_RUN_IF_TRUE              
-          $ERROR_MSG  = " ";
-          $ERROR_MSG .= " Required _Element 'inLINE' & HTML Element : e.g: _ELEMENT('INLINE','input');";
-          $ERROR_MSG .= " For Developer support visit github submit issue: ".$this->ELEMENT('a','Submit Github Support',$this->IssueSubmitAttr());   
-          $ERROR_MSG .= " Recomendation: ".$this->ELEMENT('a','Read Documentation Click Here',$this->DocxSubmitAttr());      
-      
-          $this->PERFORM($ERROR_MSG);  
-
-        }
-      
-        # RETURN_INLINE_ELEMENT_NO_HTML_CLOSING_TAG 
-        $this->PERFORM( $this->set_assoc_element_inline($this->set_inline_elements($elem),$attr, $id, $class, NULL) ); 
-
-   } else {
-
-      # CHECK_IF_INLINE_IS_ASSOC_WITH_FUNC_ASSOC_OR_CLASS_ASSOC_OR_METHOD_ASSOC
-      if( $assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC ) {
-
-          # INLINE_OR_ANY_LABEL_REQUIRED
-          # CHECK_IF_THE_PARAM_REQUIRED_IS_NOT_NULL
-          # IF_IT_IS_NULL_RETURN_FLASE  
-          if ( ($inline == FALSE || $inline == NULL) && ($elem == FALSE || $elem == NULL) ) 
-          {
-            
-          # RETURN_REQUIRED_FIELD_PARAM
-          # IF_FALSE_RUN_IF_TRUE    
-
-          $ERROR_MSG  = " ";
-          $ERROR_MSG .= " Required _Element 'inLINE' & HTML Element : e.g: _ELEMENT('INLINE','input');";
-          $ERROR_MSG .= " For Developer support visit github submit issue: ".$this->ELEMENT('a','Submit Github Support',$this->IssueSubmitAttr());   
-          $ERROR_MSG .= " Recomendation: ".$this->ELEMENT('a','Read Documentation Click Here',$this->DocxSubmitAttr());      
-      
-          return ($ERROR_MSG);  
-
-          }
-      
-          # RETURN_INLINE_ELEMENT_NO_HTML_CLOSING_TAG 
-          return $this->set_assoc_element_inline($this->set_inline_elements($elem),$attr, $id, $class, $assoc);      
-       }
-
-  }
-
-}
-
-
-/**
-  *
   * @method private function noHTML
   * @ @private Method Defined new_html_attr 
   * RETURN NODE HTML _ noHTML TAG
@@ -2290,7 +1882,10 @@ protected function is_true_break_assoc( string $assoc = null ) : string {
   * RETURN meta
   *
   **/
-protected function cpe_FileJandler_meta(array|string $metaQS__ = null, array|string $metaPar__ = null) : void {
+protected function cpe_FileJandler_meta(array|string $metaQS__ = null, array|string $metaPar__ = null) : string {
+
+   $attr = [];
+
      # LOOP THE MULTI DIMENTIONAL ARRAY INTO FOR EACH LOOP  
    $cpe_FileHander_keys = array_keys($metaQS__);
     
@@ -2299,20 +1894,22 @@ protected function cpe_FileJandler_meta(array|string $metaQS__ = null, array|str
    {
      
      # BEGIN PERFORM HTML
-     $this->PERFORM($this->_setGATE().strtolower($metaPar__).__SPACE()); 
+     $attr[] .= ($this->_setGATE().strtolower($metaPar__)." "); 
      
      # LOOP WITHIN MULTI ASSOC ARRAY INTO FORMS OF VALUE INTO HTML
      foreach( $metaQS__[$cpe_FileHander_keys[$quick_start]] as $ATTR_NAME => $ATTR_VALUE)  { 
      
       #RETURN ALL VALUE IF IT IS TRUE
-      $this->PERFORM($ATTR_NAME."=\"".$ATTR_VALUE."\"".__SPACE()); 
+      $attr[] .= ($ATTR_NAME."=\"".$ATTR_VALUE."\""." "); 
      
      }  
     
     # END PERFORM
-    $this->PERFORM(">".$this->_getBREAK());
+    $attr[] .= (">".$this->_getBREAK());
 
    }
+   
+   return implode("", $attr);
 
 }
 
@@ -2323,30 +1920,35 @@ protected function cpe_FileJandler_meta(array|string $metaQS__ = null, array|str
   * RETURN link
   *
   **/
-protected function cpe_FileJandler_link( array|string $linkQt__ = null, array|string $linkPara__ = null ) : void { 
+protected function cpe_FileJandler_link( array|string $linkQt__ = null, string $linkPara__ = null ) : string { 
 
    # BEGIN FROM ZERO THEN RETURN COUNT QUICKSTART ++
    $cpe_FileHander_keys = array_keys($linkQt__);
+
+   $attr = [];
    
    # BEGIN FROM ZERO THEN RETURN COUNT QUICKSTART ++
    for($quick_start = 0; $quick_start < count($linkQt__); $quick_start++) 
    {
      
      # BEGIN PERFORM HTML
-     $this->PERFORM($this->_setGATE().strtolower($linkPara__).__SPACE()); 
+     $attr[] .= ($this->_setGATE().strtolower($linkPara__)." "); 
 
      # LOOP WITHIN MULTI ASSOC ARRAY INTO FORMS OF VALUE INTO HTML
      foreach( $linkQt__[$cpe_FileHander_keys[$quick_start]] as $ATTR_NAME => $ATTR_VALUE)  { 
 
       #RETURN ALL VALUE IF IT IS TRUE
-      $this->PERFORM($ATTR_NAME."=\"".$ATTR_VALUE."\"".__SPACE()); 
+      $attr[] .= ($ATTR_NAME."=\"".$ATTR_VALUE."\""." "); 
+    
 
     }  
 
     # END PERFORM
-    $this->PERFORM("/>".$this->_getBREAK());
-
+    $attr[] .= ("/>".$this->_getBREAK());
+  
    }
+
+   return implode("", $attr);
 
 }
 
@@ -2357,7 +1959,9 @@ protected function cpe_FileJandler_link( array|string $linkQt__ = null, array|st
   * RETURN script
   *
   **/
-protected function cpe_FileJandler_script( array|string $scriptQS__ = null, array|string $scripPara__ = null) : void { 
+protected function cpe_FileJandler_script( array|string $scriptQS__ = null, array|string $scripPara__ = null) : string { 
+
+  $attr = [];
 
    # BEGIN FROM ZERO THEN RETURN COUNT QUICKSTART ++
    $cpe_FileHander_keys = array_keys($scriptQS__);
@@ -2367,20 +1971,22 @@ protected function cpe_FileJandler_script( array|string $scriptQS__ = null, arra
    {
 
      # BEGIN PERFORM HTML
-     $this->PERFORM($this->_setGATE().strtolower($scripPara__).__SPACE()); 
+     $attr[] .= ($this->_setGATE().strtolower($scripPara__)." "); 
 
      # LOOP WITHIN MULTI ASSOC ARRAY INTO FORMS OF VALUE INTO HTML
      foreach( $scriptQS__[$cpe_FileHander_keys[$quick_start]] as $ATTR_NAME => $ATTR_VALUE)  {
 
       #RETURN ALL VALUE IF IT IS TRUE
-      $this->PERFORM($ATTR_NAME."=\"".$ATTR_VALUE."\"".__SPACE()); 
+      $attr[] .= ($ATTR_NAME."=\"".$ATTR_VALUE."\""." "); 
 
     }  
 
     # END PERFORM
-    $this->PERFORM(">".$this->_setGATE()."/".strtolower($scripPara__).">".$this->_getBREAK());
+    $attr[] .= (">".$this->_setGATE()."/".strtolower($scripPara__).">".$this->_getBREAK());
 
    }
+   
+   return implode("", $attr);
 
 }
 
@@ -2391,7 +1997,9 @@ protected function cpe_FileJandler_script( array|string $scriptQS__ = null, arra
   * RETURN inline elem
   *
   **/
-protected function file_handler_custom_element_inline( array|string $elem_inlineQS__ = null,  array|string $tag = null) : void  { 
+protected function file_handler_custom_element_inline( array|string $elem_inlineQS__ = null,  array|string $tag = null) : string  { 
+
+  $attr = [];
 
   # IF THE PARAMETERS IS CUTOM END THEN CUSTOM HTML WILL RETURN
    $cpe_FileHander_keys = array_keys($elem_inlineQS__);
@@ -2401,20 +2009,22 @@ protected function file_handler_custom_element_inline( array|string $elem_inline
    {
 
      # BEGIN PERFORM HTML
-     $this->PERFORM($this->_setGATE().strtolower($cpe_FileHander_keys[$quick_start])." "); 
+      $attr[] .= ($this->_setGATE().strtolower($cpe_FileHander_keys[$quick_start])." "); 
 
      # LOOP WITHIN MULTI ASSOC ARRAY INTO FORMS OF VALUE INTO HTML
      foreach( $elem_inlineQS__[$cpe_FileHander_keys[$quick_start]] as $ATTR_NAME => $ATTR_VALUE) { 
 
       #RETURN ALL VALUE IF IT IS TRUE
-      $this->PERFORM($ATTR_NAME."=\"".$ATTR_VALUE."\"".__SPACE()); 
+      $attr[] .= ($ATTR_NAME."=\"".$ATTR_VALUE."\""." "); 
 
     }  
 
     # END PERFORM    
-    $this->PERFORM(">".$this->_getBREAK());
+    $attr[] .= (">".$this->_getBREAK());
 
   }
+
+  return implode("", $attr);
 
 }
 
@@ -2425,15 +2035,17 @@ protected function file_handler_custom_element_inline( array|string $elem_inline
   * RETURN inline elem
   *
   **/
-protected function cpe_FileJandler_doctype( string $tag = null ) : void { 
-
+protected function cpe_FileJandler_doctype( string $tag = null ) : string { 
+  
+  $attr = '';
   # IF THE PARAMETERS IS CUTOM END THEN CUSTOM HTML WILL RETURN
   # BEGIN PERFORM HTML
-  $this->PERFORM($this->_setGATE().'!'.strtolower($tag).' html'); 
+  $attr .= ($this->_setGATE().'!'.strtolower($tag).' html'); 
 
   # END PERFORM    
-  $this->PERFORM(">".$this->_getBREAK());
+  $attr .= (">".$this->_getBREAK());
 
+  return ( $attr );
   }
 
 /**
@@ -2443,7 +2055,9 @@ protected function cpe_FileJandler_doctype( string $tag = null ) : void {
   * RETURN inline closing tag
   *
   **/
-protected function file_handler_custom_element_closing_tag( array|string $attr = null, string $tag = null) : void { 
+protected function file_handler_custom_element_closing_tag( array|string $attr = null, string $tag = null) : string { 
+
+  $attr = [];
 
    # IF THE PARAMETERS IS CUTOM END THEN CUSTOM HTML WILL RETURN
    $cpe_FileHander_keys = array_keys($attr);
@@ -2453,20 +2067,22 @@ protected function file_handler_custom_element_closing_tag( array|string $attr =
    {
 
      # BEGIN PERFORM HTML
-     $this->PERFORM($this->_setGATE().strtolower($cpe_FileHander_keys[$quick_start])." "); 
+       $attr[] .= ($this->_setGATE().strtolower($cpe_FileHander_keys[$quick_start])." "); 
 
      # LOOP WITHIN MULTI ASSOC ARRAY INTO FORMS OF VALUE INTO HTML
      foreach( $attr[$cpe_FileHander_keys[$quick_start]] as $ATTR_NAME => $ATTR_VALUE)  {
 
       #RETURN ALL VALUE IF IT IS TRUE
-      $this->PERFORM($ATTR_NAME."=\"".$ATTR_VALUE."\"".__SPACE()); 
+      $attr[] .= ($ATTR_NAME."=\"".$ATTR_VALUE."\""." "); 
 
     }  
 
     # END PERFORM  
-    $this->PERFORM(">".$this->_setGATE()."/".strtolower($cpe_FileHander_keys[$quick_start]).">".$this->_getBREAK());
+    $attr[] .= (">".$this->_setGATE()."/".strtolower($cpe_FileHander_keys[$quick_start]).">".$this->_getBREAK());
 
    }
+
+  return implode("", $attr);
 
 }
 
@@ -2697,7 +2313,7 @@ private function set_assoc_element_modified_tag( string $modifiedHTMLE_ = null) 
     * @since v1.2.0.0
     *
    **/
-protected function get_values_next_child( string $valueKey = null, array $array = null ) : bool|string {
+protected function get_values_next_child( string $valueKey = null, array $array = null ) {
    
   // CHECK IF THE KEY IS EXISTING THEN IMPLODE !
   if (array_key_exists($valueKey,  $array ) ) {
@@ -2730,16 +2346,16 @@ protected function get_values_next_child_inner( string $getInner = null, array $
     foreach ($array[$getInner] as $key => $values) {
 
        // APPENED CHILD 
-       $next_child[] = $this->_setGATE() . strtolower($values[0]) . ' ';
+       $next_child[] = $this->_setGATE() . strtolower($values[0]);
        
        # LOOP THE ATTRIBUTE OF ELEMENT HTML TAG
        # BASE ON ARRAY OF DATA
        if(  $this->check_key_mandatory_array( SELF::ATTR_MANDATORY_KEY , $values ) ) { 
-         
+        $next_child[] = ' ';  
        # check if the inner attribute is not array then return error handler  
        ( !is_array( $values[SELF::ATTR_MANDATORY_KEY] ) ) ? $this->errors_array_handler(  $values ) . die : '' ; 
   
-        foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $attr . $this->_setES() . $this->_getDQUOTE() . $val .  $this->_getDQUOTE();  }}
+        foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $attr . $this->_setES() . $this->_getDQUOTE() . $val .  $this->_getDQUOTE();  } }
        
        # APPEND ON THE ENDGATE HTML
        $next_child[] = $this->_setENDGATE();
@@ -2754,7 +2370,7 @@ protected function get_values_next_child_inner( string $getInner = null, array $
         $next_child[] = implode("",  $values[SELF::VALUE_MANDATORY_KEY] ); }
        
        # CLOSE THE HTML ELEMENT TAG
-       $next_child[] = $this->_setGATE().$this->_setENDS() . strtolower($values[0]) . $this-> _setENDGATE() . $this->_getBREAK();
+       $next_child[] = ( in_array( strtolower($values[0]) , $this->htm_L ) ) ? '' :  $this->_setGATE().$this->_setENDS() . strtolower($values[0])  . $this-> _setENDGATE() . $this->_getBREAK();
 
    }  
   
@@ -2799,9 +2415,9 @@ private function cpe_Filehandler_Val( array|string|callable $tagVHtml__ = null, 
     } else if(is_callable( $tagVHtml__  ))
     {
         // EXECUTE CALLABLE 
-        if ($tagVHtml__( true )) {
+        if ($tagVHtml__( $this->callable )) {
 
-          return $this->getValueCallableStringArray( $tagVHtml__( true ) , $ValElem__ , $ValEAttr__);
+          return $this->getValueCallableStringArray( $tagVHtml__( $this->callable ) , $ValElem__ , $ValEAttr__);
 
         };      
 
@@ -2820,7 +2436,7 @@ private function getValueCallableStringArray( array|string|callable $tagVHtml__ 
   $next_child_array  = "";
   $next_child_array  .= $this->_setGATE().$ValElem__.$ValEAttr__;
   $next_child_array  .= (!empty($tagVHtml__) && $tagVHtml__ !== NULL) ? $tagVHtml__ : FALSE ; 
-  $next_child_array  .= $this->set_assoc_element_modified_tag($ValElem__);       
+  $next_child_array  .= $this->set_assoc_element_modified_tag($ValElem__);    
   
   return((string) $next_child_array);
 
@@ -2836,14 +2452,14 @@ private function getValueCallableStringArray( array|string|callable $tagVHtml__ 
 
    if ($assoc == NULL || $assoc == FALSE || $assoc == 'DEFUALT')  {
 
-     echo  $this->_getTRING($str);
+      print  $this->_getTRING($str);
    
    } 
    
    # CHECK_IF_INLINE_IS_ASSOC_WITH_FUNC_ASSOC_OR_CLASS_ASSOC_OR_METHOD_ASSOC
    elseif ($assoc === FUNC_ASSOC || $assoc === CLASS_ASSOC || $assoc === METHOD_ASSOC)  { 
    
-     return $this->_getTRING($str);  
+      return $this->_getTRING($str);  
    
    } 
  
@@ -2892,285 +2508,6 @@ private function doMinified( $html_optimized ) {
  endif;
 
 }
-
-/**
-  *
-  * @method private function noHTML
-  * @ @private Method Defined HTML FOUNDATION _setELEMENTS
-  *
-  **/
- protected function _setELEMENTS( string $elem = null) : string {
- 
-    /**
-      *
-      * @method private function noHTML _setELEMENTS
-      * CHECK_IF_WHICH_ELEMT_WILL_RETURN
-      *
-      **/
-      # VALIDATE HTML ELEMENTS THE RETURN BASE ON ELEMENT HTML
-      # CHECK_IF_P_PARA_PARANGRAPH_IS_TRUE_THEN_RETURN_ELEMENTS_ARRAY
-      # IF_IT_IS_TRUE_THE_EXECUTE_ELEMENT_ACCORDING_TO_PARAM_SET
- 
-    if ( $elem === 'p' || $elem === 'P' || $elem === 'parangrap' || $elem === 'PARANGRAP' || $elem === 'para' || $elem === 'PARA' ) { return $elem = 'p';  /**  @var SET RETURN ELEMT_AS_P  **/ }  
-    elseif ( $elem === 'div' || $elem === 'DIV') { return $elem = 'div'; /** @var SET RETURN ELEMT_AS_DIV **/  } 
-    elseif ( $elem === 'h1' || $elem === 'H1')  { return $elem = 'h1';  /** @var SET RETURN ELEMT_AS_DH1 **/  } 
-    elseif ( $elem === 'h2' || $elem === 'H2' ) { return $elem = 'h2';  /** @var SET RETURN ELEMT_AS_H2 **/   } 
-    elseif ( $elem === 'h3' || $elem === 'H3' ) { return $elem = 'h3';  /** @var SET RETURN ELEMT_AS_H2 **/   } 
-    elseif ( $elem === 'h4' || $elem === 'H4' ) { return $elem = 'h4';  /** @var SET RETURN ELEMT_AS_H4 **/   } 
-    elseif ( $elem === 'h5' || $elem === 'H5' ) { return $elem = 'h5';  /** @var SET RETURN ELEMT_AS_H5 **/   } 
-    elseif ( $elem === 'h6' || $elem === 'H6' ) { return $elem = 'h6';  /** @var SET RETURN ELEMT_AS_H6 **/   } 
-    elseif ( $elem === 'button' || $elem === 'BUTTON' ) { return $elem = 'button'; /** @var SET RETURN ELEMT_AS_BUTTON  **/ } 
-    elseif ( $elem === 'a' || $elem === 'A' || $elem == 'LINK' || $elem === 'hyperlink' || $elem === 'HYPERLINK') { return $elem = 'a';  /**  @var SET RETURN ELEMT_AS_LINK **/ }
-    elseif ( $elem === 'iframe' || $elem === 'IFRAME' ) { return $elem = 'iframe'; /**  @var SET RETURN ELEMT_AS_IFRAME **/ } elseif ( $elem === 'main'   || $elem === 'MAIN' ) { return $elem = 'main'; /**  @var SET RETURN ELEMT_AS_MAIN **/ } 
-    elseif ( $elem === 'nav' || $elem === 'NAV' || $elem === 'NAVIGATION' ) { return $elem = 'nav';  /** @var SET RETURN ELEMT_AS_NAV **/ } 
-    elseif ( $elem === 'select' || $elem === 'SELECT' ) { return $elem = 'select';  /**  @var SET RETURN ELEMT_AS_SELECT  **/  } 
-    elseif ( $elem === 'form' || $elem === 'FORM' ) { return $elem = 'form'; /**  @var SET RETURN ELEMT_AS_FORM **/ } 
-    elseif ( $elem === 'picture' || $elem === 'PICTURE' ) { return $elem = 'picture';   /** @var SET RETURN ELEMT_AS_PICTURE **/ } 
-    elseif ( $elem === 'section' || $elem === 'SECTION' ) { return $elem = 'section';  /**  @var SET RETURN ELEMT_AS_SECTION  **/ } 
-    elseif ( $elem === 'textarea' || $elem === 'TEXTAREA' ) { return $elem = 'textarea'; /** @var SET RETURN ELEMT_AS_TEXTAREA  **/ } 
-    elseif ( $elem === 'footer' || $elem === 'FOOTER' ) { return $elem = 'footer'; /** @var SET RETURN ELEMT_AS_TEXTAREA  **/ } 
-    elseif ( $elem === 'script' || $elem === 'SCRIPT' ) { return $elem = 'script'; /** @var SET RETURN ELEMT_AS_TEXTAREA   **/ } 
-    elseif ( $elem === 'style' || $elem === 'STYLE' ) { return $elem = 'style'; /**  @var SET RETURN ELEMT_AS_TEXTAREA  **/ } 
-    elseif ( $elem === 'audio' || $elem === 'AUDIO' ) { return $elem = 'audio';  /** @var SET RETURN ELEMT_AS_AUDIO **/  } 
-    elseif ( $elem === 'video' || $elem === 'VIDEO' ) { return $elem = 'video';  /** @var SET RETURN ELEMT_AS_VIDEO  **/ } 
-    elseif ( $elem === 'address' || $elem === 'ADDRESS' ) { /** @var SET RETURN ELEMT_AS_ADDRESS **/ return $elem = 'address'; } 
-    elseif ( $elem === 'colgroup' || $elem === 'COLGROUP' ) { return $elem = 'colgroup'; /**  @var SET RETURN ELEMT_AS_COLGROUP  **/ } 
-    elseif ( $elem === 'bdi' || $elem === 'BDI' ) { return $elem = 'bdi'; /** @var SET RETURN ELEMT_AS_BDI **/ } 
-    elseif ( $elem === 'bdo' || $elem === 'BDO' ) { return $elem = 'bdo'; /** @var SET RETURN ELEMT_AS_BDO **/ } 
-    elseif ( $elem === 'blockquote' || $elem === 'BLOCKQUOTE' ) { return $elem = 'blockquote'; /** @var SET RETURN ELEMT_AS_BLOCKQUOTE **/  } 
-    elseif ( $elem === 'caption' || $elem === 'CAPTION' ) { return $elem = 'caption'; /** @var SET RETURN ELEMT_AS_CAPTION **/ } 
-    elseif ( $elem === 'label' || $elem === 'LABEL' ) { return $elem = 'label'; /** @var SET RETURN ELEMT_AS_LABEL **/ } 
-    elseif ( $elem === 'datalist' || $elem === 'DATALIST' ) { return $elem = 'datalist';  /** @var SET RETURN ELEMT_AS_DATALIST **/  } 
-    elseif ( $elem === 'details' || $elem === 'DETAILS' ) { return $elem = 'details'; /** @var SET RETURN ELEMT_AS_DETAILS **/ } 
-    elseif ( $elem === 'summary' || $elem === 'SUMMARY' ) { return $elem = 'summary'; /** @var SET RETURN ELEMT_AS_SUMMARY **/ } 
-    elseif ( $elem === 'dialog' || $elem === 'DIALOG' ) { return $elem = 'dialog'; /** @var SET RETURN ELEMT_AS_DIALOG **/  } 
-    elseif ( $elem === 'option' || $elem === 'OPTION' ) { return $elem = 'option'; /** @var SET RETURN ELEMT_AS_OPTION **/  } 
-    elseif ( $elem === 'figure' || $elem === 'FIGURE' ) { return $elem = 'figure'; /** @var SET RETURN ELEMT_AS_FIGURE **/  } 
-    elseif ( $elem === 'figcaption' || $elem === 'FIGCAPTION' ) { return $elem = 'figcaption'; /** @var SET RETURN ELEMT_AS_FIGCAPTION **/ } 
-    elseif ( $elem === 'meter' || $elem === 'METER' ) { return $elem = 'meter'; /** @var SET RETURN ELEMT_AS_METER **/ } 
-    elseif ( $elem === 'object' || $elem === 'OBJECT' ) { return $elem = 'object'; /** @var SET RETURN ELEMT_AS_OBJECT **/ } 
-    elseif ( $elem === 'optgroup' || $elem === 'OPTGROUP' ) { return $elem = 'optgroup'; /** @var SET RETURN ELEMT_AS_OPTGROUP **/ } 
-    elseif ( $elem === 'output' || $elem === 'OUTPUT' ) { return $elem = 'output'; /** @var SET RETURN ELEMT_AS_OUTPUT **/ } 
-    elseif ( $elem === 'progress' || $elem === 'PROGRESS' ) { return $elem = 'progress'; /** @var SET RETURN ELEMT_AS_PROGRESS **/ } 
-    elseif ( $elem === 'svg' || $elem === 'SVG' ) { return $elem = 'svg'; /** @var SET RETURN ELEMT_AS_SVG **/ } 
-    elseif ( $elem === 'template' || $elem === 'TEMPLATE' ) { return $elem = 'template'; /** @var SET RETURN ELEMT_AS_TEMPLATE **/ } 
-    elseif ( $elem === 'time' || $elem === 'TIME' ) { return $elem = 'time'; /** @var SET RETURN ELEMT_AS_TIME **/ } 
-    elseif ( $elem === 'var' || $elem === 'VAR' ) { return $elem = 'var'; /** @var SET RETURN ELEMT_AS_VAR **/ } 
-    elseif ( $elem === 'ul' || $elem === 'UL' ) { return $elem = 'ul'; /** @var SET RETURN ELEMT_AS_UL **/ } 
-    elseif ( $elem === 'ol' || $elem === 'OL' ) { return $elem = 'ol'; /** @var SET RETURN ELEMT_AS_OL **/ } 
-    elseif ( $elem === 'li' || $elem === 'LI' ) { return $elem = 'li'; /** @var SET RETURN ELEMT_AS_LI **/ } 
-    elseif ( $elem === 'table' || $elem === 'TABLE' ) { return $elem = 'table'; /** @var SET RETURN ELEMT_AS_TABLE **/  } 
-    elseif ( $elem === 'tr' || $elem === 'TR' ) { return $elem = 'tr'; /** @var SET RETURN ELEMT_AS_TR **/ } 
-    elseif ( $elem === 'td' || $elem === 'TD' ) { return $elem = 'td'; /** @var SET RETURN ELEMT_AS_TD **/ } 
-    elseif ( $elem === 'th' || $elem === 'TH' ) { return $elem = 'th'; /** @var SET RETURN ELEMT_AS_TH **/ } 
-    elseif ( $elem === 'legend' || $elem === 'LEGEND' ) { return $elem = 'legend'; /** @var SET RETURN ELEMT_AS_LEGEND **/ } 
-    elseif ( $elem === 'fieldset' || $elem === 'FIELDSET' ) { return $elem = 'fieldset'; /** @var SET RETURN ELEMT_AS_FIELDSET **/  } 
-    elseif ( $elem === 'tbody' || $elem === 'TBODY' ) { return $elem = 'tbody'; /** @var SET RETURN ELEMT_AS_TBODY **/ } 
-    elseif ( $elem === 'tfoot' || $elem === 'TFOOT' ) { return $elem = 'tfoot'; /** @var SET RETURN ELEMT_AS_TFOOT **/ } 
-    elseif ( $elem === 'thead' || $elem === 'THEAD' ) { return $elem = 'thead'; /** @var SET RETURN ELEMT_AS_THEAD **/ } 
-    elseif ( $elem === 'span' || $elem === 'SPAN' ) { return $elem = 'span'; /** @var SET RETURN ELEMT_AS_SPAN **/ } 
-    elseif ( $elem === 'em' || $elem === 'EM' ) { return $elem = 'em'; /** @var SET RETURN ELEMT_AS_EM **/ } 
-    elseif ( $elem === 'b' || $elem === 'B' || $elem === 'BOLD' ) { return $elem = 'b';  /** @var SET RETURN ELEMT_AS_BOLD **/ } 
-    elseif ( $elem === 'i' || $elem === 'I' || $elem === 'ITALIC' ) { return $elem = 'i'; /** @var SET RETURN ELEMT_AS_ITALIC **/  } 
-    elseif ( $elem === 'small' || $elem === 'SMALL' ) { return $elem = 'small';  /** @var SET RETURN ELEMT_AS_SMALL **/  } 
-    elseif ( $elem === 'strike' || $elem === 'STRIKE' ) { return $elem = 'strike'; /** @var SET RETURN ELEMT_AS_STRIKE **/  } 
-    elseif ( $elem === 'marquee' || $elem === 'MARQUEE' ) { return $elem = 'marquee'; /** @var SET RETURN ELEMT_AS_MARQUEE **/ } 
-    elseif ( $elem === 'center' || $elem === 'CENTER' ) { return $elem = 'center';  /** @var SET RETURN ELEMT_AS_CENTER **/ } 
-    elseif ( $elem === 'code' || $elem === 'CODE' ) { return $elem = 'code'; /** @var SET RETURN ELEMT_AS_CODE **/ } 
-    elseif ( $elem === 'abbr' || $elem === 'ABBR' ) { return $elem = 'abbr'; /** @var SET RETURN ELEMT_AS_ABBR **/ } 
-    elseif ( $elem === 'map' || $elem === 'MAP' ) { return $elem = 'map'; /** @var SET RETURN ELEMT_AS_MAP **/ } 
-    elseif ( $elem === 'canvas' || $elem === 'CANVAS' ) { return $elem = 'canvas'; /** @var SET RETURN ELEMT_AS_CANVAS **/ } 
-    elseif ( $elem === 'cite' || $elem === 'CITE' ) { return $elem = 'cite'; /** @var SET RETURN ELEMT_AS_CITE **/ } 
-    elseif ( $elem === 'data' || $elem === 'DATA' ) { return $elem = 'data'; /** @var SET RETURN ELEMT_AS_DATA **/ } 
-    elseif ( $elem === 'dl' || $elem === 'DL' ) { return $elem = 'dl'; /** @var SET RETURN ELEMT_AS_DL **/ } 
-    elseif ( $elem === 'dt' || $elem === 'DT' ) { return $elem = 'dt'; /** @var SET RETURN ELEMT_AS_DT **/ } 
-    elseif ( $elem === 'dd' || $elem === 'DD' ) { return $elem = 'dd'; /** @var SET RETURN ELEMT_AS_DD **/ } 
-    elseif ( $elem === 'dfn' || $elem === 'DFN' ) { return $elem = 'dfn'; /** @var SET RETURN ELEMT_AS_DFN **/  } 
-    elseif ( $elem === 'ins' || $elem === 'INS' ) { return $elem = 'ins'; /** @var SET RETURN ELEMT_AS_INS **/ } 
-    elseif ( $elem === 'del' || $elem === 'DEL' ) { return $elem = 'del'; /** @var SET RETURN ELEMT_AS_DEL **/ } 
-    elseif ( $elem === 'kbd' || $elem === 'KBD' ) { return $elem = 'kbd'; /** @var SET RETURN ELEMT_AS_KBD **/ } 
-    elseif ( $elem === 'mark' || $elem === 'MARK' ) { return $elem = 'mark'; /** @var SET RETURN ELEMT_AS_MARK **/  } 
-    elseif ( $elem === 'pre' || $elem === 'PRE' ) { return $elem = 'pre'; /** @var SET RETURN ELEMT_AS_PRE **/ } 
-    elseif ( $elem === 'rt' || $elem === 'RT' ) { return $elem = 'rt'; /** @var SET RETURN ELEMT_AS_RT **/ } 
-    elseif ( $elem === 'rp' || $elem === 'RP' ) { return $elem = 'rp';  /** @var SET RETURN ELEMT_AS_RP **/ } 
-    elseif ( $elem === 'ruby' || $elem === 'RUBY' ) { return $elem = 'ruby';  /** @var SET RETURN ELEMT_AS_RUBY **/ } 
-    elseif ( $elem === 's' || $elem === 'S' ) {return $elem = 's'; /** @var SET RETURN ELEMT_AS_S **/ } 
-    elseif ( $elem === 'samp' || $elem === 'SAMP' ) { return $elem = 'samp'; /** @var SET RETURN ELEMT_AS_SAMP **/ } 
-    elseif ( $elem === 'strong' || $elem === 'STRONG' ) { return $elem = 'strong'; /** @var SET RETURN ELEMT_AS_STRONG **/  } 
-    elseif ( $elem === 'sub' || $elem === 'SUB' ) { return $elem = 'sub'; /** @var SET RETURN ELEMT_AS_SUB **/  } 
-    elseif ( $elem === 'sup' || $elem === 'SUP' ) { return $elem = 'sup'; /** @var SET RETURN ELEMT_AS_SUP **/ } 
-    elseif ( $elem === 'wbr' || $elem === 'WBR' ) { return $elem = 'wbr'; /** @var SET RETURN ELEMT_AS_WBR **/ } 
-    elseif ( $elem === 'q' || $elem === 'Q' ) { return $elem = 'q'; /** @var SET RETURN ELEMT_AS_Q **/ } 
-    elseif ( $elem === 'head' || $elem === 'HEAD' ) { return $elem = 'head';  /** @var SET RETURN ELEMT_AS_HEAD **/ } 
-    elseif ( $elem === 'title' || $elem === 'TITLE' ) { return $elem = 'title'; /** @var SET RETURN ELEMT_AS_TITLE **/ } 
-    elseif ( $elem === 'body' || $elem === 'BODY' ) { return $elem = 'body';  /** @var SET RETURN ELEMT_AS_BODY **/  }
-    elseif ( $elem === 'html'  || $elem === 'HTML' ) { return $elem = 'html'; /** @var SET RETURN ELEMT_AS_HTML **/  }
-
-}
- 
- // VALIDATE HTML ELEMENTS THE RETURN BASE ON ELEMENT HTML !
- protected function set_inline_elements( string $elem = null) : string {
-  
-   if ( $elem === 'source' || $elem === 'SOURCE' ) { return $elem = 'source'; /** @var SET RETURN ELEMT_AS_SOURCE**/ } 
-    elseif ( $elem === 'track'  || $elem === 'TRACK') { return $elem = 'track';  /** @var SET RETURN ELEMT_AS_TRACK **/ } 
-    elseif ( $elem === 'circle' || $elem === 'CIRCLE') { return $elem = 'circle'; /** @var SET RETURN ELEMT_AS_CIRCLE **/ } 
-    elseif ( $elem === 'param' || $elem === 'PARAM') { return $elem = 'param';  /** @var SET RETURN ELEMT_AS_PARAM **/ } 
-    elseif ( $elem === 'input' || $elem === 'INPUT') {  return $elem = 'input';  /** @var SET RETURN ELEMT_AS_INPUT **/ } 
-    elseif ( $elem === 'meta'  || $elem === 'META') { return $elem = 'meta'; /** @var SET RETURN ELEMT_AS_META **/ } 
-    elseif ( $elem === 'link' || $elem === 'LINK')  { return $elem = 'link'; /** @var SET RETURN ELEMT_AS_LINK **/ } 
-    elseif ( $elem === 'img' || $elem === 'IMG') { return $elem = 'img'; /** @var SET RETURN ELEMT_AS_IMG **/ } 
-    elseif ( $elem === 'embed' || $elem === 'EMBED') { return $elem = 'embed'; /** @var SET RETURN ELEMT_AS_EMBED **/ } 
-    elseif ( $elem === 'option' || $elem === 'OPTION') { return $elem = 'option'; /** @var SET RETURN ELEMT_AS_OPTION **/ } 
-    elseif ( $elem === 'col' || $elem === 'COL') { return $elem = 'col'; /** @var SET RETURN ELEMT_AS_COL **/ } 
-    elseif ( $elem === 'base'  || $elem === 'BASE')  { return $elem = 'base'; /** @var SET RETURN ELEMT_AS_BASE **/ } 
-    elseif ( $elem === 'aside' || $elem === 'ASIDE')  { return $elem = 'aside'; /** @var SET RETURN ELEMT_AS_ASIDE **/ }
-    elseif ( $elem === 'area' || $elem === 'AREA') { return $elem = 'area'; /** @var SET RETURN ELEMT_AS_AREA **/ }
-    elseif ( $elem === 'doctype' || $elem === 'DOCTYPE' ) { return $elem = 'DOCTYPE'; /** @var SET RETURN ELEMT_AS_DOCTYPE **/ } 
-
-} # END OF SET ELEMENTS
-
- protected function set_assoc_element( string $elem = null, array|string $value = null, array $attr = null, string $id = null, string $class = null, string $label = null) : string { $elem = $this->_setELEMENTS($elem); switch ($elem) {
-
-   /* @var SET RETURN ELEMT_AS_ARRAY_HEAD_STRUCTURE_0 */ case "head": return $this->assoc_element_inline('STRUCTURE', 0, $value, $attr, $id, $class, $label); break;  
-   /* @var SET RETURN ELEMT_AS_ARRAY_TITLE_STRUCTURE_1 */ case "title": return $this->assoc_element_inline('STRUCTURE', 1, $value, $attr, $id, $class, $label); break; 
-   /* @var SET RETURN ELEMT_AS_ARRAY_BODY_STRUCTURE_2 */ case "body": return $this->assoc_element_inline('STRUCTURE', 2, $value, $attr, $id, $class, $label); break; 
-   /* @var SET RETURN ELEMT_AS_ARRAY_HTML_STRUCTURE_3 */ case "html": return $this->assoc_element_inline('STRUCTURE', 3, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_DEL_FORMATC_0 */ case "del": return $this->assoc_element_inline('FORMATC', 0, $value, $attr, $id, $class, $label); break; 
-   /* @var SET RETURN ELEMT_AS_ARRAY_KBD_FORMATC_1 */ case "kbd": return $this->assoc_element_inline('FORMATC', 1, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_MARK_FORMATC_2 */ case "mark": return $this->assoc_element_inline('FORMATC', 2, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_PRE_FORMATC_3 */ case "pre": return $this->assoc_element_inline('FORMATC', 3, $value, $attr, $id, $class, $label); break; 
-   /* @var SET RETURN ELEMT_AS_ARRAY_RT_FORMATC_4 */ case "rt": return $this->assoc_element_inline('FORMATC', 4, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_RP_FORMATC_5 */ case "rp": return $this->assoc_element_inline('FORMATC', 5, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_RUBY_FORMATC_6 */ case "ruby": return $this->assoc_element_inline('FORMATC', 6, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_S_FORMATC_7 */ case "s": return $this->assoc_element_inline('FORMATC', 7, $value, $attr, $id, $class, $label); break; 
-   /* @var SET RETURN ELEMT_AS_ARRAY_SAMP_FORMATC_8 */ case "samp": return $this->assoc_element_inline('FORMATC', 8, $value, $attr, $id, $class, $label); break; 
-   /* @var SET RETURN ELEMT_AS_ARRAY_STRONG_FORMATC_9 */ case "strong": return $this->assoc_element_inline('FORMATC', 9, $value, $attr, $id, $class, $label); break; 
-   /* @var SET RETURN ELEMT_AS_ARRAY_SUB_FORMATC_10 */ case "sub": return $this->assoc_element_inline('FORMATC', 10, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_SUP_FORMATC_11 */ case "sup": return $this->assoc_element_inline('FORMATC', 11, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_WBR_FORMATC_12 */ case "wbr": return $this->assoc_element_inline('FORMATC', 12, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_Q_FORMATC_13 */ case "q": return $this->assoc_element_inline('FORMATC', 13, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_SPAN_FORMAT_0 */ case "span": return $this->assoc_element_inline('FORMAT', 0, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_EM_FORMAT_1 */ case "em": return $this->assoc_element_inline('FORMAT', 1, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_B_FORMAT_2 */ case "b": return $this->assoc_element_inline('FORMAT', 2, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_I_FORMAT_3 */ case "i": return $this->assoc_element_inline('FORMAT', 3, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_SMALL_FORMAT_4 */ case "small": return $this->assoc_element_inline('FORMAT', 4, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_STRIKE_FORMAT_5 */ case "strike": return $this->assoc_element_inline('FORMAT', 5, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_MARQUEE_FORMAT_6 */ case "marquee": return $this->assoc_element_inline('FORMAT', 6, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_CENTER_FORMAT_7 */ case "center": return $this->assoc_element_inline('FORMAT', 7, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_CODE_FORMAT_8 */ case "code": return $this->assoc_element_inline('FORMAT', 8, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_ABBR_FORMAT_9 */ case "abbr": return $this->assoc_element_inline('FORMAT', 9, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_MAP_FORMAT_10 */ case "map": return $this->assoc_element_inline('FORMAT', 10, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_CANVAS_FORMAT_11 */ case "canvas": return $this->assoc_element_inline('FORMAT', 11, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_CITE_FORMAT_12 */ case "cite": return $this->assoc_element_inline('FORMAT', 12, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_DATA_FORMAT_13 */ case "data": return $this->assoc_element_inline('FORMAT', 13, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_DL_FORMAT_14 */ case "dl": return $this->assoc_element_inline('FORMAT', 14, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_DT_FORMAT_15 */ case "dt": return $this->assoc_element_inline('FORMAT', 15, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_DD_FORMAT_16 */ case "dd": return $this->assoc_element_inline('FORMAT', 16, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_DFN_FORMAT_17 */ case "dfn": return $this->assoc_element_inline('FORMAT', 17, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_INS_FORMAT_18 */ case "ins": return $this->assoc_element_inline('FORMAT', 18, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_UL_LIST_0 */ case "ul": return $this->assoc_element_inline('LIST', 0, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_OL_LIST_1 */ case "ol": return $this->assoc_element_inline('LIST', 1, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_LI_LIST_2 */ case "li": return $this->assoc_element_inline('LIST', 2, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_TABLE_LIST_3 */ case "table": return $this->assoc_element_inline('LIST', 3, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_TR_LIST_4 */ case "tr": return $this->assoc_element_inline('LIST', 4, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_TD_LIST_5 */ case "td": return $this->assoc_element_inline('LIST', 5, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_TH_LIST_6 */ case "th": return $this->assoc_element_inline('LIST', 6, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_LEGEND_LIST_7 */ case "legend": return $this->assoc_element_inline('LIST', 7, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_FIELDSET_LIST_8 */ case "fieldset": return $this->assoc_element_inline('LIST', 8, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_TBODY_LIST_9 */ case "tbody": return $this->assoc_element_inline('LIST', 9, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_TFOOT_LIST_10 */ case "tfoot": return $this->assoc_element_inline('LIST', 10, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_THEAD_LIST_11 */ case "thead": return $this->assoc_element_inline('LIST', 11, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_FIGURE_SUPPORT_0 */ case "figure": return $this->assoc_element_inline('SUPPORT', 0, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_FIGCAPTION_SUPPORT_1 */ case "figcaption": return $this->assoc_element_inline('SUPPORT', 1, $value, $attr, $id, $class, $label); break;      
-   /* @var SET RETURN ELEMT_AS_ARRAY_METER_SUPPORT_2 */ case "meter": return $this->assoc_element_inline('SUPPORT', 2, $value, $attr, $id, $class, $label); break;      
-   /* @var SET RETURN ELEMT_AS_ARRAY_OBJECT_SUPPORT_3 */ case "object": return $this->assoc_element_inline('SUPPORT', 3, $value, $attr, $id, $class, $label); break;     
-   /* @var SET RETURN ELEMT_AS_ARRAY_OPTGROUP_SUPPORT_4 */ case "optgroup": return $this->assoc_element_inline('SUPPORT', 4, $value, $attr, $id, $class, $label); break;     
-   /* @var SET RETURN ELEMT_AS_ARRAY_OPTGROUP_SUPPORT_5 */ case "output": return $this->assoc_element_inline('SUPPORT', 5, $value, $attr, $id, $class, $label); break;  
-   /* @var SET RETURN ELEMT_AS_ARRAY_PROGRESS_SUPPORT_6 */ case "progress": return $this->assoc_element_inline('SUPPORT', 6, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_SVG_SUPPORT_7 */ case "svg": return $this->assoc_element_inline('SUPPORT', 7, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_TEMPLATE_SUPPORT_8 */ case "template": return $this->assoc_element_inline('SUPPORT', 8, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_VAR_SUPPORT_10 */ case "time": return $this->assoc_element_inline('SUPPORT', 9, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_VAR_SUPPORT_10 */ case "var": return $this->assoc_element_inline('SUPPORT', 10, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_AUDIO_SECONDARY_0 */ case "audio": return $this->assoc_element_inline('SECONDARY', 0, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_VIDEO_SECONDARY_1 */ case "video": return $this->assoc_element_inline('SECONDARY', 1, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_ADDRESS_SECONDARY_2 */ case "address": return $this->assoc_element_inline('SECONDARY', 2, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_COLGROUP_SECONDARY_3 */ case "colgroup": return $this->assoc_element_inline('SECONDARY', 3, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_BDI_SECONDARY_4 */ case "bdi": return $this->assoc_element_inline('SECONDARY', 4, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_BDO_SECONDARY_5 */ case "bdo": return $this->assoc_element_inline('SECONDARY', 5, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_BLOCKQUOTE_SECONDARY_6 */ case "blockquote": return $this->assoc_element_inline('SECONDARY', 6, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_CAPTION_SECONDARY_7 */ case "caption": return $this->assoc_element_inline('SECONDARY', 7, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_LABEL_SECONDARY_8 */ case "label": return $this->assoc_element_inline('SECONDARY', 8, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_DATALIST_SECONDARY_9 */ case "datalist": return $this->assoc_element_inline('SECONDARY', 9, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_DETAILS_SECONDARY_10 */ case "details": return $this->assoc_element_inline('SECONDARY', 10, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_SUMMARY_SECONDARY_11 */ case "summary": return $this->assoc_element_inline('SECONDARY', 11, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_DIALOG_SECONDARY_12 */ case "dialog": return $this->assoc_element_inline('SECONDARY', 12, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_OPTION_SECONDARY_13 */ case "option": return $this->assoc_element_inline('SECONDARY', 13, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_OPTION_PRIMARY_0 */ case "h1": return $this->assoc_element_inline('PRIMARY', 0, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_OPTION_PRIMARY_1 */ case "h2": return $this->assoc_element_inline('PRIMARY', 1, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_OPTION_PRIMARY_2 */ case "h3": return $this->assoc_element_inline('PRIMARY', 2, $value, $attr, $id, $class, $label); break; 
-   /* @var SET RETURN ELEMT_AS_ARRAY_OPTION_PRIMARY_3 */ case "h4": return $this->assoc_element_inline('PRIMARY', 3, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_OPTION_PRIMARY_4 */ case "h5": return $this->assoc_element_inline('PRIMARY', 4, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_OPTION_PRIMARY_5 */ case "h6": return $this->assoc_element_inline('PRIMARY', 5, $value, $attr, $id, $class, $label); break;                 
-   /* @var SET RETURN ELEMT_AS_ARRAY_OPTION_PRIMARY_6 */ case "div": return $this->assoc_element_inline('PRIMARY', 6, $value, $attr, $id, $class, $label); break;       
-   /* @var SET RETURN ELEMT_AS_ARRAY_OPTION_PRIMARY_7 */ case "p": return $this->assoc_element_inline('PRIMARY', 7, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_OPTION_PRIMARY_8 */ case "button": return $this->assoc_element_inline('PRIMARY', 8, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_A_SECONDARY_9 */ case "a": return $this->assoc_element_inline('PRIMARY', 9, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_IFRAME_SECONDARY_10 */ case "iframe": return $this->assoc_element_inline('PRIMARY', 10, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_MAIN_SECONDARY_11 */ case "main": return $this->assoc_element_inline('PRIMARY', 11, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_NAV_SECONDARY_12 */ case "nav": return $this->assoc_element_inline('PRIMARY', 12, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_SELECT_SECONDARY_13 */ case "select": return $this->assoc_element_inline('PRIMARY', 13, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_FORM_SECONDARY_14 */ case "form": return $this->assoc_element_inline('PRIMARY', 14, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_PICTURE_SECONDARY_15 */ case "picture": return $this->assoc_element_inline('PRIMARY', 15, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_SECTION_SECONDARY_16 */ case "section": return $this->assoc_element_inline('PRIMARY', 16, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_TEXTAREA_SECONDARY_17 */ case "textarea": return $this->assoc_element_inline('PRIMARY', 17, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_TEXTAREA_SECONDARY_18 */ case "footer": return $this->assoc_element_inline('PRIMARY', 18, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_TEXTAREA_SECONDARY_19 */ case "script": return $this->assoc_element_inline('PRIMARY', 19, $value, $attr, $id, $class, $label); break;
-   /* @var SET RETURN ELEMT_AS_ARRAY_TEXTAREA_SECONDARY_20 */ case "style": return $this->assoc_element_inline('PRIMARY', 20, $value, $attr, $id, $class, $label); break;
-    default:
-      
-      # RETURN_DEFUALT_IF_EXCECUTED_BUT_NOT_SET
-      $ERROR_MSG  = " ";
-      $ERROR_MSG .= " Required Element HTML: e.g: html::ELEMENT('p'); ";
-      $ERROR_MSG .= " For Developer support visit github submit issue: ".$this->ELEMENT('a','Submit Github Support',$this->IssueSubmitAttr());   
-      $ERROR_MSG .= " Recomendation: ".$this->ELEMENT('a','Read Documentation Click Here',$this->DocxSubmitAttr());      
-      
-      return $ERROR_MSG;  
-
-  }
-} # END OF SET ELEMENT
-
- protected function set_assoc_element_inline( string $elem = null, array|string $attr = null, string $id = null, string $class = null, string $assoc = null ){ $elem = $this->set_inline_elements($elem);
-
-   switch ($elem) {
-  /* @var SET RETURN ELEMT_AS_ARRAY_SOURCE_INLINE_0 */ case "source": return $this->return_inline_element('INLINE', 0, $attr, $id, $class, $assoc); break;
-  /* @var SET RETURN ELEMT_AS_ARRAY_TRACK_INLINE_1 */ case "track": return $this->return_inline_element('INLINE', 1, $attr, $id, $class, $assoc); break;
-  /* @var SET RETURN ELEMT_AS_ARRAY_CIRCLE_INLINE_2 */ case "circle": return $this->return_inline_element('INLINE', 2, $attr, $id, $class, $assoc); break;
-  /* @var SET RETURN ELEMT_AS_ARRAY_PARAM_INLINE_3 */ case "param": return $this->return_inline_element('INLINE', 3, $attr, $id, $class, $assoc); break;
-  /* @var SET RETURN ELEMT_AS_ARRAY_INPUT_INLINE_4 */ case "input": return $this->return_inline_element('INLINE', 4, $attr, $id, $class, $assoc); break;
-  /* @var SET RETURN ELEMT_AS_ARRAY_META_INLINE_5 */ case "meta": return $this->return_inline_element('INLINE', 5, $attr, $id, $class, $assoc); break;
-  /* @var SET RETURN ELEMT_AS_ARRAY_META_INLINE_5 */ case "link": return $this->return_inline_element('INLINE', 6, $attr, $id, $class, $assoc); break;
-  /* @var SET RETURN ELEMT_AS_ARRAY_IMG_INLINE_7 */ case "img": return $this->return_inline_element('INLINE', 7, $attr, $id, $class, $assoc); break;      
-  /* @var SET RETURN ELEMT_AS_ARRAY_EMBED_INLINE_8 */ case "embed": return $this->return_inline_element('INLINE', 8, $attr, $id, $class, $assoc); break;
-  /* @var SET RETURN ELEMT_AS_ARRAY_OPTION_INLINE_9 */ case "option": return $this->return_inline_element('INLINE', 9, $attr, $id, $class, $assoc); break;
-  /* @var SET RETURN ELEMT_AS_ARRAY_COL_INLINE_10 */ case "col": return $this->return_inline_element('INLINE', 10, $attr, $id, $class, $assoc); break;
-  /* @var SET RETURN ELEMT_AS_ARRAY_BASE_INLINE_11 */ case "base": return $this->return_inline_element('INLINE', 11, $attr, $id, $class, $assoc); break;
-  /* @var SET RETURN ELEMT_AS_ARRAY_ASIDE_INLINE_12 */ case "aside": return $this->return_inline_element('INLINE', 12, $attr, $id, $class, $assoc); break;
-  /* @var SET RETURN ELEMT_AS_ARRAY_AREA_INLINE_13 */ case "area": return $this->return_inline_element('INLINE', 13, $attr, $id, $class, $assoc); break;
-  /* @var SET RETURN ELEMT_AS_ARRAY_DOCTYPE_INLINE_14 */ case "DOCTYPE": return $this->return_inline_element('INLINE', 14, $attr, $id, $class, $assoc); break;
-   default:
-    
-  # RETURN_DEFAULT_INLINE_HTML_ELEMENT
-  $ERROR_MSG  = " ";
-  $ERROR_MSG .= " Required _Element 'inLINE' & HTML Element : e.g: _ELEMENT('inLINE','input'); ";
-  $ERROR_MSG .= " For Developer support visit github submit issue: ".$this->ELEMENT('a','Submit Github Support',$this->IssueSubmitAttr());   
-  $ERROR_MSG .= " Recomendation: ".$this->ELEMENT('a','Read Documentation Click Here',$this->DocxSubmitAttr()); 
-
-  return $ERROR_MSG;   
- 
-  }
-
- } #END OF SET RETURN ELEMENT
-
 
 }  
 

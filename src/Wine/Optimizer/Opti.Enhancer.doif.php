@@ -9,10 +9,8 @@
    
     )
     {
-   
-     $Enhancer = new Enhancers; return method_exists($Enhancer, '__magicIF') ? 
-   
-     $Enhancer->__magicIF($condition, $if_result, METHOD_ASSOC ) : false;
+     
+    return method_exists((new Enhancers), '__magicIF') ? (new Enhancers)->__magicIF($condition, $if_result, METHOD_ASSOC) : false;
    
    }
 
