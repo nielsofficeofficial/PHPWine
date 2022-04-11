@@ -195,28 +195,7 @@ new \HTML_TBODY;  [ tbody(); ]   |  new \HTML_THEAD;   [ thead(); ]   | new \HTM
 new \HTML_SELECT; [ select(); ]  |  new \HTML_STRONG;  [ strong(); ]  | new \HTML_TEMPLATE; [ template(); ]
 new \HTML_SUMMARY;[ summary(); ] |  new \HTML_TFOOTER  [ tfooter(); ];
 ```
-```PHP
-// Merge open and close associated HTML Definition 
-_MERGE( string $id , string $elem , string $class , array [ $attr ] ); // open
-xMERGE( string $elem ); // close
 
-// execution 
-echo _MERGE( 'id', 'h1', 'class', [['style'],['color: blue;']] );
-echo Hello World
-echo xMERGE( 'h1' );
-```
-```HTML
-<!-- End result -->
-<h1 style='color: blue;' id='id' class='class'> Hello World </h1> 
-
-<!-- Browser result -->
-Hello World
-```
-```HTML
-// Installing more HTML Merge Elements 
-
-h2, h3, h4, h5, h6, div, p, a, nav, main, form, bdi, bdo, time, audio, button, iframe, select, picture, section, textarea, video, address, colgroup, blockquote, caption, label, datalist, details, summary, dialog, option, figure, figcaption, meter, object, optgroup, output, progress, template, var, ul, ol, li, table, tr, td, th, legend, fieldset, tbody, tfoot, thead, span, small, marquee, center, code, abbr, map, canvas, cite, data, dl, dt, dd, dfn, ins, del, mark, pre, rt, rp, s, samp, strong, sub, sup, wbr, q, head, title, body.  
-```
 <h3> Child Element Array keys: CHILD | ATTR | VALUE | INNER :</h3>
 
 ```PHP
