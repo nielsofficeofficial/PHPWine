@@ -796,8 +796,8 @@ private function get_value_child_optimizer( array|string  $value ) : array|strin
           ( !is_array( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::ATTR_MANDATORY_KEY] ) ) ? $this->errors_array_handler( $value ) . die : '';  
            
           # PROCESSING OF LOOPING
-          foreach ($values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() .  $this->_getDQUOTE() . $val .  $this->_getDQUOTE();      }
-                             
+          foreach ($values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() .  $this->_getDQUOTE() . $val .  $this->_getDQUOTE(); }
+
        }
 
        # check if the child element array is not string and not empty then return error handler
@@ -819,8 +819,8 @@ private function get_value_child_optimizer( array|string  $value ) : array|strin
        if( isset( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY] ) ) {
         $this->trace_element_child_array_errors_isset($value[SELF::CHILD_MANDATORY_KEY][0][SELF::INNER_MANDATORY_KEY][0] , $value );
       }
-       
-       $elemInlineNon_wClosingTag =  ( in_array( strtolower($values[0]) , $this->htm_L ) ) ? '' :  $this->_setGATE().$this->_setENDS() . strtolower($values[0])  . $this-> _setENDGATE() . $this->_getBREAK();
+     
+       $elemInlineNon_wClosingTag =  ( in_array( strtolower($values[0]) , $this->htm_L ) ) ? '' : $this->_setGATE().$this->_setENDS() . strtolower($values[0])  . $this-> _setENDGATE() . $this->_getBREAK();
 
        # SET UP THE NEXT CHILD HTML ELEMENTS # GET THE VALUE NEXT CHILD
        # GET THE NEXT CHILD INNER            # PRINT THE ATTRIBUITE ELEMEN TAG
@@ -1320,7 +1320,7 @@ private function trace_element_child_array_errors(array|string $array_str = null
   **/
  protected function new_setHTMLattr( array|string  $attr = null, string  $id=NULL, string  $class=NULL) : string  {
       
-      # DEFINE_STATIC_SET_RETURN_TO_HTML
+    # DEFINE_STATIC_SET_RETURN_TO_HTML
     # METHOD_sET_AS_RETURN
     /**
       *
@@ -2355,10 +2355,10 @@ protected function get_values_next_child_inner( string $getInner = null, array $
        # check if the inner attribute is not array then return error handler  
        ( !is_array( $values[SELF::ATTR_MANDATORY_KEY] ) ) ? $this->errors_array_handler(  $values ) . die : '' ; 
   
-        foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $attr . $this->_setES() . $this->_getDQUOTE() . $val .  $this->_getDQUOTE();  } }
+        foreach ( $values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = ' ' . $attr . $this->_setES() . $this->_getDQUOTE() . $val .  $this->_getDQUOTE();  } }
        
-       # APPEND ON THE ENDGATE HTML
-       $next_child[] = $this->_setENDGATE();
+       # APPEND ON THE END HTML
+       $next_child[] =  $this->_setENDGATE();
 
        # GET THE VALUE IF IS HAS SET
        if ( $this->check_key_mandatory_array( SELF::VALUE_MANDATORY_KEY ,  $values  ) ) {
@@ -2437,12 +2437,20 @@ private function cpe_Filehandler_Val( array|string|callable $tagVHtml__ = null, 
 
 private function getValueCallableStringArray( array|string|callable $tagVHtml__ = null , string $ValElem__ = null , array|string $ValEAttr__ = null ) : bool|string {
 
+  if( in_array($ValElem__ , $this->htm_L  ) ) {
+  
+    return $this->_setGATE().$ValElem__.$ValEAttr__;
+
+  } else { 
+
   $next_child_array  = "";
   $next_child_array  .= $this->_setGATE().$ValElem__.$ValEAttr__;
   $next_child_array  .= (!empty($tagVHtml__) && $tagVHtml__ !== NULL) ? $tagVHtml__ : false ; 
   $next_child_array  .= $this->set_assoc_element_modified_tag($ValElem__);    
   
   return((string) $next_child_array);
+
+  }
 
 }
 
