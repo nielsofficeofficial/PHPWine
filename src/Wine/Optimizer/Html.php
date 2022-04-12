@@ -220,10 +220,8 @@ class Html {
   ,'link'
   ,'img'
   ,'embed'
-  ,'option'
   ,'col'
   ,'base'
-  ,'aside'
   ,'area'
   ,'DOCTYPE html'
 
