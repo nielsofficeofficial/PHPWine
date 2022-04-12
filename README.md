@@ -236,10 +236,10 @@ new \HTML_SUMMARY;[ summary(); ] |  new \HTML_TFOOTER  [ tfooter(); ];
   <li><a href="https://github.com/nielsofficeofficial/PHPCrud">PHPCRUD: </a><span> Extend PHPWine Features crud </span>
       <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
   </li>
-    <li><a href="https://github.com/nielsofficeofficial/PHPCrud-sample-data">PHPCrud-sample-data v1.2.0.0</a><span> Sample data PHPCrud snippet </span>
+    <li><a href="https://github.com/nielsofficeofficial/PHPCrud-sample-data">PHPCrud-sample-data >=+ v1.3.1  </a><span> Sample data PHPCrud snippet </span>
       <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
   </li>
-   <li><a href="https://github.com/nielsofficeofficial/PHPCrud_RESTAPI-Template">PHPCRUD_RESTAPI-Template: </a><span> Rest-api using PHPCrud snippet </span>
+   <li><a href="https://github.com/nielsofficeofficial/PHPCrud_RESTAPI-Template">PHPCRUD_RESTAPI-Template: >=+ v1.3.1 </a><span> Rest-api using PHPCrud snippet </span>
       <sup style="font-size: 10px;"><i>Contributed by: <a href="https://nielsoffice197227997.wordpress.com/">Leinner</a></i></sup>
   </li>
  
