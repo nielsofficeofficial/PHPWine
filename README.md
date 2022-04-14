@@ -83,6 +83,21 @@ use \PHPWineVanillaFlavour\Wine\System\Validate;
 use \PHPWineVanillaFlavour\Wine\System\Validate_v2;
 ```
 ```PHP
+// Installing Enhancer PHPWine Functions
+new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ELEM;
+new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ATTR;
+new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_BREAK;
+new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_DOELSE;
+new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_DOIF;
+new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_GETKEYPATH;
+new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_HLINE;
+new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ISBELONGS;
+new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_PERFORM;
+new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_SETELEMATTR;
+new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_SPACE;
+new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_STRING;
+```
+```PHP
 # Using Enhancer Installation 
 new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ELEM; // then follow by other dependencies
 
