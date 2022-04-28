@@ -789,10 +789,12 @@ private function get_value_child_optimizer( array|string  $value ) : array|strin
        # THEN SINCE ATTR IS TYPE OF MASTER KEY THEN LOOP IT AS CUSTOM ATTR HTML ELEM TAGS
        if (  $this->check_key_mandatory_array( SELF::ATTR_MANDATORY_KEY ,  $values ) ) 
        {
-
+    
+         if(isset($value[SELF::CHILD_MANDATORY_KEY][0][SELF::ATTR_MANDATORY_KEY] )) :
           # check if the child element array is not string and not empty then return error handler
           ( !is_array( $value[SELF::CHILD_MANDATORY_KEY][0][SELF::ATTR_MANDATORY_KEY] ) ) ? $this->errors_array_handler( $value ) . die : '';  
-           
+         endif;
+         
           # PROCESSING OF LOOPING
           foreach ($values[SELF::ATTR_MANDATORY_KEY] as $attr => $val) { $next_child[] = $this->_set_tagSPACER() . $attr . $this->_setES() .  $this->_getDQUOTE() . $val .  $this->_getDQUOTE(); }
 
