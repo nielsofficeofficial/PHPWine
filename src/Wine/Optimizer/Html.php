@@ -2319,6 +2319,8 @@ protected function get_values_next_child( string $valueKey = null, array $array 
       return implode("", $array[$valueKey] );
 
   }
+  
+  return false;
 
 }
 
