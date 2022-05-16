@@ -90,7 +90,7 @@ new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerString;
 ```
 ```PHP
 # Using Enhancer Installation 
-new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ELEM; // then follow by other dependencies
+new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerElem; // then follow by other dependencies
 
 # HTML Tags using ( Merge Version PHPWine v1.3.0.0 )
 new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlH1;
