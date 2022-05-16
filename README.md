@@ -238,6 +238,7 @@ new \HtmlSummary;[ summary(); ] |  new \HtmlTfooter  [ tfooter(); ];
 
 
 ```PHP
+ // @since wine v 1.4 
  ['elem_sort' => function() { 
 
    return [
@@ -250,6 +251,7 @@ new \HtmlSummary;[ summary(); ] |  new \HtmlTfooter  [ tfooter(); ];
 ```
 
 ```PHP
+  // @since wine v 1.4 
   echo div([ CHILD => [
   
   ['div', ATTR  => ['class' =>'demo'] , VALUE => [ H1('Hello!') ]],  
