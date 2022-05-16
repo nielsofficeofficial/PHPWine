@@ -84,30 +84,30 @@ use \PHPWineVanillaFlavour\Wine\System\Validate_v2;
 ```
 ```PHP
 // Installing Enhancer PHPWine Functions
-new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ELEM;
-new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ATTR;
-new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_BREAK;
-new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_DOELSE;
-new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_DOIF;
-new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_GETKEYPATH;
-new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_HLINE;
-new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ISBELONGS;
-new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_PERFORM;
-new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_SETELEMATTR;
-new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_SPACE;
-new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_STRING;
+new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerElem;
+new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerAttr;
+new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerBreak;
+new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerDoElse;
+new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerDoIf;
+new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerGetKeyPath;
+new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerHLine;
+new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerIsBelongs;
+new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerPerform;
+new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerSetElemAttr;
+new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerSpace;
+new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerString;
 ```
 ```PHP
 # Using Enhancer Installation 
 new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ELEM; // then follow by other dependencies
 
 # HTML Tags using ( Merge Version PHPWine v1.3.0.0 )
-new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H1;
-new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H2;
-new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H3;
-new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H4;
-new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H5;
-new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H6;
+new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlH1;
+new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlH2;
+new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlH3;
+new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlH4;
+new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlH5;
+new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlH6;
 
 // Merge HTML Definition 
 H1( array|string [ $value ] , array|string [ $attr ] , string $id , string $class );
@@ -182,33 +182,33 @@ function Div(
 ```
 ```PHP
 // Installing dependecies HTML Elements 
-new \HTML_SELECT; [ select(); ]  |  new \HTML_ABBR; [ abbr(); ]     |  new \HTML_ADDRESS; [ address(); ]
-new \HTML_AUDIO;  [ audio(); ]   |  new \HTML_BDI;  [ bdi(); ]      |  new \HTML_BDO; [ bdo(); ]
-new \HTML_BODY;   [ body(); ]    |  new \HTML_BOLD; [ bold(); ]     |  new \HTML_BLOCKQUOTE; [ blockquote(); ]
-new \HTML_BUTTON; [ button(); ]  |  new \HTML_CODE; [ code(); ]     |  new \HTML_CANVAS; [ canvas(); ]
-new \HTML_DATA;   [ data(); ]    |  new \HTML_DD;   [ dd();  ]      |  new \HTML_CAPTION; [ caption(); ]
-new \HTML_CENTER; [ center(); ]  |  new \HTML_DEL;  [ del(); ]      |  new \HTML_COLGROUP; [ colgroup(); ]
-new \HTML_DFN;    [ dfn(); ]     |  new \HTML_DIV;  [ div(); ]      |  new \HTML_DATALIST; [ datalist(); ]
-new \HTML_DL;     [ dl(); ]      |  new \HTML_DT;   [ dt(); ]       |  new \HTML_EM; [ em(); ]
-new \HTML_FORM;   [ form(); ]    |  new \HTML_IMG;  [ img(); ]      |  new \HTML_FOOTER;  [ footer(); ]
-new \HTML_INS;    [ ins(); ]     |  new \HTML_HEAD; [ head(); ]     |  new \HTML_KBD; [ kbd(); ]
-new \HTML_LI;     [ li(); ]      |  new \HTML_LINK; [ alink(); ]    |  new \HTML_FIGCAPTION; [ figcaption(); ] 
-new \HTML_MAIN;   [ main(); ]    |  new \HTML_LABEL;[ label(); ]    |  new \HTML_DIALOG; [ dialog(); ] 
-new \HTML_MARK;   [ mark(); ]    |  new \HTML_OL;   [ ol(); ]       |  new \HTML_LEGEND; [ legend(); ]
-new \HTML_Q;      [ q(); ]       |  new \HTML_PRE;  [ pre(); ]      |  new \HTML_OPTGROUP; [ optgroup(); ]
-new \HTML_NAV;    [ nav(); ]     |  new \HTML_PARA; [ para(); ]     |  new \HTML_FIELDSET; [ fieldset(); ]
-new \HTML_RT;     [ rt(); ]      |  new \HTML_SAMP; [ samp(); ]     |  new \HTML_PROGRESS; [ progress(); ]
-new \HTML_S;      [ s(); ]       |  new \HTML_SPAN; [ span(); ]     |  new \HTML_PICTURE; [ picture(); ]
-new \HTML_SMALL;  [ small(); ]   |  new \HTML_TH;   [ th();  ]      |  new \HTML_METER; [ meter(); ]
-new \HTML_TD;     [ td(); ]      |  new \HTML_SUB;  [ sub(); ]      |  new \HTML_DETAILS; [ details(); ]
-new \HTML_SUP;    [ sup(); ]     |  new \HTML_STYLE;[ style(); ]    |  new \HTML_MARQUEE; [ marquee(); ]
-new \HTML_TR;     [ tr(); ]      |  new \HTML_UL;   [ ul(); ]         | new \HTML_WBR; [ wbr(); ]
-new \HTML_TABLE;  [ table(); ]   |  new \HTML_FIGURE;  [ figure(); ]  | new \HTML_IFRAME; [ iframe(); ] 
-new \HTML_ITALIC; [ italic(); ]  |  new \HTML_OBJECT;  [ object(); ]  | new \HTML_TEXTAREA; [ textarea(); ]
-new \HTML_SCRIPT; [ script(); ]  |  new \HTML_SECTION; [ section(); ] | new \HTML_TITLE; [ title(); ]
-new \HTML_TBODY;  [ tbody(); ]   |  new \HTML_THEAD;   [ thead(); ]   | new \HTML_VIDEO; [ video(); ]
-new \HTML_SELECT; [ select(); ]  |  new \HTML_STRONG;  [ strong(); ]  | new \HTML_TEMPLATE; [ template(); ]
-new \HTML_SUMMARY;[ summary(); ] |  new \HTML_TFOOTER  [ tfooter(); ];
+new \HtmlSelect; [ select(); ]  |  new \HtmlAbbr; [ abbr(); ]     |  new \HtmlAddress; [ address(); ]
+new \HtmlAudio;  [ audio(); ]   |  new \HtmlDbi;  [ bdi(); ]      |  new \HtmlDbo; [ bdo(); ]
+new \HtmlBody;   [ body(); ]    |  new \HtmlBold; [ bold(); ]     |  new \HtmlBlockQuote; [ blockquote(); ]
+new \HtmlButton; [ button(); ]  |  new \HtmlCode; [ code(); ]     |  new \HtmlCanvas; [ canvas(); ]
+new \HtmlData;   [ data(); ]    |  new \HtmlDd;   [ dd();  ]      |  new \HtmlCaption; [ caption(); ]
+new \HtmlCenter; [ center(); ]  |  new \HtmlDel;  [ del(); ]      |  new \HtmlColGroup; [ colgroup(); ]
+new \HtmlDfn;    [ dfn(); ]     |  new \HtmlDiv;  [ div(); ]      |  new \HtmlDatalist; [ datalist(); ]
+new \HtmlDl;     [ dl(); ]      |  new \HtmlDt;   [ dt(); ]       |  new \HtmlEm; [ em(); ]
+new \HtmlForm;   [ form(); ]    |  new \HtmlImg;  [ img(); ]      |  new \HtmlFooter;  [ footer(); ]
+new \HtmlIns;    [ ins(); ]     |  new \HtmlHead; [ head(); ]     |  new \HtmlKbd; [ kbd(); ]
+new \HtmlLi;     [ li(); ]      |  new \HtmlALink; [ alink(); ]    |  new \HtmlFigCaption; [ figcaption(); ] 
+new \HtmlMain;   [ main(); ]    |  new \HtmlLabel;[ label(); ]    |  new \HtmlDialog; [ dialog(); ] 
+new \HtmlMark;   [ mark(); ]    |  new \HtmlOl;   [ ol(); ]       |  new \HtmlLegend; [ legend(); ]
+new \HtmlQ;      [ q(); ]       |  new \HtmlPre;  [ pre(); ]      |  new \HtmlOptGroup; [ optgroup(); ]
+new \HtmlNav;    [ nav(); ]     |  new \HtmlPara; [ para(); ]     |  new \HtmlFieldset; [ fieldset(); ]
+new \HtmlRt;     [ rt(); ]      |  new \HtmlSamp; [ samp(); ]     |  new \HtmlProgress; [ progress(); ]
+new \HtmlS;      [ s(); ]       |  new \HtmlSpan; [ span(); ]     |  new \HtmlPicture; [ picture(); ]
+new \HtmlSmall;  [ small(); ]   |  new \HtmlTh;   [ th();  ]      |  new \HtmlMeter; [ meter(); ]
+new \HtmlTd;     [ td(); ]      |  new \HtmlSub;  [ sub(); ]      |  new \HtmlDetails; [ details(); ]
+new \HtmlSup;    [ sup(); ]     |  new \HtmlStyle;[ style(); ]    |  new \HtmlMarquee; [ marquee(); ]
+new \HtmlTr;     [ tr(); ]      |  new \HtmlUl;   [ ul(); ]         | new \HtmlWbr; [ wbr(); ]
+new \HtmlTable;  [ table(); ]   |  new \HtmlFigure;  [ figure(); ]  | new \HtmlIframe; [ iframe(); ] 
+new \HtmlItalic; [ italic(); ]  |  new \HtmlObject;  [ object(); ]  | new \HtmlTextarea; [ textarea(); ]
+new \HtmlScript; [ script(); ]  |  new \HtmlSection; [ section(); ] | new \HtmlTitle; [ title(); ]
+new \HtmlTbody;  [ tbody(); ]   |  new \HtmlThead;   [ thead(); ]   | new \HtmlTitle; [ video(); ]
+new \HtmlTemplate; [ template(); ]  |  new \HtmlStrong;  [ strong(); ] 
+new \HtmlSummary;[ summary(); ] |  new \HtmlTfooter  [ tfooter(); ];
 ```
 
 <h3> Child Element Array keys: CHILD | ATTR | VALUE | INNER :</h3>
@@ -232,6 +232,70 @@ new \HTML_SUMMARY;[ summary(); ] |  new \HTML_TFOOTER  [ tfooter(); ];
   ]]
   
   echo div($childElement , [['attr'],['value']], 'id' , 'class');
+```
+
+<h3>Helper: [ 'elem_sort' ] Child Element Array keys: CHILD and INNER Layer :</h3>
+
+
+```PHP
+ ['elem_sort' => function() { 
+
+   return [
+      
+      ['element']
+
+   ];
+
+ }]
+```
+
+```PHP
+  echo div([ CHILD => [
+  
+  ['div', ATTR  => ['class' =>'demo'] , VALUE => [ H1('Hello!') ]],  
+  ['p'  , VALUE => ["This is the array values!"] 
+        , INNER => [
+          
+      ['elem_sort' => function() { // Inner Layer Child Elem Array ConditionaL
+
+       $say_inner      =  [ ['div', VALUE => ["Say hi! "], ATTR => ['class'=>'say_inner'] ] ];
+       $dont_say_inner =  [ ['div', VALUE => ["Don't Not hi! "], ATTR => ['class' =>'dont_say_inner'] ] ];
+
+       return ( true ) ? $say_inner : $dont_say_inner;
+      
+      }],            
+      ['p'   , ATTR => ['class' =>'demo'] ,  VALUE => ["Hello"] ],
+      ['SPAN', VALUE => ["World"], ATTR => ['class' =>'demo'] ]
+
+  ]],
+  ['elem_sort' => function() { // Child Layer elem_sort / Conditional
+
+      if( true ) {
+
+        $condition =  [
+
+          ['div', VALUE => ["Say hi! "]    , ATTR => [ 'class' =>'say'] ],
+          ['div', VALUE => ["Say hello! "] , ATTR => [ 'class' =>'say'] ] 
+              
+        ];
+
+      } else {
+
+        $condition = [
+
+          ['div', VALUE => ["Don't Not hi! "]    , ATTR => [ 'class' =>'dpnt_say_child_layer'] ],
+          ['div', VALUE => ["Don't Not hello! "] , ATTR => [ 'class' =>'dpnt_say_child_layer'] ] 
+          
+        ];
+
+      }
+
+      return ($condition);
+
+  }]
+
+ ]]);
+
 ```
 
 <h3>Functions and Constant:</h3>
