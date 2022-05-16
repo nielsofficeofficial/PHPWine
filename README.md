@@ -259,7 +259,7 @@ new \HtmlSummary;[ summary(); ] |  new \HtmlTfooter  [ tfooter(); ];
       ['elem_sort' => function() { // Inner Layer Child Elem Array ConditionaL
 
        $say_inner      =  [ ['div', VALUE => ["Say hi! "], ATTR => ['class'=>'say_inner'] ] ];
-       $dont_say_inner =  [ ['div', VALUE => ["Don't Not hi! "], ATTR => ['class' =>'dont_say_inner'] ] ];
+       $dont_say_inner =  [ ['div', VALUE => ["Don't say hi! "], ATTR => ['class' =>'dont_say_inner'] ] ];
 
        return ( true ) ? $say_inner : $dont_say_inner;
       
@@ -283,8 +283,8 @@ new \HtmlSummary;[ summary(); ] |  new \HtmlTfooter  [ tfooter(); ];
 
         $condition = [
 
-          ['div', VALUE => ["Don't Not hi! "]    , ATTR => [ 'class' =>'dpnt_say_child_layer'] ],
-          ['div', VALUE => ["Don't Not hello! "] , ATTR => [ 'class' =>'dpnt_say_child_layer'] ] 
+          ['div', VALUE => ["Don't say hi! "]    , ATTR => [ 'class' =>'dpnt_say_child_layer'] ],
+          ['div', VALUE => ["Don't say hello! "] , ATTR => [ 'class' =>'dpnt_say_child_layer'] ] 
           
         ];
 
