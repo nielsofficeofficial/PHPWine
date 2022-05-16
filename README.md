@@ -29,15 +29,6 @@ PHPWine (Vanilla Flavour) is a PHP Library design cross PHP Platform and framewo
 <h3>Downloading Library/Dependencies:</h3>
  
 ```PHP
-// Clone repository from githug | GitBus | CMD | CLi 
-
-// Download latest version 
- $ git clone https://github.com/nielsofficeofficial/PHPWine
-
-// Download specified version ( --branch tag ) --branch  v1.3.1.0 
- $ git clone https://github.com/nielsofficeofficial/PHPWine --branch  v1.3.1.0
-```
-```PHP
 // Download Repository via Composer | Packagist
  composer require phpwinevanillaflavour/phpwine
 ```
