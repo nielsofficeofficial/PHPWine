@@ -54,9 +54,9 @@ PHPWine (Vanilla Flavour) is a PHP Library design cross PHP Platform and framewo
       
       $this->php_wine('autoload');
 
-      new \PHPWineVanillaFlavour\Wine\Optimizer\ENHANCER_ELEM; // this is mandatory when dev use merge !
-      new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_H1;  // follow by merge version HTML_H1 and so on!...
-      new \PHPWineVanillaFlavour\Wine\Optimizer\HTML_DIV;
+      new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerElem; // this is mandatory when dev use merge !
+      new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlH1;  // follow by merge version HTML_H1 and so on!...
+      new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlDiv;
       
     }
 
