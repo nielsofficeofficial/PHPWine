@@ -183,7 +183,7 @@ new \HtmlDfn;    [ dfn(); ]     |  new \HtmlDiv;  [ div(); ]      |  new \HtmlDa
 new \HtmlDl;     [ dl(); ]      |  new \HtmlDt;   [ dt(); ]       |  new \HtmlEm; [ em(); ]
 new \HtmlForm;   [ form(); ]    |  new \HtmlImg;  [ img(); ]      |  new \HtmlFooter;  [ footer(); ]
 new \HtmlIns;    [ ins(); ]     |  new \HtmlHead; [ head(); ]     |  new \HtmlKbd; [ kbd(); ]
-new \HtmlLi;     [ li(); ]      |  new \HtmlALink; [ alink(); ]    |  new \HtmlFigCaption; [ figcaption(); ] 
+new \HtmlLi;     [ li(); ]      |  new \HtmlALink; [ alink(); ]   |  new \HtmlFigCaption; [ figcaption(); ] 
 new \HtmlMain;   [ main(); ]    |  new \HtmlLabel;[ label(); ]    |  new \HtmlDialog; [ dialog(); ] 
 new \HtmlMark;   [ mark(); ]    |  new \HtmlOl;   [ ol(); ]       |  new \HtmlLegend; [ legend(); ]
 new \HtmlQ;      [ q(); ]       |  new \HtmlPre;  [ pre(); ]      |  new \HtmlOptGroup; [ optgroup(); ]
@@ -300,7 +300,7 @@ new \HtmlSummary;[ summary(); ] |  new \HtmlTfooter  [ tfooter(); ];
   
  // Constant
  define('PHPWINE_MINIFIED', true );
- define('PHPWINE_DEBUG_ERRORS', true ); 
+ define('PHPWINE_DEBUG_ERRORS', true );  // @since v1.4
 ```
 
 <h3>PHPWine Plugins + (FrontEnd Frameworks) :</h3>
