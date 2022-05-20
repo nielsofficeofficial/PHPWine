@@ -197,7 +197,7 @@ new \HtmlTr;     [ tr(); ]      |  new \HtmlUl;   [ ul(); ]         | new \HtmlW
 new \HtmlTable;  [ table(); ]   |  new \HtmlFigure;  [ figure(); ]  | new \HtmlIframe; [ iframe(); ] 
 new \HtmlItalic; [ italic(); ]  |  new \HtmlObject;  [ object(); ]  | new \HtmlTextarea; [ textarea(); ]
 new \HtmlScript; [ script(); ]  |  new \HtmlSection; [ section(); ] | new \HtmlTitle; [ title(); ]
-new \HtmlTbody;  [ tbody(); ]   |  new \HtmlThead;   [ thead(); ]   | new \HtmlTitle; [ video(); ]
+new \HtmlTbody;  [ tbody(); ]   |  new \HtmlThead;   [ thead(); ]   | new \HtmlVideo; [ video(); ]
 new \HtmlTemplate; [ template(); ]  |  new \HtmlStrong;  [ strong(); ] 
 new \HtmlSummary;[ summary(); ] |  new \HtmlTfooter  [ tfooter(); ];
 ```
