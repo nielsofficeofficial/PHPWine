@@ -301,6 +301,7 @@ new \HtmlSummary;[ summary(); ] |  new \HtmlTfooter  [ tfooter(); ];
  // Constant
  define('PHPWINE_MINIFIED', true );
  define('PHPWINE_DEBUG_ERRORS', true );  // @since v1.4
+ define('PHPCRUD_DEBUG_ERRORS', true ); 
 ```
 
 <h3>PHPWine Plugins + (FrontEnd Frameworks) :</h3>
