@@ -183,7 +183,7 @@ new \HtmlDfn;    [ dfn(); ]     |  new \HtmlDiv;  [ div(); ]      |  new \HtmlDa
 new \HtmlDl;     [ dl(); ]      |  new \HtmlDt;   [ dt(); ]       |  new \HtmlEm; [ em(); ]
 new \HtmlForm;   [ form(); ]    |  new \HtmlImg;  [ img(); ]      |  new \HtmlFooter;  [ footer(); ]
 new \HtmlIns;    [ ins(); ]     |  new \HtmlHead; [ head(); ]     |  new \HtmlKbd; [ kbd(); ]
-new \HtmlLi;     [ li(); ]      |  new \HtmlALink; [ alink(); ]   |  new \HtmlFigCaption; [ figcaption(); ] 
+new \HtmlLi;     [ li(); ]      |  new \HtmlLink; [ alink(); ]   |  new \HtmlFigCaption; [ figcaption(); ] 
 new \HtmlMain;   [ main(); ]    |  new \HtmlLabel;[ label(); ]    |  new \HtmlDialog; [ dialog(); ] 
 new \HtmlMark;   [ mark(); ]    |  new \HtmlOl;   [ ol(); ]       |  new \HtmlLegend; [ legend(); ]
 new \HtmlQ;      [ q(); ]       |  new \HtmlPre;  [ pre(); ]      |  new \HtmlOptGroup; [ optgroup(); ]
