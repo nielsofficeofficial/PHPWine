@@ -209,7 +209,7 @@ new \HtmlSummary;[ summary(); ] |  new \HtmlTfooter  [ tfooter(); ];
   $childElement = [ CHILD => [
   
     ['div', ATTR  => ['class' =>'demo'] , VALUE => [ H1('Hello!') ]],  
-    ['p'  , VALUE => ["This is the array values!"] 
+    ['div', VALUE => ["This is the array values!"] 
           , INNER => [
 
         ['p'   , VALUE => ["Hello"] , ATTR => ['class' =>'demo'] ],
@@ -246,7 +246,7 @@ new \HtmlSummary;[ summary(); ] |  new \HtmlTfooter  [ tfooter(); ];
   echo div([ CHILD => [
   
   ['div', ATTR  => ['class' =>'demo'] , VALUE => [ H1('Hello!') ]],  
-  ['p'  , VALUE => ["This is the array values!"] 
+  ['div', VALUE => ["This is the array values!"] 
         , INNER => [
           
       ['elem_sort' => function() { // Inner Layer Child Elem Array ConditionaL
