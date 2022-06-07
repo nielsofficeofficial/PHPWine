@@ -312,6 +312,15 @@ new \HtmlSummary;[ summary(); ] |  new \HtmlTfooter  [ tfooter(); ];
 
 <hr /> 
 
+<h2>Learn Installing PHPWine v1.4 : | <a href="https://www.youtube.com/watch?v=QcwzWYupqd0&list=PLz1uhXS-qzpR3zRoq0IXvBmPofuTyR87J&index=1"> Watch PHPWine Playlist Click here > </a>
+</h2>
+<center>
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/svSWQ3ESKPg/0.jpg)](https://www.youtube.com/watch?v=svSWQ3ESKPg&list=PLz1uhXS-qzpR3zRoq0IXvBmPofuTyR87J&index=3)
+
+</center>
+<hr /> 
+
 <h2>Thanks To:</h2>
 <h5>
 Github : To allow me to upload my PHP Library PHPWine Vanilla Flavour to repository<br /> 
